@@ -1,0 +1,16 @@
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: #f4eee8;
+  color: #2f2a26;
+  font-family: 'Malgun Gothic', sans-serif;
+  text-align: center;
+}
+
+a {
+  color: #a8492c;
+}
