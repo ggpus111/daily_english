@@ -5,11 +5,14 @@ import { readDeployHeaders, siteMeta } from './build/plugins.js'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
+  // 안드로이드 앱 빌드(--mode app)는 파일을 앱 안에 담으므로 서비스 워커가 필요 없다.
+  const isApp = mode === 'app'
 
   return {
     plugins: [
       react(),
       siteMeta(env.VITE_SITE_URL),
+      !isApp &&
       VitePWA({
         registerType: 'autoUpdate',
         manifest: {
@@ -21,7 +24,7 @@ export default defineConfig(({ mode }) => {
           start_url: '/',
           scope: '/',
           theme_color: '#FFFDFA',
-          background_color: '#F4EEE8',
+          background_color: '#F4F0EB',
           display: 'standalone',
           icons: [
             { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },

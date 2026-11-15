@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  암호화하지 않은 http 통신을 막고, 시스템이 믿는 인증서만 쓴다.
+  타깃 API 28 이상은 기본이 같지만, 나중에 설정이 바뀌어도 풀리지 않게 적어 둔다.
+  인증서 피닝은 하지 않는다. 앱 화면(웹뷰)에는 적용되지 않고,
+  Supabase·구글·카카오가 인증서를 바꾸면 앱이 멈출 수 있다.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

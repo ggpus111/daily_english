@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  공유 창으로 넘길 수 있는 파일 위치. 기록 내보내기는 캐시 폴더에만 파일을 만들므로
+  (src/lib/native.js의 Directory.Cache) 캐시 폴더만 연다. 외부 저장소 전체는 열지 않는다.
+-->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <cache-path name="share_cache" path="." />
+</paths>

@@ -1,5 +1,6 @@
 node_modules
 dist
+dist-auth
 dev-dist
 .env
 .env.local
@@ -9,3 +10,6 @@ playwright-report
 e2e-shots
 analysis/.venv
 analysis/data
+analysis/native/data
+analysis/pricing/data
+__pycache__

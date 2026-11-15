@@ -21,18 +21,19 @@ export default defineConfig({
     {
       command: 'npm run build && npx vite preview --port 4173 --strictPort',
       url: 'http://localhost:4173',
-      timeout: 120_000,
+      timeout: 240_000,
     },
     {
       // 로그인 화면은 Supabase 환경 변수가 있을 때만 나온다. 값은 테스트용 가짜다.
-      command: 'npx vite --port 4174 --strictPort',
+      // 개발 서버는 첫 화면을 그때 컴파일해서 병렬 실행 중 시간 초과가 나므로, 미리 빌드해서 띄운다.
+      command: 'npx vite build --outDir dist-auth && npx vite preview --outDir dist-auth --port 4174 --strictPort',
       url: 'http://localhost:4174',
       env: {
         VITE_SUPABASE_URL: 'https://example.supabase.co',
         VITE_SUPABASE_ANON_KEY: 'test-key',
         VITE_AUTH_PROVIDERS: 'google,kakao',
       },
-      timeout: 120_000,
+      timeout: 240_000,
     },
   ],
 })

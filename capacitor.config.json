@@ -1,0 +1,13 @@
+{
+  "appId": "com.dailyenglish.app",
+  "appName": "Daily English",
+  "webDir": "dist",
+  "android": {
+    "initialViewportFitValueHint": "cover"
+  },
+  "plugins": {
+    "SystemBars": {
+      "insetsHandling": "css"
+    }
+  }
+}
