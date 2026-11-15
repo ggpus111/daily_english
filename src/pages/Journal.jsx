@@ -1,9 +1,13 @@
 import { useState } from 'react'
+import Feedback from '../components/Feedback'
 import Field from '../components/Field'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { useRecordForm } from '../hooks/useRecordForm'
+import { buildCorrectionPrompt, recentPracticeNotes, recentWordTexts } from '../lib/correction'
 import { languageName } from '../lib/i18n'
+import { openExternal } from '../lib/native'
+import { isNative } from '../lib/platform'
 import { JOURNAL_DRAFT_KEY } from '../lib/records'
 
 const EMPTY_FORM = { native: '', translation: '', aiFeedback: '', memo: '' }
@@ -37,11 +41,14 @@ export default function Journal() {
       return
     }
 
-    const prompt = t('correctionPrompt', {
+    const prompt = buildCorrectionPrompt({
+      uiLang: nativeLang,
       learning: languageName(learningLang, nativeLang),
       explain: languageName(nativeLang, nativeLang),
       native: form.native.trim(),
       translation: form.translation.trim(),
+      practiceNotes: recentPracticeNotes(items, editingId),
+      recentWords: recentWordTexts(records.word),
     })
     try {
       await navigator.clipboard.writeText(prompt)
@@ -87,6 +94,9 @@ export default function Journal() {
               {t('copyPrompt')}
             </button>
             <p className="tiny-note">{t('copyPromptHelp')}</p>
+            <a className="inline-link pro-teaser" href="#pro">
+              {t('proJournalTeaser')}
+            </a>
             <div className="external-links">
               {AI_CHATS.map((chat) => (
                 <a
@@ -95,6 +105,11 @@ export default function Journal() {
                   href={chat.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(event) => {
+                    if (!isNative) return
+                    event.preventDefault()
+                    openExternal(chat.href)
+                  }}
                 >
                   {t(chat.label)}
                 </a>
@@ -169,7 +184,7 @@ export default function Journal() {
                       {item.aiFeedback && (
                         <div className="correction-panel">
                           <p className="correction-label">{t('correctionTitle')}</p>
-                          <p>{item.aiFeedback}</p>
+                          <Feedback text={item.aiFeedback} learningLang={learningLang} t={t} />
                         </div>
                       )}
                       {item.memo && <p className="chat-note">{item.memo}</p>}
