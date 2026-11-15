@@ -2,7 +2,7 @@ import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 
 const AUTH_URL = 'http://localhost:4174/'
-const PAGES = ['home', 'words', 'expressions', 'chats', 'journal', 'profile', 'privacy']
+const PAGES = ['home', 'words', 'expressions', 'chats', 'journal', 'profile', 'privacy', 'pro', 'packs', 'packs-words']
 
 const seed = {
   savedWords: [
@@ -68,6 +68,31 @@ test.describe('모든 화면', () => {
       })
     })
   }
+
+  test('어두운 테마에서도 모든 화면의 글자 대비가 충분하다', async ({ page }) => {
+    // 화면 8개를 차례로 검사해서, 병렬 실행 중에도 넉넉하게 시간을 준다.
+    test.setTimeout(90_000)
+    await page.emulateMedia({ colorScheme: 'dark' })
+    await seedRecords(page)
+    for (const name of PAGES) {
+      await open(page, name)
+      if (name === 'journal') await page.getByRole('button', { name: '자세히 보기' }).click()
+      const { violations } = await new AxeBuilder({ page }).withRules(['color-contrast']).analyze()
+      expect(violations.map((item) => `${name} ${item.id}: ${item.nodes[0].html}`)).toEqual([])
+    }
+  })
+
+  test('화면 테마를 고르면 바로 바뀌고 다시 열어도 유지된다', async ({ page }) => {
+    await open(page, 'profile')
+    await page.getByLabel('화면 테마').selectOption('dark')
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+    const background = () => page.evaluate(() => getComputedStyle(document.body).backgroundColor)
+    expect(await background()).toBe('rgb(58, 46, 41)')
+    await page.reload()
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+    await page.getByLabel('화면 테마').selectOption('system')
+    await expect(page.locator('html')).not.toHaveAttribute('data-theme', /.+/)
+  })
 
   test('320px 폭에서도 가로로 넘치지 않는다', async ({ page }) => {
     await seedRecords(page)
@@ -164,6 +189,10 @@ test('틀린 단어는 오늘 다시 묻는다', async ({ page }) => {
   expect(Date.parse(wrong.dueAt)).toBeLessThanOrEqual(Date.now())
 })
 
+// Windows 클립보드는 줄바꿈을 \r\n으로 바꿔 돌려주므로 \n으로 맞춘다.
+const readClipboard = async (page) =>
+  (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, '\n')
+
 test('AI 교정 요청을 복사하고 받은 교정을 저장한다', async ({ page, context }) => {
   await context.grantPermissions(['clipboard-read', 'clipboard-write'])
   await open(page, 'journal')
@@ -176,19 +205,51 @@ test('AI 교정 요청을 복사하고 받은 교정을 저장한다', async ({ 
   await page.getByRole('button', { name: 'AI 교정 요청 복사' }).click()
   await expect(page.getByRole('status').filter({ hasText: '복사했어요' })).toBeVisible()
 
-  const copied = await page.evaluate(() => navigator.clipboard.readText())
-  expect(copied).toContain('학습 언어: 영어')
-  expect(copied).toContain('설명 언어: 한국어')
-  expect(copied).toContain('어제 공원을 걸었다.')
-  expect(copied).toContain('I walked at the park yesterday.')
+  const copied = await readClipboard(page)
+  expect(copied).toContain('다정한 영어 튜터')
+  expect(copied).toContain('## 고친 문장\n## 고칠 점\n## 잘한 점\n## 연습할 점')
+  expect(copied).toContain('[일기]\n어제 공원을 걸었다.')
+  expect(copied).toContain('[내 번역]\nI walked at the park yesterday.')
 
-  await page.getByLabel('AI 교정 결과 (선택)').fill('at the park 대신 in the park가 자연스러워요.')
+  // AI가 정해진 형식으로 답하면 제목별로 나눠 보여 준다.
+  await page.getByLabel('AI 교정 결과 (선택)').fill(
+    [
+      '## 고친 문장',
+      'I walked in the park yesterday.',
+      '## 고칠 점',
+      '- 원래: at the park → 고침: in the park | 이유: 공원 안을 걸었으니 in이 자연스러워요.',
+      '## 잘한 점',
+      '과거형을 잘 썼어요.',
+      '## 연습할 점',
+      '장소 전치사 in과 at을 구분해 보세요.',
+    ].join('\n'),
+  )
   await page.getByRole('button', { name: '일기 저장하기' }).click()
   await expect(page.getByLabel('모국어로 작성하기')).toHaveValue('')
 
   await page.reload()
   await page.getByRole('button', { name: '자세히 보기' }).click()
-  await expect(page.locator('.journal-entry .correction-panel')).toContainText('in the park')
+  const panel = page.locator('.journal-entry .correction-panel')
+  await expect(panel.getByRole('heading', { name: '고친 문장' })).toBeVisible()
+  await expect(panel.locator('ins')).toHaveText('in the park')
+  await expect(panel.locator('del')).toHaveText('at the park')
+
+  // 다음 요청에는 지난번 연습할 점이 함께 들어간다.
+  await page.getByLabel('모국어로 작성하기').fill('오늘 학교에 갔다.')
+  await page.getByLabel('영어로 직접 번역하기').fill('I went to school today.')
+  await page.getByRole('button', { name: 'AI 교정 요청 복사' }).click()
+  await expect(page.getByRole('status').filter({ hasText: '복사했어요' })).toBeVisible()
+  const next = await readClipboard(page)
+  expect(next).toContain('[참고: 지난 교정에서 연습하기로 한 점]\n- 장소 전치사 in과 at을 구분해 보세요.')
+})
+
+test('형식 없이 붙여 넣은 교정도 그대로 보여 준다', async ({ page }) => {
+  await open(page, 'journal')
+  await page.getByLabel('모국어로 작성하기').fill('어제 공원을 걸었다.')
+  await page.getByLabel('AI 교정 결과 (선택)').fill('at the park 대신 in the park가 자연스러워요.')
+  await page.getByRole('button', { name: '일기 저장하기' }).click()
+  await page.getByRole('button', { name: '자세히 보기' }).click()
+  await expect(page.locator('.journal-entry .feedback-raw')).toHaveText('at the park 대신 in the park가 자연스러워요.')
 })
 
 test('자동 복사가 막히면 직접 복사할 수 있게 보여 준다', async ({ page }) => {
@@ -274,6 +335,124 @@ test('내보내기와 전체 삭제', async ({ page }) => {
   expect(words).toBe('[]')
 })
 
+test('내려받은 백업 파일로 지운 기록을 되살린다', async ({ page }) => {
+  await seedRecords(page)
+  await open(page, 'profile')
+
+  const download = page.waitForEvent('download')
+  await page.getByRole('button', { name: '내 기록 내려받기' }).click()
+  const backupPath = await (await download).path()
+
+  await page.getByRole('button', { name: '모든 기록 삭제' }).click()
+  await page.getByRole('button', { name: /정말 삭제할까요/ }).click()
+  await expect(page.getByRole('status').filter({ hasText: '모든 기록을 삭제했어요' })).toBeVisible()
+
+  const fileInput = page.getByLabel('파일에서 가져오기')
+  await fileInput.setInputFiles(backupPath)
+  const plan = page.getByRole('region', { name: '가져올 기록' })
+  await expect(plan).toContainText('단어 2개 · 표현 1개 · 대화 1개 · 일기 1개를 더해요.')
+  await plan.getByRole('button', { name: '5개 가져오기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: '기록 5개를 가져왔어요.' })).toBeVisible()
+  await expect(plan).toBeHidden()
+
+  // 같은 파일을 다시 가져오면 이미 있는 기록이라 건너뛴다.
+  await fileInput.setInputFiles(backupPath)
+  await expect(plan).toContainText('새로 가져올 기록이 없어요.')
+  await expect(plan).toContainText('이미 있는 기록 5개는 건너뛰어요.')
+  await plan.getByRole('button', { name: '취소' }).click()
+
+  await open(page, 'words')
+  await expect(page.locator('.record-row')).toHaveCount(2)
+  await expect(page.locator('.record-row').first()).toContainText('thoughtful')
+})
+
+test('백업 파일이 아니면 가져오지 않고 알려 준다', async ({ page }) => {
+  await open(page, 'profile')
+  await page.getByLabel('파일에서 가져오기').setInputFiles({
+    name: 'notes.json',
+    mimeType: 'application/json',
+    buffer: Buffer.from('{"hello":"world"}'),
+  })
+  await expect(page.getByRole('status').filter({ hasText: '이 앱의 백업 파일이 아니에요.' })).toBeVisible()
+  await expect(page.getByRole('region', { name: '가져올 기록' })).toHaveCount(0)
+})
+
+test('표현 꾸러미에서 담은 표현이 내 표현 모음에 들어가고 복습할 수 있다', async ({ page }) => {
+  await open(page, 'home')
+  // 처음 쓰는 사람도 홈에서 오늘의 표현을 바로 담을 수 있다.
+  await expect(page.getByRole('heading', { name: '오늘의 표현' })).toBeVisible()
+  await expect(page.getByText('처음이라면 오늘의 표현부터 담아 보세요.', { exact: false })).toBeVisible()
+  await page.getByRole('button', { name: '꾸러미 더 보기' }).click()
+  await expect(page.getByRole('heading', { name: '표현 꾸러미', level: 1 })).toBeVisible()
+
+  await page.getByRole('button', { name: '감정·관계' }).click()
+  await expect(page.getByRole('button', { name: '감정·관계' })).toHaveAttribute('aria-pressed', 'true')
+  const card = page.locator('.expression-card').filter({ hasText: 'hang out' })
+  await expect(card).toHaveCount(0)
+  await page.getByRole('button', { name: '일상 대화' }).click()
+  await page.locator('.expression-card').filter({ hasText: 'hang out' }).getByRole('button', { name: 'hang out 내 표현 모음에 담기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: '"hang out"를 내 표현 모음에 담았어요.' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'hang out 이미 담음' })).toBeDisabled()
+  await expect(page.locator('.pack-panel .count')).toHaveText('1 / 40 담음')
+  await expect(page.getByText('Tatoeba')).toBeVisible()
+
+  await open(page, 'expressions')
+  await expect(page.locator('.record-row')).toContainText('hang out')
+  await expect(page.locator('.record-row')).toContainText('어울려 놀다')
+  await expect(page.getByText('오늘 복습할 것 1개')).toBeVisible()
+})
+
+test('단어 꾸러미: 단계와 범위를 골라 담은 단어가 단어장에 들어간다', async ({ page }) => {
+  await open(page, 'words')
+  await page.getByRole('button', { name: '단어 꾸러미에서 고르기' }).click()
+  await expect(page.getByRole('heading', { name: '단어 꾸러미', level: 1 })).toBeVisible()
+  await expect(page.getByRole('button', { name: '단어 600개' })).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.getByRole('button', { name: '초급' })).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.locator('.pack-panel .expression-card')).toHaveCount(50)
+
+  await page.getByRole('button', { name: '51–100' }).click()
+  // Tatoeba 예문에는 문장 번호 링크가 있고, 직접 쓴 예문(money)에는 없다.
+  const card = page.locator('.expression-card').filter({ has: page.getByRole('heading', { name: 'school', exact: true }) })
+  await expect(card.getByRole('link', { name: /Tatoeba #\d+ 예문 원문 보기/ })).toBeVisible()
+  const ownCard = page.locator('.expression-card').filter({ has: page.getByRole('heading', { name: 'money', exact: true }) })
+  await expect(ownCard.getByRole('link')).toHaveCount(0)
+  await card.getByRole('button', { name: 'school 단어장에 담기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: '"school"를 단어장에 담았어요.' })).toBeVisible()
+  await expect(page.locator('.pack-panel .count')).toHaveText('1 / 300 담음')
+
+  // 중급으로 바꾸면 범위가 처음으로 돌아간다.
+  await page.getByRole('button', { name: '중급' }).click()
+  await expect(page.getByRole('button', { name: '1–50' })).toHaveAttribute('aria-pressed', 'true')
+
+  await page.getByRole('button', { name: '표현 400개' }).click()
+  await expect(page.getByRole('heading', { name: '표현 꾸러미', level: 1 })).toBeVisible()
+
+  await open(page, 'words')
+  await expect(page.locator('.record-row')).toContainText('school')
+})
+
+test('Pro 시연판: 미리 보기를 켜면 내 기록으로 만든 통계가 보인다', async ({ page }) => {
+  await seedRecords(page)
+  await open(page, 'pro')
+  await expect(page.getByText('발표용 시연판 · 결제 기능 없음')).toBeVisible()
+  await expect(page.getByText('Pro 미리 보기를 켜면')).toBeVisible()
+
+  await page.getByRole('button', { name: 'Pro 미리 보기 켜기' }).click()
+  const tile = (label) => page.locator('.stat-tile').filter({ hasText: label }).locator('.stat-value')
+  await expect(tile('모은 기록')).toHaveText('5')
+  await page.locator('.chart').first().getByText('표로 보기').click()
+  await expect(page.locator('.chart').first().locator('tbody tr')).toHaveCount(28)
+
+  const { violations } = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+    .analyze()
+  expect(violations.map((item) => `${item.id}: ${item.nodes[0].html}`)).toEqual([])
+
+  // 다시 열어도 미리 보기 상태가 유지된다.
+  await page.reload()
+  await expect(page.getByRole('button', { name: 'Pro 미리 보기 끄기' })).toHaveAttribute('aria-pressed', 'true')
+})
+
 test('브라우저 저장소가 막혀도 앱이 멈추지 않는다', async ({ page }) => {
   await page.addInitScript(() => {
     Storage.prototype.setItem = () => {
@@ -348,6 +527,79 @@ test.describe('로그인 화면', () => {
     await page.goto(`${AUTH_URL}?error=access_denied&error_description=User+cancelled+login`)
     await expect(page.getByRole('status').filter({ hasText: 'User cancelled login' })).toBeVisible()
     expect(new URL(page.url()).search).toBe('')
+  })
+
+  test('인터넷이 끊기거나 서버가 고장 나면 알아듣기 쉬운 말로 알려 준다', async ({ page, context }) => {
+    await page.goto(AUTH_URL)
+    await page.getByLabel('이메일').fill('learner@example.com')
+    await page.getByLabel('비밀번호', { exact: true }).fill('secret123')
+
+    await context.setOffline(true)
+    await page.getByRole('button', { name: '로그인하기' }).click()
+    await expect(page.getByText('인터넷에 연결되어 있지 않아요.')).toBeVisible()
+    await context.setOffline(false)
+
+    await page.route('https://example.supabase.co/**', (route) =>
+      route.fulfill({ status: 503, contentType: 'application/json', body: '{"message":"upstream down"}' }),
+    )
+    await page.getByRole('button', { name: '로그인하기' }).click()
+    await expect(page.getByText('서버에 잠시 문제가 있어요.', { exact: false })).toBeVisible()
+  })
+
+  test('연결이 끊겨도 저장하고, 연결되면 서버에 올린다', async ({ page, context }) => {
+    // 올린 행을 기억했다가 다시 불러올 때 돌려주는 가짜 서버
+    const posted = []
+    await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
+      const request = route.request()
+      if (request.method() === 'GET') return route.fulfill({ json: posted.flat() })
+      if (request.method() === 'POST') posted.push(request.postDataJSON())
+      return route.fulfill({ status: 201, json: [] })
+    })
+    await page.route('https://example.supabase.co/auth/v1/**', (route) => route.fulfill({ json: {} }))
+    // 테스트용 가짜 로그인 세션. 값은 Supabase 클라이언트가 브라우저 저장소에서 읽는 형식이다.
+    await page.addInitScript(() => {
+      localStorage.setItem(
+        'sb-example-auth-token',
+        JSON.stringify({
+          access_token: 'test-access',
+          refresh_token: 'test-refresh',
+          token_type: 'bearer',
+          expires_in: 3600,
+          expires_at: Math.floor(Date.now() / 1000) + 3600,
+          user: {
+            id: '11111111-1111-4111-8111-111111111111',
+            aud: 'authenticated',
+            role: 'authenticated',
+            email: 'learner@example.com',
+            user_metadata: { nickname: 'Tester' },
+          },
+        }),
+      )
+    })
+    await page.goto(`${AUTH_URL}#words`)
+    await expect(page.getByRole('heading', { name: '단어장', level: 1 })).toBeVisible()
+
+    await context.setOffline(true)
+    await page.getByLabel('단어 / 표현').fill('offline word')
+    await page.getByRole('textbox', { name: '뜻', exact: true }).fill('연결 없이 저장')
+    await page.getByRole('button', { name: '저장하기' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '이 기기에 저장했어요' })).toBeVisible()
+    await expect(page.locator('.offline-banner')).toContainText('올리지 못한 변경 1개')
+    await expect(page.locator('.record-row')).toContainText('offline word')
+    expect(posted).toHaveLength(0)
+
+    await context.setOffline(false)
+    await expect.poll(() => posted.length).toBe(1)
+    expect(JSON.stringify(posted[0])).toContain('offline word')
+    await expect(page.locator('.offline-banner')).toHaveCount(0)
+    expect(await page.evaluate(() => localStorage.getItem('pendingOps:11111111-1111-4111-8111-111111111111'))).toBeNull()
+
+    // 서버에 닿지 않을 때 앱을 다시 열면, 이 기기에 남긴 기록을 보여 준다.
+    await page.unroute('https://example.supabase.co/rest/v1/**')
+    await page.route('https://example.supabase.co/rest/v1/**', (route) => route.abort('internetdisconnected'))
+    await page.reload()
+    await expect(page.locator('.record-row')).toContainText('offline word')
+    await expect(page.getByRole('alert')).toHaveCount(0)
   })
 
   test('로그인 없이 개인정보 처리방침을 볼 수 있다', async ({ page }) => {

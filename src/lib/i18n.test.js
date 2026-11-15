@@ -30,18 +30,6 @@ describe('번역 문구', () => {
     expect(createTranslator('ko')('없는키')).toBe('없는키')
   })
 
-  it('교정 요청 문장에 일기와 번역을 그대로 넣는다', () => {
-    const prompt = createTranslator('ko')('correctionPrompt', {
-      learning: '영어',
-      explain: '한국어',
-      native: '오늘 {날씨}가 좋았다.',
-      translation: 'It was nice $& today.',
-    })
-    expect(prompt).toContain('학습 언어: 영어')
-    expect(prompt).toContain('오늘 {날씨}가 좋았다.')
-    expect(prompt).toContain('It was nice $& today.')
-  })
-
   it('언어 이름을 설명 언어에 맞춰 보여 준다', () => {
     expect(languageName('ja', 'ko')).toBe('일본어')
     expect(languageName('ja', 'en')).toBe('日本語')

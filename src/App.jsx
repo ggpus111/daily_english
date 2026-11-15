@@ -1,8 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ErrorBoundary from './components/ErrorBoundary'
 import Icon from './components/Icon'
+import Logo from './components/Logo'
 import { AppContext } from './context'
+import { useOnline } from './hooks/useOnline'
+import { errorMessage } from './lib/errors'
 import { createTranslator } from './lib/i18n'
+import { initNativeAuth } from './lib/native'
 import { JOURNAL_DRAFT_KEY, STORAGE_ERROR, useRecords } from './lib/records'
 import { local, session as sessionStore } from './lib/storage'
 import { supabase } from './lib/supabase'
@@ -11,7 +15,9 @@ import Chats from './pages/Chats'
 import Entries from './pages/Entries'
 import Home from './pages/Home'
 import Journal from './pages/Journal'
+import Packs from './pages/Packs'
 import Privacy from './pages/Privacy'
+import Pro from './pages/Pro'
 import Profile from './pages/Profile'
 
 const NAV = ['home', 'words', 'expressions', 'chats', 'journal', 'profile']
@@ -20,7 +26,7 @@ const TOAST_ACTION_MS = 8000
 
 function readPage() {
   const page = window.location.hash.slice(1)
-  return NAV.includes(page) || page === 'privacy' ? page : 'home'
+  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words'].includes(page) ? page : 'home'
 }
 
 function usePage() {
@@ -72,7 +78,27 @@ function useToast() {
 }
 
 function Shell({ page, go, user, languages, t, notify }) {
-  const { records, loading, loadError, add, update, remove, restore, removeAll } = useRecords(user)
+  const {
+    records,
+    loading,
+    loadError,
+    pendingCount,
+    reload,
+    add,
+    update,
+    remove,
+    restore,
+    importRecords,
+    removeAll,
+  } = useRecords(user)
+  const online = useOnline()
+  const wasOnline = useRef(online)
+
+  // 연결이 돌아오면 못 올린 변경을 올리고, 다른 기기에서 바뀐 것까지 다시 불러온다.
+  useEffect(() => {
+    if (supabase && user && online && !wasOnline.current && loadError !== STORAGE_ERROR) reload()
+    wasOnline.current = online
+  }, [online, user, loadError, reload])
   const meta = user?.user_metadata ?? {}
   // 이메일 가입은 nickname, 원본 앱은 display_name, 구글과 카카오는 name 계열에 이름이 담긴다.
   const nickname =
@@ -104,11 +130,28 @@ function Shell({ page, go, user, languages, t, notify }) {
       update,
       remove,
       restore,
+      importRecords,
+      pendingCount,
       removeAll,
       go,
       ...languages,
     }),
-    [t, notify, user, nickname, records, add, update, remove, restore, removeAll, go, languages],
+    [
+      t,
+      notify,
+      user,
+      nickname,
+      records,
+      add,
+      update,
+      remove,
+      restore,
+      importRecords,
+      pendingCount,
+      removeAll,
+      go,
+      languages,
+    ],
   )
 
   const pages = {
@@ -118,6 +161,9 @@ function Shell({ page, go, user, languages, t, notify }) {
     chats: <Chats />,
     journal: <Journal />,
     profile: <Profile />,
+    pro: <Pro />,
+    packs: <Packs key="expressions" mode="expressions" />,
+    'packs-words': <Packs key="words" mode="words" />,
   }
 
   return (
@@ -128,10 +174,7 @@ function Shell({ page, go, user, languages, t, notify }) {
       <div className="app-shell">
         <header className="topbar">
           <button className="brand" onClick={() => go('home')}>
-            <span className="brand-mark small" aria-hidden="true">
-              d.
-            </span>
-            Daily English
+            <Logo />
           </button>
           <button className="avatar-button" onClick={() => go('profile')} aria-label={t('profile')}>
             <span aria-hidden="true">{nickname.slice(0, 1).toUpperCase()}</span>
@@ -162,12 +205,25 @@ function Shell({ page, go, user, languages, t, notify }) {
             </div>
           </nav>
           <main className="main-content" ref={mainRef} tabIndex={-1}>
-            {loadError && (
-              <p className="error-banner" role="alert">
-                {loadError === STORAGE_ERROR
-                  ? t('storageError')
-                  : t('loadError', { message: loadError })}
+            {supabase && !online && (
+              <p className="offline-banner" role="status">
+                {t('offlineBanner')}
+                {pendingCount > 0 && ` ${t('pendingCount', { count: pendingCount })}`}
               </p>
+            )}
+            {loadError && (
+              <div className="error-banner" role="alert">
+                <p>
+                  {loadError === STORAGE_ERROR
+                    ? t('storageError')
+                    : t('loadError', { message: errorMessage(loadError, t) })}
+                </p>
+                {loadError !== STORAGE_ERROR && (
+                  <button className="soft-button" onClick={reload}>
+                    {t('retry')}
+                  </button>
+                )}
+              </div>
             )}
             {loading ? (
               <p className="empty-state" role="status">
@@ -199,6 +255,12 @@ export default function App() {
   useEffect(() => {
     document.documentElement.lang = nativeLang === 'ko' ? 'ko' : 'en'
   }, [nativeLang])
+
+  // 안드로이드 앱에서 소셜 로그인·이메일 인증 후 딥링크로 돌아오는 것을 받는다.
+  useEffect(
+    () => initNativeAuth((error) => notify(t('authError', { message: errorMessage(error, t) }))),
+    [notify, t],
+  )
 
   useEffect(() => {
     if (!supabase) return undefined

@@ -19,7 +19,7 @@ async function goTo(user, name) {
 }
 
 describe('앱 흐름', () => {
-  it('저장한 단어가 홈의 개수와 최근 목록에 나온다', async () => {
+  it('저장한 단어가 홈 카드의 개수와 최근 기록에 나온다', async () => {
     const user = userEvent.setup()
     render(<App />)
 
@@ -30,8 +30,10 @@ describe('앱 흐름', () => {
     expect(await screen.findByText('thoughtful')).toBeTruthy()
 
     await goTo(user, '홈')
-    expect(screen.getByRole('button', { name: /저장한 단어\s*1/ })).toBeTruthy()
-    expect(screen.getByText('사려 깊은')).toBeTruthy()
+    const card = screen.getByRole('button', { name: /저장한 단어 1개/ })
+    expect(card.textContent).toContain('저장한 단어 1개')
+    expect(card.textContent).toContain('오늘 +1')
+    expect(card.textContent).toContain('thoughtful')
   })
 
   it('필수 입력이 비면 저장하지 않고 입력칸에 오류를 연결한다', async () => {
@@ -67,6 +69,6 @@ describe('앱 흐름', () => {
   it('없는 주소는 홈으로 보낸다', () => {
     window.location.hash = '#nowhere'
     render(<App />)
-    expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('반가워요')
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('오늘은 어떤 표현을 배워 볼까요?')
   })
 })
