@@ -27,6 +27,18 @@ async function seedRecords(page) {
   }, seed)
 }
 
+// 첫 실행 안내는 따로 시험하고, 다른 시험에서는 이미 본 것으로 둔다.
+test.beforeEach(async ({ page }, info) => {
+  if (info.title.includes('첫 실행')) return
+  await page.addInitScript(() => {
+    try {
+      localStorage.setItem('onboarded', '1')
+    } catch {
+      // 저장소를 막은 시험에서는 넘어간다.
+    }
+  })
+})
+
 async function open(page, name) {
   await page.goto(`/?v=${name}#${name}`)
   await expect(page.locator('h1')).toBeVisible()
@@ -317,6 +329,52 @@ test('일기에 쓴 내 표현과 오늘의 표현을 찾고, 홈의 도장과 �
   await recap.getByRole('button', { name: '이미지로 저장' }).click()
   const download = await downloadPromise
   expect(download.suggestedFilename()).toMatch(/^daily-english-\d{4}-\d{2}-\d{2}\.png$/)
+})
+
+test('첫 실행 안내: 단계를 고르고, 표현을 담고, 기분과 한 줄 일기로 시작한다', async ({ page }) => {
+  await open(page, 'home')
+  await expect(page.getByRole('heading', { name: '어디서부터 시작할까요?' })).toBeFocused()
+  const { violations } = await new AxeBuilder({ page })
+    .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+    .analyze()
+  expect(violations.map((item) => `${item.id}: ${item.nodes[0].html}`)).toEqual([])
+
+  await page.getByRole('button', { name: /^중급/ }).click()
+  await page.getByRole('button', { name: '다음' }).click()
+
+  await expect(page.getByRole('heading', { name: '마음에 드는 표현을 담아 보세요' })).toBeFocused()
+  await page.getByRole('button', { name: /^hang out/ }).click()
+  await page.getByRole('button', { name: /^Pretty good/ }).click()
+  await expect(page.getByText('2개 골랐어요')).toBeVisible()
+  await page.getByRole('button', { name: '다음' }).click()
+
+  await expect(page.getByRole('heading', { name: '오늘 기분을 고르고 한 줄 써 볼까요?' })).toBeFocused()
+  await page.locator('.mood-chips').getByRole('button', { name: /^happy/ }).click()
+  await page.getByRole('button', { name: '첫 일기 저장하고 시작하기' }).click()
+  await expect(page.getByText('꼭 입력해 주세요.')).toBeVisible()
+  await page.getByLabel('오늘 한 줄 (우리말)').fill('친구들이랑 놀았다.')
+  await page.getByLabel('영어로 한 줄 (선택)').fill('I hang out with my friends today.')
+  await expect(page.locator('.onboarding .usage-line')).toContainText('hang out')
+  await page.getByRole('button', { name: '첫 일기 저장하고 시작하기' }).click()
+
+  await expect(page.getByRole('status').filter({ hasText: '준비 끝!' })).toBeVisible()
+  await expect(page.locator('.week-moods')).toContainText('happy')
+  await expect(page.locator('.recap-chips')).toContainText('hang out')
+
+  // 한 번 본 안내는 다시 뜨지 않고, 고른 단계부터 단어 꾸러미를 보여 준다.
+  await page.reload()
+  await expect(page.locator('.onboarding')).toHaveCount(0)
+  await open(page, 'packs-words')
+  await expect(page.getByRole('button', { name: '중급' })).toHaveAttribute('aria-pressed', 'true')
+})
+
+test('첫 실행 안내는 건너뛸 수 있고 다시 뜨지 않는다', async ({ page }) => {
+  await open(page, 'home')
+  await page.getByRole('button', { name: '나중에 할게요' }).click()
+  await expect(page.locator('.onboarding')).toHaveCount(0)
+  await expect(page.getByRole('heading', { name: '오늘의 표현' })).toBeVisible()
+  await page.reload()
+  await expect(page.locator('.onboarding')).toHaveCount(0)
 })
 
 test('빈칸 채우기: 예문이 있는 단어만 내고, 예문 속 형태로 답한다', async ({ page }) => {

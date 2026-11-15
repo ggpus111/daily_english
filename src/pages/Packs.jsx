@@ -4,8 +4,10 @@ import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { usePackData } from '../hooks/usePackData'
 import { openExternal } from '../lib/native'
+import { START_LEVEL_KEY } from '../components/Onboarding'
 import { chunks, isSaved } from '../lib/packs'
 import { isNative } from '../lib/platform'
+import { local } from '../lib/storage'
 
 // 미리 준비한 꾸러미. 표현은 주제별, 단어는 단계별로 보고 고른다. 담은 뒤에는 내 기록처럼 복습한다.
 const MODES = {
@@ -113,7 +115,11 @@ function ExpressionPacks({ data }) {
 
 function WordPacks({ data }) {
   const { t, nativeLang, records } = useApp()
-  const [levelId, setLevelId] = useState(data.groups[0].id)
+  // 첫 실행 안내에서 고른 단계부터 보여 준다.
+  const [levelId, setLevelId] = useState(() => {
+    const saved = local.get(START_LEVEL_KEY)
+    return data.groups.some((group) => group.id === saved) ? saved : data.groups[0].id
+  })
   const [chunkIndex, setChunkIndex] = useState(0)
   const level = data.groups.find((item) => item.id === levelId)
   const parts = chunks(level.items)

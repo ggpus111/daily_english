@@ -67,8 +67,15 @@ describe('앱 흐름', () => {
   })
 
   it('없는 주소는 홈으로 보낸다', () => {
+    localStorage.setItem('onboarded', '1')
     window.location.hash = '#nowhere'
     render(<App />)
     expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('오늘은 어떤 표현을 배워 볼까요?')
+  })
+
+  it('기록이 없는 첫 실행에는 홈 대신 안내를 보여 준다', () => {
+    window.location.hash = '#home'
+    render(<App />)
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toBe('어디서부터 시작할까요?')
   })
 })

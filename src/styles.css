@@ -2005,6 +2005,92 @@ textarea {
   justify-self: start;
 }
 
+/* 첫 실행 안내 */
+.onboarding {
+  display: grid;
+  gap: 14px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.onboarding h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.onboarding h1:focus {
+  outline: none;
+}
+
+.onboard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.onboard-progress {
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.onboard-choices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.onboard-choice,
+.onboard-pick {
+  display: grid;
+  gap: 4px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--ink);
+  text-align: left;
+}
+
+.onboard-choice span,
+.onboard-pick span {
+  color: var(--sub);
+  font-size: 0.8125rem;
+}
+
+.onboard-choice[aria-pressed='true'],
+.onboard-pick[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.onboard-choice[aria-pressed='true'] span,
+.onboard-pick[aria-pressed='true'] span {
+  color: var(--accent-ink);
+}
+
+.onboard-picks {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.onboard-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+}
+
+@media (width <= 560px) {
+  .onboard-picks {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (width <= 480px) {
   .recap-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));

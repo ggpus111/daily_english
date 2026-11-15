@@ -1,4 +1,6 @@
+import { useState } from 'react'
 import ExpressionCard from '../components/ExpressionCard'
+import Onboarding, { needsOnboarding } from '../components/Onboarding'
 import RecapCard from '../components/Recap'
 import Mascot from '../components/Mascot'
 import { useApp } from '../context'
@@ -57,6 +59,10 @@ export default function Home() {
   const dueTotal = dueWords + dueExpressions
   const note = NOTES[Math.floor(today.getTime() / DAY_MS) % NOTES.length]
   const totalRecords = Object.values(records).reduce((sum, items) => sum + items.length, 0)
+  // 기록이 하나도 없는 첫 실행이면 홈 대신 짧은 안내를 보여 준다.
+  const [onboarding, setOnboarding] = useState(() => needsOnboarding(records, learningLang))
+
+  if (onboarding) return <Onboarding onDone={() => setOnboarding(false)} />
 
   return (
     <>
