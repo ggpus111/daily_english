@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import Field from '../components/Field'
+import Logo from '../components/Logo'
+import { errorMessage } from '../lib/errors'
 import SocialLogin from '../components/SocialLogin'
+import { authRedirectUrl, passwordResetUrl } from '../lib/platform'
 import { supabase } from '../lib/supabase'
 
 const MIN_PASSWORD_LENGTH = 6
@@ -39,7 +42,7 @@ export default function Auth({ t, notify, recovering, onRecovered }) {
   async function changePassword() {
     const { error } = await supabase.auth.updateUser({ password })
     if (error) {
-      setMessage({ error: true, text: t('newPasswordError', { message: error.message }) })
+      setMessage({ error: true, text: t('newPasswordError', { message: errorMessage(error, t) }) })
     } else {
       notify(t('newPasswordDone'))
       onRecovered()
@@ -48,7 +51,7 @@ export default function Auth({ t, notify, recovering, onRecovered }) {
 
   async function logIn() {
     const { error } = await supabase.auth.signInWithPassword({ email: email.trim(), password })
-    if (error) setMessage({ error: true, text: t('authError', { message: error.message }) })
+    if (error) setMessage({ error: true, text: t('authError', { message: errorMessage(error, t) }) })
   }
 
   async function signUp() {
@@ -57,10 +60,10 @@ export default function Auth({ t, notify, recovering, onRecovered }) {
       password,
       options: {
         data: { nickname: nickname.trim() },
-        emailRedirectTo: window.location.origin,
+        emailRedirectTo: authRedirectUrl(),
       },
     })
-    if (error) setMessage({ error: true, text: t('authError', { message: error.message }) })
+    if (error) setMessage({ error: true, text: t('authError', { message: errorMessage(error, t) }) })
     else setMessage({ text: t(data.session ? 'signupDone' : 'signupConfirm') })
   }
 
@@ -83,11 +86,11 @@ export default function Auth({ t, notify, recovering, onRecovered }) {
       return
     }
     const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
-      redirectTo: window.location.origin,
+      redirectTo: passwordResetUrl(),
     })
     setMessage(
       error
-        ? { error: true, text: t('resetError', { message: error.message }) }
+        ? { error: true, text: t('resetError', { message: errorMessage(error, t) }) }
         : { text: t('resetSent') },
     )
   }
@@ -106,9 +109,7 @@ export default function Auth({ t, notify, recovering, onRecovered }) {
     <main className="auth-shell">
       <section className="auth-card">
         <div className="auth-brand">
-          <span className="brand-mark" aria-hidden="true">
-            d.
-          </span>
+          <Logo size="lg" />
           <span className="muted">{t('authTagline')}</span>
         </div>
         <div>

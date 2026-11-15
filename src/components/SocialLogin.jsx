@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { openExternal } from '../lib/native'
+import { authRedirectUrl, isNative } from '../lib/platform'
 import { supabase } from '../lib/supabase'
 
 // 쓸 수 있는 공급자만 버튼을 보인다. Supabase에서 켜지 않은 공급자를 누르면 오류가 난다.
@@ -41,15 +43,21 @@ export default function SocialLogin({ t, onError }) {
 
   async function signIn(provider) {
     setBusy(provider)
-    const { error } = await supabase.auth.signInWithOAuth({
+    // 앱은 웹뷰 안에서 구글 로그인을 할 수 없어서 시스템 브라우저로 연다.
+    const { data, error } = await supabase.auth.signInWithOAuth({
       provider,
-      options: { redirectTo: window.location.origin },
+      options: { redirectTo: authRedirectUrl(), skipBrowserRedirect: isNative },
     })
-    // 성공하면 공급자 로그인 화면으로 이동하므로 여기 오는 건 실패한 경우뿐이다.
     if (error) {
       onError(t('authError', { message: error.message }))
       setBusy('')
+      return
     }
+    if (isNative) {
+      await openExternal(data.url)
+      setBusy('')
+    }
+    // 웹은 공급자 로그인 화면으로 이동하므로 여기서 할 일이 없다.
   }
 
   return (

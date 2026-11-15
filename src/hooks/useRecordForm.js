@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useApp } from '../context'
+import { errorMessage } from '../lib/errors'
 import { session } from '../lib/storage'
 
 const trimStrings = (form) =>
@@ -54,15 +55,15 @@ export function useRecordForm({ type, emptyForm, required, draftKey }) {
 
     savingRef.current = true
     setSaving(true)
-    const { error } = editingId ? await update(type, editingId, fields) : await add(type, fields)
+    const { error, queued } = editingId ? await update(type, editingId, fields) : await add(type, fields)
     savingRef.current = false
     setSaving(false)
 
     if (error) {
-      notify(t('saveError', { message: error }))
+      notify(t('saveError', { message: errorMessage(error, t) }))
     } else {
       reset()
-      notify(t('saved'))
+      notify(t(queued ? 'savedOffline' : 'saved'))
     }
   }
 
@@ -80,17 +81,17 @@ export function useRecordForm({ type, emptyForm, required, draftKey }) {
 
   // 확인 창 대신 잠시 되돌릴 수 있게 한다. 실수로 지운 기록도 되살릴 수 있다.
   async function removeItem(item) {
-    const { error } = await remove(type, item.id)
+    const { error, queued } = await remove(type, item.id)
     if (error) {
-      notify(t('deleteError', { message: error }))
+      notify(t('deleteError', { message: errorMessage(error, t) }))
       return
     }
     if (item.id === editingId) reset()
-    notify(t('deleted'), {
+    notify(t(queued ? 'deletedOffline' : 'deleted'), {
       label: t('undo'),
       onClick: async () => {
         const result = await restore(type, item)
-        notify(result.error ? t('saveError', { message: result.error }) : t('restored'))
+        notify(result.error ? t('saveError', { message: errorMessage(result.error, t) }) : t('restored'))
       },
     })
     listRef.current?.focus()
