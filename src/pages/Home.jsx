@@ -1,26 +1,47 @@
-import Icon from '../components/Icon'
+import ExpressionCard from '../components/ExpressionCard'
 import Mascot from '../components/Mascot'
 import { useApp } from '../context'
 import { activityDays, lastSevenDays, streak } from '../lib/activity'
 import { languageName } from '../lib/i18n'
+import { usePackData } from '../hooks/usePackData'
+import { todayItem } from '../lib/packs'
 import { dueItems } from '../lib/review'
 
-const STATS = [
-  { page: 'words', type: 'word', label: 'savedWords', tone: 'peach' },
-  { page: 'expressions', type: 'expression', label: 'savedExpressions', tone: 'lilac' },
-  { page: 'chats', type: 'chat', label: 'savedChats', tone: 'sage' },
-  { page: 'journal', type: 'journal', label: 'savedJournals', tone: 'butter' },
+// 친구 원본 홈(학습 노트)의 번호 카드 구성을 따른다.
+const CARDS = [
+  { page: 'words', type: 'word', eyebrow: '01 / VOCABULARY', count: 'cardWords', tone: 'peach', preview: 'text', learning: true },
+  { page: 'expressions', type: 'expression', eyebrow: '02 / EXPRESSIONS', count: 'cardExpressions', tone: 'lilac', preview: 'text', learning: true },
+  { page: 'chats', type: 'chat', eyebrow: '03 / CHAT NOTES', count: 'cardChats', tone: 'sage', preview: 'situation' },
+  { page: 'journal', type: 'journal', eyebrow: '04 / DAILY JOURNAL', count: 'cardJournals', tone: 'butter', preview: 'native' },
 ]
 
-const RECENT_LIMIT = 3
+// 날마다 바뀌는 한마디. 영어 문장과 우리말 풀이를 함께 둔다.
+const NOTES = [
+  { en: 'You don’t have to be perfect. Just keep showing up.', ko: '완벽하지 않아도 괜찮아. 꾸준히 돌아오는 게 중요해.' },
+  { en: 'Small steps every day add up.', ko: '매일의 작은 걸음이 쌓여요.' },
+  { en: 'One new word is still progress.', ko: '새 단어 하나도 분명한 한 걸음이에요.' },
+  { en: 'Mistakes are proof that you are trying.', ko: '틀렸다는 건 해 보고 있다는 뜻이에요.' },
+  { en: 'Rest is part of learning, too.', ko: '쉬는 것도 배우는 과정이에요.' },
+  { en: 'The words you collect become your voice.', ko: '모은 말들이 결국 내 목소리가 돼요.' },
+  { en: 'Slow is fine. Stopping for good is the only miss.', ko: '느려도 괜찮아요. 아주 멈추지만 않으면 돼요.' },
+]
+
+const DAY_MS = 24 * 60 * 60 * 1000
+
+const isSameDay = (value, day) => new Date(value).toDateString() === day.toDateString()
 
 export default function Home() {
   const { t, go, records, nickname, nativeLang, learningLang } = useApp()
   const locale = nativeLang === 'ko' ? 'ko-KR' : 'en-US'
   const today = new Date()
-  const date = new Intl.DateTimeFormat(locale, { month: 'long', day: 'numeric', weekday: 'long' }).format(today)
-  const weekday = new Intl.DateTimeFormat(locale, { weekday: 'narrow' })
+  // 날짜 블록은 친구 원본처럼 영어로 쓰고, 보조 기술에는 사용자 언어로 읽어 준다.
+  const dateParts = {
+    month: new Intl.DateTimeFormat('en-US', { month: 'short' }).format(today),
+    day: today.getDate(),
+    weekday: new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(today),
+  }
   const fullDate = new Intl.DateTimeFormat(locale, { month: 'long', day: 'numeric', weekday: 'long' })
+  const weekday = new Intl.DateTimeFormat(locale, { weekday: 'narrow' })
 
   const days = activityDays(records)
   const week = lastSevenDays(days, today)
@@ -28,115 +49,166 @@ export default function Home() {
   const dueWords = dueItems(records.word).length
   const dueExpressions = dueItems(records.expression).length
   const dueTotal = dueWords + dueExpressions
-  const wroteToday = records.journal.some(
-    (item) => new Date(item.createdAt).toDateString() === today.toDateString(),
-  )
-  const recentWords = records.word.slice(0, RECENT_LIMIT)
+  const note = NOTES[Math.floor(today.getTime() / DAY_MS) % NOTES.length]
+  const totalRecords = Object.values(records).reduce((sum, items) => sum + items.length, 0)
 
   return (
     <>
-      <header className="home-hero">
-        <Mascot size={72} />
-        <div className="hero-text">
-          <p className="muted">
-            {date} · {t('studying', { lang: languageName(learningLang, nativeLang) })}
-          </p>
-          <h1>{t('greetingName', { name: nickname })}</h1>
-          <p className="speech">{t('greeting')}</p>
+      <section className="welcome-panel" aria-labelledby="welcome-title">
+        <div className="welcome-text">
+          <p className="eyebrow">YOUR DAILY NOTE</p>
+          <h1 id="welcome-title">{t('greetingNamed', { name: nickname })}</h1>
+          <p className="muted">{t('subtitle')}</p>
         </div>
-      </header>
+        <p className="welcome-date">
+          <span aria-hidden="true">{dateParts.month}</span>
+          <strong aria-hidden="true">{dateParts.day}</strong>
+          <small aria-hidden="true">{dateParts.weekday}</small>
+          <span className="sr-only">{fullDate.format(today)}</span>
+        </p>
+      </section>
 
-      <div className="home-top">
-        <section className="panel week-panel" aria-labelledby="week-title">
-          <div className="section-head">
-            <h2 id="week-title">{t('weekTitle')}</h2>
-            <span className="count">{t('streakDays', { count: streakDays })}</span>
+      <section className="home-section" aria-labelledby="space-title">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">YOUR LEARNING SPACE</p>
+            <h2 id="space-title">{t('spaceTitle')}</h2>
           </div>
-          <ol className="week-strip">
-            {week.map((day) => (
-              <li key={day.date.toISOString()} className={day.isToday ? 'today' : ''}>
-                <span className={`dot ${day.active ? 'on' : ''}`} aria-hidden="true" />
-                <span className="weekday" aria-hidden="true">
-                  {weekday.format(day.date)}
+          <span className="soft-pill">{t('studying', { lang: languageName(learningLang, nativeLang) })}</span>
+        </div>
+
+        <div className="dash-grid">
+          {CARDS.map((card) => {
+            const items = records[card.type]
+            const addedToday = items.filter((item) => isSameDay(item.createdAt, today)).length
+            const latest = items[0]?.[card.preview]
+            const badge =
+              addedToday > 0
+                ? t('todayAdded', { count: addedToday })
+                : card.type === 'journal' && items.length > 0
+                  ? t('journalNotYet')
+                  : null
+            return (
+              <button key={card.page} className={`dash-card ${card.tone}`} onClick={() => go(card.page)}>
+                <span className="dash-eyebrow" aria-hidden="true">
+                  {card.eyebrow}
                 </span>
-                <span className="sr-only">
-                  {fullDate.format(day.date)} {t(day.active ? 'dayActive' : 'dayRest')}
+                <strong>{t(card.page)}</strong>
+                <span className="dash-count">
+                  {t(card.count, { count: items.length })}
+                  {badge && <em>{badge}</em>}
                 </span>
-              </li>
-            ))}
-          </ol>
-          <p className="tiny-note">{t(streakDays > 0 ? 'streakNote' : 'streakEmpty')}</p>
-        </section>
+                <span className="dash-recent" lang={latest && card.learning ? learningLang : undefined}>
+                  {latest || t('cardEmpty')}
+                </span>
+                <span className="dash-arrow" aria-hidden="true">
+                  ↗
+                </span>
+              </button>
+            )
+          })}
+        </div>
+      </section>
 
-        <section className="panel review-panel" aria-labelledby="review-title">
-          <h2 id="review-title">{t('reviewTitle')}</h2>
-          <p className="review-count">
-            <strong>{dueTotal}</strong>
-            {t('reviewUnit')}
-          </p>
-          <p className="muted">
-            {dueTotal > 0
-              ? t('reviewBreakdown', { words: dueWords, expressions: dueExpressions })
-              : t('reviewNoneToday')}
-          </p>
-          <button
-            className="primary-button"
-            disabled={dueTotal === 0}
-            onClick={() => go(dueWords > 0 || dueExpressions === 0 ? 'words' : 'expressions')}
-          >
-            {t('reviewStart')}
-          </button>
-        </section>
-      </div>
-
-      <div className="stat-grid">
-        {STATS.map((stat) => (
-          <button key={stat.page} className={`stat-card ${stat.tone}`} onClick={() => go(stat.page)}>
-            <span className="stat-top">
-              {t(stat.label)}
-              <Icon name={stat.page} size={18} />
-            </span>
-            <strong>{records[stat.type].length}</strong>
-          </button>
-        ))}
-      </div>
-
-      <div className="home-grid">
-        <section className="panel">
-          <div className="section-head">
-            <h2>{t('recentWords')}</h2>
-            <button className="text-button" onClick={() => go('words')}>
-              {t('viewAll')}
+      {learningLang === 'en' && (
+        <section className="home-section" aria-labelledby="today-expression-title">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">TODAY’S EXPRESSION</p>
+              <h2 id="today-expression-title">{t('todayExpression')}</h2>
+            </div>
+            <button className="soft-pill pill-button" onClick={() => go('packs')}>
+              {t('packsMore')}
             </button>
           </div>
-          {recentWords.length === 0 ? (
-            <div className="empty-state">
-              <Mascot size={48} mood="calm" />
-              <p>{t('recentWordsEmpty')}</p>
-              <button className="soft-button" onClick={() => go('words')}>
-                {t('addFirstWord')}
-              </button>
+          {totalRecords === 0 && <p className="tiny-note today-hint">{t('packsFirstHint')}</p>}
+          <TodayExpression today={today} />
+        </section>
+      )}
+
+      <section className="home-section" aria-labelledby="routine-title">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">YOUR ROUTINE</p>
+            <h2 id="routine-title">{t('routineTitle')}</h2>
+          </div>
+        </div>
+
+        <div className="routine-grid">
+          <section className="paper-card review-panel" aria-labelledby="review-title">
+            <p className="eyebrow" aria-hidden="true">
+              TODAY’S REVIEW
+            </p>
+            <h3 id="review-title" className="sr-only">
+              {t('reviewTitle')}
+            </h3>
+            <p className="review-count">
+              <strong>{dueTotal}</strong>
+              {t('reviewUnit')}
+            </p>
+            <p className="muted">
+              {dueTotal > 0
+                ? t('reviewBreakdown', { words: dueWords, expressions: dueExpressions })
+                : t('reviewNoneToday')}
+            </p>
+            <button
+              className="primary-button"
+              disabled={dueTotal === 0}
+              onClick={() => go(dueWords > 0 || dueExpressions === 0 ? 'words' : 'expressions')}
+            >
+              {t('reviewStart')}
+            </button>
+          </section>
+
+          <section className="paper-card week-panel" aria-labelledby="week-title">
+            <div className="section-head">
+              <p className="eyebrow" aria-hidden="true">
+                THIS WEEK
+              </p>
+              <h3 id="week-title" className="sr-only">
+                {t('weekTitle')}
+              </h3>
+              <span className="count">{t('streakDays', { count: streakDays })}</span>
             </div>
-          ) : (
-            <ul>
-              {recentWords.map((item) => (
-                <li className="recent-row" key={item.id}>
-                  <strong lang={learningLang}>{item.text}</strong>
-                  <span className="muted">{item.meaning}</span>
+            <ol className="week-strip">
+              {week.map((day) => (
+                <li key={day.date.toISOString()} className={day.isToday ? 'today' : ''}>
+                  <span className={`stamp ${day.active ? 'on' : ''}`} aria-hidden="true">
+                    {day.active ? '✓' : ''}
+                  </span>
+                  <span className="weekday" aria-hidden="true">
+                    {weekday.format(day.date)}
+                  </span>
+                  <span className="sr-only">
+                    {fullDate.format(day.date)} {t(day.active ? 'dayActive' : 'dayRest')}
+                  </span>
                 </li>
               ))}
-            </ul>
-          )}
-        </section>
+            </ol>
+            <p className="tiny-note">{t(streakDays > 0 ? 'streakNote' : 'streakEmpty')}</p>
+          </section>
+        </div>
+      </section>
 
-        <section className="panel nudge">
-          <h2>{t(wroteToday ? 'journalDone' : 'journalTodo')}</h2>
-          <p className="muted">{t(wroteToday ? 'journalDoneBody' : 'journalTodoBody')}</p>
-          <button className="soft-button" onClick={() => go('journal')}>
-            {t(wroteToday ? 'openJournal' : 'writeJournal')}
-          </button>
-        </section>
-      </div>
+      <section className="quote-panel" aria-label="A note to yourself">
+        <Mascot size={46} mood="joy" />
+        <div>
+          <p className="eyebrow">A NOTE TO YOURSELF</p>
+          <p className="quote-text" lang="en">
+            “{note.en}”
+          </p>
+          {nativeLang === 'ko' && <p className="tiny-note">{note.ko}</p>}
+        </div>
+      </section>
     </>
   )
+}
+
+// 꾸러미 데이터는 따로 불러오므로, 오는 동안에는 같은 높이의 빈 카드를 둔다.
+function TodayExpression({ today }) {
+  const { t } = useApp()
+  const { data, error } = usePackData('expressions')
+  if (error) return <p className="tiny-note">{t('packsLoadError')}</p>
+  if (!data) return <div className="expression-card expression-placeholder" aria-hidden="true" />
+  return <ExpressionCard item={todayItem(data.items, today)} />
 }

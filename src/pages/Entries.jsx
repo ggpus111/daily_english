@@ -5,6 +5,7 @@ import Quiz from '../components/Quiz'
 import SearchField from '../components/SearchField'
 import { useApp } from '../context'
 import { useRecordForm } from '../hooks/useRecordForm'
+import { errorMessage } from '../lib/errors'
 import { dueItems, schedule } from '../lib/review'
 import { matchesQuery } from '../lib/text'
 
@@ -40,7 +41,7 @@ const CONFIG = {
 }
 
 export default function Entries({ type }) {
-  const { t, notify, records, update, learningLang } = useApp()
+  const { t, notify, records, update, learningLang, go } = useApp()
   const config = CONFIG[type]
   const items = records[type]
   const recordForm = useRecordForm({ type, emptyForm: EMPTY_FORM, required: REQUIRED })
@@ -62,7 +63,7 @@ export default function Entries({ type }) {
 
   async function saveAnswer(item, correct) {
     const { error } = await update(type, item.id, schedule(item, correct))
-    if (error) notify(t('saveError', { message: error }))
+    if (error) notify(t('saveError', { message: errorMessage(error, t) }))
   }
 
   return (
@@ -75,6 +76,11 @@ export default function Entries({ type }) {
             {t(config.quiz)}
           </button>
           <span className="muted">{t('reviewDueHere', { count: dueCount })}</span>
+          {learningLang === 'en' && (
+            <button className="text-button" onClick={() => go(type === 'word' ? 'packs-words' : 'packs')}>
+              {t(type === 'word' ? 'packsBrowseWords' : 'packsBrowse')}
+            </button>
+          )}
         </div>
       )}
       {quizOpen && (
