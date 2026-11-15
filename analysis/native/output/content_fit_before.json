@@ -1,0 +1,120 @@
+{
+ "words": {
+  "count": 600,
+  "dark_words": [
+   "arrest",
+   "attack",
+   "crime",
+   "dead",
+   "death",
+   "die",
+   "drug",
+   "enemy",
+   "gun",
+   "kill",
+   "prison",
+   "shoot",
+   "steal",
+   "war"
+  ],
+  "feelings_in_pack": [
+   "happy",
+   "tired",
+   "bored",
+   "excited",
+   "worried",
+   "scared",
+   "afraid",
+   "upset",
+   "proud",
+   "glad",
+   "sorry",
+   "surprised",
+   "disappointed",
+   "sick",
+   "full",
+   "busy",
+   "free",
+   "calm",
+   "confused",
+   "amazed",
+   "annoyed",
+   "thankful"
+  ],
+  "feelings_missing": [
+   "sad",
+   "angry",
+   "nervous",
+   "lonely",
+   "embarrassed",
+   "jealous",
+   "comfortable",
+   "relaxed",
+   "hungry",
+   "satisfied",
+   "grateful",
+   "shy",
+   "brave"
+  ],
+  "examples_from_tatoeba_pct": 96.0
+ },
+ "word_examples": {
+  "count": 600,
+  "first_person_pct": 45.3,
+  "personal_voice_pct": 60.5,
+  "names_pct": 2.2,
+  "dark_pct": 2.7,
+  "formal_pct": 1.0,
+  "polite_korean_pct": 19.3,
+  "examples": {
+   "names": [
+    "This is Ken. He loves his dog.",
+    "The girl reading a cookbook is Kate.",
+    "Bob entered the house through a window.",
+    "Tom wants to learn how to shoot.",
+    "Tom has been rather busy these days.",
+    "I suspect that Tom doesn't want to do that.",
+    "Kate has a good figure.",
+    "Tom is trying to avoid drinks with sugar."
+   ],
+   "dark": [
+    "Thousands of people died during the plague.",
+    "The house is said to be haunted.",
+    "They believe in a life after death.",
+    "My grandfather was wounded in the war.",
+    "My phone is dead.",
+    "A person who steals deserves punishment.",
+    "Tom wants to learn how to shoot.",
+    "The police arrested the thief last night.",
+    "We were attacked by zombies.",
+    "He laid down the gun.",
+    "He escaped from prison.",
+    "The school looks like a prison."
+   ],
+   "formal": [
+    "Thousands of people died during the plague.",
+    "The parade was led by an army band.",
+    "The price includes tax.",
+    "The economy is getting better.",
+    "The fortress fell into the hands of the enemy.",
+    "The Brazilian army provided services to the victims in Haiti."
+   ]
+  }
+ },
+ "expression_examples": {
+  "count": 400,
+  "first_person_pct": 51.5,
+  "personal_voice_pct": 64.5,
+  "names_pct": 0.2,
+  "dark_pct": 0.0,
+  "formal_pct": 0.0,
+  "polite_korean_pct": 3.2,
+  "examples": {
+   "names": [
+    "Where's Tom? — No idea."
+   ],
+   "dark": [],
+   "formal": []
+  }
+ }
+}

@@ -1,0 +1,191 @@
+{
+ "sentences": 2040567,
+ "basic_headwords": 2985,
+ "candidates": 16973,
+ "found_in_corpus": 8355,
+ "found_all_basic": 6950,
+ "shortlist": 736,
+ "share_all_basic_top500": 96.6,
+ "top_shortlist": [
+  {
+   "expression": "live in",
+   "sentences": 9187,
+   "pmi": 3.38,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "talk about",
+   "sentences": 5410,
+   "pmi": 4.54,
+   "labels": "colloquialisms,idioms,phrasal verbs"
+  },
+  {
+   "expression": "wait for",
+   "sentences": 5233,
+   "pmi": 4.09,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "kind of",
+   "sentences": 5160,
+   "pmi": 3.35,
+   "labels": "colloquialisms,idioms"
+  },
+  {
+   "expression": "look at",
+   "sentences": 4989,
+   "pmi": 3.84,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "come back",
+   "sentences": 3386,
+   "pmi": 4.11,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "plan on",
+   "sentences": 2837,
+   "pmi": 3.61,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "find out",
+   "sentences": 2790,
+   "pmi": 3.72,
+   "labels": "idioms,phrasal verbs"
+  },
+  {
+   "expression": "long time",
+   "sentences": 2691,
+   "pmi": 3.43,
+   "labels": "idioms"
+  },
+  {
+   "expression": "feel like",
+   "sentences": 2668,
+   "pmi": 3.55,
+   "labels": "idioms"
+  },
+  {
+   "expression": "too much",
+   "sentences": 2632,
+   "pmi": 3.86,
+   "labels": "informal terms"
+  },
+  {
+   "expression": "as well",
+   "sentences": 2510,
+   "pmi": 3.29,
+   "labels": "colloquialisms,idioms"
+  },
+  {
+   "expression": "go back to",
+   "sentences": 1982,
+   "pmi": 4.24,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "soon as",
+   "sentences": 1960,
+   "pmi": 3.88,
+   "labels": "colloquialisms"
+  },
+  {
+   "expression": "as soon as",
+   "sentences": 1954,
+   "pmi": 9.64,
+   "labels": "idioms"
+  },
+  {
+   "expression": "in the world",
+   "sentences": 1887,
+   "pmi": 3.46,
+   "labels": "idioms"
+  },
+  {
+   "expression": "get out of",
+   "sentences": 1781,
+   "pmi": 5.0,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "give up",
+   "sentences": 1769,
+   "pmi": 3.18,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "wake up",
+   "sentences": 1668,
+   "pmi": 6.39,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "grow up",
+   "sentences": 1585,
+   "pmi": 6.17,
+   "labels": "idioms,phrasal verbs"
+  },
+  {
+   "expression": "sit on",
+   "sentences": 1365,
+   "pmi": 3.77,
+   "labels": "idioms,informal terms,phrasal verbs"
+  },
+  {
+   "expression": "pick up",
+   "sentences": 1297,
+   "pmi": 5.38,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "deal with",
+   "sentences": 1285,
+   "pmi": 3.9,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "end up",
+   "sentences": 1222,
+   "pmi": 4.06,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "take off",
+   "sentences": 1198,
+   "pmi": 3.31,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "agree with",
+   "sentences": 1153,
+   "pmi": 3.56,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "on the table",
+   "sentences": 1114,
+   "pmi": 5.06,
+   "labels": "idioms"
+  },
+  {
+   "expression": "sit down",
+   "sentences": 1113,
+   "pmi": 6.26,
+   "labels": "phrasal verbs"
+  },
+  {
+   "expression": "fall asleep",
+   "sentences": 1099,
+   "pmi": 9.11,
+   "labels": "idioms"
+  },
+  {
+   "expression": "right away",
+   "sentences": 1086,
+   "pmi": 3.8,
+   "labels": "idioms"
+  }
+ ]
+}

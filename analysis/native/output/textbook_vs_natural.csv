@@ -1,0 +1,35 @@
+﻿situation,kind,phrase,sentences
+인사 답,교과서,i'm fine thank you,4
+인사 답,교과서,i am fine thank you,3
+인사 답,원어민 대안,i'm good,108
+인사 답,원어민 대안,not bad,95
+인사 답,원어민 대안,pretty good,852
+안부,교과서,how are you,453
+안부,원어민 대안,how's it going,39
+안부,원어민 대안,what's up,109
+안부,원어민 대안,how have you been,21
+감사,교과서,thank you very much,155
+감사,원어민 대안,thanks a lot,50
+감사,원어민 대안,thanks so much,13
+감사,원어민 대안,i appreciate it,14
+작별,교과서,good bye,12
+작별,교과서,goodbye,655
+작별,원어민 대안,see you,2348
+작별,원어민 대안,take care,1923
+작별,원어민 대안,see you later,48
+작별,원어민 대안,bye,118
+모름,교과서,i don't know,5950
+모름,원어민 대안,no idea,1763
+모름,원어민 대안,i have no idea,413
+모름,원어민 대안,beats me,17
+모름,원어민 대안,not sure,1778
+사과,교과서,i'm sorry,1871
+사과,원어민 대안,my bad,40
+사과,원어민 대안,sorry about that,22
+동의,교과서,i agree with you,65
+동의,원어민 대안,sounds good,32
+동의,원어민 대안,makes sense,105
+동의,원어민 대안,fair enough,7
+부탁,교과서,can you help me,212
+부탁,원어민 대안,could you do me a favor,12
+부탁,원어민 대안,can you give me a hand,11

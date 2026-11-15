@@ -1,0 +1,255 @@
+{
+ "reviews_total": 5142,
+ "price_reviews": 991,
+ "price_reviews_recent": 398,
+ "recent_from": "2025-11-13",
+ "price_low_share": 42.0,
+ "subtopics_all": [
+  {
+   "subtopic": "refund",
+   "name": "환불",
+   "share_of_price_reviews": 29.1,
+   "low_pct": 38.5,
+   "high_pct": 21.9,
+   "ci95_low": 10.6,
+   "ci95_high": 22.5,
+   "avg_rating": 2.62
+  },
+  {
+   "subtopic": "cancel",
+   "name": "해지·구독 취소",
+   "share_of_price_reviews": 12.8,
+   "low_pct": 19.5,
+   "high_pct": 7.6,
+   "ci95_low": 7.4,
+   "ci95_high": 16.4,
+   "avg_rating": 2.35
+  },
+  {
+   "subtopic": "autorenew",
+   "name": "자동 결제·갱신",
+   "share_of_price_reviews": 12.1,
+   "low_pct": 18.0,
+   "high_pct": 8.2,
+   "ci95_low": 5.4,
+   "ci95_high": 14.3,
+   "avg_rating": 2.46
+  },
+  {
+   "subtopic": "trial",
+   "name": "무료 체험",
+   "share_of_price_reviews": 8.2,
+   "low_pct": 11.3,
+   "high_pct": 6.4,
+   "ci95_low": 1.2,
+   "ci95_high": 8.7,
+   "avg_rating": 2.6
+  },
+  {
+   "subtopic": "paywall",
+   "name": "무료 기능이 줄었다·유료로 막힘",
+   "share_of_price_reviews": 6.2,
+   "low_pct": 6.7,
+   "high_pct": 6.4,
+   "ci95_low": -2.9,
+   "ci95_high": 3.6,
+   "avg_rating": 3.11
+  },
+  {
+   "subtopic": "expensive",
+   "name": "비싸다·가격 부담",
+   "share_of_price_reviews": 4.4,
+   "low_pct": 4.1,
+   "high_pct": 5.3,
+   "ci95_low": -4.0,
+   "ci95_high": 1.5,
+   "avg_rating": 3.34
+  },
+  {
+   "subtopic": "worth",
+   "name": "값어치를 한다",
+   "share_of_price_reviews": 1.1,
+   "low_pct": 0.7,
+   "high_pct": 1.6,
+   "ci95_low": -2.3,
+   "ci95_high": 0.5,
+   "avg_rating": 3.91
+  },
+  {
+   "subtopic": "raise",
+   "name": "가격 인상",
+   "share_of_price_reviews": 0.5,
+   "low_pct": 0.7,
+   "high_pct": 0.4,
+   "ci95_low": -0.7,
+   "ci95_high": 1.3,
+   "avg_rating": 2.8
+  }
+ ],
+ "subtopics_recent": [
+  {
+   "subtopic": "refund",
+   "name": "환불",
+   "share_of_price_reviews": 24.9,
+   "low_pct": 33.5,
+   "high_pct": 18.8,
+   "ci95_low": 5.7,
+   "ci95_high": 23.8,
+   "avg_rating": 2.64
+  },
+  {
+   "subtopic": "cancel",
+   "name": "해지·구독 취소",
+   "share_of_price_reviews": 18.8,
+   "low_pct": 26.8,
+   "high_pct": 13.2,
+   "ci95_low": 5.4,
+   "ci95_high": 21.9,
+   "avg_rating": 2.52
+  },
+  {
+   "subtopic": "autorenew",
+   "name": "자동 결제·갱신",
+   "share_of_price_reviews": 11.3,
+   "low_pct": 18.3,
+   "high_pct": 6.6,
+   "ci95_low": 4.8,
+   "ci95_high": 18.6,
+   "avg_rating": 2.31
+  },
+  {
+   "subtopic": "paywall",
+   "name": "무료 기능이 줄었다·유료로 막힘",
+   "share_of_price_reviews": 5.0,
+   "low_pct": 3.0,
+   "high_pct": 7.1,
+   "ci95_low": -8.5,
+   "ci95_high": 0.4,
+   "avg_rating": 3.8
+  },
+  {
+   "subtopic": "trial",
+   "name": "무료 체험",
+   "share_of_price_reviews": 4.8,
+   "low_pct": 4.9,
+   "high_pct": 4.6,
+   "ci95_low": -4.1,
+   "ci95_high": 4.7,
+   "avg_rating": 3.05
+  },
+  {
+   "subtopic": "expensive",
+   "name": "비싸다·가격 부담",
+   "share_of_price_reviews": 4.3,
+   "low_pct": 4.9,
+   "high_pct": 4.6,
+   "ci95_low": -4.1,
+   "ci95_high": 4.7,
+   "avg_rating": 3.12
+  },
+  {
+   "subtopic": "worth",
+   "name": "값어치를 한다",
+   "share_of_price_reviews": 1.0,
+   "low_pct": 0.6,
+   "high_pct": 1.5,
+   "ci95_low": -3.0,
+   "ci95_high": 1.2,
+   "avg_rating": 4.0
+  },
+  {
+   "subtopic": "raise",
+   "name": "가격 인상",
+   "share_of_price_reviews": 0.8,
+   "low_pct": 1.2,
+   "high_pct": 0.5,
+   "ci95_low": -1.2,
+   "ci95_high": 2.7,
+   "avg_rating": 2.67
+  }
+ ],
+ "mentioned_prices": {
+  "count": 128,
+  "median": 60000,
+  "quartiles": [
+   30000,
+   60000,
+   88000
+  ]
+ },
+ "prices_collected_on": "2026-11-15",
+ "competitor_plans": [
+  {
+   "app": "Day One",
+   "monthly": 12000.0,
+   "yearly": 66000,
+   "yearly_per_month": 5500.0,
+   "yearly_discount_pct": 54.2
+  },
+  {
+   "app": "Quizlet",
+   "monthly": 9900.0,
+   "yearly": 44000,
+   "yearly_per_month": 3670.0,
+   "yearly_discount_pct": 63.0
+  },
+  {
+   "app": "VoCat",
+   "monthly": 4900.0,
+   "yearly": 40900,
+   "yearly_per_month": 3410.0,
+   "yearly_discount_pct": 30.4
+  },
+  {
+   "app": "듀오링고",
+   "monthly": NaN,
+   "yearly": 100000,
+   "yearly_per_month": 8330.0,
+   "yearly_discount_pct": NaN
+  },
+  {
+   "app": "말해보카",
+   "monthly": 19500.0,
+   "yearly": 119000,
+   "yearly_per_month": 9920.0,
+   "yearly_discount_pct": 49.1
+  },
+  {
+   "app": "스픽",
+   "monthly": 29000.0,
+   "yearly": 129000,
+   "yearly_per_month": 10750.0,
+   "yearly_discount_pct": 62.9
+  },
+  {
+   "app": "케이크",
+   "monthly": 16000.0,
+   "yearly": 85000,
+   "yearly_per_month": 7080.0,
+   "yearly_discount_pct": 55.7
+  },
+  {
+   "app": "탄뎀",
+   "monthly": 21500.0,
+   "yearly": 89000,
+   "yearly_per_month": 7420.0,
+   "yearly_discount_pct": 65.5
+  },
+  {
+   "app": "하루콩",
+   "monthly": 2500.0,
+   "yearly": 12000,
+   "yearly_per_month": 1000.0,
+   "yearly_discount_pct": 60.0
+  },
+  {
+   "app": "헬로톡",
+   "monthly": 16900.0,
+   "yearly": 105000,
+   "yearly_per_month": 8750.0,
+   "yearly_discount_pct": 48.2
+  }
+ ],
+ "competitor_monthly_median": 16000,
+ "competitor_yearly_per_month_median": 7250
+}

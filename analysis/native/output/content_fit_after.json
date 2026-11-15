@@ -1,0 +1,78 @@
+{
+ "words": {
+  "count": 600,
+  "dark_words": [],
+  "feelings_in_pack": [
+   "happy",
+   "sad",
+   "angry",
+   "tired",
+   "bored",
+   "excited",
+   "nervous",
+   "worried",
+   "scared",
+   "afraid",
+   "upset",
+   "proud",
+   "glad",
+   "sorry",
+   "surprised",
+   "disappointed",
+   "embarrassed",
+   "comfortable",
+   "relaxed",
+   "sick",
+   "hungry",
+   "full",
+   "busy",
+   "free",
+   "calm",
+   "confused",
+   "amazed",
+   "annoyed",
+   "satisfied",
+   "thankful",
+   "shy",
+   "brave"
+  ],
+  "feelings_missing": [
+   "lonely",
+   "jealous",
+   "grateful"
+  ],
+  "examples_from_tatoeba_pct": 76.2
+ },
+ "word_examples": {
+  "count": 600,
+  "first_person_pct": 76.3,
+  "personal_voice_pct": 94.0,
+  "names_pct": 0.0,
+  "dark_pct": 0.0,
+  "formal_pct": 0.2,
+  "polite_korean_pct": 4.5,
+  "examples": {
+   "names": [],
+   "dark": [],
+   "formal": [
+    "We voted for our class president."
+   ]
+  }
+ },
+ "expression_examples": {
+  "count": 400,
+  "first_person_pct": 58.8,
+  "personal_voice_pct": 72.0,
+  "names_pct": 0.2,
+  "dark_pct": 0.0,
+  "formal_pct": 0.0,
+  "polite_korean_pct": 3.0,
+  "examples": {
+   "names": [
+    "Where's Tom? — No idea."
+   ],
+   "dark": [],
+   "formal": []
+  }
+ }
+}

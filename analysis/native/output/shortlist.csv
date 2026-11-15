@@ -1,0 +1,737 @@
+﻿expression,labels,sentences,per_million,words,all_basic,min_word_zipf,pmi
+live in,phrasal verbs,9187,4502.2,2,True,5.54,3.38
+talk about,"colloquialisms,idioms,phrasal verbs",5410,2651.2,2,True,5.42,4.54
+wait for,phrasal verbs,5233,2564.5,2,True,5.35,4.09
+kind of,"colloquialisms,idioms",5160,2528.7,2,True,5.45,3.35
+look at,phrasal verbs,4989,2444.9,2,True,5.81,3.84
+come back,phrasal verbs,3386,1659.3,2,True,5.78,4.11
+plan on,phrasal verbs,2837,1390.3,2,True,5.29,3.61
+find out,"idioms,phrasal verbs",2790,1367.3,2,True,5.76,3.72
+long time,idioms,2691,1318.8,2,True,5.81,3.43
+feel like,idioms,2668,1307.5,2,True,5.67,3.55
+too much,informal terms,2632,1289.8,2,True,5.95,3.86
+as well,"colloquialisms,idioms",2510,1230.1,2,True,6.03,3.29
+go back to,phrasal verbs,1982,971.3,3,True,6.03,4.24
+soon as,colloquialisms,1960,960.5,2,True,5.32,3.88
+as soon as,idioms,1954,957.6,3,True,5.32,9.64
+in the world,idioms,1887,924.7,3,True,5.89,3.46
+get out of,phrasal verbs,1781,872.8,3,True,6.28,5.0
+give up,phrasal verbs,1769,866.9,2,True,5.71,3.18
+wake up,phrasal verbs,1668,817.4,2,True,4.76,6.39
+grow up,"idioms,phrasal verbs",1585,776.7,2,True,4.9,6.17
+sit on,"idioms,informal terms,phrasal verbs",1365,668.9,2,True,4.9,3.77
+pick up,phrasal verbs,1297,635.6,2,True,5.08,5.38
+deal with,phrasal verbs,1285,629.7,2,True,5.32,3.9
+end up,phrasal verbs,1222,598.9,2,True,5.68,4.06
+take off,phrasal verbs,1198,587.1,2,True,5.92,3.31
+agree with,phrasal verbs,1153,565.0,2,True,4.97,3.56
+on the table,idioms,1114,545.9,3,True,5.05,5.06
+sit down,phrasal verbs,1113,545.4,2,True,4.9,6.26
+fall asleep,idioms,1099,538.6,2,True,4.36,9.11
+right away,idioms,1086,532.2,2,True,5.62,3.8
+get along,"idioms,phrasal verbs",1019,499.4,2,True,5.38,4.49
+figure out,"informal terms,phrasal verbs",1019,499.4,2,True,5.07,5.19
+tell the truth,"idioms,informal terms",997,488.6,3,True,5.05,6.47
+hang out,"idioms,informal terms,phrasal verbs",995,487.6,2,True,4.6,5.73
+run out,"idioms,phrasal verbs",994,487.1,2,True,5.49,4.06
+show up,"idioms,phrasal verbs",943,462.1,2,True,5.68,3.59
+as long as,idioms,905,443.5,3,True,5.81,7.63
+run away,phrasal verbs,892,437.1,2,True,5.49,5.75
+open the door,idioms,891,436.6,3,True,5.08,7.64
+turn off,"idioms,phrasal verbs",887,434.7,2,True,5.32,5.18
+laugh at,phrasal verbs,863,422.9,2,True,4.66,4.4
+arrive at,"idioms,phrasal verbs",848,415.6,2,True,4.38,4.45
+turn out,"colloquialisms,idioms,phrasal verbs",805,394.5,2,True,5.32,3.57
+sort of,informal terms,788,386.2,2,True,5.0,3.38
+look forward to,idioms,781,382.7,3,True,5.12,8.68
+too late,idioms,766,375.4,2,True,5.34,3.71
+so far,idioms,713,349.4,2,True,5.5,3.57
+go to work,idioms,712,348.9,3,True,5.96,3.14
+don't worry,"idioms,informal terms",703,344.5,2,True,4.84,3.19
+get rid of,idioms,694,340.1,3,True,4.5,9.32
+what's going on,"idioms,informal terms",671,328.8,3,True,5.2,6.51
+suffer from,phrasal verbs,658,322.5,2,True,4.45,6.17
+old man,colloquialisms,658,322.5,2,True,5.75,3.66
+stand up,"idioms,phrasal verbs",658,322.5,2,True,5.14,4.11
+cup of coffee,informal terms,657,322.0,3,True,4.86,11.23
+in the hospital,idioms,652,319.5,3,True,5.07,3.5
+pay attention,idioms,634,310.7,2,True,5.11,7.12
+run into,phrasal verbs,621,304.3,2,True,5.49,4.48
+break up,"idioms,phrasal verbs",613,300.4,2,True,5.18,3.95
+best friend,informal terms,613,300.4,2,True,5.37,4.98
+have a good time,idioms,607,297.5,4,True,6.12,7.3
+set up,"informal terms,phrasal verbs",586,287.2,2,True,5.59,3.4
+search for,phrasal verbs,567,277.9,2,True,4.96,3.95
+look after,phrasal verbs,567,277.9,2,True,5.81,3.11
+phone number,informal terms,564,276.4,2,True,5.3,6.08
+come up with,"idioms,phrasal verbs",551,270.0,3,True,5.78,5.29
+on the beach,idioms,517,253.4,3,True,4.92,4.91
+go to sleep,idioms,516,252.9,3,True,5.05,4.52
+clean up,"colloquialisms,idioms,phrasal verbs",510,249.9,2,True,4.97,3.52
+catch up,phrasal verbs,507,248.5,2,True,4.87,3.83
+look around,"idioms,phrasal verbs",499,244.5,2,True,5.77,3.39
+base on,phrasal verbs,488,239.1,2,True,5.05,5.34
+can't stand,idioms,477,233.8,2,True,5.14,4.26
+make fun of,"idioms,informal terms",475,232.8,3,True,5.3,7.36
+fall into,"idioms,phrasal verbs",468,229.3,2,True,5.13,4.94
+walk into,"colloquialisms,phrasal verbs",464,227.4,2,True,5.08,3.67
+pass away,"idioms,phrasal verbs",463,226.9,2,True,5.05,5.71
+other side,idioms,421,206.3,2,True,5.5,4.78
+what do you want,informal terms,414,202.9,4,True,6.04,4.51
+say goodbye,idioms,399,195.5,2,True,4.3,6.16
+turn into,phrasal verbs,397,194.6,2,True,5.32,3.65
+turn around,"colloquialisms,idioms,phrasal verbs",392,192.1,2,True,5.32,4.65
+carry out,"idioms,phrasal verbs",378,185.2,2,True,4.89,4.11
+close the door,idioms,372,182.3,3,True,5.08,7.13
+break into,"idioms,phrasal verbs",366,179.4,2,True,5.18,4.24
+fall off,phrasal verbs,357,175.0,2,True,5.13,4.93
+on purpose,idioms,354,173.5,2,True,4.88,3.22
+walk away,"colloquialisms,idioms,phrasal verbs",351,172.0,2,True,5.08,4.01
+make sense,"idioms,informal terms",349,171.0,2,True,5.19,4.44
+shut up,"colloquialisms,phrasal verbs",348,170.5,2,True,4.78,3.67
+take a look,idioms,348,170.5,3,True,5.81,4.49
+social media,informal terms,347,170.1,2,True,5.3,9.73
+walk around,phrasal verbs,346,169.6,2,True,5.08,4.27
+knock on,phrasal verbs,344,168.6,2,True,4.35,4.77
+pull out,"idioms,phrasal verbs",343,168.1,2,True,4.82,4.96
+break down,"idioms,informal terms,phrasal verbs",339,166.1,2,True,5.18,4.65
+what's happening,informal terms,337,165.2,2,True,4.8,5.67
+come true,idioms,336,164.7,2,True,5.4,3.1
+the other day,idioms,336,164.7,3,True,5.95,3.85
+take part,idioms,332,162.7,2,True,5.78,3.39
+consist of,phrasal verbs,331,162.2,2,True,3.94,6.12
+on the street,idioms,328,160.7,3,True,5.28,3.5
+get out of here,"idioms,informal terms",326,159.8,4,True,5.97,8.47
+bus stop,informal terms,326,159.8,2,True,4.83,4.47
+go ahead,phrasal verbs,324,158.8,2,True,5.01,3.76
+walk down,phrasal verbs,322,157.8,2,True,5.08,3.66
+hang up,"colloquialisms,idioms,phrasal verbs",321,157.3,2,True,4.6,4.15
+calm down,phrasal verbs,319,156.3,2,True,4.54,5.61
+take a walk,idioms,311,152.4,3,True,5.08,5.74
+little girl,idioms,303,148.5,2,True,5.38,3.7
+out the window,"colloquialisms,idioms",296,145.1,3,True,4.8,4.44
+walk through,"idioms,phrasal verbs",293,143.6,2,True,5.08,4.36
+hurry up,phrasal verbs,292,143.1,2,True,4.14,3.41
+fall down,phrasal verbs,292,143.1,2,True,5.13,4.78
+cup of tea,idioms,291,142.6,3,True,4.73,10.97
+to tell the truth,idioms,286,140.2,4,True,5.05,6.69
+have a hard time,"idioms,informal terms",285,139.7,4,True,5.53,7.98
+do the right thing,idioms,279,136.7,4,True,5.72,8.17
+crush on,phrasal verbs,278,136.2,2,True,4.17,4.22
+take a bath,idioms,267,130.8,3,True,4.44,7.77
+on top of,idioms,265,129.9,3,True,5.57,5.47
+great deal,idioms,264,129.4,2,True,5.32,5.39
+give birth,idioms,264,129.4,2,True,4.77,6.25
+move back,phrasal verbs,264,129.4,2,True,5.35,3.18
+a great deal,idioms,263,128.9,3,True,5.32,8.05
+credit card,informal terms,262,128.4,2,True,5.0,9.81
+cut down,"idioms,phrasal verbs",259,126.9,2,True,5.24,4.02
+engage in,phrasal verbs,258,126.4,2,True,4.36,4.45
+run down,phrasal verbs,255,125.0,2,True,5.49,3.71
+go straight,idioms,255,125.0,2,True,5.04,3.24
+freak out,"informal terms,phrasal verbs",252,123.5,2,True,4.08,6.64
+slow down,phrasal verbs,250,122.5,2,True,4.85,5.46
+keep up with,"informal terms,phrasal verbs",250,122.5,3,True,5.66,5.58
+disagree with,phrasal verbs,246,120.6,2,True,4.09,4.4
+run away from,"idioms,phrasal verbs",246,120.6,3,True,5.49,9.52
+write down,phrasal verbs,245,120.1,2,True,5.03,3.5
+turn down,"idioms,phrasal verbs",242,118.6,2,True,5.32,3.45
+jump out,"idioms,phrasal verbs",241,118.1,2,True,4.69,4.59
+put up with,"idioms,informal terms,phrasal verbs",237,116.1,3,True,5.66,4.87
+take a picture,"idioms,informal terms",236,115.7,3,True,5.13,5.98
+run over,"idioms,phrasal verbs",234,114.7,2,True,5.49,3.45
+come back from,phrasal verbs,234,114.7,3,True,5.78,5.89
+kick out,"idioms,phrasal verbs",233,114.2,2,True,4.72,5.33
+burst into,phrasal verbs,229,112.2,2,True,4.15,5.74
+come across,"idioms,phrasal verbs",227,111.2,2,True,5.25,3.44
+old woman,informal terms,224,109.8,2,True,5.35,3.41
+get away with,"colloquialisms,idioms,phrasal verbs",224,109.8,3,True,5.62,4.89
+come to the party,informal terms,224,109.8,4,True,5.49,6.07
+move into,phrasal verbs,222,108.8,2,True,5.35,3.19
+when it comes to,idioms,220,107.8,4,True,5.36,8.5
+wash machine,informal terms,219,107.3,2,True,4.46,8.0
+mess up,"idioms,phrasal verbs",218,106.8,2,True,4.57,3.84
+cut off,phrasal verbs,217,106.3,2,True,5.24,3.62
+from time to time,idioms,217,106.3,4,True,6.29,5.96
+drop out,"idioms,phrasal verbs",216,105.9,2,True,4.99,3.78
+throw up,"colloquialisms,informal terms,phrasal verbs",213,104.4,2,True,4.83,3.63
+not want to do that,idioms,213,104.4,5,True,6.04,5.58
+in spite of,idioms,211,103.4,3,True,4.04,6.75
+big deal,"idioms,informal terms",206,101.0,2,True,5.32,5.14
+fill out,phrasal verbs,205,100.5,2,True,4.64,4.41
+throw away,"idioms,phrasal verbs",200,98.0,2,True,4.83,5.32
+come along,"idioms,phrasal verbs",199,97.5,2,True,5.38,3.01
+on the other side of,idioms,198,97.0,5,True,5.5,13.93
+catch a cold,idioms,196,96.1,3,True,4.87,8.06
+cope with,phrasal verbs,194,95.1,2,True,4.04,4.61
+drop by,"colloquialisms,phrasal verbs",192,94.1,2,True,4.99,3.55
+keep an eye on,idioms,188,92.1,4,True,5.02,15.48
+bad news,idioms,186,91.2,2,True,5.44,4.55
+all over the world,idioms,186,91.2,4,True,5.89,9.51
+piece of cake,idioms,186,91.2,3,True,4.53,10.98
+in the closet,colloquialisms,184,90.2,3,True,4.13,3.86
+pair of shoes,idioms,182,89.2,3,True,4.67,11.1
+nice guy,idioms,180,88.2,2,True,5.37,4.83
+set off,"idioms,phrasal verbs",169,82.8,2,True,5.59,3.02
+lay down,phrasal verbs,168,82.3,2,True,4.64,5.16
+to be honest,idioms,168,82.3,3,True,4.73,3.68
+feel free,idioms,167,81.8,2,True,5.63,3.55
+lie down,phrasal verbs,166,81.3,2,True,4.84,3.8
+keep quiet,idioms,165,80.9,2,True,4.65,4.68
+belly button,informal terms,161,78.9,2,True,4.1,10.64
+hot water,idioms,161,78.9,2,True,5.16,3.92
+get into trouble,idioms,160,78.4,3,True,4.79,8.49
+piece of paper,informal terms,160,78.4,3,True,5.04,10.75
+drive away,"idioms,phrasal verbs",160,78.4,2,True,5.13,3.17
+all kinds of,informal terms,159,77.9,3,True,4.51,7.16
+now and then,idioms,159,77.9,3,True,6.07,4.89
+once in a while,idioms,158,77.4,4,True,5.53,9.43
+pass through,phrasal verbs,158,77.4,2,True,5.05,4.78
+play games,idioms,151,74.0,2,True,5.44,5.57
+messed up,colloquialisms,149,73.0,2,True,4.01,5.36
+bump into,"idioms,phrasal verbs",149,73.0,2,True,3.98,8.07
+old lady,informal terms,148,72.5,2,True,4.95,5.08
+around the corner,idioms,147,72.0,3,True,4.75,7.44
+pack up,"informal terms,phrasal verbs",147,72.0,2,True,4.66,4.14
+little sister,informal terms,145,71.1,2,True,4.95,3.17
+climb up,phrasal verbs,145,71.1,2,True,4.22,4.13
+aim at,"idioms,phrasal verbs",143,70.1,2,True,4.51,4.18
+walk in the park,idioms,141,69.1,4,True,5.08,9.9
+tell you the truth,"idioms,informal terms",140,68.6,4,True,5.05,6.57
+stick around,"informal terms,phrasal verbs",138,67.6,2,True,4.76,5.57
+last minute,idioms,136,66.6,2,True,4.98,3.74
+settle down,phrasal verbs,135,66.2,2,True,4.37,6.28
+move away,phrasal verbs,134,65.7,2,True,5.35,3.2
+pull up,"idioms,phrasal verbs",132,64.7,2,True,4.82,3.64
+lay off,"idioms,phrasal verbs",131,64.2,2,True,4.64,4.66
+out of the way,idioms,130,63.7,4,True,6.01,4.5
+all of a sudden,colloquialisms,129,63.2,4,True,4.4,10.05
+on the edge,idioms,129,63.2,3,True,4.74,4.82
+it's about time,idioms,129,63.2,3,True,6.29,3.2
+under control,idioms,128,62.7,2,True,5.4,5.3
+come to an end,idioms,128,62.7,4,True,5.68,9.57
+take it easy,"idioms,informal terms",128,62.7,3,True,5.29,6.05
+hide behind,phrasal verbs,127,62.2,2,True,4.54,5.75
+burst out,phrasal verbs,127,62.2,2,True,4.15,3.79
+pull over,"idioms,phrasal verbs",124,60.8,2,True,4.82,4.96
+spy on,phrasal verbs,124,60.8,2,True,4.24,3.86
+run through,"colloquialisms,idioms,phrasal verbs",124,60.8,2,True,5.49,3.51
+jump off,phrasal verbs,124,60.8,2,True,4.69,5.1
+switch off,"idioms,phrasal verbs",123,60.3,2,True,4.6,5.48
+run around,"idioms,phrasal verbs",121,59.3,2,True,5.49,3.15
+behind bars,idioms,121,59.3,2,True,4.45,7.87
+burst into tears,idioms,119,58.3,3,True,4.15,15.68
+get wet,idioms,119,58.3,2,True,4.54,3.16
+have an accident,"idioms,informal terms",119,58.3,3,True,4.71,5.67
+blow up,"colloquialisms,phrasal verbs",117,57.3,2,True,4.59,4.14
+on the shelf,idioms,116,56.8,3,True,4.02,5.06
+might as well,idioms,116,56.8,3,True,5.66,6.42
+burn down,phrasal verbs,113,55.4,2,True,4.53,5.58
+at a loss,idioms,113,55.4,3,True,5.07,5.39
+step back,"idioms,phrasal verbs",112,54.9,2,True,5.13,3.34
+in the first place,idioms,111,54.4,4,True,5.71,7.06
+shut down,phrasal verbs,111,54.4,2,True,4.78,3.57
+straight away,idioms,110,53.9,2,True,5.04,3.98
+split up,phrasal verbs,109,53.4,2,True,4.65,3.97
+stand up for,phrasal verbs,109,53.4,3,True,5.14,5.75
+who cares,colloquialisms,108,52.9,2,True,4.4,4.13
+may as well,idioms,108,52.9,3,True,5.98,6.58
+dispose of,phrasal verbs,106,51.9,2,True,3.53,4.15
+interact with,phrasal verbs,106,51.9,2,True,4.05,5.15
+sit around,phrasal verbs,105,51.5,2,True,4.9,3.36
+carry away,"idioms,informal terms,phrasal verbs",104,51.0,2,True,4.89,4.09
+fill up,"colloquialisms,idioms,phrasal verbs",104,51.0,2,True,4.64,3.49
+leave the door open,idioms,104,51.0,4,True,5.08,12.13
+junior high,informal terms,103,50.5,2,True,4.49,7.7
+no such thing,idioms,103,50.5,3,True,5.72,8.42
+out of order,idioms,102,50.0,3,True,5.49,4.7
+carried away,idioms,101,49.5,2,True,4.77,4.48
+in any case,idioms,101,49.5,3,True,5.55,6.07
+have no right,informal terms,100,49.0,3,True,5.96,3.18
+clean up after,phrasal verbs,99,48.5,3,True,4.97,8.57
+on account of,"colloquialisms,idioms",99,48.5,3,True,5.21,4.82
+down the road,idioms,98,48.0,3,True,5.24,4.74
+on the other hand,idioms,98,48.0,4,True,5.41,8.55
+lock up,phrasal verbs,97,47.5,2,True,4.51,3.04
+for the time being,idioms,97,47.5,4,True,5.95,5.56
+go too far,idioms,97,47.5,3,True,5.5,6.97
+reflect on,phrasal verbs,97,47.5,2,True,4.39,3.82
+jump up,phrasal verbs,96,47.0,2,True,4.69,3.32
+top shelf,idioms,96,47.0,2,True,4.02,8.35
+quite a bit,idioms,96,47.0,3,True,5.29,5.91
+real estate,informal terms,95,46.6,2,True,4.82,8.26
+make ends meet,idioms,95,46.6,3,True,4.75,13.39
+get stuck in,idioms,94,46.1,3,True,4.68,5.9
+happy birthday,colloquialisms,94,46.1,2,True,4.76,3.48
+chase after,"idioms,phrasal verbs",94,46.1,2,True,4.44,6.64
+look down on,"idioms,phrasal verbs",93,45.6,3,True,5.81,5.03
+lose sight of,idioms,93,45.6,3,True,4.54,9.84
+on the spot,idioms,93,45.6,3,True,4.89,3.77
+over and over again,idioms,93,45.6,4,True,5.7,10.81
+what do you say,idioms,93,45.6,4,True,5.89,3.82
+bang on,"informal terms,phrasal verbs",92,45.1,2,True,4.32,4.35
+tear down,phrasal verbs,92,45.1,2,True,4.35,5.82
+by no means,idioms,92,45.1,3,True,5.44,7.38
+roll up,phrasal verbs,91,44.6,2,True,4.75,3.93
+fall apart,"idioms,phrasal verbs",91,44.6,2,True,4.78,7.22
+mix up,"idioms,phrasal verbs",91,44.6,2,True,4.71,4.44
+way of thinking,idioms,91,44.6,3,True,5.24,5.71
+like it or not,informal terms,91,44.6,4,True,6.41,6.67
+stand behind,"idioms,phrasal verbs",90,44.1,2,True,5.14,4.49
+what's the matter,idioms,90,44.1,3,True,5.2,4.68
+red light,idioms,89,43.6,2,True,5.32,4.16
+tidy up,phrasal verbs,87,42.6,2,True,3.53,4.81
+go without saying,idioms,86,42.1,3,True,5.37,8.61
+lean on,phrasal verbs,85,41.7,2,True,4.14,4.12
+out of gas,idioms,85,41.7,3,True,5.01,5.5
+in the oven,informal terms,84,41.2,3,True,4.05,3.57
+wink at,"idioms,phrasal verbs",84,41.2,2,True,3.5,4.91
+a good deal,idioms,84,41.2,3,True,5.32,4.34
+matter of fact,colloquialisms,83,40.7,3,True,5.38,8.56
+in other words,idioms,82,40.2,3,True,5.25,5.32
+out of the question,idioms,82,40.2,4,True,5.35,5.93
+hang around,"idioms,phrasal verbs",82,40.2,2,True,4.6,4.25
+find fault,idioms,81,39.7,2,True,4.64,3.89
+catch sight of,idioms,81,39.7,3,True,4.54,9.8
+middle of nowhere,idioms,80,39.2,3,True,4.4,11.16
+put an end to,idioms,79,38.7,4,True,5.66,9.67
+piss off,"colloquialisms,idioms,phrasal verbs",79,38.7,2,True,4.17,6.76
+pay the rent,idioms,79,38.7,3,True,4.58,7.55
+sick and tired,idioms,78,38.2,3,True,4.71,6.82
+out of sight,"colloquialisms,idioms",78,38.2,3,True,4.54,5.49
+from scratch,idioms,78,38.2,2,True,4.16,3.85
+wide open,idioms,77,37.7,2,True,4.96,5.55
+burst out laughing,idioms,77,37.7,3,True,4.15,13.96
+step forward,idioms,76,37.2,2,True,5.12,6.68
+end of the world,idioms,76,37.2,4,True,5.68,7.89
+doze off,phrasal verbs,76,37.2,2,True,2.64,9.47
+what it takes,idioms,75,36.8,3,True,5.18,4.23
+pull off,"idioms,phrasal verbs",75,36.8,2,True,4.82,4.24
+in the long run,idioms,74,36.3,4,True,5.49,7.36
+rainy day,idioms,73,35.8,2,True,3.74,4.92
+fit into,phrasal verbs,73,35.8,2,True,4.95,3.07
+pile up,"idioms,phrasal verbs",73,35.8,2,True,4.14,4.58
+roll down,phrasal verbs,72,35.3,2,True,4.75,5.14
+it's no use,colloquialisms,72,35.3,3,True,5.81,5.5
+walk away from,"idioms,phrasal verbs",72,35.3,3,True,5.08,7.35
+stretch out,phrasal verbs,71,34.8,2,True,4.35,4.6
+dream come true,idioms,71,34.8,3,True,4.91,10.93
+out of the ordinary,idioms,70,34.3,4,True,4.42,9.04
+just in case,informal terms,70,34.3,3,True,5.55,4.85
+take a deep breath,idioms,69,33.8,4,True,4.52,16.65
+pick it up,phrasal verbs,69,33.8,3,True,5.08,5.33
+hear voices,idioms,69,33.8,2,True,4.35,6.51
+run across,"idioms,phrasal verbs",68,33.3,2,True,5.25,4.25
+at the last minute,idioms,68,33.3,4,True,4.98,9.87
+rush hour,idioms,68,33.3,2,True,4.48,7.2
+work of art,idioms,68,33.3,3,True,5.29,6.11
+sit under,phrasal verbs,68,33.3,2,True,4.9,3.8
+tall man,colloquialisms,67,32.8,2,True,4.52,3.2
+screw up,"colloquialisms,phrasal verbs",67,32.8,2,True,4.25,4.74
+tear up,"idioms,phrasal verbs",67,32.8,2,True,4.35,3.82
+all at once,idioms,66,32.3,3,True,5.53,4.47
+throw a party,informal terms,66,32.3,3,True,4.83,7.1
+take out the trash,idioms,66,32.3,4,True,4.42,11.8
+switched off,informal terms,66,32.3,2,True,4.14,5.35
+cool down,phrasal verbs,65,31.9,2,True,5.15,3.15
+fall behind,"idioms,phrasal verbs",65,31.9,2,True,5.13,4.31
+once and for all,idioms,65,31.9,4,True,5.53,7.24
+blow out,phrasal verbs,65,31.9,2,True,4.59,3.23
+wipe out,"informal terms,phrasal verbs",64,31.4,2,True,4.01,4.13
+not to mention,idioms,64,31.4,3,True,4.73,3.74
+off the table,idioms,63,30.9,3,True,5.05,3.56
+run out of gas,informal terms,63,30.9,4,True,5.01,14.38
+sneak out,"idioms,informal terms,phrasal verbs",63,30.9,2,True,3.99,4.97
+fast asleep,idioms,63,30.9,2,True,4.36,4.27
+just a minute,idioms,61,29.9,3,True,4.98,4.33
+catch fire,idioms,61,29.9,2,True,4.87,4.28
+in the back seat,idioms,61,29.9,4,True,4.82,7.74
+exact same,informal terms,60,29.4,2,True,4.51,5.56
+on good terms,idioms,60,29.4,3,True,5.1,7.58
+pull the trigger,"idioms,informal terms",60,29.4,3,True,4.25,12.76
+chew on,"idioms,phrasal verbs",60,29.4,2,True,3.66,3.84
+enter into,phrasal verbs,60,29.4,2,True,4.81,3.24
+pull into,phrasal verbs,60,29.4,2,True,4.82,3.54
+rush out,phrasal verbs,60,29.4,2,True,4.48,3.0
+middle of the road,idioms,59,28.9,4,True,5.18,10.44
+sound asleep,idioms,59,28.9,2,True,4.36,4.47
+out of the woods,idioms,59,28.9,4,True,4.45,6.81
+football player,informal terms,58,28.4,2,True,5.11,6.37
+stick together,"idioms,phrasal verbs",58,28.4,2,True,4.76,4.59
+come in handy,"idioms,informal terms",57,27.9,3,True,3.97,9.19
+set foot,idioms,57,27.9,2,True,4.87,5.12
+hot chocolate,informal terms,57,27.9,2,True,4.49,5.36
+blow off,phrasal verbs,57,27.9,2,True,4.59,4.52
+climb into,phrasal verbs,57,27.9,2,True,4.22,3.82
+lay eggs,idioms,56,27.4,2,True,4.5,6.9
+lose track,idioms,56,27.4,2,True,5.02,6.75
+take pride,idioms,56,27.4,2,True,4.49,4.17
+as a rule,idioms,55,27.0,3,True,4.94,4.76
+dead end,idioms,55,27.0,2,True,5.19,3.31
+keep away from,phrasal verbs,55,27.0,3,True,5.62,6.23
+drop off,"idioms,phrasal verbs",55,27.0,2,True,4.99,3.28
+walk the dog,idioms,54,26.5,3,True,5.08,3.79
+make the best of,idioms,54,26.5,4,True,5.84,5.55
+matter of time,idioms,54,26.5,3,True,5.38,3.22
+for instance,informal terms,54,26.5,2,True,4.59,3.83
+sigh of relief,idioms,54,26.5,3,True,3.95,15.41
+how are you doing,informal terms,53,26.0,4,True,5.6,4.29
+out of nowhere,idioms,53,26.0,3,True,4.4,6.05
+wrap up,"idioms,phrasal verbs",53,26.0,2,True,4.2,4.27
+so long as,idioms,53,26.0,3,True,5.81,3.93
+stress out,"idioms,phrasal verbs",53,26.0,2,True,4.73,3.05
+pop up,"idioms,informal terms,phrasal verbs",52,25.5,2,True,4.87,3.58
+kick off,"colloquialisms,idioms,phrasal verbs",52,25.5,2,True,4.72,4.64
+all over the place,idioms,52,25.5,4,True,5.71,7.96
+pay the bills,idioms,52,25.5,3,True,4.52,8.08
+gone fishing,idioms,51,25.0,2,True,4.47,4.29
+summer camp,informal terms,51,25.0,2,True,4.79,5.6
+on the rise,idioms,51,25.0,3,True,4.81,3.04
+good night's sleep,colloquialisms,51,25.0,3,True,3.88,13.74
+safe and sound,idioms,51,25.0,3,True,5.07,7.65
+pour out,phrasal verbs,51,25.0,2,True,4.1,4.1
+send a message,idioms,50,24.5,3,True,5.0,8.14
+locker room,informal terms,50,24.5,2,True,3.95,5.22
+any time soon,idioms,50,24.5,3,True,5.32,5.42
+see you later,idioms,49,24.0,3,True,5.49,3.41
+go along with,"idioms,phrasal verbs",49,24.0,3,True,5.38,4.44
+dig up,"idioms,phrasal verbs",49,24.0,2,True,4.22,3.92
+curl up,phrasal verbs,49,24.0,2,True,3.52,7.18
+mess around,"informal terms,phrasal verbs",48,23.5,2,True,4.57,3.72
+stressed out,informal terms,48,23.5,2,True,4.18,3.69
+out of the blue,idioms,48,23.5,4,True,5.13,5.98
+come down with,phrasal verbs,48,23.5,3,True,5.78,3.32
+knock down,"idioms,informal terms,phrasal verbs",48,23.5,2,True,4.35,4.71
+fresh start,idioms,48,23.5,2,True,4.83,4.57
+screwed up,"colloquialisms,idioms",48,23.5,2,True,4.0,4.49
+without fail,idioms,47,23.0,2,True,4.61,4.29
+wide awake,idioms,47,23.0,2,True,4.14,7.21
+fade away,phrasal verbs,47,23.0,2,True,3.86,7.36
+cheer up,"idioms,phrasal verbs",47,23.0,2,True,4.06,3.49
+stand a chance,idioms,47,23.0,3,True,5.14,6.17
+beat around the bush,idioms,46,22.5,4,True,4.49,18.08
+get in the way,idioms,46,22.5,4,True,6.01,3.02
+thin air,idioms,46,22.5,2,True,4.47,6.18
+make a point,idioms,46,22.5,3,True,5.54,4.02
+run away with,phrasal verbs,46,22.5,3,True,5.49,6.04
+just kidding,informal terms,46,22.5,2,True,4.2,3.57
+clear the table,idioms,45,22.1,3,True,5.05,5.66
+soaking wet,"idioms,informal terms",45,22.1,2,True,3.43,10.83
+slip into,"idioms,phrasal verbs",45,22.1,2,True,4.28,5.06
+bring forth,phrasal verbs,45,22.1,2,True,4.4,6.45
+hold onto,"idioms,phrasal verbs",45,22.1,2,True,4.77,6.54
+crime against humanity,colloquialisms,45,22.1,3,True,4.32,16.87
+needless to say,idioms,45,22.1,3,True,3.66,8.67
+boys and girls,idioms,45,22.1,3,True,5.03,8.87
+sleep a wink,idioms,45,22.1,3,True,3.5,10.49
+ground floor,informal terms,44,21.6,2,True,4.94,4.87
+main character,idioms,44,21.6,2,True,5.11,7.0
+put aside,phrasal verbs,44,21.6,2,True,4.59,4.44
+make it up to,"idioms,phrasal verbs",44,21.6,4,True,6.08,3.48
+believe it or not,idioms,44,21.6,4,True,5.51,8.39
+under the sun,idioms,43,21.1,3,True,4.97,5.28
+think too much,colloquialisms,43,21.1,3,True,5.95,3.1
+cross the line,idioms,43,21.1,3,True,5.0,8.05
+skate on,phrasal verbs,43,21.1,2,True,3.74,3.4
+out of shape,idioms,43,21.1,3,True,4.72,5.36
+start a family,idioms,43,21.1,3,True,5.56,4.63
+hook up,"idioms,phrasal verbs",42,20.6,2,True,4.37,4.07
+get to the bottom of,"idioms,informal terms",42,20.6,5,True,4.84,9.97
+at the expense of,idioms,42,20.6,4,True,4.23,8.78
+over the moon,idioms,42,20.6,3,True,4.7,4.57
+wander off,phrasal verbs,42,20.6,2,True,3.67,5.86
+throw stones,idioms,42,20.6,2,True,4.31,8.6
+hop in,"informal terms,phrasal verbs",42,20.6,2,True,4.4,3.25
+scared to death,idioms,42,20.6,3,True,4.6,5.27
+read between the lines,idioms,42,20.6,4,True,4.95,16.08
+against the law,idioms,42,20.6,3,True,5.46,5.79
+fall upon,phrasal verbs,41,20.1,2,True,5.12,4.85
+knock over,phrasal verbs,41,20.1,2,True,4.35,4.34
+step aside,phrasal verbs,41,20.1,2,True,4.59,7.68
+ups and downs,idioms,41,20.1,3,True,3.93,17.07
+come to terms,idioms,41,20.1,3,True,5.1,4.96
+rise above,phrasal verbs,40,19.6,2,True,4.81,6.82
+head over heels,idioms,40,19.6,3,True,4.06,14.28
+cry for help,idioms,40,19.6,3,True,4.59,5.0
+take a bite,idioms,40,19.6,3,True,4.31,5.77
+you'll never guess,idioms,40,19.6,3,True,5.17,9.39
+hop on,"informal terms,phrasal verbs",40,19.6,2,True,4.4,4.34
+how's it going,informal terms,39,19.1,3,True,3.95,6.33
+pull down,phrasal verbs,39,19.1,2,True,4.82,3.43
+chop down,"idioms,phrasal verbs",39,19.1,2,True,3.77,6.22
+take into account,idioms,39,19.1,3,True,5.21,9.05
+have a clue,colloquialisms,39,19.1,3,True,4.18,4.8
+lay down on,phrasal verbs,39,19.1,3,True,4.64,7.63
+bite to eat,idioms,39,19.1,3,True,4.31,5.75
+high blood,informal terms,39,19.1,2,True,5.1,3.35
+call it a day,idioms,38,18.6,4,True,5.51,6.27
+hit it off,"informal terms,phrasal verbs",38,18.6,3,True,5.37,5.38
+slip away,phrasal verbs,38,18.6,2,True,4.28,5.56
+high blood pressure,colloquialisms,38,18.6,3,True,5.01,14.89
+once or twice,idioms,38,18.6,3,True,4.84,10.95
+bow down,"idioms,phrasal verbs",37,18.1,2,True,4.3,5.24
+fool around,"idioms,informal terms,phrasal verbs",37,18.1,2,True,4.29,3.53
+bite off,"idioms,phrasal verbs",37,18.1,2,True,4.31,3.38
+pull away,"idioms,phrasal verbs",37,18.1,2,True,4.82,3.59
+sneak up,phrasal verbs,37,18.1,2,True,3.99,4.26
+too good to be true,idioms,37,18.1,5,True,5.4,12.58
+make a scene,idioms,37,18.1,3,True,4.97,5.58
+in the front row,idioms,37,18.1,4,True,4.6,11.76
+come of age,idioms,37,18.1,3,True,5.32,4.19
+straighten up,"idioms,phrasal verbs",37,18.1,2,True,3.27,5.24
+come to terms with,idioms,36,17.6,4,True,5.1,9.34
+off the hook,"idioms,informal terms",36,17.6,3,True,4.37,7.4
+world record,idioms,36,17.6,2,True,5.21,3.74
+stand firm,idioms,36,17.6,2,True,4.79,6.62
+in bad shape,"idioms,informal terms",36,17.6,3,True,4.72,7.45
+have no time for,idioms,36,17.6,4,True,6.29,4.61
+joke around,"informal terms,phrasal verbs",35,17.2,2,True,4.68,3.1
+there's no use,colloquialisms,35,17.2,3,True,5.54,6.36
+stick in the mud,idioms,35,17.2,4,True,4.13,14.14
+get the hang of,"colloquialisms,idioms",35,17.2,4,True,4.6,6.69
+under the weather,idioms,35,17.2,3,True,4.87,4.98
+go ahead with,phrasal verbs,34,16.7,3,True,5.01,5.08
+big mouth,idioms,34,16.7,2,True,4.83,3.22
+creep out,"informal terms,phrasal verbs",34,16.7,2,True,3.84,4.71
+crystal clear,idioms,34,16.7,2,True,4.4,8.09
+get some air,idioms,34,16.7,3,True,5.37,6.28
+every inch,idioms,34,16.7,2,True,4.49,5.68
+wrap around,phrasal verbs,34,16.7,2,True,4.2,5.69
+take for granted,idioms,34,16.7,3,True,4.61,7.77
+shake off,phrasal verbs,34,16.7,2,True,4.33,4.14
+paper bag,idioms,34,16.7,2,True,4.79,4.57
+with a view to,idioms,34,16.7,4,True,5.19,4.22
+hard of hearing,idioms,34,16.7,3,True,4.82,7.04
+play with fire,idioms,33,16.2,3,True,5.3,6.24
+climb down,"idioms,phrasal verbs",33,16.2,2,True,4.22,3.54
+creeped out,informal terms,33,16.2,2,True,2.72,5.21
+shoot down,"idioms,phrasal verbs",33,16.2,2,True,4.73,3.42
+vast majority,idioms,33,16.2,2,True,4.49,9.16
+tear off,phrasal verbs,33,16.2,2,True,4.35,4.21
+without a trace,idioms,33,16.2,3,True,4.19,8.6
+stir up,phrasal verbs,33,16.2,2,True,3.96,4.15
+filthy rich,"idioms,informal terms",33,16.2,2,True,3.8,7.32
+have second thoughts,idioms,33,16.2,3,True,4.75,9.63
+look for trouble,informal terms,33,16.2,3,True,4.79,5.22
+see eye to eye,idioms,33,16.2,4,True,5.02,13.33
+bike ride,informal terms,32,15.7,2,True,4.53,5.28
+call it a night,idioms,32,15.7,4,True,5.51,6.76
+flip through,phrasal verbs,32,15.7,2,True,4.2,6.65
+blow away,"idioms,informal terms,phrasal verbs",32,15.7,2,True,4.59,4.05
+same boat,colloquialisms,32,15.7,2,True,4.71,3.05
+intensive care,colloquialisms,32,15.7,2,True,4.06,7.12
+come a long way,idioms,32,15.7,4,True,5.78,7.74
+slip out,"idioms,informal terms,phrasal verbs",32,15.7,2,True,4.28,3.47
+with both hands,idioms,32,15.7,3,True,5.16,5.76
+set aside,phrasal verbs,32,15.7,2,True,4.59,5.77
+wipe away,phrasal verbs,31,15.2,2,True,4.01,4.92
+under the influence,idioms,31,15.2,3,True,4.78,7.3
+wipe down,phrasal verbs,31,15.2,2,True,4.01,4.69
+on the point of,idioms,31,15.2,4,True,5.54,4.06
+at the mercy of,idioms,31,15.2,4,True,4.25,8.04
+telephone call,colloquialisms,31,15.2,2,True,4.41,3.69
+comfort zone,idioms,31,15.2,2,True,4.41,10.06
+stare out,phrasal verbs,31,15.2,2,True,3.91,3.62
+fair share,idioms,31,15.2,2,True,4.99,5.97
+grow out of,"idioms,phrasal verbs",31,15.2,3,True,4.9,3.96
+end of the line,idioms,31,15.2,4,True,5.49,9.02
+nowhere to be found,idioms,31,15.2,4,True,4.4,10.05
+report card,informal terms,31,15.2,2,True,5.04,5.31
+shave off,phrasal verbs,31,15.2,2,True,3.83,4.81
+drift apart,"idioms,phrasal verbs",31,15.2,2,True,3.82,10.53
+stuck in the mud,idioms,31,15.2,4,True,4.13,13.42
+sum up,phrasal verbs,31,15.2,2,True,4.34,3.11
+put it down,phrasal verbs,30,14.7,3,True,5.66,3.05
+hand to mouth,idioms,30,14.7,3,True,4.83,5.47
+pour down,phrasal verbs,30,14.7,2,True,4.1,4.95
+bear fruit,idioms,30,14.7,2,True,4.57,5.77
+soak in,phrasal verbs,30,14.7,2,True,3.61,3.0
+out of date,idioms,30,14.7,3,True,5.22,3.54
+get ahead of,phrasal verbs,30,14.7,3,True,5.01,4.1
+into thin air,idioms,30,14.7,3,True,4.47,12.41
+fingers crossed,idioms,30,14.7,2,True,4.35,7.52
+good old days,idioms,30,14.7,3,True,5.61,6.36
+barge in,phrasal verbs,30,14.7,2,True,3.5,4.0
+son of a bitch,idioms,30,14.7,4,True,4.76,12.41
+around the clock,idioms,30,14.7,3,True,4.43,5.71
+lose touch,idioms,30,14.7,2,True,4.91,4.23
+red meat,idioms,29,14.2,2,True,4.63,3.81
+ring a bell,"idioms,informal terms",29,14.2,3,True,4.59,9.54
+walk out on,"informal terms,phrasal verbs",29,14.2,3,True,5.08,3.15
+in the same boat,idioms,29,14.2,4,True,4.71,8.46
+out of line,idioms,29,14.2,3,True,5.49,3.59
+get a move on,"idioms,informal terms",29,14.2,4,True,5.35,6.53
+day after day,idioms,29,14.2,3,True,5.95,5.24
+piece of shit,idioms,29,14.2,3,True,5.04,9.52
+pay the price,idioms,29,14.2,3,True,5.23,5.53
+up to no good,idioms,29,14.2,4,True,6.12,4.12
+on the same page,idioms,29,14.2,4,True,5.12,10.38
+rain or shine,idioms,29,14.2,3,True,4.17,13.51
+be no match for,idioms,29,14.2,4,True,5.13,9.75
+bread and butter,idioms,29,14.2,3,True,4.4,9.44
+hot air,idioms,29,14.2,2,True,5.16,3.09
+question mark,"colloquialisms,informal terms",29,14.2,2,True,5.05,3.49
+roll over,phrasal verbs,29,14.2,2,True,4.75,3.69
+get to the point,idioms,29,14.2,4,True,5.54,3.76
+at the wheel,idioms,28,13.7,3,True,4.5,3.74
+play dumb,"idioms,informal terms",28,13.7,2,True,4.54,4.62
+play a role,idioms,28,13.7,3,True,5.16,6.6
+pick a fight,"idioms,informal terms",28,13.7,3,True,5.08,6.67
+wave goodbye,idioms,28,13.7,2,True,4.3,8.55
+take away from,phrasal verbs,28,13.7,3,True,5.62,3.89
+an arm and a leg,idioms,28,13.7,5,True,4.66,17.76
+turn a blind eye,idioms,28,13.7,4,True,4.52,17.45
+look the other way,idioms,28,13.7,4,True,5.81,7.84
+love at first sight,idioms,28,13.7,4,True,4.54,14.5
+there is no telling,"idioms,informal terms",28,13.7,4,True,4.92,8.74
+sing along,"colloquialisms,idioms,phrasal verbs",28,13.7,2,True,4.54,3.14
+stand tall,idioms,28,13.7,2,True,4.52,4.21
+take a shit,"colloquialisms,idioms",28,13.7,3,True,5.48,4.81
+best regards,idioms,28,13.7,2,True,4.2,5.84
+change the channel,idioms,28,13.7,3,True,4.85,7.01
+jump for joy,idioms,28,13.7,3,True,4.55,11.5
+down the drain,idioms,28,13.7,3,True,4.07,6.79
+freezing cold,idioms,28,13.7,2,True,4.05,5.64
+lie ahead,phrasal verbs,28,13.7,2,True,4.84,4.61
+blind date,idioms,28,13.7,2,True,4.52,5.64
+fall short,idioms,28,13.7,2,True,5.13,3.9
+speed of light,colloquialisms,27,13.2,3,True,5.0,8.19
+come what may,idioms,27,13.2,3,True,5.78,3.13
+at a glance,idioms,27,13.2,3,True,3.91,5.03
+dust off,phrasal verbs,27,13.2,2,True,4.41,3.23
+as it gets,idioms,27,13.2,3,True,5.25,3.3
+strong suit,"idioms,informal terms",27,13.2,2,True,4.7,4.72
+on all fours,idioms,27,13.2,3,True,3.24,9.88
+keep an eye out,idioms,27,13.2,4,True,5.02,13.85
+by any means,idioms,27,13.2,3,True,5.44,6.35
+atomic bomb,colloquialisms,27,13.2,2,True,3.98,10.25
+track down,"idioms,phrasal verbs",27,13.2,2,True,5.02,3.22
+go so far as,idioms,27,13.2,4,True,5.5,10.24
+inside the box,idioms,27,13.2,3,True,5.04,5.39
+blink of an eye,idioms,27,13.2,4,True,3.73,18.21
+breathe a sigh of relief,idioms,26,12.7,5,True,3.95,29.53
+join forces,idioms,26,12.7,2,True,4.98,6.9
+out of touch,idioms,26,12.7,3,True,4.91,3.46
+pave the way,idioms,26,12.7,3,True,3.21,10.86
+full bloom,idioms,26,12.7,2,True,3.93,6.63
+tag along,"idioms,phrasal verbs",26,12.7,2,True,4.44,6.96
+drama queen,"idioms,informal terms",26,12.7,2,True,4.67,8.87
+throw in the towel,idioms,26,12.7,4,True,3.94,11.71
+loose ends,idioms,26,12.7,2,True,4.46,8.32
+point blank,idioms,26,12.7,2,True,4.14,7.57
+black sheep,idioms,26,12.7,2,True,4.19,4.76
+with open arms,idioms,26,12.7,3,True,4.82,7.85
+put a stop to,idioms,26,12.7,4,True,5.52,4.04
+you're all right,informal terms,25,12.3,3,True,5.87,3.0
+up in the air,idioms,25,12.3,4,True,5.37,4.78
+fine line,idioms,25,12.3,2,True,5.23,3.85
+peel off,phrasal verbs,25,12.3,2,True,3.8,4.87
+go all the way,"colloquialisms,idioms",25,12.3,4,True,6.01,4.08
+behind closed doors,idioms,25,12.3,3,True,4.54,14.29
+soft spot,idioms,25,12.3,2,True,4.68,6.88
+head to toe,idioms,25,12.3,3,True,4.07,8.61
+spill the beans,idioms,25,12.3,3,True,3.84,12.75
+bend over,phrasal verbs,25,12.3,2,True,4.13,4.68
+nod off,"idioms,phrasal verbs",25,12.3,2,True,3.74,6.01
+jump rope,colloquialisms,25,12.3,2,True,4.06,7.8
+call in sick,informal terms,25,12.3,3,True,4.88,4.42
+out of luck,idioms,25,12.3,3,True,4.91,4.16
+early bird,idioms,25,12.3,2,True,4.63,3.19
+broken heart,idioms,24,11.8,2,True,4.88,3.13
+last resort,idioms,24,11.8,2,True,4.37,4.24
+run off with,"idioms,phrasal verbs",24,11.8,3,True,5.49,4.74
+crack open,informal terms,24,11.8,2,True,4.41,4.6
+easier said than done,idioms,24,11.8,4,True,4.76,13.51
+and so forth,idioms,24,11.8,3,True,4.4,5.77
+like hot cakes,colloquialisms,24,11.8,3,True,3.85,11.4
+drift off,"idioms,phrasal verbs",24,11.8,2,True,3.82,5.9
+on a regular basis,idioms,24,11.8,4,True,4.81,16.54
+sinking ship,idioms,24,11.8,2,True,3.83,8.59
+take the lead,idioms,24,11.8,3,True,5.2,3.64
+peace of mind,idioms,23,11.3,3,True,5.02,6.1
+behind the scenes,idioms,23,11.3,3,True,4.58,9.16
+wipe off,phrasal verbs,23,11.3,2,True,4.01,4.12
+take no for an answer,idioms,23,11.3,5,True,5.17,15.55
+to no avail,idioms,23,11.3,3,True,3.59,6.98
+make light of,idioms,23,11.3,3,True,5.33,3.26
+make every effort,idioms,23,11.3,3,True,4.92,9.53
+fall back on,phrasal verbs,23,11.3,3,True,5.13,4.91
+keep up with the times,idioms,23,11.3,5,True,5.56,13.07
+put on airs,idioms,23,11.3,3,True,3.51,11.57
+bear in mind,idioms,23,11.3,3,True,4.71,6.46
+white rabbit,"idioms,informal terms",23,11.3,2,True,4.05,5.79
+green light,idioms,23,11.3,2,True,5.13,3.14
+top drawer,idioms,23,11.3,2,True,3.78,6.37
+bounce back,"idioms,phrasal verbs",22,10.8,2,True,4.02,6.05
+heat wave,idioms,22,10.8,2,True,4.62,7.88
+in your dreams,"colloquialisms,idioms",22,10.8,3,True,4.59,3.3
+think highly of,phrasal verbs,22,10.8,3,True,4.89,3.83
+pull through,phrasal verbs,22,10.8,2,True,4.82,3.45
+get down to business,idioms,22,10.8,4,True,5.56,8.26
+muster up,phrasal verbs,22,10.8,2,True,3.42,6.95
+bad breath,informal terms,22,10.8,2,True,4.52,3.26
+cut it out,"colloquialisms,idioms,phrasal verbs",22,10.8,3,True,5.24,3.03
+none other than,idioms,22,10.8,3,True,4.93,8.13
+made for each other,idioms,22,10.8,4,True,5.69,10.4
+hit the road,idioms,22,10.8,3,True,5.24,4.9
+leave it alone,"idioms,informal terms",22,10.8,3,True,5.16,3.53
+life is too short,idioms,22,10.8,4,True,5.33,10.43
+guard against,phrasal verbs,22,10.8,2,True,4.73,4.27
+rain cats and dogs,idioms,21,10.3,4,True,4.46,16.84
+could have sworn,informal terms,21,10.3,3,True,3.9,8.69
+you don't want to know,informal terms,21,10.3,5,True,6.04,3.41
+black hat,idioms,21,10.3,2,True,4.53,3.2
+guest list,informal terms,21,10.3,2,True,4.58,6.39
+black belt,colloquialisms,21,10.3,2,True,4.42,5.2
+under the covers,idioms,21,10.3,3,True,4.51,8.08
+cry out for,phrasal verbs,21,10.3,3,True,4.59,3.41
+bounce off,"idioms,informal terms,phrasal verbs",21,10.3,2,True,4.02,6.62
+glance over,phrasal verbs,21,10.3,2,True,3.91,4.22
+change of heart,idioms,21,10.3,3,True,5.31,4.88
+behind the times,idioms,21,10.3,3,True,5.29,3.42
+in black and white,idioms,21,10.3,4,True,5.46,9.48
+day at the beach,"idioms,informal terms",21,10.3,4,True,4.92,7.67
+launch into,phrasal verbs,21,10.3,2,True,4.69,4.17
+fold up,"idioms,phrasal verbs",21,10.3,2,True,4.08,3.31
+swell up,"idioms,phrasal verbs",21,10.3,2,True,3.64,5.68
+high and low,idioms,21,10.3,3,True,5.33,6.56
+natural selection,colloquialisms,21,10.3,2,True,4.62,8.72
+leak out,phrasal verbs,21,10.3,2,True,4.09,3.07
+call a spade a spade,idioms,21,10.3,5,True,3.33,29.04
+goof off,phrasal verbs,21,10.3,2,True,2.99,8.81
+pain in the neck,idioms,21,10.3,4,True,4.63,10.82
+all things considered,idioms,21,10.3,3,True,5.08,7.43
+loosen up,"colloquialisms,phrasal verbs",21,10.3,2,True,3.37,4.81
+have an eye for,idioms,21,10.3,4,True,5.02,8.09
+chop off,phrasal verbs,21,10.3,2,True,3.77,5.19
+above the law,idioms,21,10.3,3,True,5.2,6.55
+hop up,"idioms,phrasal verbs",20,9.8,2,True,4.4,4.58
+check up on,phrasal verbs,20,9.8,3,True,5.31,3.88
+sell like hot cakes,idioms,20,9.8,4,True,3.85,21.3
+shy away from,phrasal verbs,20,9.8,3,True,4.16,7.81
+live in the past,idioms,20,9.8,4,True,5.36,6.4
+hard at work,idioms,20,9.8,3,True,5.53,3.37
+keep a low profile,idioms,20,9.8,4,True,4.82,18.45
+make a run for it,idioms,20,9.8,5,True,5.49,10.72
+turning point,idioms,20,9.8,2,True,4.71,5.11
+straighten out,"idioms,informal terms,phrasal verbs",20,9.8,2,True,3.27,4.29
+asleep at the wheel,idioms,20,9.8,4,True,4.36,13.04
+break a promise,idioms,20,9.8,3,True,4.71,6.1
+tear apart,phrasal verbs,20,9.8,2,True,4.35,7.75
+hail from,phrasal verbs,20,9.8,2,True,3.92,3.29
+shine through,phrasal verbs,20,9.8,2,True,4.17,4.9
+lend a hand,idioms,20,9.8,3,True,3.92,6.02
+sober up,phrasal verbs,20,9.8,2,True,3.94,3.2
+bunk off,phrasal verbs,20,9.8,2,True,3.45,5.52
+stone's throw,idioms,20,9.8,2,True,3.12,10.97
+pour into,phrasal verbs,20,9.8,2,True,4.1,3.85
+blow over,"idioms,phrasal verbs",20,9.8,2,True,4.59,3.0
+pick up on,"idioms,phrasal verbs",20,9.8,3,True,5.08,3.94
+join the club,idioms,20,9.8,3,True,5.0,7.24
+bright side,idioms,20,9.8,2,True,4.61,4.43
+figuring out,informal terms,20,9.8,2,True,3.69,4.9
+control freak,informal terms,20,9.8,2,True,4.08,7.56
+bring to justice,idioms,20,9.8,3,True,4.97,6.87
+sweet tooth,idioms,20,9.8,2,True,4.08,7.27
+take a leak,informal terms,20,9.8,3,True,4.09,6.74
+sweet dreams,idioms,20,9.8,2,True,4.59,5.4
