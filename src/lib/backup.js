@@ -6,6 +6,7 @@
 
 import { CATEGORIES } from './i18n'
 import { fromLegacy } from './legacy'
+import { MOOD_IDS } from './moods'
 
 export const TYPES = ['word', 'expression', 'chat', 'journal']
 export const MAX_FILE_BYTES = 10 * 1024 * 1024
@@ -23,7 +24,7 @@ const FIELDS = {
   word: { text: 500, meaning: 1000, example: 2000 },
   expression: { text: 500, meaning: 1000, example: 2000 },
   chat: { situation: 1000, message: 2000, meaning: 2000, category: 20, note: 2000 },
-  journal: { native: 4000, translation: 4000, aiFeedback: 8000, memo: 2000 },
+  journal: { mood: 20, native: 4000, translation: 4000, aiFeedback: 8000, memo: 2000 },
 }
 const REQUIRED = {
   word: ['text', 'meaning'],
@@ -61,6 +62,7 @@ function sanitize(type, raw) {
   }
   if (REQUIRED[type].some((field) => !clean[field])) return null
   if (type === 'chat' && !CATEGORIES.includes(clean.category)) clean.category = 'other'
+  if (type === 'journal' && !MOOD_IDS.includes(clean.mood)) clean.mood = ''
 
   // 복습 일정은 단어와 표현에만 있고, 형식이 맞을 때만 이어 간다.
   if (type === 'word' || type === 'expression') {
@@ -72,6 +74,8 @@ function sanitize(type, raw) {
       const last = isoOrNull(item.lastReviewedAt)
       if (last) clean.lastReviewedAt = last
     }
+    // 일기 교정에서 담은 표현 표시(복습 방향이 다름)
+    if (item.source === 'journal') clean.source = 'journal'
   }
 
   // 서버 표의 id는 uuid라서, 다른 형식이면 새로 만든다.

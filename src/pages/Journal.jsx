@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import Feedback from '../components/Feedback'
 import Field from '../components/Field'
+import MoodPicker from '../components/MoodPicker'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { useRecordForm } from '../hooks/useRecordForm'
 import { buildCorrectionPrompt, recentPracticeNotes, recentWordTexts } from '../lib/correction'
 import { languageName } from '../lib/i18n'
+import { moodOf } from '../lib/moods'
 import { openExternal } from '../lib/native'
 import { isNative } from '../lib/platform'
 import { JOURNAL_DRAFT_KEY } from '../lib/records'
 
-const EMPTY_FORM = { native: '', translation: '', aiFeedback: '', memo: '' }
+const EMPTY_FORM = { mood: '', native: '', translation: '', aiFeedback: '', memo: '' }
 const REQUIRED = ['native']
 const MAX_TEXT_LENGTH = 4000
 const AI_CHATS = [
@@ -66,6 +68,7 @@ export default function Journal() {
       <div className="two-column">
         <form className="panel stack-form" ref={formRef} onSubmit={recordForm.submit} noValidate>
           <h2>{t(editingId ? 'editJournal' : 'newJournal')}</h2>
+          {learningLang === 'en' && <MoodPicker value={form.mood} onChange={(mood) => setField('mood', mood)} />}
           <Field
             as="textarea"
             label={t('diaryNative')}
@@ -173,7 +176,15 @@ export default function Journal() {
                 const detailId = `journal-detail-${item.id}`
                 return (
                   <li className="journal-entry" key={item.id}>
-                    <small className="muted">{dateFormat.format(new Date(item.createdAt))}</small>
+                    <div className="journal-meta">
+                      <small className="muted">{dateFormat.format(new Date(item.createdAt))}</small>
+                      {moodOf(item.mood) && (
+                        <span className="mood-tag">
+                          <span lang="en">{item.mood}</span>
+                          {nativeLang === 'ko' && <span> · {moodOf(item.mood).ko}</span>}
+                        </span>
+                      )}
+                    </div>
                     <p className={open ? '' : 'clamped'}>{item.native}</p>
                     <div id={detailId} className="journal-detail" hidden={!open}>
                       {item.translation && (
@@ -184,7 +195,7 @@ export default function Journal() {
                       {item.aiFeedback && (
                         <div className="correction-panel">
                           <p className="correction-label">{t('correctionTitle')}</p>
-                          <Feedback text={item.aiFeedback} learningLang={learningLang} t={t} />
+                          <Feedback text={item.aiFeedback} learningLang={learningLang} t={t} canSave />
                         </div>
                       )}
                       {item.memo && <p className="chat-note">{item.memo}</p>}

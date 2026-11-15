@@ -811,6 +811,7 @@
     "tie": ["I tied my hair back.", "머리를 뒤로 묶었어."],
     "wear": ["I want to wear my new jacket today.", "오늘 새 재킷 입고 싶어."],
     "guest": ["We have guests coming over tonight.", "오늘 밤에 손님이 와."],
-    "flat": ["My bike has a flat tire.", "자전거 타이어에 바람이 빠졌어."]
+    "flat": ["My bike has a flat tire.", "자전거 타이어에 바람이 빠졌어."],
+    "confuse": ["I was confused by the last question.", "마지막 문제가 헷갈렸어."]
   }
 }

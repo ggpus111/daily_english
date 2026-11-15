@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { MOODS } from './moods'
 import { chunks, frequencyLevel, isSaved, loadPackData, peekPackData, tatoebaUrl, toEntry, todayItem } from './packs'
 
 const expressions = await loadPackData('expressions')
@@ -114,5 +115,16 @@ describe('앱 성격에 맞는 콘텐츠', () => {
   it('단어 예문은 대부분 나나 너의 말이다', () => {
     const personal = words.items.filter((item) => /\b(i|i'm|me|my|we|our|us|you|your|let's)\b/i.test(item.example))
     expect(personal.length / words.items.length).toBeGreaterThan(0.9)
+  })
+})
+
+describe('오늘의 기분', () => {
+  it('기분 낱말은 모두 단어 꾸러미에 있는 낱말이고, 예문에 그 낱말이 들어 있다', () => {
+    const texts = new Set(words.items.map((item) => item.text))
+    for (const mood of MOODS) {
+      expect(texts.has(mood.id), mood.id).toBe(true)
+      expect(mood.sentence).toContain(mood.id)
+      expect(mood.ko && mood.sentenceKo).toBeTruthy()
+    }
   })
 })

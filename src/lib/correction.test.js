@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { buildCorrectionPrompt, parseFeedback, recentPracticeNotes, recentWordTexts } from './correction'
+import { buildCorrectionPrompt, fixToExpression, parseFeedback, recentPracticeNotes, recentWordTexts } from './correction'
 
 const base = {
   uiLang: 'ko',
@@ -112,5 +112,25 @@ describe('컨텍스트 고르기', () => {
   it('최근 단어는 빈 값을 빼고 다섯 개까지', () => {
     const words = ['a', ' ', 'b', 'c', 'd', 'e', 'f'].map((text) => ({ text }))
     expect(recentWordTexts(words)).toEqual(['a', 'b', 'c', 'd', 'e'])
+  })
+})
+
+describe('고칠 점을 표현으로 담기', () => {
+  const corrected = 'Today I went to a cafe. It was fun with my friend.'
+
+  it('고친 말이 표현, 원래 말과 이유가 뜻, 그 말이 든 문장이 예문이 된다', () => {
+    const fix = { original: 'with friend', fixed: 'with my friend', reason: 'my를 붙이면 자연스러워요.' }
+    expect(fixToExpression(fix, corrected, '원래 쓴 말')).toEqual({
+      text: 'with my friend',
+      meaning: '원래 쓴 말: with friend · my를 붙이면 자연스러워요.',
+      example: 'It was fun with my friend.',
+      source: 'journal',
+    })
+  })
+
+  it('이유가 없거나 고친 문장에 그 말이 없어도 담을 수 있다', () => {
+    const entry = fixToExpression({ original: 'go', fixed: 'visited', reason: '' }, corrected, '원래')
+    expect(entry.meaning).toBe('원래: go')
+    expect(entry.example).toBe('')
   })
 })

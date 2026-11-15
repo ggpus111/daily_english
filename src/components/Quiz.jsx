@@ -1,13 +1,20 @@
 import { useEffect, useId, useRef, useState } from 'react'
 import { useApp } from '../context'
+import { makeBlank } from '../lib/blank'
 import { dueItems } from '../lib/review'
 import { isCorrectAnswer, shuffle } from '../lib/text'
 
-const MODES = ['review', 'toMeaning', 'toText']
+const MODES = ['review', 'toMeaning', 'toText', 'blank']
 
 function buildDeck(items, mode) {
-  return shuffle(mode === 'review' ? dueItems(items) : items)
+  if (mode === 'review') return shuffle(dueItems(items))
+  // 빈칸 채우기는 예문에 그 단어가 들어 있는 기록만 낸다.
+  if (mode === 'blank') return shuffle(items.filter((item) => makeBlank(item)))
+  return shuffle(items)
 }
+
+// 일기 교정에서 담은 표현은 뜻 칸에 "원래 쓴 말 · 이유"가 있어서, 복습 때는 그걸 보고 고친 말을 떠올린다.
+const asksMeaningFor = (mode, card) => mode === 'toMeaning' || (mode === 'review' && card?.source !== 'journal')
 
 export default function Quiz({ items, onClose, onAnswer }) {
   const { t } = useApp()
@@ -23,9 +30,10 @@ export default function Quiz({ items, onClose, onAnswer }) {
   const doneRef = useRef(null)
 
   const card = deck[index]
-  const asksMeaning = mode !== 'toText'
+  const blank = mode === 'blank' && card ? makeBlank(card) : null
+  const asksMeaning = !blank && asksMeaningFor(mode, card)
   const question = asksMeaning ? card?.text : card?.meaning
-  const answer = asksMeaning ? card?.meaning : card?.text
+  const answer = blank ? blank.answer : asksMeaning ? card?.meaning : card?.text
   const isLast = index === deck.length - 1
   const empty = deck.length === 0
 
@@ -52,7 +60,8 @@ export default function Quiz({ items, onClose, onAnswer }) {
     event.preventDefault()
     if (result === null) {
       if (!input.trim()) return
-      const correct = isCorrectAnswer(input, answer)
+      // 빈칸은 예문 속 형태(bored)도, 기본형(bore)도 정답으로 본다.
+      const correct = isCorrectAnswer(input, answer) || (blank !== null && isCorrectAnswer(input, card.text))
       setResult(correct)
       if (correct) setScore((value) => value + 1)
       onAnswer?.(card, correct)
@@ -72,7 +81,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
   if (empty) {
     body = (
       <h2 className="quiz-question" ref={doneRef} tabIndex={-1}>
-        {t('reviewNothingDue')}
+        {t(mode === 'blank' ? 'quizBlankEmpty' : 'reviewNothingDue')}
       </h2>
     )
   } else if (finished) {
@@ -92,7 +101,21 @@ export default function Quiz({ items, onClose, onAnswer }) {
         <p className="quiz-progress">
           {t('quizScore', { current: index + 1, total: deck.length, score })}
         </p>
-        <h2 className="quiz-question">{question}</h2>
+        {blank ? (
+          <>
+            <h2 className="quiz-question quiz-sentence" lang="en">
+              {blank.before}
+              <span className="quiz-blank" aria-hidden="true">
+                ____
+              </span>
+              <span className="sr-only">{t('quizBlankSpoken')}</span>
+              {blank.after}
+            </h2>
+            <p className="quiz-hint">{t('quizBlankHint', { meaning: card.meaning })}</p>
+          </>
+        ) : (
+          <h2 className="quiz-question">{question}</h2>
+        )}
         <div className="field">
           <label className="sr-only" htmlFor={inputId}>
             {t('quizPlaceholder')}
@@ -119,7 +142,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
   return (
     <section className="quiz-panel" aria-label={t('quiz')}>
       <div className="quiz-top">
-        <div className="auth-tabs compact three">
+        <div className="auth-tabs compact four">
           {MODES.map((name) => (
             <button key={name} aria-pressed={mode === name} onClick={() => restart(name)}>
               {t(`quizMode.${name}`)}

@@ -215,3 +215,21 @@ export function recentWordTexts(words) {
     .filter(Boolean)
     .slice(0, WORD_LIMIT)
 }
+
+const SENTENCE_END = /(?<=[.!?])\s+/
+
+/**
+ * 교정의 "고칠 점" 한 줄을 표현 모음에 넣을 기록으로 바꾼다.
+ * 고친 말이 표현이 되고, 원래 쓴 말과 이유가 뜻 칸에, 고친 문장 중 그 말이 든 문장이 예문에 들어간다.
+ * source: 'journal'은 복습 때 뜻 대신 고친 말을 떠올리게 하는 표시다(src/components/Quiz.jsx).
+ */
+export function fixToExpression(fix, corrected = '', originalLabel = '원래') {
+  const fixed = fix.fixed.trim()
+  const sentence =
+    corrected
+      .split(SENTENCE_END)
+      .map((part) => part.trim())
+      .find((part) => part.toLowerCase().includes(fixed.toLowerCase())) ?? ''
+  const meaning = [`${originalLabel}: ${fix.original.trim()}`, fix.reason?.trim()].filter(Boolean).join(' · ')
+  return { text: fixed, meaning, example: sentence, source: 'journal' }
+}

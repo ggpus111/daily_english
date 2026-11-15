@@ -1674,6 +1674,124 @@ textarea {
   font-size: 0.875rem;
 }
 
+.auth-tabs.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  min-width: min(460px, 100%);
+}
+
+@media (width <= 480px) {
+  .auth-tabs.four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 빈칸 채우기 */
+.quiz-sentence {
+  line-height: 1.5;
+}
+
+.quiz-blank {
+  display: inline-block;
+  min-width: 3.5em;
+  margin: 0 2px;
+  border-bottom: 2px solid var(--accent);
+  color: transparent;
+}
+
+.quiz-hint {
+  color: var(--sub);
+}
+
+/* 오늘의 기분 */
+.mood-field {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.mood-field legend {
+  margin-bottom: 8px;
+  padding: 0;
+  font-weight: 700;
+}
+
+.mood-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.mood-chip {
+  display: grid;
+  justify-items: center;
+  min-width: 64px;
+  min-height: 44px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.mood-chip small {
+  color: var(--sub);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.mood-chip[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.mood-chip[aria-pressed='true'] small {
+  color: var(--accent-ink);
+}
+
+.mood-hint {
+  display: grid;
+  gap: 2px;
+  justify-items: start;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--warm);
+}
+
+.mood-hint-label {
+  color: var(--sub);
+  font-size: 0.875rem;
+}
+
+.journal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.mood-tag {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.fix-save {
+  justify-self: start;
+  font-size: 0.875rem;
+}
+
+.fix-save.saved {
+  color: var(--sub);
+}
+
 
 /* Profile */
 .profile-card {

@@ -97,3 +97,31 @@ describe('planImport', () => {
     expect(plan.toAdd.word[0].text).toBe('new')
   })
 })
+
+describe('새 칸: 오늘의 기분, 일기에서 담은 표현', () => {
+  const file = (data) => JSON.stringify({ app: 'daily-english', version: 1, ...data })
+
+  it('아는 기분은 남기고, 모르는 기분은 비운다', () => {
+    const { records } = parseBackup(
+      file({
+        journal: [
+          { id: ID, createdAt: '2026-11-01T00:00:00Z', native: '좋은 날', mood: 'happy' },
+          { id: 'j2', createdAt: '2026-11-02T00:00:00Z', native: '이상한 기분', mood: 'hungry-ish' },
+        ],
+      }),
+    )
+    expect(records.journal.map((item) => item.mood)).toEqual(['happy', ''])
+  })
+
+  it('일기에서 담은 표현 표시는 남기고, 다른 값은 버린다', () => {
+    const { records } = parseBackup(
+      file({
+        expression: [
+          { id: 'e1', createdAt: '2026-11-01T00:00:00Z', text: 'with my friend', meaning: '원래 쓴 말: with friend', source: 'journal' },
+          { id: 'e2', createdAt: '2026-11-01T00:00:00Z', text: 'hang out', meaning: '어울려 놀다', source: 'hacker' },
+        ],
+      }),
+    )
+    expect(records.expression.map((item) => item.source)).toEqual(['journal', undefined])
+  })
+})

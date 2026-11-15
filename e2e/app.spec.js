@@ -243,6 +243,66 @@ test('AI 교정 요청을 복사하고 받은 교정을 저장한다', async ({ 
   expect(next).toContain('[참고: 지난 교정에서 연습하기로 한 점]\n- 장소 전치사 in과 at을 구분해 보세요.')
 })
 
+test('일기: 오늘 기분을 영어로 고르고, 교정의 고칠 점을 표현 모음에 담아 복습한다', async ({ page }) => {
+  await open(page, 'journal')
+
+  // 기분을 고르면 그 낱말을 쓴 예문이 보이고, 단어장에 담을 수 있다.
+  const tired = page.locator('.mood-chips').getByRole('button', { name: /^tired/ })
+  await tired.click()
+  await expect(tired).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.getByText('I was so tired today.')).toBeVisible()
+  await page.getByRole('button', { name: 'tired 단어장에 담기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: '"tired"를 단어장에 담았어요.' })).toBeVisible()
+
+  await page.getByLabel('모국어로 작성하기').fill('오늘 친구랑 카페에 갔다.')
+  await page.getByLabel('영어로 직접 번역하기').fill('Today I go to cafe with friend.')
+  await page.getByLabel('AI 교정 결과 (선택)').fill(
+    [
+      '## 고친 문장',
+      'Today I went to a cafe with my friend.',
+      '## 고칠 점',
+      '- 원래: go → 고침: went | 이유: 이미 한 일이라 과거형을 써요.',
+      '- 원래: with friend → 고침: with my friend | 이유: my를 붙이면 자연스러워요.',
+      '## 잘한 점',
+      '짧고 분명해요.',
+      '## 연습할 점',
+      '과거형 연습',
+    ].join('\n'),
+  )
+  await page.getByRole('button', { name: '일기 저장하기' }).click()
+  await expect(page.locator('.journal-entry .mood-tag')).toHaveText('tired · 피곤한')
+
+  await page.getByRole('button', { name: '자세히 보기' }).click()
+  await page.getByRole('button', { name: 'with my friend 내 표현 모음에 담기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: '"with my friend"를 내 표현 모음에 담았어요.' })).toBeVisible()
+  await expect(page.getByRole('button', { name: 'with my friend 이미 담음' })).toBeDisabled()
+
+  // 표현 모음에서는 원래 쓴 말과 이유를 보고 고친 말을 떠올린다.
+  await open(page, 'expressions')
+  await expect(page.locator('.record-row')).toContainText('원래 쓴 말: with friend')
+  await page.getByRole('button', { name: '표현 퀴즈' }).click()
+  await expect(page.locator('.quiz-question')).toHaveText('원래 쓴 말: with friend · my를 붙이면 자연스러워요.')
+  await page.getByLabel('정답을 입력해 보세요').fill('with my friend')
+  await page.keyboard.press('Enter')
+  await expect(page.getByText('정답이에요!')).toBeVisible()
+})
+
+test('빈칸 채우기: 예문이 있는 단어만 내고, 예문 속 형태로 답한다', async ({ page }) => {
+  await seedRecords(page)
+  await open(page, 'words')
+  await page.getByRole('button', { name: '단어 퀴즈' }).click()
+  await page.getByRole('button', { name: '빈칸 채우기' }).click()
+
+  // 예문이 있는 thoughtful만 나오고, 예문이 없는 hang out은 빠진다.
+  await expect(page.locator('.quiz-question')).toHaveText('It was a ____(빈칸) gift.')
+  await expect(page.getByText('뜻: 사려 깊은, 배려하는')).toBeVisible()
+  await page.getByLabel('정답을 입력해 보세요').fill('thoughtful')
+  await page.keyboard.press('Enter')
+  await expect(page.getByText('정답이에요!')).toBeVisible()
+  await page.keyboard.press('Enter')
+  await expect(page.getByRole('heading', { name: '퀴즈 완료! 1 / 1개 정답' })).toBeFocused()
+})
+
 test('형식 없이 붙여 넣은 교정도 그대로 보여 준다', async ({ page }) => {
   await open(page, 'journal')
   await page.getByLabel('모국어로 작성하기').fill('어제 공원을 걸었다.')
