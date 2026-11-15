@@ -1,6 +1,54 @@
 # Daily English
 
-단어, 표현, 대화, 일기를 모으는 언어 학습 기록 앱입니다. Vite, React, Supabase로 만들었고 PWA로 설치할 수 있습니다.
+단어, 표현, 대화, 일기를 모으는 언어 학습 기록 앱입니다. Vite, React, Supabase로 만들었고 웹(PWA)과 안드로이드 앱(Capacitor)을 같은 코드로 만듭니다.
+
+## 안드로이드 앱
+
+웹 코드를 Capacitor 8로 감싸 안드로이드 앱을 만듭니다. Android Studio(2025.2.1 이상)와 Android SDK가 필요합니다.
+
+```bash
+npm run android:sync
+npm run android:open
+```
+
+`android:sync`는 앱용으로 빌드(`vite build --mode app`, 서비스 워커 없음)한 뒤 `android/`에 복사합니다. `android:open`은 Android Studio를 엽니다. Android Studio 없이 APK만 만들려면 `android` 폴더에서 `gradlew assembleDebug`를 실행합니다. JAVA_HOME은 Android Studio에 들어 있는 JDK(`Android Studio/jbr`)로 맞춥니다.
+
+앱에서 달라지는 점
+- 소셜 로그인은 구글이 앱 안 웹뷰 로그인을 막기 때문에 시스템 브라우저로 열고, `com.dailyenglish.app://auth-callback` 딥링크로 돌아옵니다. Supabase Redirect URLs에 이 주소를 추가해야 합니다.
+- 비밀번호 재설정은 웹(`VITE_SITE_URL`)에서 끝냅니다.
+- 기록 내려받기는 공유 창으로 저장할 곳을 고릅니다.
+- 상태바와 내비게이션 바 여백은 Capacitor가 주는 `--safe-area-inset-*` 값으로 맞춥니다.
+
+앱 ID `com.dailyenglish.app`은 Play 스토어에 한 번 올리면 바꿀 수 없습니다. 출시 전에 확정하세요. 바꾸려면 `capacitor.config.json`, `src/lib/platform.js`, `AndroidManifest.xml`을 함께 고칩니다.
+
+아이콘과 시작 화면은 `npm run dev`를 켠 상태에서 `node scripts/make-app-icons.mjs http://localhost:5173/`로 다시 만듭니다.
+
+### 보안 설정
+
+- `res/xml/network_security_config.xml`이 암호화하지 않은 http 통신을 막습니다. 인증서 피닝은 하지 않습니다. 웹뷰에는 적용되지 않고, Supabase·구글·카카오가 인증서를 바꾸면 앱이 멈출 수 있기 때문입니다.
+- `allowBackup="false"`라서 로그인 토큰이 든 앱 저장소가 구글 클라우드 백업에 올라가지 않습니다. Android 12 이상에서 기기끼리 직접 옮기는 이전은 됩니다.
+- 공유 창(`FileProvider`)에는 캐시 폴더만 엽니다. 기록 내보내기 파일만 그곳에 만듭니다.
+- 앱에 들어가는 Supabase anon key는 공개용 키이고, 데이터는 행 단위 권한(RLS)으로 지킵니다. service_role 키는 앱이나 저장소에 넣지 않습니다.
+- `res/xml/config.xml`의 `<access origin="*">`는 `cap sync`가 다시 만드는 Cordova 플러그인용 파일이라 고치지 않습니다. Cordova 플러그인을 쓰지 않아 영향이 없습니다.
+
+### 릴리즈 빌드와 서명
+
+릴리즈 빌드는 R8로 코드와 리소스를 줄입니다(`minifyEnabled`, `shrinkResources`). Capacitor 플러그인을 지키는 규칙은 `@capacitor/android`에 들어 있습니다.
+
+1. 업로드 키를 직접 만듭니다. 비밀번호는 직접 정하고, 키 파일과 비밀번호를 잃어버리지 않게 따로 보관합니다(비밀번호 관리자, 개인 클라우드 등). Play App Signing을 쓰면 업로드 키를 잃어도 Play Console에서 재설정을 요청할 수 있습니다.
+   ```bash
+   "C:/Program Files/Android/Android Studio/jbr/bin/keytool" -genkeypair -v -keystore android/upload-key.jks -alias upload -keyalg RSA -keysize 2048 -validity 10000
+   ```
+2. `android/keystore.properties.example`을 `android/keystore.properties`로 복사하고 값을 채웁니다. `*.jks`와 `keystore.properties`는 `.gitignore`에 들어 있어 git에 올라가지 않습니다.
+3. `npm run android:sync` 뒤 `android` 폴더에서 `gradlew bundleRelease`를 실행하면 `app/build/outputs/bundle/release/app-release.aab`가 만들어집니다. Play Console에 이 파일을 올립니다.
+
+### Play 스토어 출시 전 확인
+
+- 타깃 API는 36입니다(`android/variables.gradle`). Play가 요구하는 최신 기준을 출시 시점에 다시 확인합니다.
+- 권한은 인터넷 하나입니다. 실행 중 허락받는 권한(위치, 카메라, 알림 등)은 쓰지 않습니다. 알림 리마인더를 넣으면 알림 권한 요청과 거부했을 때의 안내 화면을 함께 만듭니다.
+- 개인정보 처리방침은 공개 웹 주소가 필요합니다. 웹을 배포한 뒤 `https://<배포 주소>/#privacy`를 Play Console에 넣습니다.
+- 계정 삭제는 앱 안(프로필)과 웹 모두에서 할 수 있어야 합니다. 배포한 웹에서 로그인한 뒤 프로필에서 계정을 삭제할 수 있으므로, 이 방법을 처리방침에 적고 그 주소를 Play Console의 계정 삭제 항목에 넣습니다.
+- 데이터 보안 섹션: 수집하는 데이터는 이메일 주소(계정)와 사용자가 쓴 학습 기록·일기(앱 기능)입니다. 다른 곳에 공유하지 않고, 전송 중 암호화(HTTPS)되며, 사용자가 삭제할 수 있습니다. 광고와 분석 도구는 쓰지 않습니다.
 
 ## 실행
 
@@ -49,6 +97,39 @@ Authentication > Providers > Email에서 Confirm email을 켭니다. 인증 메�
 ## AI 일기 교정
 
 유료 API를 쓰지 않습니다. 일기 화면의 복사 버튼이 일기와 번역을 교정 요청 문장으로 만들어 복사하고, 사용자가 무료 AI 채팅에 붙여 넣습니다. 받은 교정은 AI 교정 결과 칸에 붙여 넣어 일기와 함께 저장합니다.
+
+요청문은 `src/lib/correction.js`가 만듭니다. 따로 넣을 칸이 없는 무료 채팅이라 시스템 프롬프트 역할을 요청문 맨 위에 둡니다.
+
+- 맨 위에 역할과 지킬 점(시스템 프롬프트 역할)을 둡니다.
+- 지난 교정의 "연습할 점"과 최근 저장한 단어를 그때그때 넣습니다(동적 컨텍스트).
+- 모범 답 하나를 보여 줍니다(Few-Shot).
+- "고친 문장 / 고칠 점 / 잘한 점 / 연습할 점" 네 제목으로만 답하게 합니다(출력 고정).
+
+앱은 붙여 넣은 답을 이 제목으로 나눠 보여 주고, 형식이 다르면 글 그대로 보여 줍니다.
+
+## 표현·단어 꾸러미
+
+처음 쓰는 사람도 바로 담을 거리가 있게 꾸러미를 넣었습니다(`#packs`, `#packs-words`, 홈의 "오늘의 표현"). 꾸러미는 학습 언어가 영어일 때만 보입니다.
+
+- **표현 400개**(10개 주제 × 40): 공개 영어 문장 204만 개(Tatoeba, CC BY 2.0 FR)에서 쓰인 횟수를 세고 교육과정 기본 어휘와 비교해 골랐습니다. 뜻과 예문은 직접 썼습니다. `analysis/native/build_packs.py` → `src/data/packs.json`
+- **단어 600개**(초급 300, 중급 300): 교육과정 기본 어휘에서 전체 문장 빈도와 "나를 말하는 문장"(1인칭 문장) 빈도로 골랐습니다. 예문 457개는 Tatoeba 한영 문장이고 카드에 문장 번호 링크로 출처를 밝힙니다. 나머지 143개는 직접 썼습니다. `analysis/native/select_words.py`, `build_words.py` → `src/data/words.json`
+- 콘텐츠는 앱 성격(내 하루와 기분을 기록하는 따뜻한 앱)에 맞게 점검했습니다. 어두운 낱말 제외, 기분 낱말 포함, 내 말투 예문 우선. 근거와 수치는 `analysis/REPORT.md`에 있고, `src/lib/packs.test.js`가 이 기준을 검사합니다.
+- 꾸러미 데이터는 처음 필요할 때 따로 불러옵니다(`loadPackData`, `usePackData`). 첫 화면 코드에 묶이지 않아 앱 시작이 느려지지 않습니다.
+
+발음 듣기는 기기에 내장된 음성 읽기(Web Speech API)를 씁니다. 지원하지 않는 환경에서는 듣기 버튼이 보이지 않습니다.
+
+## 백업과 오프라인
+
+- **백업 가져오기**: 프로필의 "파일에서 가져오기"로 내려받은 백업(.json)이나 원본 앱 저장 형식을 다시 불러옵니다(`src/lib/backup.js`). 파일 내용은 믿지 않고 아는 칸만, 정해진 길이로만 받습니다. 이미 있는 기록(같은 id나 같은 내용)은 건너뛰고, 가져오기 전에 몇 개를 더할지 보여 줍니다.
+- **오프라인 저장**: 로그인 모드에서 연결이 끊긴 채 저장·수정·삭제하면 이 기기에 줄 세워 두었다가(`pendingOps:<user id>`), 연결되면 차례로 서버에 올립니다. 마지막으로 불러온 기록은 이 기기에 남겨(`recordsCache:<user id>`) 연결 없이 열어도 먼저 보여 주고, 서버에서 받아 오면 바꿉니다. 로그아웃하면 이 사본을 지우고, 계정을 삭제하면 줄 선 변경까지 지웁니다.
+
+## 화면 테마
+
+프로필의 "화면 테마"에서 기기 설정 따르기·밝게·어둡게를 고릅니다. 어두운 테마는 같은 따뜻한 색을 짙은 갈색으로 옮겼고, 모든 화면에서 글자 대비 검사를 통과합니다(`e2e/app.spec.js`).
+
+## Pro 시연판 (발표용)
+
+`#pro` 화면은 결제 기능 없이 유료 요금제를 보여 주는 시연판입니다. "Pro 미리 보기"를 켜면 내 기록으로 만든 학습 통계(최근 4주 기록, 기억 단계, 앞으로 7일 복습)를 볼 수 있고, 통계는 기기 안에서만 계산합니다. 가격은 월 3,900원(한 달 결제만, 연간 요금제 없음, 무료 체험 뒤 자동 결제 없음)이며 근거는 `analysis/pricing/README.md`에 있습니다. `src/lib/i18n.js`의 `planProPrice`에서 바꿉니다. 앱 안 AI 교정은 출시 때 연결할 기능으로만 표시합니다.
 
 ## 무료로 운영하기
 
