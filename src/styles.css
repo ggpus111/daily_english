@@ -1792,6 +1792,225 @@ textarea {
   color: var(--sub);
 }
 
+/* 일기에 쓴 내 표현, 오늘의 표현 미션 */
+.usage-box {
+  display: grid;
+  gap: 6px;
+  margin-top: -4px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--warm);
+}
+
+.usage-line {
+  margin: 0;
+  color: var(--sub);
+  font-size: 0.875rem;
+}
+
+.usage-line:empty {
+  display: none;
+}
+
+.usage-line.found {
+  color: var(--ink);
+}
+
+.usage-line b {
+  color: var(--accent-ink);
+}
+
+.today-mission {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.mission-stamp {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 1.5px dashed var(--warm-line);
+  border-radius: 50%;
+  color: var(--accent-ink);
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.done .mission-stamp {
+  border: 1.5px solid var(--accent);
+  background: var(--accent-soft);
+  transform: rotate(-8deg);
+}
+
+.mission-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  margin-top: 10px;
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.mission-row p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.journal-entry .usage-line {
+  margin-top: 4px;
+}
+
+/* 요일 도장의 기분 */
+.stamp.mood-good {
+  border-color: var(--card-ink);
+  background: var(--butter);
+  color: var(--card-ink);
+}
+
+.stamp.mood-low {
+  border-color: var(--card-ink);
+  background: var(--lilac);
+  color: var(--card-ink);
+}
+
+.stamp.mood-plain {
+  border-color: var(--card-ink);
+  background: var(--sage);
+  color: var(--card-ink);
+}
+
+.week-moods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 8px;
+}
+
+.week-mood {
+  padding: 2px 10px;
+  border-radius: 999px;
+  color: var(--card-ink);
+  font-size: 0.75rem;
+}
+
+.week-mood.mood-good {
+  background: var(--butter);
+}
+
+.week-mood.mood-low {
+  background: var(--lilac);
+}
+
+.week-mood.mood-plain {
+  background: var(--sage);
+}
+
+/* 이번 주 돌아보기 */
+.recap-card {
+  display: grid;
+  gap: 12px;
+}
+
+.recap-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+
+.recap-stats div {
+  display: grid;
+  gap: 2px;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--peach);
+  color: var(--card-ink);
+}
+
+.recap-stats div:nth-child(2) {
+  background: var(--lilac);
+}
+
+.recap-stats div:nth-child(3) {
+  background: var(--sage);
+}
+
+.recap-stats div:nth-child(4) {
+  background: var(--butter);
+}
+
+.recap-stats dt {
+  order: 2;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.recap-stats dd {
+  order: 1;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.recap-subtitle {
+  margin: 4px 0 0;
+  font-size: 0.9375rem;
+}
+
+.recap-chips,
+.recap-moods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.recap-chips li {
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.recap-moods li {
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: var(--butter);
+  color: var(--card-ink);
+}
+
+.recap-moods li.mood-low {
+  background: var(--lilac);
+}
+
+.recap-moods li.mood-plain {
+  background: var(--sage);
+}
+
+.recap-save {
+  justify-self: start;
+}
+
+@media (width <= 480px) {
+  .recap-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 
 /* Profile */
 .profile-card {

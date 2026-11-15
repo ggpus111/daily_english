@@ -17,6 +17,11 @@ export const MOODS = [
 
 export const MOOD_IDS = MOODS.map((mood) => mood.id)
 
+// 요일 도장 색: 기분이 좋은 날(good), 힘든 날(low), 그 밖(plain)
+const GOOD = new Set(['happy', 'excited', 'proud', 'calm', 'comfortable'])
+const LOW = new Set(['tired', 'bored', 'nervous', 'sad', 'upset', 'angry'])
+export const moodTone = (id) => (GOOD.has(id) ? 'good' : LOW.has(id) ? 'low' : 'plain')
+
 export const moodOf = (id) => MOODS.find((mood) => mood.id === id) ?? null
 
 /** 기분 낱말을 단어장에 넣을 기록으로 바꾼다. */

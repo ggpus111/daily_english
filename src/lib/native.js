@@ -58,3 +58,9 @@ export async function shareJsonFile(fileName, content) {
   })
   await Share.share({ title: fileName, files: [uri] })
 }
+
+// 이미지(base64 PNG)를 임시 파일로 쓰고 공유 창을 띄운다(이번 주 돌아보기 저장).
+export async function shareImageFile(fileName, base64) {
+  const { uri } = await Filesystem.writeFile({ path: fileName, data: base64, directory: Directory.Cache })
+  await Share.share({ title: fileName, files: [uri] })
+}

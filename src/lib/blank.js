@@ -32,24 +32,34 @@ function firstWordPattern(word) {
 }
 
 /**
- * @returns {{ before: string, answer: string, after: string } | null} 예문에서 단어를 찾지 못하면 null
+ * 문장에서 단어·표현(활용형 포함)을 찾는다. 빈칸 퀴즈와 "일기에 쓴 내 표현 찾기"가 함께 쓴다.
+ * @returns {{ index: number, match: string } | null}
  */
-export function makeBlank(item) {
-  const text = String(item?.text ?? '')
+export function findPhrase(phrase, sentence) {
+  const text = String(phrase ?? '')
     .trim()
     .replace(/[.!?]+$/, '')
-  const example = String(item?.example ?? '').trim()
-  if (!text || !example) return null
+  const target = String(sentence ?? '')
+  if (!text || !target) return null
   const words = text.split(/\s+/)
   if (words.length > MAX_WORDS) return null
 
   const rest = words.slice(1).map(escape)
   const source = `(?<![\\w'])${firstWordPattern(words[0])}${rest.length ? `\\s+${rest.join('\\s+')}` : ''}(?![\\w'])`
-  const match = new RegExp(source, 'i').exec(example)
-  if (!match || match[0].length === example.replace(/[.!?]+$/, '').length) return null
+  const match = new RegExp(source, 'i').exec(target)
+  return match ? { index: match.index, match: match[0] } : null
+}
+
+/**
+ * @returns {{ before: string, answer: string, after: string } | null} 예문에서 단어를 찾지 못하면 null
+ */
+export function makeBlank(item) {
+  const example = String(item?.example ?? '').trim()
+  const found = findPhrase(item?.text, example)
+  if (!found || found.match.length === example.replace(/[.!?]+$/, '').length) return null
   return {
-    before: example.slice(0, match.index),
-    answer: match[0],
-    after: example.slice(match.index + match[0].length),
+    before: example.slice(0, found.index),
+    answer: found.match,
+    after: example.slice(found.index + found.match.length),
   }
 }

@@ -1,11 +1,15 @@
 import ExpressionCard from '../components/ExpressionCard'
+import RecapCard from '../components/Recap'
 import Mascot from '../components/Mascot'
 import { useApp } from '../context'
-import { activityDays, lastSevenDays, streak } from '../lib/activity'
+import { activityDays, dayKey, lastSevenDays, streak } from '../lib/activity'
+import { findPhrase } from '../lib/blank'
 import { languageName } from '../lib/i18n'
 import { usePackData } from '../hooks/usePackData'
 import { todayItem } from '../lib/packs'
+import { moodOf, moodTone } from '../lib/moods'
 import { dueItems } from '../lib/review'
+import { moodsByDay } from '../lib/usage'
 
 // 친구 원본 홈(학습 노트)의 번호 카드 구성을 따른다.
 const CARDS = [
@@ -44,7 +48,9 @@ export default function Home() {
   const weekday = new Intl.DateTimeFormat(locale, { weekday: 'narrow' })
 
   const days = activityDays(records)
-  const week = lastSevenDays(days, today)
+  const dayMoods = moodsByDay(records.journal)
+  const week = lastSevenDays(days, today).map((day) => ({ ...day, mood: dayMoods.get(dayKey(day.date)) ?? null }))
+  const weekMoods = week.filter((day) => day.mood)
   const streakDays = streak(days, today)
   const dueWords = dueItems(records.word).length
   const dueExpressions = dueItems(records.expression).length
@@ -173,7 +179,10 @@ export default function Home() {
             <ol className="week-strip">
               {week.map((day) => (
                 <li key={day.date.toISOString()} className={day.isToday ? 'today' : ''}>
-                  <span className={`stamp ${day.active ? 'on' : ''}`} aria-hidden="true">
+                  <span
+                    className={`stamp ${day.active ? 'on' : ''} ${day.mood ? `mood-${moodTone(day.mood)}` : ''}`}
+                    aria-hidden="true"
+                  >
                     {day.active ? '✓' : ''}
                   </span>
                   <span className="weekday" aria-hidden="true">
@@ -181,14 +190,27 @@ export default function Home() {
                   </span>
                   <span className="sr-only">
                     {fullDate.format(day.date)} {t(day.active ? 'dayActive' : 'dayRest')}
+                    {day.mood && ` · ${t('moodOfDay', { mood: day.mood })}`}
                   </span>
                 </li>
               ))}
             </ol>
+            {weekMoods.length > 0 && (
+              <p className="week-moods" aria-hidden="true">
+                {weekMoods.map((day) => (
+                  <span key={day.date.toISOString()} className={`week-mood mood-${moodTone(day.mood)}`}>
+                    {weekday.format(day.date)} <b lang="en">{day.mood}</b>
+                    {nativeLang === 'ko' && <small> {moodOf(day.mood).ko}</small>}
+                  </span>
+                ))}
+              </p>
+            )}
             <p className="tiny-note">{t(streakDays > 0 ? 'streakNote' : 'streakEmpty')}</p>
           </section>
         </div>
       </section>
+
+      <RecapCard today={today} />
 
       <section className="quote-panel" aria-label="A note to yourself">
         <Mascot size={46} mood="joy" />
@@ -206,9 +228,35 @@ export default function Home() {
 
 // 꾸러미 데이터는 따로 불러오므로, 오는 동안에는 같은 높이의 빈 카드를 둔다.
 function TodayExpression({ today }) {
-  const { t } = useApp()
+  const { t, go, records } = useApp()
   const { data, error } = usePackData('expressions')
   if (error) return <p className="tiny-note">{t('packsLoadError')}</p>
   if (!data) return <div className="expression-card expression-placeholder" aria-hidden="true" />
-  return <ExpressionCard item={todayItem(data.items, today)} />
+  const item = todayItem(data.items, today)
+  // 오늘 쓴 일기 번역에 오늘의 표현이 들어 있으면 미션 완료
+  const done = records.journal.some(
+    (journal) => isSameDay(journal.createdAt, today) && findPhrase(item.text, journal.translation),
+  )
+  return (
+    <>
+      <ExpressionCard item={item} />
+      <div className={done ? 'mission-row done' : 'mission-row'}>
+        {done ? (
+          <p>
+            <span className="mission-stamp" aria-hidden="true">
+              ✓
+            </span>
+            {t('missionHomeDone')}
+          </p>
+        ) : (
+          <>
+            <p>{t('missionHome')}</p>
+            <button className="soft-button" onClick={() => go('journal')}>
+              {t('missionGo')}
+            </button>
+          </>
+        )}
+      </div>
+    </>
+  )
 }

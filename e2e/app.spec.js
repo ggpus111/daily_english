@@ -287,6 +287,38 @@ test('일기: 오늘 기분을 영어로 고르고, 교정의 고칠 점을 표�
   await expect(page.getByText('정답이에요!')).toBeVisible()
 })
 
+test('일기에 쓴 내 표현과 오늘의 표현을 찾고, 홈의 도장과 이번 주 돌아보기에 모은다', async ({ page }) => {
+  await seedRecords(page)
+  await open(page, 'journal')
+
+  // 오늘의 표현은 날마다 바뀌므로 화면에 보이는 표현을 읽어 그대로 써 본다.
+  const mission = page.locator('.today-mission')
+  await expect(mission).toContainText('오늘의 표현을 써 보세요:')
+  const phrase = (await mission.locator('b').textContent()).replace(/[.!?]+$/, '')
+
+  await page.locator('.mood-chips').getByRole('button', { name: /^happy/ }).click()
+  await page.getByLabel('모국어로 작성하기').fill('친구들이랑 놀았다.')
+  await page.getByLabel('영어로 직접 번역하기').fill(`I hang out with my friends. ${phrase}.`)
+  await expect(page.locator('.usage-box .usage-line')).toContainText('hang out')
+  await expect(mission).toHaveClass(/done/)
+  await expect(mission).toContainText('오늘의 표현을 썼어요!')
+  await page.getByRole('button', { name: '일기 저장하기' }).click()
+  await expect(page.locator('.journal-entry').first().locator('.usage-line')).toContainText('hang out')
+
+  await open(page, 'home')
+  await expect(page.locator('.mission-row')).toHaveClass(/done/)
+  await expect(page.locator('.week-strip li.today .stamp')).toHaveClass(/mood-good/)
+  await expect(page.locator('.week-moods')).toContainText('happy')
+
+  const recap = page.locator('.recap-card')
+  await expect(recap.locator('.recap-chips')).toContainText('hang out')
+  await expect(recap.locator('.recap-moods')).toContainText('happy')
+  const downloadPromise = page.waitForEvent('download')
+  await recap.getByRole('button', { name: '이미지로 저장' }).click()
+  const download = await downloadPromise
+  expect(download.suggestedFilename()).toMatch(/^daily-english-\d{4}-\d{2}-\d{2}\.png$/)
+})
+
 test('빈칸 채우기: 예문이 있는 단어만 내고, 예문 속 형태로 답한다', async ({ page }) => {
   await seedRecords(page)
   await open(page, 'words')

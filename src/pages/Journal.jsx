@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Feedback from '../components/Feedback'
 import Field from '../components/Field'
 import MoodPicker from '../components/MoodPicker'
+import { TodayMission, UsageLine } from '../components/Usage'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { useRecordForm } from '../hooks/useRecordForm'
@@ -92,6 +93,12 @@ export default function Journal() {
             value={form.translation}
             onChange={(event) => setField('translation', event.target.value)}
           />
+          {learningLang === 'en' && (
+            <div className="usage-box">
+              <TodayMission sentence={form.translation} />
+              <UsageLine sentence={form.translation} live />
+            </div>
+          )}
           <div className="correction-action">
             <button type="button" className="soft-button" onClick={copyPrompt}>
               {t('copyPrompt')}
@@ -186,6 +193,7 @@ export default function Journal() {
                       )}
                     </div>
                     <p className={open ? '' : 'clamped'}>{item.native}</p>
+                    {learningLang === 'en' && item.translation && <UsageLine sentence={item.translation} />}
                     <div id={detailId} className="journal-detail" hidden={!open}>
                       {item.translation && (
                         <p className="journal-translation" lang={learningLang}>
