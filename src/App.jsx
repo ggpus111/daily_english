@@ -4,11 +4,15 @@ import Icon from './components/Icon'
 import Logo from './components/Logo'
 import { AppContext } from './context'
 import { useOnline } from './hooks/useOnline'
+import { REMINDERS_CHANGED } from './components/ReminderSettings'
+import { recordError, setErrorSender } from './lib/errorLog'
 import { errorMessage } from './lib/errors'
 import { createTranslator } from './lib/i18n'
 import { initNativeAuth } from './lib/native'
+import { onReminderTap, scheduleReminders } from './lib/notifications'
+import { readSettings } from './lib/reminders'
 import { JOURNAL_DRAFT_KEY, STORAGE_ERROR, useRecords } from './lib/records'
-import { local, session as sessionStore } from './lib/storage'
+import { local } from './lib/storage'
 import { supabase } from './lib/supabase'
 import Auth from './pages/Auth'
 import Chats from './pages/Chats'
@@ -20,7 +24,7 @@ import Privacy from './pages/Privacy'
 import Pro from './pages/Pro'
 import Profile from './pages/Profile'
 
-const NAV = ['home', 'words', 'expressions', 'chats', 'journal', 'profile']
+const NAV = ['home', 'words', 'expressions', 'packs', 'chats', 'journal', 'profile']
 const TOAST_MS = 5000
 const TOAST_ACTION_MS = 8000
 
@@ -77,7 +81,9 @@ function useToast() {
   return [toast, notify, dismiss]
 }
 
-function Shell({ page, go, user, languages, t, notify }) {
+export const GUEST_KEY = 'guestMode'
+
+function Shell({ page, go, user, languages, t, notify, onLogin }) {
   const {
     records,
     loading,
@@ -93,6 +99,32 @@ function Shell({ page, go, user, languages, t, notify }) {
   } = useRecords(user)
   const online = useOnline()
   const wasOnline = useRef(online)
+
+  // 로그인했으면 앱 오류를 서버(client_errors)로도 보낸다. 기록 내용은 보내지 않는다(src/lib/errorLog.js).
+  useEffect(() => {
+    if (!supabase || !user) return undefined
+    setErrorSender(async ({ source, message, stack, page: errorPage, version, platform, online: wasOnline, count }) => {
+      const { error } = await supabase
+        .from('client_errors')
+        .insert({ source, message, stack, page: errorPage, version, platform, online: wasOnline, count })
+      if (error) throw error
+    })
+    return () => setErrorSender(null)
+  }, [user])
+
+  // 기록이 바뀌거나 알림 설정을 바꾸면 알림을 다시 예약한다(목표를 채우면 그날 남은 목표 알림은 빠진다).
+  useEffect(() => {
+    if (loading) return undefined
+    const plan = () => scheduleReminders(records, readSettings(), t).catch((error) => recordError(error, 'app'))
+    const timer = setTimeout(plan, 800)
+    window.addEventListener(REMINDERS_CHANGED, plan)
+    return () => {
+      clearTimeout(timer)
+      window.removeEventListener(REMINDERS_CHANGED, plan)
+    }
+  }, [records, loading, t])
+
+  useEffect(() => onReminderTap(go), [go])
 
   // 연결이 돌아오면 못 올린 변경을 올리고, 다른 기기에서 바뀐 것까지 다시 불러온다.
   useEffect(() => {
@@ -134,6 +166,7 @@ function Shell({ page, go, user, languages, t, notify }) {
       pendingCount,
       removeAll,
       go,
+      onLogin,
       ...languages,
     }),
     [
@@ -150,6 +183,7 @@ function Shell({ page, go, user, languages, t, notify }) {
       pendingCount,
       removeAll,
       go,
+      onLogin,
       languages,
     ],
   )
@@ -187,11 +221,11 @@ function Shell({ page, go, user, languages, t, notify }) {
                 key={id}
                 className="nav-item"
                 data-page={id}
-                aria-current={page === id ? 'page' : undefined}
+                aria-current={page === id || (id === 'packs' && page === 'packs-words') ? 'page' : undefined}
                 onClick={() => go(id)}
               >
                 <Icon name={id} />
-                <span>{t(id)}</span>
+                <span>{t(id === 'packs' ? 'navPacks' : id)}</span>
               </button>
             ))}
             <div className="sidebar-user">
@@ -242,6 +276,8 @@ function Shell({ page, go, user, languages, t, notify }) {
 export default function App() {
   const [session, setSession] = useState(supabase ? undefined : null)
   const [recovering, setRecovering] = useState(false)
+  // 로그인 없이 둘러보기(웹 첫 방문). 기록은 이 기기에만 남는다.
+  const [guest, setGuest] = useState(() => local.get(GUEST_KEY) === '1')
   const [nativeLang, setNativeLang] = useLanguageSetting('nativeLang', 'ko')
   const [learningLang, setLearningLang] = useLanguageSetting('learningLang', 'en')
   const [page, go] = usePage()
@@ -271,7 +307,11 @@ export default function App() {
     const { data } = supabase.auth.onAuthStateChange((event, next) => {
       setSession(next)
       if (event === 'PASSWORD_RECOVERY') setRecovering(true)
-      if (event === 'SIGNED_OUT') sessionStore.remove(JOURNAL_DRAFT_KEY)
+      if (event === 'SIGNED_IN') {
+        local.remove(GUEST_KEY)
+        setGuest(false)
+      }
+      if (event === 'SIGNED_OUT') local.remove(JOURNAL_DRAFT_KEY)
     })
     return () => data.subscription.unsubscribe()
   }, [])
@@ -285,9 +325,18 @@ export default function App() {
         {t('loadingAuth')}
       </p>
     )
-  } else if (supabase && (!session || recovering)) {
+  } else if (supabase && (recovering || (!session && !guest))) {
     content = (
-      <Auth t={t} notify={notify} recovering={recovering} onRecovered={() => setRecovering(false)} />
+      <Auth
+        t={t}
+        notify={notify}
+        recovering={recovering}
+        onRecovered={() => setRecovering(false)}
+        onGuest={() => {
+          local.set(GUEST_KEY, '1')
+          setGuest(true)
+        }}
+      />
     )
   } else {
     content = (
@@ -299,6 +348,10 @@ export default function App() {
         languages={languages}
         t={t}
         notify={notify}
+        onLogin={() => {
+          local.remove(GUEST_KEY)
+          setGuest(false)
+        }}
       />
     )
   }

@@ -71,3 +71,27 @@ $$;
 
 revoke all on function public.delete_my_account() from public, anon;
 grant execute on function public.delete_my_account() to authenticated;
+
+-- 앱 오류 보고(src/lib/errorLog.js). 사용자 기록 내용은 넣지 않고 오류 메시지와 환경만 받는다.
+-- 앱에서는 넣기만 하고, 읽기는 Supabase 대시보드에서만 한다(select 정책 없음).
+create table if not exists public.client_errors (
+  id bigint generated always as identity primary key,
+  user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
+  created_at timestamptz not null default now(),
+  source text not null check (char_length(source) <= 20),
+  message text not null check (char_length(message) <= 300),
+  stack text not null default '' check (char_length(stack) <= 800),
+  page text not null default '' check (char_length(page) <= 40),
+  version text not null default '' check (char_length(version) <= 20),
+  platform text not null check (platform in ('web', 'android')),
+  online boolean not null default true,
+  count integer not null default 1 check (count between 1 and 10000)
+);
+
+create index if not exists client_errors_created_idx on public.client_errors (created_at desc);
+
+alter table public.client_errors enable row level security;
+
+drop policy if exists "insert own errors" on public.client_errors;
+create policy "insert own errors" on public.client_errors
+  for insert to authenticated with check ((select auth.uid()) = user_id);

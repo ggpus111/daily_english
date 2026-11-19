@@ -151,11 +151,13 @@ function applyOps(records, ops) {
 
 export function useRecords(user) {
   const userId = user?.id ?? null
-  const [records, setRecords] = useState(() => (supabase ? emptyRecords() : readLocal()))
-  const [loading, setLoading] = useState(Boolean(supabase))
+  // 로그인했을 때만 서버에 저장한다. 로그인 없이 둘러보면 이 기기에 저장하고, 나중에 로그인하면 옮긴다.
+  const remote = Boolean(supabase && userId)
+  const [records, setRecords] = useState(() => (remote ? emptyRecords() : readLocal()))
+  const [loading, setLoading] = useState(remote)
   const [loadError, setLoadError] = useState(null)
   const [attempt, setAttempt] = useState(0)
-  const [storageFailed, setStorageFailed] = useState(() => !supabase && !canWriteLocal())
+  const [storageFailed, setStorageFailed] = useState(() => !remote && !canWriteLocal())
   const [pendingCount, setPendingCount] = useState(() => (userId ? readPending(userId).length : 0))
   const recordsRef = useRef(records)
   const userIdRef = useRef(userId)
@@ -169,8 +171,8 @@ export function useRecords(user) {
     const next = change(recordsRef.current)
     recordsRef.current = next
     setRecords(next)
-    if (!supabase) setStorageFailed(!writeLocal(next))
-    else if (userIdRef.current) local.set(cacheKey(userIdRef.current), JSON.stringify(next))
+    if (!supabase || !userIdRef.current) setStorageFailed(!writeLocal(next))
+    else local.set(cacheKey(userIdRef.current), JSON.stringify(next))
   }, [])
 
   const enqueue = useCallback((ops) => {
@@ -183,7 +185,7 @@ export function useRecords(user) {
   // 서버에 보내고, 연결 문제로 못 보내면 줄 세운다. { error } 또는 { queued } 를 돌려준다.
   const send = useCallback(
     async (ops) => {
-      if (!supabase) return {}
+      if (!supabase || !userIdRef.current) return {}
       const id = userIdRef.current
       if (isOffline() || readPending(id).length > 0) {
         // 앞선 작업이 남아 있으면 순서를 지키려고 뒤에 붙인다.

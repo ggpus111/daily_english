@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!--
       allowBackup: 로그인 토큰이 든 웹뷰 저장소가 구글 클라우드 백업에 올라가지 않게 끈다.
@@ -53,4 +54,6 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 알림 플러그인이 넣는 "정확한 알람" 권한은 빼낸다. 목표·복습 알림은 몇 분 늦어도 괜찮고, Play 정책상 이 권한은 시계·알람 앱용이다. -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" tools:node="remove" />
 </manifest>

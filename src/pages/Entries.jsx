@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import Field from '../components/Field'
+import PackMeaningHint from '../components/PackMeaningHint'
 import PageHead from '../components/PageHead'
 import Quiz from '../components/Quiz'
 import SearchField from '../components/SearchField'
@@ -100,6 +101,7 @@ export default function Entries({ type }) {
             error={errors.text}
             onChange={(event) => setField('text', event.target.value)}
           />
+          <PackMeaningHint type={type} form={form} setField={setField} />
           <Field
             label={t('meaning')}
             name="meaning"

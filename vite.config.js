@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs'
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -7,8 +8,11 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   // 안드로이드 앱 빌드(--mode app)는 파일을 앱 안에 담으므로 서비스 워커가 필요 없다.
   const isApp = mode === 'app'
+  const { version } = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'))
 
   return {
+    // 오류 보고에 앱 버전을 남긴다(src/lib/errorLog.js).
+    define: { __APP_VERSION__: JSON.stringify(version) },
     plugins: [
       react(),
       siteMeta(env.VITE_SITE_URL),

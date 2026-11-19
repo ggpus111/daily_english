@@ -18,7 +18,7 @@ function readRedirectError() {
   return message.replace(/\+/g, ' ')
 }
 
-export default function Auth({ t, notify, recovering, onRecovered }) {
+export default function Auth({ t, notify, recovering, onRecovered, onGuest }) {
   const [mode, setMode] = useState('login')
   const [nickname, setNickname] = useState('')
   const [email, setEmail] = useState('')
@@ -107,6 +107,21 @@ export default function Auth({ t, notify, recovering, onRecovered }) {
 
   return (
     <main className="auth-shell">
+      {!recovering && (
+        <section className="auth-intro" aria-labelledby="auth-intro-title">
+          <p className="eyebrow">DAILY ENGLISH</p>
+          <h2 id="auth-intro-title">{t('introTitle')}</h2>
+          <ul>
+            <li>{t('introPoint1')}</li>
+            <li>{t('introPoint2')}</li>
+            <li>{t('introPoint3')}</li>
+          </ul>
+          <button className="soft-button" onClick={onGuest}>
+            {t('tryWithoutLogin')}
+          </button>
+          <p className="tiny-note">{t('tryWithoutLoginNote')}</p>
+        </section>
+      )}
       <section className="auth-card">
         <div className="auth-brand">
           <Logo size="lg" />

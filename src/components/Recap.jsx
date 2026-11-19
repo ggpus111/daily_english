@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useApp } from '../context'
+import { recordError } from '../lib/errorLog'
 import { shareImageFile } from '../lib/native'
 import { moodOf, moodTone } from '../lib/moods'
 import { isNative } from '../lib/platform'
@@ -8,7 +9,7 @@ import { weeklyRecap } from '../lib/usage'
 
 // 이번 주(오늘 포함 7일) 돌아보기: 모은 말, 일기에 쓴 내 표현, 기분. 이미지로 저장해 친구에게 보낼 수 있다.
 export default function RecapCard({ today }) {
-  const { t, records, nativeLang } = useApp()
+  const { t, notify, records, nativeLang } = useApp()
   const [saving, setSaving] = useState(false)
   const recap = weeklyRecap(records, today)
   const locale = nativeLang === 'ko' ? 'ko-KR' : 'en-US'
@@ -49,6 +50,11 @@ export default function RecapCard({ today }) {
         isNative,
         shareImage: shareImageFile,
       })
+    } catch (error) {
+      // 공유 창에서 그냥 닫은 것은 오류가 아니다.
+      if (/cancel/i.test(String(error?.message ?? error))) return
+      recordError(error, 'app')
+      notify(t('recapSaveFailed'))
     } finally {
       setSaving(false)
     }

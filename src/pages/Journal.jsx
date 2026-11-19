@@ -62,6 +62,22 @@ export default function Journal() {
     }
   }
 
+  // AI 채팅에서 복사해 온 교정을 한 번에 붙여 넣는다. 브라우저가 막으면 칸을 길게 눌러 붙여 넣게 안내한다.
+  async function pasteFeedback() {
+    try {
+      const text = (await navigator.clipboard.readText()).trim()
+      if (!text) {
+        notify(t('pasteEmpty'))
+        return
+      }
+      setField('aiFeedback', text)
+      notify(t('pasteDone'))
+    } catch {
+      notify(t('pasteBlocked'))
+      formRef.current?.querySelector('[name="aiFeedback"]')?.focus()
+    }
+  }
+
   return (
     <>
       <PageHead title={t('journal')} intro={t('diaryIntro')} />
@@ -136,6 +152,9 @@ export default function Journal() {
               onFocus={(event) => event.target.select()}
             />
           )}
+          <button type="button" className="soft-button paste-button" onClick={pasteFeedback}>
+            {t('pasteFeedback')}
+          </button>
           <Field
             as="textarea"
             label={t('aiFeedback')}

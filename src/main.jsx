@@ -1,8 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
+import { initErrorTracking } from './lib/errorLog'
 import { applyTheme, getTheme, watchSystemTheme } from './lib/theme'
 import './styles.css'
+
+// 처리하지 못한 오류를 모은다(오류 추적).
+initErrorTracking()
 
 // 첫 화면을 그리기 전에 테마를 정해 깜빡임을 줄인다.
 applyTheme(getTheme())

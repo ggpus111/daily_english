@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react'
 import DeleteButton from '../components/DeleteButton'
+import ErrorReport from '../components/ErrorReport'
+import ReminderSettings from '../components/ReminderSettings'
 import Field from '../components/Field'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
@@ -45,6 +47,7 @@ export default function Profile() {
     setNativeLang,
     learningLang,
     setLearningLang,
+    onLogin,
   } = useApp()
 
   async function deleteAccount() {
@@ -135,7 +138,15 @@ export default function Profile() {
             <dt>{t('email')}</dt>
             <dd>{user ? user.email || t('noEmail') : t('localMode')}</dd>
           </dl>
-          {supabase ? (
+          {supabase && !user && (
+            <>
+              <button className="primary-button" onClick={onLogin}>
+                {t('guestLogin')}
+              </button>
+              <p className="tiny-note">{t('guestLoginNote')}</p>
+            </>
+          )}
+          {supabase && user ? (
             <>
               <button className="soft-button" onClick={logOut}>
                 {t('logout')}
@@ -143,7 +154,7 @@ export default function Profile() {
               {pendingCount > 0 && <p className="tiny-note">{t('pendingOnLogout', { count: pendingCount })}</p>}
             </>
           ) : (
-            <p className="tiny-note">{t('localModeNote')}</p>
+            !supabase && <p className="tiny-note">{t('localModeNote')}</p>
           )}
         </section>
 
@@ -195,7 +206,7 @@ export default function Profile() {
           <h2>{t('myData')}</h2>
           <p className="muted">{t('myDataBody')}</p>
           <p className="backup-status" role="status">
-            {supabase && <span>{t('cloudSaved')} </span>}
+            {supabase && user && <span>{t('cloudSaved')} </span>}
             {lastExport
               ? t('lastExport', { date: dateFormat.format(new Date(lastExport)) })
               : t('neverExported')}
@@ -218,9 +229,9 @@ export default function Profile() {
             />
             <DeleteButton
               className="danger-button"
-              label={t(supabase ? 'deleteAccount' : 'deleteAllLocal')}
+              label={t(supabase && user ? 'deleteAccount' : 'deleteAllLocal')}
               confirmLabel={t('deleteDataConfirm')}
-              onConfirm={supabase ? deleteAccount : deleteLocalRecords}
+              onConfirm={supabase && user ? deleteAccount : deleteLocalRecords}
             />
           </div>
           {importPlan && (
@@ -263,6 +274,10 @@ export default function Profile() {
             {t('privacy')}
           </a>
         </section>
+
+        <ReminderSettings />
+
+        <ErrorReport />
       </div>
     </>
   )

@@ -12,6 +12,13 @@ describe('isCorrectAnswer', () => {
     expect(isCorrectAnswer('사려 깊은', '사려 깊은 / 배려하는')).toBe(true)
   })
 
+  it('괄호 속 설명과 가운뎃점으로 나눈 뜻도 알아본다', () => {
+    expect(isCorrectAnswer('지루한', '지루해하는; (boring) 지루한')).toBe(true)
+    expect(isCorrectAnswer('많이', '(a lot) 많이, 많은 것')).toBe(true)
+    expect(isCorrectAnswer('with my friend', 'with my friend')).toBe(true)
+    expect(isCorrectAnswer('went', '원래 쓴 말: go · 과거형')).toBe(false)
+  })
+
   it('틀린 답과 빈 답은 오답이다', () => {
     expect(isCorrectAnswer('친절한', '사려 깊은')).toBe(false)
     expect(isCorrectAnswer('   ', '사려 깊은')).toBe(false)
