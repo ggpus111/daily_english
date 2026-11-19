@@ -6,12 +6,19 @@
 // 실행: npm run test:android                 앱을 새로 빌드해서 시험
 //       npm run test:android -- --no-build   이미 만든 APK로 시험
 //       npm run test:android -- --avd Pixel_10_Pro_XL
+//       npm run test:android -- --window     에뮬레이터 창을 띄워서 보기(기본은 창 없이)
+//       npm run test:android -- --keep       끝나도 에뮬레이터를 켜 둠
 // 결과: test-results/android/ 에 화면(png)과 요약(summary.json)
+//
+// 가볍게 돌리기: 메모리 8GB 컴퓨터에서도 돌도록 빌드 도구(Gradle)를 빌드 직후 끄고, 에뮬레이터는 창·소리 없이
+// 메모리 2GB·코어 2개로 켜고, 화면을 720px 폭(같은 dp라 화면 배치는 그대로)으로 낮추고, 끝나면 끈다.
+// USB로 휴대폰을 연결해 두면 에뮬레이터를 켜지 않아 가장 가볍다(휴대폰 설정은 바꾸지 않음).
 
 import { execFileSync, execSync, spawn } from 'node:child_process'
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
+import { freemem } from 'node:os'
 import { join } from 'node:path'
-import { chromium, expect } from '@playwright/test'
+import { _android, chromium, expect } from '@playwright/test'
 
 const APP_ID = 'com.dailyenglish.app'
 const PORT = 9333
@@ -24,6 +31,11 @@ const EMULATOR = join(SDK, 'emulator', isWindows ? 'emulator.exe' : 'emulator')
 const APK = join(ROOT, 'android', 'app', 'build', 'outputs', 'apk', 'debug', 'app-debug.apk')
 const args = process.argv.slice(2)
 const avdArg = args.includes('--avd') ? args[args.indexOf('--avd') + 1] : null
+const showWindow = args.includes('--window')
+const keepEmulator = args.includes('--keep')
+const EMULATOR_MEMORY_MB = 2048
+const LIGHT_AVD = 'Light_API_35'
+const LIGHT_SIZE = { width: 720, height: 1600, density: 280 } // 1080×2400·420dpi와 같은 411dp 폭
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 const adb = (...params) => execFileSync(ADB, params, { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }).trim()
@@ -46,6 +58,8 @@ function build() {
   // 현재 폴더의 실행 파일을 찾지 않는 셸 설정도 있어서 gradlew를 전체 경로로 부른다.
   const gradlew = join(ROOT, 'android', isWindows ? 'gradlew.bat' : 'gradlew')
   execSync(`"${gradlew}" assembleDebug -q`, { cwd: join(ROOT, 'android'), stdio: 'inherit', env })
+  // 빌드가 끝나도 Gradle·Kotlin 데몬이 메모리(최대 1.5GB씩)를 잡고 남아 있어서, 에뮬레이터를 켜기 전에 끈다.
+  execSync(`"${gradlew}" --stop -q`, { cwd: join(ROOT, 'android'), stdio: 'ignore', env })
 }
 
 // 화면(접근성 트리)에서 글자를 찾아 그 가운데를 누른다. 디버거 없이 실제 사용자처럼 조작할 때 쓴다.
@@ -65,14 +79,49 @@ async function tapText(text, tries = 5) {
   throw new Error(`화면에서 "${text}"를 찾지 못했어요`)
 }
 
+// 이미 연결된 기기(휴대폰이나 켜 둔 에뮬레이터)가 있으면 그대로 쓰고, 없으면 가볍게 켠다.
+// 돌려주는 값: 이 스크립트가 에뮬레이터를 켰는지(그래야 끝나고 끄고 화면 크기를 되돌린다).
 async function ensureDevice() {
-  if (adb('devices').split('\n').slice(1).some((line) => line.trim().endsWith('device'))) return
-  const avd = avdArg ?? execFileSync(EMULATOR, ['-list-avds'], { encoding: 'utf8' }).trim().split(/\r?\n/)[0]
+  if (adb('devices').split('\n').slice(1).some((line) => line.trim().endsWith('device'))) return false
+  const avds = execFileSync(EMULATOR, ['-list-avds'], { encoding: 'utf8' }).trim().split(/\r?\n/).filter(Boolean)
+  // 테스트용으로 만든 가벼운 에뮬레이터(Android 15, 플레이 스토어 없음, 720×1600)가 있으면 먼저 쓴다.
+  const avd = avdArg ?? (avds.includes(LIGHT_AVD) ? LIGHT_AVD : avds[0])
   if (!avd) throw new Error('연결된 기기도, 만들어 둔 에뮬레이터(AVD)도 없어요.')
-  console.log(`▶ 에뮬레이터 켜기: ${avd}`)
-  spawn(EMULATOR, ['-avd', avd, '-memory', '3072', '-no-boot-anim'], { detached: true, stdio: 'ignore' }).unref()
+  const freeGb = freemem() / 1024 ** 3
+  if (freeGb < 2.5) {
+    console.log(`! 남은 메모리가 ${freeGb.toFixed(1)}GB예요. 에뮬레이터가 중간에 꺼질 수 있어요.`)
+    console.log('  Android Studio, 크롬 탭, 개발 서버를 닫거나, USB로 휴대폰을 연결해서 돌려 보세요.')
+  }
+  console.log(`▶ 에뮬레이터 켜기: ${avd} (메모리 ${EMULATOR_MEMORY_MB}MB${showWindow ? '' : ', 창 없이'})`)
+  const flags = ['-avd', avd, '-memory', String(EMULATOR_MEMORY_MB), '-cores', '2', '-no-boot-anim', '-no-audio', '-no-snapshot-save']
+  if (!showWindow) flags.push('-no-window')
+  spawn(EMULATOR, flags, { detached: true, stdio: 'ignore' }).unref()
   adb('wait-for-device')
   for (let i = 0; i < 90 && adb('shell', 'getprop', 'sys.boot_completed') !== '1'; i += 1) await wait(2000)
+  adb('shell', 'wm', 'size', `${LIGHT_SIZE.width}x${LIGHT_SIZE.height}`)
+  adb('shell', 'wm', 'density', String(LIGHT_SIZE.density))
+  // 테스트용 에뮬레이터 설정: 애니메이션을 끄고, 메모리가 빠듯할 때 뜨는 "응답 없음" 창이
+  // 공유 창·뒤로 가기·화면 누르기를 가로채지 않게 숨긴다. 휴대폰을 연결했을 때는 바꾸지 않는다.
+  for (const [key, value] of [
+    ['window_animation_scale', '0'],
+    ['transition_animation_scale', '0'],
+    ['animator_duration_scale', '0'],
+    ['hide_error_dialogs', '1'],
+    ['anr_show_background', '0'],
+  ])
+    adbQuiet('shell', 'settings', 'put', 'global', key, value)
+  // 막 켠 에뮬레이터는 구글 서비스가 한꺼번에 일을 해서 느리다. 잠깐 기다렸다가 시작한다.
+  console.log('▶ 에뮬레이터가 안정될 때까지 기다리기(30초)')
+  await wait(30_000)
+  return true
+}
+
+function stopEmulator() {
+  adbQuiet('shell', 'wm', 'size', 'reset')
+  adbQuiet('shell', 'wm', 'density', 'reset')
+  if (keepEmulator) return
+  console.log('▶ 에뮬레이터 끄기')
+  adbQuiet('emu', 'kill')
 }
 
 async function launch() {
@@ -146,7 +195,11 @@ const scenarios = [
       let focus = ''
       for (let i = 0; i < 10 && !/chooser|intentresolver|resolver/i.test(focus); i += 1) {
         await wait(700)
-        focus = adb('shell', 'dumpsys', 'window').split('\n').find((line) => line.includes('mCurrentFocus')) ?? ''
+        // 맨 앞 창(mCurrentFocus)이나 맨 앞 앱(mFocusedApp)이 공유 창이면 열린 것이다.
+        focus = adb('shell', 'dumpsys', 'window')
+          .split('\n')
+          .filter((line) => line.includes('mCurrentFocus') || line.includes('mFocusedApp'))
+          .join(' ')
       }
       expect(focus).toMatch(/chooser|intentresolver|resolver/i)
       adb('shell', 'input', 'keyevent', 'KEYCODE_BACK')
@@ -189,9 +242,23 @@ const scenarios = [
   ],
 ]
 
+// 앱 웹뷰에 붙는다. 최신 웹뷰는 크롬 개발자 도구 프로토콜(CDP)로 바로 붙고,
+// 휴대폰에 처음 들어 있던 오래된 웹뷰(예: Android 15 에뮬레이터)는 그 방식의 일부 명령을 몰라서
+// Playwright의 안드로이드 연결(_android)로 붙는다.
 async function connect() {
-  const browser = await chromium.connectOverCDP(`http://localhost:${PORT}`)
-  const page = browser.contexts()[0].pages()[0]
+  let browser
+  let page
+  try {
+    browser = await chromium.connectOverCDP(`http://localhost:${PORT}`)
+    page = browser.contexts()[0].pages()[0]
+  } catch (error) {
+    if (!/not supported/i.test(String(error.message))) throw error
+    const [device] = await _android.devices()
+    if (!device) throw error
+    const webview = await device.webView({ pkg: APP_ID }, { timeout: 30_000 })
+    page = await webview.page()
+    browser = { close: () => device.close() }
+  }
   page.setDefaultTimeout(10_000)
   return { browser, page }
 }
@@ -199,12 +266,26 @@ async function connect() {
 async function main() {
   mkdirSync(OUT, { recursive: true })
   if (!args.includes('--no-build')) build()
-  await ensureDevice()
+  const startedEmulator = await ensureDevice()
+  try {
+    await run()
+  } finally {
+    if (startedEmulator) stopEmulator()
+  }
+}
+
+async function run() {
   await launch()
 
   let { browser, page } = await connect()
   const pageErrors = []
-  const watch = (target) => target.on('pageerror', (error) => pageErrors.push(error.message))
+  const watch = (target) => {
+    target.on('pageerror', (error) => pageErrors.push(error.message))
+    // DEBUG=1 이면 화면 이동과 웹뷰 연결이 끊기는 때를 보여 준다(쓰던 일기 시나리오와 끝에서는 일부러 끊는다).
+    if (!process.env.DEBUG) return
+    target.on('close', () => console.log(`    (웹뷰 연결 끊김 ${new Date().toISOString().slice(11, 19)})`))
+    target.on('framenavigated', (frame) => console.log(`    nav ${frame.url()}`))
+  }
   watch(page)
   const detach = async () => {
     await browser.close().catch(() => {})

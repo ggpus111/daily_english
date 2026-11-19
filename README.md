@@ -224,7 +224,17 @@ insert into public.admins (user_id) values ('<관리자 사용자 ID>');
 | 저장소에 올리면 자동으로 lint·단위·브라우저 테스트와 안드로이드 빌드 | `.github/workflows/ci.yml` | push, pull request |
 | 에뮬레이터에서 실제 앱을 눌러 보는 회귀 테스트 | `npm run test:android` (`-- --no-build`) | 출시 전 |
 
-`npm run test:android`는 앱을 빌드해 에뮬레이터에 설치하고, 앱 안 웹뷰에 디버거로 붙어 첫 실행, 단어 저장, 복습, 일기, 공유 창, 뒤로 가기, 앱이 꺼졌다 켜져도 쓰던 일기가 남는지를 확인합니다. 끝나면 크래시 로그(`logcat -b crash`)도 확인하고 `test-results/android/`에 화면과 요약을 남깁니다. Appium이나 Maestro를 따로 설치하지 않고 Playwright와 adb로 같은 일을 합니다. 디버거를 붙인 동안 쓴 내용은 웹뷰가 디스크에 남기지 않아서, "앱이 꺼져도 남는지"는 디버거를 뗀 뒤 실제 터치 입력으로 확인합니다.
+`npm run test:android`는 앱을 빌드해 에뮬레이터에 설치하고, 앱 안 웹뷰에 디버거로 붙어 첫 실행, 단어 저장, 복습, 일기, 공유 창, 뒤로 가기, 앱이 꺼졌다 켜져도 쓰던 일기가 남는지를 확인합니다. 끝나면 크래시 로그(`logcat -b crash`)도 확인하고 `test-results/android/`에 화면과 요약을 남깁니다. Appium이나 Maestro를 따로 설치하지 않고 Playwright와 adb로 같은 일을 합니다.
+
+메모리 8GB 컴퓨터에서도 돌도록 가볍게 돌립니다.
+- 빌드가 끝나면 Gradle 데몬을 끄고(`gradlew --stop`), Kotlin 코드는 Gradle 안에서 컴파일해 JVM을 하나만 띄웁니다(`android/gradle.properties`).
+- 에뮬레이터는 창과 소리 없이 메모리 2GB, 코어 2개로 켜고, 스냅샷을 디스크에 저장하지 않습니다. 화면은 720×1600(280dpi)으로 낮춥니다. 1080×2400(420dpi)과 같은 411dp 폭이라 화면 배치는 같습니다.
+- 테스트용 에뮬레이터 `Light_API_35`(Android 15 `google_apis` x86_64, 플레이 스토어 없음, 720×1600, 메모리 2GB, 디스크 2GB)가 있으면 먼저 씁니다. Android 37 플레이 스토어 이미지보다 가볍습니다. 이미지는 `system-images/android-35/google_apis/x86_64`에 설치합니다(Android Studio의 SDK Manager나 `sdkmanager "system-images;android-35;google_apis;x86_64"`).
+- 이 스크립트가 켠 에뮬레이터는 애니메이션을 끄고, 메모리가 빠듯할 때 뜨는 "응답 없음" 창을 숨기고(이 창이 공유 창과 뒤로 가기를 가로챘음), 켠 뒤 30초 기다렸다가 시작합니다. 연결한 휴대폰의 설정은 바꾸지 않습니다.
+- Android 15 에뮬레이터에 처음 들어 있는 웹뷰(124)는 Playwright의 CDP 연결 명령 일부를 몰라서, 그때는 Playwright의 안드로이드 연결(`_android`)로 붙습니다.
+- 끝나면 에뮬레이터를 끕니다. 창을 보려면 `-- --window`, 켜 두려면 `-- --keep`을 붙입니다.
+- 남은 메모리가 2.5GB보다 적으면 경고합니다. 가장 가벼운 방법은 USB 디버깅을 켠 휴대폰을 연결하는 것입니다. 연결된 기기가 있으면 에뮬레이터를 켜지 않고, 휴대폰 설정도 바꾸지 않습니다.
+- 테스트용 디버그 APK(7.3MB)는 코드를 줄이지 않은 빌드라 큽니다. 사용자가 받는 릴리즈 APK는 1.31MB입니다. 디버거를 붙인 동안 쓴 내용은 웹뷰가 디스크에 남기지 않아서, "앱이 꺼져도 남는지"는 디버거를 뗀 뒤 실제 터치 입력으로 확인합니다.
 
 ## 배포 전 환경 변수
 
