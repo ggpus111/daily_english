@@ -9,7 +9,7 @@ export default [
   {
     files: ['src/**/*.{js,jsx}'],
     languageOptions: {
-      globals: globals.browser,
+      globals: { ...globals.browser, __APP_VERSION__: 'readonly' },
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
     plugins: { 'react-hooks': reactHooks, 'jsx-a11y': jsxA11y },

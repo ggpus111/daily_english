@@ -1,6 +1,8 @@
 // 표현·단어 꾸러미(analysis/native/build_packs.py, build_words.py가 만든 src/data/*.json)를 다룬다.
 // 데이터는 처음 필요할 때 따로 불러온다. 첫 화면 코드에 함께 묶이지 않게 해서 앱이 빨리 뜨게 한다.
 
+import { normalizeText } from './text'
+
 const LOADERS = {
   expressions: () => import('../data/packs.json'),
   words: () => import('../data/words.json'),
@@ -47,17 +49,11 @@ export function todayItem(items, now = new Date()) {
   return items[localDay % items.length]
 }
 
-const normalize = (text) =>
-  String(text ?? '')
-    .toLowerCase()
-    .replace(/[’']/g, "'")
-    .replace(/[.!?,]/g, '')
-    .trim()
 
 /** 이미 내 기록(단어장·표현 모음)에 담은 항목인지. */
 export function isSaved(item, entries) {
-  const key = normalize(item.text)
-  return entries.some((entry) => normalize(entry.text) === key)
+  const key = normalizeText(item.text)
+  return entries.some((entry) => normalizeText(entry.text) === key)
 }
 
 /** 공개 문장 100만 개당 쓰인 횟수로 얼마나 자주 쓰이는지 나눈다. */

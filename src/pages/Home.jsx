@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ExpressionCard from '../components/ExpressionCard'
 import Onboarding, { needsOnboarding } from '../components/Onboarding'
+import BackupNudge from '../components/BackupNudge'
 import RecapCard from '../components/Recap'
 import Mascot from '../components/Mascot'
 import { useApp } from '../context'
@@ -10,6 +11,7 @@ import { languageName } from '../lib/i18n'
 import { usePackData } from '../hooks/usePackData'
 import { todayItem } from '../lib/packs'
 import { moodOf, moodTone } from '../lib/moods'
+import { readSettings, todayProgress } from '../lib/reminders'
 import { dueItems } from '../lib/review'
 import { moodsByDay } from '../lib/usage'
 
@@ -59,6 +61,8 @@ export default function Home() {
   const dueTotal = dueWords + dueExpressions
   const note = NOTES[Math.floor(today.getTime() / DAY_MS) % NOTES.length]
   const totalRecords = Object.values(records).reduce((sum, items) => sum + items.length, 0)
+  const { goal } = readSettings()
+  const doneToday = todayProgress(records, today)
   // 기록이 하나도 없는 첫 실행이면 홈 대신 짧은 안내를 보여 준다.
   const [onboarding, setOnboarding] = useState(() => needsOnboarding(records, learningLang))
 
@@ -78,6 +82,103 @@ export default function Home() {
           <small aria-hidden="true">{dateParts.weekday}</small>
           <span className="sr-only">{fullDate.format(today)}</span>
         </p>
+      </section>
+
+      <BackupNudge totalRecords={totalRecords} />
+
+      <section className="home-section" aria-labelledby="routine-title">
+        <div className="section-heading">
+          <div>
+            <p className="eyebrow">YOUR ROUTINE</p>
+            <h2 id="routine-title">{t('routineTitle')}</h2>
+          </div>
+        </div>
+
+        <div className="routine-grid">
+          <section className="paper-card review-panel" aria-labelledby="review-title">
+            <p className="eyebrow" aria-hidden="true">
+              TODAY’S REVIEW
+            </p>
+            <h3 id="review-title" className="sr-only">
+              {t('reviewTitle')}
+            </h3>
+            <p className="review-count">
+              <strong>{dueTotal}</strong>
+              {t('reviewUnit')}
+            </p>
+            <p className="muted">
+              {dueTotal > 0
+                ? t('reviewBreakdown', { words: dueWords, expressions: dueExpressions })
+                : t('reviewNoneToday')}
+            </p>
+            {goal > 0 && (
+              <div className="goal-progress">
+                <p>
+                  {doneToday >= goal ? t('goalDone', { goal }) : t('goalLeft', { done: doneToday, goal })}
+                </p>
+                <div
+                  className="goal-bar"
+                  role="progressbar"
+                  aria-label={t('goalLabel')}
+                  aria-valuemin={0}
+                  aria-valuemax={goal}
+                  aria-valuenow={Math.min(doneToday, goal)}
+                >
+                  <span style={{ width: `${Math.min(100, (doneToday / goal) * 100)}%` }} />
+                </div>
+              </div>
+            )}
+            <button
+              className="primary-button"
+              disabled={dueTotal === 0}
+              onClick={() => go(dueWords > 0 || dueExpressions === 0 ? 'words' : 'expressions')}
+            >
+              {t('reviewStart')}
+            </button>
+          </section>
+
+          <section className="paper-card week-panel" aria-labelledby="week-title">
+            <div className="section-head">
+              <p className="eyebrow" aria-hidden="true">
+                THIS WEEK
+              </p>
+              <h3 id="week-title" className="sr-only">
+                {t('weekTitle')}
+              </h3>
+              <span className="count">{t('streakDays', { count: streakDays })}</span>
+            </div>
+            <ol className="week-strip">
+              {week.map((day) => (
+                <li key={day.date.toISOString()} className={day.isToday ? 'today' : ''}>
+                  <span
+                    className={`stamp ${day.active ? 'on' : ''} ${day.mood ? `mood-${moodTone(day.mood)}` : ''}`}
+                    aria-hidden="true"
+                  >
+                    {day.active ? '✓' : ''}
+                  </span>
+                  <span className="weekday" aria-hidden="true">
+                    {weekday.format(day.date)}
+                  </span>
+                  <span className="sr-only">
+                    {fullDate.format(day.date)} {t(day.active ? 'dayActive' : 'dayRest')}
+                    {day.mood && ` · ${t('moodOfDay', { mood: day.mood })}`}
+                  </span>
+                </li>
+              ))}
+            </ol>
+            {weekMoods.length > 0 && (
+              <p className="week-moods" aria-hidden="true">
+                {weekMoods.map((day) => (
+                  <span key={day.date.toISOString()} className={`week-mood mood-${moodTone(day.mood)}`}>
+                    {weekday.format(day.date)} <b lang="en">{day.mood}</b>
+                    {nativeLang === 'ko' && <small> {moodOf(day.mood).ko}</small>}
+                  </span>
+                ))}
+              </p>
+            )}
+            <p className="tiny-note">{t(streakDays > 0 ? 'streakNote' : 'streakEmpty')}</p>
+          </section>
+        </div>
       </section>
 
       <section className="home-section" aria-labelledby="space-title">
@@ -137,84 +238,6 @@ export default function Home() {
           <TodayExpression today={today} />
         </section>
       )}
-
-      <section className="home-section" aria-labelledby="routine-title">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">YOUR ROUTINE</p>
-            <h2 id="routine-title">{t('routineTitle')}</h2>
-          </div>
-        </div>
-
-        <div className="routine-grid">
-          <section className="paper-card review-panel" aria-labelledby="review-title">
-            <p className="eyebrow" aria-hidden="true">
-              TODAY’S REVIEW
-            </p>
-            <h3 id="review-title" className="sr-only">
-              {t('reviewTitle')}
-            </h3>
-            <p className="review-count">
-              <strong>{dueTotal}</strong>
-              {t('reviewUnit')}
-            </p>
-            <p className="muted">
-              {dueTotal > 0
-                ? t('reviewBreakdown', { words: dueWords, expressions: dueExpressions })
-                : t('reviewNoneToday')}
-            </p>
-            <button
-              className="primary-button"
-              disabled={dueTotal === 0}
-              onClick={() => go(dueWords > 0 || dueExpressions === 0 ? 'words' : 'expressions')}
-            >
-              {t('reviewStart')}
-            </button>
-          </section>
-
-          <section className="paper-card week-panel" aria-labelledby="week-title">
-            <div className="section-head">
-              <p className="eyebrow" aria-hidden="true">
-                THIS WEEK
-              </p>
-              <h3 id="week-title" className="sr-only">
-                {t('weekTitle')}
-              </h3>
-              <span className="count">{t('streakDays', { count: streakDays })}</span>
-            </div>
-            <ol className="week-strip">
-              {week.map((day) => (
-                <li key={day.date.toISOString()} className={day.isToday ? 'today' : ''}>
-                  <span
-                    className={`stamp ${day.active ? 'on' : ''} ${day.mood ? `mood-${moodTone(day.mood)}` : ''}`}
-                    aria-hidden="true"
-                  >
-                    {day.active ? '✓' : ''}
-                  </span>
-                  <span className="weekday" aria-hidden="true">
-                    {weekday.format(day.date)}
-                  </span>
-                  <span className="sr-only">
-                    {fullDate.format(day.date)} {t(day.active ? 'dayActive' : 'dayRest')}
-                    {day.mood && ` · ${t('moodOfDay', { mood: day.mood })}`}
-                  </span>
-                </li>
-              ))}
-            </ol>
-            {weekMoods.length > 0 && (
-              <p className="week-moods" aria-hidden="true">
-                {weekMoods.map((day) => (
-                  <span key={day.date.toISOString()} className={`week-mood mood-${moodTone(day.mood)}`}>
-                    {weekday.format(day.date)} <b lang="en">{day.mood}</b>
-                    {nativeLang === 'ko' && <small> {moodOf(day.mood).ko}</small>}
-                  </span>
-                ))}
-              </p>
-            )}
-            <p className="tiny-note">{t(streakDays > 0 ? 'streakNote' : 'streakEmpty')}</p>
-          </section>
-        </div>
-      </section>
 
       <RecapCard today={today} />
 

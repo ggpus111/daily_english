@@ -45,7 +45,7 @@ npm run android:open
 ### Play 스토어 출시 전 확인
 
 - 타깃 API는 36입니다(`android/variables.gradle`). Play가 요구하는 최신 기준을 출시 시점에 다시 확인합니다.
-- 권한은 인터넷 하나입니다. 실행 중 허락받는 권한(위치, 카메라, 알림 등)은 쓰지 않습니다. 알림 리마인더를 넣으면 알림 권한 요청과 거부했을 때의 안내 화면을 함께 만듭니다.
+- 권한은 인터넷과 알림입니다. 알림 플러그인이 POST_NOTIFICATIONS(Android 13 이상 알림), RECEIVE_BOOT_COMPLETED(휴대폰을 껐다 켜도 예약 유지), WAKE_LOCK을 넣고, 정확한 알람 권한은 뺐습니다. 알림 권한은 프로필에서 알림을 켤 때만 묻고, 거부하면 설정에서 켜는 방법을 알려 줍니다. 위치, 카메라 등은 쓰지 않습니다.
 - 개인정보 처리방침은 공개 웹 주소가 필요합니다. 웹을 배포한 뒤 `https://<배포 주소>/#privacy`를 Play Console에 넣습니다.
 - 계정 삭제는 앱 안(프로필)과 웹 모두에서 할 수 있어야 합니다. 배포한 웹에서 로그인한 뒤 프로필에서 계정을 삭제할 수 있으므로, 이 방법을 처리방침에 적고 그 주소를 Play Console의 계정 삭제 항목에 넣습니다.
 - 데이터 보안 섹션: 수집하는 데이터는 이메일 주소(계정)와 사용자가 쓴 학습 기록·일기(앱 기능)입니다. 다른 곳에 공유하지 않고, 전송 중 암호화(HTTPS)되며, 사용자가 삭제할 수 있습니다. 광고와 분석 도구는 쓰지 않습니다.
@@ -172,6 +172,60 @@ npm run test:e2e
 
 `npm run test:e2e`는 설치된 Chrome으로 접근성 검사(axe), 화면 흐름, 보안 헤더를 확인합니다. 화면 캡처는 `e2e-shots`에 저장됩니다. `npm run check`는 세 가지를 모두 실행합니다.
 
+## 로그인 없이 둘러보기 (웹)
+
+Supabase가 연결된 웹에서도 처음 온 사람은 로그인 화면에서 앱 소개를 보고 "로그인 없이 먼저 써 보기"를 누를 수 있습니다. 이때 기록은 이 기기에만 저장되고(`useRecords`는 로그인했을 때만 서버를 씀), 나중에 로그인하면 `migrateLocal`이 이 기기 기록을 계정으로 옮깁니다. 프로필과 홈의 백업 안내에 "로그인하고 기록 지키기" 버튼이 있습니다.
+
+## 알림
+
+프로필의 "알림"에서 하루 목표(기록하거나 복습한 개수)와 알림을 켭니다. 기본은 꺼져 있습니다.
+
+- **목표 알림**: 목표를 못 채운 날 13시에 처음, 그 뒤에도 못 채웠으면 1.5~2.5시간마다 알립니다. 21시 이후에는 보내지 않고 하루 최대 5번이며, 목표를 채우면 그날 남은 알림은 취소합니다(`src/lib/reminders.js`).
+- **복습 알림**: 정한 시간에 복습할 단어·표현이 있을 때만 개수를 알립니다.
+- **안드로이드**: `@capacitor/local-notifications`로 앞으로 3일 치를 미리 예약하고, 기록이 바뀔 때마다 다시 예약합니다. 알림을 누르면 일기나 단어장으로 갑니다. 정확한 알람 권한(SCHEDULE_EXACT_ALARM)은 Play 정책 때문에 뺐습니다.
+- **웹**: 브라우저 알림으로 보내지만 탭이나 설치한 웹앱이 열려 있을 때만 옵니다. 닫혀 있어도 보내려면 푸시 서버가 필요해서 지금은 하지 않습니다.
+- 리뷰 분석에서 압박·죄책감이 불만 요인이라, 문구는 다그치지 않게 쓰고 홈에는 진행 막대만 보여 줍니다.
+
+## 오류 추적
+
+`src/lib/errorLog.js`가 처리하지 못한 오류(window error, 거부된 Promise, 화면 오류)를 모읍니다. 오류 메시지, 화면, 앱 버전, 웹·앱 구분만 남기고 사용자가 쓴 내용은 넣지 않습니다. 이 기기에 최근 30개를 두어 프로필의 "앱 오류 기록"에서 보고 복사할 수 있고, 로그인했으면 Supabase `client_errors` 표(`supabase/schema.sql`, 넣기만 가능)에도 보냅니다. 개인정보 처리방침에 적어 두었습니다. 안드로이드 앱의 네이티브 크래시는 Play 스토어에 올리면 Play Console의 Android vitals에서 봅니다.
+
+## 오류 신고와 관리자 페이지
+
+프로필의 "문제 신고하기"에서 종류(앱 오류, 단어·표현 내용, 의견)와 내용을 보냅니다. 원하면 이 기기의 앱 오류 기록을 함께 붙입니다. 보낸 신고와 처리 상태, 답변은 같은 곳의 "내가 보낸 신고"에서 봅니다. 로그인하지 않았으면 `VITE_CONTACT_EMAIL`로 메일을 쓰게 합니다.
+
+관리자는 웹이나 앱에서 `#admin`(프로필의 "관리자 페이지" 링크)으로 들어가 신고를 상태별로 보고, 상태(새 신고, 확인 중, 고침, 고치지 않음)와 답변을 바로 고칩니다. "앱 오류" 탭에서는 `client_errors`에 쌓인 오류를 같은 메시지끼리 묶어 횟수와 마지막 시각을 봅니다.
+
+관리자 지정은 Supabase SQL Editor에서 한 번만 합니다. 사용자 ID는 Authentication > Users에서 복사합니다.
+
+```sql
+insert into public.admins (user_id) values ('<관리자 사용자 ID>');
+```
+
+- 권한은 서버(RLS)가 지킵니다. 사용자는 자기 신고만 넣고 읽으며, 상태와 답변은 `is_admin()`이 참인 관리자만 고칩니다. 관리자 목록 표(`admins`)는 앱에서 읽거나 고칠 수 없습니다.
+- 관리자 페이지에서 고칠 수 있는 것은 신고의 상태와 답변입니다. 꾸러미 단어의 뜻 같은 내용 오류는 `src/data`와 `analysis/native`를 고쳐 새 버전으로 내보냅니다.
+
+## 앱 크기
+
+| | 전 | 후 |
+| --- | --- | --- |
+| 앱에 들어가는 웹 파일 | 3.69MB | 0.68MB |
+| 릴리즈 APK | 4.16MB | 1.31MB |
+
+- 안드로이드 앱(`--mode app`)은 Pretendard 글꼴 파일(약 3.3MB)을 넣지 않고 휴대폰 글꼴을 씁니다. Pretendard의 한글은 안드로이드 기본 한글 글꼴(Noto Sans CJK)을 바탕으로 해서 거의 같게 보입니다. 웹은 필요한 글자 조각만 받는 Pretendard를 그대로 씁니다.
+- 관리자, Pro 시연판, 개인정보 처리방침 화면은 처음 열 때 따로 불러옵니다.
+- 꾸러미 단어·표현은 화면을 열 때 따로 불러옵니다.
+
+## 테스트 자동화
+
+| 무엇을 | 명령 | 언제 |
+| --- | --- | --- |
+| lint, 단위 테스트, 브라우저 테스트(데스크톱·모바일, 접근성) | `npm run check` | 고칠 때마다 |
+| 저장소에 올리면 자동으로 lint·단위·브라우저 테스트와 안드로이드 빌드 | `.github/workflows/ci.yml` | push, pull request |
+| 에뮬레이터에서 실제 앱을 눌러 보는 회귀 테스트 | `npm run test:android` (`-- --no-build`) | 출시 전 |
+
+`npm run test:android`는 앱을 빌드해 에뮬레이터에 설치하고, 앱 안 웹뷰에 디버거로 붙어 첫 실행, 단어 저장, 복습, 일기, 공유 창, 뒤로 가기, 앱이 꺼졌다 켜져도 쓰던 일기가 남는지를 확인합니다. 끝나면 크래시 로그(`logcat -b crash`)도 확인하고 `test-results/android/`에 화면과 요약을 남깁니다. Appium이나 Maestro를 따로 설치하지 않고 Playwright와 adb로 같은 일을 합니다. 디버거를 붙인 동안 쓴 내용은 웹뷰가 디스크에 남기지 않아서, "앱이 꺼져도 남는지"는 디버거를 뗀 뒤 실제 터치 입력으로 확인합니다.
+
 ## 배포 전 환경 변수
 
 | 이름 | 어디에 | 용도 |
@@ -179,19 +233,23 @@ npm run test:e2e
 | `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` | Vercel, `.env` | 로그인과 기록 저장 |
 | `VITE_AUTH_PROVIDERS` | Vercel, `.env` | 보여 줄 소셜 로그인 (예: `google,kakao`) |
 | `VITE_SITE_URL` | Vercel | canonical, 공유 미리보기, sitemap |
-| `VITE_CONTACT_EMAIL` | Vercel | 개인정보 처리방침의 문의처 |
+| `VITE_CONTACT_EMAIL` | Vercel, `.env` | 개인정보 처리방침의 문의처, 로그인하지 않은 사람의 신고 메일 |
 
 ## 구조
 
 - `src/pages`: 화면별 컴포넌트
 - `src/components`: 퀴즈, 입력칸, 삭제 버튼 같은 공용 부품
 - `src/hooks/useRecordForm.js`: 기록 입력 폼의 공통 동작
+- `src/hooks/useReminders.js`, `src/hooks/useErrorReporting.js`: 알림 예약, 로그인 사용자의 오류 보내기
+- `src/components/SaveEntryButton.jsx`: 꾸러미, 일기 교정, 오늘의 기분에서 함께 쓰는 "담기" 버튼
+- `src/lib/reports.js`, `src/components/ReportForm.jsx`, `src/pages/Admin.jsx`: 오류 신고와 관리자 페이지
+- `src/lib/reminders.js`, `src/lib/notifications.js`: 알림 시각 계산과 예약
 - `src/lib/records.js`: 기록 저장과 불러오기
 - `src/lib/storage.js`: 브라우저 저장소 안전 접근
 - `src/lib/i18n.js`: 언어 목록과 화면 문구
 - `src/lib/legacy.js`: 원본 앱 형식의 기록을 지금 형식으로 변환
 - `src/components/SocialLogin.jsx`: 구글, 카카오 로그인 버튼
-- `supabase/schema.sql`: 표, 권한, 회원 탈퇴 함수
+- `supabase/schema.sql`: 표, 권한, 회원 탈퇴 함수, 신고·관리자 표
 - `supabase/migrate-from-original.sql`: 원본 앱 기록 이전
 - `vercel.json`: 보안 헤더와 캐시 설정
 - `scripts/make-images.mjs`: 앱 아이콘과 공유 이미지 생성

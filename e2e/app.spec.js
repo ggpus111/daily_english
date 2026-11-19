@@ -163,12 +163,12 @@ test('퀴즈를 끝까지 풀고 포커스가 결과로 간다', async ({ page }
   await open(page, 'words')
   await page.getByRole('button', { name: '단어 퀴즈' }).click()
 
-  const answers = { thoughtful: '배려하는', 'hang out': '어울려놀다' }
+  // 뜻은 표현 방법이 여러 가지라, 카드를 뒤집어 보고 스스로 채점한다.
   for (let i = 0; i < 2; i += 1) {
-    const question = await page.locator('.quiz-question').textContent()
-    await page.getByLabel('정답을 입력해 보세요').fill(answers[question])
+    await expect(page.getByRole('button', { name: '뜻 보기' })).toBeFocused()
     await page.keyboard.press('Enter')
-    await expect(page.getByText('정답이에요!')).toBeVisible()
+    await expect(page.locator('.quiz-answer')).toBeVisible()
+    await expect(page.getByRole('button', { name: '알았어요' })).toBeFocused()
     await page.keyboard.press('Enter')
   }
 
@@ -193,9 +193,8 @@ test('틀린 단어는 오늘 다시 묻는다', async ({ page }) => {
   await expect(page.locator('.review-count')).toHaveText('3개')
   await open(page, 'words')
   await page.getByRole('button', { name: '단어 퀴즈' }).click()
-  await page.getByLabel('정답을 입력해 보세요').fill('전혀 다른 답')
-  await page.keyboard.press('Enter')
-  await expect(page.getByText(/아쉬워요/)).toBeVisible()
+  await page.getByRole('button', { name: '뜻 보기' }).click()
+  await page.getByRole('button', { name: '헷갈렸어요' }).click()
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('savedWords')))
   const wrong = saved.find((word) => word.box === 0)
   expect(Date.parse(wrong.dueAt)).toBeLessThanOrEqual(Date.now())
@@ -375,6 +374,96 @@ test('첫 실행 안내는 건너뛸 수 있고 다시 뜨지 않는다', async 
   await expect(page.getByRole('heading', { name: '오늘의 표현' })).toBeVisible()
   await page.reload()
   await expect(page.locator('.onboarding')).toHaveCount(0)
+})
+
+test('타이핑 문제는 괄호 설명을 무시하고, 틀려도 "제 답도 맞아요"로 바꿀 수 있다', async ({ page }) => {
+  await seedRecords(page)
+  await open(page, 'words')
+  await page.getByRole('button', { name: '단어 퀴즈' }).click()
+  await page.getByRole('button', { name: '뜻 → 표현' }).click()
+  const question = await page.locator('.quiz-question').textContent()
+  await page.getByLabel('정답을 입력해 보세요').fill('틀린 답')
+  await page.keyboard.press('Enter')
+  await expect(page.getByText(/아쉬워요/)).toBeVisible()
+  await page.getByRole('button', { name: '제 답도 맞아요' }).click()
+  await expect(page.getByText('정답이에요!')).toBeVisible()
+  await page.keyboard.press('Enter')
+  await expect(page.locator('.quiz-progress')).toContainText('현재 점수 1')
+  expect(question).toBeTruthy()
+})
+
+test('단어를 직접 넣을 때 꾸러미에 있는 말이면 뜻과 예문을 한 번에 채운다', async ({ page }) => {
+  await open(page, 'words')
+  await page.getByLabel('단어 / 표현').fill('tired')
+  await page.getByRole('button', { name: '꾸러미 뜻 채우기' }).click()
+  await expect(page.getByLabel('뜻', { exact: true })).toHaveValue(/피곤한/)
+  await expect(page.getByLabel('예문')).not.toHaveValue('')
+  await expect(page.getByRole('button', { name: '꾸러미 뜻 채우기' })).toHaveCount(0)
+})
+
+test('쓰던 일기는 기기 저장소에 남고, 받은 교정은 버튼 하나로 붙여 넣는다', async ({ page, context }) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write'])
+  await open(page, 'journal')
+  await page.getByLabel('모국어로 작성하기').fill('쓰다 만 일기')
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('journalDraft'))?.native)).toBe('쓰다 만 일기')
+  await page.evaluate(() => navigator.clipboard.writeText('## 고친 문장\nI went home.\n## 잘한 점\n좋아요'))
+  await page.getByRole('button', { name: '받은 교정 붙여 넣기' }).click()
+  await expect(page.getByLabel('AI 교정 결과 (선택)')).toHaveValue(/I went home\./)
+})
+
+test('기록이 이 기기에만 쌓이면 백업을 한 번 권하고, 다음에를 누르면 조용해진다', async ({ page }) => {
+  await page.goto('/')
+  await page.evaluate(() => {
+    const words = Array.from({ length: 10 }, (_, index) => ({
+      id: `0b5f3f0e-8f8d-4c6e-9a43-3f1c2f0a1e${String(index).padStart(2, '0')}`,
+      createdAt: new Date().toISOString(),
+      text: `word${index}`,
+      meaning: `뜻${index}`,
+      example: '',
+    }))
+    localStorage.setItem('savedWords', JSON.stringify(words))
+  })
+  await open(page, 'home')
+  await expect(page.locator('.backup-nudge')).toContainText('기록 10개가 이 기기에만 있어요.')
+  await page.getByRole('button', { name: '다음에' }).click()
+  await expect(page.locator('.backup-nudge')).toHaveCount(0)
+  await page.reload()
+  await expect(page.locator('.backup-nudge')).toHaveCount(0)
+})
+
+test('앱에서 난 오류는 프로필의 앱 오류 기록에 남는다', async ({ page }) => {
+  await open(page, 'profile')
+  await expect(page.getByText('지금까지 기록된 오류가 없어요.')).toBeVisible()
+  await page.evaluate(() => setTimeout(() => {
+    throw new Error('시험용 오류')
+  }))
+  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('errorLog') ?? '[]').length)).toBe(1)
+  await page.reload()
+  await expect(page.locator('.error-log')).toContainText('시험용 오류')
+  await page.getByRole('button', { name: '지우기' }).click()
+  await expect(page.getByText('지금까지 기록된 오류가 없어요.')).toBeVisible()
+})
+
+test('알림: 하루 목표를 정하고 알림을 켜면 다음 알림이 보이고, 홈에 목표 진행이 나온다', async ({ page, context }) => {
+  await context.grantPermissions(['notifications'])
+  await open(page, 'profile')
+  await page.getByLabel('하루 목표 (기록하거나 복습한 개수)').selectOption('3')
+  await page.getByLabel(/목표를 못 채운 날 알려 주기/).check()
+  await expect(page.getByLabel(/목표를 못 채운 날 알려 주기/)).toBeChecked()
+  await expect(page.getByText(/다음 알림: .*\(하루 목표\)/)).toBeVisible()
+  await expect(page.getByText('웹에서는 이 탭이나 설치한 웹앱이 열려 있을 때만', { exact: false })).toBeVisible()
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('reminders')))).toMatchObject({ goal: 3, goalReminder: true })
+
+  await open(page, 'home')
+  await expect(page.locator('.goal-progress')).toContainText('오늘 목표 0 / 3')
+  await expect(page.getByRole('progressbar', { name: '오늘 목표' })).toHaveAttribute('aria-valuenow', '0')
+})
+
+test('메뉴에서 꾸러미로 바로 간다', async ({ page }) => {
+  await open(page, 'home')
+  await page.getByRole('navigation').getByRole('button', { name: '꾸러미' }).click()
+  await expect(page.getByRole('heading', { name: '표현 꾸러미', level: 1 })).toBeVisible()
+  await expect(page.getByRole('navigation').getByRole('button', { name: '꾸러미' })).toHaveAttribute('aria-current', 'page')
 })
 
 test('빈칸 채우기: 예문이 있는 단어만 내고, 예문 속 형태로 답한다', async ({ page }) => {
@@ -635,7 +724,130 @@ test('보안 헤더와 메타 태그', async ({ page, request }) => {
   await expect(page).toHaveTitle('홈 · Daily English')
 })
 
+// 테스트용 가짜 로그인 세션. 값은 Supabase 클라이언트가 브라우저 저장소에서 읽는 형식이다.
+async function fakeSession(page) {
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      'sb-example-auth-token',
+      JSON.stringify({
+        access_token: 'test-access',
+        refresh_token: 'test-refresh',
+        token_type: 'bearer',
+        expires_in: 3600,
+        expires_at: Math.floor(Date.now() / 1000) + 3600,
+        user: {
+          id: '11111111-1111-4111-8111-111111111111',
+          aud: 'authenticated',
+          role: 'authenticated',
+          email: 'learner@example.com',
+          user_metadata: { nickname: 'Tester' },
+        },
+      }),
+    )
+  })
+  await page.route('https://example.supabase.co/auth/v1/**', (route) => route.fulfill({ json: {} }))
+}
+
+// 신고·관리자 기능용 가짜 Supabase. 받은 요청을 기억해 두고, 표마다 돌려줄 행을 정한다.
+async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
+  const reports = []
+  const patches = []
+  await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
+    const request = route.request()
+    const url = request.url()
+    if (url.includes('/rpc/is_admin')) return route.fulfill({ json: admin })
+    if (url.includes('/client_errors')) return route.fulfill(request.method() === 'GET' ? { json: errors } : { status: 201, json: [] })
+    if (url.includes('/reports')) {
+      if (request.method() === 'POST') {
+        const row = request.postDataJSON()
+        reports.unshift({ id: reports.length + 1, created_at: new Date().toISOString(), status: 'new', admin_reply: '', ...row })
+        return route.fulfill({ status: 201, json: [] })
+      }
+      if (request.method() === 'PATCH') {
+        patches.push(request.postDataJSON())
+        Object.assign(reports[0], request.postDataJSON())
+        return route.fulfill({ status: 204, body: '' })
+      }
+      return route.fulfill({ json: reports })
+    }
+    return route.fulfill(request.method() === 'GET' ? { json: [] } : { status: 201, json: [] })
+  })
+  return { reports, patches }
+}
+
 test.describe('로그인 화면', () => {
+  test('로그인한 사용자는 문제를 신고하고, 보낸 신고와 상태를 프로필에서 본다', async ({ page }) => {
+    await fakeSession(page)
+    const server = await fakeReportServer(page)
+    await page.goto(`${AUTH_URL}#profile`)
+    await page.getByLabel('종류').selectOption('content')
+    await page.getByRole('button', { name: '보내기' }).click()
+    await expect(page.getByText('꼭 입력해 주세요.')).toBeVisible()
+    await page.getByLabel('내용').fill('tired의 예문 번역이 어색해요.')
+    await page.getByRole('button', { name: '보내기' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '보냈어요.' })).toBeVisible()
+    expect(server.reports[0]).toMatchObject({ kind: 'content', message: 'tired의 예문 번역이 어색해요.', platform: 'web' })
+    await expect(page.locator('.report-list')).toContainText('tired의 예문 번역이 어색해요.')
+    await expect(page.locator('.report-list .report-status')).toHaveText('접수')
+    await expect(page.getByRole('link', { name: '관리자 페이지' })).toHaveCount(0)
+  })
+
+  test('관리자는 관리자 페이지에서 신고를 보고 상태와 답변을 바로 고치고, 앱 오류를 묶어 본다', async ({ page }) => {
+    await fakeSession(page)
+    const errors = [
+      { created_at: '2026-11-19T01:00:00Z', source: 'window', message: 'TypeError: x is undefined', page: 'journal', version: '0.0.0', platform: 'android', count: 2 },
+      { created_at: '2026-11-19T02:00:00Z', source: 'window', message: 'TypeError: x is undefined', page: 'journal', version: '0.0.0', platform: 'web', count: 1 },
+    ]
+    const server = await fakeReportServer(page, { admin: true, errors })
+    server.reports.push({ id: 7, created_at: '2026-11-19T03:00:00Z', kind: 'bug', message: '복습 버튼이 안 눌려요', page: 'home', version: '0.0.0', platform: 'android', error_log: '', status: 'new', admin_reply: '' })
+
+    await page.goto(`${AUTH_URL}#profile`)
+    await page.getByRole('link', { name: '관리자 페이지' }).click()
+    await expect(page.getByRole('heading', { name: '관리자', level: 1 })).toBeVisible()
+    const item = page.locator('.admin-item').filter({ hasText: '복습 버튼이 안 눌려요' })
+    await item.getByLabel('상태').selectOption('fixed')
+    await item.getByLabel('답변').fill('다음 버전에서 고쳤어요.')
+    await item.getByRole('button', { name: '저장' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '신고를 고쳤어요.' })).toBeVisible()
+    expect(server.patches[0]).toEqual({ status: 'fixed', admin_reply: '다음 버전에서 고쳤어요.' })
+    await expect(item.locator('.report-status')).toHaveText('해결')
+
+    await page.getByRole('button', { name: '앱 오류' }).click()
+    await expect(page.locator('.admin-item')).toHaveCount(1)
+    await expect(page.locator('.admin-item')).toContainText('3번')
+    await expect(page.locator('.admin-item')).toContainText('android, web')
+
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+      .analyze()
+    expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
+  })
+
+  test('관리자가 아니면 관리자 페이지 내용을 볼 수 없다', async ({ page }) => {
+    await fakeSession(page)
+    await fakeReportServer(page, { admin: false })
+    await page.goto(`${AUTH_URL}#admin`)
+    await expect(page.getByText('관리자 계정만 볼 수 있는 페이지예요.')).toBeVisible()
+    await expect(page.locator('.admin-item')).toHaveCount(0)
+  })
+
+  test('처음 온 사람은 앱 소개를 보고 로그인 없이 써 볼 수 있고, 나중에 로그인하러 갈 수 있다', async ({ page }) => {
+    await page.goto(AUTH_URL)
+    await expect(page.getByRole('heading', { name: '오늘 내가 쓴 말이 내 단어장이 되는 영어 기록 앱' })).toBeVisible()
+    await page.getByRole('button', { name: '로그인 없이 먼저 써 보기' }).click()
+    await expect(page.locator('main h1')).toBeVisible()
+    await page.goto(`${AUTH_URL}#words`)
+    await page.getByLabel('단어 / 표현').fill('guest')
+    await page.getByLabel('뜻', { exact: true }).fill('손님')
+    await page.getByRole('button', { name: '저장하기' }).click()
+    await expect(page.locator('.record-row')).toContainText('guest')
+    expect(await page.evaluate(() => JSON.parse(localStorage.getItem('savedWords')).length)).toBe(1)
+
+    await page.goto(`${AUTH_URL}#profile`)
+    await page.getByRole('button', { name: '로그인하고 기록 지키기' }).click()
+    await expect(page.getByRole('heading', { name: 'Welcome back.' })).toBeVisible()
+  })
+
   test('접근성, 입력 오류, 비밀번호 보기', async ({ page }, info) => {
     await page.goto(AUTH_URL)
     await expect(page.getByRole('heading', { name: 'Welcome back.' })).toBeVisible()
@@ -705,27 +917,7 @@ test.describe('로그인 화면', () => {
       if (request.method() === 'POST') posted.push(request.postDataJSON())
       return route.fulfill({ status: 201, json: [] })
     })
-    await page.route('https://example.supabase.co/auth/v1/**', (route) => route.fulfill({ json: {} }))
-    // 테스트용 가짜 로그인 세션. 값은 Supabase 클라이언트가 브라우저 저장소에서 읽는 형식이다.
-    await page.addInitScript(() => {
-      localStorage.setItem(
-        'sb-example-auth-token',
-        JSON.stringify({
-          access_token: 'test-access',
-          refresh_token: 'test-refresh',
-          token_type: 'bearer',
-          expires_in: 3600,
-          expires_at: Math.floor(Date.now() / 1000) + 3600,
-          user: {
-            id: '11111111-1111-4111-8111-111111111111',
-            aud: 'authenticated',
-            role: 'authenticated',
-            email: 'learner@example.com',
-            user_metadata: { nickname: 'Tester' },
-          },
-        }),
-      )
-    })
+    await fakeSession(page)
     await page.goto(`${AUTH_URL}#words`)
     await expect(page.getByRole('heading', { name: '단어장', level: 1 })).toBeVisible()
 

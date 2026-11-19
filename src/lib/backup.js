@@ -9,6 +9,9 @@ import { fromLegacy } from './legacy'
 import { MOOD_IDS } from './moods'
 
 export const TYPES = ['word', 'expression', 'chat', 'journal']
+/** 마지막으로 백업 파일을 받은 때(프로필, 홈의 백업 안내) */
+export const LAST_EXPORT_KEY = 'lastExportAt'
+
 export const MAX_FILE_BYTES = 10 * 1024 * 1024
 const MAX_ITEMS = 20000
 

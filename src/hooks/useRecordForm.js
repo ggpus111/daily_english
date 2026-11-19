@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useApp } from '../context'
 import { errorMessage } from '../lib/errors'
-import { session } from '../lib/storage'
+import { local } from '../lib/storage'
 
 const trimStrings = (form) =>
   Object.fromEntries(
@@ -15,7 +15,8 @@ const trimStrings = (form) =>
 export function useRecordForm({ type, emptyForm, required, draftKey }) {
   const { t, notify, add, update, remove, restore } = useApp()
   const [form, setForm] = useState(() => {
-    const draft = draftKey ? session.getJson(draftKey) : null
+    // 쓰던 내용은 기기 저장소에 둔다. 안드로이드가 다른 앱에 간 사이 앱을 꺼도(메모리 부족) 남아 있게.
+    const draft = draftKey ? local.getJson(draftKey) : null
     return draft ? { ...emptyForm, ...draft } : emptyForm
   })
   const [errors, setErrors] = useState({})
@@ -26,7 +27,7 @@ export function useRecordForm({ type, emptyForm, required, draftKey }) {
   const listRef = useRef(null)
 
   useEffect(() => {
-    if (draftKey && !editingId) session.set(draftKey, JSON.stringify(form))
+    if (draftKey && !editingId) local.set(draftKey, JSON.stringify(form))
   }, [draftKey, editingId, form])
 
   const setField = useCallback((field, value) => {
@@ -38,7 +39,7 @@ export function useRecordForm({ type, emptyForm, required, draftKey }) {
     setForm(emptyForm)
     setErrors({})
     setEditingId(null)
-    if (draftKey) session.remove(draftKey)
+    if (draftKey) local.remove(draftKey)
   }, [draftKey, emptyForm])
 
   async function submit(event) {

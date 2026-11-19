@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import { recordError } from '../lib/errorLog'
 
 export default class ErrorBoundary extends Component {
   state = { failed: false }
@@ -9,6 +10,7 @@ export default class ErrorBoundary extends Component {
 
   componentDidCatch(error, info) {
     console.error('Unhandled app error:', error, info.componentStack)
+    recordError(error, 'react')
   }
 
   render() {

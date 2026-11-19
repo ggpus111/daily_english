@@ -1,14 +1,16 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ErrorBoundary from './components/ErrorBoundary'
 import Icon from './components/Icon'
 import Logo from './components/Logo'
 import { AppContext } from './context'
+import { useErrorReporting } from './hooks/useErrorReporting'
 import { useOnline } from './hooks/useOnline'
+import { useReminders } from './hooks/useReminders'
 import { errorMessage } from './lib/errors'
 import { createTranslator } from './lib/i18n'
 import { initNativeAuth } from './lib/native'
 import { JOURNAL_DRAFT_KEY, STORAGE_ERROR, useRecords } from './lib/records'
-import { local, session as sessionStore } from './lib/storage'
+import { local } from './lib/storage'
 import { supabase } from './lib/supabase'
 import Auth from './pages/Auth'
 import Chats from './pages/Chats'
@@ -16,17 +18,20 @@ import Entries from './pages/Entries'
 import Home from './pages/Home'
 import Journal from './pages/Journal'
 import Packs from './pages/Packs'
-import Privacy from './pages/Privacy'
-import Pro from './pages/Pro'
 import Profile from './pages/Profile'
 
-const NAV = ['home', 'words', 'expressions', 'chats', 'journal', 'profile']
+// 자주 열지 않는 화면은 처음 열 때 따로 불러와 첫 화면 코드를 줄인다.
+const Admin = lazy(() => import('./pages/Admin'))
+const Privacy = lazy(() => import('./pages/Privacy'))
+const Pro = lazy(() => import('./pages/Pro'))
+
+const NAV = ['home', 'words', 'expressions', 'packs', 'chats', 'journal', 'profile']
 const TOAST_MS = 5000
 const TOAST_ACTION_MS = 8000
 
 function readPage() {
   const page = window.location.hash.slice(1)
-  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words'].includes(page) ? page : 'home'
+  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin'].includes(page) ? page : 'home'
 }
 
 function usePage() {
@@ -77,7 +82,9 @@ function useToast() {
   return [toast, notify, dismiss]
 }
 
-function Shell({ page, go, user, languages, t, notify }) {
+export const GUEST_KEY = 'guestMode'
+
+function Shell({ page, go, user, languages, t, notify, onLogin }) {
   const {
     records,
     loading,
@@ -93,6 +100,9 @@ function Shell({ page, go, user, languages, t, notify }) {
   } = useRecords(user)
   const online = useOnline()
   const wasOnline = useRef(online)
+
+  useErrorReporting(user)
+  useReminders({ records, loading, t, go })
 
   // 연결이 돌아오면 못 올린 변경을 올리고, 다른 기기에서 바뀐 것까지 다시 불러온다.
   useEffect(() => {
@@ -134,6 +144,7 @@ function Shell({ page, go, user, languages, t, notify }) {
       pendingCount,
       removeAll,
       go,
+      onLogin,
       ...languages,
     }),
     [
@@ -150,6 +161,7 @@ function Shell({ page, go, user, languages, t, notify }) {
       pendingCount,
       removeAll,
       go,
+      onLogin,
       languages,
     ],
   )
@@ -162,6 +174,7 @@ function Shell({ page, go, user, languages, t, notify }) {
     journal: <Journal />,
     profile: <Profile />,
     pro: <Pro />,
+    admin: <Admin />,
     packs: <Packs key="expressions" mode="expressions" />,
     'packs-words': <Packs key="words" mode="words" />,
   }
@@ -187,11 +200,11 @@ function Shell({ page, go, user, languages, t, notify }) {
                 key={id}
                 className="nav-item"
                 data-page={id}
-                aria-current={page === id ? 'page' : undefined}
+                aria-current={page === id || (id === 'packs' && page === 'packs-words') ? 'page' : undefined}
                 onClick={() => go(id)}
               >
                 <Icon name={id} />
-                <span>{t(id)}</span>
+                <span>{t(id === 'packs' ? 'navPacks' : id)}</span>
               </button>
             ))}
             <div className="sidebar-user">
@@ -230,7 +243,15 @@ function Shell({ page, go, user, languages, t, notify }) {
                 {t('loadingRecords')}
               </p>
             ) : (
-              pages[page]
+              <Suspense
+                fallback={
+                  <p className="empty-state" role="status">
+                    {t('loadingPage')}
+                  </p>
+                }
+              >
+                {pages[page]}
+              </Suspense>
             )}
           </main>
         </div>
@@ -242,6 +263,8 @@ function Shell({ page, go, user, languages, t, notify }) {
 export default function App() {
   const [session, setSession] = useState(supabase ? undefined : null)
   const [recovering, setRecovering] = useState(false)
+  // 로그인 없이 둘러보기(웹 첫 방문). 기록은 이 기기에만 남는다.
+  const [guest, setGuest] = useState(() => local.get(GUEST_KEY) === '1')
   const [nativeLang, setNativeLang] = useLanguageSetting('nativeLang', 'ko')
   const [learningLang, setLearningLang] = useLanguageSetting('learningLang', 'en')
   const [page, go] = usePage()
@@ -271,23 +294,40 @@ export default function App() {
     const { data } = supabase.auth.onAuthStateChange((event, next) => {
       setSession(next)
       if (event === 'PASSWORD_RECOVERY') setRecovering(true)
-      if (event === 'SIGNED_OUT') sessionStore.remove(JOURNAL_DRAFT_KEY)
+      if (event === 'SIGNED_IN') {
+        local.remove(GUEST_KEY)
+        setGuest(false)
+      }
+      if (event === 'SIGNED_OUT') local.remove(JOURNAL_DRAFT_KEY)
     })
     return () => data.subscription.unsubscribe()
   }, [])
 
   let content
   if (page === 'privacy') {
-    content = <Privacy t={t} />
+    content = (
+      <Suspense fallback={null}>
+        <Privacy t={t} />
+      </Suspense>
+    )
   } else if (session === undefined) {
     content = (
       <p className="auth-loading" role="status">
         {t('loadingAuth')}
       </p>
     )
-  } else if (supabase && (!session || recovering)) {
+  } else if (supabase && (recovering || (!session && !guest))) {
     content = (
-      <Auth t={t} notify={notify} recovering={recovering} onRecovered={() => setRecovering(false)} />
+      <Auth
+        t={t}
+        notify={notify}
+        recovering={recovering}
+        onRecovered={() => setRecovering(false)}
+        onGuest={() => {
+          local.set(GUEST_KEY, '1')
+          setGuest(true)
+        }}
+      />
     )
   } else {
     content = (
@@ -299,6 +339,10 @@ export default function App() {
         languages={languages}
         t={t}
         notify={notify}
+        onLogin={() => {
+          local.remove(GUEST_KEY)
+          setGuest(false)
+        }}
       />
     )
   }
