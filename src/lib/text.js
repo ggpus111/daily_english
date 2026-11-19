@@ -1,5 +1,13 @@
 const normalizeSearch = (value) => String(value ?? '').toLowerCase()
 
+/** 같은 말인지 비교할 때 쓰는 형태: 소문자, 곧은 따옴표, 문장 부호와 앞뒤 공백 없음 */
+export const normalizeText = (text) =>
+  String(text ?? '')
+    .toLowerCase()
+    .replace(/[’']/g, "'")
+    .replace(/[.!?,]/g, '')
+    .trim()
+
 export function matchesQuery(query, values) {
   const needle = normalizeSearch(query).trim()
   if (!needle) return true

@@ -1,16 +1,14 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ErrorBoundary from './components/ErrorBoundary'
 import Icon from './components/Icon'
 import Logo from './components/Logo'
 import { AppContext } from './context'
+import { useErrorReporting } from './hooks/useErrorReporting'
 import { useOnline } from './hooks/useOnline'
-import { REMINDERS_CHANGED } from './components/ReminderSettings'
-import { recordError, setErrorSender } from './lib/errorLog'
+import { useReminders } from './hooks/useReminders'
 import { errorMessage } from './lib/errors'
 import { createTranslator } from './lib/i18n'
 import { initNativeAuth } from './lib/native'
-import { onReminderTap, scheduleReminders } from './lib/notifications'
-import { readSettings } from './lib/reminders'
 import { JOURNAL_DRAFT_KEY, STORAGE_ERROR, useRecords } from './lib/records'
 import { local } from './lib/storage'
 import { supabase } from './lib/supabase'
@@ -20,9 +18,12 @@ import Entries from './pages/Entries'
 import Home from './pages/Home'
 import Journal from './pages/Journal'
 import Packs from './pages/Packs'
-import Privacy from './pages/Privacy'
-import Pro from './pages/Pro'
 import Profile from './pages/Profile'
+
+// 자주 열지 않는 화면은 처음 열 때 따로 불러와 첫 화면 코드를 줄인다.
+const Admin = lazy(() => import('./pages/Admin'))
+const Privacy = lazy(() => import('./pages/Privacy'))
+const Pro = lazy(() => import('./pages/Pro'))
 
 const NAV = ['home', 'words', 'expressions', 'packs', 'chats', 'journal', 'profile']
 const TOAST_MS = 5000
@@ -30,7 +31,7 @@ const TOAST_ACTION_MS = 8000
 
 function readPage() {
   const page = window.location.hash.slice(1)
-  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words'].includes(page) ? page : 'home'
+  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin'].includes(page) ? page : 'home'
 }
 
 function usePage() {
@@ -100,31 +101,8 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
   const online = useOnline()
   const wasOnline = useRef(online)
 
-  // 로그인했으면 앱 오류를 서버(client_errors)로도 보낸다. 기록 내용은 보내지 않는다(src/lib/errorLog.js).
-  useEffect(() => {
-    if (!supabase || !user) return undefined
-    setErrorSender(async ({ source, message, stack, page: errorPage, version, platform, online: wasOnline, count }) => {
-      const { error } = await supabase
-        .from('client_errors')
-        .insert({ source, message, stack, page: errorPage, version, platform, online: wasOnline, count })
-      if (error) throw error
-    })
-    return () => setErrorSender(null)
-  }, [user])
-
-  // 기록이 바뀌거나 알림 설정을 바꾸면 알림을 다시 예약한다(목표를 채우면 그날 남은 목표 알림은 빠진다).
-  useEffect(() => {
-    if (loading) return undefined
-    const plan = () => scheduleReminders(records, readSettings(), t).catch((error) => recordError(error, 'app'))
-    const timer = setTimeout(plan, 800)
-    window.addEventListener(REMINDERS_CHANGED, plan)
-    return () => {
-      clearTimeout(timer)
-      window.removeEventListener(REMINDERS_CHANGED, plan)
-    }
-  }, [records, loading, t])
-
-  useEffect(() => onReminderTap(go), [go])
+  useErrorReporting(user)
+  useReminders({ records, loading, t, go })
 
   // 연결이 돌아오면 못 올린 변경을 올리고, 다른 기기에서 바뀐 것까지 다시 불러온다.
   useEffect(() => {
@@ -196,6 +174,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     journal: <Journal />,
     profile: <Profile />,
     pro: <Pro />,
+    admin: <Admin />,
     packs: <Packs key="expressions" mode="expressions" />,
     'packs-words': <Packs key="words" mode="words" />,
   }
@@ -264,7 +243,15 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
                 {t('loadingRecords')}
               </p>
             ) : (
-              pages[page]
+              <Suspense
+                fallback={
+                  <p className="empty-state" role="status">
+                    {t('loadingPage')}
+                  </p>
+                }
+              >
+                {pages[page]}
+              </Suspense>
             )}
           </main>
         </div>
@@ -318,7 +305,11 @@ export default function App() {
 
   let content
   if (page === 'privacy') {
-    content = <Privacy t={t} />
+    content = (
+      <Suspense fallback={null}>
+        <Privacy t={t} />
+      </Suspense>
+    )
   } else if (session === undefined) {
     content = (
       <p className="auth-loading" role="status">

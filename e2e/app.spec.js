@@ -724,7 +724,113 @@ test('보안 헤더와 메타 태그', async ({ page, request }) => {
   await expect(page).toHaveTitle('홈 · Daily English')
 })
 
+// 테스트용 가짜 로그인 세션. 값은 Supabase 클라이언트가 브라우저 저장소에서 읽는 형식이다.
+async function fakeSession(page) {
+  await page.addInitScript(() => {
+    localStorage.setItem(
+      'sb-example-auth-token',
+      JSON.stringify({
+        access_token: 'test-access',
+        refresh_token: 'test-refresh',
+        token_type: 'bearer',
+        expires_in: 3600,
+        expires_at: Math.floor(Date.now() / 1000) + 3600,
+        user: {
+          id: '11111111-1111-4111-8111-111111111111',
+          aud: 'authenticated',
+          role: 'authenticated',
+          email: 'learner@example.com',
+          user_metadata: { nickname: 'Tester' },
+        },
+      }),
+    )
+  })
+  await page.route('https://example.supabase.co/auth/v1/**', (route) => route.fulfill({ json: {} }))
+}
+
+// 신고·관리자 기능용 가짜 Supabase. 받은 요청을 기억해 두고, 표마다 돌려줄 행을 정한다.
+async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
+  const reports = []
+  const patches = []
+  await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
+    const request = route.request()
+    const url = request.url()
+    if (url.includes('/rpc/is_admin')) return route.fulfill({ json: admin })
+    if (url.includes('/client_errors')) return route.fulfill(request.method() === 'GET' ? { json: errors } : { status: 201, json: [] })
+    if (url.includes('/reports')) {
+      if (request.method() === 'POST') {
+        const row = request.postDataJSON()
+        reports.unshift({ id: reports.length + 1, created_at: new Date().toISOString(), status: 'new', admin_reply: '', ...row })
+        return route.fulfill({ status: 201, json: [] })
+      }
+      if (request.method() === 'PATCH') {
+        patches.push(request.postDataJSON())
+        Object.assign(reports[0], request.postDataJSON())
+        return route.fulfill({ status: 204, body: '' })
+      }
+      return route.fulfill({ json: reports })
+    }
+    return route.fulfill(request.method() === 'GET' ? { json: [] } : { status: 201, json: [] })
+  })
+  return { reports, patches }
+}
+
 test.describe('로그인 화면', () => {
+  test('로그인한 사용자는 문제를 신고하고, 보낸 신고와 상태를 프로필에서 본다', async ({ page }) => {
+    await fakeSession(page)
+    const server = await fakeReportServer(page)
+    await page.goto(`${AUTH_URL}#profile`)
+    await page.getByLabel('종류').selectOption('content')
+    await page.getByRole('button', { name: '보내기' }).click()
+    await expect(page.getByText('꼭 입력해 주세요.')).toBeVisible()
+    await page.getByLabel('내용').fill('tired의 예문 번역이 어색해요.')
+    await page.getByRole('button', { name: '보내기' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '보냈어요.' })).toBeVisible()
+    expect(server.reports[0]).toMatchObject({ kind: 'content', message: 'tired의 예문 번역이 어색해요.', platform: 'web' })
+    await expect(page.locator('.report-list')).toContainText('tired의 예문 번역이 어색해요.')
+    await expect(page.locator('.report-list .report-status')).toHaveText('접수')
+    await expect(page.getByRole('link', { name: '관리자 페이지' })).toHaveCount(0)
+  })
+
+  test('관리자는 관리자 페이지에서 신고를 보고 상태와 답변을 바로 고치고, 앱 오류를 묶어 본다', async ({ page }) => {
+    await fakeSession(page)
+    const errors = [
+      { created_at: '2026-11-19T01:00:00Z', source: 'window', message: 'TypeError: x is undefined', page: 'journal', version: '0.0.0', platform: 'android', count: 2 },
+      { created_at: '2026-11-19T02:00:00Z', source: 'window', message: 'TypeError: x is undefined', page: 'journal', version: '0.0.0', platform: 'web', count: 1 },
+    ]
+    const server = await fakeReportServer(page, { admin: true, errors })
+    server.reports.push({ id: 7, created_at: '2026-11-19T03:00:00Z', kind: 'bug', message: '복습 버튼이 안 눌려요', page: 'home', version: '0.0.0', platform: 'android', error_log: '', status: 'new', admin_reply: '' })
+
+    await page.goto(`${AUTH_URL}#profile`)
+    await page.getByRole('link', { name: '관리자 페이지' }).click()
+    await expect(page.getByRole('heading', { name: '관리자', level: 1 })).toBeVisible()
+    const item = page.locator('.admin-item').filter({ hasText: '복습 버튼이 안 눌려요' })
+    await item.getByLabel('상태').selectOption('fixed')
+    await item.getByLabel('답변').fill('다음 버전에서 고쳤어요.')
+    await item.getByRole('button', { name: '저장' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '신고를 고쳤어요.' })).toBeVisible()
+    expect(server.patches[0]).toEqual({ status: 'fixed', admin_reply: '다음 버전에서 고쳤어요.' })
+    await expect(item.locator('.report-status')).toHaveText('해결')
+
+    await page.getByRole('button', { name: '앱 오류' }).click()
+    await expect(page.locator('.admin-item')).toHaveCount(1)
+    await expect(page.locator('.admin-item')).toContainText('3번')
+    await expect(page.locator('.admin-item')).toContainText('android, web')
+
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+      .analyze()
+    expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
+  })
+
+  test('관리자가 아니면 관리자 페이지 내용을 볼 수 없다', async ({ page }) => {
+    await fakeSession(page)
+    await fakeReportServer(page, { admin: false })
+    await page.goto(`${AUTH_URL}#admin`)
+    await expect(page.getByText('관리자 계정만 볼 수 있는 페이지예요.')).toBeVisible()
+    await expect(page.locator('.admin-item')).toHaveCount(0)
+  })
+
   test('처음 온 사람은 앱 소개를 보고 로그인 없이 써 볼 수 있고, 나중에 로그인하러 갈 수 있다', async ({ page }) => {
     await page.goto(AUTH_URL)
     await expect(page.getByRole('heading', { name: '오늘 내가 쓴 말이 내 단어장이 되는 영어 기록 앱' })).toBeVisible()
@@ -811,27 +917,7 @@ test.describe('로그인 화면', () => {
       if (request.method() === 'POST') posted.push(request.postDataJSON())
       return route.fulfill({ status: 201, json: [] })
     })
-    await page.route('https://example.supabase.co/auth/v1/**', (route) => route.fulfill({ json: {} }))
-    // 테스트용 가짜 로그인 세션. 값은 Supabase 클라이언트가 브라우저 저장소에서 읽는 형식이다.
-    await page.addInitScript(() => {
-      localStorage.setItem(
-        'sb-example-auth-token',
-        JSON.stringify({
-          access_token: 'test-access',
-          refresh_token: 'test-refresh',
-          token_type: 'bearer',
-          expires_in: 3600,
-          expires_at: Math.floor(Date.now() / 1000) + 3600,
-          user: {
-            id: '11111111-1111-4111-8111-111111111111',
-            aud: 'authenticated',
-            role: 'authenticated',
-            email: 'learner@example.com',
-            user_metadata: { nickname: 'Tester' },
-          },
-        }),
-      )
-    })
+    await fakeSession(page)
     await page.goto(`${AUTH_URL}#words`)
     await expect(page.getByRole('heading', { name: '단어장', level: 1 })).toBeVisible()
 

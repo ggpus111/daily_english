@@ -52,6 +52,12 @@ export default function ErrorReport() {
             <button className="soft-button" onClick={copy}>
               {t('errorLogCopy')}
             </button>
+            <button
+              className="text-button"
+              onClick={() => document.getElementById('report')?.scrollIntoView({ behavior: 'smooth', block: 'start' })}
+            >
+              {t('errorLogReport')}
+            </button>
             <button className="text-button" onClick={clear}>
               {t('errorLogClear')}
             </button>

@@ -52,7 +52,7 @@
   --sat: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
   --sab: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
   --tabbar-height: 72px;
-  --font: 'Pretendard Variable', Pretendard, 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  --font: 'Pretendard Variable', Pretendard, 'Noto Sans KR', 'Noto Sans CJK KR', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, Roboto, sans-serif;
 }
 
 /* 어두운 테마: 프로필에서 고르거나(data-theme), "시스템 설정 따르기"면 기기 설정을 따른다. */
@@ -1815,6 +1815,101 @@ textarea {
 
 .paste-button {
   justify-self: start;
+}
+
+/* 문제 신고와 관리자 */
+.report-list,
+.admin-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.report-list li,
+.admin-item {
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.report-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 10px;
+}
+
+.report-status {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.report-status.status-checking {
+  background: var(--butter);
+  color: var(--card-ink);
+}
+
+.report-status.status-fixed {
+  background: var(--sage);
+  color: var(--card-ink);
+}
+
+.report-status.status-wontfix {
+  background: var(--lilac);
+  color: var(--card-ink);
+}
+
+.report-reply {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: var(--warm);
+}
+
+.admin-message {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.admin-log {
+  max-height: 240px;
+  overflow: auto;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--warm);
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+}
+
+.admin-edit {
+  display: grid;
+  grid-template-columns: 160px 1fr auto;
+  align-items: end;
+  gap: 10px;
+}
+
+.compact-field {
+  min-width: 140px;
+}
+
+.admin-link {
+  justify-self: start;
+}
+
+@media (width <= 820px) {
+  .admin-edit {
+    grid-template-columns: 1fr;
+  }
 }
 
 .check-row {

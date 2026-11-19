@@ -3,13 +3,8 @@
 import { dayKey } from './activity'
 import { findPhrase } from './blank'
 import { moodOf } from './moods'
+import { normalizeText } from './text'
 
-const normalize = (text) =>
-  String(text ?? '')
-    .toLowerCase()
-    .replace(/[’']/g, "'")
-    .replace(/[.!?,]/g, '')
-    .trim()
 
 /** 문장에 들어 있는 내 단어·표현을 문장에 나온 순서대로, 같은 말은 한 번만 돌려준다. */
 export function usedEntries(sentence, entries) {
@@ -17,7 +12,7 @@ export function usedEntries(sentence, entries) {
   const seen = new Set()
   const found = []
   for (const entry of entries) {
-    const key = normalize(entry.text)
+    const key = normalizeText(entry.text)
     if (!key || seen.has(key)) continue
     const match = findPhrase(entry.text, sentence)
     if (!match) continue
@@ -60,7 +55,7 @@ export function weeklyRecap(records, today = new Date()) {
   const seen = new Set()
   for (const journal of [...journals].reverse()) {
     for (const entry of usedEntries(journal.translation, myEntries)) {
-      const key = normalize(entry.text)
+      const key = normalizeText(entry.text)
       if (seen.has(key)) continue
       seen.add(key)
       used.push(entry.text)

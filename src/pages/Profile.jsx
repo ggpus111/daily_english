@@ -1,11 +1,13 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import DeleteButton from '../components/DeleteButton'
 import ErrorReport from '../components/ErrorReport'
 import ReminderSettings from '../components/ReminderSettings'
+import ReportForm from '../components/ReportForm'
+import { checkAdmin } from '../lib/reports'
 import Field from '../components/Field'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
-import { MAX_FILE_BYTES, parseBackup, planImport } from '../lib/backup'
+import { LAST_EXPORT_KEY, MAX_FILE_BYTES, parseBackup, planImport } from '../lib/backup'
 import { errorMessage } from '../lib/errors'
 import { LANGUAGES, languageName } from '../lib/i18n'
 import { shareJsonFile } from '../lib/native'
@@ -15,7 +17,6 @@ import { local } from '../lib/storage'
 import { THEMES, getTheme, saveTheme } from '../lib/theme'
 import { supabase } from '../lib/supabase'
 
-const LAST_EXPORT_KEY = 'lastExportAt'
 
 // 웹은 파일로 내려받고, 앱은 공유 창을 띄워 저장할 곳을 고르게 한다.
 async function exportJson(records) {
@@ -100,6 +101,11 @@ export default function Profile() {
   }
 
   const [lastExport, setLastExport] = useState(() => local.get(LAST_EXPORT_KEY))
+  // 관리자 계정이면 관리자 페이지로 가는 링크를 보여 준다(권한은 서버가 다시 확인한다).
+  const [isAdmin, setIsAdmin] = useState(false)
+  useEffect(() => {
+    if (supabase && user) checkAdmin().then(setIsAdmin)
+  }, [user])
   const dateFormat = new Intl.DateTimeFormat(nativeLang === 'ko' ? 'ko-KR' : 'en-US', {
     dateStyle: 'long',
   })
@@ -277,7 +283,15 @@ export default function Profile() {
 
         <ReminderSettings />
 
+        <ReportForm />
+
         <ErrorReport />
+
+        {isAdmin && (
+          <a className="inline-link admin-link" href="#admin">
+            {t('adminLink')}
+          </a>
+        )}
       </div>
     </>
   )

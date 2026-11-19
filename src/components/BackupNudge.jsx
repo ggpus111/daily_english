@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useApp } from '../context'
+import { LAST_EXPORT_KEY } from '../lib/backup'
 import { local } from '../lib/storage'
 import { supabase } from '../lib/supabase'
 
-const LAST_EXPORT_KEY = 'lastExportAt'
 const DISMISSED_KEY = 'backupNudgeDismissedAt'
 const MIN_RECORDS = 10
 const QUIET_DAYS = 14
