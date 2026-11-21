@@ -2839,3 +2839,25 @@ h2:focus {
   }
 
 }
+
+/* 관리자: 꾸러미 고치기 */
+.pack-fix-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pack-fix-row .report-status {
+  margin-left: 6px;
+}
+
+.pack-fix-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.pack-fix-form textarea {
+  resize: vertical;
+}

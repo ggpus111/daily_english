@@ -1,4 +1,4 @@
-const SECTIONS = ['collect', 'storage', 'transfer', 'errors', 'reports', 'cookies', 'rights']
+const SECTIONS = ['collect', 'storage', 'transfer', 'errors', 'reports', 'push', 'cookies', 'rights']
 const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL
 
 export default function Privacy({ t }) {

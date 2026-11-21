@@ -4,7 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 
 export default [
-  { ignores: ['dist', 'dist-auth', 'dev-dist', 'test-results', 'playwright-report', 'e2e-shots', 'analysis/.venv', 'android'] },
+  { ignores: ['dist', 'dist-auth', 'dev-dist', 'test-results', 'android-test-results', 'playwright-report', 'e2e-shots', 'analysis/.venv', 'android'] },
   js.configs.recommended,
   {
     files: ['src/**/*.{js,jsx}'],
@@ -21,6 +21,10 @@ export default [
   {
     files: ['build/**', '*.config.js'],
     languageOptions: { globals: globals.node },
+  },
+  {
+    files: ['public/**/*-sw.js'],
+    languageOptions: { globals: globals.serviceworker },
   },
   {
     files: ['e2e/**', 'scripts/**'],

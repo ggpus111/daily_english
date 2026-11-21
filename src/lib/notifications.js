@@ -1,9 +1,10 @@
-// 알림 보내기: 안드로이드 앱은 휴대폰 알림(로컬 알림)으로 미리 예약하고,
-// 웹은 이 탭(또는 설치한 웹앱)이 열려 있는 동안 브라우저 알림으로 보낸다.
-// 웹에서 브라우저를 닫아도 오게 하려면 푸시 서버가 따로 필요하다(지금은 없음, 운영비 0원 원칙).
+// 알림 보내기: 안드로이드 앱은 휴대폰 알림(로컬 알림)으로 미리 예약한다.
+// 웹은 로그인했고 푸시를 쓸 수 있으면 서버 대기열에 올려 브라우저를 닫아도 오게 하고(webPush.js),
+// 아니면 이 탭(또는 설치한 웹앱)이 열려 있는 동안 브라우저 알림으로 보낸다.
 import { LocalNotifications } from '@capacitor/local-notifications'
 import { isNative } from './platform'
 import { planReminders, reminderText } from './reminders'
+import { syncWebPush, webPushAvailable } from './webPush'
 
 const WEB_WINDOW_MS = 24 * 60 * 60 * 1000
 let webTimers = []
@@ -30,8 +31,11 @@ async function showWebNotification(item, t) {
   else new Notification(title, options)
 }
 
-/** 지금 기록과 설정으로 알림을 다시 예약한다. 앞서 예약한 것은 모두 지우고 새로 넣는다. */
-export async function scheduleReminders(records, settings, t, now = new Date()) {
+/**
+ * 지금 기록과 설정으로 알림을 다시 예약한다. 앞서 예약한 것은 모두 지우고 새로 넣는다.
+ * signedIn이면(웹) 서버 대기열로 보내 브라우저를 닫아도 오게 한다.
+ */
+export async function scheduleReminders(records, settings, t, { now = new Date(), signedIn = false } = {}) {
   const plan = planReminders(records, settings, now)
 
   if (isNative) {
@@ -51,7 +55,13 @@ export async function scheduleReminders(records, settings, t, now = new Date()) 
 
   webTimers.forEach(clearTimeout)
   webTimers = []
-  if ((await notificationPermission()) !== 'granted') return plan
+  const granted = (await notificationPermission()) === 'granted'
+  if (signedIn && webPushAvailable()) {
+    // 서버가 보내므로 이 탭에서는 따로 띄우지 않는다(두 번 오지 않게). 권한이 없으면 대기열만 비운다.
+    await syncWebPush(granted ? plan : [], t, now)
+    return plan
+  }
+  if (!granted) return plan
   for (const item of plan) {
     const delay = item.at.getTime() - now.getTime()
     if (delay > 0 && delay <= WEB_WINDOW_MS) {

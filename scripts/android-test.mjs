@@ -8,7 +8,8 @@
 //       npm run test:android -- --avd Pixel_10_Pro_XL
 //       npm run test:android -- --window     에뮬레이터 창을 띄워서 보기(기본은 창 없이)
 //       npm run test:android -- --keep       끝나도 에뮬레이터를 켜 둠
-// 결과: test-results/android/ 에 화면(png)과 요약(summary.json)
+// 결과: android-test-results/ 에 화면(png)과 요약(summary.json)
+//       (브라우저 테스트가 실행될 때마다 test-results를 통째로 지워서 따로 둔다)
 //
 // 가볍게 돌리기: 메모리 8GB 컴퓨터에서도 돌도록 빌드 도구(Gradle)를 빌드 직후 끄고, 에뮬레이터는 창·소리 없이
 // 메모리 2GB·코어 2개로 켜고, 화면을 720px 폭(같은 dp라 화면 배치는 그대로)으로 낮추고, 끝나면 끈다.
@@ -23,7 +24,7 @@ import { _android, chromium, expect } from '@playwright/test'
 const APP_ID = 'com.dailyenglish.app'
 const PORT = 9333
 const ROOT = new URL('..', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')
-const OUT = join(ROOT, 'test-results', 'android')
+const OUT = join(ROOT, 'android-test-results')
 const isWindows = process.platform === 'win32'
 const SDK = process.env.ANDROID_HOME ?? (isWindows ? join(process.env.LOCALAPPDATA ?? '', 'Android', 'Sdk') : join(process.env.HOME ?? '', 'Android', 'Sdk'))
 const ADB = join(SDK, 'platform-tools', isWindows ? 'adb.exe' : 'adb')
@@ -38,7 +39,16 @@ const LIGHT_AVD = 'Light_API_35'
 const LIGHT_SIZE = { width: 720, height: 1600, density: 280 } // 1080×2400·420dpi와 같은 411dp 폭
 
 const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
-const adb = (...params) => execFileSync(ADB, params, { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }).trim()
+// 컴퓨터 메모리가 모자라 에뮬레이터가 멈추면 adb 명령도 끝나지 않는다. 시간 제한을 둬서 테스트 전체가 멈추지 않게 한다.
+const ADB_TIMEOUT_MS = 60_000
+const SCENARIO_TIMEOUT_MS = 120_000
+const adb = (...params) =>
+  execFileSync(ADB, params, {
+    encoding: 'utf8',
+    maxBuffer: 64 * 1024 * 1024,
+    stdio: ['ignore', 'pipe', 'pipe'],
+    timeout: params[0] === 'install' || params[0] === 'wait-for-device' ? 5 * ADB_TIMEOUT_MS : ADB_TIMEOUT_MS,
+  }).trim()
 // pidof처럼 "없음"을 실패 코드로 알려 주는 명령은 빈 문자열로 받는다.
 const adbQuiet = (...params) => {
   try {
@@ -64,7 +74,7 @@ function build() {
 
 // 화면(접근성 트리)에서 글자를 찾아 그 가운데를 누른다. 디버거 없이 실제 사용자처럼 조작할 때 쓴다.
 // 화면이 바뀌는 중에는 접근성 트리를 못 읽기도 해서 몇 번 다시 시도한다.
-async function tapText(text, tries = 5) {
+async function tapText(text, tries = 10) {
   for (let attempt = 0; attempt < tries; attempt += 1) {
     const xml = adbQuiet('exec-out', 'uiautomator', 'dump', '/dev/tty')
     const node = xml.split('<node').find((part) => part.includes(`text="${text}"`) || part.includes(`content-desc="${text}"`))
@@ -81,6 +91,20 @@ async function tapText(text, tries = 5) {
 
 // 이미 연결된 기기(휴대폰이나 켜 둔 에뮬레이터)가 있으면 그대로 쓰고, 없으면 가볍게 켠다.
 // 돌려주는 값: 이 스크립트가 에뮬레이터를 켰는지(그래야 끝나고 끄고 화면 크기를 되돌린다).
+/** 맨 앞 창 이름(예: 공유 창, 우리 앱) */
+function currentFocus() {
+  return (
+    adbQuiet('shell', 'dumpsys', 'window')
+      .split('\n')
+      .find((line) => line.includes('mCurrentFocus')) ?? ''
+  )
+}
+
+/** 지금 화면(접근성 트리)에 이 글자가 있는지 */
+function screenHas(text) {
+  return adbQuiet('exec-out', 'uiautomator', 'dump', '/dev/tty').includes(text)
+}
+
 async function ensureDevice() {
   if (adb('devices').split('\n').slice(1).some((line) => line.trim().endsWith('device'))) return false
   const avds = execFileSync(EMULATOR, ['-list-avds'], { encoding: 'utf8' }).trim().split(/\r?\n/).filter(Boolean)
@@ -92,8 +116,10 @@ async function ensureDevice() {
     console.log(`! 남은 메모리가 ${freeGb.toFixed(1)}GB예요. 에뮬레이터가 중간에 꺼질 수 있어요.`)
     console.log('  Android Studio, 크롬 탭, 개발 서버를 닫거나, USB로 휴대폰을 연결해서 돌려 보세요.')
   }
-  console.log(`▶ 에뮬레이터 켜기: ${avd} (메모리 ${EMULATOR_MEMORY_MB}MB${showWindow ? '' : ', 창 없이'})`)
-  const flags = ['-avd', avd, '-memory', String(EMULATOR_MEMORY_MB), '-cores', '2', '-no-boot-anim', '-no-audio', '-no-snapshot-save']
+  // 컴퓨터에 남은 메모리가 3GB보다 적으면 에뮬레이터 메모리를 1.5GB로 줄여 컴퓨터가 멈추지 않게 한다.
+  const memory = freeGb < 3 ? 1536 : EMULATOR_MEMORY_MB
+  console.log(`▶ 에뮬레이터 켜기: ${avd} (메모리 ${memory}MB${showWindow ? '' : ', 창 없이'})`)
+  const flags = ['-avd', avd, '-memory', String(memory), '-cores', '2', '-no-boot-anim', '-no-audio', '-no-snapshot-save']
   if (!showWindow) flags.push('-no-window')
   spawn(EMULATOR, flags, { detached: true, stdio: 'ignore' }).unref()
   adb('wait-for-device')
@@ -188,25 +214,6 @@ const scenarios = [
     },
   ],
   [
-    '이번 주 돌아보기를 공유 창으로 보낸다',
-    async (page) => {
-      await page.evaluate(() => (location.hash = 'home'))
-      await page.locator('.recap-save').click()
-      let focus = ''
-      for (let i = 0; i < 10 && !/chooser|intentresolver|resolver/i.test(focus); i += 1) {
-        await wait(700)
-        // 맨 앞 창(mCurrentFocus)이나 맨 앞 앱(mFocusedApp)이 공유 창이면 열린 것이다.
-        focus = adb('shell', 'dumpsys', 'window')
-          .split('\n')
-          .filter((line) => line.includes('mCurrentFocus') || line.includes('mFocusedApp'))
-          .join(' ')
-      }
-      expect(focus).toMatch(/chooser|intentresolver|resolver/i)
-      adb('shell', 'input', 'keyevent', 'KEYCODE_BACK')
-      await wait(800)
-    },
-  ],
-  [
     '휴대폰 뒤로 가기는 앞 화면으로 돌아간다',
     async (page) => {
       for (const hash of ['home', 'words', 'journal']) {
@@ -222,22 +229,57 @@ const scenarios = [
     '쓰던 일기는 앱이 꺼졌다 켜져도 남는다',
     async (page, { detach, reconnect }) => {
       await page.evaluate(() => (location.hash = 'journal'))
+      // 앞 화면에서 내려간 스크롤이 남아 있으면 입력칸이 화면 밖에 있어 터치할 수 없다.
+      await page.getByLabel('모국어로 작성하기').evaluate((element) => element.scrollIntoView({ block: 'center' }))
       await wait(800)
       // 디버거(CDP)를 붙인 동안 쓴 내용은 웹뷰가 디스크에 남기지 않는다(테스트 도구의 제약).
       // 그래서 디버거를 떼고 실제 터치와 키 입력으로 쓴다.
       await detach()
-      await tapText('모국어로 작성하기')
-      adb('shell', 'input', 'text', 'draft_kept')
-      await wait(1500)
+      // 느린 에뮬레이터는 키보드가 늦게 떠서 글자가 빠지기도 한다. 화면에 글자가 보일 때까지 한 번 더 시도한다.
+      for (let attempt = 0; attempt < 2 && !screenHas('draft_kept'); attempt += 1) {
+        await tapText('모국어로 작성하기')
+        await wait(1500)
+        adb('shell', 'input', 'text', 'draft_kept')
+        await wait(1500)
+      }
+      if (!screenHas('draft_kept')) throw new Error('입력칸에 글자가 들어가지 않았어요')
       // AI 채팅 앱으로 가듯 홈 화면으로 나간 뒤, 안드로이드가 메모리 부족으로 앱을 끄는 상황을 흉내 낸다.
+      // 웹뷰는 저장소 쓰기를 몇 초씩 모았다가 디스크에 쓰므로, 실제로 다른 앱에 다녀오는 정도(10초)는 기다린다.
       adb('shell', 'input', 'keyevent', 'KEYCODE_HOME')
-      await wait(5000)
+      await wait(10_000)
       adb('shell', 'am', 'kill', APP_ID)
       await wait(1500)
       const next = await reconnect()
       await next.evaluate(() => (location.hash = 'journal'))
       await expect(next.getByLabel('모국어로 작성하기')).toHaveValue('draft_kept')
       return next
+    },
+  ],
+  [
+    // 공유 창은 다른 앱(시스템)을 앞에 띄워 메모리가 빠듯하면 앱 상태가 흔들릴 수 있어서 맨 마지막에 한다.
+    '이번 주 돌아보기를 공유 창으로 보낸다',
+    async (page) => {
+      await page.evaluate(() => (location.hash = 'home'))
+      const button = page.locator('.recap-save')
+      await expect(button).toBeEnabled({ timeout: 20_000 })
+      // 홈 맨 아래라 아래 메뉴 막대에 가리지 않게 화면 가운데로 올린 뒤 누른다.
+      await button.evaluate((element) => element.scrollIntoView({ block: 'center' }))
+      await button.click({ timeout: 20_000 })
+      let focus = ''
+      for (let i = 0; i < 20 && !/chooser|intentresolver|resolver/i.test(focus); i += 1) {
+        await wait(700)
+        // 맨 앞 창(mCurrentFocus)이나 맨 앞 앱(mFocusedApp)이 공유 창이면 열린 것이다.
+        focus = adb('shell', 'dumpsys', 'window')
+          .split('\n')
+          .filter((line) => line.includes('mCurrentFocus') || line.includes('mFocusedApp'))
+          .join(' ')
+      }
+      expect(focus).toMatch(/chooser|intentresolver|resolver/i)
+      // 공유 창이 맨 앞에 있을 때만 뒤로 가기를 누른다(이미 닫혔는데 누르면 앱까지 닫힌다).
+      for (let i = 0; i < 3 && /chooser|intentresolver|resolver/i.test(currentFocus()); i += 1) {
+        adb('shell', 'input', 'keyevent', 'KEYCODE_BACK')
+        await wait(1000)
+      }
     },
   ],
 ]
@@ -259,7 +301,8 @@ async function connect() {
     page = await webview.page()
     browser = { close: () => device.close() }
   }
-  page.setDefaultTimeout(10_000)
+  // 메모리가 빠듯한 컴퓨터의 에뮬레이터는 느려서 넉넉히 기다린다.
+  page.setDefaultTimeout(15_000)
   return { browser, page }
 }
 
@@ -303,12 +346,22 @@ async function run() {
   for (const [name, run] of scenarios) {
     const started = Date.now()
     try {
-      const next = await run(page, { detach, reconnect })
+      // 앞 시나리오에서 앱이 닫혀 웹뷰 연결이 끊겼으면, 다시 켜서 붙는다(한 실패가 뒤 시나리오로 번지지 않게).
+      if (page.isClosed()) {
+        console.log('    (앱을 다시 켜서 연결)')
+        page = await reconnect()
+      }
+      const next = await Promise.race([
+        run(page, { detach, reconnect }),
+        wait(SCENARIO_TIMEOUT_MS).then(() => {
+          throw new Error(`${SCENARIO_TIMEOUT_MS / 1000}초 안에 끝나지 않았어요(에뮬레이터가 느리거나 멈춤)`)
+        }),
+      ])
       if (next) page = next
       results.push({ name, ok: true, ms: Date.now() - started })
       console.log(`  ✓ ${name}`)
     } catch (error) {
-      results.push({ name, ok: false, ms: Date.now() - started, error: String(error.message ?? error).split('\n')[0] })
+      results.push({ name, ok: false, ms: Date.now() - started, error: String(error.message ?? error).split('\n').slice(0, 4).join(' | ') })
       console.log(`  ✗ ${name}\n    ${String(error.message ?? error).split('\n')[0]}`)
     }
     await page.screenshot({ path: join(OUT, `${String(results.length).padStart(2, '0')}.png`) }).catch(() => {})
