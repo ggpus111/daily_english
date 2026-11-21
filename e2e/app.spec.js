@@ -752,10 +752,27 @@ async function fakeSession(page) {
 async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
   const reports = []
   const patches = []
+  const fixes = []
   await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
     const request = route.request()
     const url = request.url()
     if (url.includes('/rpc/is_admin')) return route.fulfill({ json: admin })
+    if (url.includes('/pack_fixes')) {
+      if (request.method() === 'POST') {
+        const row = { ...request.postDataJSON(), updated_at: new Date().toISOString() }
+        const at = fixes.findIndex((fix) => fix.item_id === row.item_id)
+        if (at >= 0) fixes.splice(at, 1)
+        fixes.unshift(row)
+        return route.fulfill({ status: 201, json: [] })
+      }
+      if (request.method() === 'DELETE') {
+        const id = new URL(url).searchParams.get('item_id')?.replace('eq.', '')
+        fixes.splice(0, fixes.length, ...fixes.filter((fix) => fix.item_id !== id))
+        return route.fulfill({ status: 204, body: '' })
+      }
+      const kind = new URL(url).searchParams.get('kind')?.replace('eq.', '')
+      return route.fulfill({ json: fixes.filter((fix) => !kind || fix.kind === kind) })
+    }
     if (url.includes('/client_errors')) return route.fulfill(request.method() === 'GET' ? { json: errors } : { status: 201, json: [] })
     if (url.includes('/reports')) {
       if (request.method() === 'POST') {
@@ -772,7 +789,7 @@ async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
     }
     return route.fulfill(request.method() === 'GET' ? { json: [] } : { status: 201, json: [] })
   })
-  return { reports, patches }
+  return { reports, patches, fixes }
 }
 
 test.describe('로그인 화면', () => {
@@ -821,6 +838,43 @@ test.describe('로그인 화면', () => {
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
       .analyze()
     expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
+  })
+
+  test('관리자는 꾸러미의 틀린 뜻을 바로 고치고, 사용자 화면에 반영되며, 원래대로 되돌릴 수 있다', async ({ page }) => {
+    await fakeSession(page)
+    const server = await fakeReportServer(page, { admin: true })
+    server.reports.push({ id: 9, created_at: '2026-11-19T03:00:00Z', kind: 'content', message: 'tired 뜻이 이상해요', page: 'words', version: '0.0.0', platform: 'web', error_log: '', status: 'new', admin_reply: '' })
+
+    await page.goto(`${AUTH_URL}#admin`)
+    await page.locator('.admin-item').filter({ hasText: 'tired 뜻이 이상해요' }).getByRole('button', { name: '꾸러미 고치기로' }).click()
+    await expect(page.getByRole('heading', { name: '꾸러미 고치기', level: 2 })).toBeVisible()
+    await page.getByLabel('고칠 단어·표현 찾기').fill('tired')
+    await page.getByRole('button', { name: 'tired 고치기', exact: true }).click()
+    await page.getByLabel('뜻', { exact: true }).fill('피곤한, 지친 (고침)')
+    await page.getByLabel('메모(관리자만 봐요)').fill('신고 #9')
+    await page.getByRole('button', { name: '저장' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '꾸러미를 고쳤어요.' })).toBeVisible()
+    expect(server.fixes[0]).toMatchObject({ kind: 'words', meaning: '피곤한, 지친 (고침)', example: null, hidden: false, note: '신고 #9' })
+    await expect(page.getByRole('list', { name: '고친 항목' }).locator('.pack-fix-row')).toContainText(['tired'])
+    await expect(page.getByRole('list', { name: '고친 항목' }).locator('.report-status')).toHaveText('고침')
+
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+      .analyze()
+    expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
+
+    // 사용자 화면: 단어장에 tired를 쓰면 고친 뜻으로 채우기를 권한다
+    await page.goto(`${AUTH_URL}#words`)
+    await page.getByLabel('단어 / 표현').fill('tired')
+    await expect(page.locator('.pack-hint')).toContainText('피곤한, 지친 (고침)')
+
+    await page.goto(`${AUTH_URL}#admin`)
+    await page.getByRole('button', { name: '꾸러미 고치기', exact: true }).click()
+    await page.getByRole('button', { name: 'tired 고치기', exact: true }).click()
+    await page.getByRole('button', { name: '원래대로 되돌리기' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '원래대로 되돌렸어요.' })).toBeVisible()
+    expect(server.fixes).toHaveLength(0)
+    await expect(page.getByText('아직 고친 항목이 없어요.')).toBeVisible()
   })
 
   test('관리자가 아니면 관리자 페이지 내용을 볼 수 없다', async ({ page }) => {

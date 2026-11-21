@@ -19,6 +19,8 @@ export default defineConfig(({ mode }) => {
       !isApp &&
       VitePWA({
         registerType: 'autoUpdate',
+        // 웹 푸시 알림 받기(public/push-sw.js)
+        workbox: { importScripts: ['push-sw.js'] },
         manifest: {
           id: '/',
           name: 'Daily English',

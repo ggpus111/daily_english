@@ -1,6 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
+import { backupDraftOnPause, restoreDraft } from './lib/draftBackup'
 import { initErrorTracking } from './lib/errorLog'
 import { applyTheme, getTheme, watchSystemTheme } from './lib/theme'
 import './styles.css'
@@ -17,8 +18,12 @@ watchSystemTheme()
 // Pretendard의 한글은 안드로이드 기본 한글 글꼴(Noto Sans CJK, 본고딕)을 바탕으로 해서 거의 같게 보인다.
 if (import.meta.env.MODE !== 'app') import('pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css')
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+// 안드로이드 앱: 앱이 꺼진 사이 사라진 쓰던 일기를 휴대폰 파일에서 되살린 뒤 그린다(웹은 바로 그린다).
+backupDraftOnPause()
+restoreDraft().finally(() =>
+  createRoot(document.getElementById('root')).render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  ),
 )

@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react'
+import PackFixAdmin from '../components/PackFixAdmin'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { errorMessage } from '../lib/errors'
 import { REPORT_STATUSES, checkAdmin, listClientErrors, listReports, updateReport } from '../lib/reports'
 import { supabase } from '../lib/supabase'
 
-// 관리자 페이지(#admin): 들어온 신고를 보고 상태와 답변을 바로 고친다. 앱 오류 보고도 묶어서 본다.
+// 관리자 페이지(#admin): 들어온 신고를 보고 상태와 답변을 바로 고친다. 앱 오류 보고를 묶어서 보고,
+// 꾸러미의 틀린 뜻·예문은 앱 업데이트 없이 바로 고친다.
 // 관리자인지는 서버(is_admin)가 정하고, 서버 정책(RLS)이 관리자가 아니면 읽기·고치기를 막는다.
+const TABS = { reports: 'adminReports', packs: 'adminPacks', errors: 'adminErrors' }
+
 export default function Admin() {
   const { t, user } = useApp()
   const signedIn = Boolean(supabase && user)
@@ -41,18 +45,20 @@ export default function Admin() {
     <>
       <PageHead title={t('admin')} intro={t('adminIntro')} />
       <div className="pack-kinds" role="group" aria-label={t('admin')}>
-        {['reports', 'errors'].map((id) => (
+        {Object.entries(TABS).map(([id, label]) => (
           <button key={id} type="button" className="pack-kind" aria-pressed={tab === id} onClick={() => setTab(id)}>
-            {t(id === 'reports' ? 'adminReports' : 'adminErrors')}
+            {t(label)}
           </button>
         ))}
       </div>
-      {tab === 'reports' ? <ReportsAdmin /> : <ErrorsAdmin />}
+      {tab === 'reports' && <ReportsAdmin onFixContent={() => setTab('packs')} />}
+      {tab === 'errors' && <ErrorsAdmin />}
+      {tab === 'packs' && <PackFixAdmin />}
     </>
   )
 }
 
-function ReportsAdmin() {
+function ReportsAdmin({ onFixContent }) {
   const { t, notify, nativeLang } = useApp()
   const [status, setStatus] = useState('')
   const [reports, setReports] = useState(null)
@@ -118,7 +124,7 @@ function ReportsAdmin() {
       ) : (
         <ul className="admin-list">
           {reports.map((report) => (
-            <ReportItem key={report.id} report={report} dateFormat={dateFormat} onSave={save} />
+            <ReportItem key={report.id} report={report} dateFormat={dateFormat} onSave={save} onFixContent={onFixContent} />
           ))}
         </ul>
       )}
@@ -126,7 +132,7 @@ function ReportsAdmin() {
   )
 }
 
-function ReportItem({ report, dateFormat, onSave }) {
+function ReportItem({ report, dateFormat, onSave, onFixContent }) {
   const { t } = useApp()
   const [status, setStatus] = useState(report.status)
   const [reply, setReply] = useState(report.admin_reply)
@@ -165,9 +171,16 @@ function ReportItem({ report, dateFormat, onSave }) {
           <label htmlFor={replyId}>{t('adminReply')}</label>
           <textarea id={replyId} rows={2} maxLength={2000} value={reply} onChange={(event) => setReply(event.target.value)} />
         </div>
-        <button className="primary-button" disabled={!changed} onClick={() => onSave(report, { status, admin_reply: reply })}>
-          {t('adminSave')}
-        </button>
+        <div className="data-actions">
+          <button className="primary-button" disabled={!changed} onClick={() => onSave(report, { status, admin_reply: reply })}>
+            {t('adminSave')}
+          </button>
+          {report.kind === 'content' && (
+            <button type="button" className="soft-button" onClick={onFixContent}>
+              {t('adminPackGo')}
+            </button>
+          )}
+        </div>
       </div>
     </li>
   )

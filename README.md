@@ -144,6 +144,7 @@ Authentication > Providers > Email에서 Confirm email을 켭니다. 인증 메�
 
 - **백업 가져오기**: 프로필의 "파일에서 가져오기"로 내려받은 백업(.json)이나 원본 앱 저장 형식을 다시 불러옵니다(`src/lib/backup.js`). 파일 내용은 믿지 않고 아는 칸만, 정해진 길이로만 받습니다. 이미 있는 기록(같은 id나 같은 내용)은 건너뛰고, 가져오기 전에 몇 개를 더할지 보여 줍니다.
 - **오프라인 저장**: 로그인 모드에서 연결이 끊긴 채 저장·수정·삭제하면 이 기기에 줄 세워 두었다가(`pendingOps:<user id>`), 연결되면 차례로 서버에 올립니다. 마지막으로 불러온 기록은 이 기기에 남겨(`recordsCache:<user id>`) 연결 없이 열어도 먼저 보여 주고, 서버에서 받아 오면 바꿉니다. 로그아웃하면 이 사본을 지우고, 계정을 삭제하면 줄 선 변경까지 지웁니다.
+- **쓰던 일기 지키기**: 쓰던 일기는 입력할 때마다 저장소에 넣습니다. 웹뷰는 저장소를 몇 초씩 모았다가 디스크에 써서, AI 채팅 앱에 다녀오는 사이 안드로이드가 앱을 끄면 마지막 몇 초 치가 사라질 수 있습니다. 그래서 안드로이드 앱은 뒤로 갈 때마다 쓰던 일기를 앱 전용 파일(`journal-draft.json`)로도 쓰고, 다시 켤 때 그 파일로 되살립니다(`src/lib/draftBackup.js`). 로그아웃하면 파일도 지웁니다.
 
 ## 화면 테마
 
@@ -183,7 +184,13 @@ Supabase가 연결된 웹에서도 처음 온 사람은 로그인 화면에서 �
 - **목표 알림**: 목표를 못 채운 날 13시에 처음, 그 뒤에도 못 채웠으면 1.5~2.5시간마다 알립니다. 21시 이후에는 보내지 않고 하루 최대 5번이며, 목표를 채우면 그날 남은 알림은 취소합니다(`src/lib/reminders.js`).
 - **복습 알림**: 정한 시간에 복습할 단어·표현이 있을 때만 개수를 알립니다.
 - **안드로이드**: `@capacitor/local-notifications`로 앞으로 3일 치를 미리 예약하고, 기록이 바뀔 때마다 다시 예약합니다. 알림을 누르면 일기나 단어장으로 갑니다. 정확한 알람 권한(SCHEDULE_EXACT_ALARM)은 Play 정책 때문에 뺐습니다.
-- **웹**: 브라우저 알림으로 보내지만 탭이나 설치한 웹앱이 열려 있을 때만 옵니다. 닫혀 있어도 보내려면 푸시 서버가 필요해서 지금은 하지 않습니다.
+- **웹(로그인)**: 앱이 계획한 알림을 서버 대기열(`push_queue`)에 올리고, 서버 함수 `supabase/functions/send-reminders`가 10분마다 보낼 때가 된 것을 웹 푸시로 보냅니다. 브라우저를 닫아도 옵니다. 로그아웃하면 남은 알림과 푸시 주소를 지웁니다.
+- **웹(로그인 안 함, 또는 푸시 설정 전)**: 탭이나 설치한 웹앱이 열려 있을 때만 옵니다.
+- 웹 푸시 설정(한 번만):
+  1. VAPID 키는 `supabase/vapid-keys.local.txt`에 있습니다(저장소에 올리지 않음). 새로 만들려면 `node -e "const e=require('crypto').createECDH('prime256v1');e.generateKeys();const b=x=>x.toString('base64url');console.log(b(e.getPublicKey()),b(e.getPrivateKey()))"`.
+  2. 공개 키를 `.env`와 Vercel의 `VITE_VAPID_PUBLIC_KEY`에 넣습니다.
+  3. Supabase 대시보드 > Edge Functions에서 `send-reminders`를 만들고 `index.ts` 내용을 붙여 넣어 배포합니다. Secrets에 `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT`(`mailto:문의 이메일`)를 넣습니다.
+  4. `supabase/push-cron.sql`의 프로젝트 값과 anon key를 바꿔 SQL Editor에서 실행합니다(10분마다 호출, 한 달 약 4,300번으로 무료 한도 안).
 - 리뷰 분석에서 압박·죄책감이 불만 요인이라, 문구는 다그치지 않게 쓰고 홈에는 진행 막대만 보여 줍니다.
 
 ## 오류 추적
@@ -203,7 +210,7 @@ insert into public.admins (user_id) values ('<관리자 사용자 ID>');
 ```
 
 - 권한은 서버(RLS)가 지킵니다. 사용자는 자기 신고만 넣고 읽으며, 상태와 답변은 `is_admin()`이 참인 관리자만 고칩니다. 관리자 목록 표(`admins`)는 앱에서 읽거나 고칠 수 없습니다.
-- 관리자 페이지에서 고칠 수 있는 것은 신고의 상태와 답변입니다. 꾸러미 단어의 뜻 같은 내용 오류는 `src/data`와 `analysis/native`를 고쳐 새 버전으로 내보냅니다.
+- "꾸러미 고치기" 탭에서 단어·표현의 뜻, 예문, 예문 해석, 팁을 고치거나 항목을 숨깁니다. 고친 내용은 `pack_fixes` 표에 저장되고, 사용자 앱은 다음에 꾸러미를 열 때 앱에 든 꾸러미 위에 덮어씁니다(업데이트 없이 반영). 서버가 3초 안에 답하지 않거나 연결이 없으면 마지막으로 받은 고침을 씁니다. 예문을 바꾸면 Tatoeba 출처 번호는 떼어집니다. "내용" 신고에는 "꾸러미 고치기로" 버튼이 있습니다. 바뀐 내용을 다음 버전에 아예 넣으려면 `analysis/native`의 데이터를 고쳐 다시 만듭니다.
 
 ## 앱 크기
 
@@ -224,7 +231,7 @@ insert into public.admins (user_id) values ('<관리자 사용자 ID>');
 | 저장소에 올리면 자동으로 lint·단위·브라우저 테스트와 안드로이드 빌드 | `.github/workflows/ci.yml` | push, pull request |
 | 에뮬레이터에서 실제 앱을 눌러 보는 회귀 테스트 | `npm run test:android` (`-- --no-build`) | 출시 전 |
 
-`npm run test:android`는 앱을 빌드해 에뮬레이터에 설치하고, 앱 안 웹뷰에 디버거로 붙어 첫 실행, 단어 저장, 복습, 일기, 공유 창, 뒤로 가기, 앱이 꺼졌다 켜져도 쓰던 일기가 남는지를 확인합니다. 끝나면 크래시 로그(`logcat -b crash`)도 확인하고 `test-results/android/`에 화면과 요약을 남깁니다. Appium이나 Maestro를 따로 설치하지 않고 Playwright와 adb로 같은 일을 합니다.
+`npm run test:android`는 앱을 빌드해 에뮬레이터에 설치하고, 앱 안 웹뷰에 디버거로 붙어 첫 실행, 단어 저장, 복습, 일기, 공유 창, 뒤로 가기, 앱이 꺼졌다 켜져도 쓰던 일기가 남는지를 확인합니다. 끝나면 크래시 로그(`logcat -b crash`)도 확인하고 `android-test-results/`에 화면과 요약을 남깁니다. Appium이나 Maestro를 따로 설치하지 않고 Playwright와 adb로 같은 일을 합니다.
 
 메모리 8GB 컴퓨터에서도 돌도록 가볍게 돌립니다.
 - 빌드가 끝나면 Gradle 데몬을 끄고(`gradlew --stop`), Kotlin 코드는 Gradle 안에서 컴파일해 JVM을 하나만 띄웁니다(`android/gradle.properties`).
@@ -232,6 +239,7 @@ insert into public.admins (user_id) values ('<관리자 사용자 ID>');
 - 테스트용 에뮬레이터 `Light_API_35`(Android 15 `google_apis` x86_64, 플레이 스토어 없음, 720×1600, 메모리 2GB, 디스크 2GB)가 있으면 먼저 씁니다. Android 37 플레이 스토어 이미지보다 가볍습니다. 이미지는 `system-images/android-35/google_apis/x86_64`에 설치합니다(Android Studio의 SDK Manager나 `sdkmanager "system-images;android-35;google_apis;x86_64"`).
 - 이 스크립트가 켠 에뮬레이터는 애니메이션을 끄고, 메모리가 빠듯할 때 뜨는 "응답 없음" 창을 숨기고(이 창이 공유 창과 뒤로 가기를 가로챘음), 켠 뒤 30초 기다렸다가 시작합니다. 연결한 휴대폰의 설정은 바꾸지 않습니다.
 - Android 15 에뮬레이터에 처음 들어 있는 웹뷰(124)는 Playwright의 CDP 연결 명령 일부를 몰라서, 그때는 Playwright의 안드로이드 연결(`_android`)로 붙습니다.
+- 공유 창 시나리오는 시스템 화면을 앞에 띄워 앱 상태를 흔들 수 있어서 맨 마지막에 돌립니다. 각 adb 명령은 60초, 각 시나리오는 2분이 넘으면 실패로 넘어가고, 앞 시나리오에서 앱이 닫혔으면 다시 켜서 이어 갑니다. 컴퓨터에 남은 메모리가 3GB보다 적으면 에뮬레이터 메모리를 1.5GB로 줄입니다.
 - 끝나면 에뮬레이터를 끕니다. 창을 보려면 `-- --window`, 켜 두려면 `-- --keep`을 붙입니다.
 - 남은 메모리가 2.5GB보다 적으면 경고합니다. 가장 가벼운 방법은 USB 디버깅을 켠 휴대폰을 연결하는 것입니다. 연결된 기기가 있으면 에뮬레이터를 켜지 않고, 휴대폰 설정도 바꾸지 않습니다.
 - 테스트용 디버그 APK(7.3MB)는 코드를 줄이지 않은 빌드라 큽니다. 사용자가 받는 릴리즈 APK는 1.31MB입니다. 디버거를 붙인 동안 쓴 내용은 웹뷰가 디스크에 남기지 않아서, "앱이 꺼져도 남는지"는 디버거를 뗀 뒤 실제 터치 입력으로 확인합니다.
@@ -244,6 +252,7 @@ insert into public.admins (user_id) values ('<관리자 사용자 ID>');
 | `VITE_AUTH_PROVIDERS` | Vercel, `.env` | 보여 줄 소셜 로그인 (예: `google,kakao`) |
 | `VITE_SITE_URL` | Vercel | canonical, 공유 미리보기, sitemap |
 | `VITE_CONTACT_EMAIL` | Vercel, `.env` | 개인정보 처리방침의 문의처, 로그인하지 않은 사람의 신고 메일 |
+| `VITE_VAPID_PUBLIC_KEY` | Vercel, `.env` | 웹 푸시 공개 키(브라우저를 닫아도 알림) |
 
 ## 구조
 

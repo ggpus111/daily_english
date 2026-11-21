@@ -1,6 +1,7 @@
 // 표현·단어 꾸러미(analysis/native/build_packs.py, build_words.py가 만든 src/data/*.json)를 다룬다.
 // 데이터는 처음 필요할 때 따로 불러온다. 첫 화면 코드에 함께 묶이지 않게 해서 앱이 빨리 뜨게 한다.
 
+import { applyFixes, fetchPackFixes } from './packFixes'
 import { normalizeText } from './text'
 
 const LOADERS = {
@@ -14,22 +15,33 @@ export const WORD_CHUNK = 50
 const loaded = {}
 const pending = {}
 
-function prepare(kind, data) {
+function prepare(kind, data, fixes = []) {
   const groups = kind === 'words' ? data.levels : data.packs
   const toItem = (group) => (item) => ({ ...item, text: item.text ?? item.word, group: group.id })
-  const ready = groups.map((group) => ({ ...group, items: group.items.map(toItem(group)) }))
+  const ready = groups.map((group) => ({ ...group, items: applyFixes(group.items.map(toItem(group)), fixes) }))
   return { source: data.source, groups: ready, items: ready.flatMap((group) => group.items) }
+}
+
+/** 관리자가 고치기 전, 앱에 든 그대로의 꾸러미(관리자 페이지에서 원래 값과 비교할 때). */
+export async function loadBasePackData(kind) {
+  const module = await LOADERS[kind]()
+  return prepare(kind, module.default)
+}
+
+/** 관리자가 고친 뒤 다음에 꾸러미를 열 때 새 고침을 받도록 비운다. */
+export function forgetPackData(kind) {
+  delete loaded[kind]
 }
 
 /** 이미 불러온 꾸러미가 있으면 바로 돌려준다(없으면 null). */
 export const peekPackData = (kind) => loaded[kind] ?? null
 
-/** 꾸러미를 불러온다. 한 번 불러오면 다시 받지 않고, 실패하면 다음 호출에서 다시 시도한다. */
+/** 꾸러미를 불러온다(관리자 고침 포함). 한 번 불러오면 다시 받지 않고, 실패하면 다음 호출에서 다시 시도한다. */
 export function loadPackData(kind) {
   if (loaded[kind]) return Promise.resolve(loaded[kind])
-  pending[kind] ??= LOADERS[kind]().then(
-    (module) => {
-      loaded[kind] = prepare(kind, module.default)
+  pending[kind] ??= Promise.all([LOADERS[kind](), fetchPackFixes(kind)]).then(
+    ([module, fixes]) => {
+      loaded[kind] = prepare(kind, module.default, fixes)
       delete pending[kind]
       return loaded[kind]
     },

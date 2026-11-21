@@ -16,6 +16,7 @@ import { clearUserCache } from '../lib/records'
 import { local } from '../lib/storage'
 import { THEMES, getTheme, saveTheme } from '../lib/theme'
 import { supabase } from '../lib/supabase'
+import { stopWebPush } from '../lib/webPush'
 
 
 // 웹은 파일로 내려받고, 앱은 공유 창을 띄워 저장할 곳을 고르게 한다.
@@ -64,6 +65,8 @@ export default function Profile() {
   // 이 기기에 남긴 기록 사본은 지운다. 올리지 못한 변경은 다시 로그인하면 올라간다.
   async function logOut() {
     clearUserCache(user?.id)
+    // 로그아웃한 뒤에는 이 계정의 웹 알림이 오지 않게, 아직 안 보낸 알림과 이 브라우저의 푸시 주소를 지운다.
+    await stopWebPush().catch(() => {})
     await supabase.auth.signOut()
   }
 

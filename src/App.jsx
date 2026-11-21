@@ -6,6 +6,7 @@ import { AppContext } from './context'
 import { useErrorReporting } from './hooks/useErrorReporting'
 import { useOnline } from './hooks/useOnline'
 import { useReminders } from './hooks/useReminders'
+import { clearDraftBackup } from './lib/draftBackup'
 import { errorMessage } from './lib/errors'
 import { createTranslator } from './lib/i18n'
 import { initNativeAuth } from './lib/native'
@@ -102,7 +103,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
   const wasOnline = useRef(online)
 
   useErrorReporting(user)
-  useReminders({ records, loading, t, go })
+  useReminders({ records, loading, t, go, signedIn: Boolean(supabase && user) })
 
   // 연결이 돌아오면 못 올린 변경을 올리고, 다른 기기에서 바뀐 것까지 다시 불러온다.
   useEffect(() => {
@@ -298,7 +299,10 @@ export default function App() {
         local.remove(GUEST_KEY)
         setGuest(false)
       }
-      if (event === 'SIGNED_OUT') local.remove(JOURNAL_DRAFT_KEY)
+      if (event === 'SIGNED_OUT') {
+        local.remove(JOURNAL_DRAFT_KEY)
+        clearDraftBackup()
+      }
     })
     return () => data.subscription.unsubscribe()
   }, [])
