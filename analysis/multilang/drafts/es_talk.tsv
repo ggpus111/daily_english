@@ -1,0 +1,188 @@
+# 스페인어 연인·친구 대화 꾸러미. 영어 talk_draft.json과 같은 주제·순서(같은 번호 = 같은 뜻). 중남미에서 널리 쓰는 말을 기준으로 하고, 스페인과 다르면 팁에 적었다. AI(Claude)와 함께 쓰고 사람이 고른다.
+# 꾸러미	표현	셀 형태	뜻	예문	예문 해석	팁
+love	Te amo.	te amo	사랑해	Te amo más que a nada.	세상 무엇보다 사랑해.	가장 깊은 사랑 표현이라 연인이나 가족에게 써요.
+love	Te quiero.	te quiero	사랑해, 좋아해	Te quiero mucho, ¿lo sabes?	많이 사랑해, 알지?	Te amo보다 가볍고 일상적이라 연인, 가족, 친한 친구 모두에게 써요.
+love	Estoy loco por ti.	loco por ti	너한테 푹 빠졌어	Estoy loco por ti.	나 너한테 푹 빠졌어.	여자가 말하면 loca por ti예요.
+love	Significas mucho para mí.	significas mucho	넌 나한테 정말 소중해	Significas mucho para mí.	넌 나한테 정말 소중해.	친구에게도 쓸 수 있어요.
+love	Me gustas.	me gustas	너 좋아해	Creo que me gustas mucho.	나 너 정말 좋아하는 것 같아.	사귀기 전 고백할 때 가장 흔한 말이에요.
+love	Amor a primera vista	primera vista	첫눈에 반함	Fue amor a primera vista.	첫눈에 반했어.
+love	Me haces feliz.	me haces feliz	너 덕분에 행복해	Siempre me haces feliz.	넌 항상 날 행복하게 해.
+love	Qué suerte tenerte.	suerte tenerte	네가 있어서 다행이야	Qué suerte tenerte en mi vida.	내 삶에 네가 있어서 정말 다행이야.
+love	mi amor	mi amor	자기야	Buenos días, mi amor.	좋은 아침, 자기야.	연인끼리 가장 흔한 애칭이에요. cariño, mi vida도 써요.
+love	¡Eres lo máximo!	lo máximo	네가 최고야!	Gracias por el café, ¡eres lo máximo!	커피 고마워, 네가 최고야!	고마울 때 친구에게도 자주 써요.
+love	Me estoy enamorando de ti.	enamorando	너한테 빠지고 있어	Creo que me estoy enamorando de ti.	나 너한테 빠지고 있는 것 같아.
+love	No dejo de pensar en ti.	pensar en ti	네 생각만 나	Hoy no dejo de pensar en ti.	오늘 계속 네 생각만 나.
+love	Eres mi todo.	mi todo	넌 내 전부야	Eres mi todo.	넌 내 전부야.	아주 달콤한 말이라 특별한 날에 아껴 써요.
+love	Besos	besos	뽀뽀, 쪽 (끝인사)	Nos vemos mañana, ¡besos!	내일 봐, 쪽!	메시지 끝에 친구끼리도 흔히 붙여요. 더 줄여 bss라고도 써요.
+love	Que sueñes bonito.	sueñes bonito	좋은 꿈 꿔	Buenas noches, que sueñes bonito.	잘 자, 좋은 꿈 꿔.
+love	Eres tan lindo.	tan lindo	너 진짜 귀엽다	Eres tan lindo cuando duermes.	자는 모습 너무 귀엽다.	여자에게는 linda예요. 스페인에서는 mono/mona도 써요.
+love	¿Quieres ser mi novia?	ser mi novia	내 여자친구 해 줄래?	¿Quieres ser mi novia?	내 여자친구가 되어 줄래?	남자친구에게는 ¿Quieres ser mi novio?예요.
+miss	Te extraño.	te extraño	보고 싶어	Te extraño mucho.	너무 보고 싶어.	스페인에서는 Te echo de menos라고 해요.
+miss	Ya te extraño.	ya te extraño	벌써 보고 싶어	Te acabas de ir y ya te extraño.	방금 갔는데 벌써 보고 싶어.
+miss	¡Tengo muchas ganas de verte!	ganas de verte	빨리 보고 싶어!	¡Solo tres días más! Tengo muchas ganas de verte.	3일만 더! 빨리 보고 싶어.	tener ganas de ~는 '~하고 싶다'예요.
+miss	Cuento los días.	cuento los días	손꼽아 기다리는 중이야	Cuento los días para verte.	너 볼 날만 손꼽아 세고 있어.
+miss	Ojalá estuvieras aquí.	estuvieras aquí	네가 여기 있으면 좋을 텐데	La vista es preciosa. Ojalá estuvieras aquí.	경치 너무 예뻐. 네가 여기 있으면 좋을 텐데.
+miss	Pensando en ti.	pensando en ti	네 생각 하고 있어	Solo pensando en ti. ¿Cómo va tu día?	그냥 네 생각 나서. 오늘 잘 보내고 있어?	힘든 일을 겪는 친구에게 위로로도 써요.
+miss	¡Nos vemos pronto!	nos vemos pronto	곧 보자!	¡Nos vemos pronto! Buen viaje.	곧 보자! 조심히 와.
+miss	No es lo mismo sin ti.	no es lo mismo sin ti	너 없으니까 허전해	Este café no es lo mismo sin ti.	너 없으니까 이 카페도 허전해.
+miss	Extraño tu voz.	extraño tu voz	네 목소리 듣고 싶어	¿Me llamas? Extraño tu voz.	전화해 줄래? 네 목소리 듣고 싶어.
+miss	Te mando un abrazo.	te mando un abrazo	꼭 안아 줄게	¿Día difícil? Te mando un abrazo.	힘든 하루였어? 멀리서 꼭 안아 줄게.	직접 안아 줄 수 없을 때 메시지로 써요.
+miss	Siempre estás en mi mente.	en mi mente	늘 네 생각뿐이야	Siempre estás en mi mente, hasta en el trabajo.	일할 때도 늘 네 생각뿐이야.
+miss	Vuelve pronto.	vuelve pronto	빨리 돌아와	Te espero. Vuelve pronto.	기다릴게. 빨리 돌아와.
+miss	Aquí te espero.	te espero	여기서 기다릴게	Tómate tu tiempo, aquí te espero.	천천히 해, 여기서 기다릴게.
+miss	¿Cuándo nos vemos?	cuándo nos vemos	언제 만나?	¿Cuándo nos vemos otra vez?	우리 언제 또 만나?
+text	jajaja	jaja	ㅋㅋㅋ	Qué gracioso jajaja	너무 웃기다 ㅋㅋㅋ	스페인어에서 j는 'ㅎ' 소리라 jaja = 하하예요.
+text	xd	xd	ㅋㅋ (빵 터짐)	Me caí en el metro xd	지하철에서 넘어졌어 ㅋㅋ	웃는 얼굴 모양을 글자로 쓴 거예요.
+text	q	q	뭐, ~라고 (que)	q haces?	뭐 해?	que를 줄여 q라고 써요.
+text	xq	xq	왜, 왜냐하면 (por qué / porque)	xq no me llamaste?	왜 전화 안 했어?	por의 x(곱하기 기호)에 que의 q를 붙인 말이에요.
+text	tqm	tqm	정말 사랑해 (te quiero mucho)	Buenas noches, tqm	잘 자, 많이 사랑해	친구끼리도 다정하게 써요.
+text	ntp	ntp	걱정 마 (no te preocupes)	ntp, yo lo arreglo	걱정 마, 내가 해결할게
+text	bn	bn	좋아, 잘 (bien)	Todo bn, ¿y tú?	다 괜찮아, 너는?
+text	tmb	tmb	나도, 역시 (también)	Yo tmb te extraño	나도 보고 싶어
+text	porfa	porfa	제발, 부탁해	¿Me llamas, porfa?	전화해 줘, 응?	por favor를 귀엽게 줄인 말이에요.
+text	finde	finde	주말	¿Qué haces este finde?	이번 주말에 뭐 해?	fin de semana의 줄임말이에요.
+text	ok	ok	알았어	Ok, nos vemos luego	알았어, 이따 봐
+text	¿Neta?	neta	진짜?	¿Neta? No te creo.	진짜? 못 믿겠어.	멕시코 말이에요. 다른 나라에서는 ¿En serio?를 써요.
+text	¿En serio?	en serio	진짜?	¿En serio? ¡Qué fuerte!	진짜? 대박!
+text	Qué onda	qué onda	뭐 해? 잘 지내?	¿Qué onda? ¿Todo bien?	뭐 해? 잘 지내지?	중남미, 특히 멕시코에서 흔한 인사예요.
+text	Dale	dale	좋아, 콜	Dale, nos vemos a las 8.	좋아, 8시에 봐.	중남미에서 아주 자주 쓰는 '오케이'예요.
+text	bss	bss	쪽 (besos)	Te veo mañana, bss	내일 봐, 쪽
+text	Buenas	buenas	안녕 (가볍게)	¡Buenas! ¿Cómo estás?	안녕! 잘 지내?	buenos días, buenas tardes를 줄인 가벼운 인사예요.
+text	Va	va	그래, 좋아	Va, te llamo luego.	그래, 이따 전화할게.
+chat	¿Qué haces?	qué haces	뭐 하고 있어?	¿Qué haces este fin de semana?	이번 주말에 뭐 해?	지금 하는 일과 계획을 물을 때 둘 다 써요.
+chat	¿Cómo te fue hoy?	cómo te fue	오늘 어땠어?	¿Cómo te fue hoy? Cuéntamelo todo.	오늘 어땠어? 다 얘기해 줘.
+chat	Nada, aquí.	nada	별거 없어	Nada, aquí en casa descansando.	별거 없어, 집에서 쉬는 중.	¿Qué haces?에 대한 흔한 대답이에요.
+chat	Yo también.	yo también	나도	Yo también, casi no dormí.	나도, 거의 못 잤어.
+chat	Aquí, relajándome.	relajándome	그냥 쉬는 중	Aquí, relajándome con mi gato.	고양이랑 그냥 쉬는 중이야.
+chat	¡No manches!	no manches	말도 안 돼!	¡No manches! ¿Lo conociste?	말도 안 돼! 걔를 만났다고?	멕시코 말이에요. 스페인에서는 ¡No me digas!를 써요.
+chat	¡Qué fuerte!	qué fuerte	대박!	¿Viste a un famoso? ¡Qué fuerte!	연예인 봤어? 대박!
+chat	¡Ni me digas!	ni me digas	내 말이!	¡Ni me digas! Los lunes son lo peor.	내 말이! 월요일이 최악이야.
+chat	¿Sabes qué?	sabes qué	있잖아!	¿Sabes qué? ¡Conseguí el trabajo!	있잖아! 나 합격했어!	좋은 소식을 꺼낼 때 써요.
+chat	¿Qué pasó?	qué pasó	무슨 일이야?	Estás muy callado, ¿qué pasó?	오늘 조용하네, 무슨 일이야?
+chat	¿Ya comiste?	ya comiste	밥 먹었어?	¿Ya comiste? No te saltes la comida.	밥 먹었어? 거르지 마.	한국식 안부라 진짜 배고픈지 묻는 걸로 들릴 수 있어요.
+chat	¿Qué tal todo?	qué tal	요즘 어때?	¡Cuánto tiempo! ¿Qué tal todo?	오랜만이야! 요즘 어때?
+chat	¿Día largo?	día largo	오늘 힘들었지?	¿Día largo? Te noto cansado.	오늘 길었지? 피곤해 보여.
+chat	Tiene sentido.	tiene sentido	그럴 만하네	Estabas ocupado, tiene sentido.	바빴구나, 그럴 만하네.
+chat	Te entiendo.	te entiendo	무슨 마음인지 알아	Te entiendo, a mí me pasó lo mismo.	무슨 마음인지 알아, 나도 똑같았어.
+chat	¿De verdad?	de verdad	진짜로?	¿Te mudas aquí? ¿De verdad?	여기로 이사 온다고? 진짜로?
+chat	Lo de siempre.	lo de siempre	늘 똑같지 뭐	El trabajo, lo de siempre.	일은 늘 똑같지 뭐.
+chat	¿Qué hay de nuevo?	qué hay de nuevo	요즘 뭐 새로운 거 있어?	¿Qué hay de nuevo contigo?	요즘 별일 없어?
+tease	Eres un tontito.	tontito	바보야 (귀엽게)	Eres un tontito, pero me encantas.	너 바보 같아, 근데 너무 좋아.	-ito를 붙이면 귀엽고 다정한 느낌이 돼요. 여자에게는 tontita.
+tease	Es broma.	es broma	농담이야	No te enojes, es broma.	화내지 마, 농담이야.
+tease	¡Ya basta!	ya basta	그만해!	¡Ya basta! Me haces sonrojar.	그만해! 얼굴 빨개지잖아.
+tease	Ya quisieras.	ya quisieras	꿈 깨	¿Que cocine otra vez? Ya quisieras.	또 요리하라고? 꿈 깨.
+tease	Buen intento.	buen intento	어림없지	Buen intento, pero no caigo.	어림없지, 안 속아.
+tease	Qué chistoso.	qué chistoso	하나도 안 웃기거든	Qué chistoso. Ahora dame mi celular.	하나도 안 웃겨. 이제 폰 줘.	말투에 따라 비꼬는 말이 돼요.
+tease	Eres muy exagerado.	exagerado	너 너무 오버야	¿Globos por mi cumpleaños? Eres muy exagerado.	생일에 풍선? 너무 오버야.
+tease	Como quieras.	como quieras	맘대로 해	Como quieras, tú ganas.	맘대로 해, 네가 이겼어.	차갑게 들릴 수 있으니 웃으며 써요.
+tease	¡Qué malo eres!	qué malo	너 못됐어!	¡Qué malo eres! Me esforcé mucho.	너 못됐어! 열심히 했단 말이야.
+tease	¡Caíste!	caíste	속았지!	¡Caíste! Era broma.	속았지! 농담이었어.
+tease	¡Te pillé!	te pillé	딱 걸렸어!	¡Te pillé! Te comiste mis galletas.	딱 걸렸어! 내 과자 먹었지.	중남미에서는 ¡Te caché!도 써요.
+tease	¿Quién dijo?	quién dijo	누가 그래?	¿Que cocino mal? ¿Quién dijo?	내가 요리 못한다고? 누가 그래?
+tease	No tienes remedio.	no tienes remedio	너 진짜 못 말려	No tienes remedio, deja de reírte.	진짜 못 말려, 그만 웃어.
+tease	No te creas tanto.	no te creas	잘난 척하지 마	Ganaste una vez, no te creas tanto.	한 번 이겼다고 잘난 척하지 마.
+tease	¡Mentira!	mentira	뻥이야!	¡Mentira! Te ves guapísimo.	뻥이야! 너 정말 멋있어.
+tease	¡Va que va!	va que va	콜!	¿Tacos? ¡Va que va!	타코? 콜!	멕시코에서 흔한 맞장구예요.
+tease	Payaso	payaso	장난꾸러기, 웃긴 애	Eres un payaso, me haces reír.	너 진짜 웃긴다, 웃게 만들어.	광대라는 뜻이지만 친구를 장난스럽게 부를 때 써요.
+date	¿Estás libre esta noche?	estás libre	오늘 밤 시간 돼?	¿Estás libre esta noche? Quiero verte.	오늘 밤 시간 돼? 보고 싶어.
+date	¿Vamos a cenar?	vamos a cenar	저녁 먹으러 갈래?	¿Vamos a cenar después del trabajo?	퇴근하고 저녁 먹으러 갈래?
+date	¡Es una cita!	es una cita	그럼 약속한 거다!	¿Viernes a las siete? ¡Es una cita!	금요일 7시? 약속한 거다!	데이트가 아니어도 '약속 확정!'이라는 뜻으로 써요.
+date	¿Paso por ti?	paso por ti	데리러 갈까?	¿Paso por ti a las siete?	7시에 데리러 갈까?	스페인에서는 ¿Te recojo?라고 해요.
+date	¿A qué hora te queda bien?	te queda bien	몇 시가 편해?	¿A qué hora te queda bien mañana?	내일 몇 시가 편해?
+date	¿Lo podemos cambiar?	podemos cambiar	약속 바꿀 수 있을까?	Me salió algo. ¿Lo podemos cambiar?	일이 생겼어. 약속 바꿀 수 있을까?
+date	Me surgió algo.	me surgió algo	갑자기 일이 생겼어	Perdón, me surgió algo en el trabajo.	미안, 회사에 갑자기 일이 생겼어.
+date	Llego en diez.	llego en	10분 뒤 도착	¡Llego en diez!	10분 뒤 도착!	minutos를 빼고 숫자만 말해요.
+date	¿Dónde nos vemos?	dónde nos vemos	어디서 만날까?	¿Dónde nos vemos? ¿En la estación?	어디서 만날까? 역에서?
+date	Vamos a medias.	a medias	반반 내자	Esta vez vamos a medias.	이번엔 반반 내자.
+date	Yo invito.	yo invito	내가 살게	Hoy yo invito.	오늘은 내가 살게.
+date	¿Peli en mi casa?	peli	우리 집에서 영화 볼래?	¿Peli en mi casa el sábado?	토요일에 우리 집에서 영화 볼래?	peli는 película(영화)의 줄임말이에요.
+date	Avísame cuando llegues.	avísame cuando llegues	도착하면 알려 줘	Avísame cuando llegues a casa.	집에 도착하면 알려 줘.	한국의 '도착하면 연락해'와 같은 마음이에요.
+date	Te acompaño a casa.	te acompaño	집까지 데려다줄게	Es tarde, te acompaño a casa.	늦었어, 집까지 데려다줄게.
+date	La pasé muy bien.	la pasé muy bien	정말 즐거웠어	La pasé muy bien hoy, gracias.	오늘 정말 즐거웠어, 고마워.	스페인에서는 Lo pasé muy bien이라고 해요.
+date	¡Hay que repetirlo!	repetirlo	또 하자!	¡Qué divertido! Hay que repetirlo.	재밌었다! 또 하자.
+date	¿Sigue en pie lo de hoy?	sigue en pie	오늘 약속 그대로지?	¿Sigue en pie lo de esta noche?	오늘 밤 약속 그대로지?
+call	¿Me escuchas?	me escuchas	내 목소리 들려?	¿Hola? ¿Me escuchas?	여보세요? 들려?
+call	Se corta.	se corta	소리가 끊겨	Perdón, se corta la llamada.	미안, 전화가 끊겨.
+call	Te congelaste.	te congelaste	화면 멈췄어	Te congelaste un segundo.	화면이 잠깐 멈췄어.
+call	¿Te puedo llamar?	te puedo llamar	전화해도 돼?	¿Te puedo llamar después del trabajo?	퇴근하고 전화해도 돼?
+call	Te llamo luego.	te llamo luego	이따 전화할게	Estoy en el bus, te llamo luego.	버스 안이야, 이따 전화할게.
+call	¿Hacemos videollamada?	videollamada	영상통화할래?	¿Hacemos videollamada antes de dormir?	자기 전에 영상통화할래?
+call	¿Qué hora es allá?	qué hora es allá	거기 지금 몇 시야?	¿Qué hora es allá? ¿Te desperté?	거기 지금 몇 시야? 나 때문에 깼어?
+call	Aquí ya es tarde.	ya es tarde	여기는 벌써 늦었어	Aquí ya es tarde, me voy a dormir.	여기 벌써 늦어서 잘게.
+call	La diferencia horaria	diferencia horaria	시차	La diferencia horaria es difícil.	시차 때문에 힘들어.
+call	Estás en silencio.	en silencio	음소거돼 있어	¡Espera, estás en silencio!	잠깐, 너 음소거야!
+call	Prende la cámara.	prende la cámara	카메라 켜 줘	Prende la cámara, quiero verte.	카메라 켜 줘, 얼굴 보고 싶어.	스페인에서는 Enciende la cámara라고 해요.
+call	Me dormí en la llamada.	me dormí	통화하다 잠들었어	Perdón, anoche me dormí en la llamada.	미안, 어젯밤 통화하다 잠들었어.
+call	Relación a distancia	a distancia	장거리 연애	Una relación a distancia es difícil, pero vales la pena.	장거리 연애는 힘들지만 너라면 괜찮아.
+call	Te espero despierto.	te espero despierto	안 자고 기다릴게	Te espero despierto hasta que llames.	전화할 때까지 안 자고 기다릴게.
+call	Cuelga tú primero.	cuelga	너 먼저 끊어	No, ¡cuelga tú primero!	아니야, 너 먼저 끊어!	colgar는 '전화를 끊다'예요.
+call	Hablamos mañana.	hablamos mañana	내일 얘기하자	Buenas noches, hablamos mañana.	잘 자, 내일 얘기하자.
+call	¿Me ves?	me ves	나 보여?	¿Me ves? Aquí está muy oscuro.	나 보여? 여기 너무 어둡다.
+fight	No quise decir eso.	no quise decir	그럴 뜻이 아니었어	Perdón, no quise decir eso.	미안, 그런 뜻으로 한 말 아니었어.
+fight	¿Podemos hablar?	podemos hablar	우리 얘기 좀 할까?	¿Podemos hablar esta noche? Es importante.	오늘 밤 얘기 좀 할 수 있어? 중요한 거야.
+fight	Necesito un poco de espacio.	espacio	잠깐 혼자 있고 싶어	No estoy enojado, solo necesito un poco de espacio.	화난 건 아니고 잠깐 혼자 있고 싶어.	헤어지자는 뜻이 아니라 시간이 필요하다는 말이에요.
+fight	Me dolió.	me dolió	나 상처받았어	Honestamente, eso me dolió.	솔직히 그 말에 상처받았어.
+fight	No peleemos.	no peleemos	우리 싸우지 말자	No peleemos, te extraño.	싸우지 말자, 보고 싶어.
+fight	Exageré.	exageré	내가 너무 예민했어	Perdón, exageré.	미안, 내가 너무 과했어.
+fight	¿Estamos bien?	estamos bien	우리 괜찮은 거지?	¿Estamos bien ahora?	우리 이제 괜찮은 거지?
+fight	Hagamos las paces.	hagamos las paces	화해하자	Odio pelear. Hagamos las paces.	싸우는 거 싫어. 화해하자.
+fight	Te perdono.	te perdono	용서할게	Está bien, te perdono.	괜찮아, 용서할게.
+fight	Yo no dije eso.	no dije eso	나 그렇게 말 안 했어	Espera, yo no dije eso.	잠깐, 나 그렇게 말 안 했어.
+fight	Me equivoqué.	me equivoqué	내가 잘못했어	Tenías razón, me equivoqué.	네 말이 맞았어, 내가 잘못했어.
+fight	No te enojes.	no te enojes	화내지 마	No te enojes, te explico.	화내지 마, 설명할게.	스페인에서는 No te enfades라고 해요.
+fight	No estoy enojado contigo.	enojado contigo	너한테 화난 거 아니야	No estoy enojado contigo, solo cansado.	너한테 화난 거 아니야, 그냥 피곤해.
+fight	Empecemos de nuevo.	de nuevo	처음부터 다시 하자	¿Empecemos de nuevo?	처음부터 다시 할까?
+fight	Entiendo tu punto.	tu punto	네 말도 일리 있어	Entiendo tu punto, pero pienso diferente.	네 말도 일리 있는데, 나는 생각이 달라.	반대하기 전에 먼저 상대를 인정할 때 좋아요.
+fight	Todo bien.	todo bien	우리 괜찮아	No te preocupes, todo bien.	걱정 마, 우리 괜찮아.
+fight	Perdón por lastimarte.	lastimarte	상처 줘서 미안해	Perdón por lastimarte.	상처 줘서 미안해.
+care	Aquí estoy para ti.	aquí estoy para ti	내가 있잖아	Pase lo que pase, aquí estoy para ti.	무슨 일이 있어도 내가 있잖아.
+care	¡Tú puedes!	tú puedes	넌 할 수 있어!	¿Mañana es tu gran día? ¡Tú puedes!	내일 중요한 날이지? 넌 할 수 있어!
+care	Qué mal.	qué mal	아 속상하겠다	¿Perdiste el bus? Qué mal.	버스 놓쳤어? 속상하겠다.
+care	Cuídate mucho.	cuídate	몸 잘 챙겨	Cuídate mucho, ¿sí?	몸 잘 챙겨, 알았지?	작별 인사로도 아주 자주 써요.
+care	Descansa.	descansa	좀 쉬어	Trabajaste mucho. Descansa.	고생 많았어. 좀 쉬어.
+care	Que te mejores.	que te mejores	빨리 나아	¡Que te mejores! Toma mucha agua.	빨리 나아! 물 많이 마셔.
+care	Todo va a estar bien.	va a estar bien	다 괜찮아질 거야	No llores. Todo va a estar bien.	울지 마. 다 괜찮아질 거야.
+care	Estoy orgulloso de ti.	orgulloso de ti	네가 자랑스러워	¡Lo lograste! Estoy orgulloso de ti.	해냈구나! 네가 자랑스러워.	여자가 말하면 orgullosa예요.
+care	Ánimo.	ánimo	힘내	Ya casi terminan los exámenes. ¡Ánimo!	시험 거의 끝났어. 힘내!
+care	¿Quieres hablar de eso?	hablar de eso	얘기하고 싶어?	Te noto triste. ¿Quieres hablar de eso?	기운 없어 보여. 얘기하고 싶어?
+care	Hiciste lo mejor que pudiste.	lo mejor que pudiste	최선을 다했잖아	Tranquilo, hiciste lo mejor que pudiste.	괜찮아, 최선을 다했잖아.
+care	Cuentas conmigo.	cuentas conmigo	내가 네 편이야	No te preocupes, cuentas conmigo.	걱정 마, 내가 있잖아.
+care	No te esfuerces de más.	de más	무리하지 마	Aunque estés ocupado, no te esfuerces de más.	바빠도 무리하지 마.
+care	Ve con cuidado.	con cuidado	조심히 가	Es tarde, ve con cuidado.	늦었으니까 조심히 가.
+care	Creo en ti.	creo en ti	난 너 믿어	Creo en ti. Te va a ir muy bien.	난 너 믿어. 잘할 거야.
+care	No seas tan duro contigo.	duro contigo	너무 자책하지 마	No seas tan duro contigo.	너무 자책하지 마.	여자에게는 dura contigo예요.
+care	Si necesitas algo, avísame.	si necesitas algo	필요한 거 있으면 말해	Si necesitas algo, avísame.	필요한 거 있으면 말해.
+react	¡Te ves increíble!	te ves increíble	너 진짜 멋있다!	¡Te ves increíble con ese vestido!	그 원피스 입으니까 진짜 예쁘다!
+react	¡Qué lindo!	qué lindo	너무 다정하다! 귀엽다!	¿Me hiciste el almuerzo? ¡Qué lindo!	점심 만들어 줬어? 너무 다정하다!	스페인에서는 ¡Qué mono!도 써요.
+react	¡Ay, qué tierno!	tierno	아이고 귀여워!	¡Ay, qué tierno tu perrito!	아이고, 너네 강아지 너무 귀여워!
+react	¡Me encanta!	me encanta	너무 좋아!	¿Empezaste a pintar? ¡Me encanta!	그림 시작했어? 너무 좋다!
+react	¡Qué bueno!	qué bueno	잘됐다!	¿Aprobaste? ¡Qué bueno!	합격했어? 잘됐다!
+react	¡Me muero de risa!	me muero de risa	웃겨 죽겠어!	¡Me muero de risa con tu historia!	네 얘기 웃겨 죽겠어!
+react	Me alegro mucho por ti.	me alegro	내 일처럼 기뻐	¿Te comprometiste? ¡Me alegro mucho por ti!	약혼했어? 내 일처럼 기뻐!
+react	¡Qué rico se ve!	qué rico	맛있겠다!	¡Qué rico se ve! ¿Lo cocinaste tú?	맛있겠다! 네가 만들었어?
+react	¡Qué crack!	crack	대단해, 최고야!	¿Corriste diez kilómetros? ¡Qué crack!	10킬로 뛰었어? 대단하다!	잘하는 사람을 crack이라고 불러요.
+react	Tienes mucho talento.	talento	너 정말 재능 있다	¿Tú dibujaste esto? Tienes mucho talento.	이거 네가 그렸어? 정말 재능 있다.
+react	Me alegraste el día.	alegraste el día	덕분에 하루가 행복해졌어	Tu mensaje me alegró el día.	네 메시지 덕분에 하루가 행복해졌어.
+react	Estoy obsesionado.	obsesionado	완전 빠졌어	¿Esta canción? Estoy obsesionado.	이 노래? 완전 빠졌어.
+react	Muy tú.	muy tú	완전 너답다	¿Una maleta rosa? Muy tú.	분홍 캐리어? 완전 너답다.
+react	¡Qué guapo!	qué guapo	멋있다!	¡Qué guapo estás hoy!	오늘 진짜 멋있다!	여자에게는 guapa예요.
+react	¡Qué envidia!	qué envidia	부럽다!	¿Un trabajo cerca de la playa? ¡Qué envidia!	바닷가 근처 직장? 부럽다!
+react	¡Eres un genio!	eres un genio	너 천재야!	¿Ya lo arreglaste? ¡Eres un genio!	벌써 고쳤어? 너 천재야!
+react	¡Brutal!	brutal	대박!	El concierto estuvo brutal.	콘서트 대박이었어.	'잔인하다'가 아니라 '끝내준다'는 칭찬으로 써요.
+culture	¿Qué quieres decir?	qué quieres decir	무슨 뜻이야?	¿Qué quieres decir con eso?	그게 무슨 뜻이야?	따지는 말투가 되지 않게 부드럽게 말해요.
+culture	¿Cómo se dice esto en español?	cómo se dice	이거 스페인어로 뭐라고 해?	¿Cómo se dice esto en español?	이거 스페인어로 뭐라고 해?
+culture	¿Me lo repites?	me lo repites	다시 말해 줄래?	Perdón, ¿me lo repites?	미안, 다시 말해 줄래?
+culture	¿Puedes hablar más despacio?	más despacio	조금 천천히 말해 줄래?	¿Puedes hablar más despacio? Quiero entenderlo todo.	조금 천천히 말해 줄래? 다 알아듣고 싶어.
+culture	¿Eso es normal en tu país?	en tu país	너네 나라에서는 그게 보통이야?	¿Eso es normal en tu país?	너네 나라에서는 그게 보통이야?
+culture	Todavía estoy aprendiendo español.	aprendiendo español	아직 스페인어 배우는 중이야	Perdón, todavía estoy aprendiendo español.	미안, 아직 스페인어 배우는 중이야.
+culture	¿Lo dije bien?	lo dije bien	내가 맞게 말했어?	¿Lo dije bien? Sé sincero.	내가 맞게 말했어? 솔직하게 말해 줘.
+culture	Corrígeme si me equivoco.	corrígeme	틀리면 고쳐 줘	Corrígeme si me equivoco, ¿vale?	틀리면 고쳐 줘, 알았지?	배우는 중이라고 편하게 부탁할 때 좋아요.
+culture	¿Eso es grosero?	grosero	그거 무례한 말이야?	Espera, ¿eso es grosero en español?	잠깐, 스페인어로 그게 무례한 말이야?
+culture	En Corea, nosotros…	en corea	한국에서는 ~해	En Corea, comemos sopa de algas en los cumpleaños.	한국에서는 생일에 미역국을 먹어.
+culture	Te enseño un poco de coreano.	coreano	한국어 좀 알려 줄게	Te enseño un poco de coreano. ¡Di «saranghae»!	한국어 좀 알려 줄게. '사랑해' 해 봐!
+culture	¡Qué interesante!	qué interesante	진짜 신기하다!	¿Lo celebran en verano? ¡Qué interesante!	여름에 축하한다고? 진짜 신기하다!
+culture	¿Cómo se llama esto?	cómo se llama	이거 뭐라고 불러?	¿Cómo se llama esto en español?	이거 스페인어로 뭐라고 불러?
+culture	Se pierde en la traducción.	traducción	번역하면 느낌이 안 살아	Ese chiste se pierde en la traducción.	그 농담은 번역하면 재미가 없어져.
+culture	No te entendí.	no te entendí	잘 못 알아들었어	Perdón, no te entendí.	미안, 잘 못 알아들었어.
+culture	Me pone nervioso conocer a tus papás.	tus papás	너희 부모님 뵙는 거 긴장돼	Me pone nervioso conocer a tus papás.	너희 부모님 뵙는 거 긴장돼.	스페인에서는 tus padres라고 해요.
+culture	Nunca había escuchado esa palabra.	esa palabra	그 말 처음 들어	Nunca había escuchado esa palabra. ¿Qué significa?	그 말 처음 들어. 무슨 뜻이야?

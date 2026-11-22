@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { hasPackData } from '../lib/packs'
 import { useApp } from '../context'
 import { usePackData } from '../hooks/usePackData'
 import { errorMessage } from '../lib/errors'
@@ -13,20 +14,24 @@ export const ONBOARDED_KEY = 'onboarded'
 export const START_LEVEL_KEY = 'startLevel'
 
 // 첫날 바로 쓸 수 있게 고른 표현(일상 대화·문제 해결 꾸러미)
-const STARTERS = ["How's it going?", 'Pretty good', 'hang out', 'No idea', 'Sounds good.', 'Take care', 'by the way', 'figure out', "I'm good"]
+// 처음 담아 볼 표현: 외국인 연인·친구와 바로 주고받는 말 위주로 고른다. 꾸러미 항목 번호로 고르므로
+// 다른 언어도 같은 번호의 표현이 나온다(I miss you. → 会いたい, 想你 …). 그 언어에 없는 번호는 건너뛴다.
+const STARTER_IDS = ['miss-01', 'chat-02', 'chat-01', 'text-01', 'love-10', 'miss-03', 'daily-14', 'daily-03', 'daily-35']
 const STEPS = 3
 
 /** 기록이 하나도 없는 첫 실행인지. 저장소가 막혀 "봤음"을 남길 수 없으면 매번 뜨지 않게 건너뛴다. */
 export function needsOnboarding(records, learningLang) {
-  if (learningLang !== 'en' || local.get(ONBOARDED_KEY)) return false
+  if (!hasPackData('expressions', learningLang) || local.get(ONBOARDED_KEY)) return false
   if (!Object.values(records).every((items) => items.length === 0)) return false
   return local.set(`${ONBOARDED_KEY}-check`, '1') && (local.remove(`${ONBOARDED_KEY}-check`), true)
 }
 
 // 첫 실행 안내: 수준 고르기 → 표현 담기 → 기분 고르고 한 줄 일기. 어느 단계에서든 건너뛸 수 있다.
 export default function Onboarding({ onDone }) {
-  const { t, notify, add } = useApp()
-  const [step, setStep] = useState(1)
+  const { t, notify, add, learningLang } = useApp()
+  // 영어만 단어 꾸러미를 초급·중급으로 나눈다. 다른 언어는 대화 주제별이라 수준 고르기를 건너뛴다.
+  const first = learningLang === 'en' ? 1 : 2
+  const [step, setStep] = useState(first)
   const [level, setLevel] = useState('beginner')
   const [picked, setPicked] = useState([])
   const [journal, setJournal] = useState({ mood: '', native: '', translation: '' })
@@ -34,7 +39,9 @@ export default function Onboarding({ onDone }) {
   const [saving, setSaving] = useState(false)
   const headingRef = useRef(null)
   const { data } = usePackData('expressions')
-  const starters = data ? STARTERS.map((text) => data.items.find((item) => item.text === text)).filter(Boolean) : []
+  const starters = data
+    ? STARTER_IDS.map((id) => data.items.find((item) => item.id === id || item.id === `${learningLang}-${id}`)).filter(Boolean)
+    : []
 
   useEffect(() => {
     headingRef.current?.focus()
@@ -88,8 +95,8 @@ export default function Onboarding({ onDone }) {
   return (
     <section className="onboarding panel" aria-labelledby="onboard-title">
       <div className="onboard-top">
-        <Mascot size={52} mood={step === 3 ? 'joy' : 'happy'} />
-        <p className="onboard-progress">{t('onboardProgress', { step, total: STEPS })}</p>
+        <Mascot size={76} mood={step === 3 ? 'joy' : 'happy'} />
+        <p className="onboard-progress">{t('onboardProgress', { step: step - first + 1, total: STEPS - first + 1 })}</p>
       </div>
       <h1 id="onboard-title" ref={headingRef} tabIndex={-1}>
         {t(`onboardTitle${step}`)}
@@ -118,7 +125,7 @@ export default function Onboarding({ onDone }) {
                 aria-pressed={picked.includes(item.id)}
                 onClick={() => toggle(item.id)}
               >
-                <strong lang="en">{item.text}</strong>
+                <strong lang={learningLang}>{item.text}</strong>
                 <span>{item.meaning}</span>
               </button>
             ))}
@@ -148,7 +155,7 @@ export default function Onboarding({ onDone }) {
             label={t('onboardTranslation')}
             name="translation"
             maxLength={4000}
-            lang="en"
+            lang={learningLang}
             placeholder={t('onboardTranslationHint')}
             value={journal.translation}
             onChange={(event) => setJournal((value) => ({ ...value, translation: event.target.value }))}

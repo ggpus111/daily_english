@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import ChoiceChips from '../components/ChoiceChips'
 import Field from '../components/Field'
 import PageHead from '../components/PageHead'
 import SearchField from '../components/SearchField'
@@ -71,19 +72,13 @@ export default function Chats() {
             error={errors.meaning}
             onChange={(event) => setField('meaning', event.target.value)}
           />
-          <Field
-            as="select"
+          <ChoiceChips
             label={t('category')}
             name="category"
             value={form.category}
-            onChange={(event) => setField('category', event.target.value)}
-          >
-            {CATEGORIES.map((category) => (
-              <option key={category} value={category}>
-                {t(`category.${category}`)}
-              </option>
-            ))}
-          </Field>
+            options={CATEGORIES.map((category) => ({ value: category, label: t(`category.${category}`) }))}
+            onChange={(value) => setField('category', value)}
+          />
           <Field
             as="textarea"
             label={t('note')}

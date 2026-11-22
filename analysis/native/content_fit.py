@@ -13,7 +13,7 @@ Daily English는 "작은 기록이 모여 나만의 언어가 돼요"라는 앱�
 | 기분 낱말 | 일기에 자주 쓰는 기분 낱말이 단어 꾸러미에 있는가 | 많이 |
 
 실행: ../.venv/Scripts/python -I -X utf8 content_fit.py [이름] [단어 JSON] [표현 JSON]  -> output/content_fit_이름.json
-(단어·표현 JSON을 주지 않으면 앱 데이터 src/data/words.json, packs.json을 본다. 고치기 전 상태는 make_before.py가 만든다.)
+(단어·표현 JSON을 주지 않으면 앱 데이터 src/data/en/words.json, packs.json을 본다. 고치기 전 상태는 make_before.py가 만든다.)
 """
 
 import json
@@ -85,8 +85,8 @@ def sentence_stats(rows):
 
 def main():
     name = sys.argv[1] if len(sys.argv) > 1 else "now"
-    words_path = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "src/data/words.json"
-    packs_path = Path(sys.argv[3]) if len(sys.argv) > 3 else ROOT / "src/data/packs.json"
+    words_path = Path(sys.argv[2]) if len(sys.argv) > 2 else ROOT / "src/data/en/words.json"
+    packs_path = Path(sys.argv[3]) if len(sys.argv) > 3 else ROOT / "src/data/en/packs.json"
     words = json.loads(words_path.read_text(encoding="utf-8"))
     packs = json.loads(packs_path.read_text(encoding="utf-8"))
     word_items = [item for level in words["levels"] for item in level["items"]]

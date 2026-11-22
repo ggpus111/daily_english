@@ -1,4 +1,4 @@
-"""단어 원고(words_draft.json)와 고른 단어·예문(data/word_candidates.json)을 합쳐 앱 데이터(src/data/words.json)를 만든다.
+"""단어 원고(words_draft.json)와 고른 단어·예문(data/word_candidates.json)을 합쳐 앱 데이터(src/data/en/words.json)를 만든다.
 
 - 순서: select_words.py가 정한 순서(Tatoeba 영어 문장에 나온 횟수가 많은 순).
 - 예문: 직접 쓴 예문(own_examples)이 있으면 그것, 없으면 Tatoeba 한영 문장 쌍. Tatoeba 예문은 문장 번호를 남겨 출처를 밝힌다.
@@ -14,7 +14,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from analyze import DATA  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = ROOT / "src" / "data" / "words.json"
+OUT = ROOT / "src" / "data" / "en" / "words.json"
 LEVELS = [("beginner", "초급", "Beginner"), ("intermediate", "중급", "Intermediate")]
 
 

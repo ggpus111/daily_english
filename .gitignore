@@ -13,6 +13,7 @@ analysis/.venv
 analysis/data
 analysis/native/data
 analysis/pricing/data
+analysis/multilang/data
 __pycache__
 
 # 웹 푸시 VAPID 키(비밀 키 포함, 올리지 않음)

@@ -1,0 +1,2834 @@
+{
+ "source": {
+  "corpus": "Tatoeba (tatoeba.org) jpn sentences, CC BY 2.0 FR",
+  "sentences": 249007,
+  "note": "단어는 연인·친구와의 대화에서 쓰는 말을 사람이 골랐고(analyze_words.py로 점검), 뜻은 Daily English가 직접 썼습니다(AI 도움)."
+ },
+ "levels": [
+  {
+   "id": "love",
+   "title": {
+    "ko": "연애·애정",
+    "en": "Love & romance"
+   },
+   "items": [
+    {
+     "id": "ja-w-love001",
+     "word": "愛",
+     "meaning": "사랑",
+     "sentences": 684,
+     "example": "誰もが彼を愛している。",
+     "exampleKo": "모두가 그를 사랑한다.",
+     "tatoeba": 136647
+    },
+    {
+     "id": "ja-w-love002",
+     "word": "恋",
+     "meaning": "연애, 사랑",
+     "sentences": 185,
+     "example": "僕は彼女が欲しいんじゃなくて恋がしたいんだ。",
+     "exampleKo": "난 여자친구를 갖고 싶은 게 아니라 사랑을 하고 싶은 거야.",
+     "tatoeba": 3451950
+    },
+    {
+     "id": "ja-w-love003",
+     "word": "会いたい",
+     "meaning": "보고 싶다",
+     "sentences": 99,
+     "example": "私に会いたいの？",
+     "exampleKo": "나와 만나고 싶어?",
+     "tatoeba": 4272415
+    },
+    {
+     "id": "ja-w-love004",
+     "word": "優しい",
+     "meaning": "다정하다",
+     "sentences": 104,
+     "example": "母は優しい目で私を見た。",
+     "exampleKo": "엄마가 다정한 눈으로 나를 봤어.",
+     "tatoeba": 82848
+    },
+    {
+     "id": "ja-w-love005",
+     "word": "大切",
+     "meaning": "소중함",
+     "sentences": 404,
+     "example": "第一印象は大切だ。",
+     "exampleKo": "첫 인상이 중요하다.",
+     "tatoeba": 8337060
+    },
+    {
+     "id": "ja-w-love006",
+     "word": "恋人",
+     "meaning": "연인",
+     "sentences": 44,
+     "example": "恋愛の悩みは恋人に相談するのが一番だよ。",
+     "exampleKo": "연애의 고민은 연인에게 상담하는 게 가장 좋아.",
+     "tatoeba": 2673243
+    },
+    {
+     "id": "ja-w-love007",
+     "word": "彼氏",
+     "meaning": "남자친구",
+     "sentences": 110,
+     "example": "私の彼氏、私より随分年下なの。",
+     "exampleKo": "내 남자친구, 나보다 꽤 어려.",
+     "tatoeba": 10225045
+    },
+    {
+     "id": "ja-w-love008",
+     "word": "結婚",
+     "meaning": "결혼",
+     "sentences": 852,
+     "example": "僕と結婚してくれますか。",
+     "exampleKo": "나랑 결혼해 줄래요?",
+     "tatoeba": 82308
+    },
+    {
+     "id": "ja-w-love009",
+     "word": "付き合う",
+     "meaning": "사귀다",
+     "sentences": 38,
+     "example": "私と付き合ってください。",
+     "exampleKo": "저랑 사귀어 주세요."
+    },
+    {
+     "id": "ja-w-love010",
+     "word": "別れる",
+     "meaning": "헤어지다",
+     "sentences": 18,
+     "example": "私と別れるっていうこと？",
+     "exampleKo": "나랑 헤어지자는 거야?",
+     "tatoeba": 8749916
+    },
+    {
+     "id": "ja-w-love011",
+     "word": "告白",
+     "meaning": "고백",
+     "sentences": 23,
+     "example": "昨日、彼に告白した。",
+     "exampleKo": "어제 그에게 고백했어."
+    },
+    {
+     "id": "ja-w-love012",
+     "word": "デート",
+     "meaning": "데이트",
+     "sentences": 134,
+     "example": "今晩、私とデートしない？",
+     "exampleKo": "오늘 밤 나랑 데이트할래?",
+     "tatoeba": 3598791
+    },
+    {
+     "id": "ja-w-love013",
+     "word": "片思い",
+     "meaning": "짝사랑",
+     "sentences": 7,
+     "example": "それは片思いの恋だった。",
+     "exampleKo": "그건 짝사랑이었어.",
+     "tatoeba": 204871
+    },
+    {
+     "id": "ja-w-love014",
+     "word": "遠距離",
+     "meaning": "장거리",
+     "sentences": 6,
+     "example": "遠距離でも気持ちは変わらない。",
+     "exampleKo": "멀리 떨어져 있어도 마음은 안 변해."
+    },
+    {
+     "id": "ja-w-love015",
+     "word": "記念日",
+     "meaning": "기념일",
+     "sentences": 19,
+     "example": "明日は僕らの記念日だよ。",
+     "exampleKo": "내일은 우리 기념일이야.",
+     "tatoeba": 10153781
+    },
+    {
+     "id": "ja-w-love016",
+     "word": "婚約",
+     "meaning": "약혼",
+     "sentences": 35,
+     "example": "二人は婚約したんだって。",
+     "exampleKo": "두 사람 약혼했대."
+    },
+    {
+     "id": "ja-w-love017",
+     "word": "指輪",
+     "meaning": "반지",
+     "sentences": 69,
+     "example": "あれ、指輪はどうしたの？",
+     "exampleKo": "어, 반지는 어쨌어?",
+     "tatoeba": 3576189
+    },
+    {
+     "id": "ja-w-love018",
+     "word": "抱きしめる",
+     "meaning": "꼭 안다",
+     "sentences": 3,
+     "example": "会ったら抱きしめたい。",
+     "exampleKo": "만나면 꼭 안아 주고 싶어."
+    },
+    {
+     "id": "ja-w-love019",
+     "word": "キス",
+     "meaning": "키스",
+     "sentences": 261,
+     "example": "あなたにキスしたい。",
+     "exampleKo": "당신에게 키스할래요.",
+     "tatoeba": 1043471
+    },
+    {
+     "id": "ja-w-love020",
+     "word": "手をつなぐ",
+     "meaning": "손을 잡다",
+     "sentences": 0,
+     "example": "手をつないで歩こう。",
+     "exampleKo": "손잡고 걷자."
+    },
+    {
+     "id": "ja-w-love021",
+     "word": "焼きもち",
+     "meaning": "질투",
+     "sentences": 3,
+     "example": "ちょっと焼きもちを焼いちゃった。",
+     "exampleKo": "조금 질투 났어."
+    },
+    {
+     "id": "ja-w-love022",
+     "word": "浮気",
+     "meaning": "바람",
+     "sentences": 26,
+     "example": "浮気なんて絶対しないよ。",
+     "exampleKo": "바람 같은 건 절대 안 피워."
+    },
+    {
+     "id": "ja-w-love023",
+     "word": "甘える",
+     "meaning": "어리광 부리다",
+     "sentences": 2,
+     "example": "たまには甘えてもいいよ。",
+     "exampleKo": "가끔은 어리광 부려도 돼."
+    },
+    {
+     "id": "ja-w-love024",
+     "word": "可愛らしい",
+     "meaning": "사랑스럽다",
+     "sentences": 11,
+     "example": "本当に可愛らしい人ね。",
+     "exampleKo": "정말 사랑스러운 사람이네.",
+     "tatoeba": 8907378
+    },
+    {
+     "id": "ja-w-love025",
+     "word": "優しさ",
+     "meaning": "다정함",
+     "sentences": 13,
+     "example": "君の優しさに救われた。",
+     "exampleKo": "네 다정함 덕분에 힘이 났어."
+    },
+    {
+     "id": "ja-w-love026",
+     "word": "運命",
+     "meaning": "운명",
+     "sentences": 96,
+     "example": "君に会えたのは運命だと思う。",
+     "exampleKo": "너를 만난 건 운명인 것 같아."
+    },
+    {
+     "id": "ja-w-love027",
+     "word": "奇跡",
+     "meaning": "기적",
+     "sentences": 26,
+     "example": "あなたは奇跡を信じますか？",
+     "exampleKo": "기적을 믿어요?",
+     "tatoeba": 2664703
+    },
+    {
+     "id": "ja-w-love028",
+     "word": "風",
+     "meaning": "바람",
+     "sentences": 439,
+     "example": "今日は風が強いね。",
+     "exampleKo": "오늘 바람이 세다."
+    },
+    {
+     "id": "ja-w-love029",
+     "word": "恋愛",
+     "meaning": "연애",
+     "sentences": 40,
+     "example": "恋愛の悩みは恋人に相談するのが一番だよ。",
+     "exampleKo": "연애의 고민은 연인에게 상담하는 게 가장 좋아.",
+     "tatoeba": 2673243
+    },
+    {
+     "id": "ja-w-love030",
+     "word": "結婚式",
+     "meaning": "결혼식",
+     "sentences": 114,
+     "example": "私は先月結婚式を挙げました。",
+     "exampleKo": "저는 저번달에 결혼식을 올렸습니다.",
+     "tatoeba": 74166
+    },
+    {
+     "id": "ja-w-love031",
+     "word": "新婚",
+     "meaning": "신혼",
+     "sentences": 5,
+     "example": "お二人は、新婚さんなのよ。",
+     "exampleKo": "두 사람은 신혼이야.",
+     "tatoeba": 11737674
+    },
+    {
+     "id": "ja-w-love032",
+     "word": "一生",
+     "meaning": "평생",
+     "sentences": 76,
+     "example": "一生忘れない。",
+     "exampleKo": "평생 안 잊을게."
+    }
+   ]
+  },
+  {
+   "id": "feel",
+   "title": {
+    "ko": "기분·마음",
+    "en": "Feelings"
+   },
+   "items": [
+    {
+     "id": "ja-w-feel001",
+     "word": "嬉しい",
+     "meaning": "기쁘다",
+     "sentences": 138,
+     "example": "わたしも会えて嬉しいよ。",
+     "exampleKo": "나도 만나서 반가워요.",
+     "tatoeba": 2969768
+    },
+    {
+     "id": "ja-w-feel002",
+     "word": "悲しい",
+     "meaning": "슬프다",
+     "sentences": 120,
+     "example": "私は悲しい映画は嫌いだ。",
+     "exampleKo": "나는 슬픈 영화는 싫어.",
+     "tatoeba": 153157
+    },
+    {
+     "id": "ja-w-feel003",
+     "word": "寂しい",
+     "meaning": "외롭다",
+     "sentences": 52,
+     "example": "私はこのごろとても寂しい。",
+     "exampleKo": "요즘 너무 외로워.",
+     "tatoeba": 161008
+    },
+    {
+     "id": "ja-w-feel004",
+     "word": "冬",
+     "meaning": "겨울",
+     "sentences": 335,
+     "example": "私は冬が好きです。",
+     "exampleKo": "난 겨울이 좋아.",
+     "tatoeba": 154888
+    },
+    {
+     "id": "ja-w-feel005",
+     "word": "気分",
+     "meaning": "기분",
+     "sentences": 378,
+     "example": "気分が悪い人いる？",
+     "exampleKo": "기분 안 좋은 사람 있어?",
+     "tatoeba": 10104842
+    },
+    {
+     "id": "ja-w-feel006",
+     "word": "笑う",
+     "meaning": "웃다",
+     "sentences": 66,
+     "example": "君が笑うと私も嬉しい。",
+     "exampleKo": "네가 웃으면 나도 기뻐."
+    },
+    {
+     "id": "ja-w-feel007",
+     "word": "泣く",
+     "meaning": "울다",
+     "sentences": 71,
+     "example": "泣かないで、大丈夫だよ。",
+     "exampleKo": "울지 마, 괜찮아."
+    },
+    {
+     "id": "ja-w-feel008",
+     "word": "怒る",
+     "meaning": "화내다",
+     "sentences": 73,
+     "example": "君が怒るのももっともだ。",
+     "exampleKo": "네가 화내는 것도 당연해.",
+     "tatoeba": 178922
+    },
+    {
+     "id": "ja-w-feel009",
+     "word": "心配",
+     "meaning": "걱정",
+     "sentences": 546,
+     "example": "私達は心配だった。",
+     "exampleKo": "우리들은 걱정했다.",
+     "tatoeba": 7704601
+    },
+    {
+     "id": "ja-w-feel010",
+     "word": "安心",
+     "meaning": "안심",
+     "sentences": 69,
+     "example": "それ聞いて安心したよ。",
+     "exampleKo": "그걸 듣고 안심했어.",
+     "tatoeba": 2955235
+    },
+    {
+     "id": "ja-w-feel011",
+     "word": "幸せ",
+     "meaning": "행복",
+     "sentences": 489,
+     "example": "幸せって何なんだろう？",
+     "exampleKo": "행복이란 무엇인걸까?",
+     "tatoeba": 423645
+    },
+    {
+     "id": "ja-w-feel012",
+     "word": "不安",
+     "meaning": "불안",
+     "sentences": 98,
+     "example": "君が不安になる必要ないよ。",
+     "exampleKo": "네가 불안해할 필요 없어.",
+     "tatoeba": 9601878
+    },
+    {
+     "id": "ja-w-feel013",
+     "word": "緊張",
+     "meaning": "긴장",
+     "sentences": 104,
+     "example": "緊張しています。",
+     "exampleKo": "긴장돼요.",
+     "tatoeba": 10008433
+    },
+    {
+     "id": "ja-w-feel014",
+     "word": "興奮",
+     "meaning": "흥분",
+     "sentences": 123,
+     "example": "私はとても興奮していた。",
+     "exampleKo": "나 엄청 흥분했었어.",
+     "tatoeba": 4527903
+    },
+    {
+     "id": "ja-w-feel015",
+     "word": "感動",
+     "meaning": "감동",
+     "sentences": 96,
+     "example": "私は彼の音楽に感動した。",
+     "exampleKo": "그의 음악에 감동했어.",
+     "tatoeba": 153992
+    },
+    {
+     "id": "ja-w-feel016",
+     "word": "後悔",
+     "meaning": "후회",
+     "sentences": 163,
+     "example": "そのことを後悔しながら余生を送りたくない。",
+     "exampleKo": "저는 남은 인생을 그것에 대해 후회하면서 지내고 싶지 않아요.",
+     "tatoeba": 5004
+    },
+    {
+     "id": "ja-w-feel017",
+     "word": "迷う",
+     "meaning": "망설이다, 길을 잃다",
+     "sentences": 27,
+     "example": "どっちにするか迷う。",
+     "exampleKo": "어느 쪽으로 할지 고민돼."
+    },
+    {
+     "id": "ja-w-feel018",
+     "word": "笑顔",
+     "meaning": "웃는 얼굴",
+     "sentences": 97,
+     "example": "君の笑顔、好きだよ。",
+     "exampleKo": "네 웃는 얼굴을 좋아해.",
+     "tatoeba": 12980616
+    },
+    {
+     "id": "ja-w-feel019",
+     "word": "涙",
+     "meaning": "눈물",
+     "sentences": 235,
+     "example": "彼女の目は涙でいっぱいだった。",
+     "exampleKo": "그녀의 눈이 눈물로 가득했다.",
+     "tatoeba": 93881
+    },
+    {
+     "id": "ja-w-feel020",
+     "word": "表情",
+     "meaning": "표정",
+     "sentences": 60,
+     "example": "上司の表情は険しかった。",
+     "exampleKo": "상사의 표정은 험했다.",
+     "tatoeba": 2185567
+    },
+    {
+     "id": "ja-w-feel021",
+     "word": "本音",
+     "meaning": "속마음",
+     "sentences": 17,
+     "example": "彼の本音が分からない。",
+     "exampleKo": "그 사람 속마음을 모르겠어.",
+     "tatoeba": 8876195
+    },
+    {
+     "id": "ja-w-feel022",
+     "word": "慌てる",
+     "meaning": "허둥대다",
+     "sentences": 6,
+     "example": "慌てないで、ゆっくりでいいよ。",
+     "exampleKo": "허둥대지 마, 천천히 해도 돼."
+    },
+    {
+     "id": "ja-w-feel023",
+     "word": "落ち着く",
+     "meaning": "진정하다",
+     "sentences": 25,
+     "example": "君といると落ち着く。",
+     "exampleKo": "너랑 있으면 마음이 편해."
+    },
+    {
+     "id": "ja-w-feel024",
+     "word": "驚く",
+     "meaning": "놀라다",
+     "sentences": 89,
+     "example": "真実を知ったら君は驚くだろう。",
+     "exampleKo": "진실을 알면 너 놀랄 거야.",
+     "tatoeba": 144977
+    },
+    {
+     "id": "ja-w-feel025",
+     "word": "喜ぶ",
+     "meaning": "기뻐하다",
+     "sentences": 37,
+     "example": "彼らはとても喜ぶでしょう。",
+     "exampleKo": "그들은 매우 기뻐할 것입니다.",
+     "tatoeba": 97760
+    },
+    {
+     "id": "ja-w-feel026",
+     "word": "悩む",
+     "meaning": "고민하다",
+     "sentences": 8,
+     "example": "そのことで悩むな。",
+     "exampleKo": "그 일로 고민하지 마.",
+     "tatoeba": 213186
+    },
+    {
+     "id": "ja-w-feel027",
+     "word": "困る",
+     "meaning": "곤란하다",
+     "sentences": 39,
+     "example": "僕はしばしばお金に困る。",
+     "exampleKo": "나는 자주 돈 때문에 곤란해.",
+     "tatoeba": 82088
+    },
+    {
+     "id": "ja-w-feel028",
+     "word": "似合う",
+     "meaning": "어울리다",
+     "sentences": 57,
+     "example": "あのドレスは彼女によく似合う。",
+     "exampleKo": "그 드레스는 그녀에게 잘 어울린다.",
+     "tatoeba": 231285
+    },
+    {
+     "id": "ja-w-feel029",
+     "word": "懐かしい",
+     "meaning": "그립다",
+     "sentences": 38,
+     "example": "この歌は私に懐かしい昔を思い出させる。",
+     "exampleKo": "이 노래를 들으면 그리운 옛날이 떠올라.",
+     "tatoeba": 222776
+    },
+    {
+     "id": "ja-w-feel030",
+     "word": "恥ずかしい",
+     "meaning": "부끄럽다",
+     "sentences": 68,
+     "example": "自分の下手な英語が恥ずかしい。",
+     "exampleKo": "내 서투른 영어가 부끄럽다.",
+     "tatoeba": 1039353
+    },
+    {
+     "id": "ja-w-feel031",
+     "word": "羨ましい",
+     "meaning": "부럽다",
+     "sentences": 15,
+     "example": "羨ましい！",
+     "exampleKo": "네가 부러워.",
+     "tatoeba": 3488339
+    },
+    {
+     "id": "ja-w-feel032",
+     "word": "悔しい",
+     "meaning": "분하다",
+     "sentences": 6,
+     "example": "試合に負けて悔しい。",
+     "exampleKo": "경기에 져서 분해."
+    },
+    {
+     "id": "ja-w-feel033",
+     "word": "怖い",
+     "meaning": "무섭다",
+     "sentences": 151,
+     "example": "一人になるのが怖いの。",
+     "exampleKo": "혼자가 되는 게 무서워.",
+     "tatoeba": 9700919
+    },
+    {
+     "id": "ja-w-feel034",
+     "word": "眠い",
+     "meaning": "졸리다",
+     "sentences": 51,
+     "example": "眠いなら寝ればいいじゃん。",
+     "exampleKo": "졸리면 자면 되잖아.",
+     "tatoeba": 6817868
+    }
+   ]
+  },
+  {
+   "id": "bond",
+   "title": {
+    "ko": "관계·위로·부탁",
+    "en": "People & support"
+   },
+   "items": [
+    {
+     "id": "ja-w-bond001",
+     "word": "友達",
+     "meaning": "친구",
+     "sentences": 1192,
+     "example": "私の古い友達だよ。",
+     "exampleKo": "내 오랜 친구야.",
+     "tatoeba": 9573157
+    },
+    {
+     "id": "ja-w-bond002",
+     "word": "家族",
+     "meaning": "가족",
+     "sentences": 498,
+     "example": "家族の皆さんはお元気？",
+     "exampleKo": "가족들은 모두 건강하고?",
+     "tatoeba": 186945
+    },
+    {
+     "id": "ja-w-bond003",
+     "word": "手伝う",
+     "meaning": "돕다",
+     "sentences": 78,
+     "example": "僕は手伝うためにきた。",
+     "exampleKo": "도와주려고 왔어.",
+     "tatoeba": 81862
+    },
+    {
+     "id": "ja-w-bond004",
+     "word": "両思い",
+     "meaning": "서로 좋아함",
+     "sentences": 1,
+     "example": "やっと両思いになれた。",
+     "exampleKo": "드디어 서로 좋아하게 됐어."
+    },
+    {
+     "id": "ja-w-bond005",
+     "word": "信頼",
+     "meaning": "신뢰",
+     "sentences": 166,
+     "example": "民主主義がないところに信頼はない。",
+     "exampleKo": "민주주의가 없는 곳에 신뢰는 없다.",
+     "tatoeba": 9669466
+    },
+    {
+     "id": "ja-w-bond006",
+     "word": "正直",
+     "meaning": "솔직함",
+     "sentences": 290,
+     "example": "私は正直に話しています。",
+     "exampleKo": "나는 솔직하게 말하고 있어.",
+     "tatoeba": 4763647
+    },
+    {
+     "id": "ja-w-bond007",
+     "word": "素直",
+     "meaning": "솔직하고 순수함",
+     "sentences": 27,
+     "example": "素直に言うと、寂しかった。",
+     "exampleKo": "솔직히 말하면 외로웠어."
+    },
+    {
+     "id": "ja-w-bond008",
+     "word": "慰める",
+     "meaning": "위로하다",
+     "sentences": 4,
+     "example": "私は彼女を慰めることができる。",
+     "exampleKo": "나는 그녀를 위로할 수 있어.",
+     "tatoeba": 153195
+    },
+    {
+     "id": "ja-w-bond009",
+     "word": "励ます",
+     "meaning": "격려하다",
+     "sentences": 0,
+     "example": "君の言葉がいつも励ましてくれる。",
+     "exampleKo": "네 말이 늘 힘이 돼."
+    },
+    {
+     "id": "ja-w-bond010",
+     "word": "応援",
+     "meaning": "응원",
+     "sentences": 28,
+     "example": "何事が起ころうとも、君を応援するよ。",
+     "exampleKo": "무슨 일이 있어도 널 응원할게.",
+     "tatoeba": 187498
+    },
+    {
+     "id": "ja-w-bond011",
+     "word": "感謝",
+     "meaning": "감사",
+     "sentences": 219,
+     "example": "私はあなたに感謝する。",
+     "exampleKo": "너한테 고마워.",
+     "tatoeba": 161750
+    },
+    {
+     "id": "ja-w-bond012",
+     "word": "謝る",
+     "meaning": "사과하다",
+     "sentences": 50,
+     "example": "あなたは謝る必要がない。",
+     "exampleKo": "너는 사과할 필요 없어.",
+     "tatoeba": 3271027
+    },
+    {
+     "id": "ja-w-bond013",
+     "word": "許す",
+     "meaning": "용서하다",
+     "sentences": 24,
+     "example": "今回だけは許してあげる。",
+     "exampleKo": "이번만 용서해 줄게."
+    },
+    {
+     "id": "ja-w-bond014",
+     "word": "喧嘩",
+     "meaning": "싸움",
+     "sentences": 87,
+     "example": "私は喧嘩を終わらせたい。",
+     "exampleKo": "싸움을 끝내고 싶어.",
+     "tatoeba": 157305
+    },
+    {
+     "id": "ja-w-bond015",
+     "word": "仲直り",
+     "meaning": "화해",
+     "sentences": 28,
+     "example": "私と仲直りしてくれませんか。",
+     "exampleKo": "나랑 화해해 줄래요?",
+     "tatoeba": 164881
+    },
+    {
+     "id": "ja-w-bond016",
+     "word": "誤解",
+     "meaning": "오해",
+     "sentences": 79,
+     "example": "私のことを誤解しないでください。",
+     "exampleKo": "저를 오해하지 말아 주세요.",
+     "tatoeba": 164186
+    },
+    {
+     "id": "ja-w-bond017",
+     "word": "近所",
+     "meaning": "근처, 이웃",
+     "sentences": 131,
+     "example": "私は近所の人と仲が良い。",
+     "exampleKo": "나는 이웃이랑 사이가 좋아.",
+     "tatoeba": 157572
+    },
+    {
+     "id": "ja-w-bond018",
+     "word": "同僚",
+     "meaning": "동료",
+     "sentences": 45,
+     "example": "二人とも私の同僚です。",
+     "exampleKo": "둘 다 제 동료예요.",
+     "tatoeba": 123122
+    },
+    {
+     "id": "ja-w-bond019",
+     "word": "断る",
+     "meaning": "거절하다",
+     "sentences": 40,
+     "example": "僕だったら、断るな。",
+     "exampleKo": "나라면 거절할 거야.",
+     "tatoeba": 10230338
+    },
+    {
+     "id": "ja-w-bond020",
+     "word": "頼む",
+     "meaning": "부탁하다",
+     "sentences": 66,
+     "example": "ちょっと頼みたいことがある。",
+     "exampleKo": "부탁하고 싶은 게 있어."
+    },
+    {
+     "id": "ja-w-bond021",
+     "word": "信じる",
+     "meaning": "믿다",
+     "sentences": 148,
+     "example": "君の言うことを信じるよ。",
+     "exampleKo": "네 말 믿어.",
+     "tatoeba": 178569
+    },
+    {
+     "id": "ja-w-bond022",
+     "word": "疑う",
+     "meaning": "의심하다",
+     "sentences": 30,
+     "example": "君のことを疑ったりしないよ。",
+     "exampleKo": "너를 의심하지 않아."
+    },
+    {
+     "id": "ja-w-bond023",
+     "word": "責任",
+     "meaning": "책임",
+     "sentences": 283,
+     "example": "それは君の責任だ。",
+     "exampleKo": "그건 네 책임이야.",
+     "tatoeba": 205246
+    }
+   ]
+  },
+  {
+   "id": "talk",
+   "title": {
+    "ko": "말·연락",
+    "en": "Talking & messages"
+   },
+   "items": [
+    {
+     "id": "ja-w-talk001",
+     "word": "質問",
+     "meaning": "질문",
+     "sentences": 595,
+     "example": "あなたは私に何の質問がしたいのですか。",
+     "exampleKo": "당신은 나에게 어떤 질문이 하고 싶습니까?",
+     "tatoeba": 2172577
+    },
+    {
+     "id": "ja-w-talk002",
+     "word": "答え",
+     "meaning": "대답",
+     "sentences": 648,
+     "example": "彼は質問に答えた。",
+     "exampleKo": "그는 질문에 대답했다",
+     "tatoeba": 11864585
+    },
+    {
+     "id": "ja-w-talk003",
+     "word": "メール",
+     "meaning": "메일, 메시지",
+     "sentences": 209,
+     "example": "あとでメールするね。",
+     "exampleKo": "이따 메시지 보낼게."
+    },
+    {
+     "id": "ja-w-talk004",
+     "word": "話す",
+     "meaning": "이야기하다",
+     "sentences": 866,
+     "example": "まだ話すには早過ぎる。",
+     "exampleKo": "아직 말하기에는 너무 이르다.",
+     "tatoeba": 4898342
+    },
+    {
+     "id": "ja-w-talk005",
+     "word": "返事",
+     "meaning": "답장",
+     "sentences": 263,
+     "example": "手紙の返事をお忘れなく。",
+     "exampleKo": "편지에 답장하는 것을 잊지 않도록.",
+     "tatoeba": 3069828
+    },
+    {
+     "id": "ja-w-talk006",
+     "word": "連絡",
+     "meaning": "연락",
+     "sentences": 290,
+     "example": "これからも連絡を取り合いましょうね。",
+     "exampleKo": "앞으로도 서로 연락하고 지내요.",
+     "tatoeba": 218962
+    },
+    {
+     "id": "ja-w-talk007",
+     "word": "説明",
+     "meaning": "설명",
+     "sentences": 529,
+     "example": "私は彼の説明で納得した。",
+     "exampleKo": "그의 설명을 듣고 납득했어.",
+     "tatoeba": 153837
+    },
+    {
+     "id": "ja-w-talk008",
+     "word": "態度",
+     "meaning": "태도",
+     "sentences": 183,
+     "example": "あなたの態度は良くない。",
+     "exampleKo": "네 태도는 좋지 않아.",
+     "tatoeba": 233110
+    },
+    {
+     "id": "ja-w-talk009",
+     "word": "噂",
+     "meaning": "소문",
+     "sentences": 152,
+     "example": "そこには財宝が隠されているという噂がある。",
+     "exampleKo": "그곳에는 보물이 숨겨져 있다는 소문이 있다.",
+     "tatoeba": 10791874
+    },
+    {
+     "id": "ja-w-talk010",
+     "word": "秘密",
+     "meaning": "비밀",
+     "sentences": 236,
+     "example": "秘密だから、誰にも言わないでね。",
+     "exampleKo": "비밀이라 아무에게도 말하지 말아 줘.",
+     "tatoeba": 9431790
+    },
+    {
+     "id": "ja-w-talk011",
+     "word": "嘘",
+     "meaning": "거짓말",
+     "sentences": 462,
+     "example": "どうしてあなたは嘘をつくの？",
+     "exampleKo": "왜 거짓말을 해요?",
+     "tatoeba": 705669
+    },
+    {
+     "id": "ja-w-talk012",
+     "word": "冗談",
+     "meaning": "농담",
+     "sentences": 241,
+     "example": "彼は冗談を言って一晩中私達を楽しませた。",
+     "exampleKo": "그는 농담을 하면서 밤새도록 우리를 즐겁게 했다.",
+     "tatoeba": 103972
+    },
+    {
+     "id": "ja-w-talk013",
+     "word": "建前",
+     "meaning": "겉으로 하는 말",
+     "sentences": 4,
+     "example": "本音と建前は違う。",
+     "exampleKo": "속마음과 겉말은 달라."
+    },
+    {
+     "id": "ja-w-talk014",
+     "word": "挨拶",
+     "meaning": "인사",
+     "sentences": 93,
+     "example": "挨拶さえしなかった。",
+     "exampleKo": "인사조차 안 했다.",
+     "tatoeba": 10317752
+    },
+    {
+     "id": "ja-w-talk015",
+     "word": "敬語",
+     "meaning": "존댓말",
+     "sentences": 5,
+     "example": "日本語には敬語があります。",
+     "exampleKo": "일본어에는 존댓말이 있어요.",
+     "tatoeba": 122356
+    },
+    {
+     "id": "ja-w-talk016",
+     "word": "方言",
+     "meaning": "사투리",
+     "sentences": 11,
+     "example": "大阪の方言は聞き取り難い。",
+     "exampleKo": "오사카 사투리는 알아듣기 어려워.",
+     "tatoeba": 137547
+    },
+    {
+     "id": "ja-w-talk017",
+     "word": "発音",
+     "meaning": "발음",
+     "sentences": 83,
+     "example": "この単語はどう発音するの？",
+     "exampleKo": "이 단어를 어떻게 발음해요?",
+     "tatoeba": 220643
+    },
+    {
+     "id": "ja-w-talk018",
+     "word": "翻訳",
+     "meaning": "번역",
+     "sentences": 208,
+     "example": "翻訳アプリを使ってる。",
+     "exampleKo": "번역 앱 쓰고 있어."
+    },
+    {
+     "id": "ja-w-talk019",
+     "word": "通訳",
+     "meaning": "통역",
+     "sentences": 36,
+     "example": "叔父は僕に通訳をやらせた。",
+     "exampleKo": "삼촌이 나한테 통역을 시켰어.",
+     "tatoeba": 147907
+    },
+    {
+     "id": "ja-w-talk020",
+     "word": "会話",
+     "meaning": "회화, 대화",
+     "sentences": 116,
+     "example": "日本語の会話を練習したい。",
+     "exampleKo": "일본어 회화 연습하고 싶어."
+    },
+    {
+     "id": "ja-w-talk021",
+     "word": "文章",
+     "meaning": "문장",
+     "sentences": 98,
+     "example": "以下の文章を読んで下さい。",
+     "exampleKo": "아래의 문장을 읽어주십시오.",
+     "tatoeba": 1857516
+    },
+    {
+     "id": "ja-w-talk022",
+     "word": "単語",
+     "meaning": "단어",
+     "sentences": 179,
+     "example": "この単語はどう発音するの？",
+     "exampleKo": "이 단어를 어떻게 발음해요?",
+     "tatoeba": 220643
+    },
+    {
+     "id": "ja-w-talk023",
+     "word": "文法",
+     "meaning": "문법",
+     "sentences": 45,
+     "example": "ドイツ語の文法に手こずっています。",
+     "exampleKo": "독일어 문법에 어려움을 겪고 있습니다.",
+     "tatoeba": 1882985
+    },
+    {
+     "id": "ja-w-talk024",
+     "word": "意見",
+     "meaning": "의견",
+     "sentences": 557,
+     "example": "斬新な意見だね。",
+     "exampleKo": "참신한 의견이네요.",
+     "tatoeba": 3559194
+    },
+    {
+     "id": "ja-w-talk025",
+     "word": "相談",
+     "meaning": "상담",
+     "sentences": 110,
+     "example": "恋愛の悩みは恋人に相談するのが一番だよ。",
+     "exampleKo": "연애의 고민은 연인에게 상담하는 게 가장 좋아.",
+     "tatoeba": 2673243
+    },
+    {
+     "id": "ja-w-talk026",
+     "word": "連絡先",
+     "meaning": "연락처",
+     "sentences": 14,
+     "example": "これが私の連絡先です。",
+     "exampleKo": "이게 제 연락처입니다.",
+     "tatoeba": 12976361
+    },
+    {
+     "id": "ja-w-talk027",
+     "word": "既読",
+     "meaning": "읽음 표시",
+     "sentences": 0,
+     "example": "既読になったのに返事がない。",
+     "exampleKo": "읽었는데 답장이 없어."
+    },
+    {
+     "id": "ja-w-talk028",
+     "word": "通知",
+     "meaning": "알림",
+     "sentences": 23,
+     "example": "通知が来てたよ。",
+     "exampleKo": "알림 왔었어."
+    },
+    {
+     "id": "ja-w-talk029",
+     "word": "画面",
+     "meaning": "화면",
+     "sentences": 28,
+     "example": "画面にひびが入ってる。",
+     "exampleKo": "화면에 금이 갔어.",
+     "tatoeba": 10616336
+    },
+    {
+     "id": "ja-w-talk030",
+     "word": "配信",
+     "meaning": "방송, 스트리밍",
+     "sentences": 10,
+     "example": "今夜、配信を見る予定。",
+     "exampleKo": "오늘 밤 방송 볼 거야."
+    },
+    {
+     "id": "ja-w-talk031",
+     "word": "検索",
+     "meaning": "검색",
+     "sentences": 29,
+     "example": "ネットで検索してみる。",
+     "exampleKo": "인터넷에서 검색해 볼게."
+    },
+    {
+     "id": "ja-w-talk032",
+     "word": "登録",
+     "meaning": "등록",
+     "sentences": 30,
+     "example": "チャンネル登録お願いします。",
+     "exampleKo": "채널 구독 부탁해요.",
+     "tatoeba": 10984804
+    }
+   ]
+  },
+  {
+   "id": "trip",
+   "title": {
+    "ko": "여행·약속",
+    "en": "Trips & plans"
+   },
+   "items": [
+    {
+     "id": "ja-w-trip001",
+     "word": "旅行",
+     "meaning": "여행",
+     "sentences": 551,
+     "example": "ジョージは旅行にかかる費用を計算した。",
+     "exampleKo": "조지는 여행에 드는 비용을 계산했다.",
+     "tatoeba": 2374945
+    },
+    {
+     "id": "ja-w-trip002",
+     "word": "空港",
+     "meaning": "공항",
+     "sentences": 214,
+     "example": "空港はすぐ近くにあります。",
+     "exampleKo": "공항은 아주 가까이 있습니다.",
+     "tatoeba": 179345
+    },
+    {
+     "id": "ja-w-trip003",
+     "word": "ホテル",
+     "meaning": "호텔",
+     "sentences": 450,
+     "example": "ホテルの予約はしたの？",
+     "exampleKo": "호텔 예약은 했어?",
+     "tatoeba": 11105482
+    },
+    {
+     "id": "ja-w-trip004",
+     "word": "約束",
+     "meaning": "약속",
+     "sentences": 580,
+     "example": "彼は誰にも言わないと私に約束した。",
+     "exampleKo": "그는 아무에게도 말하지 않겠다고 내게 약속했다.",
+     "tatoeba": 102300
+    },
+    {
+     "id": "ja-w-trip005",
+     "word": "準備",
+     "meaning": "준비",
+     "sentences": 320,
+     "example": "準備をするためにもっと時間が必要だ。",
+     "exampleKo": "좀더 준비할 시간이 필요해.",
+     "tatoeba": 1963925
+    },
+    {
+     "id": "ja-w-trip006",
+     "word": "予定",
+     "meaning": "예정, 계획",
+     "sentences": 424,
+     "example": "土曜日って、何か予定ある？",
+     "exampleKo": "토요일에는, 뭔가 예정 있어?",
+     "tatoeba": 1749405
+    },
+    {
+     "id": "ja-w-trip007",
+     "word": "計画",
+     "meaning": "계획",
+     "sentences": 934,
+     "example": "彼は計画を実行した。",
+     "exampleKo": "그는 계획을 실행했다.",
+     "tatoeba": 107961
+    },
+    {
+     "id": "ja-w-trip008",
+     "word": "目標",
+     "meaning": "목표",
+     "sentences": 97,
+     "example": "本当の目標は何？",
+     "exampleKo": "진짜 목표는 뭐야?",
+     "tatoeba": 10008430
+    },
+    {
+     "id": "ja-w-trip009",
+     "word": "機会",
+     "meaning": "기회",
+     "sentences": 199,
+     "example": "彼女に自己紹介する機会がなかった。",
+     "exampleKo": "그녀에게 자기소개를 할 기회가 없었다.",
+     "tatoeba": 94820
+    },
+    {
+     "id": "ja-w-trip010",
+     "word": "地図",
+     "meaning": "지도",
+     "sentences": 130,
+     "example": "プエルトリコの位置を地図の上に示しなさい。",
+     "exampleKo": "푸에르토리코의 위치를 지도 위에 보여주세요.",
+     "tatoeba": 197210
+    },
+    {
+     "id": "ja-w-trip011",
+     "word": "住所",
+     "meaning": "주소",
+     "sentences": 163,
+     "example": "彼の住所を忘れてしまった。",
+     "exampleKo": "그의 주소를 잊어버렸다.",
+     "tatoeba": 1882989
+    },
+    {
+     "id": "ja-w-trip012",
+     "word": "引っ越す",
+     "meaning": "이사하다",
+     "sentences": 25,
+     "example": "来月に引っ越す予定です。",
+     "exampleKo": "다음 달에 이사할 예정이에요.",
+     "tatoeba": 78685
+    },
+    {
+     "id": "ja-w-trip013",
+     "word": "留学",
+     "meaning": "유학",
+     "sentences": 87,
+     "example": "どうして留学しようと思われたんですか？",
+     "exampleKo": "왜 유학 가려고 생각하셨어요?",
+     "tatoeba": 3577259
+    },
+    {
+     "id": "ja-w-trip014",
+     "word": "荷物",
+     "meaning": "짐",
+     "sentences": 175,
+     "example": "お預けになる荷物はございますか。",
+     "exampleKo": "맡기실 짐은 있으십니까?",
+     "tatoeba": 226538
+    },
+    {
+     "id": "ja-w-trip015",
+     "word": "切符",
+     "meaning": "표",
+     "sentences": 131,
+     "example": "僕はただで切符をもらった。",
+     "exampleKo": "표를 공짜로 받았어.",
+     "tatoeba": 82056
+    },
+    {
+     "id": "ja-w-trip016",
+     "word": "乗り換え",
+     "meaning": "환승",
+     "sentences": 48,
+     "example": "私は上野駅で乗り換えた。",
+     "exampleKo": "우에노역에서 갈아탔어.",
+     "tatoeba": 155809
+    },
+    {
+     "id": "ja-w-trip017",
+     "word": "渋滞",
+     "meaning": "교통 체증",
+     "sentences": 39,
+     "example": "渋滞のため私達は飛行機に乗り遅れた。",
+     "exampleKo": "길이 막혀서 비행기를 놓쳤어.",
+     "tatoeba": 147986
+    },
+    {
+     "id": "ja-w-trip018",
+     "word": "事故",
+     "meaning": "사고",
+     "sentences": 649,
+     "example": "昨日、高速道路で事故があった。",
+     "exampleKo": "어제 고속도로에서 사고가 있었다.",
+     "tatoeba": 169896
+    },
+    {
+     "id": "ja-w-trip019",
+     "word": "時差",
+     "meaning": "시차",
+     "sentences": 10,
+     "example": "私はまだ時差ぼけに苦しんでいます。",
+     "exampleKo": "아직 시차 적응 때문에 힘들어요.",
+     "tatoeba": 158880
+    },
+    {
+     "id": "ja-w-trip020",
+     "word": "飛行機",
+     "meaning": "비행기",
+     "sentences": 552,
+     "example": "天気が悪くて飛行機が延着した。",
+     "exampleKo": "날씨가 나빠서, 비행기가 연착되었다.",
+     "tatoeba": 6608699
+    },
+    {
+     "id": "ja-w-trip021",
+     "word": "パスポート",
+     "meaning": "여권",
+     "sentences": 85,
+     "example": "これが私のパスポートです。",
+     "exampleKo": "여기 제 여권입니다.",
+     "tatoeba": 13152349
+    },
+    {
+     "id": "ja-w-trip022",
+     "word": "お土産",
+     "meaning": "기념품",
+     "sentences": 41,
+     "example": "お土産、何がいい？",
+     "exampleKo": "기념품 뭐가 좋아?"
+    },
+    {
+     "id": "ja-w-trip023",
+     "word": "観光",
+     "meaning": "관광",
+     "sentences": 39,
+     "example": "僕たち、横浜を観光したよ。",
+     "exampleKo": "우리 요코하마 관광했어.",
+     "tatoeba": 9550094
+    },
+    {
+     "id": "ja-w-trip024",
+     "word": "温泉",
+     "meaning": "온천",
+     "sentences": 28,
+     "example": "私はひなびた温泉が好きだ。",
+     "exampleKo": "나는 한적한 온천이 좋아.",
+     "tatoeba": 159034
+    },
+    {
+     "id": "ja-w-trip025",
+     "word": "お祭り",
+     "meaning": "축제",
+     "sentences": 19,
+     "example": "一緒にお祭りに行こう。",
+     "exampleKo": "같이 축제 가자."
+    },
+    {
+     "id": "ja-w-trip026",
+     "word": "花火",
+     "meaning": "불꽃놀이",
+     "sentences": 25,
+     "example": "花火っていつからあるんですか？",
+     "exampleKo": "불꽃놀이는 언제부터 하나요?",
+     "tatoeba": 3023056
+    },
+    {
+     "id": "ja-w-trip027",
+     "word": "お正月",
+     "meaning": "설날",
+     "sentences": 17,
+     "example": "お正月は家族と過ごす。",
+     "exampleKo": "설날엔 가족이랑 보내."
+    },
+    {
+     "id": "ja-w-trip028",
+     "word": "お盆",
+     "meaning": "오봉 (일본의 추석)",
+     "sentences": 9,
+     "example": "お盆が近づいてきた。",
+     "exampleKo": "오봉이 다가왔어.",
+     "tatoeba": 226586
+    },
+    {
+     "id": "ja-w-trip029",
+     "word": "予約",
+     "meaning": "예약",
+     "sentences": 191,
+     "example": "ホテルの予約はしたの？",
+     "exampleKo": "호텔 예약은 했어?",
+     "tatoeba": 11105482
+    },
+    {
+     "id": "ja-w-trip030",
+     "word": "キャンセル",
+     "meaning": "취소",
+     "sentences": 34,
+     "example": "一つをキャンセルしました。",
+     "exampleKo": "하나를 취소했습니다",
+     "tatoeba": 10826184
+    },
+    {
+     "id": "ja-w-trip031",
+     "word": "変更",
+     "meaning": "변경",
+     "sentences": 112,
+     "example": "予定を変更してもいい？",
+     "exampleKo": "일정 바꿔도 돼?"
+    },
+    {
+     "id": "ja-w-trip032",
+     "word": "遅刻",
+     "meaning": "지각",
+     "sentences": 217,
+     "example": "遅刻してごめんなさい。",
+     "exampleKo": "늦어서 죄송합니다.",
+     "tatoeba": 808701
+    },
+    {
+     "id": "ja-w-trip033",
+     "word": "素敵",
+     "meaning": "멋짐",
+     "sentences": 168,
+     "example": "素敵な考えね。",
+     "exampleKo": "멋진 생각이네.",
+     "tatoeba": 8510961
+    },
+    {
+     "id": "ja-w-trip034",
+     "word": "約束する",
+     "meaning": "약속하다",
+     "sentences": 39,
+     "example": "仕事は俺が見つけてやる。約束するよ。",
+     "exampleKo": "일자리는 내가 찾아 줄게. 약속해.",
+     "tatoeba": 11257872
+    },
+    {
+     "id": "ja-w-trip035",
+     "word": "待ち合わせ",
+     "meaning": "만나기로 한 약속",
+     "sentences": 18,
+     "example": "待ち合わせは駅の前でいい？",
+     "exampleKo": "역 앞에서 만나는 걸로 할까?"
+    },
+    {
+     "id": "ja-w-trip036",
+     "word": "旅",
+     "meaning": "여행",
+     "sentences": 196,
+     "example": "旅に出たら地酒を飲まなきゃ。",
+     "exampleKo": "여행을 나오면 고장 술을 마시지 않으면 안 되지.",
+     "tatoeba": 78209
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "title": {
+    "ko": "음식·건강",
+    "en": "Food & health"
+   },
+   "items": [
+    {
+     "id": "ja-w-food001",
+     "word": "健康",
+     "meaning": "건강",
+     "sentences": 565,
+     "example": "新鮮な果物はあなたの健康に良いです。",
+     "exampleKo": "신선한 과일은 당신의 건강에 좋습니다.",
+     "tatoeba": 13543100
+    },
+    {
+     "id": "ja-w-food002",
+     "word": "風邪",
+     "meaning": "감기",
+     "sentences": 317,
+     "example": "私は風邪をひいた。",
+     "exampleKo": "난 감기에 걸렸어.",
+     "tatoeba": 152960
+    },
+    {
+     "id": "ja-w-food003",
+     "word": "熱",
+     "meaning": "열",
+     "sentences": 282,
+     "example": "風邪をひいて熱がある。",
+     "exampleKo": "감기에 걸려서 열이 나.",
+     "tatoeba": 83959
+    },
+    {
+     "id": "ja-w-food004",
+     "word": "薬",
+     "meaning": "약",
+     "sentences": 367,
+     "example": "薬の効き目がだんだんなくなってきた。",
+     "exampleKo": "약의 효과가 점점 없어지기 시작했다.",
+     "tatoeba": 79491
+    },
+    {
+     "id": "ja-w-food005",
+     "word": "怪我",
+     "meaning": "부상",
+     "sentences": 112,
+     "example": "怪我で血が流れた。",
+     "exampleKo": "상처에서 피가 흘렀다.",
+     "tatoeba": 1944366
+    },
+    {
+     "id": "ja-w-food006",
+     "word": "運動",
+     "meaning": "운동",
+     "sentences": 191,
+     "example": "私は毎朝軽い運動をする。",
+     "exampleKo": "나는 매일 아침 가볍게 운동해.",
+     "tatoeba": 152740
+    },
+    {
+     "id": "ja-w-food007",
+     "word": "体重",
+     "meaning": "체중",
+     "sentences": 132,
+     "example": "私は体重が減らなかった。",
+     "exampleKo": "체중이 안 줄었어.",
+     "tatoeba": 155247
+    },
+    {
+     "id": "ja-w-food008",
+     "word": "ダイエット",
+     "meaning": "다이어트",
+     "sentences": 84,
+     "example": "私はダイエットしています。",
+     "exampleKo": "나 다이어트 중이야.",
+     "tatoeba": 159635
+    },
+    {
+     "id": "ja-w-food009",
+     "word": "睡眠",
+     "meaning": "수면",
+     "sentences": 52,
+     "example": "私は十分な睡眠をとった。",
+     "exampleKo": "나 푹 잤어.",
+     "tatoeba": 156015
+    },
+    {
+     "id": "ja-w-food010",
+     "word": "疲れ",
+     "meaning": "피로",
+     "sentences": 622,
+     "example": "私は本当に疲れている。",
+     "exampleKo": "나는 정말 피곤해지고 있다.",
+     "tatoeba": 9928745
+    },
+    {
+     "id": "ja-w-food011",
+     "word": "ストレス",
+     "meaning": "스트레스",
+     "sentences": 54,
+     "example": "最近、ストレスを感じます。",
+     "exampleKo": "최근에 스트레스를 느낍니다.",
+     "tatoeba": 11571518
+    },
+    {
+     "id": "ja-w-food012",
+     "word": "休憩",
+     "meaning": "휴식",
+     "sentences": 87,
+     "example": "休憩していいよ。",
+     "exampleKo": "쉬어도 돼.",
+     "tatoeba": 8644948
+    },
+    {
+     "id": "ja-w-food013",
+     "word": "料理する",
+     "meaning": "요리하다",
+     "sentences": 18,
+     "example": "夫は私より上手に料理する。",
+     "exampleKo": "남편이 나보다 요리를 잘해.",
+     "tatoeba": 84992
+    },
+    {
+     "id": "ja-w-food014",
+     "word": "鍵",
+     "meaning": "열쇠",
+     "sentences": 383,
+     "example": "私は表玄関に鍵をかけた。",
+     "exampleKo": "나는 앞쪽 현관을 열쇠로 잠갔다.",
+     "tatoeba": 2139083
+    },
+    {
+     "id": "ja-w-food015",
+     "word": "味",
+     "meaning": "맛",
+     "sentences": 256,
+     "example": "私は玉ねぎの味が嫌いだ。",
+     "exampleKo": "나는 양파 맛이 싫어.",
+     "tatoeba": 157580
+    },
+    {
+     "id": "ja-w-food016",
+     "word": "甘い",
+     "meaning": "달다",
+     "sentences": 122,
+     "example": "私は甘いものが好きだ。",
+     "exampleKo": "나는 단 게 좋아.",
+     "tatoeba": 157810
+    },
+    {
+     "id": "ja-w-food017",
+     "word": "辛い",
+     "meaning": "맵다",
+     "sentences": 64,
+     "example": "私は辛いので韓国料理が好きです。",
+     "exampleKo": "매워서 한국 음식이 좋아요.",
+     "tatoeba": 155681
+    },
+    {
+     "id": "ja-w-food018",
+     "word": "しょっぱい",
+     "meaning": "짜다",
+     "sentences": 2,
+     "example": "この料理、しょっぱいよ。",
+     "exampleKo": "이 요리 짜.",
+     "tatoeba": 9831568
+    },
+    {
+     "id": "ja-w-food019",
+     "word": "苦い",
+     "meaning": "쓰다",
+     "sentences": 25,
+     "example": "私は苦いものが好きだ。",
+     "exampleKo": "나는 쓴 게 좋아.",
+     "tatoeba": 157543
+    },
+    {
+     "id": "ja-w-food020",
+     "word": "お腹",
+     "meaning": "배",
+     "sentences": 221,
+     "example": "私、お腹が痛いよ。",
+     "exampleKo": "나 배 아파.",
+     "tatoeba": 10247058
+    },
+    {
+     "id": "ja-w-food021",
+     "word": "喉",
+     "meaning": "목",
+     "sentences": 99,
+     "example": "喉が痛い。",
+     "exampleKo": "목이 아파."
+    },
+    {
+     "id": "ja-w-food022",
+     "word": "背中",
+     "meaning": "등",
+     "sentences": 79,
+     "example": "彼女の視線を背中に感じた。",
+     "exampleKo": "그녀의 시선을 등 뒤에서 느꼈다.",
+     "tatoeba": 94362
+    },
+    {
+     "id": "ja-w-food023",
+     "word": "髪",
+     "meaning": "머리카락",
+     "sentences": 352,
+     "example": "髪ね、黒に染めたの。",
+     "exampleKo": "머리 검은색으로 염색했어.",
+     "tatoeba": 11495417
+    },
+    {
+     "id": "ja-w-food024",
+     "word": "一生懸命",
+     "meaning": "열심히",
+     "sentences": 408,
+     "example": "私は一生懸命勉強している。",
+     "exampleKo": "나는 열심히 공부하고 있어.",
+     "tatoeba": 158449
+    },
+    {
+     "id": "ja-w-food025",
+     "word": "節約",
+     "meaning": "절약",
+     "sentences": 48,
+     "example": "私たちは時間とお金を節約したほうがよい。",
+     "exampleKo": "우리는 시간과 돈을 아끼는 게 좋겠어.",
+     "tatoeba": 165710
+    }
+   ]
+  },
+  {
+   "id": "life",
+   "title": {
+    "ko": "생활·그 밖의 말",
+    "en": "Daily life & more"
+   },
+   "items": [
+    {
+     "id": "ja-w-life001",
+     "word": "見つめる",
+     "meaning": "바라보다",
+     "sentences": 6,
+     "example": "そんなに見つめないで、恥ずかしい。",
+     "exampleKo": "그렇게 쳐다보지 마, 부끄러워."
+    },
+    {
+     "id": "ja-w-life002",
+     "word": "照れる",
+     "meaning": "쑥스러워하다",
+     "sentences": 0,
+     "example": "褒められると照れる。",
+     "exampleKo": "칭찬받으면 쑥스러워."
+    },
+    {
+     "id": "ja-w-life003",
+     "word": "我慢",
+     "meaning": "참음",
+     "sentences": 212,
+     "example": "彼らの我慢も限界だった。",
+     "exampleKo": "그들의 인내심도 한계였다.",
+     "tatoeba": 98542
+    },
+    {
+     "id": "ja-w-life004",
+     "word": "支える",
+     "meaning": "지탱하다, 힘이 되다",
+     "sentences": 16,
+     "example": "いつも支えてくれてありがとう。",
+     "exampleKo": "늘 힘이 되어 줘서 고마워."
+    },
+    {
+     "id": "ja-w-life005",
+     "word": "性格",
+     "meaning": "성격",
+     "sentences": 130,
+     "example": "性格もいい上に、格好よかった！",
+     "exampleKo": "성격도 좋은 데다가 얼굴도 잘생겼어!",
+     "tatoeba": 10272876
+    },
+    {
+     "id": "ja-w-life006",
+     "word": "趣味",
+     "meaning": "취미",
+     "sentences": 209,
+     "example": "水泳は私の趣味です。",
+     "exampleKo": "제 취미는 수영입니다.",
+     "tatoeba": 143684
+    },
+    {
+     "id": "ja-w-life007",
+     "word": "経験",
+     "meaning": "경험",
+     "sentences": 271,
+     "example": "私はそれをじかに経験した。",
+     "exampleKo": "나는 그걸 직접 경험했어.",
+     "tatoeba": 10919601
+    },
+    {
+     "id": "ja-w-life008",
+     "word": "思い出",
+     "meaning": "추억",
+     "sentences": 450,
+     "example": "一緒にいい思い出を作ろう。",
+     "exampleKo": "같이 좋은 추억 만들자."
+    },
+    {
+     "id": "ja-w-life009",
+     "word": "将来",
+     "meaning": "장래",
+     "sentences": 180,
+     "example": "母は私の将来を案じている。",
+     "exampleKo": "엄마는 내 장래를 걱정하셔.",
+     "tatoeba": 82946
+    },
+    {
+     "id": "ja-w-life010",
+     "word": "未来",
+     "meaning": "미래",
+     "sentences": 85,
+     "example": "君には明るい未来がある。",
+     "exampleKo": "너한테는 밝은 미래가 있어.",
+     "tatoeba": 178645
+    },
+    {
+     "id": "ja-w-life011",
+     "word": "過去",
+     "meaning": "과거",
+     "sentences": 148,
+     "example": "僕は、過去を捨てたんだ。",
+     "exampleKo": "나는 과거를 버렸어.",
+     "tatoeba": 10906712
+    },
+    {
+     "id": "ja-w-life012",
+     "word": "普段",
+     "meaning": "평소",
+     "sentences": 156,
+     "example": "仕事では普段フランス語は話さないよ。",
+     "exampleKo": "일 할 때는 보통 프랑스어로 말하지 않아요.",
+     "tatoeba": 9751998
+    },
+    {
+     "id": "ja-w-life013",
+     "word": "特別",
+     "meaning": "특별",
+     "sentences": 87,
+     "example": "今日は特別な日だね。",
+     "exampleKo": "오늘은 특별한 날이네."
+    },
+    {
+     "id": "ja-w-life014",
+     "word": "大事",
+     "meaning": "중요함",
+     "sentences": 161,
+     "example": "あなたは自分のお母さんを大事にしてますか？",
+     "exampleKo": "당신은 어머니를 사랑합니까?",
+     "tatoeba": 9819941
+    },
+    {
+     "id": "ja-w-life015",
+     "word": "自由",
+     "meaning": "자유",
+     "sentences": 332,
+     "example": "何でもご自由に召し上がってください。",
+     "exampleKo": "먹고 싶은 것들 마음껏 먹어.",
+     "tatoeba": 187837
+    },
+    {
+     "id": "ja-w-life016",
+     "word": "平和",
+     "meaning": "평화",
+     "sentences": 151,
+     "example": "私達は平和を望みます。",
+     "exampleKo": "우리는 평화를 바라요.",
+     "tatoeba": 151287
+    },
+    {
+     "id": "ja-w-life017",
+     "word": "決める",
+     "meaning": "정하다",
+     "sentences": 81,
+     "example": "それは君の決めることだ。",
+     "exampleKo": "그건 네가 정할 일이야.",
+     "tatoeba": 205251
+    },
+    {
+     "id": "ja-w-life018",
+     "word": "選ぶ",
+     "meaning": "고르다",
+     "sentences": 95,
+     "example": "プレゼントを選ぶのは難しい。",
+     "exampleKo": "선물 고르는 건 어려워."
+    },
+    {
+     "id": "ja-w-life019",
+     "word": "比べる",
+     "meaning": "비교하다",
+     "sentences": 35,
+     "example": "人と比べなくていいよ。",
+     "exampleKo": "남이랑 비교 안 해도 돼."
+    },
+    {
+     "id": "ja-w-life020",
+     "word": "変わる",
+     "meaning": "바뀌다",
+     "sentences": 88,
+     "example": "俺の気が変わる前に、行け。",
+     "exampleKo": "내 마음이 바뀌기 전에 가.",
+     "tatoeba": 11199139
+    },
+    {
+     "id": "ja-w-life021",
+     "word": "続ける",
+     "meaning": "계속하다",
+     "sentences": 124,
+     "example": "だから俺は負け続けるんだ。",
+     "exampleKo": "그래서 나는 계속 지는 거야.",
+     "tatoeba": 10942478
+    },
+    {
+     "id": "ja-w-life022",
+     "word": "やめる",
+     "meaning": "그만두다",
+     "sentences": 88,
+     "example": "君は酒をやめるべきだ。",
+     "exampleKo": "너 술 끊어야 해.",
+     "tatoeba": 177155
+    },
+    {
+     "id": "ja-w-life023",
+     "word": "頑張る",
+     "meaning": "힘내다, 노력하다",
+     "sentences": 24,
+     "example": "一緒に頑張ろうね。",
+     "exampleKo": "같이 힘내자."
+    },
+    {
+     "id": "ja-w-life024",
+     "word": "諦める",
+     "meaning": "포기하다",
+     "sentences": 19,
+     "example": "諦めないで、君ならできる。",
+     "exampleKo": "포기하지 마, 넌 할 수 있어."
+    },
+    {
+     "id": "ja-w-life025",
+     "word": "期待",
+     "meaning": "기대",
+     "sentences": 226,
+     "example": "期待しててね。",
+     "exampleKo": "기대해 줘."
+    },
+    {
+     "id": "ja-w-life026",
+     "word": "想像",
+     "meaning": "상상",
+     "sentences": 106,
+     "example": "私は月での生活を想像してみた。",
+     "exampleKo": "달에서의 생활을 상상해 봤어.",
+     "tatoeba": 157325
+    },
+    {
+     "id": "ja-w-life027",
+     "word": "夢中",
+     "meaning": "몰두함",
+     "sentences": 144,
+     "example": "彼は仕事に夢中だ。",
+     "exampleKo": "그는 업무에 정신이 없다.",
+     "tatoeba": 106641
+    },
+    {
+     "id": "ja-w-life028",
+     "word": "経済",
+     "meaning": "경제",
+     "sentences": 90,
+     "example": "観光は私の国の経済にとって重要です。",
+     "exampleKo": "관광은 우리나라 경제에 중요해요.",
+     "tatoeba": 183805
+    },
+    {
+     "id": "ja-w-life029",
+     "word": "文化",
+     "meaning": "문화",
+     "sentences": 89,
+     "example": "日本の文化が好き。",
+     "exampleKo": "일본 문화가 좋아."
+    },
+    {
+     "id": "ja-w-life030",
+     "word": "習慣",
+     "meaning": "습관",
+     "sentences": 228,
+     "example": "寝る前に本を読むのが習慣なんだ。",
+     "exampleKo": "자기 전에 책 읽는 게 습관이야."
+    },
+    {
+     "id": "ja-w-life031",
+     "word": "伝統",
+     "meaning": "전통",
+     "sentences": 22,
+     "example": "お正月の伝統を教えて。",
+     "exampleKo": "설날 전통 알려 줘."
+    },
+    {
+     "id": "ja-w-life032",
+     "word": "季節",
+     "meaning": "계절",
+     "sentences": 106,
+     "example": "桜の季節が大好きです。",
+     "exampleKo": "벚꽃의 계절을 정말 좋아합니다.",
+     "tatoeba": 12163699
+    },
+    {
+     "id": "ja-w-life033",
+     "word": "景色",
+     "meaning": "경치",
+     "sentences": 115,
+     "example": "私は窓からの景色を眺めた。",
+     "exampleKo": "창밖 경치를 바라봤어.",
+     "tatoeba": 155357
+    },
+    {
+     "id": "ja-w-life034",
+     "word": "空気",
+     "meaning": "공기, 분위기",
+     "sentences": 205,
+     "example": "私達には新鮮な空気が必要だ。",
+     "exampleKo": "우리에겐 신선한 공기가 필요해.",
+     "tatoeba": 152013
+    },
+    {
+     "id": "ja-w-life035",
+     "word": "雰囲気",
+     "meaning": "분위기",
+     "sentences": 65,
+     "example": "このカフェ、雰囲気いいね。",
+     "exampleKo": "이 카페 분위기 좋다."
+    },
+    {
+     "id": "ja-w-life036",
+     "word": "環境",
+     "meaning": "환경",
+     "sentences": 105,
+     "example": "僕は新しい環境に順応するのが遅い。",
+     "exampleKo": "나는 새 환경에 적응하는 게 느려.",
+     "tatoeba": 81840
+    },
+    {
+     "id": "ja-w-life037",
+     "word": "都会",
+     "meaning": "도시",
+     "sentences": 72,
+     "example": "俺は今、都会に住んでいる。",
+     "exampleKo": "나 지금 도시에 살아.",
+     "tatoeba": 188362
+    },
+    {
+     "id": "ja-w-life038",
+     "word": "田舎",
+     "meaning": "시골",
+     "sentences": 143,
+     "example": "田舎には娯楽がない。",
+     "exampleKo": "시골에는 즐길 거리가 없다.",
+     "tatoeba": 1771684
+    },
+    {
+     "id": "ja-w-life039",
+     "word": "実家",
+     "meaning": "본가",
+     "sentences": 17,
+     "example": "お正月は実家に帰るよ。",
+     "exampleKo": "설날엔 본가에 갈 거야."
+    },
+    {
+     "id": "ja-w-life040",
+     "word": "一人暮らし",
+     "meaning": "자취",
+     "sentences": 29,
+     "example": "私は一人暮らしには慣れている。",
+     "exampleKo": "나는 자취에 익숙해.",
+     "tatoeba": 158455
+    },
+    {
+     "id": "ja-w-life041",
+     "word": "卒業",
+     "meaning": "졸업",
+     "sentences": 134,
+     "example": "私は去年大学を卒業した。",
+     "exampleKo": "나는 작년에 대학을 졸업했어.",
+     "tatoeba": 157646
+    },
+    {
+     "id": "ja-w-life042",
+     "word": "就職",
+     "meaning": "취직",
+     "sentences": 42,
+     "example": "彼は保険会社に就職した。",
+     "exampleKo": "그는 보험 회사에 취직했어.",
+     "tatoeba": 100096
+    },
+    {
+     "id": "ja-w-life043",
+     "word": "給料",
+     "meaning": "월급",
+     "sentences": 155,
+     "example": "給料のほかに、彼は投資からも金が入ってくる。",
+     "exampleKo": "급료와는 별도로, 그는 투자로도 돈을 받았다.",
+     "tatoeba": 182353
+    },
+    {
+     "id": "ja-w-life044",
+     "word": "残業",
+     "meaning": "야근",
+     "sentences": 21,
+     "example": "今日も残業になりそう。",
+     "exampleKo": "오늘도 야근할 것 같아."
+    },
+    {
+     "id": "ja-w-life045",
+     "word": "上司",
+     "meaning": "상사",
+     "sentences": 161,
+     "example": "彼女は私の上司でした。",
+     "exampleKo": "그는 내 상사였다.",
+     "tatoeba": 8406090
+    },
+    {
+     "id": "ja-w-life046",
+     "word": "会議",
+     "meaning": "회의",
+     "sentences": 340,
+     "example": "会議はここで開かれた。",
+     "exampleKo": "회의는 여기서 열렸다.",
+     "tatoeba": 185370
+    },
+    {
+     "id": "ja-w-life047",
+     "word": "締め切り",
+     "meaning": "마감",
+     "sentences": 24,
+     "example": "締め切りは明日だ。",
+     "exampleKo": "마감은 내일이야."
+    },
+    {
+     "id": "ja-w-life048",
+     "word": "面接",
+     "meaning": "면접",
+     "sentences": 37,
+     "example": "明日、面接があるんだ。",
+     "exampleKo": "내일 면접 있어."
+    },
+    {
+     "id": "ja-w-life049",
+     "word": "試験",
+     "meaning": "시험",
+     "sentences": 577,
+     "example": "試験、絶対に合格しろよ。",
+     "exampleKo": "시험 무조건 합격해.",
+     "tatoeba": 10645419
+    },
+    {
+     "id": "ja-w-life050",
+     "word": "合格",
+     "meaning": "합격",
+     "sentences": 253,
+     "example": "試験、絶対に合格しろよ。",
+     "exampleKo": "시험 무조건 합격해.",
+     "tatoeba": 10645419
+    },
+    {
+     "id": "ja-w-life051",
+     "word": "宿題",
+     "meaning": "숙제",
+     "sentences": 474,
+     "example": "宿題は自分でやりなさい。",
+     "exampleKo": "숙제는 스스로 하세요.",
+     "tatoeba": 147875
+    },
+    {
+     "id": "ja-w-life052",
+     "word": "授業",
+     "meaning": "수업",
+     "sentences": 381,
+     "example": "私は彼の授業がなつかしい。",
+     "exampleKo": "그 사람 수업이 그리워.",
+     "tatoeba": 153886
+    },
+    {
+     "id": "ja-w-life053",
+     "word": "成績",
+     "meaning": "성적",
+     "sentences": 101,
+     "example": "今学期は成績が上がった。",
+     "exampleKo": "이번 학기엔 성적이 올랐어."
+    },
+    {
+     "id": "ja-w-life054",
+     "word": "散歩",
+     "meaning": "산책",
+     "sentences": 344,
+     "example": "私たちと一緒に散歩しませんか。",
+     "exampleKo": "우리들하고 같이 산책하지 않으실래요?",
+     "tatoeba": 167176
+    },
+    {
+     "id": "ja-w-life055",
+     "word": "掃除",
+     "meaning": "청소",
+     "sentences": 219,
+     "example": "週末に部屋を掃除しよう。",
+     "exampleKo": "주말에 방 청소하자."
+    },
+    {
+     "id": "ja-w-life056",
+     "word": "洗濯",
+     "meaning": "빨래",
+     "sentences": 64,
+     "example": "私は掃除や洗濯が嫌いです。",
+     "exampleKo": "나는 청소랑 빨래가 싫어.",
+     "tatoeba": 10982419
+    },
+    {
+     "id": "ja-w-life057",
+     "word": "買い物",
+     "meaning": "쇼핑",
+     "sentences": 244,
+     "example": "彼女は買い物に行った。",
+     "exampleKo": "그녀는 장보러 갔다.",
+     "tatoeba": 2202393
+    },
+    {
+     "id": "ja-w-life058",
+     "word": "値段",
+     "meaning": "가격",
+     "sentences": 211,
+     "example": "なんでこんな値段で売っているのかわからない。",
+     "exampleKo": "왜 이런 가격으로 팔고 있는지 모르겠다.",
+     "tatoeba": 11001546
+    },
+    {
+     "id": "ja-w-life059",
+     "word": "割引",
+     "meaning": "할인",
+     "sentences": 13,
+     "example": "夜間の割引はありますか。",
+     "exampleKo": "야간 할인 있어요?",
+     "tatoeba": 79700
+    },
+    {
+     "id": "ja-w-life060",
+     "word": "財布",
+     "meaning": "지갑",
+     "sentences": 185,
+     "example": "財布をなくしたの。",
+     "exampleKo": "지갑을 잃어버렸어.",
+     "tatoeba": 5069
+    },
+    {
+     "id": "ja-w-life061",
+     "word": "傘",
+     "meaning": "우산",
+     "sentences": 276,
+     "example": "私は傘をなくした。",
+     "exampleKo": "나는 우산을 잃어버렸다.",
+     "tatoeba": 156661
+    },
+    {
+     "id": "ja-w-life062",
+     "word": "着物",
+     "meaning": "기모노",
+     "sentences": 40,
+     "example": "着物を着てみたい。",
+     "exampleKo": "기모노 입어 보고 싶어."
+    },
+    {
+     "id": "ja-w-life063",
+     "word": "本気",
+     "meaning": "진심",
+     "sentences": 87,
+     "example": "本気じゃないんだよな。",
+     "exampleKo": "진심일 리 없어.",
+     "tatoeba": 10117965
+    },
+    {
+     "id": "ja-w-life064",
+     "word": "遠慮",
+     "meaning": "사양, 조심",
+     "sentences": 84,
+     "example": "遠慮なく私に質問して下さい。",
+     "exampleKo": "편하게 질문하세요.",
+     "tatoeba": 188639
+    },
+    {
+     "id": "ja-w-life065",
+     "word": "迷惑",
+     "meaning": "폐",
+     "sentences": 84,
+     "example": "迷惑かけてごめんね。",
+     "exampleKo": "폐 끼쳐서 미안해."
+    },
+    {
+     "id": "ja-w-life066",
+     "word": "充電",
+     "meaning": "충전",
+     "sentences": 23,
+     "example": "俺のスマホ、充電してるよ。",
+     "exampleKo": "내 폰 충전 중이야.",
+     "tatoeba": 9725650
+    },
+    {
+     "id": "ja-w-life067",
+     "word": "間に合う",
+     "meaning": "시간에 맞추다",
+     "sentences": 127,
+     "example": "彼は列車に間に合うでしょうか。",
+     "exampleKo": "그는 열차에 제때 탈 수 있을까요?",
+     "tatoeba": 98900
+    },
+    {
+     "id": "ja-w-life068",
+     "word": "急ぐ",
+     "meaning": "서두르다",
+     "sentences": 32,
+     "example": "私たちは急ぐ必要がある。",
+     "exampleKo": "우리 서둘러야 해.",
+     "tatoeba": 2040883
+    },
+    {
+     "id": "ja-w-life069",
+     "word": "疲れる",
+     "meaning": "지치다",
+     "sentences": 14,
+     "example": "この仕事は本当に疲れる。",
+     "exampleKo": "이 일 정말 지친다."
+    },
+    {
+     "id": "ja-w-life070",
+     "word": "休む",
+     "meaning": "쉬다",
+     "sentences": 44,
+     "example": "今日はゆっくり休んでね。",
+     "exampleKo": "오늘은 푹 쉬어."
+    },
+    {
+     "id": "ja-w-life071",
+     "word": "眠る",
+     "meaning": "잠들다",
+     "sentences": 37,
+     "example": "無色の緑の概念が激しく眠る。",
+     "exampleKo": "무색의 초록색 관념들이 격렬히 잔다.",
+     "tatoeba": 719084
+    },
+    {
+     "id": "ja-w-life072",
+     "word": "目覚める",
+     "meaning": "깨어나다",
+     "sentences": 10,
+     "example": "朝、君の声で目覚めたい。",
+     "exampleKo": "아침에 네 목소리로 깨고 싶어."
+    },
+    {
+     "id": "ja-w-life073",
+     "word": "見つける",
+     "meaning": "찾아내다",
+     "sentences": 129,
+     "example": "私の家を見つけるの、大変だった？",
+     "exampleKo": "우리 집을 찾는 거, 힘들었어?",
+     "tatoeba": 8772423
+    },
+    {
+     "id": "ja-w-life074",
+     "word": "探す",
+     "meaning": "찾다",
+     "sentences": 58,
+     "example": "鍵を探すのを手伝って。",
+     "exampleKo": "열쇠 찾는 것 좀 도와줘."
+    },
+    {
+     "id": "ja-w-life075",
+     "word": "落とす",
+     "meaning": "떨어뜨리다",
+     "sentences": 37,
+     "example": "スマホを落とさないでね。",
+     "exampleKo": "폰 떨어뜨리지 마."
+    },
+    {
+     "id": "ja-w-life076",
+     "word": "拾う",
+     "meaning": "줍다",
+     "sentences": 8,
+     "example": "タクシーを拾うのに苦労した。",
+     "exampleKo": "택시 잡느라 고생했어.",
+     "tatoeba": 203697
+    },
+    {
+     "id": "ja-w-life077",
+     "word": "貸す",
+     "meaning": "빌려주다",
+     "sentences": 35,
+     "example": "彼は君に本を貸すだろう。",
+     "exampleKo": "그가 너한테 책을 빌려줄 거야.",
+     "tatoeba": 108051
+    },
+    {
+     "id": "ja-w-life078",
+     "word": "借りる",
+     "meaning": "빌리다",
+     "sentences": 27,
+     "example": "ペン、借りてもいい？",
+     "exampleKo": "펜 빌려도 돼?"
+    },
+    {
+     "id": "ja-w-life079",
+     "word": "返す",
+     "meaning": "돌려주다",
+     "sentences": 80,
+     "example": "君はいつも言い返す。",
+     "exampleKo": "너는 맨날 말대꾸해.",
+     "tatoeba": 177921
+    },
+    {
+     "id": "ja-w-life080",
+     "word": "払う",
+     "meaning": "내다, 지불하다",
+     "sentences": 137,
+     "example": "今日は、私が払うわ。",
+     "exampleKo": "오늘은 내가 낼게.",
+     "tatoeba": 11674951
+    },
+    {
+     "id": "ja-w-life081",
+     "word": "届く",
+     "meaning": "도착하다, 닿다",
+     "sentences": 55,
+     "example": "ここからでも声は届くよ。",
+     "exampleKo": "여기서도 목소리 들려.",
+     "tatoeba": 224786
+    },
+    {
+     "id": "ja-w-life082",
+     "word": "受け取る",
+     "meaning": "받다",
+     "sentences": 38,
+     "example": "荷物を受け取ったよ。",
+     "exampleKo": "택배 받았어."
+    },
+    {
+     "id": "ja-w-life083",
+     "word": "渡す",
+     "meaning": "건네다",
+     "sentences": 45,
+     "example": "君に渡す物がある。",
+     "exampleKo": "너한테 줄 게 있어.",
+     "tatoeba": 1866514
+    },
+    {
+     "id": "ja-w-life084",
+     "word": "誘う",
+     "meaning": "권하다, 꼬시다",
+     "sentences": 18,
+     "example": "今度、彼女を映画に誘うつもり。",
+     "exampleKo": "다음에 그녀한테 영화 보자고 할 거야."
+    },
+    {
+     "id": "ja-w-life085",
+     "word": "伝える",
+     "meaning": "전하다",
+     "sentences": 90,
+     "example": "気持ちを伝えるのは難しい。",
+     "exampleKo": "마음을 전하는 건 어려워."
+    },
+    {
+     "id": "ja-w-life086",
+     "word": "気づく",
+     "meaning": "깨닫다",
+     "sentences": 16,
+     "example": "彼女は後で私の真意に気づくでしょう。",
+     "exampleKo": "그녀는 나중에 내 진심을 알아챌 거야.",
+     "tatoeba": 90170
+    },
+    {
+     "id": "ja-w-life087",
+     "word": "感じる",
+     "meaning": "느끼다",
+     "sentences": 127,
+     "example": "私はときどき悲しく感じる。",
+     "exampleKo": "나는 가끔 슬퍼.",
+     "tatoeba": 159320
+    },
+    {
+     "id": "ja-w-life088",
+     "word": "守る",
+     "meaning": "지키다",
+     "sentences": 183,
+     "example": "約束は守るよ。",
+     "exampleKo": "약속은 지킬게.",
+     "tatoeba": 10624578
+    },
+    {
+     "id": "ja-w-life089",
+     "word": "育てる",
+     "meaning": "키우다",
+     "sentences": 32,
+     "example": "母は私たちを育てるために一生懸命働いた。",
+     "exampleKo": "엄마는 우리를 키우려고 열심히 일하셨어.",
+     "tatoeba": 82981
+    },
+    {
+     "id": "ja-w-life090",
+     "word": "似る",
+     "meaning": "닮다",
+     "sentences": 7,
+     "example": "息子は父親に似る。",
+     "exampleKo": "아들은 아빠를 닮아.",
+     "tatoeba": 139908
+    },
+    {
+     "id": "ja-w-life091",
+     "word": "うるさい",
+     "meaning": "시끄럽다",
+     "sentences": 79,
+     "example": "うるさい！",
+     "exampleKo": "시끄러워!",
+     "tatoeba": 551962
+    },
+    {
+     "id": "ja-w-life092",
+     "word": "静か",
+     "meaning": "조용함",
+     "sentences": 374,
+     "example": "静かに！",
+     "exampleKo": "조용히 해!",
+     "tatoeba": 142537
+    },
+    {
+     "id": "ja-w-life093",
+     "word": "賑やか",
+     "meaning": "북적임",
+     "sentences": 5,
+     "example": "この通りは賑やかだ。",
+     "exampleKo": "이 거리는 북적여.",
+     "tatoeba": 220474
+    },
+    {
+     "id": "ja-w-life094",
+     "word": "便利",
+     "meaning": "편리함",
+     "sentences": 98,
+     "example": "私の家は駅に近くて便利です。",
+     "exampleKo": "우리 집은 역에서 가까워서 편해요.",
+     "tatoeba": 163969
+    },
+    {
+     "id": "ja-w-life095",
+     "word": "不便",
+     "meaning": "불편함",
+     "sentences": 16,
+     "example": "田舎は少し不便だけど、静か。",
+     "exampleKo": "시골은 좀 불편하지만 조용해."
+    },
+    {
+     "id": "ja-w-life096",
+     "word": "丁寧",
+     "meaning": "정중함",
+     "sentences": 61,
+     "example": "彼女は私に丁寧に頭を下げた。",
+     "exampleKo": "그녀는 나에게 정중하게 고개를 숙였어.",
+     "tatoeba": 89463
+    },
+    {
+     "id": "ja-w-life097",
+     "word": "適当",
+     "meaning": "대충, 적당함",
+     "sentences": 34,
+     "example": "適当に座ってね。",
+     "exampleKo": "아무 데나 편하게 앉아."
+    },
+    {
+     "id": "ja-w-life098",
+     "word": "真面目",
+     "meaning": "성실함",
+     "sentences": 44,
+     "example": "私の性格は全然真面目ではない！",
+     "exampleKo": "내 성격은 전혀 진지하지 않아!",
+     "tatoeba": 2480804
+    },
+    {
+     "id": "ja-w-life099",
+     "word": "格好いい",
+     "meaning": "멋있다",
+     "sentences": 10,
+     "example": "私が格好いいと思いますか。",
+     "exampleKo": "내가 멋있다고 생각해요?",
+     "tatoeba": 1590756
+    },
+    {
+     "id": "ja-w-life100",
+     "word": "明るい",
+     "meaning": "밝다",
+     "sentences": 85,
+     "example": "私は明るい色が好きです。",
+     "exampleKo": "나는 밝은 색이 좋아요.",
+     "tatoeba": 1820284
+    },
+    {
+     "id": "ja-w-life101",
+     "word": "暗い",
+     "meaning": "어둡다",
+     "sentences": 95,
+     "example": "僕は暗いうちに起きた。",
+     "exampleKo": "나는 어두울 때 일어났어.",
+     "tatoeba": 82003
+    },
+    {
+     "id": "ja-w-life102",
+     "word": "なかなか",
+     "meaning": "꽤, 좀처럼",
+     "sentences": 200,
+     "example": "風邪がなかなか治らない。",
+     "exampleKo": "감기가 좀처럼 안나아",
+     "tatoeba": 83993
+    },
+    {
+     "id": "ja-w-life103",
+     "word": "やっぱり",
+     "meaning": "역시",
+     "sentences": 105,
+     "example": "やっぱり君が一番だ。",
+     "exampleKo": "역시 네가 최고야."
+    },
+    {
+     "id": "ja-w-life104",
+     "word": "きっと",
+     "meaning": "분명",
+     "sentences": 330,
+     "example": "明日はきっとよい天気になる。",
+     "exampleKo": "내일은 분명 좋은 날씨로 된다.",
+     "tatoeba": 10906643
+    },
+    {
+     "id": "ja-w-life105",
+     "word": "ずっと",
+     "meaning": "계속",
+     "sentences": 821,
+     "example": "私はその午前中ずっと手紙を書いていました。",
+     "exampleKo": "저는 그날 오전 내내 편지를 쓰고 있었어요.",
+     "tatoeba": 160190
+    },
+    {
+     "id": "ja-w-life106",
+     "word": "さっき",
+     "meaning": "아까",
+     "sentences": 112,
+     "example": "さっき着いたよ。",
+     "exampleKo": "아까 도착했어."
+    },
+    {
+     "id": "ja-w-life107",
+     "word": "そろそろ",
+     "meaning": "슬슬",
+     "sentences": 166,
+     "example": "そろそろ帰ろうか。",
+     "exampleKo": "슬슬 갈까?"
+    },
+    {
+     "id": "ja-w-life108",
+     "word": "ちょうど",
+     "meaning": "딱, 마침",
+     "sentences": 382,
+     "example": "良い考えがちょうど私の心に浮かんだ。",
+     "exampleKo": "좋은 생각이 딱 내 머릿속에 떠올랐다.",
+     "tatoeba": 77882
+    },
+    {
+     "id": "ja-w-life109",
+     "word": "ほとんど",
+     "meaning": "거의",
+     "sentences": 915,
+     "example": "ほとんど終わった？",
+     "exampleKo": "거의 다 끝났어?",
+     "tatoeba": 8727066
+    },
+    {
+     "id": "ja-w-life110",
+     "word": "必ず",
+     "meaning": "반드시",
+     "sentences": 520,
+     "example": "必ず時間を守るようにしてくださいね。",
+     "exampleKo": "반드시 시간을 지킬 수 있도록 해 주세요.",
+     "tatoeba": 13056473
+    },
+    {
+     "id": "ja-w-life111",
+     "word": "たぶん",
+     "meaning": "아마",
+     "sentences": 102,
+     "example": "たぶん、私が間違っていた。",
+     "exampleKo": "아마 내가 틀렸던 것 같아.",
+     "tatoeba": 5751905
+    },
+    {
+     "id": "ja-w-life112",
+     "word": "実は",
+     "meaning": "사실은",
+     "sentences": 268,
+     "example": "実はな、俺はお前の父親じゃないんだ。",
+     "exampleKo": "사실, 난 너의 아버지가 아니란다.",
+     "tatoeba": 9012399
+    },
+    {
+     "id": "ja-w-life113",
+     "word": "やっと",
+     "meaning": "겨우, 드디어",
+     "sentences": 246,
+     "example": "フランス語やっといてよかった。",
+     "exampleKo": "프랑스어 하길 잘했다.",
+     "tatoeba": 3179576
+    },
+    {
+     "id": "ja-w-life114",
+     "word": "意外",
+     "meaning": "의외",
+     "sentences": 71,
+     "example": "君って、意外に純情だね。",
+     "exampleKo": "너 의외로 순수하다.",
+     "tatoeba": 177469
+    },
+    {
+     "id": "ja-w-life115",
+     "word": "当然",
+     "meaning": "당연함",
+     "sentences": 188,
+     "example": "当然のことを言ったまでよ。",
+     "exampleKo": "당연한 걸 말한 거 뿐이야.",
+     "tatoeba": 11411810
+    },
+    {
+     "id": "ja-w-life116",
+     "word": "偶然",
+     "meaning": "우연",
+     "sentences": 115,
+     "example": "私は旧友に偶然であった。",
+     "exampleKo": "옛 친구를 우연히 만났어.",
+     "tatoeba": 157664
+    },
+    {
+     "id": "ja-w-life117",
+     "word": "手作り",
+     "meaning": "손수 만듦",
+     "sentences": 19,
+     "example": "このラグは手作りなんだよ。",
+     "exampleKo": "이 러그는 손으로 만든 거야.",
+     "tatoeba": 8720575
+    },
+    {
+     "id": "ja-w-life118",
+     "word": "成長",
+     "meaning": "성장",
+     "sentences": 135,
+     "example": "あなたは成長しました。",
+     "exampleKo": "너 많이 컸다.",
+     "tatoeba": 4757713
+    },
+    {
+     "id": "ja-w-life119",
+     "word": "努力",
+     "meaning": "노력",
+     "sentences": 477,
+     "example": "君が失敗したのは努力が足りなかったからだ。",
+     "exampleKo": "네가 실패한 이유는 노력이 부족했기 때문이다.",
+     "tatoeba": 178965
+    },
+    {
+     "id": "ja-w-life120",
+     "word": "才能",
+     "meaning": "재능",
+     "sentences": 166,
+     "example": "君には歌の才能がある。",
+     "exampleKo": "너는 노래에 재능이 있어."
+    },
+    {
+     "id": "ja-w-life121",
+     "word": "自信",
+     "meaning": "자신감",
+     "sentences": 99,
+     "example": "自信を持って！",
+     "exampleKo": "자신감을 가져!"
+    },
+    {
+     "id": "ja-w-life122",
+     "word": "勇気",
+     "meaning": "용기",
+     "sentences": 173,
+     "example": "勇気を出して告白した。",
+     "exampleKo": "용기 내서 고백했어."
+    },
+    {
+     "id": "ja-w-life123",
+     "word": "印象",
+     "meaning": "인상",
+     "sentences": 55,
+     "example": "それは深い印象を私に与えた。",
+     "exampleKo": "그건 나에게 깊은 인상을 남겼어.",
+     "tatoeba": 205060
+    },
+    {
+     "id": "ja-w-life124",
+     "word": "魅力",
+     "meaning": "매력",
+     "sentences": 60,
+     "example": "私の魅力って何だと思う？",
+     "exampleKo": "내 매력이 뭐라고 생각해?",
+     "tatoeba": 3337873
+    },
+    {
+     "id": "ja-w-life125",
+     "word": "家事",
+     "meaning": "집안일",
+     "sentences": 44,
+     "example": "家事は二人で分けよう。",
+     "exampleKo": "집안일은 둘이 나눠서 하자."
+    },
+    {
+     "id": "ja-w-life126",
+     "word": "貯金",
+     "meaning": "저금",
+     "sentences": 80,
+     "example": "旅行のために貯金してる。",
+     "exampleKo": "여행 가려고 저금하고 있어."
+    },
+    {
+     "id": "ja-w-life127",
+     "word": "楽器",
+     "meaning": "악기",
+     "sentences": 20,
+     "example": "あなたは楽器を演奏しますよね。",
+     "exampleKo": "너 악기 연주하지?",
+     "tatoeba": 232151
+    },
+    {
+     "id": "ja-w-life128",
+     "word": "撮る",
+     "meaning": "찍다",
+     "sentences": 34,
+     "example": "写真を撮ることは禁じられている。",
+     "exampleKo": "사진 촬영은 금지되어 있습니다.",
+     "tatoeba": 149248
+    },
+    {
+     "id": "ja-w-life129",
+     "word": "泊まる",
+     "meaning": "묵다",
+     "sentences": 39,
+     "example": "今夜はうちに泊まる？",
+     "exampleKo": "오늘 밤 우리 집에서 자고 갈래?"
+    },
+    {
+     "id": "ja-w-life130",
+     "word": "迎える",
+     "meaning": "맞이하다",
+     "sentences": 22,
+     "example": "駅まで迎えに行くね。",
+     "exampleKo": "역까지 데리러 갈게."
+    },
+    {
+     "id": "ja-w-life131",
+     "word": "別々",
+     "meaning": "따로따로",
+     "sentences": 23,
+     "example": "俺たち、別々の学校に行ってたんだ。",
+     "exampleKo": "우리는 다른 학교에 다녔어.",
+     "tatoeba": 9331187
+    },
+    {
+     "id": "ja-w-life132",
+     "word": "毎晩",
+     "meaning": "매일 밤",
+     "sentences": 31,
+     "example": "毎晩シャワーを浴びてから、寝ます。",
+     "exampleKo": "매일 밤 샤워를 하고 나서 잡니다.",
+     "tatoeba": 11015440
+    },
+    {
+     "id": "ja-w-life133",
+     "word": "最悪",
+     "meaning": "최악",
+     "sentences": 71,
+     "example": "最悪の気分！",
+     "exampleKo": "최악의 기분",
+     "tatoeba": 3495030
+    },
+    {
+     "id": "ja-w-life134",
+     "word": "仲良し",
+     "meaning": "사이 좋음",
+     "sentences": 23,
+     "example": "私たちね、仲良しなんだ。",
+     "exampleKo": "우리 엄청 친해.",
+     "tatoeba": 9075041
+    }
+   ]
+  }
+ ]
+}

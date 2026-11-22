@@ -1,0 +1,5184 @@
+{
+ "source": {
+  "corpus": "Tatoeba (tatoeba.org) kor sentences, CC BY 2.0 FR",
+  "sentences": 15966,
+  "note": "표현과 예문, 풀이는 Daily English가 직접 썼고(AI 도움), 빈도만 말뭉치에서 셌습니다."
+ },
+ "packs": [
+  {
+   "id": "love",
+   "title": {
+    "ko": "애정 표현",
+    "en": "Love & affection"
+   },
+   "items": [
+    {
+     "id": "ko-love-01",
+     "text": "사랑해.",
+     "meaning": "I love you.",
+     "example": "세상에서 제일 사랑해.",
+     "exampleKo": "I love you more than anything in the world.",
+     "tip": "Casual form for your partner. The polite form is 사랑해요.",
+     "sentences": 28,
+     "perMillion": 1753.7
+    },
+    {
+     "id": "ko-love-02",
+     "text": "좋아해.",
+     "meaning": "I like you. / I really like you.",
+     "example": "나 너 진짜 좋아해.",
+     "exampleKo": "I really like you.",
+     "tip": "The most common way to confess feelings before dating.",
+     "sentences": 112,
+     "perMillion": 7014.9
+    },
+    {
+     "id": "ko-love-03",
+     "text": "너한테 푹 빠졌어.",
+     "meaning": "I'm crazy about you.",
+     "example": "요즘 너한테 푹 빠졌어.",
+     "exampleKo": "I'm totally into you these days.",
+     "tip": ""
+    },
+    {
+     "id": "ko-love-04",
+     "text": "넌 나한테 정말 소중해.",
+     "meaning": "You mean a lot to me.",
+     "example": "넌 나한테 정말 소중해.",
+     "exampleKo": "You mean so much to me.",
+     "tip": "Works for close friends too."
+    },
+    {
+     "id": "ko-love-05",
+     "text": "마음에 들어.",
+     "meaning": "I like you (I'm interested).",
+     "example": "솔직히 너 마음에 들어.",
+     "exampleKo": "Honestly, I'm into you.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-love-06",
+     "text": "첫눈에 반했어.",
+     "meaning": "It was love at first sight.",
+     "example": "사실 너한테 첫눈에 반했어.",
+     "exampleKo": "Actually, I fell for you at first sight.",
+     "tip": ""
+    },
+    {
+     "id": "ko-love-07",
+     "text": "너랑 있으면 행복해.",
+     "meaning": "I'm happy when I'm with you.",
+     "example": "너랑 있으면 항상 행복해.",
+     "exampleKo": "I'm always happy when I'm with you.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 939.5
+    },
+    {
+     "id": "ko-love-08",
+     "text": "만나서 다행이야.",
+     "meaning": "I'm so glad I met you.",
+     "example": "너를 만나서 정말 다행이야.",
+     "exampleKo": "I'm really glad I met you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-love-09",
+     "text": "자기야",
+     "meaning": "babe, honey",
+     "example": "자기야, 잘 잤어?",
+     "exampleKo": "Babe, did you sleep well?",
+     "tip": "A very common pet name between couples. 여보 is used by married couples."
+    },
+    {
+     "id": "ko-love-10",
+     "text": "네가 최고야!",
+     "meaning": "You're the best!",
+     "example": "커피 고마워, 네가 최고야!",
+     "exampleKo": "Thanks for the coffee, you're the best!",
+     "tip": "Also common between friends.",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-love-11",
+     "text": "설레.",
+     "meaning": "My heart is fluttering.",
+     "example": "너랑 있으면 아직도 설레.",
+     "exampleKo": "I still get butterflies when I'm with you.",
+     "tip": "There's no exact English word. It's that excited, fluttery feeling."
+    },
+    {
+     "id": "ko-love-12",
+     "text": "계속 네 생각만 나.",
+     "meaning": "I can't stop thinking about you.",
+     "example": "오늘 계속 네 생각만 나.",
+     "exampleKo": "I keep thinking about you today.",
+     "tip": ""
+    },
+    {
+     "id": "ko-love-13",
+     "text": "넌 내 전부야.",
+     "meaning": "You're my everything.",
+     "example": "넌 내 전부야.",
+     "exampleKo": "You're my everything.",
+     "tip": "Very sweet, so save it for special moments."
+    },
+    {
+     "id": "ko-love-14",
+     "text": "뽀뽀",
+     "meaning": "kiss, peck",
+     "example": "내일 봐, 뽀뽀!",
+     "exampleKo": "See you tomorrow, kiss!",
+     "tip": "A cute word for a light kiss. Couples also type 쪽."
+    },
+    {
+     "id": "ko-love-15",
+     "text": "좋은 꿈 꿔.",
+     "meaning": "Sweet dreams.",
+     "example": "잘 자, 좋은 꿈 꿔.",
+     "exampleKo": "Good night, sweet dreams.",
+     "tip": ""
+    },
+    {
+     "id": "ko-love-16",
+     "text": "너무 귀여워.",
+     "meaning": "You're so cute.",
+     "example": "자는 얼굴 너무 귀여워.",
+     "exampleKo": "Your sleeping face is so cute.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-love-17",
+     "text": "우리 사귈래?",
+     "meaning": "Do you want to go out with me?",
+     "example": "나랑 사귈래?",
+     "exampleKo": "Will you go out with me?",
+     "tip": "Koreans often \"confess\" (고백) to officially start dating."
+    }
+   ]
+  },
+  {
+   "id": "miss",
+   "title": {
+    "ko": "보고 싶을 때",
+    "en": "Missing you"
+   },
+   "items": [
+    {
+     "id": "ko-miss-01",
+     "text": "보고 싶어.",
+     "meaning": "I miss you.",
+     "example": "너무 보고 싶어.",
+     "exampleKo": "I miss you so much.",
+     "tip": "Literally \"I want to see you\". It's how Koreans say \"I miss you\".",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
+     "id": "ko-miss-02",
+     "text": "벌써 보고 싶어.",
+     "meaning": "I miss you already.",
+     "example": "방금 헤어졌는데 벌써 보고 싶어.",
+     "exampleKo": "We just said goodbye and I already miss you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-miss-03",
+     "text": "빨리 보고 싶어!",
+     "meaning": "I can't wait to see you!",
+     "example": "3일만 더! 빨리 보고 싶어!",
+     "exampleKo": "Just three more days! I can't wait to see you!",
+     "tip": ""
+    },
+    {
+     "id": "ko-miss-04",
+     "text": "손꼽아 기다리고 있어.",
+     "meaning": "I'm counting the days.",
+     "example": "만날 날만 손꼽아 기다리고 있어.",
+     "exampleKo": "I'm counting down the days until we meet.",
+     "tip": "손꼽아 means counting on your fingers."
+    },
+    {
+     "id": "ko-miss-05",
+     "text": "네가 여기 있으면 좋겠다.",
+     "meaning": "I wish you were here.",
+     "example": "경치 진짜 예뻐. 네가 여기 있으면 좋겠다.",
+     "exampleKo": "The view is so pretty. I wish you were here.",
+     "tip": ""
+    },
+    {
+     "id": "ko-miss-06",
+     "text": "네 생각 하고 있었어.",
+     "meaning": "I was thinking of you.",
+     "example": "그냥 네 생각 하고 있었어.",
+     "exampleKo": "I was just thinking of you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-miss-07",
+     "text": "또 보자!",
+     "meaning": "See you again!",
+     "example": "또 보자! 조심히 가.",
+     "exampleKo": "See you again! Get home safe.",
+     "tip": ""
+    },
+    {
+     "id": "ko-miss-08",
+     "text": "너 없으니까 허전해.",
+     "meaning": "It feels empty without you.",
+     "example": "너 없으니까 이 카페도 허전해.",
+     "exampleKo": "This café feels empty without you.",
+     "tip": "허전하다 is the feeling that something is missing."
+    },
+    {
+     "id": "ko-miss-09",
+     "text": "목소리 듣고 싶어.",
+     "meaning": "I want to hear your voice.",
+     "example": "전화할 수 있어? 목소리 듣고 싶어.",
+     "exampleKo": "Can you call? I want to hear your voice.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 1315.3
+    },
+    {
+     "id": "ko-miss-10",
+     "text": "꼭 안아 주고 싶어.",
+     "meaning": "I want to give you a big hug.",
+     "example": "힘들었지? 꼭 안아 주고 싶어.",
+     "exampleKo": "Rough day, right? I want to give you a big hug.",
+     "tip": ""
+    },
+    {
+     "id": "ko-miss-11",
+     "text": "머릿속에 온통 너야.",
+     "meaning": "You're all I think about.",
+     "example": "일할 때도 머릿속에 온통 너야.",
+     "exampleKo": "Even at work, you're all I think about.",
+     "tip": ""
+    },
+    {
+     "id": "ko-miss-12",
+     "text": "빨리 와.",
+     "meaning": "Come back soon.",
+     "example": "기다릴게, 빨리 와.",
+     "exampleKo": "I'll be waiting, come back soon.",
+     "tip": ""
+    },
+    {
+     "id": "ko-miss-13",
+     "text": "기다릴게.",
+     "meaning": "I'll wait for you.",
+     "example": "천천히 해, 기다릴게.",
+     "exampleKo": "Take your time, I'll wait.",
+     "tip": ""
+    },
+    {
+     "id": "ko-miss-14",
+     "text": "우리 언제 만나?",
+     "meaning": "When are we meeting?",
+     "example": "우리 다음에 언제 만나?",
+     "exampleKo": "When do we see each other next?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "text",
+   "title": {
+    "ko": "메시지 줄임말",
+    "en": "Texting shortcuts"
+   },
+   "items": [
+    {
+     "id": "ko-text-01",
+     "text": "ㅋㅋ",
+     "meaning": "lol",
+     "example": "너무 웃기다 ㅋㅋ",
+     "exampleKo": "That's so funny lol",
+     "tip": "ㅋ is the sound \"k\" from 크크 (laughing). More ㅋ = funnier.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-02",
+     "text": "ㅎㅎ",
+     "meaning": "hehe (a soft smile)",
+     "example": "알았어 ㅎㅎ",
+     "exampleKo": "Okay hehe",
+     "tip": "Softer than ㅋㅋ. Adds a friendly, smiling tone.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-03",
+     "text": "ㅇㅇ",
+     "meaning": "yeah, ok",
+     "example": "ㅇㅇ 이따 봐",
+     "exampleKo": "Yeah, see you later",
+     "tip": "From 응응. Very short, so it can feel a bit cold.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-04",
+     "text": "ㄱㄱ",
+     "meaning": "let's go",
+     "example": "치킨? ㄱㄱ",
+     "exampleKo": "Chicken? Let's go!",
+     "tip": "From 고고 (go go).",
+     "texting": true
+    },
+    {
+     "id": "ko-text-05",
+     "text": "ㅠㅠ",
+     "meaning": "crying, so sad",
+     "example": "오늘 너무 피곤해 ㅠㅠ",
+     "exampleKo": "I'm so tired today T_T",
+     "tip": "Looks like crying eyes. Also ㅜㅜ.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-06",
+     "text": "ㄴㄴ",
+     "meaning": "no no",
+     "example": "ㄴㄴ 괜찮아",
+     "exampleKo": "Nah, it's fine",
+     "tip": "From 노노 (no no).",
+     "texting": true
+    },
+    {
+     "id": "ko-text-07",
+     "text": "ㄱㅅ",
+     "meaning": "thanks",
+     "example": "도와줘서 ㄱㅅ!",
+     "exampleKo": "Thanks for helping!",
+     "tip": "From 감사.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-08",
+     "text": "ㅈㅅ",
+     "meaning": "sorry",
+     "example": "늦어서 ㅈㅅ",
+     "exampleKo": "Sorry I'm late",
+     "tip": "From 죄송. Only with close friends.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-09",
+     "text": "ㅇㅋ",
+     "meaning": "OK",
+     "example": "ㅇㅋ 7시에 봐",
+     "exampleKo": "OK, see you at 7",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "ko-text-10",
+     "text": "뭐 해?",
+     "meaning": "What are you doing?",
+     "example": "지금 뭐 해?",
+     "exampleKo": "What are you doing now?",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "ko-text-11",
+     "text": "굿밤",
+     "meaning": "good night",
+     "example": "오늘도 수고했어, 굿밤!",
+     "exampleKo": "Good job today, good night!",
+     "tip": "A cute mix of English \"good\" and 밤 (night).",
+     "texting": true
+    },
+    {
+     "id": "ko-text-12",
+     "text": "대박",
+     "meaning": "awesome, no way",
+     "example": "이거 대박이다!",
+     "exampleKo": "This is awesome!",
+     "tip": "Used for both good surprises and shocking news.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-13",
+     "text": "헐",
+     "meaning": "OMG, what?!",
+     "example": "헐, 진짜?",
+     "exampleKo": "OMG, really?",
+     "tip": "A very common reaction to surprising news.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-14",
+     "text": "레알",
+     "meaning": "for real",
+     "example": "이거 레알 맛있어.",
+     "exampleKo": "This is seriously delicious.",
+     "tip": "Slang from English \"real\".",
+     "texting": true
+    },
+    {
+     "id": "ko-text-15",
+     "text": "ㄹㅇ",
+     "meaning": "for real",
+     "example": "ㄹㅇ 피곤해",
+     "exampleKo": "Seriously tired",
+     "tip": "Short for 레알.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-16",
+     "text": "ㅊㅋ",
+     "meaning": "congrats",
+     "example": "합격 ㅊㅋㅊㅋ!",
+     "exampleKo": "Congrats on passing!",
+     "tip": "From 축하.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-17",
+     "text": "꿀잼",
+     "meaning": "super fun",
+     "example": "이 영화 꿀잼이야.",
+     "exampleKo": "This movie is so much fun.",
+     "tip": "꿀 (honey) + 잼 (from 재미, fun). The opposite is 노잼.",
+     "texting": true
+    },
+    {
+     "id": "ko-text-18",
+     "text": "오키",
+     "meaning": "okay",
+     "example": "오키, 이따 연락할게.",
+     "exampleKo": "Okay, I'll text you later.",
+     "tip": "",
+     "texting": true
+    }
+   ]
+  },
+  {
+   "id": "chat",
+   "title": {
+    "ko": "안부·수다",
+    "en": "Catching up"
+   },
+   "items": [
+    {
+     "id": "ko-chat-01",
+     "text": "뭐 하고 있어?",
+     "meaning": "What are you up to?",
+     "example": "주말에 뭐 하고 있어?",
+     "exampleKo": "What are you up to this weekend?",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-02",
+     "text": "오늘 하루 어땠어?",
+     "meaning": "How was your day?",
+     "example": "오늘 하루 어땠어? 다 얘기해 줘.",
+     "exampleKo": "How was your day? Tell me everything.",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-03",
+     "text": "그냥 있어.",
+     "meaning": "Not much, just here.",
+     "example": "그냥 집에서 쉬고 있어.",
+     "exampleKo": "Nothing much, just resting at home.",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-04",
+     "text": "나도!",
+     "meaning": "Me too!",
+     "example": "나도, 거의 못 잤어.",
+     "exampleKo": "Me too, I barely slept.",
+     "tip": "",
+     "sentences": 37,
+     "perMillion": 2317.4
+    },
+    {
+     "id": "ko-chat-05",
+     "text": "쉬는 중이야.",
+     "meaning": "I'm just chilling.",
+     "example": "고양이랑 쉬는 중이야.",
+     "exampleKo": "Just chilling with my cat.",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-06",
+     "text": "말도 안 돼!",
+     "meaning": "No way!",
+     "example": "말도 안 돼! 걔를 만났다고?",
+     "exampleKo": "No way! You met him?",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-07",
+     "text": "대박이다!",
+     "meaning": "That's amazing!",
+     "example": "연예인 봤어? 대박이다!",
+     "exampleKo": "You saw a celebrity? That's amazing!",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-08",
+     "text": "내 말이.",
+     "meaning": "Tell me about it.",
+     "example": "내 말이, 월요일은 최악이야.",
+     "exampleKo": "Tell me about it, Mondays are the worst.",
+     "tip": "Literally \"my words\". Means \"exactly what I'm saying\"."
+    },
+    {
+     "id": "ko-chat-09",
+     "text": "있잖아!",
+     "meaning": "Guess what! / You know what?",
+     "example": "있잖아! 나 합격했어!",
+     "exampleKo": "Guess what! I got in!",
+     "tip": "Used to start a story or share news."
+    },
+    {
+     "id": "ko-chat-10",
+     "text": "무슨 일 있어?",
+     "meaning": "What's wrong?",
+     "example": "오늘 조용하네, 무슨 일 있어?",
+     "exampleKo": "You're quiet today, what's wrong?",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 1565.8
+    },
+    {
+     "id": "ko-chat-11",
+     "text": "밥 먹었어?",
+     "meaning": "Did you eat?",
+     "example": "밥 먹었어? 굶지 마.",
+     "exampleKo": "Did you eat? Don't skip meals.",
+     "tip": "A very common Korean greeting that means \"I care about you\", not only about food."
+    },
+    {
+     "id": "ko-chat-12",
+     "text": "요즘 어때?",
+     "meaning": "How have you been?",
+     "example": "오랜만이야! 요즘 어때?",
+     "exampleKo": "Long time no see! How have you been?",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-13",
+     "text": "수고했어.",
+     "meaning": "Good job today. / You worked hard.",
+     "example": "오늘도 수고했어.",
+     "exampleKo": "You worked hard today too.",
+     "tip": "Said at the end of a long day. It means \"thank you for your hard work\"."
+    },
+    {
+     "id": "ko-chat-14",
+     "text": "그렇구나.",
+     "meaning": "I see.",
+     "example": "아, 그렇구나.",
+     "exampleKo": "Oh, I see.",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-15",
+     "text": "재밌다!",
+     "meaning": "That's fun! / Interesting!",
+     "example": "재밌다, 더 얘기해 줘!",
+     "exampleKo": "That's fun, tell me more!",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-16",
+     "text": "진짜?",
+     "meaning": "Really?",
+     "example": "여기로 이사 온다고? 진짜?",
+     "exampleKo": "You're moving here? Really?",
+     "tip": "",
+     "sentences": 156,
+     "perMillion": 9770.8
+    },
+    {
+     "id": "ko-chat-17",
+     "text": "늘 똑같지 뭐.",
+     "meaning": "Same old, same old.",
+     "example": "일은 늘 똑같지 뭐.",
+     "exampleKo": "Work is the same as always.",
+     "tip": ""
+    },
+    {
+     "id": "ko-chat-18",
+     "text": "요즘 뭐에 빠져 있어?",
+     "meaning": "What are you into these days?",
+     "example": "요즘 뭐에 빠져 있어?",
+     "exampleKo": "What are you obsessed with lately?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "tease",
+   "title": {
+    "ko": "장난·놀리기",
+    "en": "Teasing & jokes"
+   },
+   "items": [
+    {
+     "id": "ko-tease-01",
+     "text": "바보야.",
+     "meaning": "silly (cute)",
+     "example": "바보야, 그래도 좋아.",
+     "exampleKo": "You silly thing, I still love you.",
+     "tip": "With a soft voice it's affectionate, not an insult.",
+     "sentences": 16,
+     "perMillion": 1002.1
+    },
+    {
+     "id": "ko-tease-02",
+     "text": "장난이야.",
+     "meaning": "Just kidding.",
+     "example": "화내지 마, 장난이야.",
+     "exampleKo": "Don't be mad, I'm just kidding.",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-03",
+     "text": "하지 마!",
+     "meaning": "Stop it!",
+     "example": "하지 마, 부끄러워!",
+     "exampleKo": "Stop it, I'm embarrassed!",
+     "tip": "",
+     "sentences": 65,
+     "perMillion": 4071.2
+    },
+    {
+     "id": "ko-tease-04",
+     "text": "꿈 깨.",
+     "meaning": "Dream on.",
+     "example": "또 해 달라고? 꿈 깨.",
+     "exampleKo": "You want me to do it again? Dream on.",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-05",
+     "text": "어림없지.",
+     "meaning": "Nice try.",
+     "example": "어림없지, 안 속아.",
+     "exampleKo": "Nice try, I'm not falling for it.",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-06",
+     "text": "하나도 안 웃겨.",
+     "meaning": "Not funny at all.",
+     "example": "하나도 안 웃겨. 폰 돌려줘.",
+     "exampleKo": "Not funny. Give me back my phone.",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-07",
+     "text": "오버하지 마.",
+     "meaning": "Don't overdo it.",
+     "example": "생일에 풍선까지? 오버하지 마.",
+     "exampleKo": "Balloons for my birthday? You're so extra.",
+     "tip": "오버 comes from English \"over\" and means \"too much\"."
+    },
+    {
+     "id": "ko-tease-08",
+     "text": "맘대로 해.",
+     "meaning": "Whatever you want.",
+     "example": "맘대로 해, 네가 이겼어.",
+     "exampleKo": "Do what you want, you win.",
+     "tip": "Can sound cold, so say it with a smile."
+    },
+    {
+     "id": "ko-tease-09",
+     "text": "너무해!",
+     "meaning": "That's so mean!",
+     "example": "너무해! 열심히 했단 말이야.",
+     "exampleKo": "That's so mean! I tried my best.",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-10",
+     "text": "속았지!",
+     "meaning": "Gotcha!",
+     "example": "속았지! 장난이야.",
+     "exampleKo": "Gotcha! Just kidding.",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-11",
+     "text": "딱 걸렸어!",
+     "meaning": "Busted!",
+     "example": "딱 걸렸어! 내 과자 먹었지?",
+     "exampleKo": "Busted! You ate my snacks, right?",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-tease-12",
+     "text": "누가 그래?",
+     "meaning": "Says who?",
+     "example": "내가 요리 못한다고? 누가 그래?",
+     "exampleKo": "I'm a bad cook? Says who?",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-13",
+     "text": "진짜 못 말려.",
+     "meaning": "You're impossible.",
+     "example": "진짜 못 말려, 그만 웃어.",
+     "exampleKo": "You're impossible, stop laughing.",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-14",
+     "text": "잘난 척하지 마.",
+     "meaning": "Don't show off.",
+     "example": "한 번 이겼다고 잘난 척하지 마.",
+     "exampleKo": "You won once, don't show off.",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-15",
+     "text": "뻥이야!",
+     "meaning": "Just kidding! / That was a lie!",
+     "example": "뻥이야! 너 오늘 멋있어.",
+     "exampleKo": "Kidding! You look great today.",
+     "tip": ""
+    },
+    {
+     "id": "ko-tease-16",
+     "text": "콜!",
+     "meaning": "Deal! / I'm in!",
+     "example": "치킨 먹을래? 콜!",
+     "exampleKo": "Want chicken? Deal!",
+     "tip": "From English \"call\", like accepting a bet.",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
+     "id": "ko-tease-17",
+     "text": "귀요미",
+     "meaning": "cutie",
+     "example": "우리 귀요미 뭐 해?",
+     "exampleKo": "What's my cutie doing?",
+     "tip": "A cute nickname, half teasing."
+    }
+   ]
+  },
+  {
+   "id": "date",
+   "title": {
+    "ko": "약속·데이트",
+    "en": "Plans & dates"
+   },
+   "items": [
+    {
+     "id": "ko-date-01",
+     "text": "오늘 밤 시간 돼?",
+     "meaning": "Are you free tonight?",
+     "example": "오늘 밤 시간 돼? 보고 싶어.",
+     "exampleKo": "Are you free tonight? I miss you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-02",
+     "text": "밥 먹으러 갈래?",
+     "meaning": "Want to grab food?",
+     "example": "퇴근하고 밥 먹으러 갈래?",
+     "exampleKo": "Want to grab food after work?",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-03",
+     "text": "그럼 약속한 거다.",
+     "meaning": "It's a date then.",
+     "example": "금요일 7시? 약속한 거다.",
+     "exampleKo": "Friday at 7? It's a date.",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-04",
+     "text": "데리러 갈까?",
+     "meaning": "Should I pick you up?",
+     "example": "7시에 데리러 갈까?",
+     "exampleKo": "Should I pick you up at 7?",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-05",
+     "text": "몇 시가 편해?",
+     "meaning": "What time works for you?",
+     "example": "내일 몇 시가 편해?",
+     "exampleKo": "What time works for you tomorrow?",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-06",
+     "text": "약속 미뤄도 돼?",
+     "meaning": "Can we reschedule?",
+     "example": "일이 생겼는데 약속 미뤄도 돼?",
+     "exampleKo": "Something came up, can we reschedule?",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-07",
+     "text": "갑자기 일이 생겼어.",
+     "meaning": "Something came up.",
+     "example": "미안, 갑자기 일이 생겼어.",
+     "exampleKo": "Sorry, something suddenly came up.",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-08",
+     "text": "10분 뒤에 도착해.",
+     "meaning": "I'll be there in 10.",
+     "example": "10분 뒤에 도착해!",
+     "exampleKo": "I'll be there in 10 minutes!",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-09",
+     "text": "어디서 볼까?",
+     "meaning": "Where should we meet?",
+     "example": "어디서 볼까? 역 앞?",
+     "exampleKo": "Where should we meet? In front of the station?",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-10",
+     "text": "더치페이하자.",
+     "meaning": "Let's split the bill.",
+     "example": "오늘은 더치페이하자.",
+     "exampleKo": "Let's go Dutch today.",
+     "tip": "From English \"Dutch pay\". In Korea, couples often take turns paying instead."
+    },
+    {
+     "id": "ko-date-11",
+     "text": "오늘은 내가 살게.",
+     "meaning": "It's on me today.",
+     "example": "오늘은 내가 살게.",
+     "exampleKo": "Today it's my treat.",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-12",
+     "text": "우리 집에서 영화 볼래?",
+     "meaning": "Movie night at my place?",
+     "example": "주말에 우리 집에서 영화 볼래?",
+     "exampleKo": "Want to watch a movie at my place this weekend?",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-13",
+     "text": "도착하면 연락해.",
+     "meaning": "Text me when you get home.",
+     "example": "집에 도착하면 연락해.",
+     "exampleKo": "Let me know when you get home.",
+     "tip": "Koreans say this a lot. It shows you care."
+    },
+    {
+     "id": "ko-date-14",
+     "text": "집까지 데려다줄게.",
+     "meaning": "I'll walk you home.",
+     "example": "늦었으니까 집까지 데려다줄게.",
+     "exampleKo": "It's late, I'll take you home.",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-15",
+     "text": "오늘 진짜 즐거웠어.",
+     "meaning": "I had a great time today.",
+     "example": "오늘 진짜 즐거웠어, 고마워.",
+     "exampleKo": "I had a really great time today, thank you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-16",
+     "text": "또 가자!",
+     "meaning": "Let's do this again!",
+     "example": "재밌었다! 또 가자!",
+     "exampleKo": "That was fun! Let's go again!",
+     "tip": ""
+    },
+    {
+     "id": "ko-date-17",
+     "text": "오늘 약속 그대로지?",
+     "meaning": "Are we still on for today?",
+     "example": "오늘 저녁 약속 그대로지?",
+     "exampleKo": "Are we still on for dinner tonight?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "call",
+   "title": {
+    "ko": "영상통화·장거리",
+    "en": "Calls & distance"
+   },
+   "items": [
+    {
+     "id": "ko-call-01",
+     "text": "들려?",
+     "meaning": "Can you hear me?",
+     "example": "여보세요? 들려?",
+     "exampleKo": "Hello? Can you hear me?",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-call-02",
+     "text": "소리가 끊겨.",
+     "meaning": "You're breaking up.",
+     "example": "미안, 소리가 끊겨.",
+     "exampleKo": "Sorry, you're breaking up.",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-03",
+     "text": "화면 멈췄어.",
+     "meaning": "You froze.",
+     "example": "화면 잠깐 멈췄어.",
+     "exampleKo": "Your screen froze for a second.",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-04",
+     "text": "전화해도 돼?",
+     "meaning": "Can I call you?",
+     "example": "퇴근하고 전화해도 돼?",
+     "exampleKo": "Can I call you after work?",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-05",
+     "text": "이따 다시 전화할게.",
+     "meaning": "I'll call you back.",
+     "example": "버스 안이라 이따 다시 전화할게.",
+     "exampleKo": "I'm on the bus, I'll call you back later.",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-06",
+     "text": "영상통화하자.",
+     "meaning": "Let's video call.",
+     "example": "자기 전에 영상통화하자.",
+     "exampleKo": "Let's video call before bed.",
+     "tip": "Koreans often say 영통 for short."
+    },
+    {
+     "id": "ko-call-07",
+     "text": "거기 지금 몇 시야?",
+     "meaning": "What time is it there?",
+     "example": "거기 지금 몇 시야? 나 때문에 깼어?",
+     "exampleKo": "What time is it there? Did I wake you up?",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-08",
+     "text": "여기는 늦었어.",
+     "meaning": "It's late here.",
+     "example": "여기는 늦어서 이제 잘게.",
+     "exampleKo": "It's late here, I'm going to sleep now.",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-09",
+     "text": "시차",
+     "meaning": "time difference",
+     "example": "시차 때문에 너무 힘들어.",
+     "exampleKo": "The time difference is so hard.",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-10",
+     "text": "음소거돼 있어.",
+     "meaning": "You're on mute.",
+     "example": "잠깐, 너 음소거돼 있어!",
+     "exampleKo": "Wait, you're on mute!",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-11",
+     "text": "카메라 켜 줘.",
+     "meaning": "Turn on your camera.",
+     "example": "카메라 켜 줘, 얼굴 보고 싶어.",
+     "exampleKo": "Turn on your camera, I want to see your face.",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-12",
+     "text": "통화하다 잠들었어.",
+     "meaning": "I fell asleep on the call.",
+     "example": "미안, 어제 통화하다 잠들었어.",
+     "exampleKo": "Sorry, I fell asleep on the call last night.",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-13",
+     "text": "장거리 연애",
+     "meaning": "long-distance relationship",
+     "example": "장거리 연애는 힘들지만 너라서 괜찮아.",
+     "exampleKo": "Long distance is hard, but it's okay because it's you.",
+     "tip": "Often shortened to 장거리."
+    },
+    {
+     "id": "ko-call-14",
+     "text": "안 자고 기다릴게.",
+     "meaning": "I'll stay up and wait.",
+     "example": "전화할 때까지 안 자고 기다릴게.",
+     "exampleKo": "I'll stay up until you call.",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-15",
+     "text": "너 먼저 끊어.",
+     "meaning": "You hang up first.",
+     "example": "싫어, 너 먼저 끊어!",
+     "exampleKo": "No, you hang up first!",
+     "tip": "A classic cute couple moment in Korea too."
+    },
+    {
+     "id": "ko-call-16",
+     "text": "내일 또 얘기하자.",
+     "meaning": "Let's talk tomorrow.",
+     "example": "잘 자, 내일 또 얘기하자.",
+     "exampleKo": "Good night, let's talk again tomorrow.",
+     "tip": ""
+    },
+    {
+     "id": "ko-call-17",
+     "text": "나 보여?",
+     "meaning": "Can you see me?",
+     "example": "나 보여? 여기 너무 어둡다.",
+     "exampleKo": "Can you see me? It's really dark here.",
+     "tip": "",
+     "sentences": 55,
+     "perMillion": 3444.8
+    }
+   ]
+  },
+  {
+   "id": "fight",
+   "title": {
+    "ko": "다툼·화해",
+    "en": "Fights & making up"
+   },
+   "items": [
+    {
+     "id": "ko-fight-01",
+     "text": "그런 뜻 아니었어.",
+     "meaning": "I didn't mean it like that.",
+     "example": "미안, 그런 뜻 아니었어.",
+     "exampleKo": "Sorry, I didn't mean it like that.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-02",
+     "text": "우리 얘기 좀 할래?",
+     "meaning": "Can we talk?",
+     "example": "오늘 밤에 얘기 좀 할래? 중요한 거야.",
+     "exampleKo": "Can we talk tonight? It's important.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-03",
+     "text": "잠깐 혼자 있고 싶어.",
+     "meaning": "I need some space.",
+     "example": "화난 거 아니야, 잠깐 혼자 있고 싶어.",
+     "exampleKo": "I'm not mad, I just need some time alone.",
+     "tip": "It doesn't mean breaking up. It means \"I need time\"."
+    },
+    {
+     "id": "ko-fight-04",
+     "text": "상처받았어.",
+     "meaning": "That hurt my feelings.",
+     "example": "솔직히 그 말에 상처받았어.",
+     "exampleKo": "Honestly, that really hurt me.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-05",
+     "text": "우리 싸우지 말자.",
+     "meaning": "Let's not fight.",
+     "example": "싸우지 말자, 보고 싶어.",
+     "exampleKo": "Let's not fight, I miss you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-06",
+     "text": "내가 말이 심했어.",
+     "meaning": "I went too far.",
+     "example": "미안, 내가 말이 심했어.",
+     "exampleKo": "Sorry, I said too much.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-07",
+     "text": "우리 괜찮은 거지?",
+     "meaning": "Are we okay?",
+     "example": "우리 이제 괜찮은 거지?",
+     "exampleKo": "We're okay now, right?",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-08",
+     "text": "화해하자.",
+     "meaning": "Let's make up.",
+     "example": "싸우기 싫어, 화해하자.",
+     "exampleKo": "I hate fighting, let's make up.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-09",
+     "text": "용서할게.",
+     "meaning": "I forgive you.",
+     "example": "괜찮아, 용서할게.",
+     "exampleKo": "It's okay, I forgive you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-10",
+     "text": "그렇게 말 안 했어.",
+     "meaning": "That's not what I said.",
+     "example": "잠깐, 나 그렇게 말 안 했어.",
+     "exampleKo": "Wait, I didn't say that.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-11",
+     "text": "내가 잘못했어.",
+     "meaning": "I was wrong.",
+     "example": "네 말이 맞아, 내가 잘못했어.",
+     "exampleKo": "You're right, I was wrong.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-12",
+     "text": "화내지 마.",
+     "meaning": "Don't be mad.",
+     "example": "화내지 마, 설명할게.",
+     "exampleKo": "Don't be mad, let me explain.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-13",
+     "text": "너한테 화난 거 아니야.",
+     "meaning": "I'm not mad at you.",
+     "example": "너한테 화난 거 아니야, 그냥 피곤해.",
+     "exampleKo": "I'm not mad at you, I'm just tired.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-14",
+     "text": "처음부터 다시 하자.",
+     "meaning": "Let's start over.",
+     "example": "우리 처음부터 다시 하자.",
+     "exampleKo": "Let's start over.",
+     "tip": ""
+    },
+    {
+     "id": "ko-fight-15",
+     "text": "무슨 말인지 알아.",
+     "meaning": "I see your point.",
+     "example": "무슨 말인지 알아, 근데 난 생각이 달라.",
+     "exampleKo": "I see your point, but I think differently.",
+     "tip": "Good to say before you disagree."
+    },
+    {
+     "id": "ko-fight-16",
+     "text": "이제 다 풀렸어.",
+     "meaning": "We're good now.",
+     "example": "걱정 마, 이제 다 풀렸어.",
+     "exampleKo": "Don't worry, we're all good now.",
+     "tip": "풀리다 means a bad feeling is \"untied\" or gone."
+    },
+    {
+     "id": "ko-fight-17",
+     "text": "속상하게 해서 미안해.",
+     "meaning": "Sorry I upset you.",
+     "example": "속상하게 해서 정말 미안해.",
+     "exampleKo": "I'm really sorry I upset you.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "care",
+   "title": {
+    "ko": "위로·응원",
+    "en": "Comfort & cheering"
+   },
+   "items": [
+    {
+     "id": "ko-care-01",
+     "text": "내가 있잖아.",
+     "meaning": "I'm here for you.",
+     "example": "무슨 일이 있어도 내가 있잖아.",
+     "exampleKo": "Whatever happens, I'm here for you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-02",
+     "text": "넌 할 수 있어!",
+     "meaning": "You've got this!",
+     "example": "내일 중요한 날이지? 넌 할 수 있어!",
+     "exampleKo": "Big day tomorrow? You've got this!",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 1628.5
+    },
+    {
+     "id": "ko-care-03",
+     "text": "속상하겠다.",
+     "meaning": "That sucks.",
+     "example": "버스 놓쳤어? 속상하겠다.",
+     "exampleKo": "You missed the bus? That must be annoying.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-04",
+     "text": "몸 잘 챙겨.",
+     "meaning": "Take care of yourself.",
+     "example": "날씨 추우니까 몸 잘 챙겨.",
+     "exampleKo": "It's cold, so take care of yourself.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-05",
+     "text": "푹 쉬어.",
+     "meaning": "Get some good rest.",
+     "example": "고생했어, 푹 쉬어.",
+     "exampleKo": "You worked hard, get some rest.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-06",
+     "text": "빨리 나아.",
+     "meaning": "Get well soon.",
+     "example": "빨리 나아! 물 많이 마셔.",
+     "exampleKo": "Get well soon! Drink lots of water.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-07",
+     "text": "다 잘될 거야.",
+     "meaning": "Everything will be okay.",
+     "example": "울지 마, 다 잘될 거야.",
+     "exampleKo": "Don't cry, everything will be okay.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-08",
+     "text": "네가 자랑스러워.",
+     "meaning": "I'm proud of you.",
+     "example": "해냈구나! 네가 자랑스러워.",
+     "exampleKo": "You did it! I'm proud of you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-09",
+     "text": "조금만 힘내.",
+     "meaning": "Hang in there.",
+     "example": "시험 거의 끝났어, 조금만 힘내!",
+     "exampleKo": "Exams are almost over, hang in there!",
+     "tip": "힘내 literally means \"find your strength\".",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-care-10",
+     "text": "얘기하고 싶어?",
+     "meaning": "Do you want to talk about it?",
+     "example": "기운 없어 보여. 얘기하고 싶어?",
+     "exampleKo": "You look down. Want to talk about it?",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-11",
+     "text": "최선을 다했잖아.",
+     "meaning": "You did your best.",
+     "example": "괜찮아, 최선을 다했잖아.",
+     "exampleKo": "It's okay, you did your best.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-12",
+     "text": "난 네 편이야.",
+     "meaning": "I've got your back.",
+     "example": "걱정 마, 난 언제나 네 편이야.",
+     "exampleKo": "Don't worry, I'm always on your side.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-13",
+     "text": "무리하지 마.",
+     "meaning": "Don't push yourself too hard.",
+     "example": "바빠도 무리하지 마.",
+     "exampleKo": "Even if you're busy, don't overdo it.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-14",
+     "text": "조심히 들어가.",
+     "meaning": "Get home safe.",
+     "example": "늦었으니까 조심히 들어가.",
+     "exampleKo": "It's late, so get home safe.",
+     "tip": "A very common goodbye between friends and couples."
+    },
+    {
+     "id": "ko-care-15",
+     "text": "난 너 믿어.",
+     "meaning": "I believe in you.",
+     "example": "난 너 믿어, 잘할 거야.",
+     "exampleKo": "I believe in you, you'll do great.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-16",
+     "text": "너무 자책하지 마.",
+     "meaning": "Don't be so hard on yourself.",
+     "example": "너무 자책하지 마.",
+     "exampleKo": "Don't blame yourself so much.",
+     "tip": ""
+    },
+    {
+     "id": "ko-care-17",
+     "text": "필요한 거 있으면 말해.",
+     "meaning": "Let me know if you need anything.",
+     "example": "필요한 거 있으면 언제든 말해.",
+     "exampleKo": "If you need anything, just tell me.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "react",
+   "title": {
+    "ko": "칭찬·리액션",
+    "en": "Compliments & reactions"
+   },
+   "items": [
+    {
+     "id": "ko-react-01",
+     "text": "오늘 진짜 예쁘다!",
+     "meaning": "You look so pretty today!",
+     "example": "그 원피스 진짜 예쁘다!",
+     "exampleKo": "That dress looks so pretty!",
+     "tip": "For a man, say 멋있다 (you look cool/handsome).",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-react-02",
+     "text": "너무 다정하다.",
+     "meaning": "That's so sweet of you.",
+     "example": "도시락 싸 줬어? 너무 다정하다.",
+     "exampleKo": "You packed me lunch? That's so sweet.",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-03",
+     "text": "귀여워!",
+     "meaning": "So cute!",
+     "example": "이 강아지 봐, 너무 귀여워!",
+     "exampleKo": "Look at this puppy, so cute!",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-react-04",
+     "text": "좋다!",
+     "meaning": "I love that!",
+     "example": "그림 시작했어? 좋다!",
+     "exampleKo": "You started painting? I love that!",
+     "tip": "",
+     "sentences": 62,
+     "perMillion": 3883.3
+    },
+    {
+     "id": "ko-react-05",
+     "text": "잘됐다!",
+     "meaning": "Good for you! / That's great!",
+     "example": "합격했어? 잘됐다!",
+     "exampleKo": "You passed? That's great!",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-06",
+     "text": "웃겨 죽겠어.",
+     "meaning": "I'm dying of laughter.",
+     "example": "네 얘기 웃겨 죽겠어.",
+     "exampleKo": "Your story is killing me.",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-07",
+     "text": "내 일처럼 기뻐.",
+     "meaning": "I'm so happy for you.",
+     "example": "약혼했어? 내 일처럼 기뻐!",
+     "exampleKo": "You got engaged? I'm as happy as if it were me!",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-08",
+     "text": "맛있겠다!",
+     "meaning": "Looks delicious!",
+     "example": "맛있겠다! 직접 만들었어?",
+     "exampleKo": "Looks delicious! Did you make it yourself?",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-09",
+     "text": "대단하다!",
+     "meaning": "That's awesome!",
+     "example": "10킬로 뛰었어? 대단하다!",
+     "exampleKo": "You ran 10 km? That's awesome!",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-10",
+     "text": "재능 있다.",
+     "meaning": "You're so talented.",
+     "example": "이거 네가 그렸어? 재능 있다.",
+     "exampleKo": "You drew this? You're talented.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-react-11",
+     "text": "덕분에 힘이 났어.",
+     "meaning": "You made my day.",
+     "example": "네 메시지 덕분에 힘이 났어.",
+     "exampleKo": "Your message really cheered me up.",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-12",
+     "text": "완전 빠졌어.",
+     "meaning": "I'm obsessed.",
+     "example": "이 노래에 완전 빠졌어.",
+     "exampleKo": "I'm totally obsessed with this song.",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-13",
+     "text": "완전 너답다.",
+     "meaning": "That's so you.",
+     "example": "분홍 캐리어? 완전 너답다.",
+     "exampleKo": "A pink suitcase? That's so you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-14",
+     "text": "멋있다!",
+     "meaning": "You look cool!",
+     "example": "오늘 옷 진짜 멋있다!",
+     "exampleKo": "Your outfit is so cool today!",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-15",
+     "text": "부럽다!",
+     "meaning": "I'm jealous! (in a good way)",
+     "example": "바닷가 근처 새 직장? 부럽다!",
+     "exampleKo": "A new job near the beach? I'm jealous!",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-16",
+     "text": "천재야!",
+     "meaning": "You're a genius!",
+     "example": "벌써 고쳤어? 천재야!",
+     "exampleKo": "You fixed it already? You're a genius!",
+     "tip": ""
+    },
+    {
+     "id": "ko-react-17",
+     "text": "짱이다!",
+     "meaning": "The best! Awesome!",
+     "example": "이 카페 진짜 짱이다!",
+     "exampleKo": "This café is the best!",
+     "tip": "짱 means \"the best\" in casual speech."
+    }
+   ]
+  },
+  {
+   "id": "culture",
+   "title": {
+    "ko": "되묻기·문화 차이",
+    "en": "Asking & culture"
+   },
+   "items": [
+    {
+     "id": "ko-culture-01",
+     "text": "무슨 뜻이야?",
+     "meaning": "What do you mean?",
+     "example": "그게 무슨 뜻이야?",
+     "exampleKo": "What does that mean?",
+     "tip": "Say it softly so it doesn't sound like you're arguing.",
+     "sentences": 10,
+     "perMillion": 626.3
+    },
+    {
+     "id": "ko-culture-02",
+     "text": "이거 한국어로 뭐라고 해?",
+     "meaning": "How do you say this in Korean?",
+     "example": "이거 한국어로 뭐라고 해?",
+     "exampleKo": "How do you say this in Korean?",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-03",
+     "text": "다시 말해 줄래?",
+     "meaning": "Can you say that again?",
+     "example": "미안, 다시 말해 줄래?",
+     "exampleKo": "Sorry, can you say that again?",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-04",
+     "text": "조금 천천히 말해 줄래?",
+     "meaning": "Could you speak a little slower?",
+     "example": "조금 천천히 말해 줄래? 다 알아듣고 싶어.",
+     "exampleKo": "Could you speak a bit slower? I want to catch everything.",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-05",
+     "text": "한국에서는 원래 그래?",
+     "meaning": "Is that normal in Korea?",
+     "example": "그거 한국에서는 원래 그래?",
+     "exampleKo": "Is that just how it is in Korea?",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-06",
+     "text": "아직 한국어 배우는 중이야.",
+     "meaning": "I'm still learning Korean.",
+     "example": "미안, 아직 한국어 배우는 중이야.",
+     "exampleKo": "Sorry, I'm still learning Korean.",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-07",
+     "text": "내가 맞게 말했어?",
+     "meaning": "Did I say that right?",
+     "example": "내가 맞게 말했어? 솔직하게 말해 줘.",
+     "exampleKo": "Did I say it right? Be honest.",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-08",
+     "text": "틀리면 고쳐 줘.",
+     "meaning": "Correct me if I'm wrong.",
+     "example": "틀리면 고쳐 줘, 알았지?",
+     "exampleKo": "Correct me if I'm wrong, okay?",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-09",
+     "text": "이거 반말해도 돼?",
+     "meaning": "Can I talk casually?",
+     "example": "너희 부모님께 반말해도 돼?",
+     "exampleKo": "Is it okay to speak casually to your parents?",
+     "tip": "반말 is casual speech. Use 존댓말 (polite speech) with elders and people you just met."
+    },
+    {
+     "id": "ko-culture-10",
+     "text": "우리나라에서는 ~해.",
+     "meaning": "In my country, we ~.",
+     "example": "우리나라에서는 생일에 케이크를 먹어.",
+     "exampleKo": "In my country, we eat cake on birthdays.",
+     "tip": "Koreans say 우리나라 (our country) for their own country."
+    },
+    {
+     "id": "ko-culture-11",
+     "text": "영어 좀 알려 줄게.",
+     "meaning": "Let me teach you some English.",
+     "example": "영어 좀 알려 줄게. \"I miss you\" 해 봐!",
+     "exampleKo": "Let me teach you some English. Say \"I miss you\"!",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-12",
+     "text": "진짜 신기하다.",
+     "meaning": "That's so interesting.",
+     "example": "여름에 축하한다고? 진짜 신기하다.",
+     "exampleKo": "You celebrate it in summer? That's so interesting.",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-13",
+     "text": "이거 뭐라고 불러?",
+     "meaning": "What's this called?",
+     "example": "이거 한국어로 뭐라고 불러?",
+     "exampleKo": "What's this called in Korean?",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-14",
+     "text": "번역하면 느낌이 안 살아.",
+     "meaning": "It gets lost in translation.",
+     "example": "그 농담은 번역하면 느낌이 안 살아.",
+     "exampleKo": "That joke loses its feel in translation.",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-15",
+     "text": "잘 못 알아들었어.",
+     "meaning": "I didn't catch that.",
+     "example": "미안, 잘 못 알아들었어.",
+     "exampleKo": "Sorry, I didn't quite catch that.",
+     "tip": ""
+    },
+    {
+     "id": "ko-culture-16",
+     "text": "부모님 뵙는 거 긴장돼.",
+     "meaning": "I'm nervous to meet your parents.",
+     "example": "너희 부모님 뵙는 거 너무 긴장돼.",
+     "exampleKo": "I'm so nervous about meeting your parents.",
+     "tip": "뵙다 is the humble word for meeting elders."
+    },
+    {
+     "id": "ko-culture-17",
+     "text": "그 말 처음 들어.",
+     "meaning": "I've never heard that word.",
+     "example": "그 말 처음 들어. 무슨 뜻이야?",
+     "exampleKo": "I've never heard that before. What does it mean?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "daily",
+   "title": {
+    "ko": "일상 대화",
+    "en": "Everyday talk"
+   },
+   "items": [
+    {
+     "id": "ko-daily-01",
+     "text": "안녕!",
+     "meaning": "Hi! / Bye!",
+     "example": "안녕! 잘 지냈어?",
+     "exampleKo": "Hi! How have you been?",
+     "tip": "Casual hello and goodbye. Polite form: 안녕하세요.",
+     "sentences": 42,
+     "perMillion": 2630.6
+    },
+    {
+     "id": "ko-daily-02",
+     "text": "좋은 아침.",
+     "meaning": "Good morning.",
+     "example": "좋은 아침, 잘 잤어?",
+     "exampleKo": "Good morning, did you sleep well?",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-daily-03",
+     "text": "잘 지내?",
+     "meaning": "How are you?",
+     "example": "오랜만이야, 잘 지내?",
+     "exampleKo": "Long time no see, how are you?",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 1127.4
+    },
+    {
+     "id": "ko-daily-04",
+     "text": "그럭저럭.",
+     "meaning": "So-so.",
+     "example": "일은 그럭저럭이야.",
+     "exampleKo": "Work is so-so.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-05",
+     "text": "고마워.",
+     "meaning": "Thanks.",
+     "example": "도와줘서 고마워.",
+     "exampleKo": "Thanks for helping.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 1440.6
+    },
+    {
+     "id": "ko-daily-06",
+     "text": "천만에.",
+     "meaning": "You're welcome.",
+     "example": "천만에, 별거 아니야.",
+     "exampleKo": "You're welcome, it's nothing.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-07",
+     "text": "괜찮아.",
+     "meaning": "It's okay.",
+     "example": "괜찮아, 신경 쓰지 마.",
+     "exampleKo": "It's okay, don't worry about it.",
+     "tip": "Used for \"I'm fine\", \"no problem\", and \"no thanks\".",
+     "sentences": 27,
+     "perMillion": 1691.1
+    },
+    {
+     "id": "ko-daily-08",
+     "text": "미안해.",
+     "meaning": "Sorry.",
+     "example": "늦어서 미안해.",
+     "exampleKo": "Sorry I'm late.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 2192.2
+    },
+    {
+     "id": "ko-daily-09",
+     "text": "또 봐.",
+     "meaning": "See you.",
+     "example": "또 봐, 내일 만나.",
+     "exampleKo": "See you, let's meet tomorrow.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-10",
+     "text": "조심히 가.",
+     "meaning": "Get home safe.",
+     "example": "늦었으니까 조심히 가.",
+     "exampleKo": "It's late, so get home safe.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-11",
+     "text": "다녀왔어.",
+     "meaning": "I'm home.",
+     "example": "다녀왔어! 배고파.",
+     "exampleKo": "I'm home! I'm hungry.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-12",
+     "text": "어서 와.",
+     "meaning": "Welcome back.",
+     "example": "어서 와, 오늘 어땠어?",
+     "exampleKo": "Welcome back, how was your day?",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-13",
+     "text": "배고파.",
+     "meaning": "I'm hungry.",
+     "example": "배고파, 밥 먹자.",
+     "exampleKo": "I'm hungry, let's eat.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-14",
+     "text": "졸려.",
+     "meaning": "I'm sleepy.",
+     "example": "졸려, 이제 잘게.",
+     "exampleKo": "I'm sleepy, I'm going to bed.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-daily-15",
+     "text": "피곤해.",
+     "meaning": "I'm tired.",
+     "example": "오늘 너무 피곤해.",
+     "exampleKo": "I'm so tired today.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 814.2
+    },
+    {
+     "id": "ko-daily-16",
+     "text": "더워.",
+     "meaning": "It's hot.",
+     "example": "오늘 진짜 더워.",
+     "exampleKo": "It's really hot today.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 626.3
+    },
+    {
+     "id": "ko-daily-17",
+     "text": "추워.",
+     "meaning": "It's cold.",
+     "example": "밖에 추우니까 따뜻하게 입어.",
+     "exampleKo": "It's cold outside, so dress warm.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 939.5
+    },
+    {
+     "id": "ko-daily-18",
+     "text": "날씨 좋다.",
+     "meaning": "Nice weather.",
+     "example": "날씨 좋다, 산책할래?",
+     "exampleKo": "Nice weather, want to go for a walk?",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-19",
+     "text": "비 와.",
+     "meaning": "It's raining.",
+     "example": "비 오니까 우산 가져가.",
+     "exampleKo": "It's raining, take an umbrella.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-20",
+     "text": "잠깐만.",
+     "meaning": "Wait a sec.",
+     "example": "잠깐만, 금방 갈게.",
+     "exampleKo": "Wait a sec, I'll be right there.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-daily-21",
+     "text": "지금 몇 시야?",
+     "meaning": "What time is it?",
+     "example": "지금 몇 시야?",
+     "exampleKo": "What time is it now?",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-22",
+     "text": "어디야?",
+     "meaning": "Where are you?",
+     "example": "지금 어디야?",
+     "exampleKo": "Where are you now?",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-23",
+     "text": "뭐 먹고 싶어?",
+     "meaning": "What do you want to eat?",
+     "example": "오늘 저녁 뭐 먹고 싶어?",
+     "exampleKo": "What do you want for dinner?",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-24",
+     "text": "아무거나 좋아.",
+     "meaning": "Anything is fine.",
+     "example": "아무거나 좋아, 네가 정해.",
+     "exampleKo": "Anything's fine, you decide.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-25",
+     "text": "진짜 맛있다!",
+     "meaning": "It's so good! (food)",
+     "example": "이 떡볶이 진짜 맛있다!",
+     "exampleKo": "This tteokbokki is so good!",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-26",
+     "text": "알았어.",
+     "meaning": "Got it.",
+     "example": "알았어, 이따 연락할게.",
+     "exampleKo": "Got it, I'll text you later.",
+     "tip": "",
+     "sentences": 27,
+     "perMillion": 1691.1
+    },
+    {
+     "id": "ko-daily-27",
+     "text": "잘 부탁해.",
+     "meaning": "Please take care of me. / Nice to meet you.",
+     "example": "앞으로 잘 부탁해.",
+     "exampleKo": "Let's get along from now on.",
+     "tip": "Used when meeting someone new or asking for a favor."
+    },
+    {
+     "id": "ko-daily-28",
+     "text": "먼저 갈게.",
+     "meaning": "I'll head out first.",
+     "example": "미안, 먼저 갈게.",
+     "exampleKo": "Sorry, I'll head out first.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-29",
+     "text": "잘 자.",
+     "meaning": "Sleep well.",
+     "example": "잘 자, 내일 봐.",
+     "exampleKo": "Sleep well, see you tomorrow.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-30",
+     "text": "힘내!",
+     "meaning": "Cheer up! / You can do it!",
+     "example": "시험 힘내!",
+     "exampleKo": "Good luck on your exam!",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-daily-31",
+     "text": "오랜만이야.",
+     "meaning": "Long time no see.",
+     "example": "오랜만이야, 하나도 안 변했네.",
+     "exampleKo": "Long time no see, you haven't changed at all.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-32",
+     "text": "너는?",
+     "meaning": "And you?",
+     "example": "난 커피 마셔, 너는?",
+     "exampleKo": "I'm having coffee, you?",
+     "tip": "",
+     "sentences": 131,
+     "perMillion": 8204.9
+    },
+    {
+     "id": "ko-daily-33",
+     "text": "맛있게 먹어.",
+     "meaning": "Enjoy your meal.",
+     "example": "맛있게 먹어, 많이 먹어.",
+     "exampleKo": "Enjoy your meal, eat a lot.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-34",
+     "text": "잘 먹겠습니다.",
+     "meaning": "Thank you for the meal. (before eating)",
+     "example": "잘 먹겠습니다!",
+     "exampleKo": "Thank you for the food!",
+     "tip": "Said before eating, to the person who cooked or paid."
+    },
+    {
+     "id": "ko-daily-35",
+     "text": "잘 먹었습니다.",
+     "meaning": "Thank you for the meal. (after eating)",
+     "example": "잘 먹었습니다, 정말 맛있었어요.",
+     "exampleKo": "Thank you for the meal, it was delicious.",
+     "tip": ""
+    },
+    {
+     "id": "ko-daily-36",
+     "text": "건강해.",
+     "meaning": "Stay healthy.",
+     "example": "항상 건강해.",
+     "exampleKo": "Always stay healthy.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "routine",
+   "title": {
+    "ko": "하루 일과",
+    "en": "Daily routine"
+   },
+   "items": [
+    {
+     "id": "ko-routine-01",
+     "text": "일어났어?",
+     "meaning": "Are you up?",
+     "example": "벌써 일어났어?",
+     "exampleKo": "Are you up already?",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-routine-02",
+     "text": "늦잠 잤어!",
+     "meaning": "I overslept!",
+     "example": "큰일 났다, 늦잠 잤어!",
+     "exampleKo": "Oh no, I overslept!",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-routine-03",
+     "text": "세수하다",
+     "meaning": "wash your face",
+     "example": "일어나서 세수해.",
+     "exampleKo": "Wash your face when you wake up.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-04",
+     "text": "이를 닦다",
+     "meaning": "brush your teeth",
+     "example": "자기 전에 이 닦아.",
+     "exampleKo": "Brush your teeth before bed.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-05",
+     "text": "샤워하다",
+     "meaning": "take a shower",
+     "example": "지금 샤워할게.",
+     "exampleKo": "I'll take a shower now.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 626.3
+    },
+    {
+     "id": "ko-routine-06",
+     "text": "아침을 먹다",
+     "meaning": "eat breakfast",
+     "example": "아침 먹었어?",
+     "exampleKo": "Did you eat breakfast?",
+     "tip": "",
+     "sentences": 74,
+     "perMillion": 4634.8
+    },
+    {
+     "id": "ko-routine-07",
+     "text": "지하철을 타다",
+     "meaning": "take the subway",
+     "example": "출근할 때 지하철 타.",
+     "exampleKo": "I take the subway to work.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 1440.6
+    },
+    {
+     "id": "ko-routine-08",
+     "text": "버스를 타다",
+     "meaning": "take the bus",
+     "example": "오늘은 버스 타고 갈게.",
+     "exampleKo": "I'll take the bus today.",
+     "tip": "",
+     "sentences": 66,
+     "perMillion": 4133.8
+    },
+    {
+     "id": "ko-routine-09",
+     "text": "출근하다",
+     "meaning": "go to work",
+     "example": "8시에 출근해.",
+     "exampleKo": "I go to work at 8.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-10",
+     "text": "퇴근하다",
+     "meaning": "leave work",
+     "example": "몇 시에 퇴근해?",
+     "exampleKo": "What time do you get off work?",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-11",
+     "text": "학교에 가다",
+     "meaning": "go to school",
+     "example": "내일도 학교 가?",
+     "exampleKo": "Are you going to school tomorrow too?",
+     "tip": "",
+     "sentences": 126,
+     "perMillion": 7891.8
+    },
+    {
+     "id": "ko-routine-12",
+     "text": "점심",
+     "meaning": "lunch",
+     "example": "점심 뭐 먹었어?",
+     "exampleKo": "What did you eat for lunch?",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 1440.6
+    },
+    {
+     "id": "ko-routine-13",
+     "text": "야근하다",
+     "meaning": "work overtime",
+     "example": "오늘도 야근해야 해.",
+     "exampleKo": "I have to work overtime today too.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-14",
+     "text": "집에 가다",
+     "meaning": "go home",
+     "example": "지금 집에 가는 중이야.",
+     "exampleKo": "I'm on my way home.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 876.9
+    },
+    {
+     "id": "ko-routine-15",
+     "text": "저녁을 만들다",
+     "meaning": "make dinner",
+     "example": "지금 저녁 만들고 있어.",
+     "exampleKo": "I'm making dinner now.",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 2066.9
+    },
+    {
+     "id": "ko-routine-16",
+     "text": "빨래하다",
+     "meaning": "do laundry",
+     "example": "주말에 빨래해야 해.",
+     "exampleKo": "I have to do laundry on the weekend.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-17",
+     "text": "청소하다",
+     "meaning": "clean",
+     "example": "방 청소했어.",
+     "exampleKo": "I cleaned my room.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-routine-18",
+     "text": "장 보다",
+     "meaning": "go grocery shopping",
+     "example": "마트에 장 보러 가.",
+     "exampleKo": "I'm going grocery shopping at the mart.",
+     "tip": "",
+     "sentences": 401,
+     "perMillion": 25115.9
+    },
+    {
+     "id": "ko-routine-19",
+     "text": "집에 있다",
+     "meaning": "stay home",
+     "example": "쉬는 날엔 집에 있어.",
+     "exampleKo": "I stay home on days off.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 1941.6
+    },
+    {
+     "id": "ko-routine-20",
+     "text": "드라마를 보다",
+     "meaning": "watch a drama",
+     "example": "밤에는 드라마 봐.",
+     "exampleKo": "I watch dramas at night.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
+     "id": "ko-routine-21",
+     "text": "음악을 듣다",
+     "meaning": "listen to music",
+     "example": "출근길에 음악 들어.",
+     "exampleKo": "I listen to music on my way to work.",
+     "tip": "",
+     "sentences": 45,
+     "perMillion": 2818.5
+    },
+    {
+     "id": "ko-routine-22",
+     "text": "운동하다",
+     "meaning": "work out",
+     "example": "퇴근하고 운동해.",
+     "exampleKo": "I work out after work.",
+     "tip": "",
+     "sentences": 36,
+     "perMillion": 2254.8
+    },
+    {
+     "id": "ko-routine-23",
+     "text": "산책하다",
+     "meaning": "take a walk",
+     "example": "저녁 먹고 산책해.",
+     "exampleKo": "I take a walk after dinner.",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 1252.7
+    },
+    {
+     "id": "ko-routine-24",
+     "text": "목욕하다",
+     "meaning": "take a bath",
+     "example": "목욕하고 올게.",
+     "exampleKo": "I'll go take a bath.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 438.4
+    },
+    {
+     "id": "ko-routine-25",
+     "text": "잘 준비하다",
+     "meaning": "get ready for bed",
+     "example": "이제 잘 준비할게.",
+     "exampleKo": "I'll get ready for bed now.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-26",
+     "text": "일찍 일어나다",
+     "meaning": "wake up early",
+     "example": "내일 일찍 일어나야 해.",
+     "exampleKo": "I have to wake up early tomorrow.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-27",
+     "text": "밤새다",
+     "meaning": "stay up all night",
+     "example": "어젯밤 또 밤샜어.",
+     "exampleKo": "I stayed up all night again.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-routine-28",
+     "text": "다시 자다",
+     "meaning": "go back to sleep",
+     "example": "주말엔 다시 자.",
+     "exampleKo": "I go back to sleep on weekends.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-29",
+     "text": "도시락",
+     "meaning": "lunch box",
+     "example": "오늘은 도시락 싸 왔어.",
+     "exampleKo": "I brought a packed lunch today.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-30",
+     "text": "편의점",
+     "meaning": "convenience store",
+     "example": "편의점에서 삼각김밥 샀어.",
+     "exampleKo": "I bought a triangle kimbap at the convenience store.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-31",
+     "text": "쉬는 날",
+     "meaning": "day off",
+     "example": "내일 쉬는 날이야.",
+     "exampleKo": "Tomorrow is my day off.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-32",
+     "text": "주말",
+     "meaning": "weekend",
+     "example": "주말엔 뭐 해?",
+     "exampleKo": "What do you do on weekends?",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 2129.5
+    },
+    {
+     "id": "ko-routine-33",
+     "text": "평일",
+     "meaning": "weekday",
+     "example": "평일엔 항상 바빠.",
+     "exampleKo": "I'm always busy on weekdays.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-34",
+     "text": "매일",
+     "meaning": "every day",
+     "example": "매일 한국어 공부해.",
+     "exampleKo": "I study Korean every day.",
+     "tip": "",
+     "sentences": 58,
+     "perMillion": 3632.7
+    },
+    {
+     "id": "ko-routine-35",
+     "text": "항상",
+     "meaning": "always",
+     "example": "항상 이 길로 다녀.",
+     "exampleKo": "I always take this road.",
+     "tip": "",
+     "sentences": 68,
+     "perMillion": 4259.1
+    },
+    {
+     "id": "ko-routine-36",
+     "text": "가끔",
+     "meaning": "sometimes",
+     "example": "가끔 직접 요리해.",
+     "exampleKo": "I sometimes cook myself.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 1565.8
+    },
+    {
+     "id": "ko-routine-37",
+     "text": "재택근무",
+     "meaning": "work from home",
+     "example": "오늘은 재택근무야.",
+     "exampleKo": "I'm working from home today.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-38",
+     "text": "잠깐 쉬다",
+     "meaning": "take a short break",
+     "example": "우리 잠깐 쉬자.",
+     "exampleKo": "Let's take a short break.",
+     "tip": ""
+    },
+    {
+     "id": "ko-routine-39",
+     "text": "폰을 보다",
+     "meaning": "look at your phone",
+     "example": "자기 전에 폰을 봐.",
+     "exampleKo": "I look at my phone before bed.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 1503.2
+    },
+    {
+     "id": "ko-routine-40",
+     "text": "준비하다",
+     "meaning": "get ready",
+     "example": "준비 중이니까 기다려.",
+     "exampleKo": "I'm getting ready, so wait.",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 1628.5
+    }
+   ]
+  },
+  {
+   "id": "out",
+   "title": {
+    "ko": "밖에서",
+    "en": "Out and about"
+   },
+   "items": [
+    {
+     "id": "ko-out-01",
+     "text": "얼마예요?",
+     "meaning": "How much is it?",
+     "example": "이거 얼마예요?",
+     "exampleKo": "How much is this?",
+     "tip": "Polite form. Casual: 얼마야?",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-out-02",
+     "text": "이걸로 주세요.",
+     "meaning": "I'll take this one.",
+     "example": "이걸로 주세요.",
+     "exampleKo": "I'll take this one, please.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-03",
+     "text": "카드 돼요?",
+     "meaning": "Do you take cards?",
+     "example": "여기 카드 돼요?",
+     "exampleKo": "Do you take cards here?",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 626.3
+    },
+    {
+     "id": "ko-out-04",
+     "text": "봉투는 괜찮아요.",
+     "meaning": "No bag needed.",
+     "example": "봉투는 괜찮아요.",
+     "exampleKo": "No bag, thanks.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-out-05",
+     "text": "화장실이 어디예요?",
+     "meaning": "Where's the restroom?",
+     "example": "실례지만 화장실이 어디예요?",
+     "exampleKo": "Excuse me, where's the restroom?",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 1190.0
+    },
+    {
+     "id": "ko-out-06",
+     "text": "지하철역이 어디예요?",
+     "meaning": "Where's the subway station?",
+     "example": "지하철역이 어디예요?",
+     "exampleKo": "Where's the subway station?",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-07",
+     "text": "길을 잃었어요.",
+     "meaning": "I'm lost.",
+     "example": "죄송해요, 길을 잃었어요.",
+     "exampleKo": "Sorry, I'm lost.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 438.4
+    },
+    {
+     "id": "ko-out-08",
+     "text": "쭉 가세요.",
+     "meaning": "Go straight.",
+     "example": "쭉 가서 오른쪽으로 돌아요.",
+     "exampleKo": "Go straight, then turn right.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-09",
+     "text": "오른쪽",
+     "meaning": "right side",
+     "example": "다음 모퉁이에서 오른쪽이에요.",
+     "exampleKo": "It's on the right at the next corner.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-out-10",
+     "text": "왼쪽",
+     "meaning": "left side",
+     "example": "신호등에서 왼쪽으로 가세요.",
+     "exampleKo": "Go left at the traffic light.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-11",
+     "text": "가까워요.",
+     "meaning": "It's close.",
+     "example": "역에서 가까워요.",
+     "exampleKo": "It's close to the station.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-12",
+     "text": "멀어요.",
+     "meaning": "It's far.",
+     "example": "걸어가면 좀 멀어요.",
+     "exampleKo": "It's a bit far on foot.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-13",
+     "text": "두 명이에요.",
+     "meaning": "Two people.",
+     "example": "두 명이에요, 자리 있어요?",
+     "exampleKo": "Two people, do you have a table?",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 438.4
+    },
+    {
+     "id": "ko-out-14",
+     "text": "예약했어요.",
+     "meaning": "I have a reservation.",
+     "example": "7시에 예약했어요.",
+     "exampleKo": "I have a reservation at 7.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-out-15",
+     "text": "메뉴판 주세요.",
+     "meaning": "Menu, please.",
+     "example": "저기요, 메뉴판 주세요.",
+     "exampleKo": "Excuse me, the menu please.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-16",
+     "text": "추천 메뉴가 뭐예요?",
+     "meaning": "What do you recommend?",
+     "example": "추천 메뉴가 뭐예요?",
+     "exampleKo": "What do you recommend?",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-17",
+     "text": "계산해 주세요.",
+     "meaning": "Check, please.",
+     "example": "계산해 주세요.",
+     "exampleKo": "Check, please.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 1127.4
+    },
+    {
+     "id": "ko-out-18",
+     "text": "포장해 주세요.",
+     "meaning": "To go, please.",
+     "example": "이거 포장해 주세요.",
+     "exampleKo": "Please pack this to go.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-19",
+     "text": "여기서 먹을게요.",
+     "meaning": "I'll eat here.",
+     "example": "여기서 먹을게요.",
+     "exampleKo": "I'll eat here.",
+     "tip": "",
+     "sentences": 42,
+     "perMillion": 2630.6
+    },
+    {
+     "id": "ko-out-20",
+     "text": "저기요!",
+     "meaning": "Excuse me! (calling someone)",
+     "example": "저기요, 주문할게요!",
+     "exampleKo": "Excuse me, I'd like to order!",
+     "tip": "Used to call a waiter or stranger."
+    },
+    {
+     "id": "ko-out-21",
+     "text": "자리 있어요?",
+     "meaning": "Do you have a seat?",
+     "example": "자리 있어요?",
+     "exampleKo": "Is there a seat available?",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 2192.2
+    },
+    {
+     "id": "ko-out-22",
+     "text": "줄이 길어.",
+     "meaning": "The line is long.",
+     "example": "그 가게 줄이 길어.",
+     "exampleKo": "The line at that shop is long.",
+     "tip": "",
+     "sentences": 227,
+     "perMillion": 14217.7
+    },
+    {
+     "id": "ko-out-23",
+     "text": "지하철이 늦어.",
+     "meaning": "The subway is late.",
+     "example": "지하철이 늦어서 조금 늦어.",
+     "exampleKo": "The subway is late, so I'll be a bit late.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-out-24",
+     "text": "환승",
+     "meaning": "transfer",
+     "example": "다음 역에서 환승이에요.",
+     "exampleKo": "You transfer at the next station.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-25",
+     "text": "표",
+     "meaning": "ticket",
+     "example": "표 사러 갈게.",
+     "exampleKo": "I'll go buy tickets.",
+     "tip": "",
+     "sentences": 70,
+     "perMillion": 4384.3
+    },
+    {
+     "id": "ko-out-26",
+     "text": "택시를 타다",
+     "meaning": "take a taxi",
+     "example": "늦었으니까 택시 타자.",
+     "exampleKo": "It's late, let's take a taxi.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 1503.2
+    },
+    {
+     "id": "ko-out-27",
+     "text": "사진 찍어 주세요.",
+     "meaning": "Could you take a photo?",
+     "example": "실례지만 사진 좀 찍어 주세요.",
+     "exampleKo": "Excuse me, could you take our photo?",
+     "tip": "",
+     "sentences": 29,
+     "perMillion": 1816.4
+    },
+    {
+     "id": "ko-out-28",
+     "text": "같이 사진 찍자.",
+     "meaning": "Let's take a photo together.",
+     "example": "여기서 같이 사진 찍자!",
+     "exampleKo": "Let's take a photo here!",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-29",
+     "text": "입어 봐도 돼요?",
+     "meaning": "Can I try this on?",
+     "example": "이거 입어 봐도 돼요?",
+     "exampleKo": "Can I try this on?",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-30",
+     "text": "더 큰 사이즈 있어요?",
+     "meaning": "Do you have a bigger size?",
+     "example": "더 큰 사이즈 있어요?",
+     "exampleKo": "Do you have a bigger size?",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-31",
+     "text": "싸다!",
+     "meaning": "It's cheap!",
+     "example": "이거 싸다!",
+     "exampleKo": "This is cheap!",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-out-32",
+     "text": "비싸다.",
+     "meaning": "It's expensive.",
+     "example": "이거 좀 비싸다.",
+     "exampleKo": "This is a bit expensive.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-33",
+     "text": "세일",
+     "meaning": "sale",
+     "example": "지금 세일 중이야.",
+     "exampleKo": "It's on sale now.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 438.4
+    },
+    {
+     "id": "ko-out-34",
+     "text": "사람 많다.",
+     "meaning": "It's crowded.",
+     "example": "오늘 사람 진짜 많다.",
+     "exampleKo": "It's so crowded today.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-35",
+     "text": "사람 없다.",
+     "meaning": "It's empty.",
+     "example": "평일이라 사람 별로 없네.",
+     "exampleKo": "It's a weekday, so not many people.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-36",
+     "text": "열었어요?",
+     "meaning": "Is it open?",
+     "example": "아직 열었어요?",
+     "exampleKo": "Is it still open?",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-out-37",
+     "text": "닫았어요.",
+     "meaning": "It's closed.",
+     "example": "벌써 닫았어요.",
+     "exampleKo": "It's already closed.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-out-38",
+     "text": "와이파이 있어요?",
+     "meaning": "Is there Wi-Fi?",
+     "example": "여기 와이파이 있어요?",
+     "exampleKo": "Is there Wi-Fi here?",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-39",
+     "text": "충전하고 싶어요.",
+     "meaning": "I want to charge my phone.",
+     "example": "폰 충전하고 싶어요.",
+     "exampleKo": "I want to charge my phone.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-40",
+     "text": "어떻게 가요?",
+     "meaning": "How do I get there?",
+     "example": "거기 어떻게 가요?",
+     "exampleKo": "How do I get there?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "feelings",
+   "title": {
+    "ko": "감정·관계",
+    "en": "Feelings & people"
+   },
+   "items": [
+    {
+     "id": "ko-feelings-01",
+     "text": "기뻐.",
+     "meaning": "I'm happy.",
+     "example": "만나서 기뻐.",
+     "exampleKo": "I'm happy to meet you.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-feelings-02",
+     "text": "슬퍼.",
+     "meaning": "I'm sad.",
+     "example": "그 소식 슬프다.",
+     "exampleKo": "That news is sad.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 438.4
+    },
+    {
+     "id": "ko-feelings-03",
+     "text": "외로워.",
+     "meaning": "I'm lonely.",
+     "example": "혼자 있으면 외로워.",
+     "exampleKo": "I get lonely when I'm alone.",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 1064.8
+    },
+    {
+     "id": "ko-feelings-04",
+     "text": "무서워.",
+     "meaning": "I'm scared.",
+     "example": "공포 영화는 무서워.",
+     "exampleKo": "Horror movies are scary.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 1440.6
+    },
+    {
+     "id": "ko-feelings-05",
+     "text": "부끄러워.",
+     "meaning": "I'm embarrassed.",
+     "example": "사람들 앞에서 노래하면 부끄러워.",
+     "exampleKo": "I'm embarrassed singing in front of people.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-feelings-06",
+     "text": "분해.",
+     "meaning": "I'm so frustrated.",
+     "example": "경기에 져서 분해.",
+     "exampleKo": "I'm frustrated that we lost.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-feelings-07",
+     "text": "짜증 나.",
+     "meaning": "I'm annoyed.",
+     "example": "차 막혀서 짜증 나.",
+     "exampleKo": "I'm annoyed by the traffic.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-feelings-08",
+     "text": "긴장돼.",
+     "meaning": "I'm nervous.",
+     "example": "면접이라 긴장돼.",
+     "exampleKo": "I'm nervous about the interview.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-feelings-09",
+     "text": "다행이다.",
+     "meaning": "What a relief.",
+     "example": "네가 무사해서 다행이다.",
+     "exampleKo": "What a relief that you're safe.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 1127.4
+    },
+    {
+     "id": "ko-feelings-10",
+     "text": "깜짝 놀랐어.",
+     "meaning": "You startled me.",
+     "example": "갑자기 와서 깜짝 놀랐어!",
+     "exampleKo": "You startled me by showing up!",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-feelings-11",
+     "text": "열받아.",
+     "meaning": "I'm furious.",
+     "example": "그 태도 열받아.",
+     "exampleKo": "That attitude makes me furious.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-12",
+     "text": "행복해.",
+     "meaning": "I'm happy.",
+     "example": "지금 정말 행복해.",
+     "exampleKo": "I'm really happy right now.",
+     "tip": "",
+     "sentences": 47,
+     "perMillion": 2943.8
+    },
+    {
+     "id": "ko-feelings-13",
+     "text": "감동했어.",
+     "meaning": "I'm moved.",
+     "example": "그 영화 감동적이었어.",
+     "exampleKo": "That movie was moving.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 438.4
+    },
+    {
+     "id": "ko-feelings-14",
+     "text": "그립다.",
+     "meaning": "I miss it. (a time or place)",
+     "example": "이 노래 들으니 그립다.",
+     "exampleKo": "This song makes me nostalgic.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-15",
+     "text": "귀찮아.",
+     "meaning": "I can't be bothered.",
+     "example": "오늘은 요리하기 귀찮아.",
+     "exampleKo": "I can't be bothered to cook today.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-feelings-16",
+     "text": "지루해.",
+     "meaning": "I'm bored.",
+     "example": "이 수업 지루해.",
+     "exampleKo": "This class is boring.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
+     "id": "ko-feelings-17",
+     "text": "편안해.",
+     "meaning": "I feel comfortable.",
+     "example": "너랑 있으면 편안해.",
+     "exampleKo": "I feel comfortable with you.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-feelings-18",
+     "text": "찜찜해.",
+     "meaning": "I feel uneasy.",
+     "example": "뭔가 마음이 찜찜해.",
+     "exampleKo": "Something feels off.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-19",
+     "text": "친구",
+     "meaning": "friend",
+     "example": "고등학교 친구 만났어.",
+     "exampleKo": "I met a friend from high school.",
+     "tip": "",
+     "sentences": 123,
+     "perMillion": 7703.9
+    },
+    {
+     "id": "ko-feelings-20",
+     "text": "절친",
+     "meaning": "best friend",
+     "example": "걔는 내 절친이야.",
+     "exampleKo": "She's my best friend.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-21",
+     "text": "남자친구",
+     "meaning": "boyfriend",
+     "example": "남자친구 있어?",
+     "exampleKo": "Do you have a boyfriend?",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-feelings-22",
+     "text": "여자친구",
+     "meaning": "girlfriend",
+     "example": "여자친구랑 사귄 지 1년이야.",
+     "exampleKo": "It's been a year since I got together with my girlfriend.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 939.5
+    },
+    {
+     "id": "ko-feelings-23",
+     "text": "가족",
+     "meaning": "family",
+     "example": "가족이랑 여행 가.",
+     "exampleKo": "I'm traveling with my family.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 1565.8
+    },
+    {
+     "id": "ko-feelings-24",
+     "text": "부모님",
+     "meaning": "parents",
+     "example": "부모님께 소개하고 싶어.",
+     "exampleKo": "I want to introduce you to my parents.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 1503.2
+    },
+    {
+     "id": "ko-feelings-25",
+     "text": "형제",
+     "meaning": "siblings",
+     "example": "형제 있어?",
+     "exampleKo": "Do you have siblings?",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 1565.8
+    },
+    {
+     "id": "ko-feelings-26",
+     "text": "사이가 좋다",
+     "meaning": "get along well",
+     "example": "우리 사이 좋다.",
+     "exampleKo": "We get along well.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-27",
+     "text": "잘 맞다",
+     "meaning": "be a good match",
+     "example": "너랑 잘 맞네.",
+     "exampleKo": "We're a good match.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-28",
+     "text": "다정한 사람",
+     "meaning": "a sweet person",
+     "example": "그는 정말 다정한 사람이야.",
+     "exampleKo": "He's a really sweet person.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-29",
+     "text": "재밌는 사람",
+     "meaning": "a fun person",
+     "example": "너 재밌는 사람이야.",
+     "exampleKo": "You're a fun person.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-30",
+     "text": "신경 쓰이다",
+     "meaning": "be on your mind",
+     "example": "그 사람 좀 신경 쓰여.",
+     "exampleKo": "That person is on my mind.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-31",
+     "text": "믿다",
+     "meaning": "trust",
+     "example": "널 믿어.",
+     "exampleKo": "I trust you.",
+     "tip": "",
+     "sentences": 77,
+     "perMillion": 4822.7
+    },
+    {
+     "id": "ko-feelings-32",
+     "text": "걱정하다",
+     "meaning": "worry",
+     "example": "엄마가 걱정하셔.",
+     "exampleKo": "Mom is worried.",
+     "tip": "",
+     "sentences": 45,
+     "perMillion": 2818.5
+    },
+    {
+     "id": "ko-feelings-33",
+     "text": "싸우다",
+     "meaning": "fight",
+     "example": "어제 친구랑 싸웠어.",
+     "exampleKo": "I fought with a friend yesterday.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 438.4
+    },
+    {
+     "id": "ko-feelings-34",
+     "text": "기운이 없다",
+     "meaning": "have no energy",
+     "example": "오늘 기운 없어 보여.",
+     "exampleKo": "You look low on energy today.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-35",
+     "text": "의욕이 없다",
+     "meaning": "have no motivation",
+     "example": "월요일엔 의욕이 없어.",
+     "exampleKo": "I have no motivation on Mondays.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-36",
+     "text": "기분이 좋다",
+     "meaning": "feel good",
+     "example": "오늘 기분 좋아!",
+     "exampleKo": "I feel good today!",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-feelings-37",
+     "text": "기분이 안 좋다",
+     "meaning": "feel bad",
+     "example": "오늘 기분이 안 좋아.",
+     "exampleKo": "I feel bad today.",
+     "tip": ""
+    },
+    {
+     "id": "ko-feelings-38",
+     "text": "울다",
+     "meaning": "cry",
+     "example": "영화 보다가 울었어.",
+     "exampleKo": "I cried watching the movie.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 814.2
+    }
+   ]
+  },
+  {
+   "id": "plans",
+   "title": {
+    "ko": "약속·계획",
+    "en": "Plans & time"
+   },
+   "items": [
+    {
+     "id": "ko-plans-01",
+     "text": "다음에",
+     "meaning": "next time",
+     "example": "다음에 같이 가자.",
+     "exampleKo": "Let's go together next time.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-plans-02",
+     "text": "내일",
+     "meaning": "tomorrow",
+     "example": "내일 만날 수 있어?",
+     "exampleKo": "Can we meet tomorrow?",
+     "tip": "",
+     "sentences": 88,
+     "perMillion": 5511.7
+    },
+    {
+     "id": "ko-plans-03",
+     "text": "모레",
+     "meaning": "the day after tomorrow",
+     "example": "모레는 어때?",
+     "exampleKo": "How about the day after tomorrow?",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-04",
+     "text": "다음 주",
+     "meaning": "next week",
+     "example": "다음 주 토요일 시간 돼?",
+     "exampleKo": "Are you free next Saturday?",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 438.4
+    },
+    {
+     "id": "ko-plans-05",
+     "text": "이번 주말",
+     "meaning": "this weekend",
+     "example": "이번 주말에 뭐 해?",
+     "exampleKo": "What are you doing this weekend?",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-plans-06",
+     "text": "다음 달",
+     "meaning": "next month",
+     "example": "다음 달에 한국 가.",
+     "exampleKo": "I'm going to Korea next month.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-07",
+     "text": "약속 있어?",
+     "meaning": "Do you have plans?",
+     "example": "금요일에 약속 있어?",
+     "exampleKo": "Do you have plans on Friday?",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 1315.3
+    },
+    {
+     "id": "ko-plans-08",
+     "text": "시간 돼.",
+     "meaning": "I'm free.",
+     "example": "그날은 시간 돼.",
+     "exampleKo": "I'm free that day.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-09",
+     "text": "안 될 것 같아.",
+     "meaning": "I don't think I can.",
+     "example": "미안, 그날은 안 될 것 같아.",
+     "exampleKo": "Sorry, I don't think I can that day.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-10",
+     "text": "몇 시가 좋아?",
+     "meaning": "What time works?",
+     "example": "내일 몇 시가 좋아?",
+     "exampleKo": "What time works tomorrow?",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-11",
+     "text": "어디서 만나?",
+     "meaning": "Where should we meet?",
+     "example": "내일 어디서 만나?",
+     "exampleKo": "Where should we meet tomorrow?",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-12",
+     "text": "역에서 만나.",
+     "meaning": "Meet at the station.",
+     "example": "역에서 기다릴게.",
+     "exampleKo": "I'll wait at the station.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-plans-13",
+     "text": "늦을 것 같아.",
+     "meaning": "I think I'll be late.",
+     "example": "미안, 5분 늦을 것 같아.",
+     "exampleKo": "Sorry, I think I'll be 5 minutes late.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-plans-14",
+     "text": "시간에 맞다",
+     "meaning": "make it on time",
+     "example": "서두르면 시간에 맞아.",
+     "exampleKo": "If you hurry, you'll make it.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-15",
+     "text": "취소하다",
+     "meaning": "cancel",
+     "example": "예약 취소했어.",
+     "exampleKo": "I canceled the reservation.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-plans-16",
+     "text": "기대돼.",
+     "meaning": "I'm looking forward to it.",
+     "example": "다음 주 여행이 기대돼.",
+     "exampleKo": "I'm looking forward to next week's trip.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 814.2
+    },
+    {
+     "id": "ko-plans-17",
+     "text": "여행 가다",
+     "meaning": "go on a trip",
+     "example": "여름방학에 여행 가자.",
+     "exampleKo": "Let's go on a trip over summer break.",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 2004.3
+    },
+    {
+     "id": "ko-plans-18",
+     "text": "같이 가자.",
+     "meaning": "Let's go together.",
+     "example": "축제 같이 가자!",
+     "exampleKo": "Let's go to the festival together!",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-19",
+     "text": "정했어?",
+     "meaning": "Did you decide?",
+     "example": "어디 갈지 정했어?",
+     "exampleKo": "Did you decide where to go?",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 1252.7
+    },
+    {
+     "id": "ko-plans-20",
+     "text": "아직 안 정했어.",
+     "meaning": "I haven't decided yet.",
+     "example": "아직 안 정했어.",
+     "exampleKo": "I haven't decided yet.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-21",
+     "text": "생각해 볼게.",
+     "meaning": "I'll think about it.",
+     "example": "음, 생각해 볼게.",
+     "exampleKo": "Hmm, I'll think about it.",
+     "tip": "Can also be a soft \"no\"."
+    },
+    {
+     "id": "ko-plans-22",
+     "text": "언제든 좋아.",
+     "meaning": "Anytime is fine.",
+     "example": "언제든 좋아, 맞출게.",
+     "exampleKo": "Anytime is fine, I'll adjust.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-23",
+     "text": "다음에 하자.",
+     "meaning": "Let's do it another time.",
+     "example": "오늘은 안 돼, 다음에 하자.",
+     "exampleKo": "Not today, let's do it another time.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-24",
+     "text": "또 연락할게.",
+     "meaning": "I'll text you again.",
+     "example": "시간 알면 또 연락할게.",
+     "exampleKo": "I'll text you again when I know the time.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-25",
+     "text": "생일",
+     "meaning": "birthday",
+     "example": "생일 언제야?",
+     "exampleKo": "When's your birthday?",
+     "tip": "",
+     "sentences": 54,
+     "perMillion": 3382.2
+    },
+    {
+     "id": "ko-plans-26",
+     "text": "기념일",
+     "meaning": "anniversary",
+     "example": "다음 주가 우리 기념일이야.",
+     "exampleKo": "Next week is our anniversary.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-27",
+     "text": "축하하다",
+     "meaning": "celebrate",
+     "example": "합격 축하하자!",
+     "exampleKo": "Let's celebrate you passing!",
+     "tip": "",
+     "sentences": 40,
+     "perMillion": 2505.3
+    },
+    {
+     "id": "ko-plans-28",
+     "text": "선물",
+     "meaning": "gift",
+     "example": "생일 선물 뭐가 좋아?",
+     "exampleKo": "What gift do you want for your birthday?",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 1503.2
+    },
+    {
+     "id": "ko-plans-29",
+     "text": "여름방학",
+     "meaning": "summer break",
+     "example": "여름방학에 어디 가?",
+     "exampleKo": "Where are you going on summer break?",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-30",
+     "text": "설날",
+     "meaning": "Lunar New Year",
+     "example": "설날엔 가족이랑 보내.",
+     "exampleKo": "I spend Lunar New Year with family.",
+     "tip": "One of the two biggest Korean holidays."
+    },
+    {
+     "id": "ko-plans-31",
+     "text": "추석",
+     "meaning": "Chuseok (harvest festival)",
+     "example": "추석에 송편 먹어.",
+     "exampleKo": "We eat songpyeon on Chuseok.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-32",
+     "text": "크리스마스",
+     "meaning": "Christmas",
+     "example": "크리스마스엔 커플끼리 데이트해.",
+     "exampleKo": "On Christmas, couples go on dates.",
+     "tip": "In Korea, Christmas is a big couple's day.",
+     "sentences": 19,
+     "perMillion": 1190.0
+    },
+    {
+     "id": "ko-plans-33",
+     "text": "몇 시쯤?",
+     "meaning": "About what time?",
+     "example": "몇 시쯤 도착해?",
+     "exampleKo": "About what time do you arrive?",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-34",
+     "text": "금방 갈게.",
+     "meaning": "I'll be there soon.",
+     "example": "방금 나왔어, 금방 갈게.",
+     "exampleKo": "I just left, I'll be there soon.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 438.4
+    },
+    {
+     "id": "ko-plans-35",
+     "text": "좀 늦어.",
+     "meaning": "I'm running a bit late.",
+     "example": "일 때문에 좀 늦어.",
+     "exampleKo": "I'm running a bit late because of work.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-36",
+     "text": "먼저 가 있어.",
+     "meaning": "Go ahead first.",
+     "example": "먼저 가 있어, 나중에 갈게.",
+     "exampleKo": "Go ahead first, I'll come later.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-37",
+     "text": "데리러 와.",
+     "meaning": "Come pick me up.",
+     "example": "역으로 데리러 와.",
+     "exampleKo": "Come pick me up at the station.",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-38",
+     "text": "자고 가다",
+     "meaning": "stay the night",
+     "example": "오늘 자고 갈래?",
+     "exampleKo": "Do you want to stay over tonight?",
+     "tip": ""
+    },
+    {
+     "id": "ko-plans-39",
+     "text": "계획을 세우다",
+     "meaning": "make a plan",
+     "example": "여행 계획 세우자.",
+     "exampleKo": "Let's make a travel plan.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 1503.2
+    },
+    {
+     "id": "ko-plans-40",
+     "text": "준비됐어?",
+     "meaning": "Are you ready?",
+     "example": "준비됐어? 이제 나가자.",
+     "exampleKo": "Ready? Let's head out.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "connect",
+   "title": {
+    "ko": "말 잇기",
+    "en": "Linking words"
+   },
+   "items": [
+    {
+     "id": "ko-connect-01",
+     "text": "근데",
+     "meaning": "but / by the way",
+     "example": "근데 내일 시간 돼?",
+     "exampleKo": "By the way, are you free tomorrow?",
+     "tip": "Casual form of 그런데.",
+     "sentences": 15,
+     "perMillion": 939.5
+    },
+    {
+     "id": "ko-connect-02",
+     "text": "그래서",
+     "meaning": "so",
+     "example": "비 와서 집에 있어.",
+     "exampleKo": "It's raining so I'm staying home.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
+     "id": "ko-connect-03",
+     "text": "그리고",
+     "meaning": "and",
+     "example": "먼저 밥 먹고, 그리고 영화 보자.",
+     "exampleKo": "Let's eat first, and then watch a movie.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
+     "id": "ko-connect-04",
+     "text": "그런데",
+     "meaning": "however / by the way",
+     "example": "그런데 어제 뭐 했어?",
+     "exampleKo": "By the way, what did you do yesterday?",
+     "tip": ""
+    },
+    {
+     "id": "ko-connect-05",
+     "text": "사실은",
+     "meaning": "actually",
+     "example": "사실은 할 말이 있어.",
+     "exampleKo": "Actually, I have something to say.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-connect-06",
+     "text": "예를 들면",
+     "meaning": "for example",
+     "example": "예를 들면 어떤 영화 좋아해?",
+     "exampleKo": "For example, what kind of movies do you like?",
+     "tip": ""
+    },
+    {
+     "id": "ko-connect-07",
+     "text": "결국",
+     "meaning": "in the end",
+     "example": "결국 집에 있었어.",
+     "exampleKo": "In the end, I stayed home.",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 1064.8
+    },
+    {
+     "id": "ko-connect-08",
+     "text": "먼저",
+     "meaning": "first",
+     "example": "먼저 밥 먹자.",
+     "exampleKo": "Let's eat first.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
+     "id": "ko-connect-09",
+     "text": "그다음에",
+     "meaning": "after that",
+     "example": "그다음에 영화 봤어.",
+     "exampleKo": "After that, we watched a movie.",
+     "tip": ""
+    },
+    {
+     "id": "ko-connect-10",
+     "text": "게다가",
+     "meaning": "besides",
+     "example": "싸고 게다가 맛있어.",
+     "exampleKo": "It's cheap and also delicious.",
+     "tip": ""
+    },
+    {
+     "id": "ko-connect-11",
+     "text": "그래도",
+     "meaning": "even so",
+     "example": "피곤해. 그래도 갈게.",
+     "exampleKo": "I'm tired. I'll go anyway.",
+     "tip": ""
+    },
+    {
+     "id": "ko-connect-12",
+     "text": "어쨌든",
+     "meaning": "anyway",
+     "example": "어쨌든 만나서 얘기하자.",
+     "exampleKo": "Anyway, let's meet and talk.",
+     "tip": ""
+    },
+    {
+     "id": "ko-connect-13",
+     "text": "솔직히",
+     "meaning": "honestly",
+     "example": "솔직히 좀 피곤해.",
+     "exampleKo": "Honestly, I'm a bit tired.",
+     "tip": ""
+    },
+    {
+     "id": "ko-connect-14",
+     "text": "아마",
+     "meaning": "probably",
+     "example": "아마 괜찮을 거야.",
+     "exampleKo": "It'll probably be fine.",
+     "tip": "",
+     "sentences": 43,
+     "perMillion": 2693.2
+    },
+    {
+     "id": "ko-connect-15",
+     "text": "꼭",
+     "meaning": "definitely",
+     "example": "우리 꼭 또 오자.",
+     "exampleKo": "Let's definitely come again.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 814.2
+    },
+    {
+     "id": "ko-connect-16",
+     "text": "만약",
+     "meaning": "if",
+     "example": "만약 시간 되면 전화해.",
+     "exampleKo": "If you have time, call me.",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 1377.9
+    },
+    {
+     "id": "ko-connect-17",
+     "text": "~는데",
+     "meaning": "~, but / ~ and",
+     "example": "가고 싶은데 바빠.",
+     "exampleKo": "I want to go, but I'm busy.",
+     "tip": "A very common ending that sets up a contrast or background.",
+     "sentences": 131,
+     "perMillion": 8204.9
+    },
+    {
+     "id": "ko-connect-18",
+     "text": "~니까",
+     "meaning": "because / so",
+     "example": "늦었으니까 이제 잘게.",
+     "exampleKo": "It's late, so I'm going to bed.",
+     "tip": "",
+     "sentences": 390,
+     "perMillion": 24426.9
+    },
+    {
+     "id": "ko-connect-19",
+     "text": "~면",
+     "meaning": "if / when",
+     "example": "도착하면 연락해.",
+     "exampleKo": "Text me when you arrive.",
+     "tip": "",
+     "sentences": 556,
+     "perMillion": 34824.0
+    },
+    {
+     "id": "ko-connect-20",
+     "text": "~때",
+     "meaning": "when",
+     "example": "외로울 때 전화해.",
+     "exampleKo": "Call me when you're lonely.",
+     "tip": "",
+     "sentences": 290,
+     "perMillion": 18163.6
+    },
+    {
+     "id": "ko-connect-21",
+     "text": "갑자기",
+     "meaning": "suddenly",
+     "example": "갑자기 비가 왔어.",
+     "exampleKo": "It suddenly started raining.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-connect-22",
+     "text": "바로",
+     "meaning": "right away",
+     "example": "바로 답장할게.",
+     "exampleKo": "I'll reply right away.",
+     "tip": "",
+     "sentences": 51,
+     "perMillion": 3194.3
+    },
+    {
+     "id": "ko-connect-23",
+     "text": "점점",
+     "meaning": "gradually",
+     "example": "점점 한국어가 늘고 있어.",
+     "exampleKo": "My Korean is gradually improving.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-connect-24",
+     "text": "드디어",
+     "meaning": "finally",
+     "example": "드디어 만났네.",
+     "exampleKo": "We finally met.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
+     "id": "ko-connect-25",
+     "text": "아직",
+     "meaning": "still / not yet",
+     "example": "아직 안 잤어?",
+     "exampleKo": "You haven't slept yet?",
+     "tip": "",
+     "sentences": 132,
+     "perMillion": 8267.6
+    },
+    {
+     "id": "ko-connect-26",
+     "text": "벌써",
+     "meaning": "already",
+     "example": "벌써 도착했어.",
+     "exampleKo": "I already arrived.",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 1377.9
+    },
+    {
+     "id": "ko-connect-27",
+     "text": "방금",
+     "meaning": "just now",
+     "example": "방금 집에 왔어.",
+     "exampleKo": "I just got home.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-connect-28",
+     "text": "계속",
+     "meaning": "continuously",
+     "example": "계속 기다리고 있었어.",
+     "exampleKo": "I've been waiting this whole time.",
+     "tip": "",
+     "sentences": 59,
+     "perMillion": 3695.4
+    },
+    {
+     "id": "ko-connect-29",
+     "text": "자주",
+     "meaning": "often",
+     "example": "그 가게 자주 가.",
+     "exampleKo": "I go to that shop often.",
+     "tip": "",
+     "sentences": 39,
+     "perMillion": 2442.7
+    },
+    {
+     "id": "ko-connect-30",
+     "text": "한 번도",
+     "meaning": "not even once",
+     "example": "술 한 번도 안 마셔 봤어.",
+     "exampleKo": "I've never had a drink.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-connect-31",
+     "text": "거의",
+     "meaning": "almost",
+     "example": "우리 거의 다 왔어.",
+     "exampleKo": "We're almost there.",
+     "tip": "",
+     "sentences": 48,
+     "perMillion": 3006.4
+    },
+    {
+     "id": "ko-connect-32",
+     "text": "특히",
+     "meaning": "especially",
+     "example": "난 특히 여기가 좋아.",
+     "exampleKo": "I especially like this place.",
+     "tip": ""
+    },
+    {
+     "id": "ko-connect-33",
+     "text": "조금",
+     "meaning": "a little",
+     "example": "조금 피곤해.",
+     "exampleKo": "I'm a little tired.",
+     "tip": "",
+     "sentences": 50,
+     "perMillion": 3131.7
+    },
+    {
+     "id": "ko-connect-34",
+     "text": "너무",
+     "meaning": "too / so",
+     "example": "너무 보고 싶어.",
+     "exampleKo": "I miss you so much.",
+     "tip": "Means \"too much\", but Koreans use it for \"so\" in a good way too.",
+     "sentences": 204,
+     "perMillion": 12777.2
+    },
+    {
+     "id": "ko-connect-35",
+     "text": "많이",
+     "meaning": "a lot",
+     "example": "많이 먹어.",
+     "exampleKo": "Eat a lot.",
+     "tip": "",
+     "sentences": 82,
+     "perMillion": 5135.9
+    },
+    {
+     "id": "ko-connect-36",
+     "text": "아까",
+     "meaning": "earlier",
+     "example": "아까 도착했어.",
+     "exampleKo": "I arrived earlier.",
+     "tip": ""
+    },
+    {
+     "id": "ko-connect-37",
+     "text": "이따",
+     "meaning": "later (today)",
+     "example": "이따 전화할게.",
+     "exampleKo": "I'll call you later.",
+     "tip": "Used only for later the same day.",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-connect-38",
+     "text": "나중에",
+     "meaning": "later (some day)",
+     "example": "나중에 같이 가자.",
+     "exampleKo": "Let's go together sometime.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 1440.6
+    }
+   ]
+  },
+  {
+   "id": "trouble",
+   "title": {
+    "ko": "문제 해결",
+    "en": "Problems & fixes"
+   },
+   "items": [
+    {
+     "id": "ko-trouble-01",
+     "text": "폰을 잃어버렸어.",
+     "meaning": "I lost my phone.",
+     "example": "큰일이야, 폰 잃어버렸어!",
+     "exampleKo": "Oh no, I lost my phone!",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 1064.8
+    },
+    {
+     "id": "ko-trouble-02",
+     "text": "지갑을 두고 왔어.",
+     "meaning": "I left my wallet.",
+     "example": "지갑을 집에 두고 왔어.",
+     "exampleKo": "I left my wallet at home.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-03",
+     "text": "배터리가 없어.",
+     "meaning": "My battery is dead.",
+     "example": "폰 배터리 거의 없어.",
+     "exampleKo": "My phone battery is almost dead.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-04",
+     "text": "막차를 놓쳤어.",
+     "meaning": "I missed the last train.",
+     "example": "막차 놓쳐 버렸어.",
+     "exampleKo": "I missed the last train.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-05",
+     "text": "차가 막혀.",
+     "meaning": "There's traffic.",
+     "example": "차가 막혀서 늦어.",
+     "exampleKo": "There's traffic, so I'll be late.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-06",
+     "text": "감기 걸렸어.",
+     "meaning": "I caught a cold.",
+     "example": "나 감기 걸렸어.",
+     "exampleKo": "I caught a cold.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 1565.8
+    },
+    {
+     "id": "ko-trouble-07",
+     "text": "열이 나.",
+     "meaning": "I have a fever.",
+     "example": "열이 좀 나.",
+     "exampleKo": "I have a bit of a fever.",
+     "tip": "",
+     "sentences": 153,
+     "perMillion": 9582.9
+    },
+    {
+     "id": "ko-trouble-08",
+     "text": "머리가 아파.",
+     "meaning": "I have a headache.",
+     "example": "아침부터 머리가 아파.",
+     "exampleKo": "I've had a headache since morning.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-09",
+     "text": "배가 아파.",
+     "meaning": "I have a stomachache.",
+     "example": "배 아파서 못 움직이겠어.",
+     "exampleKo": "My stomach hurts so I can't move.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-10",
+     "text": "병원에 가다",
+     "meaning": "go to the doctor",
+     "example": "병원 가 보는 게 좋겠어.",
+     "exampleKo": "You should see a doctor.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 1440.6
+    },
+    {
+     "id": "ko-trouble-11",
+     "text": "약을 먹다",
+     "meaning": "take medicine",
+     "example": "약 먹고 자.",
+     "exampleKo": "Take your medicine and sleep.",
+     "tip": "",
+     "sentences": 123,
+     "perMillion": 7703.9
+    },
+    {
+     "id": "ko-trouble-12",
+     "text": "고장 났어.",
+     "meaning": "It's broken.",
+     "example": "이어폰 고장 났어.",
+     "exampleKo": "My earphones are broken.",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 1252.7
+    },
+    {
+     "id": "ko-trouble-13",
+     "text": "안 돼.",
+     "meaning": "It doesn't work.",
+     "example": "컴퓨터가 안 돼.",
+     "exampleKo": "The computer doesn't work.",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 1377.9
+    },
+    {
+     "id": "ko-trouble-14",
+     "text": "인터넷이 안 돼.",
+     "meaning": "The internet is down.",
+     "example": "집 인터넷이 안 돼.",
+     "exampleKo": "The internet at home is down.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-trouble-15",
+     "text": "비밀번호를 까먹었어.",
+     "meaning": "I forgot my password.",
+     "example": "비밀번호 까먹었어.",
+     "exampleKo": "I forgot my password.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-16",
+     "text": "잘못했어.",
+     "meaning": "I made a mistake.",
+     "example": "미안, 장소를 잘못 알았어.",
+     "exampleKo": "Sorry, I got the place wrong.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 1941.6
+    },
+    {
+     "id": "ko-trouble-17",
+     "text": "모르겠어.",
+     "meaning": "I don't know.",
+     "example": "어떻게 해야 할지 모르겠어.",
+     "exampleKo": "I don't know what to do.",
+     "tip": "",
+     "sentences": 58,
+     "perMillion": 3632.7
+    },
+    {
+     "id": "ko-trouble-18",
+     "text": "도와줘.",
+     "meaning": "Help me.",
+     "example": "잠깐 도와줄래?",
+     "exampleKo": "Can you help me for a sec?",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
+     "id": "ko-trouble-19",
+     "text": "살려 줘!",
+     "meaning": "Help!",
+     "example": "살려 줘, 벌레 있어!",
+     "exampleKo": "Help, there's a bug!",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-20",
+     "text": "곤란해.",
+     "meaning": "I'm in a tight spot.",
+     "example": "나 지금 좀 곤란해.",
+     "exampleKo": "I'm in a bit of a tight spot.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-21",
+     "text": "어떡하지?",
+     "meaning": "What should I do?",
+     "example": "어떡하지, 늦겠어!",
+     "exampleKo": "What should I do, I'll be late!",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-22",
+     "text": "큰일 났다!",
+     "meaning": "Oh no, big trouble!",
+     "example": "큰일 났다, 물이 새!",
+     "exampleKo": "Oh no, there's a leak!",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-23",
+     "text": "서둘러!",
+     "meaning": "Hurry up!",
+     "example": "서둘러, 곧 시작해!",
+     "exampleKo": "Hurry up, it's starting!",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 626.3
+    },
+    {
+     "id": "ko-trouble-24",
+     "text": "지각하겠어.",
+     "meaning": "I'm going to be late.",
+     "example": "지각하겠어, 뛰자!",
+     "exampleKo": "We'll be late, let's run!",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 626.3
+    },
+    {
+     "id": "ko-trouble-25",
+     "text": "열쇠를 잃어버렸어.",
+     "meaning": "I lost my keys.",
+     "example": "집 열쇠 잃어버렸어.",
+     "exampleKo": "I lost my house keys.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 1565.8
+    },
+    {
+     "id": "ko-trouble-26",
+     "text": "두고 온 거 없어?",
+     "meaning": "Did you leave anything?",
+     "example": "두고 온 거 없어?",
+     "exampleKo": "Did you leave anything behind?",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-27",
+     "text": "쏟았어.",
+     "meaning": "I spilled it.",
+     "example": "커피 쏟았어.",
+     "exampleKo": "I spilled my coffee.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-28",
+     "text": "다쳤어.",
+     "meaning": "I got hurt.",
+     "example": "넘어져서 다쳤어.",
+     "exampleKo": "I fell and got hurt.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 563.7
+    },
+    {
+     "id": "ko-trouble-29",
+     "text": "사고가 났어.",
+     "meaning": "There was an accident.",
+     "example": "사고로 지하철이 멈췄어.",
+     "exampleKo": "The subway stopped due to an accident.",
+     "tip": "",
+     "sentences": 29,
+     "perMillion": 1816.4
+    },
+    {
+     "id": "ko-trouble-30",
+     "text": "충전기 있어?",
+     "meaning": "Do you have a charger?",
+     "example": "충전기 있어?",
+     "exampleKo": "Do you have a charger?",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-31",
+     "text": "답장이 없어.",
+     "meaning": "No reply.",
+     "example": "그가 답장이 없어.",
+     "exampleKo": "He hasn't replied.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-trouble-32",
+     "text": "읽씹",
+     "meaning": "left on read",
+     "example": "또 읽씹했어.",
+     "exampleKo": "They left me on read again.",
+     "tip": "Short for 읽고 씹다 (read and ignore)."
+    },
+    {
+     "id": "ko-trouble-33",
+     "text": "돈이 모자라.",
+     "meaning": "I don't have enough money.",
+     "example": "돈이 모자랄 것 같아.",
+     "exampleKo": "I think I won't have enough money.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-34",
+     "text": "잠이 안 와.",
+     "meaning": "I can't sleep.",
+     "example": "어젯밤 잠이 안 왔어.",
+     "exampleKo": "I couldn't sleep last night.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-35",
+     "text": "말이 안 통해.",
+     "meaning": "We can't understand each other.",
+     "example": "말이 안 통해서 곤란해.",
+     "exampleKo": "We can't understand each other, which is a pain.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-36",
+     "text": "진정해.",
+     "meaning": "Calm down.",
+     "example": "진정해, 괜찮아.",
+     "exampleKo": "Calm down, it's okay.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 814.2
+    },
+    {
+     "id": "ko-trouble-37",
+     "text": "어떻게든 될 거야.",
+     "meaning": "It'll work out somehow.",
+     "example": "걱정 마, 어떻게든 될 거야.",
+     "exampleKo": "Don't worry, it'll work out somehow.",
+     "tip": ""
+    },
+    {
+     "id": "ko-trouble-38",
+     "text": "어쩔 수 없지.",
+     "meaning": "It can't be helped.",
+     "example": "비 오니까 어쩔 수 없지.",
+     "exampleKo": "It's raining, it can't be helped.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-trouble-39",
+     "text": "아차!",
+     "meaning": "Oops!",
+     "example": "아차, 숙제 깜빡했다!",
+     "exampleKo": "Oops, I forgot my homework!",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "reply",
+   "title": {
+    "ko": "맞장구·대답",
+    "en": "Replies & reactions"
+   },
+   "items": [
+    {
+     "id": "ko-reply-01",
+     "text": "응.",
+     "meaning": "Yeah.",
+     "example": "응, 좋아.",
+     "exampleKo": "Yeah, sounds good.",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 2129.5
+    },
+    {
+     "id": "ko-reply-02",
+     "text": "아니.",
+     "meaning": "No.",
+     "example": "아니, 괜찮아.",
+     "exampleKo": "No, it's fine.",
+     "tip": "",
+     "sentences": 210,
+     "perMillion": 13153.0
+    },
+    {
+     "id": "ko-reply-03",
+     "text": "맞아.",
+     "meaning": "That's right.",
+     "example": "맞아, 그렇게 하자.",
+     "exampleKo": "Right, let's do that.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-reply-04",
+     "text": "와!",
+     "meaning": "Wow!",
+     "example": "와, 예쁘다!",
+     "exampleKo": "Wow, so pretty!",
+     "tip": "",
+     "sentences": 399,
+     "perMillion": 24990.6
+    },
+    {
+     "id": "ko-reply-05",
+     "text": "설마!",
+     "meaning": "No way!",
+     "example": "설마! 진짜야?",
+     "exampleKo": "No way! Really?",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-reply-06",
+     "text": "좋아!",
+     "meaning": "Sounds good!",
+     "example": "좋아, 같이 가!",
+     "exampleKo": "Sounds good, let's go together!",
+     "tip": "",
+     "sentences": 415,
+     "perMillion": 25992.7
+    },
+    {
+     "id": "ko-reply-07",
+     "text": "당연하지!",
+     "meaning": "Of course!",
+     "example": "당연하지, 갈게!",
+     "exampleKo": "Of course, I'll go!",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-reply-08",
+     "text": "음…",
+     "meaning": "Hmm...",
+     "example": "음… 생각 좀 해 볼게.",
+     "exampleKo": "Hmm... let me think.",
+     "tip": "",
+     "sentences": 334,
+     "perMillion": 20919.5
+    },
+    {
+     "id": "ko-reply-09",
+     "text": "그냥 그래.",
+     "meaning": "It's so-so.",
+     "example": "그 영화? 그냥 그래.",
+     "exampleKo": "That movie? It's so-so.",
+     "tip": ""
+    },
+    {
+     "id": "ko-reply-10",
+     "text": "상관없어.",
+     "meaning": "I don't mind.",
+     "example": "상관없어, 네가 골라.",
+     "exampleKo": "I don't mind, you pick.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-reply-11",
+     "text": "그래?",
+     "meaning": "Is that so?",
+     "example": "그래? 난 평범한 것 같은데.",
+     "exampleKo": "Is that so? I think it's pretty normal.",
+     "tip": "",
+     "sentences": 100,
+     "perMillion": 6263.3
+    },
+    {
+     "id": "ko-reply-12",
+     "text": "아니야, 아직 멀었어.",
+     "meaning": "No, I still have a long way to go.",
+     "example": "아니야, 아직 멀었어.",
+     "exampleKo": "No, I still have a long way to go.",
+     "tip": "A modest reply to a compliment."
+    },
+    {
+     "id": "ko-reply-13",
+     "text": "덕분이야.",
+     "meaning": "Thanks to you.",
+     "example": "네 덕분에 큰 도움이 됐어.",
+     "exampleKo": "Thanks to you, it helped a lot.",
+     "tip": ""
+    },
+    {
+     "id": "ko-reply-14",
+     "text": "부탁해!",
+     "meaning": "Please!",
+     "example": "부탁해, 한 번만!",
+     "exampleKo": "Please, just once!",
+     "tip": "",
+     "sentences": 48,
+     "perMillion": 3006.4
+    },
+    {
+     "id": "ko-reply-15",
+     "text": "해도 돼?",
+     "meaning": "Can I?",
+     "example": "이거 가져가도 돼?",
+     "exampleKo": "Can I take this?",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
+    },
+    {
+     "id": "ko-reply-16",
+     "text": "그래, 해.",
+     "meaning": "Sure, go ahead.",
+     "example": "그래, 앉아.",
+     "exampleKo": "Sure, sit down.",
+     "tip": "",
+     "sentences": 100,
+     "perMillion": 6263.3
+    },
+    {
+     "id": "ko-reply-17",
+     "text": "신경 쓰지 마.",
+     "meaning": "Don't worry about it.",
+     "example": "신경 쓰지 마, 난 괜찮아.",
+     "exampleKo": "Don't worry about it, I'm fine.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-reply-18",
+     "text": "아쉽다.",
+     "meaning": "That's a shame.",
+     "example": "못 와? 아쉽다.",
+     "exampleKo": "You can't come? That's a shame.",
+     "tip": ""
+    },
+    {
+     "id": "ko-reply-19",
+     "text": "아~",
+     "meaning": "Ah~",
+     "example": "아~ 그렇구나.",
+     "exampleKo": "Ah~ I see.",
+     "tip": "",
+     "sentences": 2658,
+     "perMillion": 166478.8
+    },
+    {
+     "id": "ko-reply-20",
+     "text": "응? 뭐?",
+     "meaning": "Huh? What?",
+     "example": "응? 방금 뭐라고 했어?",
+     "exampleKo": "Huh? What did you just say?",
+     "tip": ""
+    },
+    {
+     "id": "ko-reply-21",
+     "text": "앗싸!",
+     "meaning": "Yes!",
+     "example": "앗싸! 합격했다!",
+     "exampleKo": "Yes! I passed!",
+     "tip": ""
+    },
+    {
+     "id": "ko-reply-22",
+     "text": "축하해!",
+     "meaning": "Congratulations!",
+     "example": "합격 축하해!",
+     "exampleKo": "Congrats on passing!",
+     "tip": "",
+     "sentences": 40,
+     "perMillion": 2505.3
+    },
+    {
+     "id": "ko-reply-23",
+     "text": "꼭 그렇진 않아.",
+     "meaning": "Not necessarily.",
+     "example": "꼭 그렇진 않아, 상황 봐야지.",
+     "exampleKo": "Not necessarily, it depends.",
+     "tip": ""
+    },
+    {
+     "id": "ko-reply-24",
+     "text": "알아!",
+     "meaning": "I know!",
+     "example": "그 가게 알아!",
+     "exampleKo": "I know that place!",
+     "tip": "",
+     "sentences": 91,
+     "perMillion": 5699.6
+    },
+    {
+     "id": "ko-reply-25",
+     "text": "몰랐어.",
+     "meaning": "I didn't know.",
+     "example": "그건 몰랐어.",
+     "exampleKo": "I didn't know that.",
+     "tip": "",
+     "sentences": 43,
+     "perMillion": 2693.2
+    },
+    {
+     "id": "ko-reply-26",
+     "text": "문제없어.",
+     "meaning": "No problem.",
+     "example": "문제없어, 나한테 맡겨.",
+     "exampleKo": "No problem, leave it to me.",
+     "tip": ""
+    },
+    {
+     "id": "ko-reply-27",
+     "text": "알겠어.",
+     "meaning": "Understood.",
+     "example": "알겠어, 내일 갈게.",
+     "exampleKo": "Understood, I'll come tomorrow.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 689.0
+    },
+    {
+     "id": "ko-reply-28",
+     "text": "네 말대로 해.",
+     "meaning": "We'll do as you say.",
+     "example": "네 말대로 할게.",
+     "exampleKo": "I'll do as you say.",
+     "tip": ""
+    },
+    {
+     "id": "ko-reply-29",
+     "text": "그러니까.",
+     "meaning": "Exactly. (agreeing)",
+     "example": "그러니까, 나도 그렇게 생각해.",
+     "exampleKo": "Exactly, I think so too.",
+     "tip": ""
+    },
+    {
+     "id": "ko-reply-30",
+     "text": "아이고.",
+     "meaning": "Oh dear.",
+     "example": "아이고, 어떡해.",
+     "exampleKo": "Oh dear, what a pity.",
+     "tip": "Used for sympathy or tiredness, often by older people."
+    }
+   ]
+  },
+  {
+   "id": "polite",
+   "title": {
+    "ko": "예의 있게 말하기",
+    "en": "Polite speech"
+   },
+   "items": [
+    {
+     "id": "ko-polite-01",
+     "text": "처음 뵙겠습니다.",
+     "meaning": "Nice to meet you. (formal)",
+     "example": "처음 뵙겠습니다, 김입니다.",
+     "exampleKo": "Nice to meet you, I'm Kim.",
+     "tip": "Used when meeting someone like a partner's parents."
+    },
+    {
+     "id": "ko-polite-02",
+     "text": "잘 부탁드립니다.",
+     "meaning": "Please take care of me. (formal)",
+     "example": "앞으로 잘 부탁드립니다.",
+     "exampleKo": "Please take care of me from now on.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-03",
+     "text": "안녕하세요.",
+     "meaning": "Hello. (polite)",
+     "example": "안녕하세요, 처음 뵙겠습니다.",
+     "exampleKo": "Hello, nice to meet you.",
+     "tip": "The standard polite greeting for anyone.",
+     "sentences": 14,
+     "perMillion": 876.9
+    },
+    {
+     "id": "ko-polite-04",
+     "text": "감사합니다.",
+     "meaning": "Thank you. (formal)",
+     "example": "도와주셔서 감사합니다.",
+     "exampleKo": "Thank you for helping.",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 1252.7
+    },
+    {
+     "id": "ko-polite-05",
+     "text": "고맙습니다.",
+     "meaning": "Thank you. (polite)",
+     "example": "선물 고맙습니다.",
+     "exampleKo": "Thank you for the gift.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-polite-06",
+     "text": "죄송합니다.",
+     "meaning": "I'm sorry. (formal)",
+     "example": "늦어서 죄송합니다.",
+     "exampleKo": "I'm sorry for being late.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 1190.0
+    },
+    {
+     "id": "ko-polite-07",
+     "text": "실례합니다.",
+     "meaning": "Excuse me.",
+     "example": "실례합니다, 지나갈게요.",
+     "exampleKo": "Excuse me, I'll pass by.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 626.3
+    },
+    {
+     "id": "ko-polite-08",
+     "text": "오랜만이에요.",
+     "meaning": "Long time no see. (polite)",
+     "example": "오랜만이에요, 잘 지내셨어요?",
+     "exampleKo": "Long time no see, have you been well?",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-09",
+     "text": "잘 지내셨어요?",
+     "meaning": "Have you been well? (polite)",
+     "example": "어머님, 잘 지내셨어요?",
+     "exampleKo": "Mom (partner's mother), have you been well?",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-10",
+     "text": "덕분에요.",
+     "meaning": "Thanks to you. (replying to how are you)",
+     "example": "덕분에 잘 지내요.",
+     "exampleKo": "I'm doing well, thanks to you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-11",
+     "text": "많이 드세요.",
+     "meaning": "Please eat a lot.",
+     "example": "많이 드세요, 부족하면 말씀하세요.",
+     "exampleKo": "Please eat a lot, tell me if you want more.",
+     "tip": "Hosts say this to guests."
+    },
+    {
+     "id": "ko-polite-12",
+     "text": "별거 아니지만 받아 주세요.",
+     "meaning": "It's nothing, but please accept it.",
+     "example": "별거 아니지만 받아 주세요.",
+     "exampleKo": "It's not much, but please accept it.",
+     "tip": "A humble phrase when giving a gift."
+    },
+    {
+     "id": "ko-polite-13",
+     "text": "신세 많이 졌습니다.",
+     "meaning": "I owe you a lot.",
+     "example": "그동안 신세 많이 졌습니다.",
+     "exampleKo": "I owe you a lot for all this time.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-14",
+     "text": "배려해 주셔서 감사합니다.",
+     "meaning": "Thank you for your consideration.",
+     "example": "배려해 주셔서 감사합니다.",
+     "exampleKo": "Thank you for your consideration.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-15",
+     "text": "수고하셨습니다.",
+     "meaning": "Thank you for your hard work. (formal)",
+     "example": "오늘도 수고하셨습니다.",
+     "exampleKo": "Thank you for your hard work today.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-16",
+     "text": "먼저 들어가겠습니다.",
+     "meaning": "I'll leave first. (formal)",
+     "example": "먼저 들어가겠습니다.",
+     "exampleKo": "I'll be leaving first.",
+     "tip": "Used when leaving work or a gathering early."
+    },
+    {
+     "id": "ko-polite-17",
+     "text": "잠시만 기다려 주세요.",
+     "meaning": "Please wait a moment.",
+     "example": "잠시만 기다려 주세요.",
+     "exampleKo": "Please wait a moment.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-18",
+     "text": "다시 한번 말씀해 주세요.",
+     "meaning": "Could you say that once more? (polite)",
+     "example": "죄송하지만 다시 한번 말씀해 주세요.",
+     "exampleKo": "Sorry, could you say that once more?",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-19",
+     "text": "천천히 말씀해 주세요.",
+     "meaning": "Please speak slowly.",
+     "example": "천천히 말씀해 주시겠어요?",
+     "exampleKo": "Could you speak slowly?",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 1064.8
+    },
+    {
+     "id": "ko-polite-20",
+     "text": "괜찮습니다.",
+     "meaning": "No, thank you. / It's fine. (formal)",
+     "example": "아니요, 괜찮습니다.",
+     "exampleKo": "No, thank you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-21",
+     "text": "부탁드려요.",
+     "meaning": "I'd like to ask a favor. / Please.",
+     "example": "커피 부탁드려요.",
+     "exampleKo": "A coffee, please.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-22",
+     "text": "저도요.",
+     "meaning": "Me too. (polite)",
+     "example": "저도요, 만나서 반가워요.",
+     "exampleKo": "Me too, nice to meet you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-23",
+     "text": "기다리셨죠?",
+     "meaning": "Did I keep you waiting?",
+     "example": "기다리셨죠, 가요.",
+     "exampleKo": "Did I keep you waiting? Let's go.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-24",
+     "text": "앉으세요.",
+     "meaning": "Please sit.",
+     "example": "앉으세요, 편하게 계세요.",
+     "exampleKo": "Please sit, make yourself comfortable.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-25",
+     "text": "성함이 어떻게 되세요?",
+     "meaning": "May I ask your name?",
+     "example": "성함이 어떻게 되세요?",
+     "exampleKo": "May I ask your name?",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-26",
+     "text": "~씨",
+     "meaning": "Mr./Ms. (after name)",
+     "example": "김민수 씨, 안녕하세요.",
+     "exampleKo": "Hello, Mr. Kim Minsu.",
+     "tip": "Use with the full name or first name of people not close to you.",
+     "sentences": 86,
+     "perMillion": 5386.4
+    },
+    {
+     "id": "ko-polite-27",
+     "text": "~님",
+     "meaning": "honorific suffix",
+     "example": "고객님, 이쪽으로 오세요.",
+     "exampleKo": "Dear customer, please come this way.",
+     "tip": "",
+     "sentences": 142,
+     "perMillion": 8893.9
+    },
+    {
+     "id": "ko-polite-28",
+     "text": "존댓말",
+     "meaning": "polite speech",
+     "example": "존댓말이 아직 어려워요.",
+     "exampleKo": "Polite speech is still hard for me.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-29",
+     "text": "반말",
+     "meaning": "casual speech",
+     "example": "반말해도 돼요?",
+     "exampleKo": "Is it okay to speak casually?",
+     "tip": "Use only when the other person agrees."
+    },
+    {
+     "id": "ko-polite-30",
+     "text": "생신 축하드려요.",
+     "meaning": "Happy birthday. (to elders)",
+     "example": "할머니, 생신 축하드려요.",
+     "exampleKo": "Happy birthday, Grandma.",
+     "tip": "생신 is the honorific form of 생일.",
+     "sentences": 5,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ko-polite-31",
+     "text": "결혼 축하드려요.",
+     "meaning": "Congratulations on your wedding.",
+     "example": "결혼 축하드려요.",
+     "exampleKo": "Congratulations on your wedding.",
+     "tip": "",
+     "sentences": 71,
+     "perMillion": 4446.9
+    },
+    {
+     "id": "ko-polite-32",
+     "text": "새해 복 많이 받으세요.",
+     "meaning": "Happy New Year. (lit. receive lots of blessings)",
+     "example": "새해 복 많이 받으세요.",
+     "exampleKo": "Happy New Year.",
+     "tip": "Said at Lunar New Year and January 1st."
+    },
+    {
+     "id": "ko-polite-33",
+     "text": "쾌차하세요.",
+     "meaning": "Get well soon. (formal)",
+     "example": "빨리 쾌차하세요.",
+     "exampleKo": "Get well soon.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-34",
+     "text": "건강 조심하세요.",
+     "meaning": "Take care of your health.",
+     "example": "추우니 건강 조심하세요.",
+     "exampleKo": "It's cold, so take care of your health.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-35",
+     "text": "조심히 가세요.",
+     "meaning": "Take care on your way.",
+     "example": "조심히 가세요, 도착하면 연락 주세요.",
+     "exampleKo": "Take care on your way, text me when you arrive.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-36",
+     "text": "어서 오세요.",
+     "meaning": "Welcome. (to a shop or home)",
+     "example": "어서 오세요, 몇 분이세요?",
+     "exampleKo": "Welcome, how many people?",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-37",
+     "text": "들어오세요.",
+     "meaning": "Please come in.",
+     "example": "들어오세요, 편하게 계세요.",
+     "exampleKo": "Please come in, make yourself at home.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-38",
+     "text": "영광입니다.",
+     "meaning": "It's an honor.",
+     "example": "뵙게 되어 영광입니다.",
+     "exampleKo": "It's an honor to meet you.",
+     "tip": ""
+    },
+    {
+     "id": "ko-polite-39",
+     "text": "어머님",
+     "meaning": "mother (of a partner, respectful)",
+     "example": "어머님, 맛있게 먹겠습니다.",
+     "exampleKo": "Mom, I'll enjoy the meal.",
+     "tip": "Call your partner's mother 어머님 and father 아버님.",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-polite-40",
+     "text": "아버님",
+     "meaning": "father (of a partner, respectful)",
+     "example": "아버님, 안녕하세요.",
+     "exampleKo": "Hello, Father.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "idioms",
+   "title": {
+    "ko": "자주 쓰는 관용 표현",
+    "en": "Common idioms"
+   },
+   "items": [
+    {
+     "id": "ko-idioms-01",
+     "text": "일석이조",
+     "meaning": "two birds with one stone",
+     "example": "걸으면서 장보기, 일석이조야.",
+     "exampleKo": "Walking and shopping, two birds with one stone.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-02",
+     "text": "눈치",
+     "meaning": "reading the room",
+     "example": "눈치가 빠르네.",
+     "exampleKo": "You read the room fast.",
+     "tip": "Very important in Korean culture. Having 눈치 means you sense others' feelings.",
+     "sentences": 6,
+     "perMillion": 375.8
+    },
+    {
+     "id": "ko-idioms-03",
+     "text": "정",
+     "meaning": "deep affection (built over time)",
+     "example": "우리 사이에 정이 들었어.",
+     "exampleKo": "We've grown attached to each other.",
+     "tip": "No exact English word. A warm bond built by time together.",
+     "sentences": 526,
+     "perMillion": 32945.0
+    },
+    {
+     "id": "ko-idioms-04",
+     "text": "한",
+     "meaning": "deep lingering sorrow",
+     "example": "그 노래에는 한이 담겨 있어.",
+     "exampleKo": "That song carries deep sorrow.",
+     "tip": "",
+     "sentences": 1660,
+     "perMillion": 103970.9
+    },
+    {
+     "id": "ko-idioms-05",
+     "text": "식은 죽 먹기",
+     "meaning": "a piece of cake",
+     "example": "그 시험은 식은 죽 먹기였어.",
+     "exampleKo": "That exam was a piece of cake.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-06",
+     "text": "발이 넓다",
+     "meaning": "know many people",
+     "example": "그는 발이 넓어.",
+     "exampleKo": "He knows lots of people.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-07",
+     "text": "입이 무겁다",
+     "meaning": "keep secrets well",
+     "example": "걔는 입이 무거워서 믿어.",
+     "exampleKo": "She keeps secrets well, so I trust her.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-08",
+     "text": "입이 가볍다",
+     "meaning": "can't keep secrets",
+     "example": "그 애는 입이 가벼워서 말하지 마.",
+     "exampleKo": "She can't keep secrets, so don't tell her.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-09",
+     "text": "손이 크다",
+     "meaning": "be generous (with food)",
+     "example": "엄마는 손이 커서 음식을 많이 해.",
+     "exampleKo": "Mom is generous, so she makes lots of food.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-10",
+     "text": "눈이 높다",
+     "meaning": "have high standards",
+     "example": "걔는 눈이 높아.",
+     "exampleKo": "She has high standards.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-11",
+     "text": "귀가 얇다",
+     "meaning": "be easily influenced",
+     "example": "나 귀가 얇아서 잘 속아.",
+     "exampleKo": "I'm easily influenced so I get tricked.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-12",
+     "text": "배가 아프다",
+     "meaning": "be jealous (of success)",
+     "example": "친구가 잘돼서 배가 아파.",
+     "exampleKo": "I'm jealous my friend is doing so well.",
+     "tip": "Literally \"my stomach hurts\", used for jealousy."
+    },
+    {
+     "id": "ko-idioms-13",
+     "text": "목이 빠지게 기다리다",
+     "meaning": "wait eagerly",
+     "example": "목이 빠지게 기다리고 있어.",
+     "exampleKo": "I'm waiting eagerly.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-14",
+     "text": "열받다",
+     "meaning": "get furious",
+     "example": "그 말에 열받았어.",
+     "exampleKo": "That comment made me furious.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-15",
+     "text": "죽이 잘 맞다",
+     "meaning": "get along perfectly",
+     "example": "우리 죽이 잘 맞아.",
+     "exampleKo": "We get along perfectly.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-16",
+     "text": "배부르다",
+     "meaning": "be full",
+     "example": "이제 배불러.",
+     "exampleKo": "I'm full now.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-17",
+     "text": "작심삼일",
+     "meaning": "short-lived resolve",
+     "example": "다이어트는 작심삼일이었어.",
+     "exampleKo": "My diet lasted only three days.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-18",
+     "text": "금강산도 식후경",
+     "meaning": "food before sightseeing",
+     "example": "금강산도 식후경이니까 먼저 먹자.",
+     "exampleKo": "Food before sightseeing, let's eat first.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-19",
+     "text": "칠전팔기",
+     "meaning": "never give up",
+     "example": "칠전팔기로 다시 해 보자.",
+     "exampleKo": "Let's try again and never give up.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-20",
+     "text": "티끌 모아 태산",
+     "meaning": "every little bit adds up",
+     "example": "티끌 모아 태산이라고 저금해.",
+     "exampleKo": "Every little bit adds up, so I save.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-21",
+     "text": "가는 말이 고와야 오는 말이 곱다",
+     "meaning": "be kind to get kindness",
+     "example": "가는 말이 고와야 오는 말이 곱지.",
+     "exampleKo": "Be kind to get kindness.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-22",
+     "text": "고생 끝에 낙이 온다",
+     "meaning": "hard work brings joy",
+     "example": "고생 끝에 낙이 온다고 하잖아.",
+     "exampleKo": "They say joy comes after hardship.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-23",
+     "text": "시작이 반이다",
+     "meaning": "starting is half the work",
+     "example": "시작이 반이야, 일단 해 보자.",
+     "exampleKo": "Starting is half the work, let's give it a go.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-24",
+     "text": "우물 안 개구리",
+     "meaning": "narrow-minded person",
+     "example": "우물 안 개구리가 되지 마.",
+     "exampleKo": "Don't be a frog in a well.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-25",
+     "text": "호랑이도 제 말 하면 온다",
+     "meaning": "speak of the devil",
+     "example": "호랑이도 제 말 하면 온다더니!",
+     "exampleKo": "Speak of the devil!",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-26",
+     "text": "눈에 넣어도 안 아프다",
+     "meaning": "love dearly",
+     "example": "우리 애는 눈에 넣어도 안 아파.",
+     "exampleKo": "I love my child so dearly.",
+     "tip": "Lit. \"wouldn't hurt even if put in my eye\"."
+    },
+    {
+     "id": "ko-idioms-27",
+     "text": "마음이 통하다",
+     "meaning": "be on the same wavelength",
+     "example": "우리 마음이 통하는 것 같아.",
+     "exampleKo": "We seem to be on the same wavelength.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-28",
+     "text": "마음에 들다",
+     "meaning": "to like / be pleased with",
+     "example": "그 선물 마음에 들어.",
+     "exampleKo": "I like that gift.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 1440.6
+    },
+    {
+     "id": "ko-idioms-29",
+     "text": "마음이 아프다",
+     "meaning": "be heartbroken",
+     "example": "그 얘기 들으니 마음이 아파.",
+     "exampleKo": "It breaks my heart to hear that.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-30",
+     "text": "마음먹다",
+     "meaning": "make up one's mind",
+     "example": "이번엔 마음먹고 시작할 거야.",
+     "exampleKo": "This time I've made up my mind to start.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-31",
+     "text": "기가 막히다",
+     "meaning": "be speechless (shock or awe)",
+     "example": "이 음식 맛이 기가 막혀.",
+     "exampleKo": "This food tastes amazing.",
+     "tip": "Can also mean \"so absurd\"."
+    },
+    {
+     "id": "ko-idioms-32",
+     "text": "어이없다",
+     "meaning": "be absurd",
+     "example": "진짜 어이없다.",
+     "exampleKo": "That's so absurd.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-33",
+     "text": "황당하다",
+     "meaning": "be baffled",
+     "example": "갑자기 그런 말을 해서 황당해.",
+     "exampleKo": "I'm baffled by that sudden remark.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-34",
+     "text": "속상하다",
+     "meaning": "be upset",
+     "example": "네가 아프다니 속상해.",
+     "exampleKo": "I'm upset that you're sick.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-35",
+     "text": "서운하다",
+     "meaning": "feel hurt (a little)",
+     "example": "네가 안 와서 서운했어.",
+     "exampleKo": "I felt a little hurt that you didn't come.",
+     "tip": "A softer, sadder feeling than 화나다."
+    },
+    {
+     "id": "ko-idioms-36",
+     "text": "섭섭하다",
+     "meaning": "feel disappointed",
+     "example": "헤어지니까 섭섭하다.",
+     "exampleKo": "I feel sad about parting.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-37",
+     "text": "뿌듯하다",
+     "meaning": "feel proud and fulfilled",
+     "example": "해냈다니 뿌듯하다.",
+     "exampleKo": "I feel proud that I did it.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-38",
+     "text": "아깝다",
+     "meaning": "feel it's a waste / a shame",
+     "example": "버리기엔 너무 아까워.",
+     "exampleKo": "It's too much of a waste to throw out.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-39",
+     "text": "애틋하다",
+     "meaning": "feel tender and wistful",
+     "example": "둘이 애틋해 보여.",
+     "exampleKo": "They look tenderly attached.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-40",
+     "text": "든든하다",
+     "meaning": "feel reassured",
+     "example": "네가 있어서 든든해.",
+     "exampleKo": "I feel reassured because you're here.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-41",
+     "text": "뭉클하다",
+     "meaning": "feel a lump in the throat",
+     "example": "그 말에 가슴이 뭉클했어.",
+     "exampleKo": "Those words touched my heart.",
+     "tip": ""
+    },
+    {
+     "id": "ko-idioms-42",
+     "text": "ㅋㅋㅋ",
+     "meaning": "lol",
+     "example": "너 진짜 웃겨 ㅋㅋㅋ",
+     "exampleKo": "You're so funny lol",
+     "tip": ""
+    }
+   ]
+  }
+ ]
+}

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import ChoiceChips from './ChoiceChips'
 import { useApp } from '../context'
 import { errorMessage } from '../lib/errors'
 import { readErrorLog } from '../lib/errorLog'
@@ -59,16 +60,13 @@ export default function ReportForm() {
 
       {canSend ? (
         <form className="stack-form" onSubmit={send} noValidate>
-          <div className="field">
-            <label htmlFor="report-kind">{t('reportKind')}</label>
-            <select id="report-kind" value={kind} onChange={(event) => setKind(event.target.value)}>
-              {REPORT_KINDS.map((item) => (
-                <option key={item} value={item}>
-                  {t(`reportKind.${item}`)}
-                </option>
-              ))}
-            </select>
-          </div>
+          <ChoiceChips
+            label={t('reportKind')}
+            name="report-kind"
+            value={kind}
+            options={REPORT_KINDS.map((item) => ({ value: item, label: t(`reportKind.${item}`) }))}
+            onChange={setKind}
+          />
           <Field
             as="textarea"
             label={t('reportMessage')}

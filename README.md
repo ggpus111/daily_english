@@ -96,9 +96,19 @@ Authentication > Providers > Email에서 Confirm email을 켭니다. 인증 메�
 
 ## AI 일기 교정
 
-유료 API를 쓰지 않습니다. 일기 화면의 복사 버튼이 일기와 번역을 교정 요청 문장으로 만들어 복사하고, 사용자가 무료 AI 채팅에 붙여 넣습니다. 받은 교정은 AI 교정 결과 칸에 붙여 넣어 일기와 함께 저장합니다.
+일기 화면의 "AI에게 자연스럽게 다듬어 달라고 하기"를 누르면 앱 안에서 바로 교정을 받습니다. 운영비 0원 원칙에 맞춰 Google Gemini API의 무료 요금제를 씁니다.
 
-요청문은 `src/lib/correction.js`가 만듭니다. 따로 넣을 칸이 없는 무료 채팅이라 시스템 프롬프트 역할을 요청문 맨 위에 둡니다.
+- 앱(`src/lib/aiCorrection.js`)이 교정 요청문을 서버 함수 `supabase/functions/correct-journal`로 보내고, 함수가 Gemini에 묻습니다. API 키는 서버에만 둡니다.
+- 로그인한 사용자만, 하루 5번까지 쓸 수 있습니다(`ai_usage` 표로 셉니다). 교정 내용은 서버에 남기지 않고, 사용자가 일기를 저장할 때만 일기와 함께 남습니다.
+- 무료 요금제는 보낸 내용이 구글의 서비스 개선에 쓰일 수 있습니다. 그래서 처음 쓸 때 어디로 보내지는지 알리고 동의를 받으며, 연인·친구의 실명이나 연락처는 빼고 보내 달라고 안내합니다. 개인정보 처리방침에도 적었습니다.
+- 로그인하지 않았거나 하루 한도를 다 쓰면 "다른 AI에서 받기"에서 요청문을 복사해 다른 AI 채팅에 붙여 넣고, 받은 교정을 붙여 넣을 수 있습니다.
+
+설정(한 번만):
+1. Google AI Studio에서 무료 API 키를 받습니다.
+2. Supabase 대시보드 > Edge Functions에서 `correct-journal`을 만들고 `index.ts` 내용을 붙여 넣어 배포합니다. Secrets에 `GEMINI_API_KEY`를 넣습니다(선택: `GEMINI_MODEL`, 기본 `gemini-2.5-flash` / `AI_DAILY_LIMIT`, 기본 5).
+3. `supabase/schema.sql`을 다시 실행해 `ai_usage` 표를 만듭니다.
+
+요청문은 `src/lib/correction.js`가 만듭니다. 다른 AI 채팅에 붙여 넣어도 같은 결과가 나오도록 시스템 프롬프트 역할을 요청문 맨 위에 둡니다.
 
 - 맨 위에 역할과 지킬 점(시스템 프롬프트 역할)을 둡니다.
 - 지난 교정의 "연습할 점"과 최근 저장한 단어를 그때그때 넣습니다(동적 컨텍스트).
@@ -131,10 +141,23 @@ Authentication > Providers > Email에서 Confirm email을 켭니다. 인증 메�
 
 ## 표현·단어 꾸러미
 
-처음 쓰는 사람도 바로 담을 거리가 있게 꾸러미를 넣었습니다(`#packs`, `#packs-words`, 홈의 "오늘의 표현"). 꾸러미는 학습 언어가 영어일 때만 보입니다.
+처음 쓰는 사람도 바로 담을 거리가 있게 꾸러미를 넣었습니다(`#packs`, `#packs-words`, 홈의 "오늘의 표현"). 배우는 언어(프로필)에 맞는 꾸러미를 보여 줍니다. 데이터는 `src/data/{언어}/packs.json`, `words.json`이고, 그 언어 파일이 없으면 "준비 중"을 보여 줍니다.
 
-- **표현 400개**(10개 주제 × 40): 공개 영어 문장 204만 개(Tatoeba, CC BY 2.0 FR)에서 쓰인 횟수를 세고 교육과정 기본 어휘와 비교해 골랐습니다. 뜻과 예문은 직접 썼습니다. `analysis/native/build_packs.py` → `src/data/packs.json`
-- **단어 600개**(초급 300, 중급 300): 교육과정 기본 어휘에서 전체 문장 빈도와 "나를 말하는 문장"(1인칭 문장) 빈도로 골랐습니다. 예문 456개는 Tatoeba 한영 문장이고 카드에 문장 번호 링크로 출처를 밝힙니다. 나머지 144개는 직접 썼습니다. `analysis/native/select_words.py`, `build_words.py` → `src/data/words.json`
+| 언어 | 연인·친구 대화 | 일상 표현 | 단어 | 만드는 곳 |
+| --- | ---: | ---: | ---: | --- |
+| 영어(en) | 189 | 400 | 600 | `analysis/native` |
+| 일본어(ja) | 186 | 400 | 316 | `analysis/multilang` |
+| 중국어(zh) | 186 | 388 | 276 | `analysis/multilang` |
+| 스페인어(es) | 186 | 388 | 268 | `analysis/multilang` |
+| 프랑스어(fr) | 186 | 379 | 352 | `analysis/multilang` |
+| 한국어(ko, 외국인 연인용, 설명은 영어) | 186 | 383 | 335 | `analysis/multilang` |
+
+영어 단어는 초급·중급으로 나뉘지만, 다른 언어 단어는 **기초 낱말을 빼고 대화 주제**(연애·애정, 기분·마음, 관계·위로·부탁, 말·연락, 여행·약속, 음식·건강, 생활)로 묶었습니다. 외국인 연인이나 친구가 있는 사람은 기초 낱말을 이미 알기 때문입니다. 기초 낱말은 wordfreq 점수 5.3 이상으로 가렸습니다(`analysis/multilang/analyze_words.py`, `to_themes.py`).
+
+대화 꾸러미는 언어마다 같은 주제·순서라 같은 번호(예: `miss-01`)가 같은 뜻입니다. 첫 실행 안내는 이 번호로 표현을 고릅니다. 오늘의 기분 25개도 여섯 언어로 보여 줍니다(`src/lib/moods.js`). 일본어·중국어·한국어는 띄어 쓰지 않거나 어미가 바뀌어서, "일기에 쓴 내 표현 찾기"와 빈칸 퀴즈가 글자 단위로 찾습니다(`src/lib/blank.js`).
+
+- **표현 400개**(10개 주제 × 40): 공개 영어 문장 204만 개(Tatoeba, CC BY 2.0 FR)에서 쓰인 횟수를 세고 교육과정 기본 어휘와 비교해 골랐습니다. 뜻과 예문은 직접 썼습니다. `analysis/native/build_packs.py` → `src/data/en/packs.json`
+- **단어 600개**(초급 300, 중급 300): 교육과정 기본 어휘에서 전체 문장 빈도와 "나를 말하는 문장"(1인칭 문장) 빈도로 골랐습니다. 예문 456개는 Tatoeba 한영 문장이고 카드에 문장 번호 링크로 출처를 밝힙니다. 나머지 144개는 직접 썼습니다. `analysis/native/select_words.py`, `build_words.py` → `src/data/en/words.json`
 - 콘텐츠는 앱 성격(내 하루와 기분을 기록하는 따뜻한 앱)에 맞게 점검했습니다. 어두운 낱말 제외, 기분 낱말 포함, 내 말투 예문 우선. 근거와 수치는 `analysis/REPORT.md`에 있고, `src/lib/packs.test.js`가 이 기준을 검사합니다.
 - 꾸러미 데이터는 처음 필요할 때 따로 불러옵니다(`loadPackData`, `usePackData`). 첫 화면 코드에 묶이지 않아 앱 시작이 느려지지 않습니다.
 

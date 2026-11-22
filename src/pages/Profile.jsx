@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
+import ChoiceChips from '../components/ChoiceChips'
 import DeleteButton from '../components/DeleteButton'
 import ErrorReport from '../components/ErrorReport'
 import ReminderSettings from '../components/ReminderSettings'
 import ReportForm from '../components/ReportForm'
 import { checkAdmin } from '../lib/reports'
-import Field from '../components/Field'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { LAST_EXPORT_KEY, MAX_FILE_BYTES, parseBackup, planImport } from '../lib/backup'
@@ -169,46 +169,34 @@ export default function Profile() {
 
         <section className="panel stack-form">
           <h2>{t('settings')}</h2>
-          <Field
-            as="select"
+          <ChoiceChips
+            compact
             label={t('learningLanguage')}
+            name="learning-language"
             value={learningLang}
-            onChange={(event) => setLearningLang(event.target.value)}
-          >
-            {LANGUAGES.map((language) => (
-              <option key={language.code} value={language.code}>
-                {languageName(language.code, nativeLang)}
-              </option>
-            ))}
-          </Field>
-          <Field
-            as="select"
+            options={LANGUAGES.map((language) => ({ value: language.code, label: languageName(language.code, nativeLang) }))}
+            onChange={setLearningLang}
+          />
+          <ChoiceChips
+            compact
             label={t('nativeLanguage')}
+            name="native-language"
             value={nativeLang}
-            onChange={(event) => setNativeLang(event.target.value)}
-          >
-            {LANGUAGES.map((language) => (
-              <option key={language.code} value={language.code}>
-                {languageName(language.code, nativeLang)}
-              </option>
-            ))}
-          </Field>
-          <p className="tiny-note">{t('languageNote')}</p>
-          <Field
-            as="select"
+            options={LANGUAGES.map((language) => ({ value: language.code, label: languageName(language.code, nativeLang) }))}
+            onChange={setNativeLang}
+            hint={t('languageNote')}
+          />
+          <ChoiceChips
+            compact
             label={t('themeLabel')}
+            name="theme"
             value={theme}
-            onChange={(event) => {
-              setTheme(event.target.value)
-              saveTheme(event.target.value)
+            options={THEMES.map((option) => ({ value: option, label: t(`theme.${option}`) }))}
+            onChange={(value) => {
+              setTheme(value)
+              saveTheme(value)
             }}
-          >
-            {THEMES.map((option) => (
-              <option key={option} value={option}>
-                {t(`theme.${option}`)}
-              </option>
-            ))}
-          </Field>
+          />
         </section>
 
         <section className="panel stack-form">

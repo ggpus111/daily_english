@@ -134,9 +134,9 @@ cd analysis/native
 
 - `collect.py`: Tatoeba 영어 문장(약 25MB), 위키낱말사전 분류 표제어, 교육과정 PDF(약 3MB)를 `data/`에 받습니다. 위키미디어 서버가 요청을 제한하면 기다렸다 다시 묻습니다.
 - `analyze.py`: `output/`에 순위표(`expressions_ranked.csv`), 후보(`shortlist.csv`), 교과서 비교(`textbook_vs_natural.csv`), 표본(`samples.md`), 요약(`summary.json`)을 만듭니다.
-- `build_packs.py`: 직접 쓴 원고(`packs_draft.json`)에 빈도를 붙여 앱 데이터 `src/data/packs.json`을 만듭니다.
+- `build_packs.py`: 직접 쓴 원고(`packs_draft.json`)에 빈도를 붙여 앱 데이터 `src/data/en/packs.json`을 만듭니다.
 - `select_words.py`: 단어 600개와 예문 후보를 `data/word_candidates.json`에 만듭니다. 처음 목록(`data/word_candidates_v1.json`)이 있으면 바뀐 단어를 보여 줍니다.
-- `build_words.py`: 뜻 원고(`words_draft.json`)와 합쳐 앱 데이터 `src/data/words.json`을 만듭니다.
+- `build_words.py`: 뜻 원고(`words_draft.json`)와 합쳐 앱 데이터 `src/data/en/words.json`을 만듭니다.
 - `content_fit.py`: 단어·표현 예문이 앱 성격에 맞는지(1인칭, 인물 이름, 어두운 내용, 존댓말, 기분 낱말) 세어 `output/content_fit_*.json`에 둡니다. `make_before.py`는 비교용 처음 버전을 만듭니다.
 
 ## 출처 표시

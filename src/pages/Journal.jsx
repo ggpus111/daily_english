@@ -6,23 +6,24 @@ import { TodayMission, UsageLine } from '../components/Usage'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { useRecordForm } from '../hooks/useRecordForm'
-import { buildCorrectionPrompt, recentPracticeNotes, recentWordTexts } from '../lib/correction'
+import { aiConfigured, giveAiConsent, hasAiConsent, requestCorrection } from '../lib/aiCorrection'
+import { buildCorrectionPrompt, parseFeedback, recentPracticeNotes, recentWordTexts } from '../lib/correction'
 import { languageName } from '../lib/i18n'
-import { moodOf } from '../lib/moods'
-import { openExternal } from '../lib/native'
-import { isNative } from '../lib/platform'
+import { moodMeaning, moodOf, moodWord } from '../lib/moods'
 import { JOURNAL_DRAFT_KEY } from '../lib/records'
 
-const EMPTY_FORM = { mood: '', native: '', translation: '', aiFeedback: '', memo: '' }
+const EMPTY_FORM = {
+  mood: '',
+  native: '',
+  translation: '',
+  aiFeedback: '',
+  memo: '',
+}
 const REQUIRED = ['native']
 const MAX_TEXT_LENGTH = 4000
-const AI_CHATS = [
-  { label: 'openClaude', href: 'https://claude.ai/new' },
-  { label: 'openChatGpt', href: 'https://chatgpt.com/' },
-]
 
 export default function Journal() {
-  const { t, notify, records, nativeLang, learningLang } = useApp()
+  const { t, notify, records, nativeLang, learningLang, user, onLogin } = useApp()
   const items = records.journal
   const recordForm = useRecordForm({
     type: 'journal',
@@ -31,20 +32,19 @@ export default function Journal() {
     draftKey: JOURNAL_DRAFT_KEY,
   })
   const { form, errors, editingId, saving, formRef, listRef, setField } = recordForm
-  const [manualPrompt, setManualPrompt] = useState('')
   const [openId, setOpenId] = useState(null)
+  const [aiBusy, setAiBusy] = useState(false)
+  const [askingConsent, setAskingConsent] = useState(false)
+  const [aiRemaining, setAiRemaining] = useState(null)
+  const canAskAi = aiConfigured() && Boolean(user)
+  const preview = parseFeedback(form.aiFeedback)
 
   const dateFormat = new Intl.DateTimeFormat(nativeLang === 'ko' ? 'ko-KR' : 'en-US', {
     dateStyle: 'long',
   })
 
-  async function copyPrompt() {
-    if (!form.native.trim() || !form.translation.trim()) {
-      notify(t('correctionNeedText'))
-      return
-    }
-
-    const prompt = buildCorrectionPrompt({
+  function makePrompt() {
+    return buildCorrectionPrompt({
       uiLang: nativeLang,
       learning: languageName(learningLang, nativeLang),
       explain: languageName(nativeLang, nativeLang),
@@ -53,29 +53,30 @@ export default function Journal() {
       practiceNotes: recentPracticeNotes(items, editingId),
       recentWords: recentWordTexts(records.word),
     })
-    try {
-      await navigator.clipboard.writeText(prompt)
-      setManualPrompt('')
-      notify(t('promptCopied'))
-    } catch {
-      setManualPrompt(prompt)
-    }
   }
 
-  // AI 채팅에서 복사해 온 교정을 한 번에 붙여 넣는다. 브라우저가 막으면 칸을 길게 눌러 붙여 넣게 안내한다.
-  async function pasteFeedback() {
-    try {
-      const text = (await navigator.clipboard.readText()).trim()
-      if (!text) {
-        notify(t('pasteEmpty'))
-        return
-      }
-      setField('aiFeedback', text)
-      notify(t('pasteDone'))
-    } catch {
-      notify(t('pasteBlocked'))
-      formRef.current?.querySelector('[name="aiFeedback"]')?.focus()
+  // 교정은 앱 안에서만 받는다(다른 AI로 복사해 나가지 않음). 처음에는 어디로 보내지는지 알리고 동의를 받는다.
+  // 받은 교정은 아래에 나눠 보여 주고, 일기를 저장하면 함께 남는다. 다시 누르면 고친 번역으로 다시 받는다.
+  async function askAi({ consented = false } = {}) {
+    if (!form.native.trim() || !form.translation.trim()) {
+      notify(t('correctionNeedText'))
+      return
     }
+    if (!consented && !hasAiConsent()) {
+      setAskingConsent(true)
+      return
+    }
+    setAskingConsent(false)
+    setAiBusy(true)
+    const result = await requestCorrection(makePrompt())
+    setAiBusy(false)
+    if (result.error) {
+      notify(t(`aiError.${result.error}`))
+      return
+    }
+    setField('aiFeedback', result.feedback)
+    setAiRemaining(result.remaining)
+    notify(t('aiDone'))
   }
 
   return (
@@ -85,7 +86,7 @@ export default function Journal() {
       <div className="two-column">
         <form className="panel stack-form" ref={formRef} onSubmit={recordForm.submit} noValidate>
           <h2>{t(editingId ? 'editJournal' : 'newJournal')}</h2>
-          {learningLang === 'en' && <MoodPicker value={form.mood} onChange={(mood) => setField('mood', mood)} />}
+          <MoodPicker value={form.mood} onChange={(mood) => setField('mood', mood)} />
           <Field
             as="textarea"
             label={t('diaryNative')}
@@ -100,7 +101,9 @@ export default function Journal() {
           />
           <Field
             as="textarea"
-            label={t('diaryTranslation', { lang: languageName(learningLang, nativeLang) })}
+            label={t('diaryTranslation', {
+              lang: languageName(learningLang, nativeLang),
+            })}
             name="translation"
             rows={5}
             maxLength={MAX_TEXT_LENGTH}
@@ -109,62 +112,66 @@ export default function Journal() {
             value={form.translation}
             onChange={(event) => setField('translation', event.target.value)}
           />
-          {learningLang === 'en' && (
+          {(
             <div className="usage-box">
               <TodayMission sentence={form.translation} />
               <UsageLine sentence={form.translation} live />
             </div>
           )}
           <div className="correction-action">
-            <button type="button" className="soft-button" onClick={copyPrompt}>
-              {t('copyPrompt')}
-            </button>
-            <p className="tiny-note">{t('copyPromptHelp')}</p>
-            <a className="inline-link pro-teaser" href="#pro">
-              {t('proJournalTeaser')}
-            </a>
-            <div className="external-links">
-              {AI_CHATS.map((chat) => (
-                <a
-                  key={chat.href}
-                  className="inline-link"
-                  href={chat.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(event) => {
-                    if (!isNative) return
-                    event.preventDefault()
-                    openExternal(chat.href)
-                  }}
+            {canAskAi ? (
+              <>
+                <button
+                  type="button"
+                  className="ai-button"
+                  onClick={() => askAi()}
+                  disabled={aiBusy}
+                  aria-busy={aiBusy}
                 >
-                  {t(chat.label)}
-                </a>
-              ))}
-            </div>
+                  {t(aiBusy ? 'aiWorking' : 'aiAsk')}
+                </button>
+                <p className="tiny-note">
+                  {aiRemaining === null ? t('aiAskHelp') : t('aiRemaining', { count: aiRemaining })}
+                </p>
+              </>
+            ) : aiConfigured() ? (
+              <p className="tiny-note">
+                {t('aiNeedLogin')}{' '}
+                <button type="button" className="text-button" onClick={onLogin}>
+                  {t('aiLogin')}
+                </button>
+              </p>
+            ) : (
+              <p className="tiny-note">{t('aiUnavailable')}</p>
+            )}
+            {askingConsent && (
+              <section className="ai-consent" aria-labelledby="ai-consent-title">
+                <h3 id="ai-consent-title">{t('aiConsentTitle')}</h3>
+                <p>{t('aiConsentBody')}</p>
+                <div className="data-actions">
+                  <button
+                    type="button"
+                    className="primary-button"
+                    onClick={() => {
+                      giveAiConsent()
+                      askAi({ consented: true })
+                    }}
+                  >
+                    {t('aiConsentYes')}
+                  </button>
+                  <button type="button" className="text-button" onClick={() => setAskingConsent(false)}>
+                    {t('aiConsentNo')}
+                  </button>
+                </div>
+              </section>
+            )}
           </div>
-          {manualPrompt && (
-            <Field
-              as="textarea"
-              label={t('copyManual')}
-              rows={6}
-              readOnly
-              value={manualPrompt}
-              onFocus={(event) => event.target.select()}
-            />
+          {preview && (
+            <div className="correction-panel" aria-live="polite">
+              <p className="correction-label">{t('correctionTitle')}</p>
+              <Feedback text={form.aiFeedback} learningLang={learningLang} t={t} canSave />
+            </div>
           )}
-          <button type="button" className="soft-button paste-button" onClick={pasteFeedback}>
-            {t('pasteFeedback')}
-          </button>
-          <Field
-            as="textarea"
-            label={t('aiFeedback')}
-            name="aiFeedback"
-            rows={5}
-            maxLength={8000}
-            placeholder={t('aiFeedbackHint')}
-            value={form.aiFeedback}
-            onChange={(event) => setField('aiFeedback', event.target.value)}
-          />
           <Field
             as="textarea"
             label={t('diaryMemo')}
@@ -206,13 +213,13 @@ export default function Journal() {
                       <small className="muted">{dateFormat.format(new Date(item.createdAt))}</small>
                       {moodOf(item.mood) && (
                         <span className="mood-tag">
-                          <span lang="en">{item.mood}</span>
-                          {nativeLang === 'ko' && <span> · {moodOf(item.mood).ko}</span>}
+                          <span lang={learningLang}>{moodWord(moodOf(item.mood), learningLang)}</span>
+                          <span> · {moodMeaning(moodOf(item.mood), learningLang)}</span>
                         </span>
                       )}
                     </div>
                     <p className={open ? '' : 'clamped'}>{item.native}</p>
-                    {learningLang === 'en' && item.translation && <UsageLine sentence={item.translation} />}
+                    {item.translation && <UsageLine sentence={item.translation} />}
                     <div id={detailId} className="journal-detail" hidden={!open}>
                       {item.translation && (
                         <p className="journal-translation" lang={learningLang}>
@@ -239,10 +246,7 @@ export default function Journal() {
                       <button className="text-button" onClick={() => recordForm.startEdit(item)}>
                         {t('edit')}
                       </button>
-                      <button
-                        className="text-button danger"
-                        onClick={() => recordForm.removeItem(item)}
-                      >
+                      <button className="text-button danger" onClick={() => recordForm.removeItem(item)}>
                         {t('delete')}
                       </button>
                     </div>

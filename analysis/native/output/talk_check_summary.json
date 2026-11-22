@@ -1,0 +1,101 @@
+{
+ "items": 191,
+ "texting_items": 22,
+ "texting_zipf_median": 3.6399999999999997,
+ "texting_zipf_3_or_more": 15,
+ "texting_tatoeba_zero": 9,
+ "texting_tatoeba_median": 1.0,
+ "curriculum_words_zipf_median": 5.08,
+ "single_word_items": 37,
+ "tatoeba_under_5": 55,
+ "examples": {
+  "lol": [
+   5.05,
+   15
+  ],
+  "lmao": [
+   4.28,
+   3
+  ],
+  "omg": [
+   4.05,
+   5
+  ],
+  "idk": [
+   4.17,
+   0
+  ],
+  "tbh": [
+   4.18,
+   0
+  ],
+  "ngl": [
+   2.93,
+   1
+  ],
+  "btw": [
+   4.06,
+   1
+  ],
+  "brb": [
+   3.0,
+   1
+  ],
+  "ttyl": [
+   1.39,
+   0
+  ],
+  "wyd": [
+   1.97,
+   0
+  ],
+  "hbu": [
+   1.64,
+   0
+  ],
+  "rn": [
+   3.71,
+   11
+  ],
+  "omw": [
+   1.65,
+   0
+  ],
+  "ily": [
+   2.42,
+   0
+  ],
+  "jk": [
+   3.47,
+   1
+  ],
+  "fr": [
+   4.09,
+   11
+  ],
+  "smh": [
+   3.5,
+   0
+  ],
+  "ty": [
+   3.73,
+   0
+  ],
+  "np": [
+   3.57,
+   1
+  ],
+  "gn": [
+   2.85,
+   1
+  ],
+  "imo": [
+   3.71,
+   1
+  ],
+  "tho": [
+   4.41,
+   1
+  ]
+ }
+}

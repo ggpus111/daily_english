@@ -1,0 +1,5774 @@
+{
+ "source": {
+  "corpus": "Tatoeba (tatoeba.org) jpn sentences, CC BY 2.0 FR",
+  "sentences": 249007,
+  "note": "표현과 예문, 풀이는 Daily English가 직접 썼고(AI 도움), 빈도만 말뭉치에서 셌습니다."
+ },
+ "packs": [
+  {
+   "id": "love",
+   "title": {
+    "ko": "애정 표현",
+    "en": "Love & affection"
+   },
+   "items": [
+    {
+     "id": "ja-love-01",
+     "text": "大好き。",
+     "meaning": "정말 좋아해, 사랑해",
+     "example": "本当に大好きだよ。",
+     "exampleKo": "정말 많이 좋아해.",
+     "tip": "일본에서는 「愛してる」보다 「大好き」를 훨씬 자주 써요.",
+     "sentences": 558,
+     "perMillion": 2240.9
+    },
+    {
+     "id": "ja-love-02",
+     "text": "愛してる。",
+     "meaning": "사랑해",
+     "example": "愛してるよ、ずっと。",
+     "exampleKo": "사랑해, 영원히.",
+     "tip": "무게가 큰 말이라 특별한 순간에 아껴 써요.",
+     "sentences": 89,
+     "perMillion": 357.4
+    },
+    {
+     "id": "ja-love-03",
+     "text": "好きだよ。",
+     "meaning": "좋아해",
+     "example": "実は、ずっと好きだったよ。",
+     "exampleKo": "사실 계속 좋아했어.",
+     "tip": "고백할 때 가장 흔한 말이에요.",
+     "sentences": 4174,
+     "perMillion": 16762.6
+    },
+    {
+     "id": "ja-love-04",
+     "text": "君に夢中だよ。",
+     "meaning": "너한테 푹 빠졌어",
+     "example": "最近、君に夢中だよ。",
+     "exampleKo": "요즘 너한테 푹 빠졌어.",
+     "tip": "「夢中」는 정신없이 빠져 있다는 뜻이에요.",
+     "sentences": 144,
+     "perMillion": 578.3
+    },
+    {
+     "id": "ja-love-05",
+     "text": "大切な人",
+     "meaning": "소중한 사람",
+     "example": "あなたは私の大切な人だよ。",
+     "exampleKo": "넌 나한테 소중한 사람이야.",
+     "tip": "친구에게도 쓸 수 있어요.",
+     "sentences": 404,
+     "perMillion": 1622.4
+    },
+    {
+     "id": "ja-love-06",
+     "text": "一目惚れ",
+     "meaning": "첫눈에 반함",
+     "example": "実は一目惚れだった。",
+     "exampleKo": "사실 첫눈에 반했어.",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 88.4
+    },
+    {
+     "id": "ja-love-07",
+     "text": "一緒にいると幸せ。",
+     "meaning": "같이 있으면 행복해",
+     "example": "君と一緒にいると幸せ。",
+     "exampleKo": "너랑 같이 있으면 행복해.",
+     "tip": ""
+    },
+    {
+     "id": "ja-love-08",
+     "text": "出会えてよかった。",
+     "meaning": "만나서 다행이야",
+     "example": "君に出会えて本当によかった。",
+     "exampleKo": "너를 만나서 정말 다행이야.",
+     "tip": "연인, 친구 모두에게 써요."
+    },
+    {
+     "id": "ja-love-09",
+     "text": "ダーリン",
+     "meaning": "자기야",
+     "example": "おはよう、ダーリン！",
+     "exampleKo": "좋은 아침, 자기야!",
+     "tip": "일본 연인들은 보통 이름이나 애칭(○○ちゃん, ○○くん)으로 불러요. ダーリン은 장난스럽게 써요."
+    },
+    {
+     "id": "ja-love-10",
+     "text": "最高！",
+     "meaning": "최고야!",
+     "example": "コーヒーありがとう、最高！",
+     "exampleKo": "커피 고마워, 최고야!",
+     "tip": "고마울 때 친구에게도 자주 써요.",
+     "sentences": 151,
+     "perMillion": 606.4
+    },
+    {
+     "id": "ja-love-11",
+     "text": "ドキドキする。",
+     "meaning": "두근거려",
+     "example": "君といるとドキドキする。",
+     "exampleKo": "너랑 있으면 두근거려.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 84.3
+    },
+    {
+     "id": "ja-love-12",
+     "text": "ずっと君のこと考えてる。",
+     "meaning": "계속 네 생각만 해",
+     "example": "今日ずっと君のこと考えてる。",
+     "exampleKo": "오늘 계속 네 생각만 해.",
+     "tip": "",
+     "sentences": 36,
+     "perMillion": 144.6
+    },
+    {
+     "id": "ja-love-13",
+     "text": "そばにいてね。",
+     "meaning": "곁에 있어 줘",
+     "example": "これからもそばにいてね。",
+     "exampleKo": "앞으로도 곁에 있어 줘.",
+     "tip": ""
+    },
+    {
+     "id": "ja-love-14",
+     "text": "チュッ",
+     "meaning": "쪽 (메시지 끝 뽀뽀)",
+     "example": "また明日ね、チュッ",
+     "exampleKo": "내일 봐, 쪽",
+     "tip": "메시지 끝에 붙이는 애교 표현이에요.",
+     "sentences": 125,
+     "perMillion": 502.0
+    },
+    {
+     "id": "ja-love-15",
+     "text": "いい夢見てね。",
+     "meaning": "좋은 꿈 꿔",
+     "example": "おやすみ、いい夢見てね。",
+     "exampleKo": "잘 자, 좋은 꿈 꿔.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-love-16",
+     "text": "かわいすぎる。",
+     "meaning": "너무 귀여워",
+     "example": "寝顔かわいすぎる。",
+     "exampleKo": "자는 얼굴 너무 귀여워.",
+     "tip": ""
+    },
+    {
+     "id": "ja-love-17",
+     "text": "付き合ってください。",
+     "meaning": "사귀어 주세요",
+     "example": "私と付き合ってください。",
+     "exampleKo": "저랑 사귀어 주세요.",
+     "tip": "일본은 '고백(告白)'으로 사귀기 시작하는 문화예요.",
+     "sentences": 98,
+     "perMillion": 393.6
+    }
+   ]
+  },
+  {
+   "id": "miss",
+   "title": {
+    "ko": "보고 싶을 때",
+    "en": "Missing you"
+   },
+   "items": [
+    {
+     "id": "ja-miss-01",
+     "text": "会いたい。",
+     "meaning": "보고 싶어",
+     "example": "今すごく会いたい。",
+     "exampleKo": "지금 너무 보고 싶어.",
+     "tip": "「寂しい」(외로워)보다 직접적인 말이에요.",
+     "sentences": 99,
+     "perMillion": 397.6
+    },
+    {
+     "id": "ja-miss-02",
+     "text": "もう会いたい。",
+     "meaning": "벌써 보고 싶어",
+     "example": "さっき別れたのに、もう会いたい。",
+     "exampleKo": "방금 헤어졌는데 벌써 보고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-miss-03",
+     "text": "早く会いたい！",
+     "meaning": "빨리 보고 싶어!",
+     "example": "あと3日！早く会いたい！",
+     "exampleKo": "3일만 더! 빨리 보고 싶어!",
+     "tip": ""
+    },
+    {
+     "id": "ja-miss-04",
+     "text": "会える日を数えてる。",
+     "meaning": "만날 날을 세고 있어",
+     "example": "会える日を指折り数えてる。",
+     "exampleKo": "만날 날을 손꼽아 세고 있어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-miss-05",
+     "text": "ここにいてくれたらいいのに。",
+     "meaning": "네가 여기 있으면 좋을 텐데",
+     "example": "景色きれいだよ。ここにいてくれたらいいのに。",
+     "exampleKo": "경치 예뻐. 네가 여기 있으면 좋을 텐데.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 52.2
+    },
+    {
+     "id": "ja-miss-06",
+     "text": "君のこと考えてたよ。",
+     "meaning": "네 생각 하고 있었어",
+     "example": "ふと君のこと考えてたよ。",
+     "exampleKo": "문득 네 생각 했어.",
+     "tip": "힘든 일을 겪는 친구에게 위로로도 써요.",
+     "sentences": 20,
+     "perMillion": 80.3
+    },
+    {
+     "id": "ja-miss-07",
+     "text": "またね！",
+     "meaning": "또 봐!",
+     "example": "またね！気をつけて帰ってね。",
+     "exampleKo": "또 봐! 조심히 가.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 44.2
+    },
+    {
+     "id": "ja-miss-08",
+     "text": "君がいないと寂しい。",
+     "meaning": "너 없으니까 허전해",
+     "example": "君がいないとこのカフェも寂しい。",
+     "exampleKo": "너 없으니까 이 카페도 허전해.",
+     "tip": "",
+     "sentences": 104,
+     "perMillion": 417.7
+    },
+    {
+     "id": "ja-miss-09",
+     "text": "声が聞きたい。",
+     "meaning": "목소리 듣고 싶어",
+     "example": "電話できる？声が聞きたい。",
+     "exampleKo": "전화할 수 있어? 목소리 듣고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-miss-10",
+     "text": "ぎゅーってしたい。",
+     "meaning": "꼭 안아 주고 싶어",
+     "example": "疲れた日は、ぎゅーってしたい。",
+     "exampleKo": "지친 날엔 꼭 안아 주고 싶어.",
+     "tip": "「ぎゅー」는 꼭 껴안는 소리예요."
+    },
+    {
+     "id": "ja-miss-11",
+     "text": "頭から離れない。",
+     "meaning": "머릿속에서 안 떠나",
+     "example": "仕事中も君が頭から離れない。",
+     "exampleKo": "일할 때도 네가 머릿속에서 안 떠나.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 52.2
+    },
+    {
+     "id": "ja-miss-12",
+     "text": "早く帰ってきてね。",
+     "meaning": "빨리 돌아와",
+     "example": "待ってるから、早く帰ってきてね。",
+     "exampleKo": "기다릴게, 빨리 돌아와.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 100.4
+    },
+    {
+     "id": "ja-miss-13",
+     "text": "待ってるね。",
+     "meaning": "기다릴게",
+     "example": "ゆっくりでいいよ、待ってるね。",
+     "exampleKo": "천천히 해도 돼, 기다릴게.",
+     "tip": "",
+     "sentences": 104,
+     "perMillion": 417.7
+    },
+    {
+     "id": "ja-miss-14",
+     "text": "次いつ会える？",
+     "meaning": "다음에 언제 만나?",
+     "example": "次いつ会える？",
+     "exampleKo": "다음에 언제 볼 수 있어?",
+     "tip": "「会いたい」 다음으로 연인 사이에 가장 많이 묻는 말이에요."
+    }
+   ]
+  },
+  {
+   "id": "text",
+   "title": {
+    "ko": "메시지 줄임말",
+    "en": "Texting shortcuts"
+   },
+   "items": [
+    {
+     "id": "ja-text-01",
+     "text": "w",
+     "meaning": "ㅋㅋ",
+     "example": "それ面白すぎw",
+     "exampleKo": "그거 너무 웃기다 ㅋㅋ",
+     "tip": "웃음(笑う)의 w예요. 많이 웃기면 www처럼 늘려요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-02",
+     "text": "（笑）",
+     "meaning": "(웃음)",
+     "example": "今日駅で転んだ（笑）",
+     "exampleKo": "오늘 역에서 넘어졌어 ㅋㅋ",
+     "tip": "문장 끝에 붙이는 조금 점잖은 웃음 표시예요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-03",
+     "text": "草",
+     "meaning": "빵 터짐",
+     "example": "それは草",
+     "exampleKo": "그건 진짜 웃기다",
+     "tip": "w가 풀처럼 자란다는 데서 나온 인터넷 말이에요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-04",
+     "text": "おつ",
+     "meaning": "수고했어",
+     "example": "今日もおつ！",
+     "exampleKo": "오늘도 수고했어!",
+     "tip": "お疲れ様의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-05",
+     "text": "りょ",
+     "meaning": "ㅇㅋ, 알았어",
+     "example": "7時ね、りょ！",
+     "exampleKo": "7시지? ㅇㅋ!",
+     "tip": "了解(りょうかい)의 줄임말이에요. 더 줄여 「り」만 쓰기도 해요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-06",
+     "text": "あざす",
+     "meaning": "고마워 (가볍게)",
+     "example": "手伝ってくれてあざす！",
+     "exampleKo": "도와줘서 고마워!",
+     "tip": "ありがとうございます를 줄인 말이라 친한 사이에서만 써요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-07",
+     "text": "ごめんね",
+     "meaning": "미안",
+     "example": "返信遅れてごめんね。",
+     "exampleKo": "답장 늦어서 미안.",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "ja-text-08",
+     "text": "おはよ",
+     "meaning": "좋은 아침",
+     "example": "おはよ！よく寝た？",
+     "exampleKo": "좋은 아침! 잘 잤어?",
+     "tip": "おはよう를 짧게 쓴 말이에요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-09",
+     "text": "おやすみ",
+     "meaning": "잘 자",
+     "example": "今日はもう寝るね、おやすみ。",
+     "exampleKo": "오늘은 이만 잘게, 잘 자.",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "ja-text-10",
+     "text": "今なにしてる？",
+     "meaning": "지금 뭐 해?",
+     "example": "今なにしてる？",
+     "exampleKo": "지금 뭐 해?",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "ja-text-11",
+     "text": "了解",
+     "meaning": "알았어",
+     "example": "了解、またあとで！",
+     "exampleKo": "알았어, 이따 봐!",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "ja-text-12",
+     "text": "マジ？",
+     "meaning": "진짜?",
+     "example": "マジ？信じられない！",
+     "exampleKo": "진짜? 말도 안 돼!",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "ja-text-13",
+     "text": "ヤバい",
+     "meaning": "대박, 미쳤다",
+     "example": "このケーキ、ヤバい！",
+     "exampleKo": "이 케이크 대박이야!",
+     "tip": "맛있을 때도, 큰일 났을 때도 써요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-14",
+     "text": "それな",
+     "meaning": "그니까, 인정",
+     "example": "「月曜しんどい」「それな」",
+     "exampleKo": "\"월요일 힘들어\" \"그니까\"",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "ja-text-15",
+     "text": "よろ",
+     "meaning": "잘 부탁해",
+     "example": "明日の件、よろ！",
+     "exampleKo": "내일 일 잘 부탁해!",
+     "tip": "よろしく의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-16",
+     "text": "ちな",
+     "meaning": "참고로",
+     "example": "ちな、明日は雨だって。",
+     "exampleKo": "참고로 내일 비 온대.",
+     "tip": "ちなみに의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "ja-text-17",
+     "text": "わかる",
+     "meaning": "알아, 공감",
+     "example": "わかる、その気持ち。",
+     "exampleKo": "알아, 그 기분.",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "ja-text-18",
+     "text": "ガチで",
+     "meaning": "진짜로",
+     "example": "ガチで疲れた。",
+     "exampleKo": "진짜 피곤해.",
+     "tip": "",
+     "texting": true
+    }
+   ]
+  },
+  {
+   "id": "chat",
+   "title": {
+    "ko": "안부·수다",
+    "en": "Catching up"
+   },
+   "items": [
+    {
+     "id": "ja-chat-01",
+     "text": "何してるの？",
+     "meaning": "뭐 하고 있어?",
+     "example": "週末、何してるの？",
+     "exampleKo": "주말에 뭐 해?",
+     "tip": "지금 하는 일과 계획을 물을 때 둘 다 써요.",
+     "sentences": 50,
+     "perMillion": 200.8
+    },
+    {
+     "id": "ja-chat-02",
+     "text": "今日どうだった？",
+     "meaning": "오늘 어땠어?",
+     "example": "今日どうだった？全部聞かせて。",
+     "exampleKo": "오늘 어땠어? 다 얘기해 줘.",
+     "tip": "",
+     "sentences": 69,
+     "perMillion": 277.1
+    },
+    {
+     "id": "ja-chat-03",
+     "text": "別に、なにも。",
+     "meaning": "별거 없어",
+     "example": "別に、家でゴロゴロしてる。",
+     "exampleKo": "별거 없어, 집에서 뒹굴고 있어.",
+     "tip": "",
+     "sentences": 112,
+     "perMillion": 449.8
+    },
+    {
+     "id": "ja-chat-04",
+     "text": "私も！",
+     "meaning": "나도!",
+     "example": "私も、全然寝てない。",
+     "exampleKo": "나도, 거의 못 잤어.",
+     "tip": "남자는 「俺も」「僕も」라고 해요.",
+     "sentences": 330,
+     "perMillion": 1325.3
+    },
+    {
+     "id": "ja-chat-05",
+     "text": "のんびりしてる。",
+     "meaning": "느긋하게 쉬는 중",
+     "example": "猫とのんびりしてる。",
+     "exampleKo": "고양이랑 느긋하게 쉬는 중이야.",
+     "tip": "",
+     "sentences": 43,
+     "perMillion": 172.7
+    },
+    {
+     "id": "ja-chat-06",
+     "text": "うそでしょ！",
+     "meaning": "말도 안 돼!",
+     "example": "うそでしょ！会ったの？",
+     "exampleKo": "말도 안 돼! 만났어?",
+     "tip": "「うそ」는 여기서 거짓말이 아니라 놀람이에요.",
+     "sentences": 622,
+     "perMillion": 2497.9
+    },
+    {
+     "id": "ja-chat-07",
+     "text": "すごいね！",
+     "meaning": "대단하다!",
+     "example": "有名人に会ったの？すごいね！",
+     "exampleKo": "연예인 만났어? 대박!",
+     "tip": "",
+     "sentences": 314,
+     "perMillion": 1261.0
+    },
+    {
+     "id": "ja-chat-08",
+     "text": "だよね。",
+     "meaning": "그치, 내 말이",
+     "example": "だよね、月曜日は最悪。",
+     "exampleKo": "그치, 월요일은 최악이야.",
+     "tip": "",
+     "sentences": 389,
+     "perMillion": 1562.2
+    },
+    {
+     "id": "ja-chat-09",
+     "text": "聞いて聞いて！",
+     "meaning": "있잖아, 들어 봐!",
+     "example": "聞いて聞いて！就職決まった！",
+     "exampleKo": "들어 봐! 취업 됐어!",
+     "tip": "좋은 소식을 꺼낼 때 써요.",
+     "sentences": 850,
+     "perMillion": 3413.6
+    },
+    {
+     "id": "ja-chat-10",
+     "text": "何かあった？",
+     "meaning": "무슨 일 있었어?",
+     "example": "元気ないね、何かあった？",
+     "exampleKo": "기운 없네, 무슨 일 있었어?",
+     "tip": "",
+     "sentences": 42,
+     "perMillion": 168.7
+    },
+    {
+     "id": "ja-chat-11",
+     "text": "ご飯食べた？",
+     "meaning": "밥 먹었어?",
+     "example": "ご飯食べた？ちゃんと食べてね。",
+     "exampleKo": "밥 먹었어? 잘 챙겨 먹어.",
+     "tip": "한국만큼 흔한 안부는 아니라, 정말 식사했는지 묻는 느낌이 강해요.",
+     "sentences": 15,
+     "perMillion": 60.2
+    },
+    {
+     "id": "ja-chat-12",
+     "text": "最近どう？",
+     "meaning": "요즘 어때?",
+     "example": "久しぶり！最近どう？",
+     "exampleKo": "오랜만! 요즘 어때?",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-chat-13",
+     "text": "お疲れさま。",
+     "meaning": "수고했어",
+     "example": "今日も一日お疲れさま。",
+     "exampleKo": "오늘 하루도 수고했어.",
+     "tip": "하루를 마친 사람에게 가장 흔한 인사예요.",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-chat-14",
+     "text": "なるほどね。",
+     "meaning": "그렇구나",
+     "example": "なるほどね、そういうことか。",
+     "exampleKo": "그렇구나, 그런 거였어.",
+     "tip": "",
+     "sentences": 134,
+     "perMillion": 538.1
+    },
+    {
+     "id": "ja-chat-15",
+     "text": "それ面白いね。",
+     "meaning": "그거 재밌다",
+     "example": "それ面白いね、もっと教えて。",
+     "exampleKo": "그거 재밌다, 더 알려 줘.",
+     "tip": "",
+     "sentences": 301,
+     "perMillion": 1208.8
+    },
+    {
+     "id": "ja-chat-16",
+     "text": "本当に？",
+     "meaning": "진짜?",
+     "example": "引っ越すの？本当に？",
+     "exampleKo": "이사 온다고? 진짜?",
+     "tip": "",
+     "sentences": 3382,
+     "perMillion": 13581.9
+    },
+    {
+     "id": "ja-chat-17",
+     "text": "相変わらずだよ。",
+     "meaning": "늘 똑같지 뭐",
+     "example": "仕事は相変わらずだよ。",
+     "exampleKo": "일은 늘 똑같지 뭐.",
+     "tip": "",
+     "sentences": 84,
+     "perMillion": 337.3
+    },
+    {
+     "id": "ja-chat-18",
+     "text": "最近ハマってるものある？",
+     "meaning": "요즘 빠져 있는 거 있어?",
+     "example": "最近ハマってるものある？",
+     "exampleKo": "요즘 빠진 거 있어?",
+     "tip": "「ハマる」는 '푹 빠지다'예요.",
+     "sentences": 8,
+     "perMillion": 32.1
+    }
+   ]
+  },
+  {
+   "id": "tease",
+   "title": {
+    "ko": "장난·놀리기",
+    "en": "Teasing & jokes"
+   },
+   "items": [
+    {
+     "id": "ja-tease-01",
+     "text": "バカだなあ。",
+     "meaning": "바보야 (귀엽게)",
+     "example": "もう、バカだなあ。でもそこが好き。",
+     "exampleKo": "정말 바보야. 근데 그게 좋아.",
+     "tip": "다정한 말투면 애정 표현, 진지하면 상처가 돼요.",
+     "sentences": 116,
+     "perMillion": 465.9
+    },
+    {
+     "id": "ja-tease-02",
+     "text": "冗談だよ。",
+     "meaning": "농담이야",
+     "example": "怒らないで、冗談だよ。",
+     "exampleKo": "화내지 마, 농담이야.",
+     "tip": "",
+     "sentences": 241,
+     "perMillion": 967.8
+    },
+    {
+     "id": "ja-tease-03",
+     "text": "やめてよ！",
+     "meaning": "그만해!",
+     "example": "やめてよ、恥ずかしい！",
+     "exampleKo": "그만해, 부끄럽잖아!",
+     "tip": "",
+     "sentences": 194,
+     "perMillion": 779.1
+    },
+    {
+     "id": "ja-tease-04",
+     "text": "夢見すぎ。",
+     "meaning": "꿈 깨",
+     "example": "また作ってほしいって？夢見すぎ。",
+     "exampleKo": "또 만들어 달라고? 꿈 깨.",
+     "tip": ""
+    },
+    {
+     "id": "ja-tease-05",
+     "text": "残念でした〜。",
+     "meaning": "아쉽게 됐네~",
+     "example": "残念でした〜、ひっかからないよ。",
+     "exampleKo": "아쉽네~ 안 속아.",
+     "tip": ""
+    },
+    {
+     "id": "ja-tease-06",
+     "text": "おもしろくないし。",
+     "meaning": "하나도 안 웃기거든",
+     "example": "おもしろくないし。スマホ返して。",
+     "exampleKo": "하나도 안 웃겨. 폰 돌려줘.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 32.1
+    },
+    {
+     "id": "ja-tease-07",
+     "text": "大げさだなあ。",
+     "meaning": "오버야",
+     "example": "誕生日に風船？大げさだなあ。",
+     "exampleKo": "생일에 풍선? 오버야.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 72.3
+    },
+    {
+     "id": "ja-tease-08",
+     "text": "もういいよ。",
+     "meaning": "됐어",
+     "example": "もういいよ、君の勝ち。",
+     "exampleKo": "됐어, 네가 이겼어.",
+     "tip": "화났을 때도 쓰는 말이라 말투에 주의해요.",
+     "sentences": 22,
+     "perMillion": 88.4
+    },
+    {
+     "id": "ja-tease-09",
+     "text": "ひどい！",
+     "meaning": "너무해!",
+     "example": "ひどい！一生懸命作ったのに！",
+     "exampleKo": "너무해! 열심히 만들었는데!",
+     "tip": "",
+     "sentences": 303,
+     "perMillion": 1216.8
+    },
+    {
+     "id": "ja-tease-10",
+     "text": "ひっかかった！",
+     "meaning": "속았지!",
+     "example": "ひっかかった！冗談だよ。",
+     "exampleKo": "속았지! 농담이야.",
+     "tip": ""
+    },
+    {
+     "id": "ja-tease-11",
+     "text": "バレた？",
+     "meaning": "들켰어?",
+     "example": "お菓子食べたのバレた？",
+     "exampleKo": "과자 먹은 거 들켰어?",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 32.1
+    },
+    {
+     "id": "ja-tease-12",
+     "text": "誰が言ったの？",
+     "meaning": "누가 그래?",
+     "example": "料理下手？誰が言ったの？",
+     "exampleKo": "요리 못한다고? 누가 그래?",
+     "tip": ""
+    },
+    {
+     "id": "ja-tease-13",
+     "text": "しょうがないなあ。",
+     "meaning": "못 말려",
+     "example": "もう、しょうがないなあ。笑わないで。",
+     "exampleKo": "정말 못 말려. 웃지 마.",
+     "tip": "",
+     "sentences": 45,
+     "perMillion": 180.7
+    },
+    {
+     "id": "ja-tease-14",
+     "text": "調子乗らないで。",
+     "meaning": "우쭐대지 마",
+     "example": "一回勝っただけで調子乗らないで。",
+     "exampleKo": "한 번 이겼다고 우쭐대지 마.",
+     "tip": ""
+    },
+    {
+     "id": "ja-tease-15",
+     "text": "うそうそ！",
+     "meaning": "뻥이야!",
+     "example": "うそうそ！似合ってるよ。",
+     "exampleKo": "뻥이야! 잘 어울려.",
+     "tip": ""
+    },
+    {
+     "id": "ja-tease-16",
+     "text": "乗った！",
+     "meaning": "콜, 좋아",
+     "example": "ラーメン？いいよ、乗った！",
+     "exampleKo": "라멘? 콜!",
+     "tip": "「乗った」는 '그 제안에 탔다', 곧 찬성이에요.",
+     "sentences": 146,
+     "perMillion": 586.3
+    },
+    {
+     "id": "ja-tease-17",
+     "text": "天然だね。",
+     "meaning": "허당이다, 엉뚱하다",
+     "example": "君ってほんと天然だね。",
+     "exampleKo": "너 진짜 허당이다.",
+     "tip": "악의 없이 엉뚱한 사람을 귀엽게 부르는 말이에요.",
+     "sentences": 10,
+     "perMillion": 40.2
+    }
+   ]
+  },
+  {
+   "id": "date",
+   "title": {
+    "ko": "약속·데이트",
+    "en": "Plans & dates"
+   },
+   "items": [
+    {
+     "id": "ja-date-01",
+     "text": "今夜空いてる？",
+     "meaning": "오늘 밤 시간 돼?",
+     "example": "今夜空いてる？会いたいな。",
+     "exampleKo": "오늘 밤 시간 돼? 보고 싶어.",
+     "tip": "",
+     "sentences": 96,
+     "perMillion": 385.5
+    },
+    {
+     "id": "ja-date-02",
+     "text": "ご飯行かない？",
+     "meaning": "밥 먹으러 갈래?",
+     "example": "仕事終わったらご飯行かない？",
+     "exampleKo": "퇴근하고 밥 먹으러 갈래?",
+     "tip": "「〜しない？」는 부드러운 제안이에요."
+    },
+    {
+     "id": "ja-date-03",
+     "text": "じゃあ決まりね。",
+     "meaning": "그럼 정한 거다",
+     "example": "金曜7時？じゃあ決まりね。",
+     "exampleKo": "금요일 7시? 그럼 정한 거다.",
+     "tip": "",
+     "sentences": 46,
+     "perMillion": 184.7
+    },
+    {
+     "id": "ja-date-04",
+     "text": "迎えに行こうか？",
+     "meaning": "데리러 갈까?",
+     "example": "7時に迎えに行こうか？",
+     "exampleKo": "7시에 데리러 갈까?",
+     "tip": "",
+     "sentences": 51,
+     "perMillion": 204.8
+    },
+    {
+     "id": "ja-date-05",
+     "text": "何時がいい？",
+     "meaning": "몇 시가 좋아?",
+     "example": "明日、何時がいい？",
+     "exampleKo": "내일 몇 시가 좋아?",
+     "tip": ""
+    },
+    {
+     "id": "ja-date-06",
+     "text": "日にち変えてもいい？",
+     "meaning": "날짜 바꿔도 돼?",
+     "example": "急用ができたから、日にち変えてもいい？",
+     "exampleKo": "급한 일이 생겨서 날짜 바꿔도 될까?",
+     "tip": ""
+    },
+    {
+     "id": "ja-date-07",
+     "text": "急用ができた。",
+     "meaning": "갑자기 일이 생겼어",
+     "example": "ごめん、急用ができた。",
+     "exampleKo": "미안, 갑자기 일이 생겼어.",
+     "tip": "자세한 이유 없이 약속을 미룰 때 써요.",
+     "sentences": 15,
+     "perMillion": 60.2
+    },
+    {
+     "id": "ja-date-08",
+     "text": "あと10分で着く。",
+     "meaning": "10분 뒤 도착",
+     "example": "あと10分で着く！",
+     "exampleKo": "10분 뒤 도착!",
+     "tip": "",
+     "sentences": 263,
+     "perMillion": 1056.2
+    },
+    {
+     "id": "ja-date-09",
+     "text": "どこで待ち合わせる？",
+     "meaning": "어디서 만날까?",
+     "example": "どこで待ち合わせる？駅の前？",
+     "exampleKo": "어디서 만날까? 역 앞?",
+     "tip": "「待ち合わせ」는 약속 장소에서 만나는 거예요.",
+     "sentences": 18,
+     "perMillion": 72.3
+    },
+    {
+     "id": "ja-date-10",
+     "text": "割り勘にしよう。",
+     "meaning": "반반 내자",
+     "example": "今日は割り勘にしよう。",
+     "exampleKo": "오늘은 반반 내자.",
+     "tip": "일본은 데이트에서도 割り勘(각자 계산)이 흔해요.",
+     "sentences": 10,
+     "perMillion": 40.2
+    },
+    {
+     "id": "ja-date-11",
+     "text": "今日は私がおごるよ。",
+     "meaning": "오늘은 내가 살게",
+     "example": "今日は私がおごるよ。",
+     "exampleKo": "오늘은 내가 살게.",
+     "tip": "남자는 보통 「俺がおごるよ」라고 해요.",
+     "sentences": 12,
+     "perMillion": 48.2
+    },
+    {
+     "id": "ja-date-12",
+     "text": "うちで映画見ない？",
+     "meaning": "우리 집에서 영화 볼래?",
+     "example": "今度うちで映画見ない？",
+     "exampleKo": "다음에 우리 집에서 영화 볼래?",
+     "tip": ""
+    },
+    {
+     "id": "ja-date-13",
+     "text": "着いたら連絡してね。",
+     "meaning": "도착하면 연락해",
+     "example": "家に着いたら連絡してね。",
+     "exampleKo": "집에 도착하면 연락해.",
+     "tip": "한국의 '도착하면 연락해'와 같은 마음이에요."
+    },
+    {
+     "id": "ja-date-14",
+     "text": "家まで送るよ。",
+     "meaning": "집까지 데려다줄게",
+     "example": "遅いから家まで送るよ。",
+     "exampleKo": "늦었으니까 집까지 데려다줄게.",
+     "tip": "",
+     "sentences": 80,
+     "perMillion": 321.3
+    },
+    {
+     "id": "ja-date-15",
+     "text": "今日は楽しかった。",
+     "meaning": "오늘 즐거웠어",
+     "example": "今日は本当に楽しかった、ありがとう。",
+     "exampleKo": "오늘 정말 즐거웠어, 고마워.",
+     "tip": "만남이 끝나고 보내는 메시지로 좋아요.",
+     "sentences": 152,
+     "perMillion": 610.4
+    },
+    {
+     "id": "ja-date-16",
+     "text": "また行こうね。",
+     "meaning": "또 가자",
+     "example": "楽しかった！また行こうね。",
+     "exampleKo": "재밌었다! 또 가자.",
+     "tip": ""
+    },
+    {
+     "id": "ja-date-17",
+     "text": "予定変わってないよね？",
+     "meaning": "약속 그대로지?",
+     "example": "今夜の予定変わってないよね？",
+     "exampleKo": "오늘 밤 약속 그대로지?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "call",
+   "title": {
+    "ko": "영상통화·장거리",
+    "en": "Calls & distance"
+   },
+   "items": [
+    {
+     "id": "ja-call-01",
+     "text": "聞こえる？",
+     "meaning": "들려?",
+     "example": "もしもし、聞こえる？",
+     "exampleKo": "여보세요, 들려?",
+     "tip": "",
+     "sentences": 127,
+     "perMillion": 510.0
+    },
+    {
+     "id": "ja-call-02",
+     "text": "声が途切れてる。",
+     "meaning": "소리가 끊겨",
+     "example": "ごめん、声が途切れてる。",
+     "exampleKo": "미안, 소리가 끊겨.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 44.2
+    },
+    {
+     "id": "ja-call-03",
+     "text": "画面止まってるよ。",
+     "meaning": "화면 멈췄어",
+     "example": "画面止まってるよ。",
+     "exampleKo": "화면 멈췄어.",
+     "tip": "",
+     "sentences": 58,
+     "perMillion": 232.9
+    },
+    {
+     "id": "ja-call-04",
+     "text": "電話してもいい？",
+     "meaning": "전화해도 돼?",
+     "example": "仕事終わったら電話してもいい？",
+     "exampleKo": "일 끝나고 전화해도 돼?",
+     "tip": ""
+    },
+    {
+     "id": "ja-call-05",
+     "text": "あとでかけ直すね。",
+     "meaning": "다시 전화할게",
+     "example": "今バスだから、あとでかけ直すね。",
+     "exampleKo": "지금 버스라서 이따 다시 전화할게.",
+     "tip": ""
+    },
+    {
+     "id": "ja-call-06",
+     "text": "ビデオ通話しよう。",
+     "meaning": "영상통화하자",
+     "example": "寝る前にビデオ通話しよう。",
+     "exampleKo": "자기 전에 영상통화하자.",
+     "tip": ""
+    },
+    {
+     "id": "ja-call-07",
+     "text": "そっちは今何時？",
+     "meaning": "거기 지금 몇 시야?",
+     "example": "そっちは今何時？起こしちゃった？",
+     "exampleKo": "거기 지금 몇 시야? 나 때문에 깼어?",
+     "tip": ""
+    },
+    {
+     "id": "ja-call-08",
+     "text": "こっちはもう遅いよ。",
+     "meaning": "여기는 벌써 늦었어",
+     "example": "こっちはもう遅いから寝るね。",
+     "exampleKo": "여기 벌써 늦어서 잘게.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 56.2
+    },
+    {
+     "id": "ja-call-09",
+     "text": "時差",
+     "meaning": "시차",
+     "example": "時差がつらいね。",
+     "exampleKo": "시차 때문에 힘들다.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 40.2
+    },
+    {
+     "id": "ja-call-10",
+     "text": "ミュートになってるよ。",
+     "meaning": "음소거돼 있어",
+     "example": "ちょっと、ミュートになってるよ！",
+     "exampleKo": "잠깐, 음소거야!",
+     "tip": ""
+    },
+    {
+     "id": "ja-call-11",
+     "text": "カメラつけて。",
+     "meaning": "카메라 켜 줘",
+     "example": "カメラつけて、顔見たい。",
+     "exampleKo": "카메라 켜 줘, 얼굴 보고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-call-12",
+     "text": "電話しながら寝ちゃった。",
+     "meaning": "통화하다 잠들었어",
+     "example": "ごめん、昨日電話しながら寝ちゃった。",
+     "exampleKo": "미안, 어제 통화하다 잠들었어.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 44.2
+    },
+    {
+     "id": "ja-call-13",
+     "text": "遠距離恋愛",
+     "meaning": "장거리 연애",
+     "example": "遠距離は大変だけど、がんばろう。",
+     "exampleKo": "장거리는 힘들지만 힘내자.",
+     "tip": "줄여서 「遠恋(えんれん)」이라고도 해요.",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-call-14",
+     "text": "起きて待ってるね。",
+     "meaning": "안 자고 기다릴게",
+     "example": "電話来るまで起きて待ってるね。",
+     "exampleKo": "전화 올 때까지 안 자고 기다릴게.",
+     "tip": ""
+    },
+    {
+     "id": "ja-call-15",
+     "text": "先に切っていいよ。",
+     "meaning": "먼저 끊어도 돼",
+     "example": "先に切っていいよ。",
+     "exampleKo": "먼저 끊어.",
+     "tip": "「切る」는 '전화를 끊다'예요.",
+     "sentences": 161,
+     "perMillion": 646.6
+    },
+    {
+     "id": "ja-call-16",
+     "text": "また明日話そう。",
+     "meaning": "내일 또 얘기하자",
+     "example": "おやすみ、また明日話そう。",
+     "exampleKo": "잘 자, 내일 또 얘기하자.",
+     "tip": ""
+    },
+    {
+     "id": "ja-call-17",
+     "text": "見える？",
+     "meaning": "보여?",
+     "example": "見える？ここ暗いね。",
+     "exampleKo": "보여? 여기 어둡다.",
+     "tip": "",
+     "sentences": 538,
+     "perMillion": 2160.6
+    }
+   ]
+  },
+  {
+   "id": "fight",
+   "title": {
+    "ko": "다툼·화해",
+    "en": "Fights & making up"
+   },
+   "items": [
+    {
+     "id": "ja-fight-01",
+     "text": "そんなつもりじゃなかった。",
+     "meaning": "그럴 뜻이 아니었어",
+     "example": "ごめん、そんなつもりじゃなかった。",
+     "exampleKo": "미안, 그럴 생각 아니었어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-fight-02",
+     "text": "ちょっと話せる？",
+     "meaning": "얘기 좀 할 수 있어?",
+     "example": "今夜ちょっと話せる？大事なこと。",
+     "exampleKo": "오늘 밤 얘기 좀 할 수 있어? 중요한 거야.",
+     "tip": "진지한 이야기를 꺼낼 때 써요.",
+     "sentences": 261,
+     "perMillion": 1048.2
+    },
+    {
+     "id": "ja-fight-03",
+     "text": "少し一人にして。",
+     "meaning": "잠깐 혼자 있고 싶어",
+     "example": "怒ってないよ、少し一人にして。",
+     "exampleKo": "화난 거 아니야, 잠깐 혼자 있고 싶어.",
+     "tip": "헤어지자는 뜻이 아니라 시간이 필요하다는 말이에요.",
+     "sentences": 17,
+     "perMillion": 68.3
+    },
+    {
+     "id": "ja-fight-04",
+     "text": "傷ついた。",
+     "meaning": "상처받았어",
+     "example": "正直、その言葉に傷ついた。",
+     "exampleKo": "솔직히 그 말에 상처받았어.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 76.3
+    },
+    {
+     "id": "ja-fight-05",
+     "text": "けんかはやめよう。",
+     "meaning": "싸우지 말자",
+     "example": "けんかはやめよう、会いたいよ。",
+     "exampleKo": "싸우지 말자, 보고 싶어.",
+     "tip": "",
+     "sentences": 62,
+     "perMillion": 249.0
+    },
+    {
+     "id": "ja-fight-06",
+     "text": "言いすぎた。",
+     "meaning": "말이 심했어",
+     "example": "ごめん、言いすぎた。",
+     "exampleKo": "미안, 말이 심했어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-fight-07",
+     "text": "私たち、大丈夫だよね？",
+     "meaning": "우리 괜찮은 거지?",
+     "example": "私たち、もう大丈夫だよね？",
+     "exampleKo": "우리 이제 괜찮은 거지?",
+     "tip": ""
+    },
+    {
+     "id": "ja-fight-08",
+     "text": "仲直りしよう。",
+     "meaning": "화해하자",
+     "example": "けんか嫌だよ、仲直りしよう。",
+     "exampleKo": "싸우는 거 싫어, 화해하자.",
+     "tip": "",
+     "sentences": 28,
+     "perMillion": 112.4
+    },
+    {
+     "id": "ja-fight-09",
+     "text": "許すよ。",
+     "meaning": "용서할게",
+     "example": "いいよ、許すよ。",
+     "exampleKo": "괜찮아, 용서할게.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 96.4
+    },
+    {
+     "id": "ja-fight-10",
+     "text": "そうは言ってないよ。",
+     "meaning": "그렇게 말 안 했어",
+     "example": "待って、そうは言ってないよ。",
+     "exampleKo": "잠깐, 그렇게 말 안 했어.",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 128.5
+    },
+    {
+     "id": "ja-fight-11",
+     "text": "私が悪かった。",
+     "meaning": "내가 잘못했어",
+     "example": "君の言う通り、私が悪かった。",
+     "exampleKo": "네 말이 맞아, 내가 잘못했어.",
+     "tip": "",
+     "sentences": 112,
+     "perMillion": 449.8
+    },
+    {
+     "id": "ja-fight-12",
+     "text": "怒らないで。",
+     "meaning": "화내지 마",
+     "example": "怒らないで、説明させて。",
+     "exampleKo": "화내지 마, 설명할게.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 56.2
+    },
+    {
+     "id": "ja-fight-13",
+     "text": "君に怒ってるんじゃないよ。",
+     "meaning": "너한테 화난 거 아니야",
+     "example": "君に怒ってるんじゃないよ、疲れてるだけ。",
+     "exampleKo": "너한테 화난 게 아니라 그냥 피곤해서.",
+     "tip": ""
+    },
+    {
+     "id": "ja-fight-14",
+     "text": "やり直そう。",
+     "meaning": "다시 시작하자",
+     "example": "もう一回やり直そう。",
+     "exampleKo": "다시 한번 시작하자.",
+     "tip": ""
+    },
+    {
+     "id": "ja-fight-15",
+     "text": "言いたいことはわかる。",
+     "meaning": "무슨 말인지 알아",
+     "example": "言いたいことはわかるけど、私は違うと思う。",
+     "exampleKo": "무슨 말인지 알지만 난 생각이 달라.",
+     "tip": "반대하기 전에 먼저 상대를 인정할 때 좋아요.",
+     "sentences": 74,
+     "perMillion": 297.2
+    },
+    {
+     "id": "ja-fight-16",
+     "text": "もう気にしてないよ。",
+     "meaning": "이제 신경 안 써",
+     "example": "もう気にしてないよ、大丈夫。",
+     "exampleKo": "이제 신경 안 써, 괜찮아.",
+     "tip": "화해한 뒤 '앙금 없어'라는 뜻이에요.",
+     "sentences": 14,
+     "perMillion": 56.2
+    },
+    {
+     "id": "ja-fight-17",
+     "text": "傷つけてごめんね。",
+     "meaning": "상처 줘서 미안해",
+     "example": "傷つけて本当にごめんね。",
+     "exampleKo": "상처 줘서 정말 미안해.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 28.1
+    }
+   ]
+  },
+  {
+   "id": "care",
+   "title": {
+    "ko": "위로·응원",
+    "en": "Comfort & cheering"
+   },
+   "items": [
+    {
+     "id": "ja-care-01",
+     "text": "そばにいるよ。",
+     "meaning": "내가 곁에 있어",
+     "example": "何があっても、そばにいるよ。",
+     "exampleKo": "무슨 일이 있어도 곁에 있을게.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-care-02",
+     "text": "君ならできる！",
+     "meaning": "넌 할 수 있어!",
+     "example": "明日大事な日でしょ？君ならできる！",
+     "exampleKo": "내일 중요한 날이지? 넌 할 수 있어!",
+     "tip": "",
+     "sentences": 1856,
+     "perMillion": 7453.6
+    },
+    {
+     "id": "ja-care-03",
+     "text": "それはつらいね。",
+     "meaning": "그건 힘들겠다",
+     "example": "バス逃したの？それはつらいね。",
+     "exampleKo": "버스 놓쳤어? 힘들었겠다.",
+     "tip": "",
+     "sentences": 54,
+     "perMillion": 216.9
+    },
+    {
+     "id": "ja-care-04",
+     "text": "体に気をつけてね。",
+     "meaning": "몸 조심해",
+     "example": "寒いから体に気をつけてね。",
+     "exampleKo": "추우니까 몸 조심해.",
+     "tip": ""
+    },
+    {
+     "id": "ja-care-05",
+     "text": "ゆっくり休んで。",
+     "meaning": "푹 쉬어",
+     "example": "お疲れさま、ゆっくり休んで。",
+     "exampleKo": "수고했어, 푹 쉬어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-care-06",
+     "text": "お大事に。",
+     "meaning": "몸조리 잘해",
+     "example": "熱あるの？お大事に。",
+     "exampleKo": "열 있어? 몸조리 잘해.",
+     "tip": "아픈 사람에게 하는 정해진 인사예요.",
+     "sentences": 7,
+     "perMillion": 28.1
+    },
+    {
+     "id": "ja-care-07",
+     "text": "きっと大丈夫。",
+     "meaning": "분명 괜찮을 거야",
+     "example": "泣かないで、きっと大丈夫。",
+     "exampleKo": "울지 마, 분명 괜찮을 거야.",
+     "tip": ""
+    },
+    {
+     "id": "ja-care-08",
+     "text": "よくがんばったね。",
+     "meaning": "정말 애썼어",
+     "example": "合格したの？よくがんばったね！",
+     "exampleKo": "합격했어? 정말 애썼다!",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 44.2
+    },
+    {
+     "id": "ja-care-09",
+     "text": "あと少しだよ。",
+     "meaning": "조금만 더야",
+     "example": "テストもあと少しだよ、がんばれ！",
+     "exampleKo": "시험도 조금만 남았어, 힘내!",
+     "tip": ""
+    },
+    {
+     "id": "ja-care-10",
+     "text": "話したかったら聞くよ。",
+     "meaning": "얘기하고 싶으면 들을게",
+     "example": "元気ないね。話したかったら聞くよ。",
+     "exampleKo": "기운 없네. 얘기하고 싶으면 들을게.",
+     "tip": ""
+    },
+    {
+     "id": "ja-care-11",
+     "text": "ベストを尽くしたじゃん。",
+     "meaning": "최선을 다했잖아",
+     "example": "大丈夫、ベストを尽くしたじゃん。",
+     "exampleKo": "괜찮아, 최선을 다했잖아.",
+     "tip": "",
+     "sentences": 52,
+     "perMillion": 208.8
+    },
+    {
+     "id": "ja-care-12",
+     "text": "味方だよ。",
+     "meaning": "내가 네 편이야",
+     "example": "心配しないで、私は味方だよ。",
+     "exampleKo": "걱정 마, 난 네 편이야.",
+     "tip": "",
+     "sentences": 79,
+     "perMillion": 317.3
+    },
+    {
+     "id": "ja-care-13",
+     "text": "無理しないでね。",
+     "meaning": "무리하지 마",
+     "example": "忙しくても無理しないでね。",
+     "exampleKo": "바빠도 무리하지 마.",
+     "tip": "일본에서 아주 자주 쓰는 다정한 말이에요.",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-care-14",
+     "text": "気をつけて帰ってね。",
+     "meaning": "조심히 들어가",
+     "example": "遅いから気をつけて帰ってね。",
+     "exampleKo": "늦었으니까 조심히 들어가.",
+     "tip": ""
+    },
+    {
+     "id": "ja-care-15",
+     "text": "信じてるよ。",
+     "meaning": "난 너 믿어",
+     "example": "信じてるよ、きっとうまくいく。",
+     "exampleKo": "믿어, 분명 잘될 거야.",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 128.5
+    },
+    {
+     "id": "ja-care-16",
+     "text": "自分を責めないで。",
+     "meaning": "자책하지 마",
+     "example": "そんなに自分を責めないで。",
+     "exampleKo": "너무 자책하지 마.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-care-17",
+     "text": "何かあったら言ってね。",
+     "meaning": "무슨 일 있으면 말해",
+     "example": "何かあったらいつでも言ってね。",
+     "exampleKo": "무슨 일 있으면 언제든 말해.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 56.2
+    }
+   ]
+  },
+  {
+   "id": "react",
+   "title": {
+    "ko": "칭찬·리액션",
+    "en": "Compliments & reactions"
+   },
+   "items": [
+    {
+     "id": "ja-react-01",
+     "text": "すごく似合ってる！",
+     "meaning": "진짜 잘 어울려!",
+     "example": "そのワンピース、すごく似合ってる！",
+     "exampleKo": "그 원피스 진짜 잘 어울려!",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 104.4
+    },
+    {
+     "id": "ja-react-02",
+     "text": "優しいね。",
+     "meaning": "다정하다",
+     "example": "お弁当作ってくれたの？優しいね。",
+     "exampleKo": "도시락 만들어 줬어? 다정하다.",
+     "tip": "",
+     "sentences": 104,
+     "perMillion": 417.7
+    },
+    {
+     "id": "ja-react-03",
+     "text": "かわいい〜！",
+     "meaning": "귀여워~!",
+     "example": "かわいい〜！この子犬見て！",
+     "exampleKo": "귀여워~! 이 강아지 봐!",
+     "tip": "일본에서 가장 많이 쓰는 칭찬이에요.",
+     "sentences": 227,
+     "perMillion": 911.6
+    },
+    {
+     "id": "ja-react-04",
+     "text": "いいね！",
+     "meaning": "좋다!",
+     "example": "絵を始めたの？いいね！",
+     "exampleKo": "그림 시작했어? 좋다!",
+     "tip": "",
+     "sentences": 294,
+     "perMillion": 1180.7
+    },
+    {
+     "id": "ja-react-05",
+     "text": "よかったね！",
+     "meaning": "잘됐다!",
+     "example": "合格したの？よかったね！",
+     "exampleKo": "합격했어? 잘됐다!",
+     "tip": "",
+     "sentences": 1028,
+     "perMillion": 4128.4
+    },
+    {
+     "id": "ja-react-06",
+     "text": "ウケる！",
+     "meaning": "웃기다!",
+     "example": "その話ウケる！",
+     "exampleKo": "그 얘기 웃기다!",
+     "tip": ""
+    },
+    {
+     "id": "ja-react-07",
+     "text": "自分のことみたいに嬉しい。",
+     "meaning": "내 일처럼 기뻐",
+     "example": "婚約したの？自分のことみたいに嬉しい！",
+     "exampleKo": "약혼했어? 내 일처럼 기뻐!",
+     "tip": ""
+    },
+    {
+     "id": "ja-react-08",
+     "text": "おいしそう！",
+     "meaning": "맛있겠다!",
+     "example": "おいしそう！自分で作ったの？",
+     "exampleKo": "맛있겠다! 직접 만들었어?",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 72.3
+    },
+    {
+     "id": "ja-react-09",
+     "text": "さすが！",
+     "meaning": "역시!",
+     "example": "10キロ走ったの？さすが！",
+     "exampleKo": "10킬로 뛰었어? 역시!",
+     "tip": "기대대로 잘했을 때 하는 칭찬이에요.",
+     "sentences": 74,
+     "perMillion": 297.2
+    },
+    {
+     "id": "ja-react-10",
+     "text": "才能あるね。",
+     "meaning": "재능 있다",
+     "example": "これ描いたの？才能あるね。",
+     "exampleKo": "이거 그렸어? 재능 있다.",
+     "tip": "",
+     "sentences": 166,
+     "perMillion": 666.6
+    },
+    {
+     "id": "ja-react-11",
+     "text": "元気出た！",
+     "meaning": "힘이 났어!",
+     "example": "メッセージで元気出た！",
+     "exampleKo": "메시지 덕분에 힘이 났어!",
+     "tip": ""
+    },
+    {
+     "id": "ja-react-12",
+     "text": "めっちゃハマってる。",
+     "meaning": "완전 빠졌어",
+     "example": "この曲、めっちゃハマってる。",
+     "exampleKo": "이 노래 완전 빠졌어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-react-13",
+     "text": "君らしいね。",
+     "meaning": "완전 너답다",
+     "example": "ピンクのスーツケース？君らしいね。",
+     "exampleKo": "분홍 캐리어? 완전 너답다.",
+     "tip": ""
+    },
+    {
+     "id": "ja-react-14",
+     "text": "かっこいい！",
+     "meaning": "멋있다!",
+     "example": "今日の服、かっこいい！",
+     "exampleKo": "오늘 옷 멋있다!",
+     "tip": "",
+     "sentences": 46,
+     "perMillion": 184.7
+    },
+    {
+     "id": "ja-react-15",
+     "text": "素敵！",
+     "meaning": "멋지다!",
+     "example": "海の近くの新しい仕事？素敵！",
+     "exampleKo": "바닷가 근처 새 직장? 멋지다!",
+     "tip": "",
+     "sentences": 168,
+     "perMillion": 674.7
+    },
+    {
+     "id": "ja-react-16",
+     "text": "天才！",
+     "meaning": "천재야!",
+     "example": "もう直したの？天才！",
+     "exampleKo": "벌써 고쳤어? 천재다!",
+     "tip": "",
+     "sentences": 87,
+     "perMillion": 349.4
+    },
+    {
+     "id": "ja-react-17",
+     "text": "えらい！",
+     "meaning": "잘했어!",
+     "example": "ちゃんと朝ごはん食べたの？えらい！",
+     "exampleKo": "아침 챙겨 먹었어? 잘했어!",
+     "tip": "사소한 일에도 칭찬하는 일본식 표현이에요.",
+     "sentences": 7,
+     "perMillion": 28.1
+    }
+   ]
+  },
+  {
+   "id": "culture",
+   "title": {
+    "ko": "되묻기·문화 차이",
+    "en": "Asking & culture"
+   },
+   "items": [
+    {
+     "id": "ja-culture-01",
+     "text": "どういう意味？",
+     "meaning": "무슨 뜻이야?",
+     "example": "それ、どういう意味？",
+     "exampleKo": "그거 무슨 뜻이야?",
+     "tip": "",
+     "sentences": 61,
+     "perMillion": 245.0
+    },
+    {
+     "id": "ja-culture-02",
+     "text": "これ日本語で何て言うの？",
+     "meaning": "이거 일본어로 뭐라고 해?",
+     "example": "これ日本語で何て言うの？",
+     "exampleKo": "이거 일본어로 뭐라고 해?",
+     "tip": "",
+     "sentences": 37,
+     "perMillion": 148.6
+    },
+    {
+     "id": "ja-culture-03",
+     "text": "もう一回言って。",
+     "meaning": "한 번 더 말해 줘",
+     "example": "ごめん、もう一回言って。",
+     "exampleKo": "미안, 한 번 더 말해 줘.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 100.4
+    },
+    {
+     "id": "ja-culture-04",
+     "text": "もう少しゆっくり話して。",
+     "meaning": "조금 천천히 말해 줘",
+     "example": "もう少しゆっくり話してくれる？",
+     "exampleKo": "조금 천천히 말해 줄래?",
+     "tip": "",
+     "sentences": 30,
+     "perMillion": 120.5
+    },
+    {
+     "id": "ja-culture-05",
+     "text": "日本でもそうなの？",
+     "meaning": "일본에서도 그래?",
+     "example": "それって日本でもそうなの？",
+     "exampleKo": "그거 일본에서도 그래?",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-culture-06",
+     "text": "日本語勉強中なんだ。",
+     "meaning": "일본어 공부 중이야",
+     "example": "ごめん、まだ日本語勉強中なんだ。",
+     "exampleKo": "미안, 아직 일본어 공부 중이야.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 52.2
+    },
+    {
+     "id": "ja-culture-07",
+     "text": "今の言い方、合ってる？",
+     "meaning": "방금 말 맞아?",
+     "example": "今の言い方、合ってる？",
+     "exampleKo": "방금 말한 거 맞아?",
+     "tip": "",
+     "sentences": 90,
+     "perMillion": 361.4
+    },
+    {
+     "id": "ja-culture-08",
+     "text": "間違ってたら教えて。",
+     "meaning": "틀리면 알려 줘",
+     "example": "間違ってたら教えてね。",
+     "exampleKo": "틀리면 알려 줘.",
+     "tip": "배우는 중이라고 편하게 부탁할 때 좋아요.",
+     "sentences": 914,
+     "perMillion": 3670.6
+    },
+    {
+     "id": "ja-culture-09",
+     "text": "それって失礼？",
+     "meaning": "그거 실례야?",
+     "example": "待って、それって失礼？",
+     "exampleKo": "잠깐, 그거 실례야?",
+     "tip": "",
+     "sentences": 163,
+     "perMillion": 654.6
+    },
+    {
+     "id": "ja-culture-10",
+     "text": "韓国では〜するよ。",
+     "meaning": "한국에서는 ~해",
+     "example": "韓国では誕生日にわかめスープを飲むよ。",
+     "exampleKo": "한국에서는 생일에 미역국 먹어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-culture-11",
+     "text": "韓国語教えてあげる。",
+     "meaning": "한국어 알려 줄게",
+     "example": "韓国語教えてあげる。「사랑해」って言ってみて！",
+     "exampleKo": "한국어 알려 줄게. '사랑해' 해 봐!",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 100.4
+    },
+    {
+     "id": "ja-culture-12",
+     "text": "不思議だね。",
+     "meaning": "신기하다",
+     "example": "夏にお祝いするの？不思議だね。",
+     "exampleKo": "여름에 축하해? 신기하다.",
+     "tip": "",
+     "sentences": 138,
+     "perMillion": 554.2
+    },
+    {
+     "id": "ja-culture-13",
+     "text": "これ何て呼ぶの？",
+     "meaning": "이거 뭐라고 불러?",
+     "example": "これ日本語で何て呼ぶの？",
+     "exampleKo": "이거 일본어로 뭐라고 불러?",
+     "tip": ""
+    },
+    {
+     "id": "ja-culture-14",
+     "text": "敬語の方がいい？",
+     "meaning": "존댓말 쓰는 게 좋아?",
+     "example": "ご両親には敬語の方がいい？",
+     "exampleKo": "부모님께는 존댓말 쓰는 게 좋아?",
+     "tip": "일본어도 한국어처럼 존댓말(敬語)이 있어요.",
+     "sentences": 10,
+     "perMillion": 40.2
+    },
+    {
+     "id": "ja-culture-15",
+     "text": "聞き取れなかった。",
+     "meaning": "못 알아들었어",
+     "example": "ごめん、聞き取れなかった。",
+     "exampleKo": "미안, 못 알아들었어.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-culture-16",
+     "text": "ご両親に会うの緊張する。",
+     "meaning": "부모님 뵙는 거 긴장돼",
+     "example": "君のご両親に会うの緊張する。",
+     "exampleKo": "너희 부모님 뵙는 거 긴장돼.",
+     "tip": ""
+    },
+    {
+     "id": "ja-culture-17",
+     "text": "その言葉、初めて聞いた。",
+     "meaning": "그 말 처음 들어",
+     "example": "その言葉、初めて聞いた。どういう意味？",
+     "exampleKo": "그 말 처음 들어. 무슨 뜻이야?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "daily",
+   "title": {
+    "ko": "일상 대화",
+    "en": "Everyday talk"
+   },
+   "items": [
+    {
+     "id": "ja-daily-01",
+     "text": "おはよう。",
+     "meaning": "안녕, 좋은 아침",
+     "example": "おはよう！今日も頑張ろう。",
+     "exampleKo": "좋은 아침! 오늘도 힘내자.",
+     "tip": "",
+     "sentences": 46,
+     "perMillion": 184.7
+    },
+    {
+     "id": "ja-daily-02",
+     "text": "こんにちは。",
+     "meaning": "안녕하세요 (낮 인사)",
+     "example": "こんにちは、元気？",
+     "exampleKo": "안녕, 잘 지내?",
+     "tip": "",
+     "sentences": 78,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ja-daily-03",
+     "text": "こんばんは。",
+     "meaning": "안녕하세요 (저녁 인사)",
+     "example": "こんばんは、今帰ったよ。",
+     "exampleKo": "안녕, 지금 왔어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-daily-04",
+     "text": "元気？",
+     "meaning": "잘 지내?",
+     "example": "久しぶり、元気？",
+     "exampleKo": "오랜만이야, 잘 지내?",
+     "tip": "",
+     "sentences": 368,
+     "perMillion": 1477.9
+    },
+    {
+     "id": "ja-daily-05",
+     "text": "元気だよ。",
+     "meaning": "잘 지내",
+     "example": "うん、元気だよ。君は？",
+     "exampleKo": "응, 잘 지내. 너는?",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-daily-06",
+     "text": "まあまあかな。",
+     "meaning": "그럭저럭",
+     "example": "仕事はまあまあかな。",
+     "exampleKo": "일은 그럭저럭이야.",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 88.4
+    },
+    {
+     "id": "ja-daily-07",
+     "text": "ありがとう。",
+     "meaning": "고마워",
+     "example": "手伝ってくれてありがとう。",
+     "exampleKo": "도와줘서 고마워.",
+     "tip": "",
+     "sentences": 603,
+     "perMillion": 2421.6
+    },
+    {
+     "id": "ja-daily-08",
+     "text": "どういたしまして。",
+     "meaning": "천만에",
+     "example": "どういたしまして、いつでもどうぞ。",
+     "exampleKo": "천만에, 언제든지.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 28.1
+    },
+    {
+     "id": "ja-daily-09",
+     "text": "いいよ。",
+     "meaning": "괜찮아, 좋아",
+     "example": "いいよ、気にしないで。",
+     "exampleKo": "괜찮아, 신경 쓰지 마.",
+     "tip": "'좋다'와 '괜찮아(됐어)' 두 뜻이 있어 상황으로 구분해요.",
+     "sentences": 690,
+     "perMillion": 2771.0
+    },
+    {
+     "id": "ja-daily-10",
+     "text": "大丈夫？",
+     "meaning": "괜찮아?",
+     "example": "顔色悪いけど、大丈夫？",
+     "exampleKo": "안색이 안 좋은데 괜찮아?",
+     "tip": "",
+     "sentences": 303,
+     "perMillion": 1216.8
+    },
+    {
+     "id": "ja-daily-11",
+     "text": "大丈夫だよ。",
+     "meaning": "괜찮아",
+     "example": "心配しないで、大丈夫だよ。",
+     "exampleKo": "걱정 마, 괜찮아.",
+     "tip": "",
+     "sentences": 29,
+     "perMillion": 116.5
+    },
+    {
+     "id": "ja-daily-12",
+     "text": "じゃあね。",
+     "meaning": "안녕, 또 봐",
+     "example": "じゃあね、また明日。",
+     "exampleKo": "안녕, 내일 봐.",
+     "tip": ""
+    },
+    {
+     "id": "ja-daily-13",
+     "text": "行ってきます。",
+     "meaning": "다녀올게",
+     "example": "行ってきます！夕方には帰るね。",
+     "exampleKo": "다녀올게! 저녁엔 올게.",
+     "tip": "집을 나설 때 하는 정해진 인사예요.",
+     "sentences": 17,
+     "perMillion": 68.3
+    },
+    {
+     "id": "ja-daily-14",
+     "text": "行ってらっしゃい。",
+     "meaning": "잘 다녀와",
+     "example": "行ってらっしゃい、気をつけてね。",
+     "exampleKo": "잘 다녀와, 조심해.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-daily-15",
+     "text": "ただいま。",
+     "meaning": "다녀왔어",
+     "example": "ただいま！お腹すいた。",
+     "exampleKo": "다녀왔어! 배고파.",
+     "tip": "집에 돌아왔을 때 하는 인사예요.",
+     "sentences": 32,
+     "perMillion": 128.5
+    },
+    {
+     "id": "ja-daily-16",
+     "text": "おかえり。",
+     "meaning": "어서 와",
+     "example": "おかえり、今日どうだった？",
+     "exampleKo": "어서 와, 오늘 어땠어?",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 40.2
+    },
+    {
+     "id": "ja-daily-17",
+     "text": "いただきます。",
+     "meaning": "잘 먹겠습니다",
+     "example": "いただきます！おいしそう。",
+     "exampleKo": "잘 먹겠습니다! 맛있겠다.",
+     "tip": "",
+     "sentences": 59,
+     "perMillion": 236.9
+    },
+    {
+     "id": "ja-daily-18",
+     "text": "ごちそうさま。",
+     "meaning": "잘 먹었습니다",
+     "example": "ごちそうさま、おいしかった！",
+     "exampleKo": "잘 먹었어, 맛있었어!",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-daily-19",
+     "text": "お腹すいた。",
+     "meaning": "배고파",
+     "example": "お腹すいた、何か食べよう。",
+     "exampleKo": "배고파, 뭐 좀 먹자.",
+     "tip": ""
+    },
+    {
+     "id": "ja-daily-20",
+     "text": "眠い。",
+     "meaning": "졸려",
+     "example": "眠い、もう寝るね。",
+     "exampleKo": "졸려, 이제 잘게.",
+     "tip": "",
+     "sentences": 51,
+     "perMillion": 204.8
+    },
+    {
+     "id": "ja-daily-21",
+     "text": "疲れた。",
+     "meaning": "피곤해",
+     "example": "今日はほんとに疲れた。",
+     "exampleKo": "오늘 진짜 피곤했어.",
+     "tip": "",
+     "sentences": 118,
+     "perMillion": 473.9
+    },
+    {
+     "id": "ja-daily-22",
+     "text": "暑いね。",
+     "meaning": "덥다",
+     "example": "今日暑いね。",
+     "exampleKo": "오늘 덥다.",
+     "tip": "",
+     "sentences": 217,
+     "perMillion": 871.5
+    },
+    {
+     "id": "ja-daily-23",
+     "text": "寒いね。",
+     "meaning": "춥다",
+     "example": "外すごく寒いね。",
+     "exampleKo": "밖에 엄청 춥다.",
+     "tip": "",
+     "sentences": 276,
+     "perMillion": 1108.4
+    },
+    {
+     "id": "ja-daily-24",
+     "text": "いい天気だね。",
+     "meaning": "날씨 좋다",
+     "example": "今日はいい天気だね、散歩しない？",
+     "exampleKo": "오늘 날씨 좋다, 산책할래?",
+     "tip": "",
+     "sentences": 40,
+     "perMillion": 160.6
+    },
+    {
+     "id": "ja-daily-25",
+     "text": "雨が降ってる。",
+     "meaning": "비 와",
+     "example": "雨が降ってるから傘持ってって。",
+     "exampleKo": "비 오니까 우산 가져가.",
+     "tip": "",
+     "sentences": 162,
+     "perMillion": 650.6
+    },
+    {
+     "id": "ja-daily-26",
+     "text": "ちょっと待って。",
+     "meaning": "잠깐만",
+     "example": "ちょっと待って、すぐ行く。",
+     "exampleKo": "잠깐만, 금방 갈게.",
+     "tip": "",
+     "sentences": 45,
+     "perMillion": 180.7
+    },
+    {
+     "id": "ja-daily-27",
+     "text": "何時？",
+     "meaning": "몇 시야?",
+     "example": "今何時？",
+     "exampleKo": "지금 몇 시야?",
+     "tip": "",
+     "sentences": 320,
+     "perMillion": 1285.1
+    },
+    {
+     "id": "ja-daily-28",
+     "text": "どこにいる？",
+     "meaning": "어디 있어?",
+     "example": "今どこにいる？",
+     "exampleKo": "지금 어디야?",
+     "tip": "",
+     "sentences": 74,
+     "perMillion": 297.2
+    },
+    {
+     "id": "ja-daily-29",
+     "text": "何食べたい？",
+     "meaning": "뭐 먹고 싶어?",
+     "example": "今日の夜、何食べたい？",
+     "exampleKo": "오늘 저녁 뭐 먹고 싶어?",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-daily-30",
+     "text": "なんでもいいよ。",
+     "meaning": "아무거나 괜찮아",
+     "example": "なんでもいいよ、君が決めて。",
+     "exampleKo": "아무거나 좋아, 네가 정해.",
+     "tip": ""
+    },
+    {
+     "id": "ja-daily-31",
+     "text": "おいしい！",
+     "meaning": "맛있어!",
+     "example": "このラーメン、めっちゃおいしい！",
+     "exampleKo": "이 라멘 완전 맛있어!",
+     "tip": "",
+     "sentences": 172,
+     "perMillion": 690.7
+    },
+    {
+     "id": "ja-daily-32",
+     "text": "楽しい！",
+     "meaning": "재밌어! 즐거워!",
+     "example": "一緒にいると楽しい！",
+     "exampleKo": "같이 있으면 즐거워!",
+     "tip": "",
+     "sentences": 324,
+     "perMillion": 1301.2
+    },
+    {
+     "id": "ja-daily-33",
+     "text": "すごい！",
+     "meaning": "대단해! 대박!",
+     "example": "すごい！どうやったの？",
+     "exampleKo": "대박! 어떻게 했어?",
+     "tip": "",
+     "sentences": 314,
+     "perMillion": 1261.0
+    },
+    {
+     "id": "ja-daily-34",
+     "text": "本当？",
+     "meaning": "정말?",
+     "example": "本当？知らなかった。",
+     "exampleKo": "정말? 몰랐어.",
+     "tip": "",
+     "sentences": 3382,
+     "perMillion": 13581.9
+    },
+    {
+     "id": "ja-daily-35",
+     "text": "そうなんだ。",
+     "meaning": "그렇구나",
+     "example": "へえ、そうなんだ。",
+     "exampleKo": "와, 그렇구나.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 84.3
+    },
+    {
+     "id": "ja-daily-36",
+     "text": "わかった。",
+     "meaning": "알았어",
+     "example": "わかった、あとで連絡するね。",
+     "exampleKo": "알았어, 이따 연락할게.",
+     "tip": "",
+     "sentences": 296,
+     "perMillion": 1188.7
+    },
+    {
+     "id": "ja-daily-37",
+     "text": "よろしくね。",
+     "meaning": "잘 부탁해",
+     "example": "これからよろしくね。",
+     "exampleKo": "앞으로 잘 부탁해.",
+     "tip": "",
+     "sentences": 129,
+     "perMillion": 518.1
+    },
+    {
+     "id": "ja-daily-38",
+     "text": "お先に。",
+     "meaning": "먼저 갈게",
+     "example": "ごめん、お先に！",
+     "exampleKo": "미안, 먼저 갈게!",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 32.1
+    },
+    {
+     "id": "ja-daily-39",
+     "text": "気をつけて。",
+     "meaning": "조심해",
+     "example": "雪だから気をつけて。",
+     "exampleKo": "눈 오니까 조심해.",
+     "tip": "",
+     "sentences": 110,
+     "perMillion": 441.8
+    },
+    {
+     "id": "ja-daily-40",
+     "text": "おやすみなさい。",
+     "meaning": "안녕히 주무세요",
+     "example": "おやすみなさい、また明日。",
+     "exampleKo": "잘 자요, 내일 봐요.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 40.2
+    }
+   ]
+  },
+  {
+   "id": "routine",
+   "title": {
+    "ko": "하루 일과",
+    "en": "Daily routine"
+   },
+   "items": [
+    {
+     "id": "ja-routine-01",
+     "text": "起きた？",
+     "meaning": "일어났어?",
+     "example": "もう起きた？",
+     "exampleKo": "벌써 일어났어?",
+     "tip": "",
+     "sentences": 218,
+     "perMillion": 875.5
+    },
+    {
+     "id": "ja-routine-02",
+     "text": "寝坊した！",
+     "meaning": "늦잠 잤어!",
+     "example": "やばい、寝坊した！",
+     "exampleKo": "큰일 났다, 늦잠 잤어!",
+     "tip": "",
+     "sentences": 36,
+     "perMillion": 144.6
+    },
+    {
+     "id": "ja-routine-03",
+     "text": "顔を洗う",
+     "meaning": "세수하다",
+     "example": "起きてすぐ顔を洗う。",
+     "exampleKo": "일어나자마자 세수해.",
+     "tip": ""
+    },
+    {
+     "id": "ja-routine-04",
+     "text": "歯を磨く",
+     "meaning": "이를 닦다",
+     "example": "寝る前に歯を磨いてね。",
+     "exampleKo": "자기 전에 이 닦아.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 40.2
+    },
+    {
+     "id": "ja-routine-05",
+     "text": "シャワーを浴びる",
+     "meaning": "샤워하다",
+     "example": "今からシャワー浴びるね。",
+     "exampleKo": "지금 샤워할게.",
+     "tip": "",
+     "sentences": 56,
+     "perMillion": 224.9
+    },
+    {
+     "id": "ja-routine-06",
+     "text": "朝ごはんを食べる",
+     "meaning": "아침을 먹다",
+     "example": "朝ごはん食べた？",
+     "exampleKo": "아침 먹었어?",
+     "tip": "",
+     "sentences": 48,
+     "perMillion": 192.8
+    },
+    {
+     "id": "ja-routine-07",
+     "text": "電車に乗る",
+     "meaning": "전철을 타다",
+     "example": "今電車に乗ったところ。",
+     "exampleKo": "지금 막 전철 탔어.",
+     "tip": "",
+     "sentences": 97,
+     "perMillion": 389.5
+    },
+    {
+     "id": "ja-routine-08",
+     "text": "バスで行く",
+     "meaning": "버스로 가다",
+     "example": "今日はバスで行くね。",
+     "exampleKo": "오늘은 버스로 갈게.",
+     "tip": "",
+     "sentences": 165,
+     "perMillion": 662.6
+    },
+    {
+     "id": "ja-routine-09",
+     "text": "会社に行く",
+     "meaning": "회사에 가다",
+     "example": "もう会社に行かなきゃ。",
+     "exampleKo": "이제 회사 가야 해.",
+     "tip": "",
+     "sentences": 679,
+     "perMillion": 2726.8
+    },
+    {
+     "id": "ja-routine-10",
+     "text": "学校に行く",
+     "meaning": "학교에 가다",
+     "example": "明日も学校に行くの？",
+     "exampleKo": "내일도 학교 가?",
+     "tip": "",
+     "sentences": 1530,
+     "perMillion": 6144.4
+    },
+    {
+     "id": "ja-routine-11",
+     "text": "昼ごはん",
+     "meaning": "점심",
+     "example": "昼ごはん何食べた？",
+     "exampleKo": "점심 뭐 먹었어?",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 92.4
+    },
+    {
+     "id": "ja-routine-12",
+     "text": "仕事が終わった",
+     "meaning": "일이 끝났다",
+     "example": "やっと仕事終わった！",
+     "exampleKo": "드디어 일 끝났다!",
+     "tip": "",
+     "sentences": 49,
+     "perMillion": 196.8
+    },
+    {
+     "id": "ja-routine-13",
+     "text": "残業",
+     "meaning": "야근",
+     "example": "今日も残業だよ。",
+     "exampleKo": "오늘도 야근이야.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 84.3
+    },
+    {
+     "id": "ja-routine-14",
+     "text": "家に帰る",
+     "meaning": "집에 가다",
+     "example": "今から家に帰るね。",
+     "exampleKo": "지금 집에 갈게.",
+     "tip": "",
+     "sentences": 290,
+     "perMillion": 1164.6
+    },
+    {
+     "id": "ja-routine-15",
+     "text": "晩ごはんを作る",
+     "meaning": "저녁을 만들다",
+     "example": "今晩ごはん作ってる。",
+     "exampleKo": "지금 저녁 만들고 있어.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 32.1
+    },
+    {
+     "id": "ja-routine-16",
+     "text": "洗濯する",
+     "meaning": "빨래하다",
+     "example": "週末に洗濯しなきゃ。",
+     "exampleKo": "주말에 빨래해야 해.",
+     "tip": "",
+     "sentences": 64,
+     "perMillion": 257.0
+    },
+    {
+     "id": "ja-routine-17",
+     "text": "掃除する",
+     "meaning": "청소하다",
+     "example": "部屋を掃除したよ。",
+     "exampleKo": "방 청소했어.",
+     "tip": "",
+     "sentences": 219,
+     "perMillion": 879.5
+    },
+    {
+     "id": "ja-routine-18",
+     "text": "買い物に行く",
+     "meaning": "장 보러 가다",
+     "example": "スーパーに買い物に行ってくる。",
+     "exampleKo": "마트에 장 보러 다녀올게.",
+     "tip": "",
+     "sentences": 244,
+     "perMillion": 979.9
+    },
+    {
+     "id": "ja-routine-19",
+     "text": "ゴロゴロする",
+     "meaning": "뒹굴뒹굴하다",
+     "example": "休みの日は家でゴロゴロしてる。",
+     "exampleKo": "쉬는 날엔 집에서 뒹굴어.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 72.3
+    },
+    {
+     "id": "ja-routine-20",
+     "text": "ドラマを見る",
+     "meaning": "드라마를 보다",
+     "example": "夜は韓国ドラマを見てる。",
+     "exampleKo": "밤에는 한국 드라마 봐.",
+     "tip": "",
+     "sentences": 60,
+     "perMillion": 241.0
+    },
+    {
+     "id": "ja-routine-21",
+     "text": "音楽を聴く",
+     "meaning": "음악을 듣다",
+     "example": "通勤中に音楽を聴く。",
+     "exampleKo": "출퇴근할 때 음악 들어.",
+     "tip": "",
+     "sentences": 62,
+     "perMillion": 249.0
+    },
+    {
+     "id": "ja-routine-22",
+     "text": "ジムに行く",
+     "meaning": "헬스장에 가다",
+     "example": "仕事のあとジムに行く。",
+     "exampleKo": "퇴근하고 헬스장 가.",
+     "tip": "",
+     "sentences": 226,
+     "perMillion": 907.6
+    },
+    {
+     "id": "ja-routine-23",
+     "text": "散歩する",
+     "meaning": "산책하다",
+     "example": "夕方、犬と散歩した。",
+     "exampleKo": "저녁에 강아지랑 산책했어.",
+     "tip": "",
+     "sentences": 344,
+     "perMillion": 1381.5
+    },
+    {
+     "id": "ja-routine-24",
+     "text": "お風呂に入る",
+     "meaning": "목욕하다",
+     "example": "お風呂に入ってくるね。",
+     "exampleKo": "목욕하고 올게.",
+     "tip": "일본은 욕조에 몸을 담그는 문화가 강해요.",
+     "sentences": 113,
+     "perMillion": 453.8
+    },
+    {
+     "id": "ja-routine-25",
+     "text": "寝る準備",
+     "meaning": "잘 준비",
+     "example": "そろそろ寝る準備する。",
+     "exampleKo": "슬슬 잘 준비할게.",
+     "tip": ""
+    },
+    {
+     "id": "ja-routine-26",
+     "text": "早起きする",
+     "meaning": "일찍 일어나다",
+     "example": "明日は早起きしなきゃ。",
+     "exampleKo": "내일은 일찍 일어나야 해.",
+     "tip": "",
+     "sentences": 162,
+     "perMillion": 650.6
+    },
+    {
+     "id": "ja-routine-27",
+     "text": "夜更かしする",
+     "meaning": "밤늦게까지 깨어 있다",
+     "example": "また夜更かししちゃった。",
+     "exampleKo": "또 밤새 버렸어.",
+     "tip": "",
+     "sentences": 65,
+     "perMillion": 261.0
+    },
+    {
+     "id": "ja-routine-28",
+     "text": "二度寝",
+     "meaning": "다시 잠들기",
+     "example": "休みだから二度寝した。",
+     "exampleKo": "쉬는 날이라 다시 잤어.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-routine-29",
+     "text": "お弁当",
+     "meaning": "도시락",
+     "example": "今日はお弁当持ってきた。",
+     "exampleKo": "오늘은 도시락 싸 왔어.",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 104.4
+    },
+    {
+     "id": "ja-routine-30",
+     "text": "コンビニ",
+     "meaning": "편의점",
+     "example": "コンビニでおにぎり買った。",
+     "exampleKo": "편의점에서 주먹밥 샀어.",
+     "tip": "",
+     "sentences": 42,
+     "perMillion": 168.7
+    },
+    {
+     "id": "ja-routine-31",
+     "text": "休み",
+     "meaning": "쉬는 날, 휴가",
+     "example": "明日は休みだよ。",
+     "exampleKo": "내일 쉬는 날이야.",
+     "tip": "",
+     "sentences": 485,
+     "perMillion": 1947.7
+    },
+    {
+     "id": "ja-routine-32",
+     "text": "週末",
+     "meaning": "주말",
+     "example": "週末は何するの？",
+     "exampleKo": "주말엔 뭐 해?",
+     "tip": "",
+     "sentences": 183,
+     "perMillion": 734.9
+    },
+    {
+     "id": "ja-routine-33",
+     "text": "平日",
+     "meaning": "평일",
+     "example": "平日はいつも忙しい。",
+     "exampleKo": "평일엔 항상 바빠.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 48.2
+    },
+    {
+     "id": "ja-routine-34",
+     "text": "毎日",
+     "meaning": "매일",
+     "example": "毎日日本語を勉強してる。",
+     "exampleKo": "매일 일본어 공부하고 있어.",
+     "tip": "",
+     "sentences": 344,
+     "perMillion": 1381.5
+    },
+    {
+     "id": "ja-routine-35",
+     "text": "いつも",
+     "meaning": "항상",
+     "example": "いつもこの道を通る。",
+     "exampleKo": "항상 이 길로 다녀.",
+     "tip": "",
+     "sentences": 1930,
+     "perMillion": 7750.8
+    },
+    {
+     "id": "ja-routine-36",
+     "text": "たまに",
+     "meaning": "가끔",
+     "example": "たまに自炊する。",
+     "exampleKo": "가끔 밥 해 먹어.",
+     "tip": "",
+     "sentences": 111,
+     "perMillion": 445.8
+    },
+    {
+     "id": "ja-routine-37",
+     "text": "今日は在宅",
+     "meaning": "오늘은 재택근무",
+     "example": "今日は在宅だから家にいるよ。",
+     "exampleKo": "오늘은 재택이라 집에 있어.",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 88.4
+    },
+    {
+     "id": "ja-routine-38",
+     "text": "ちょっと休憩",
+     "meaning": "잠깐 쉬기",
+     "example": "ちょっと休憩しよう。",
+     "exampleKo": "잠깐 쉬자.",
+     "tip": "",
+     "sentences": 87,
+     "perMillion": 349.4
+    },
+    {
+     "id": "ja-routine-39",
+     "text": "スマホを見る",
+     "meaning": "휴대폰을 보다",
+     "example": "寝る前にスマホ見ちゃう。",
+     "exampleKo": "자기 전에 폰을 보게 돼.",
+     "tip": "",
+     "sentences": 80,
+     "perMillion": 321.3
+    },
+    {
+     "id": "ja-routine-40",
+     "text": "支度する",
+     "meaning": "준비하다",
+     "example": "今支度してるから待って。",
+     "exampleKo": "지금 준비 중이니까 기다려.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 124.5
+    }
+   ]
+  },
+  {
+   "id": "out",
+   "title": {
+    "ko": "밖에서",
+    "en": "Out and about"
+   },
+   "items": [
+    {
+     "id": "ja-out-01",
+     "text": "いくらですか？",
+     "meaning": "얼마예요?",
+     "example": "これ、いくらですか？",
+     "exampleKo": "이거 얼마예요?",
+     "tip": "",
+     "sentences": 552,
+     "perMillion": 2216.8
+    },
+    {
+     "id": "ja-out-02",
+     "text": "これください。",
+     "meaning": "이거 주세요",
+     "example": "これください。",
+     "exampleKo": "이거 주세요.",
+     "tip": ""
+    },
+    {
+     "id": "ja-out-03",
+     "text": "カードで払えますか？",
+     "meaning": "카드로 낼 수 있어요?",
+     "example": "カードで払えますか？",
+     "exampleKo": "카드 돼요?",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 136.5
+    },
+    {
+     "id": "ja-out-04",
+     "text": "袋はいりません。",
+     "meaning": "봉투는 필요 없어요",
+     "example": "袋はいりません。",
+     "exampleKo": "봉투는 괜찮아요.",
+     "tip": "",
+     "sentences": 67,
+     "perMillion": 269.1
+    },
+    {
+     "id": "ja-out-05",
+     "text": "トイレはどこですか？",
+     "meaning": "화장실 어디예요?",
+     "example": "すみません、トイレはどこですか？",
+     "exampleKo": "실례지만, 화장실 어디예요?",
+     "tip": "",
+     "sentences": 168,
+     "perMillion": 674.7
+    },
+    {
+     "id": "ja-out-06",
+     "text": "駅はどこ？",
+     "meaning": "역이 어디야?",
+     "example": "ここから駅はどこ？",
+     "exampleKo": "여기서 역이 어디야?",
+     "tip": "",
+     "sentences": 736,
+     "perMillion": 2955.7
+    },
+    {
+     "id": "ja-out-07",
+     "text": "道に迷った。",
+     "meaning": "길을 잃었어",
+     "example": "ごめん、道に迷った。",
+     "exampleKo": "미안, 길을 잃었어.",
+     "tip": "",
+     "sentences": 107,
+     "perMillion": 429.7
+    },
+    {
+     "id": "ja-out-08",
+     "text": "まっすぐ行って",
+     "meaning": "쭉 가",
+     "example": "まっすぐ行って右だよ。",
+     "exampleKo": "쭉 가서 오른쪽이야.",
+     "tip": "",
+     "sentences": 60,
+     "perMillion": 241.0
+    },
+    {
+     "id": "ja-out-09",
+     "text": "右に曲がる",
+     "meaning": "오른쪽으로 돌다",
+     "example": "次の角を右に曲がって。",
+     "exampleKo": "다음 모퉁이에서 오른쪽으로 돌아.",
+     "tip": "",
+     "sentences": 42,
+     "perMillion": 168.7
+    },
+    {
+     "id": "ja-out-10",
+     "text": "左に曲がる",
+     "meaning": "왼쪽으로 돌다",
+     "example": "信号を左に曲がって。",
+     "exampleKo": "신호등에서 왼쪽으로 돌아.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 124.5
+    },
+    {
+     "id": "ja-out-11",
+     "text": "近いよ。",
+     "meaning": "가까워",
+     "example": "駅から近いよ。",
+     "exampleKo": "역에서 가까워.",
+     "tip": "",
+     "sentences": 219,
+     "perMillion": 879.5
+    },
+    {
+     "id": "ja-out-12",
+     "text": "遠いね。",
+     "meaning": "멀다",
+     "example": "歩くとちょっと遠いね。",
+     "exampleKo": "걸어가면 좀 멀다.",
+     "tip": "",
+     "sentences": 124,
+     "perMillion": 498.0
+    },
+    {
+     "id": "ja-out-13",
+     "text": "二人です。",
+     "meaning": "두 명이에요",
+     "example": "二人です。",
+     "exampleKo": "두 명이에요.",
+     "tip": "식당에서 인원을 말할 때 써요.",
+     "sentences": 498,
+     "perMillion": 1999.9
+    },
+    {
+     "id": "ja-out-14",
+     "text": "予約しています。",
+     "meaning": "예약했어요",
+     "example": "七時に予約しています。",
+     "exampleKo": "7시에 예약했어요.",
+     "tip": "",
+     "sentences": 191,
+     "perMillion": 767.0
+    },
+    {
+     "id": "ja-out-15",
+     "text": "メニューください。",
+     "meaning": "메뉴판 주세요",
+     "example": "すみません、メニューください。",
+     "exampleKo": "저기요, 메뉴판 주세요.",
+     "tip": "",
+     "sentences": 45,
+     "perMillion": 180.7
+    },
+    {
+     "id": "ja-out-16",
+     "text": "おすすめは何ですか？",
+     "meaning": "추천 메뉴가 뭐예요?",
+     "example": "おすすめは何ですか？",
+     "exampleKo": "추천 메뉴가 뭐예요?",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 128.5
+    },
+    {
+     "id": "ja-out-17",
+     "text": "お会計お願いします。",
+     "meaning": "계산해 주세요",
+     "example": "お会計お願いします。",
+     "exampleKo": "계산해 주세요.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-out-18",
+     "text": "持ち帰りで。",
+     "meaning": "포장이요",
+     "example": "持ち帰りでお願いします。",
+     "exampleKo": "포장해 주세요.",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 80.3
+    },
+    {
+     "id": "ja-out-19",
+     "text": "店内で。",
+     "meaning": "매장에서요",
+     "example": "店内で食べます。",
+     "exampleKo": "매장에서 먹을게요.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 40.2
+    },
+    {
+     "id": "ja-out-20",
+     "text": "すみません！",
+     "meaning": "저기요! / 죄송해요",
+     "example": "すみません、注文いいですか？",
+     "exampleKo": "저기요, 주문해도 돼요?",
+     "tip": "사람을 부를 때도, 사과할 때도 써요.",
+     "sentences": 596,
+     "perMillion": 2393.5
+    },
+    {
+     "id": "ja-out-21",
+     "text": "空いてる席",
+     "meaning": "빈자리",
+     "example": "空いてる席ある？",
+     "exampleKo": "빈자리 있어?",
+     "tip": ""
+    },
+    {
+     "id": "ja-out-22",
+     "text": "並んでる",
+     "meaning": "줄 서 있어",
+     "example": "すごく並んでるね。",
+     "exampleKo": "줄 엄청 길다.",
+     "tip": "",
+     "sentences": 82,
+     "perMillion": 329.3
+    },
+    {
+     "id": "ja-out-23",
+     "text": "電車が遅れてる。",
+     "meaning": "전철이 늦어",
+     "example": "電車が遅れてるから少し遅れる。",
+     "exampleKo": "전철이 늦어서 조금 늦어.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-out-24",
+     "text": "乗り換え",
+     "meaning": "환승",
+     "example": "次の駅で乗り換えだよ。",
+     "exampleKo": "다음 역에서 환승이야.",
+     "tip": "",
+     "sentences": 48,
+     "perMillion": 192.8
+    },
+    {
+     "id": "ja-out-25",
+     "text": "切符",
+     "meaning": "표",
+     "example": "切符を買わなきゃ。",
+     "exampleKo": "표 사야 해.",
+     "tip": "",
+     "sentences": 131,
+     "perMillion": 526.1
+    },
+    {
+     "id": "ja-out-26",
+     "text": "タクシーで行こう。",
+     "meaning": "택시 타고 가자",
+     "example": "遅いからタクシーで行こう。",
+     "exampleKo": "늦었으니까 택시 타고 가자.",
+     "tip": "",
+     "sentences": 248,
+     "perMillion": 996.0
+    },
+    {
+     "id": "ja-out-27",
+     "text": "写真撮ってもらえますか？",
+     "meaning": "사진 찍어 주실래요?",
+     "example": "すみません、写真撮ってもらえますか？",
+     "exampleKo": "실례지만 사진 좀 찍어 주실래요?",
+     "tip": ""
+    },
+    {
+     "id": "ja-out-28",
+     "text": "一緒に写真撮ろう。",
+     "meaning": "같이 사진 찍자",
+     "example": "ここで一緒に写真撮ろう！",
+     "exampleKo": "여기서 같이 사진 찍자!",
+     "tip": ""
+    },
+    {
+     "id": "ja-out-29",
+     "text": "試着してもいいですか？",
+     "meaning": "입어 봐도 돼요?",
+     "example": "これ試着してもいいですか？",
+     "exampleKo": "이거 입어 봐도 돼요?",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 140.6
+    },
+    {
+     "id": "ja-out-30",
+     "text": "サイズ",
+     "meaning": "사이즈",
+     "example": "もう少し大きいサイズありますか？",
+     "exampleKo": "조금 더 큰 사이즈 있어요?",
+     "tip": "",
+     "sentences": 90,
+     "perMillion": 361.4
+    },
+    {
+     "id": "ja-out-31",
+     "text": "安い！",
+     "meaning": "싸다!",
+     "example": "これ安い！",
+     "exampleKo": "이거 싸다!",
+     "tip": "",
+     "sentences": 198,
+     "perMillion": 795.2
+    },
+    {
+     "id": "ja-out-32",
+     "text": "高いね。",
+     "meaning": "비싸다",
+     "example": "ちょっと高いね。",
+     "exampleKo": "좀 비싸다.",
+     "tip": "",
+     "sentences": 779,
+     "perMillion": 3128.4
+    },
+    {
+     "id": "ja-out-33",
+     "text": "セール",
+     "meaning": "세일",
+     "example": "今セールやってるよ。",
+     "exampleKo": "지금 세일 중이야.",
+     "tip": "",
+     "sentences": 62,
+     "perMillion": 249.0
+    },
+    {
+     "id": "ja-out-34",
+     "text": "混んでるね。",
+     "meaning": "붐비네",
+     "example": "今日はすごく混んでるね。",
+     "exampleKo": "오늘 엄청 붐비네.",
+     "tip": "",
+     "sentences": 63,
+     "perMillion": 253.0
+    },
+    {
+     "id": "ja-out-35",
+     "text": "空いてるね。",
+     "meaning": "한산하네",
+     "example": "平日だから空いてるね。",
+     "exampleKo": "평일이라 한산하네.",
+     "tip": "",
+     "sentences": 96,
+     "perMillion": 385.5
+    },
+    {
+     "id": "ja-out-36",
+     "text": "開いてる？",
+     "meaning": "열었어?",
+     "example": "あの店、まだ開いてる？",
+     "exampleKo": "그 가게 아직 열었어?",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 80.3
+    },
+    {
+     "id": "ja-out-37",
+     "text": "閉まってる。",
+     "meaning": "닫혔어",
+     "example": "もう閉まってるよ。",
+     "exampleKo": "벌써 닫았어.",
+     "tip": "",
+     "sentences": 50,
+     "perMillion": 200.8
+    },
+    {
+     "id": "ja-out-38",
+     "text": "Wi-Fiありますか？",
+     "meaning": "와이파이 있어요?",
+     "example": "ここWi-Fiありますか？",
+     "exampleKo": "여기 와이파이 있어요?",
+     "tip": ""
+    },
+    {
+     "id": "ja-out-39",
+     "text": "充電したい。",
+     "meaning": "충전하고 싶어",
+     "example": "スマホ充電したい。",
+     "exampleKo": "폰 충전하고 싶어.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 92.4
+    },
+    {
+     "id": "ja-out-40",
+     "text": "どうやって行くの？",
+     "meaning": "어떻게 가?",
+     "example": "そこまでどうやって行くの？",
+     "exampleKo": "거기까지 어떻게 가?",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 28.1
+    }
+   ]
+  },
+  {
+   "id": "feelings",
+   "title": {
+    "ko": "감정·관계",
+    "en": "Feelings & people"
+   },
+   "items": [
+    {
+     "id": "ja-feelings-01",
+     "text": "嬉しい。",
+     "meaning": "기뻐",
+     "example": "会えて嬉しい。",
+     "exampleKo": "만나서 기뻐.",
+     "tip": "",
+     "sentences": 138,
+     "perMillion": 554.2
+    },
+    {
+     "id": "ja-feelings-02",
+     "text": "悲しい。",
+     "meaning": "슬퍼",
+     "example": "そのニュース、悲しいね。",
+     "exampleKo": "그 소식 슬프다.",
+     "tip": "",
+     "sentences": 120,
+     "perMillion": 481.9
+    },
+    {
+     "id": "ja-feelings-03",
+     "text": "寂しい。",
+     "meaning": "외로워, 쓸쓸해",
+     "example": "一人だと寂しい。",
+     "exampleKo": "혼자 있으면 외로워.",
+     "tip": "",
+     "sentences": 104,
+     "perMillion": 417.7
+    },
+    {
+     "id": "ja-feelings-04",
+     "text": "怖い。",
+     "meaning": "무서워",
+     "example": "ホラー映画は怖い。",
+     "exampleKo": "공포 영화는 무서워.",
+     "tip": "",
+     "sentences": 151,
+     "perMillion": 606.4
+    },
+    {
+     "id": "ja-feelings-05",
+     "text": "恥ずかしい。",
+     "meaning": "부끄러워",
+     "example": "人前で歌うのは恥ずかしい。",
+     "exampleKo": "사람들 앞에서 노래하는 건 부끄러워.",
+     "tip": "",
+     "sentences": 68,
+     "perMillion": 273.1
+    },
+    {
+     "id": "ja-feelings-06",
+     "text": "悔しい。",
+     "meaning": "분해, 아쉬워",
+     "example": "試合に負けて悔しい。",
+     "exampleKo": "경기에서 져서 분해.",
+     "tip": "이기고 싶었는데 못 해서 속상한 마음이에요.",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-feelings-07",
+     "text": "イライラする。",
+     "meaning": "짜증 나",
+     "example": "電車が遅れてイライラする。",
+     "exampleKo": "전철이 늦어서 짜증 나.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 140.6
+    },
+    {
+     "id": "ja-feelings-08",
+     "text": "緊張する。",
+     "meaning": "긴장돼",
+     "example": "面接で緊張する。",
+     "exampleKo": "면접이라 긴장돼.",
+     "tip": "",
+     "sentences": 104,
+     "perMillion": 417.7
+    },
+    {
+     "id": "ja-feelings-09",
+     "text": "安心した。",
+     "meaning": "안심했어",
+     "example": "無事でよかった、安心した。",
+     "exampleKo": "무사해서 다행이야, 안심했어.",
+     "tip": "",
+     "sentences": 69,
+     "perMillion": 277.1
+    },
+    {
+     "id": "ja-feelings-10",
+     "text": "びっくりした。",
+     "meaning": "깜짝 놀랐어",
+     "example": "急に来てびっくりした！",
+     "exampleKo": "갑자기 와서 깜짝 놀랐어!",
+     "tip": "",
+     "sentences": 144,
+     "perMillion": 578.3
+    },
+    {
+     "id": "ja-feelings-11",
+     "text": "ムカつく。",
+     "meaning": "열받아",
+     "example": "あの言い方、ムカつく。",
+     "exampleKo": "그 말투 열받아.",
+     "tip": ""
+    },
+    {
+     "id": "ja-feelings-12",
+     "text": "幸せ。",
+     "meaning": "행복해",
+     "example": "今すごく幸せ。",
+     "exampleKo": "지금 정말 행복해.",
+     "tip": "",
+     "sentences": 489,
+     "perMillion": 1963.8
+    },
+    {
+     "id": "ja-feelings-13",
+     "text": "感動した。",
+     "meaning": "감동했어",
+     "example": "その映画、感動した。",
+     "exampleKo": "그 영화 감동적이었어.",
+     "tip": "",
+     "sentences": 96,
+     "perMillion": 385.5
+    },
+    {
+     "id": "ja-feelings-14",
+     "text": "懐かしい。",
+     "meaning": "그립다, 반갑다",
+     "example": "この曲、懐かしい！",
+     "exampleKo": "이 노래 완전 추억이다!",
+     "tip": "옛 추억이 떠올라 반가울 때 써요.",
+     "sentences": 38,
+     "perMillion": 152.6
+    },
+    {
+     "id": "ja-feelings-15",
+     "text": "面倒くさい。",
+     "meaning": "귀찮아",
+     "example": "今日は料理が面倒くさい。",
+     "exampleKo": "오늘은 요리하기 귀찮아.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-feelings-16",
+     "text": "退屈。",
+     "meaning": "지루해",
+     "example": "この授業、退屈。",
+     "exampleKo": "이 수업 지루해.",
+     "tip": "",
+     "sentences": 130,
+     "perMillion": 522.1
+    },
+    {
+     "id": "ja-feelings-17",
+     "text": "落ち着く。",
+     "meaning": "마음이 편해",
+     "example": "君といると落ち着く。",
+     "exampleKo": "너랑 있으면 마음이 편해.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 100.4
+    },
+    {
+     "id": "ja-feelings-18",
+     "text": "ワクワクする。",
+     "meaning": "설레, 신나",
+     "example": "旅行が楽しみでワクワクする。",
+     "exampleKo": "여행이 기대돼서 설레.",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 68.3
+    },
+    {
+     "id": "ja-feelings-19",
+     "text": "モヤモヤする。",
+     "meaning": "마음이 찜찜해",
+     "example": "なんかモヤモヤする。",
+     "exampleKo": "뭔가 마음이 찜찜해.",
+     "tip": ""
+    },
+    {
+     "id": "ja-feelings-20",
+     "text": "ショック",
+     "meaning": "충격",
+     "example": "それはショックだね。",
+     "exampleKo": "그건 충격이다.",
+     "tip": "",
+     "sentences": 81,
+     "perMillion": 325.3
+    },
+    {
+     "id": "ja-feelings-21",
+     "text": "友達",
+     "meaning": "친구",
+     "example": "高校の友達と会った。",
+     "exampleKo": "고등학교 친구 만났어.",
+     "tip": "",
+     "sentences": 1192,
+     "perMillion": 4787.0
+    },
+    {
+     "id": "ja-feelings-22",
+     "text": "親友",
+     "meaning": "절친",
+     "example": "彼女は私の親友だよ。",
+     "exampleKo": "그 애는 내 절친이야.",
+     "tip": "",
+     "sentences": 73,
+     "perMillion": 293.2
+    },
+    {
+     "id": "ja-feelings-23",
+     "text": "彼氏",
+     "meaning": "남자친구",
+     "example": "彼氏がいるの？",
+     "exampleKo": "남자친구 있어?",
+     "tip": "",
+     "sentences": 110,
+     "perMillion": 441.8
+    },
+    {
+     "id": "ja-feelings-24",
+     "text": "彼女",
+     "meaning": "여자친구, 그녀",
+     "example": "彼女と付き合って一年。",
+     "exampleKo": "여자친구랑 사귄 지 1년이야.",
+     "tip": "",
+     "sentences": 15488,
+     "perMillion": 62199.1
+    },
+    {
+     "id": "ja-feelings-25",
+     "text": "家族",
+     "meaning": "가족",
+     "example": "家族と旅行に行く。",
+     "exampleKo": "가족이랑 여행 가.",
+     "tip": "",
+     "sentences": 498,
+     "perMillion": 1999.9
+    },
+    {
+     "id": "ja-feelings-26",
+     "text": "両親",
+     "meaning": "부모님",
+     "example": "両親に紹介したい。",
+     "exampleKo": "부모님께 소개하고 싶어.",
+     "tip": "",
+     "sentences": 566,
+     "perMillion": 2273.0
+    },
+    {
+     "id": "ja-feelings-27",
+     "text": "兄弟",
+     "meaning": "형제",
+     "example": "兄弟はいる？",
+     "exampleKo": "형제 있어?",
+     "tip": "",
+     "sentences": 134,
+     "perMillion": 538.1
+    },
+    {
+     "id": "ja-feelings-28",
+     "text": "仲がいい",
+     "meaning": "사이가 좋다",
+     "example": "私たち、仲がいいね。",
+     "exampleKo": "우리 사이 좋다.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 48.2
+    },
+    {
+     "id": "ja-feelings-29",
+     "text": "気が合う",
+     "meaning": "잘 맞다",
+     "example": "君とは気が合うね。",
+     "exampleKo": "너랑은 잘 맞네.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-feelings-30",
+     "text": "優しい人",
+     "meaning": "다정한 사람",
+     "example": "彼はすごく優しい人だよ。",
+     "exampleKo": "그는 정말 다정한 사람이야.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 92.4
+    },
+    {
+     "id": "ja-feelings-31",
+     "text": "面白い人",
+     "meaning": "재밌는 사람",
+     "example": "君って面白い人だね。",
+     "exampleKo": "너 재밌는 사람이다.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 56.2
+    },
+    {
+     "id": "ja-feelings-32",
+     "text": "気になる",
+     "meaning": "신경 쓰여, 궁금해",
+     "example": "あの人のこと、気になる。",
+     "exampleKo": "그 사람이 신경 쓰여.",
+     "tip": "좋아하는 사람이 생겼을 때도 써요.",
+     "sentences": 94,
+     "perMillion": 377.5
+    },
+    {
+     "id": "ja-feelings-33",
+     "text": "信じる",
+     "meaning": "믿다",
+     "example": "君のことを信じてる。",
+     "exampleKo": "널 믿어.",
+     "tip": "",
+     "sentences": 148,
+     "perMillion": 594.4
+    },
+    {
+     "id": "ja-feelings-34",
+     "text": "心配する",
+     "meaning": "걱정하다",
+     "example": "お母さんが心配してたよ。",
+     "exampleKo": "엄마가 걱정하셨어.",
+     "tip": "",
+     "sentences": 546,
+     "perMillion": 2192.7
+    },
+    {
+     "id": "ja-feelings-35",
+     "text": "喧嘩した",
+     "meaning": "싸웠어",
+     "example": "昨日友達と喧嘩した。",
+     "exampleKo": "어제 친구랑 싸웠어.",
+     "tip": "",
+     "sentences": 87,
+     "perMillion": 349.4
+    },
+    {
+     "id": "ja-feelings-36",
+     "text": "元気がない",
+     "meaning": "기운이 없다",
+     "example": "今日は元気がないね。",
+     "exampleKo": "오늘 기운 없어 보이네.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 56.2
+    },
+    {
+     "id": "ja-feelings-37",
+     "text": "やる気が出ない",
+     "meaning": "의욕이 안 나",
+     "example": "月曜日はやる気が出ない。",
+     "exampleKo": "월요일은 의욕이 안 나.",
+     "tip": "",
+     "sentences": 52,
+     "perMillion": 208.8
+    },
+    {
+     "id": "ja-feelings-38",
+     "text": "気分がいい",
+     "meaning": "기분 좋아",
+     "example": "今日は気分がいい！",
+     "exampleKo": "오늘 기분 좋아!",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-feelings-39",
+     "text": "気分が悪い",
+     "meaning": "기분이 안 좋아 / 속이 안 좋아",
+     "example": "ちょっと気分が悪い。",
+     "exampleKo": "좀 속이 안 좋아.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 92.4
+    },
+    {
+     "id": "ja-feelings-40",
+     "text": "泣いちゃった",
+     "meaning": "울어 버렸어",
+     "example": "映画見て泣いちゃった。",
+     "exampleKo": "영화 보고 울어 버렸어.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "plans",
+   "title": {
+    "ko": "약속·계획",
+    "en": "Plans & time"
+   },
+   "items": [
+    {
+     "id": "ja-plans-01",
+     "text": "今度",
+     "meaning": "다음에, 이번에",
+     "example": "今度一緒に行こう。",
+     "exampleKo": "다음에 같이 가자.",
+     "tip": "",
+     "sentences": 265,
+     "perMillion": 1064.2
+    },
+    {
+     "id": "ja-plans-02",
+     "text": "明日",
+     "meaning": "내일",
+     "example": "明日会える？",
+     "exampleKo": "내일 만날 수 있어?",
+     "tip": "",
+     "sentences": 1201,
+     "perMillion": 4823.2
+    },
+    {
+     "id": "ja-plans-03",
+     "text": "あさって",
+     "meaning": "모레",
+     "example": "あさってはどう？",
+     "exampleKo": "모레는 어때?",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 60.2
+    },
+    {
+     "id": "ja-plans-04",
+     "text": "来週",
+     "meaning": "다음 주",
+     "example": "来週の土曜日空いてる？",
+     "exampleKo": "다음 주 토요일 시간 돼?",
+     "tip": "",
+     "sentences": 226,
+     "perMillion": 907.6
+    },
+    {
+     "id": "ja-plans-05",
+     "text": "今週末",
+     "meaning": "이번 주말",
+     "example": "今週末何する？",
+     "exampleKo": "이번 주말에 뭐 해?",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 140.6
+    },
+    {
+     "id": "ja-plans-06",
+     "text": "来月",
+     "meaning": "다음 달",
+     "example": "来月韓国に行くよ。",
+     "exampleKo": "다음 달에 한국 가.",
+     "tip": "",
+     "sentences": 84,
+     "perMillion": 337.3
+    },
+    {
+     "id": "ja-plans-07",
+     "text": "予定ある？",
+     "meaning": "약속 있어?",
+     "example": "金曜日、予定ある？",
+     "exampleKo": "금요일에 약속 있어?",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 32.1
+    },
+    {
+     "id": "ja-plans-08",
+     "text": "空いてるよ。",
+     "meaning": "시간 돼",
+     "example": "その日は空いてるよ。",
+     "exampleKo": "그날은 시간 돼.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 32.1
+    },
+    {
+     "id": "ja-plans-09",
+     "text": "無理かも。",
+     "meaning": "안 될 것 같아",
+     "example": "ごめん、その日は無理かも。",
+     "exampleKo": "미안, 그날은 안 될 것 같아.",
+     "tip": ""
+    },
+    {
+     "id": "ja-plans-10",
+     "text": "何時にする？",
+     "meaning": "몇 시로 할까?",
+     "example": "待ち合わせ何時にする？",
+     "exampleKo": "몇 시에 만날까?",
+     "tip": ""
+    },
+    {
+     "id": "ja-plans-11",
+     "text": "どこで会う？",
+     "meaning": "어디서 만나?",
+     "example": "明日どこで会う？",
+     "exampleKo": "내일 어디서 만나?",
+     "tip": ""
+    },
+    {
+     "id": "ja-plans-12",
+     "text": "駅の前で",
+     "meaning": "역 앞에서",
+     "example": "駅の前で待ってるね。",
+     "exampleKo": "역 앞에서 기다릴게.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 32.1
+    },
+    {
+     "id": "ja-plans-13",
+     "text": "遅れる",
+     "meaning": "늦다",
+     "example": "ごめん、五分遅れる。",
+     "exampleKo": "미안, 5분 늦어.",
+     "tip": "",
+     "sentences": 134,
+     "perMillion": 538.1
+    },
+    {
+     "id": "ja-plans-14",
+     "text": "間に合う",
+     "meaning": "시간에 맞추다",
+     "example": "急げば間に合うよ。",
+     "exampleKo": "서두르면 늦지 않아.",
+     "tip": "",
+     "sentences": 127,
+     "perMillion": 510.0
+    },
+    {
+     "id": "ja-plans-15",
+     "text": "キャンセル",
+     "meaning": "취소",
+     "example": "予約をキャンセルした。",
+     "exampleKo": "예약 취소했어.",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 136.5
+    },
+    {
+     "id": "ja-plans-16",
+     "text": "楽しみにしてる",
+     "meaning": "기대하고 있어",
+     "example": "来週の旅行、楽しみにしてる！",
+     "exampleKo": "다음 주 여행 기대하고 있어!",
+     "tip": ""
+    },
+    {
+     "id": "ja-plans-17",
+     "text": "旅行に行く",
+     "meaning": "여행 가다",
+     "example": "夏休みに旅行に行こう。",
+     "exampleKo": "여름휴가에 여행 가자.",
+     "tip": "",
+     "sentences": 551,
+     "perMillion": 2212.8
+    },
+    {
+     "id": "ja-plans-18",
+     "text": "一緒に行こう",
+     "meaning": "같이 가자",
+     "example": "お祭り、一緒に行こう！",
+     "exampleKo": "축제 같이 가자!",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-plans-19",
+     "text": "決めた？",
+     "meaning": "정했어?",
+     "example": "どこ行くか決めた？",
+     "exampleKo": "어디 갈지 정했어?",
+     "tip": "",
+     "sentences": 235,
+     "perMillion": 943.7
+    },
+    {
+     "id": "ja-plans-20",
+     "text": "まだ決めてない",
+     "meaning": "아직 안 정했어",
+     "example": "まだ決めてないよ。",
+     "exampleKo": "아직 안 정했어.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-plans-21",
+     "text": "考えとく",
+     "meaning": "생각해 볼게",
+     "example": "うーん、考えとく。",
+     "exampleKo": "음, 생각해 볼게.",
+     "tip": "부드럽게 거절할 때도 써요.",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-plans-22",
+     "text": "いつでもいいよ",
+     "meaning": "언제든 좋아",
+     "example": "いつでもいいよ、合わせる。",
+     "exampleKo": "언제든 좋아, 맞출게.",
+     "tip": ""
+    },
+    {
+     "id": "ja-plans-23",
+     "text": "その日はちょっと…",
+     "meaning": "그날은 좀…",
+     "example": "ごめん、その日はちょっと…",
+     "exampleKo": "미안, 그날은 좀…",
+     "tip": "일본에서는 말끝을 흐려서 부드럽게 거절해요."
+    },
+    {
+     "id": "ja-plans-24",
+     "text": "また連絡するね",
+     "meaning": "또 연락할게",
+     "example": "時間わかったらまた連絡するね。",
+     "exampleKo": "시간 알면 또 연락할게.",
+     "tip": ""
+    },
+    {
+     "id": "ja-plans-25",
+     "text": "誕生日",
+     "meaning": "생일",
+     "example": "誕生日いつ？",
+     "exampleKo": "생일 언제야?",
+     "tip": "",
+     "sentences": 334,
+     "perMillion": 1341.3
+    },
+    {
+     "id": "ja-plans-26",
+     "text": "記念日",
+     "meaning": "기념일",
+     "example": "来週は付き合って一年の記念日だね。",
+     "exampleKo": "다음 주는 사귄 지 1년 기념일이네.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 76.3
+    },
+    {
+     "id": "ja-plans-27",
+     "text": "お祝いしよう",
+     "meaning": "축하하자",
+     "example": "合格のお祝いしよう！",
+     "exampleKo": "합격 축하하자!",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 132.5
+    },
+    {
+     "id": "ja-plans-28",
+     "text": "プレゼント",
+     "meaning": "선물",
+     "example": "誕生日プレゼント何がいい？",
+     "exampleKo": "생일 선물 뭐가 좋아?",
+     "tip": "",
+     "sentences": 265,
+     "perMillion": 1064.2
+    },
+    {
+     "id": "ja-plans-29",
+     "text": "夏休み",
+     "meaning": "여름방학, 여름휴가",
+     "example": "夏休みはどこか行く？",
+     "exampleKo": "여름휴가에 어디 가?",
+     "tip": "",
+     "sentences": 159,
+     "perMillion": 638.5
+    },
+    {
+     "id": "ja-plans-30",
+     "text": "年末年始",
+     "meaning": "연말연시",
+     "example": "年末年始は実家に帰る。",
+     "exampleKo": "연말연시엔 본가에 가.",
+     "tip": ""
+    },
+    {
+     "id": "ja-plans-31",
+     "text": "お正月",
+     "meaning": "설날 (양력 1월 1일)",
+     "example": "お正月は家族と過ごす。",
+     "exampleKo": "설날엔 가족이랑 보내.",
+     "tip": "일본은 양력 1월 1일이 큰 명절이에요.",
+     "sentences": 17,
+     "perMillion": 68.3
+    },
+    {
+     "id": "ja-plans-32",
+     "text": "ゴールデンウィーク",
+     "meaning": "골든위크 (5월 연휴)",
+     "example": "ゴールデンウィークに会いに行くね。",
+     "exampleKo": "골든위크에 보러 갈게.",
+     "tip": ""
+    },
+    {
+     "id": "ja-plans-33",
+     "text": "何時頃？",
+     "meaning": "몇 시쯤?",
+     "example": "何時頃着く？",
+     "exampleKo": "몇 시쯤 도착해?",
+     "tip": ""
+    },
+    {
+     "id": "ja-plans-34",
+     "text": "すぐ行く",
+     "meaning": "금방 갈게",
+     "example": "今出たから、すぐ行く。",
+     "exampleKo": "지금 나왔으니까 금방 갈게.",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 64.3
+    },
+    {
+     "id": "ja-plans-35",
+     "text": "ちょっと遅くなる",
+     "meaning": "좀 늦어",
+     "example": "仕事でちょっと遅くなる。",
+     "exampleKo": "일 때문에 좀 늦어.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 56.2
+    },
+    {
+     "id": "ja-plans-36",
+     "text": "先に行ってて",
+     "meaning": "먼저 가 있어",
+     "example": "先に行ってて、あとで行く。",
+     "exampleKo": "먼저 가 있어, 나중에 갈게.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-plans-37",
+     "text": "迎えに来て",
+     "meaning": "데리러 와",
+     "example": "駅まで迎えに来て。",
+     "exampleKo": "역까지 데리러 와.",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 132.5
+    },
+    {
+     "id": "ja-plans-38",
+     "text": "泊まる",
+     "meaning": "묵다, 자고 가다",
+     "example": "今日うちに泊まる？",
+     "exampleKo": "오늘 우리 집에서 자고 갈래?",
+     "tip": "",
+     "sentences": 39,
+     "perMillion": 156.6
+    },
+    {
+     "id": "ja-plans-39",
+     "text": "計画を立てる",
+     "meaning": "계획을 세우다",
+     "example": "旅行の計画を立てよう。",
+     "exampleKo": "여행 계획 세우자.",
+     "tip": "",
+     "sentences": 934,
+     "perMillion": 3750.9
+    },
+    {
+     "id": "ja-plans-40",
+     "text": "準備できた？",
+     "meaning": "준비됐어?",
+     "example": "準備できた？もう出るよ。",
+     "exampleKo": "준비됐어? 이제 나갈게.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 32.1
+    }
+   ]
+  },
+  {
+   "id": "connect",
+   "title": {
+    "ko": "말 잇기",
+    "en": "Linking words"
+   },
+   "items": [
+    {
+     "id": "ja-connect-01",
+     "text": "でも",
+     "meaning": "하지만",
+     "example": "行きたいけど、でも時間がない。",
+     "exampleKo": "가고 싶은데 시간이 없어.",
+     "tip": "",
+     "sentences": 3386,
+     "perMillion": 13598.0
+    },
+    {
+     "id": "ja-connect-02",
+     "text": "だから",
+     "meaning": "그래서",
+     "example": "雨だから家にいる。",
+     "exampleKo": "비 와서 집에 있어.",
+     "tip": "",
+     "sentences": 943,
+     "perMillion": 3787.0
+    },
+    {
+     "id": "ja-connect-03",
+     "text": "それで",
+     "meaning": "그래서, 그래서 어떻게 됐어?",
+     "example": "それで、どうなったの？",
+     "exampleKo": "그래서 어떻게 됐어?",
+     "tip": "",
+     "sentences": 322,
+     "perMillion": 1293.1
+    },
+    {
+     "id": "ja-connect-04",
+     "text": "ところで",
+     "meaning": "그런데 (화제 전환)",
+     "example": "ところで、明日暇？",
+     "exampleKo": "그런데 내일 한가해?",
+     "tip": "",
+     "sentences": 459,
+     "perMillion": 1843.3
+    },
+    {
+     "id": "ja-connect-05",
+     "text": "ちなみに",
+     "meaning": "참고로",
+     "example": "ちなみに、私も行くよ。",
+     "exampleKo": "참고로 나도 가.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 60.2
+    },
+    {
+     "id": "ja-connect-06",
+     "text": "例えば",
+     "meaning": "예를 들면",
+     "example": "例えば、どんな映画が好き？",
+     "exampleKo": "예를 들면 어떤 영화 좋아해?",
+     "tip": "",
+     "sentences": 61,
+     "perMillion": 245.0
+    },
+    {
+     "id": "ja-connect-07",
+     "text": "つまり",
+     "meaning": "즉, 그러니까",
+     "example": "つまり、来ないってこと？",
+     "exampleKo": "그러니까 안 온다는 거야?",
+     "tip": "",
+     "sentences": 85,
+     "perMillion": 341.4
+    },
+    {
+     "id": "ja-connect-08",
+     "text": "実は",
+     "meaning": "사실은",
+     "example": "実は、話があるんだ。",
+     "exampleKo": "사실은 할 말이 있어.",
+     "tip": "",
+     "sentences": 268,
+     "perMillion": 1076.3
+    },
+    {
+     "id": "ja-connect-09",
+     "text": "やっぱり",
+     "meaning": "역시, 아무래도",
+     "example": "やっぱり、行くのやめる。",
+     "exampleKo": "아무래도 안 갈래.",
+     "tip": "",
+     "sentences": 105,
+     "perMillion": 421.7
+    },
+    {
+     "id": "ja-connect-10",
+     "text": "とりあえず",
+     "meaning": "일단",
+     "example": "とりあえずビール！",
+     "exampleKo": "일단 맥주!",
+     "tip": "",
+     "sentences": 40,
+     "perMillion": 160.6
+    },
+    {
+     "id": "ja-connect-11",
+     "text": "一応",
+     "meaning": "일단, 혹시 몰라서",
+     "example": "一応、傘持っていこう。",
+     "exampleKo": "혹시 모르니 우산 가져가자.",
+     "tip": ""
+    },
+    {
+     "id": "ja-connect-12",
+     "text": "なんか",
+     "meaning": "뭔가, 좀",
+     "example": "なんか眠くなってきた。",
+     "exampleKo": "뭔가 졸리기 시작했어.",
+     "tip": "",
+     "sentences": 414,
+     "perMillion": 1662.6
+    },
+    {
+     "id": "ja-connect-13",
+     "text": "たぶん",
+     "meaning": "아마",
+     "example": "たぶん大丈夫だよ。",
+     "exampleKo": "아마 괜찮을 거야.",
+     "tip": "",
+     "sentences": 102,
+     "perMillion": 409.6
+    },
+    {
+     "id": "ja-connect-14",
+     "text": "絶対",
+     "meaning": "절대, 꼭",
+     "example": "絶対また来ようね。",
+     "exampleKo": "꼭 또 오자.",
+     "tip": "",
+     "sentences": 217,
+     "perMillion": 871.5
+    },
+    {
+     "id": "ja-connect-15",
+     "text": "もし",
+     "meaning": "만약",
+     "example": "もし時間あったら電話して。",
+     "exampleKo": "혹시 시간 되면 전화해.",
+     "tip": "",
+     "sentences": 2166,
+     "perMillion": 8698.6
+    },
+    {
+     "id": "ja-connect-16",
+     "text": "〜けど",
+     "meaning": "~인데",
+     "example": "行きたいけど、忙しい。",
+     "exampleKo": "가고 싶은데 바빠.",
+     "tip": "",
+     "sentences": 2138,
+     "perMillion": 8586.1
+    },
+    {
+     "id": "ja-connect-17",
+     "text": "〜から",
+     "meaning": "~니까",
+     "example": "遅いから、もう寝る。",
+     "exampleKo": "늦었으니까 이제 잘게.",
+     "tip": "",
+     "sentences": 11451,
+     "perMillion": 45986.7
+    },
+    {
+     "id": "ja-connect-18",
+     "text": "〜のに",
+     "meaning": "~인데 (아쉬움)",
+     "example": "待ってたのに、来なかった。",
+     "exampleKo": "기다렸는데 안 왔어.",
+     "tip": "",
+     "sentences": 2312,
+     "perMillion": 9284.9
+    },
+    {
+     "id": "ja-connect-19",
+     "text": "〜たら",
+     "meaning": "~하면",
+     "example": "着いたら連絡して。",
+     "exampleKo": "도착하면 연락해.",
+     "tip": "",
+     "sentences": 4031,
+     "perMillion": 16188.3
+    },
+    {
+     "id": "ja-connect-20",
+     "text": "〜とき",
+     "meaning": "~할 때",
+     "example": "寂しいとき、電話して。",
+     "exampleKo": "외로울 때 전화해.",
+     "tip": "",
+     "sentences": 1784,
+     "perMillion": 7164.5
+    },
+    {
+     "id": "ja-connect-21",
+     "text": "まず",
+     "meaning": "먼저",
+     "example": "まずご飯を食べよう。",
+     "exampleKo": "먼저 밥 먹자.",
+     "tip": "",
+     "sentences": 415,
+     "perMillion": 1666.6
+    },
+    {
+     "id": "ja-connect-22",
+     "text": "それから",
+     "meaning": "그다음에",
+     "example": "それから映画を見た。",
+     "exampleKo": "그다음에 영화 봤어.",
+     "tip": "",
+     "sentences": 92,
+     "perMillion": 369.5
+    },
+    {
+     "id": "ja-connect-23",
+     "text": "最後に",
+     "meaning": "마지막으로",
+     "example": "最後に、ありがとう。",
+     "exampleKo": "마지막으로, 고마워.",
+     "tip": "",
+     "sentences": 140,
+     "perMillion": 562.2
+    },
+    {
+     "id": "ja-connect-24",
+     "text": "あと",
+     "meaning": "그리고, 또",
+     "example": "あと、牛乳も買ってきて。",
+     "exampleKo": "그리고 우유도 사 와.",
+     "tip": "",
+     "sentences": 356,
+     "perMillion": 1429.7
+    },
+    {
+     "id": "ja-connect-25",
+     "text": "それに",
+     "meaning": "게다가",
+     "example": "安いし、それにおいしい。",
+     "exampleKo": "싸고 게다가 맛있어.",
+     "tip": "",
+     "sentences": 365,
+     "perMillion": 1465.8
+    },
+    {
+     "id": "ja-connect-26",
+     "text": "逆に",
+     "meaning": "오히려",
+     "example": "逆に、それがいいと思う。",
+     "exampleKo": "오히려 그게 좋은 것 같아.",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 132.5
+    },
+    {
+     "id": "ja-connect-27",
+     "text": "とにかく",
+     "meaning": "아무튼",
+     "example": "とにかく、会って話そう。",
+     "exampleKo": "아무튼 만나서 얘기하자.",
+     "tip": "",
+     "sentences": 111,
+     "perMillion": 445.8
+    },
+    {
+     "id": "ja-connect-28",
+     "text": "そういえば",
+     "meaning": "그러고 보니",
+     "example": "そういえば、昨日何してた？",
+     "exampleKo": "그러고 보니 어제 뭐 했어?",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 68.3
+    },
+    {
+     "id": "ja-connect-29",
+     "text": "正直",
+     "meaning": "솔직히",
+     "example": "正直、ちょっと疲れた。",
+     "exampleKo": "솔직히 좀 피곤해.",
+     "tip": "",
+     "sentences": 290,
+     "perMillion": 1164.6
+    },
+    {
+     "id": "ja-connect-30",
+     "text": "要するに",
+     "meaning": "요컨대",
+     "example": "要するに、明日は無理ってこと。",
+     "exampleKo": "요컨대 내일은 안 된다는 거야.",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 128.5
+    },
+    {
+     "id": "ja-connect-31",
+     "text": "だって",
+     "meaning": "왜냐면, 그치만",
+     "example": "だって、眠かったんだもん。",
+     "exampleKo": "그치만 졸렸단 말이야.",
+     "tip": "변명하거나 투정 부릴 때 자주 써요.",
+     "sentences": 630,
+     "perMillion": 2530.0
+    },
+    {
+     "id": "ja-connect-32",
+     "text": "じゃあ",
+     "meaning": "그럼",
+     "example": "じゃあ、七時にしよう。",
+     "exampleKo": "그럼 7시로 하자.",
+     "tip": "",
+     "sentences": 134,
+     "perMillion": 538.1
+    },
+    {
+     "id": "ja-connect-33",
+     "text": "ただ",
+     "meaning": "다만, 그냥",
+     "example": "ただ、ちょっと高いかな。",
+     "exampleKo": "다만 좀 비싼 것 같아.",
+     "tip": "",
+     "sentences": 2006,
+     "perMillion": 8056.0
+    },
+    {
+     "id": "ja-connect-34",
+     "text": "一方で",
+     "meaning": "한편으로",
+     "example": "一方で、心配もある。",
+     "exampleKo": "한편으로는 걱정도 돼.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 92.4
+    },
+    {
+     "id": "ja-connect-35",
+     "text": "結局",
+     "meaning": "결국",
+     "example": "結局、家にいた。",
+     "exampleKo": "결국 집에 있었어.",
+     "tip": "",
+     "sentences": 137,
+     "perMillion": 550.2
+    },
+    {
+     "id": "ja-connect-36",
+     "text": "急に",
+     "meaning": "갑자기",
+     "example": "急に雨が降ってきた。",
+     "exampleKo": "갑자기 비가 왔어.",
+     "tip": "",
+     "sentences": 217,
+     "perMillion": 871.5
+    },
+    {
+     "id": "ja-connect-37",
+     "text": "すぐに",
+     "meaning": "바로",
+     "example": "すぐに返事するね。",
+     "exampleKo": "바로 답장할게.",
+     "tip": "",
+     "sentences": 1139,
+     "perMillion": 4574.2
+    },
+    {
+     "id": "ja-connect-38",
+     "text": "だんだん",
+     "meaning": "점점",
+     "example": "だんだん日本語が上手になってきた。",
+     "exampleKo": "점점 일본어가 늘고 있어.",
+     "tip": "",
+     "sentences": 113,
+     "perMillion": 453.8
+    },
+    {
+     "id": "ja-connect-39",
+     "text": "やっと",
+     "meaning": "드디어",
+     "example": "やっと会えたね。",
+     "exampleKo": "드디어 만났네.",
+     "tip": "",
+     "sentences": 246,
+     "perMillion": 987.9
+    },
+    {
+     "id": "ja-connect-40",
+     "text": "まだ",
+     "meaning": "아직",
+     "example": "まだ寝てないの？",
+     "exampleKo": "아직 안 잤어?",
+     "tip": "",
+     "sentences": 1928,
+     "perMillion": 7742.8
+    }
+   ]
+  },
+  {
+   "id": "trouble",
+   "title": {
+    "ko": "문제 해결",
+    "en": "Problems & fixes"
+   },
+   "items": [
+    {
+     "id": "ja-trouble-01",
+     "text": "スマホなくした。",
+     "meaning": "폰 잃어버렸어",
+     "example": "やばい、スマホなくした！",
+     "exampleKo": "큰일이야, 폰 잃어버렸어!",
+     "tip": "",
+     "sentences": 126,
+     "perMillion": 506.0
+    },
+    {
+     "id": "ja-trouble-02",
+     "text": "財布を忘れた。",
+     "meaning": "지갑 두고 왔어",
+     "example": "財布を家に忘れた。",
+     "exampleKo": "지갑을 집에 두고 왔어.",
+     "tip": "",
+     "sentences": 209,
+     "perMillion": 839.3
+    },
+    {
+     "id": "ja-trouble-03",
+     "text": "電池が切れそう。",
+     "meaning": "배터리가 다 돼 가",
+     "example": "スマホの電池が切れそう。",
+     "exampleKo": "폰 배터리 다 돼 가.",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 104.4
+    },
+    {
+     "id": "ja-trouble-04",
+     "text": "終電を逃した。",
+     "meaning": "막차를 놓쳤어",
+     "example": "終電逃しちゃった。",
+     "exampleKo": "막차 놓쳐 버렸어.",
+     "tip": "",
+     "sentences": 30,
+     "perMillion": 120.5
+    },
+    {
+     "id": "ja-trouble-05",
+     "text": "道が混んでる。",
+     "meaning": "길이 막혀",
+     "example": "道が混んでて遅れる。",
+     "exampleKo": "길이 막혀서 늦어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-trouble-06",
+     "text": "風邪をひいた。",
+     "meaning": "감기 걸렸어",
+     "example": "風邪ひいちゃった。",
+     "exampleKo": "감기 걸렸어.",
+     "tip": "",
+     "sentences": 317,
+     "perMillion": 1273.1
+    },
+    {
+     "id": "ja-trouble-07",
+     "text": "熱がある。",
+     "meaning": "열이 있어",
+     "example": "ちょっと熱がある。",
+     "exampleKo": "열이 좀 있어.",
+     "tip": "",
+     "sentences": 282,
+     "perMillion": 1132.5
+    },
+    {
+     "id": "ja-trouble-08",
+     "text": "頭が痛い。",
+     "meaning": "머리 아파",
+     "example": "朝から頭が痛い。",
+     "exampleKo": "아침부터 머리 아파.",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 104.4
+    },
+    {
+     "id": "ja-trouble-09",
+     "text": "お腹が痛い。",
+     "meaning": "배 아파",
+     "example": "お腹が痛くて動けない。",
+     "exampleKo": "배 아파서 못 움직이겠어.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 60.2
+    },
+    {
+     "id": "ja-trouble-10",
+     "text": "病院に行く",
+     "meaning": "병원에 가다",
+     "example": "病院に行ったほうがいいよ。",
+     "exampleKo": "병원 가 보는 게 좋겠어.",
+     "tip": "",
+     "sentences": 288,
+     "perMillion": 1156.6
+    },
+    {
+     "id": "ja-trouble-11",
+     "text": "薬を飲む",
+     "meaning": "약을 먹다",
+     "example": "薬飲んで寝てね。",
+     "exampleKo": "약 먹고 자.",
+     "tip": "",
+     "sentences": 101,
+     "perMillion": 405.6
+    },
+    {
+     "id": "ja-trouble-12",
+     "text": "壊れた。",
+     "meaning": "고장 났어",
+     "example": "イヤホンが壊れた。",
+     "exampleKo": "이어폰 고장 났어.",
+     "tip": "",
+     "sentences": 66,
+     "perMillion": 265.1
+    },
+    {
+     "id": "ja-trouble-13",
+     "text": "動かない。",
+     "meaning": "안 움직여, 작동이 안 돼",
+     "example": "パソコンが動かない。",
+     "exampleKo": "컴퓨터가 안 돼.",
+     "tip": "",
+     "sentences": 45,
+     "perMillion": 180.7
+    },
+    {
+     "id": "ja-trouble-14",
+     "text": "ネットがつながらない。",
+     "meaning": "인터넷이 안 돼",
+     "example": "家のネットがつながらない。",
+     "exampleKo": "집 인터넷이 안 돼.",
+     "tip": ""
+    },
+    {
+     "id": "ja-trouble-15",
+     "text": "パスワードを忘れた。",
+     "meaning": "비밀번호를 잊어버렸어",
+     "example": "パスワード忘れちゃった。",
+     "exampleKo": "비밀번호 까먹었어.",
+     "tip": "",
+     "sentences": 40,
+     "perMillion": 160.6
+    },
+    {
+     "id": "ja-trouble-16",
+     "text": "間違えた。",
+     "meaning": "잘못했어, 틀렸어",
+     "example": "ごめん、場所を間違えた。",
+     "exampleKo": "미안, 장소를 잘못 알았어.",
+     "tip": "",
+     "sentences": 78,
+     "perMillion": 313.2
+    },
+    {
+     "id": "ja-trouble-17",
+     "text": "わからない。",
+     "meaning": "모르겠어",
+     "example": "これ、どうしたらいいかわからない。",
+     "exampleKo": "이거 어떻게 해야 할지 모르겠어.",
+     "tip": "",
+     "sentences": 450,
+     "perMillion": 1807.2
+    },
+    {
+     "id": "ja-trouble-18",
+     "text": "手伝って。",
+     "meaning": "도와줘",
+     "example": "ちょっと手伝って！",
+     "exampleKo": "좀 도와줘!",
+     "tip": "",
+     "sentences": 435,
+     "perMillion": 1746.9
+    },
+    {
+     "id": "ja-trouble-19",
+     "text": "助けて！",
+     "meaning": "살려 줘! 도와줘!",
+     "example": "助けて、虫がいる！",
+     "exampleKo": "도와줘, 벌레 있어!",
+     "tip": "",
+     "sentences": 201,
+     "perMillion": 807.2
+    },
+    {
+     "id": "ja-trouble-20",
+     "text": "困ってる。",
+     "meaning": "곤란해",
+     "example": "ちょっと困ってるんだ。",
+     "exampleKo": "좀 곤란한 상황이야.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 72.3
+    },
+    {
+     "id": "ja-trouble-21",
+     "text": "どうしよう。",
+     "meaning": "어떡하지",
+     "example": "どうしよう、間に合わない！",
+     "exampleKo": "어떡하지, 시간 안에 못 가!",
+     "tip": "",
+     "sentences": 67,
+     "perMillion": 269.1
+    },
+    {
+     "id": "ja-trouble-22",
+     "text": "大変だ！",
+     "meaning": "큰일이다!",
+     "example": "大変だ、雨漏りしてる！",
+     "exampleKo": "큰일이다, 비가 새!",
+     "tip": "",
+     "sentences": 279,
+     "perMillion": 1120.5
+    },
+    {
+     "id": "ja-trouble-23",
+     "text": "急いで！",
+     "meaning": "서둘러!",
+     "example": "急いで、もう始まるよ！",
+     "exampleKo": "서둘러, 곧 시작해!",
+     "tip": "",
+     "sentences": 251,
+     "perMillion": 1008.0
+    },
+    {
+     "id": "ja-trouble-24",
+     "text": "遅刻しそう。",
+     "meaning": "지각할 것 같아",
+     "example": "遅刻しそう、走る！",
+     "exampleKo": "지각할 것 같아, 뛰어갈게!",
+     "tip": "",
+     "sentences": 217,
+     "perMillion": 871.5
+    },
+    {
+     "id": "ja-trouble-25",
+     "text": "鍵をなくした。",
+     "meaning": "열쇠를 잃어버렸어",
+     "example": "家の鍵をなくした。",
+     "exampleKo": "집 열쇠 잃어버렸어.",
+     "tip": "",
+     "sentences": 383,
+     "perMillion": 1538.1
+    },
+    {
+     "id": "ja-trouble-26",
+     "text": "忘れ物",
+     "meaning": "두고 온 물건",
+     "example": "忘れ物ない？",
+     "exampleKo": "두고 온 거 없어?",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 80.3
+    },
+    {
+     "id": "ja-trouble-27",
+     "text": "こぼしちゃった。",
+     "meaning": "쏟았어",
+     "example": "コーヒーこぼしちゃった。",
+     "exampleKo": "커피 쏟아 버렸어.",
+     "tip": "",
+     "sentences": 50,
+     "perMillion": 200.8
+    },
+    {
+     "id": "ja-trouble-28",
+     "text": "怪我した。",
+     "meaning": "다쳤어",
+     "example": "転んで怪我した。",
+     "exampleKo": "넘어져서 다쳤어.",
+     "tip": "",
+     "sentences": 112,
+     "perMillion": 449.8
+    },
+    {
+     "id": "ja-trouble-29",
+     "text": "事故",
+     "meaning": "사고",
+     "example": "事故で電車が止まってる。",
+     "exampleKo": "사고로 전철이 멈췄어.",
+     "tip": "",
+     "sentences": 649,
+     "perMillion": 2606.4
+    },
+    {
+     "id": "ja-trouble-30",
+     "text": "落とした",
+     "meaning": "떨어뜨렸어",
+     "example": "スマホを落とした。",
+     "exampleKo": "폰 떨어뜨렸어.",
+     "tip": "",
+     "sentences": 83,
+     "perMillion": 333.3
+    },
+    {
+     "id": "ja-trouble-31",
+     "text": "充電器ある？",
+     "meaning": "충전기 있어?",
+     "example": "充電器持ってる？",
+     "exampleKo": "충전기 있어?",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-trouble-32",
+     "text": "返事がない",
+     "meaning": "답장이 없어",
+     "example": "彼から返事がない。",
+     "exampleKo": "그한테서 답장이 없어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-trouble-33",
+     "text": "既読無視",
+     "meaning": "읽씹",
+     "example": "既読無視しないでよ。",
+     "exampleKo": "읽씹하지 마.",
+     "tip": "메시지를 읽고 답하지 않는 걸 말해요."
+    },
+    {
+     "id": "ja-trouble-34",
+     "text": "お金が足りない",
+     "meaning": "돈이 모자라",
+     "example": "お金が足りないかも。",
+     "exampleKo": "돈이 모자랄지도 몰라.",
+     "tip": "",
+     "sentences": 87,
+     "perMillion": 349.4
+    },
+    {
+     "id": "ja-trouble-35",
+     "text": "寝れない",
+     "meaning": "잠이 안 와",
+     "example": "昨日あんまり寝れなかった。",
+     "exampleKo": "어제 잠을 별로 못 잤어.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 28.1
+    },
+    {
+     "id": "ja-trouble-36",
+     "text": "言葉が通じない",
+     "meaning": "말이 안 통해",
+     "example": "言葉が通じなくて困った。",
+     "exampleKo": "말이 안 통해서 곤란했어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-trouble-37",
+     "text": "落ち着いて",
+     "meaning": "진정해",
+     "example": "落ち着いて、大丈夫だから。",
+     "exampleKo": "진정해, 괜찮으니까.",
+     "tip": "",
+     "sentences": 51,
+     "perMillion": 204.8
+    },
+    {
+     "id": "ja-trouble-38",
+     "text": "なんとかなる",
+     "meaning": "어떻게든 될 거야",
+     "example": "大丈夫、なんとかなるよ。",
+     "exampleKo": "괜찮아, 어떻게든 될 거야.",
+     "tip": ""
+    },
+    {
+     "id": "ja-trouble-39",
+     "text": "仕方ない",
+     "meaning": "어쩔 수 없지",
+     "example": "雨だから仕方ないね。",
+     "exampleKo": "비 오니까 어쩔 수 없지.",
+     "tip": "",
+     "sentences": 28,
+     "perMillion": 112.4
+    },
+    {
+     "id": "ja-trouble-40",
+     "text": "しまった！",
+     "meaning": "아차!",
+     "example": "しまった、宿題忘れた！",
+     "exampleKo": "아차, 숙제 깜빡했다!",
+     "tip": "",
+     "sentences": 1459,
+     "perMillion": 5859.3
+    }
+   ]
+  },
+  {
+   "id": "reply",
+   "title": {
+    "ko": "맞장구·대답",
+    "en": "Replies & reactions"
+   },
+   "items": [
+    {
+     "id": "ja-reply-01",
+     "text": "うん。",
+     "meaning": "응",
+     "example": "うん、いいよ。",
+     "exampleKo": "응, 좋아.",
+     "tip": "",
+     "sentences": 687,
+     "perMillion": 2759.0
+    },
+    {
+     "id": "ja-reply-02",
+     "text": "ううん。",
+     "meaning": "아니",
+     "example": "ううん、大丈夫。",
+     "exampleKo": "아니, 괜찮아.",
+     "tip": "",
+     "sentences": 46,
+     "perMillion": 184.7
+    },
+    {
+     "id": "ja-reply-03",
+     "text": "そうだね。",
+     "meaning": "그렇네, 맞아",
+     "example": "そうだね、そうしよう。",
+     "exampleKo": "맞아, 그러자.",
+     "tip": "",
+     "sentences": 55,
+     "perMillion": 220.9
+    },
+    {
+     "id": "ja-reply-04",
+     "text": "だね。",
+     "meaning": "그치",
+     "example": "いい天気だね。だね。",
+     "exampleKo": "날씨 좋다. 그치.",
+     "tip": "",
+     "sentences": 568,
+     "perMillion": 2281.1
+    },
+    {
+     "id": "ja-reply-05",
+     "text": "へえ〜。",
+     "meaning": "와~ (몰랐던 사실에)",
+     "example": "へえ〜、知らなかった。",
+     "exampleKo": "와, 몰랐어.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 56.2
+    },
+    {
+     "id": "ja-reply-06",
+     "text": "なるほど。",
+     "meaning": "그렇구나, 일리 있네",
+     "example": "なるほど、そういうことか。",
+     "exampleKo": "그렇구나, 그런 거였구나.",
+     "tip": "",
+     "sentences": 134,
+     "perMillion": 538.1
+    },
+    {
+     "id": "ja-reply-07",
+     "text": "確かに。",
+     "meaning": "확실히, 맞네",
+     "example": "確かに、それはいいね。",
+     "exampleKo": "맞네, 그거 좋다.",
+     "tip": "",
+     "sentences": 124,
+     "perMillion": 498.0
+    },
+    {
+     "id": "ja-reply-08",
+     "text": "まじで？",
+     "meaning": "진짜로?",
+     "example": "まじで？すごい！",
+     "exampleKo": "진짜로? 대박!",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 44.2
+    },
+    {
+     "id": "ja-reply-09",
+     "text": "うそ！",
+     "meaning": "거짓말! 설마!",
+     "example": "うそ！本当に？",
+     "exampleKo": "설마! 진짜야?",
+     "tip": "",
+     "sentences": 622,
+     "perMillion": 2497.9
+    },
+    {
+     "id": "ja-reply-10",
+     "text": "ほんとに。",
+     "meaning": "진짜로",
+     "example": "ほんとに楽しかった。",
+     "exampleKo": "진짜 즐거웠어.",
+     "tip": "",
+     "sentences": 49,
+     "perMillion": 196.8
+    },
+    {
+     "id": "ja-reply-11",
+     "text": "いいなあ。",
+     "meaning": "부럽다",
+     "example": "ハワイ行くの？いいなあ。",
+     "exampleKo": "하와이 가? 부럽다.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 44.2
+    },
+    {
+     "id": "ja-reply-12",
+     "text": "もちろん！",
+     "meaning": "물론이지!",
+     "example": "もちろん、行くよ！",
+     "exampleKo": "물론이지, 갈게!",
+     "tip": "",
+     "sentences": 166,
+     "perMillion": 666.6
+    },
+    {
+     "id": "ja-reply-13",
+     "text": "たしかにそう。",
+     "meaning": "정말 그래",
+     "example": "たしかにそう思う。",
+     "exampleKo": "정말 그렇게 생각해.",
+     "tip": ""
+    },
+    {
+     "id": "ja-reply-14",
+     "text": "ええと…",
+     "meaning": "음… 그러니까…",
+     "example": "ええと、なんだっけ。",
+     "exampleKo": "음, 뭐였더라.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-reply-15",
+     "text": "まあね。",
+     "meaning": "뭐 그렇지",
+     "example": "まあね、慣れてるから。",
+     "exampleKo": "뭐, 익숙하니까.",
+     "tip": ""
+    },
+    {
+     "id": "ja-reply-16",
+     "text": "別にいいよ。",
+     "meaning": "딱히 괜찮아",
+     "example": "別にいいよ、気にしてない。",
+     "exampleKo": "괜찮아, 신경 안 써.",
+     "tip": ""
+    },
+    {
+     "id": "ja-reply-17",
+     "text": "そうかな？",
+     "meaning": "그런가?",
+     "example": "そうかな？普通だと思うけど。",
+     "exampleKo": "그런가? 평범한 것 같은데.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-reply-18",
+     "text": "そうでもないよ。",
+     "meaning": "그렇지도 않아",
+     "example": "そうでもないよ、まだまだ。",
+     "exampleKo": "그렇지도 않아, 아직 멀었어.",
+     "tip": "칭찬받았을 때 겸손하게 받는 말이에요.",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-reply-19",
+     "text": "ありがとう、助かる！",
+     "meaning": "고마워, 도움 돼!",
+     "example": "ありがとう、助かる！",
+     "exampleKo": "고마워, 큰 도움 돼!",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 60.2
+    },
+    {
+     "id": "ja-reply-20",
+     "text": "お願い！",
+     "meaning": "부탁해!",
+     "example": "お願い、ちょっとだけ！",
+     "exampleKo": "부탁해, 조금만!",
+     "tip": "",
+     "sentences": 650,
+     "perMillion": 2610.4
+    },
+    {
+     "id": "ja-reply-21",
+     "text": "いいの？",
+     "meaning": "정말 괜찮아?",
+     "example": "え、もらっていいの？",
+     "exampleKo": "어, 받아도 돼?",
+     "tip": "",
+     "sentences": 544,
+     "perMillion": 2184.7
+    },
+    {
+     "id": "ja-reply-22",
+     "text": "どうぞ。",
+     "meaning": "드세요, 하세요",
+     "example": "どうぞ、座って。",
+     "exampleKo": "앉아.",
+     "tip": "",
+     "sentences": 293,
+     "perMillion": 1176.7
+    },
+    {
+     "id": "ja-reply-23",
+     "text": "お疲れ！",
+     "meaning": "수고했어!",
+     "example": "お疲れ！今日はゆっくりしてね。",
+     "exampleKo": "수고했어! 오늘은 푹 쉬어.",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 104.4
+    },
+    {
+     "id": "ja-reply-24",
+     "text": "気にしないで。",
+     "meaning": "신경 쓰지 마",
+     "example": "気にしないで、大丈夫。",
+     "exampleKo": "신경 쓰지 마, 괜찮아.",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 104.4
+    },
+    {
+     "id": "ja-reply-25",
+     "text": "よかった！",
+     "meaning": "다행이다!",
+     "example": "無事に着いた？よかった！",
+     "exampleKo": "무사히 도착했어? 다행이다!",
+     "tip": "",
+     "sentences": 1028,
+     "perMillion": 4128.4
+    },
+    {
+     "id": "ja-reply-26",
+     "text": "残念。",
+     "meaning": "아쉽다",
+     "example": "来れないの？残念。",
+     "exampleKo": "못 와? 아쉽다.",
+     "tip": "",
+     "sentences": 267,
+     "perMillion": 1072.3
+    },
+    {
+     "id": "ja-reply-27",
+     "text": "すごいじゃん！",
+     "meaning": "대단하잖아!",
+     "example": "一位？すごいじゃん！",
+     "exampleKo": "1등? 대단하잖아!",
+     "tip": ""
+    },
+    {
+     "id": "ja-reply-28",
+     "text": "そっか。",
+     "meaning": "그렇구나",
+     "example": "そっか、わかった。",
+     "exampleKo": "그렇구나, 알았어.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 76.3
+    },
+    {
+     "id": "ja-reply-29",
+     "text": "ふーん。",
+     "meaning": "흠~ (시큰둥하게)",
+     "example": "ふーん、そうなんだ。",
+     "exampleKo": "흠, 그렇구나.",
+     "tip": "관심 없어 보일 수 있으니 조심해요."
+    },
+    {
+     "id": "ja-reply-30",
+     "text": "えっ？",
+     "meaning": "엥? 뭐?",
+     "example": "えっ？今なんて？",
+     "exampleKo": "엥? 방금 뭐라고?",
+     "tip": "",
+     "sentences": 142,
+     "perMillion": 570.3
+    },
+    {
+     "id": "ja-reply-31",
+     "text": "わあ！",
+     "meaning": "와!",
+     "example": "わあ、きれい！",
+     "exampleKo": "와, 예쁘다!",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 64.3
+    },
+    {
+     "id": "ja-reply-32",
+     "text": "やった！",
+     "meaning": "앗싸!",
+     "example": "やった！合格した！",
+     "exampleKo": "앗싸! 합격했다!",
+     "tip": "",
+     "sentences": 535,
+     "perMillion": 2148.5
+    },
+    {
+     "id": "ja-reply-33",
+     "text": "おめでとう！",
+     "meaning": "축하해!",
+     "example": "誕生日おめでとう！",
+     "exampleKo": "생일 축하해!",
+     "tip": "",
+     "sentences": 70,
+     "perMillion": 281.1
+    },
+    {
+     "id": "ja-reply-34",
+     "text": "どうかな。",
+     "meaning": "글쎄",
+     "example": "行けるかどうかな。",
+     "exampleKo": "갈 수 있을지 글쎄.",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 68.3
+    },
+    {
+     "id": "ja-reply-35",
+     "text": "知ってる！",
+     "meaning": "알아!",
+     "example": "その店知ってる！",
+     "exampleKo": "그 가게 알아!",
+     "tip": "",
+     "sentences": 419,
+     "perMillion": 1682.7
+    },
+    {
+     "id": "ja-reply-36",
+     "text": "知らなかった。",
+     "meaning": "몰랐어",
+     "example": "それ知らなかった。",
+     "exampleKo": "그거 몰랐어.",
+     "tip": "",
+     "sentences": 225,
+     "perMillion": 903.6
+    },
+    {
+     "id": "ja-reply-37",
+     "text": "了解です。",
+     "meaning": "알겠습니다",
+     "example": "了解です、明日伺います。",
+     "exampleKo": "알겠습니다, 내일 찾아뵐게요.",
+     "tip": ""
+    },
+    {
+     "id": "ja-reply-38",
+     "text": "それはよかった。",
+     "meaning": "그거 다행이다",
+     "example": "熱下がった？それはよかった。",
+     "exampleKo": "열 내렸어? 그거 다행이다.",
+     "tip": ""
+    },
+    {
+     "id": "ja-reply-39",
+     "text": "あるある。",
+     "meaning": "맞아, 그런 거 있어",
+     "example": "朝起きられないの、あるある。",
+     "exampleKo": "아침에 못 일어나는 거, 완전 공감.",
+     "tip": "누구나 겪는 일에 맞장구칠 때 써요."
+    },
+    {
+     "id": "ja-reply-40",
+     "text": "ほんとそれ。",
+     "meaning": "진짜 그거야",
+     "example": "ほんとそれ、わかる。",
+     "exampleKo": "진짜 그거, 알아.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "polite",
+   "title": {
+    "ko": "예의 있게 말하기",
+    "en": "Polite speech"
+   },
+   "items": [
+    {
+     "id": "ja-polite-01",
+     "text": "はじめまして。",
+     "meaning": "처음 뵙겠습니다",
+     "example": "はじめまして、キムです。",
+     "exampleKo": "처음 뵙겠습니다, 김입니다.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-polite-02",
+     "text": "よろしくお願いします。",
+     "meaning": "잘 부탁드립니다",
+     "example": "これからよろしくお願いします。",
+     "exampleKo": "앞으로 잘 부탁드립니다.",
+     "tip": "첫 만남, 부탁할 때 모두 쓰는 아주 중요한 말이에요.",
+     "sentences": 31,
+     "perMillion": 124.5
+    },
+    {
+     "id": "ja-polite-03",
+     "text": "お邪魔します。",
+     "meaning": "실례하겠습니다 (남의 집에 들어갈 때)",
+     "example": "お邪魔します。",
+     "exampleKo": "실례하겠습니다.",
+     "tip": "연인 부모님 댁에 갈 때 꼭 필요한 인사예요."
+    },
+    {
+     "id": "ja-polite-04",
+     "text": "お邪魔しました。",
+     "meaning": "실례했습니다 (나올 때)",
+     "example": "今日はお邪魔しました。",
+     "exampleKo": "오늘 실례 많았습니다.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-05",
+     "text": "ありがとうございます。",
+     "meaning": "감사합니다",
+     "example": "いつもありがとうございます。",
+     "exampleKo": "늘 감사합니다.",
+     "tip": "",
+     "sentences": 161,
+     "perMillion": 646.6
+    },
+    {
+     "id": "ja-polite-06",
+     "text": "申し訳ありません。",
+     "meaning": "정말 죄송합니다",
+     "example": "ご迷惑をおかけして申し訳ありません。",
+     "exampleKo": "폐를 끼쳐서 정말 죄송합니다.",
+     "tip": "",
+     "sentences": 97,
+     "perMillion": 389.5
+    },
+    {
+     "id": "ja-polite-07",
+     "text": "失礼します。",
+     "meaning": "실례합니다",
+     "example": "失礼します、入ってもいいですか？",
+     "exampleKo": "실례합니다, 들어가도 될까요?",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 72.3
+    },
+    {
+     "id": "ja-polite-08",
+     "text": "お久しぶりです。",
+     "meaning": "오랜만입니다",
+     "example": "お久しぶりです、お元気ですか？",
+     "exampleKo": "오랜만이에요, 잘 지내셨어요?",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 28.1
+    },
+    {
+     "id": "ja-polite-09",
+     "text": "お元気ですか？",
+     "meaning": "잘 지내세요?",
+     "example": "ご両親はお元気ですか？",
+     "exampleKo": "부모님은 잘 지내세요?",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 68.3
+    },
+    {
+     "id": "ja-polite-10",
+     "text": "おかげさまで。",
+     "meaning": "덕분에요",
+     "example": "おかげさまで元気です。",
+     "exampleKo": "덕분에 잘 지내요.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 44.2
+    },
+    {
+     "id": "ja-polite-11",
+     "text": "いただきます。（丁寧）",
+     "meaning": "드세요 (존댓말)",
+     "example": "どうぞ、召し上がってください。",
+     "exampleKo": "어서 드세요.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 96.4
+    },
+    {
+     "id": "ja-polite-12",
+     "text": "お口に合うかわかりませんが。",
+     "meaning": "입에 맞으실지 모르겠지만",
+     "example": "お口に合うかわかりませんが、どうぞ。",
+     "exampleKo": "입에 맞으실지 모르겠지만 드셔 보세요.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-13",
+     "text": "つまらないものですが。",
+     "meaning": "별것 아니지만",
+     "example": "つまらないものですが、どうぞ。",
+     "exampleKo": "별것 아니지만 받아 주세요.",
+     "tip": "선물을 건넬 때 하는 겸손한 말이에요."
+    },
+    {
+     "id": "ja-polite-14",
+     "text": "お世話になっています。",
+     "meaning": "신세 지고 있습니다",
+     "example": "いつもお世話になっています。",
+     "exampleKo": "늘 신세 지고 있습니다.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-polite-15",
+     "text": "お気遣いありがとうございます。",
+     "meaning": "마음 써 주셔서 감사합니다",
+     "example": "お気遣いありがとうございます。",
+     "exampleKo": "신경 써 주셔서 감사합니다.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-16",
+     "text": "ごちそうさまでした。",
+     "meaning": "잘 먹었습니다",
+     "example": "とてもおいしかったです。ごちそうさまでした。",
+     "exampleKo": "정말 맛있었어요. 잘 먹었습니다.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-17",
+     "text": "お先に失礼します。",
+     "meaning": "먼저 실례하겠습니다",
+     "example": "お先に失礼します。",
+     "exampleKo": "먼저 들어가 보겠습니다.",
+     "tip": "회사에서 먼저 퇴근할 때 써요."
+    },
+    {
+     "id": "ja-polite-18",
+     "text": "お疲れ様です。",
+     "meaning": "수고하십니다",
+     "example": "お疲れ様です、今いいですか？",
+     "exampleKo": "수고하십니다, 지금 괜찮으세요?",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-19",
+     "text": "少々お待ちください。",
+     "meaning": "잠시만 기다려 주세요",
+     "example": "少々お待ちください。",
+     "exampleKo": "잠시만 기다려 주세요.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 60.2
+    },
+    {
+     "id": "ja-polite-20",
+     "text": "もう一度お願いします。",
+     "meaning": "한 번 더 부탁드려요",
+     "example": "すみません、もう一度お願いします。",
+     "exampleKo": "죄송하지만 한 번 더 말씀해 주세요.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 32.1
+    },
+    {
+     "id": "ja-polite-21",
+     "text": "ゆっくり話していただけますか？",
+     "meaning": "천천히 말씀해 주시겠어요?",
+     "example": "ゆっくり話していただけますか？",
+     "exampleKo": "천천히 말씀해 주시겠어요?",
+     "tip": "",
+     "sentences": 30,
+     "perMillion": 120.5
+    },
+    {
+     "id": "ja-polite-22",
+     "text": "大丈夫です。",
+     "meaning": "괜찮습니다",
+     "example": "大丈夫です、自分でできます。",
+     "exampleKo": "괜찮아요, 혼자 할 수 있어요.",
+     "tip": "",
+     "sentences": 64,
+     "perMillion": 257.0
+    },
+    {
+     "id": "ja-polite-23",
+     "text": "結構です。",
+     "meaning": "괜찮습니다 (사양)",
+     "example": "いえ、結構です。",
+     "exampleKo": "아니요, 괜찮습니다.",
+     "tip": "정중히 거절할 때 써요.",
+     "sentences": 64,
+     "perMillion": 257.0
+    },
+    {
+     "id": "ja-polite-24",
+     "text": "お願いします。",
+     "meaning": "부탁드립니다",
+     "example": "コーヒーをお願いします。",
+     "exampleKo": "커피 부탁드려요.",
+     "tip": "",
+     "sentences": 363,
+     "perMillion": 1457.8
+    },
+    {
+     "id": "ja-polite-25",
+     "text": "どうぞよろしく。",
+     "meaning": "잘 부탁해요",
+     "example": "こちらこそ、どうぞよろしく。",
+     "exampleKo": "저야말로 잘 부탁해요.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 28.1
+    },
+    {
+     "id": "ja-polite-26",
+     "text": "こちらこそ。",
+     "meaning": "저야말로",
+     "example": "こちらこそ、ありがとうございます。",
+     "exampleKo": "저야말로 감사합니다.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 60.2
+    },
+    {
+     "id": "ja-polite-27",
+     "text": "お手数ですが",
+     "meaning": "번거로우시겠지만",
+     "example": "お手数ですが、確認お願いします。",
+     "exampleKo": "번거로우시겠지만 확인 부탁드려요.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-28",
+     "text": "恐れ入ります。",
+     "meaning": "송구합니다",
+     "example": "恐れ入りますが、少しよろしいですか？",
+     "exampleKo": "죄송하지만 잠깐 괜찮으세요?",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 56.2
+    },
+    {
+     "id": "ja-polite-29",
+     "text": "どうぞおかけください。",
+     "meaning": "앉으세요",
+     "example": "どうぞおかけください。",
+     "exampleKo": "앉으세요.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-30",
+     "text": "お名前は？",
+     "meaning": "성함이?",
+     "example": "お名前は何ですか？",
+     "exampleKo": "성함이 어떻게 되세요?",
+     "tip": "",
+     "sentences": 93,
+     "perMillion": 373.5
+    },
+    {
+     "id": "ja-polite-31",
+     "text": "〜さん",
+     "meaning": "~씨, ~님",
+     "example": "田中さん、こんにちは。",
+     "exampleKo": "다나카 씨, 안녕하세요.",
+     "tip": "이름 뒤에 붙이는 기본 존칭이에요.",
+     "sentences": 4693,
+     "perMillion": 18846.9
+    },
+    {
+     "id": "ja-polite-32",
+     "text": "〜様",
+     "meaning": "~님",
+     "example": "お客様、こちらへどうぞ。",
+     "exampleKo": "손님, 이쪽으로 오세요.",
+     "tip": "",
+     "sentences": 160,
+     "perMillion": 642.6
+    },
+    {
+     "id": "ja-polite-33",
+     "text": "敬語",
+     "meaning": "존댓말",
+     "example": "敬語がまだ難しいです。",
+     "exampleKo": "존댓말이 아직 어려워요.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 40.2
+    },
+    {
+     "id": "ja-polite-34",
+     "text": "タメ口",
+     "meaning": "반말",
+     "example": "タメ口でいいよ。",
+     "exampleKo": "반말해도 돼.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-35",
+     "text": "お誕生日おめでとうございます。",
+     "meaning": "생신 축하드립니다",
+     "example": "お誕生日おめでとうございます。",
+     "exampleKo": "생신 축하드려요.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 124.5
+    },
+    {
+     "id": "ja-polite-36",
+     "text": "ご結婚おめでとうございます。",
+     "meaning": "결혼 축하드립니다",
+     "example": "ご結婚おめでとうございます。",
+     "exampleKo": "결혼 축하드립니다.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 40.2
+    },
+    {
+     "id": "ja-polite-37",
+     "text": "よいお年を。",
+     "meaning": "새해 복 많이 받으세요 (연말 인사)",
+     "example": "今年もありがとう、よいお年を。",
+     "exampleKo": "올해도 고마웠어요, 좋은 새해 맞으세요.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-38",
+     "text": "あけましておめでとうございます。",
+     "meaning": "새해 복 많이 받으세요",
+     "example": "あけましておめでとうございます。",
+     "exampleKo": "새해 복 많이 받으세요.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-39",
+     "text": "お大事になさってください。",
+     "meaning": "몸조리 잘하세요",
+     "example": "お大事になさってください。",
+     "exampleKo": "몸조리 잘하세요.",
+     "tip": ""
+    },
+    {
+     "id": "ja-polite-40",
+     "text": "お待たせしました。",
+     "meaning": "기다리셨죠, 오래 기다리셨어요",
+     "example": "お待たせしました、行きましょう。",
+     "exampleKo": "기다리셨죠, 가요.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    }
+   ]
+  },
+  {
+   "id": "idioms",
+   "title": {
+    "ko": "자주 쓰는 관용 표현",
+    "en": "Common idioms"
+   },
+   "items": [
+    {
+     "id": "ja-idioms-01",
+     "text": "猫の手も借りたい",
+     "meaning": "너무 바빠서 누구 손이라도 빌리고 싶다",
+     "example": "今週は猫の手も借りたいくらい忙しい。",
+     "exampleKo": "이번 주는 정신없이 바빠.",
+     "tip": "'고양이 손이라도 빌리고 싶다'는 뜻이에요.",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-idioms-02",
+     "text": "一石二鳥",
+     "meaning": "일석이조",
+     "example": "散歩しながら買い物、一石二鳥だね。",
+     "exampleKo": "산책하면서 장보기, 일석이조네.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-03",
+     "text": "猫舌",
+     "meaning": "뜨거운 걸 못 먹는 사람",
+     "example": "私、猫舌なんだ。",
+     "exampleKo": "나 뜨거운 거 잘 못 먹어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-04",
+     "text": "腹が立つ",
+     "meaning": "화가 나다",
+     "example": "あの態度には腹が立つ。",
+     "exampleKo": "그 태도에 화가 나.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-idioms-05",
+     "text": "気がつく",
+     "meaning": "알아차리다",
+     "example": "髪切ったの、気がついた？",
+     "exampleKo": "머리 자른 거 눈치챘어?",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 24.1
+    },
+    {
+     "id": "ja-idioms-06",
+     "text": "気を使う",
+     "meaning": "신경 쓰다, 배려하다",
+     "example": "そんなに気を使わないで。",
+     "exampleKo": "그렇게 신경 쓰지 마.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-07",
+     "text": "顔が広い",
+     "meaning": "발이 넓다",
+     "example": "彼は顔が広いね。",
+     "exampleKo": "그는 발이 넓네.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-08",
+     "text": "口が軽い",
+     "meaning": "입이 가볍다",
+     "example": "彼女は口が軽いから言わないで。",
+     "exampleKo": "그 애는 입이 가벼우니까 말하지 마.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-idioms-09",
+     "text": "手が空く",
+     "meaning": "손이 비다, 한가해지다",
+     "example": "手が空いたら手伝って。",
+     "exampleKo": "손 비면 좀 도와줘.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-10",
+     "text": "目がない",
+     "meaning": "아주 좋아한다",
+     "example": "甘いものに目がない。",
+     "exampleKo": "단 거라면 사족을 못 써.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 96.4
+    },
+    {
+     "id": "ja-idioms-11",
+     "text": "耳が痛い",
+     "meaning": "듣기 따갑다 (뜨끔하다)",
+     "example": "その話は耳が痛いな。",
+     "exampleKo": "그 얘기는 뜨끔하네.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-12",
+     "text": "首を長くして待つ",
+     "meaning": "목이 빠지게 기다리다",
+     "example": "首を長くして待ってるよ。",
+     "exampleKo": "목 빠지게 기다리고 있어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-13",
+     "text": "頭にくる",
+     "meaning": "열받다",
+     "example": "あれは頭にくるね。",
+     "exampleKo": "그건 열받는다.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-idioms-14",
+     "text": "息が合う",
+     "meaning": "호흡이 잘 맞다",
+     "example": "私たち、息が合うね。",
+     "exampleKo": "우리 호흡 잘 맞는다.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-15",
+     "text": "お腹がいっぱい",
+     "meaning": "배부르다",
+     "example": "もうお腹いっぱい。",
+     "exampleKo": "이제 배불러.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-16",
+     "text": "足が棒になる",
+     "meaning": "다리가 뻣뻣해지도록 걷다",
+     "example": "一日中歩いて足が棒になった。",
+     "exampleKo": "하루 종일 걸어서 다리가 후들거려.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-17",
+     "text": "朝飯前",
+     "meaning": "식은 죽 먹기",
+     "example": "そんなの朝飯前だよ。",
+     "exampleKo": "그런 건 식은 죽 먹기야.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 36.1
+    },
+    {
+     "id": "ja-idioms-18",
+     "text": "三日坊主",
+     "meaning": "작심삼일",
+     "example": "ダイエットは三日坊主だった。",
+     "exampleKo": "다이어트는 작심삼일이었어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-19",
+     "text": "十人十色",
+     "meaning": "사람마다 다 다르다",
+     "example": "好みは十人十色だね。",
+     "exampleKo": "취향은 사람마다 다르지.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-20",
+     "text": "花より団子",
+     "meaning": "금강산도 식후경",
+     "example": "お花見？花より団子だよ。",
+     "exampleKo": "꽃구경? 금강산도 식후경이지.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-21",
+     "text": "七転び八起き",
+     "meaning": "칠전팔기",
+     "example": "七転び八起きで頑張ろう。",
+     "exampleKo": "넘어져도 다시 일어나자.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-22",
+     "text": "急がば回れ",
+     "meaning": "급할수록 돌아가라",
+     "example": "急がば回れ、落ち着いて。",
+     "exampleKo": "급할수록 돌아가, 진정해.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-23",
+     "text": "一期一会",
+     "meaning": "평생 한 번뿐인 만남",
+     "example": "この出会いは一期一会だね。",
+     "exampleKo": "이 만남은 평생 한 번뿐이야.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-24",
+     "text": "空気を読む",
+     "meaning": "눈치를 보다, 분위기를 읽다",
+     "example": "空気を読んで静かにした。",
+     "exampleKo": "눈치 보고 조용히 있었어.",
+     "tip": "일본 사회에서 아주 중요하게 여기는 말이에요."
+    },
+    {
+     "id": "ja-idioms-25",
+     "text": "KY",
+     "meaning": "눈치 없는 사람",
+     "example": "あの人、ちょっとKYだね。",
+     "exampleKo": "저 사람 좀 눈치 없다.",
+     "tip": "空気が読めない의 줄임말이에요."
+    },
+    {
+     "id": "ja-idioms-26",
+     "text": "気が早い",
+     "meaning": "성급하다",
+     "example": "もうクリスマスの話？気が早いね。",
+     "exampleKo": "벌써 크리스마스 얘기? 성급하네.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-27",
+     "text": "気が向く",
+     "meaning": "마음이 내키다",
+     "example": "気が向いたら来てね。",
+     "exampleKo": "마음 내키면 와.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-28",
+     "text": "腕がいい",
+     "meaning": "솜씨가 좋다",
+     "example": "このシェフ、腕がいいね。",
+     "exampleKo": "이 셰프 솜씨 좋다.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-29",
+     "text": "手を抜く",
+     "meaning": "대충 하다",
+     "example": "掃除で手を抜かないで。",
+     "exampleKo": "청소 대충 하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-30",
+     "text": "根に持つ",
+     "meaning": "꽁하다, 앙금을 품다",
+     "example": "まだ根に持ってるの？",
+     "exampleKo": "아직도 꽁해 있어?",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-31",
+     "text": "水に流す",
+     "meaning": "지난 일을 잊다",
+     "example": "もう水に流そう。",
+     "exampleKo": "이제 다 잊자.",
+     "tip": "다툰 뒤 화해할 때 좋아요."
+    },
+    {
+     "id": "ja-idioms-32",
+     "text": "仕方がない",
+     "meaning": "어쩔 수 없다",
+     "example": "仕方がないから、明日にしよう。",
+     "exampleKo": "어쩔 수 없으니 내일 하자.",
+     "tip": "",
+     "sentences": 38,
+     "perMillion": 152.6
+    },
+    {
+     "id": "ja-idioms-33",
+     "text": "話が早い",
+     "meaning": "말이 잘 통한다",
+     "example": "君は話が早くて助かる。",
+     "exampleKo": "너는 말이 잘 통해서 좋아.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-34",
+     "text": "気が合わない",
+     "meaning": "안 맞다",
+     "example": "あの人とは気が合わない。",
+     "exampleKo": "저 사람이랑은 안 맞아.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-35",
+     "text": "目が回る",
+     "meaning": "정신이 없다",
+     "example": "忙しくて目が回る。",
+     "exampleKo": "바빠서 정신이 없어.",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-36",
+     "text": "ほっぺたが落ちる",
+     "meaning": "너무 맛있다",
+     "example": "ほっぺたが落ちるほどおいしい！",
+     "exampleKo": "볼이 떨어질 만큼 맛있어!",
+     "tip": ""
+    },
+    {
+     "id": "ja-idioms-37",
+     "text": "鼻が高い",
+     "meaning": "자랑스럽다",
+     "example": "息子が優勝して鼻が高い。",
+     "exampleKo": "아들이 우승해서 어깨가 으쓱해.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-idioms-38",
+     "text": "胸がいっぱい",
+     "meaning": "가슴이 벅차다",
+     "example": "嬉しくて胸がいっぱい。",
+     "exampleKo": "기뻐서 가슴이 벅차.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    },
+    {
+     "id": "ja-idioms-39",
+     "text": "気のせい",
+     "meaning": "기분 탓",
+     "example": "気のせいだよ、大丈夫。",
+     "exampleKo": "기분 탓이야, 괜찮아.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 76.3
+    },
+    {
+     "id": "ja-idioms-40",
+     "text": "お互い様",
+     "meaning": "서로 마찬가지",
+     "example": "困ったときはお互い様だよ。",
+     "exampleKo": "힘들 땐 서로 돕는 거지.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 20.1
+    }
+   ]
+  }
+ ]
+}

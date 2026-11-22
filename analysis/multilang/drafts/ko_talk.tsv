@@ -1,0 +1,188 @@
+# 한국어 연인·친구 대화 꾸러미(외국인 연인·친구가 배우는 용도). 뜻·해석·팁은 영어로 쓴다. 영어 talk_draft.json과 같은 주제·순서. AI(Claude)와 함께 쓰고 사람이 고른다.
+# 꾸러미	표현	셀 형태	뜻	예문	예문 해석	팁
+love	사랑해.	사랑해	I love you.	세상에서 제일 사랑해.	I love you more than anything in the world.	Casual form for your partner. The polite form is 사랑해요.
+love	좋아해.	좋아해	I like you. / I really like you.	나 너 진짜 좋아해.	I really like you.	The most common way to confess feelings before dating.
+love	너한테 푹 빠졌어.	푹 빠졌어	I'm crazy about you.	요즘 너한테 푹 빠졌어.	I'm totally into you these days.
+love	넌 나한테 정말 소중해.	소중해	You mean a lot to me.	넌 나한테 정말 소중해.	You mean so much to me.	Works for close friends too.
+love	마음에 들어.	마음에 들어	I like you (I'm interested).	솔직히 너 마음에 들어.	Honestly, I'm into you.
+love	첫눈에 반했어.	첫눈에 반했어	It was love at first sight.	사실 너한테 첫눈에 반했어.	Actually, I fell for you at first sight.
+love	너랑 있으면 행복해.	행복해	I'm happy when I'm with you.	너랑 있으면 항상 행복해.	I'm always happy when I'm with you.
+love	만나서 다행이야.	만나서 다행이야	I'm so glad I met you.	너를 만나서 정말 다행이야.	I'm really glad I met you.
+love	자기야	자기야	babe, honey	자기야, 잘 잤어?	Babe, did you sleep well?	A very common pet name between couples. 여보 is used by married couples.
+love	네가 최고야!	최고야	You're the best!	커피 고마워, 네가 최고야!	Thanks for the coffee, you're the best!	Also common between friends.
+love	설레.	설레	My heart is fluttering.	너랑 있으면 아직도 설레.	I still get butterflies when I'm with you.	There's no exact English word. It's that excited, fluttery feeling.
+love	계속 네 생각만 나.	네 생각	I can't stop thinking about you.	오늘 계속 네 생각만 나.	I keep thinking about you today.
+love	넌 내 전부야.	내 전부	You're my everything.	넌 내 전부야.	You're my everything.	Very sweet, so save it for special moments.
+love	뽀뽀	뽀뽀	kiss, peck	내일 봐, 뽀뽀!	See you tomorrow, kiss!	A cute word for a light kiss. Couples also type 쪽.
+love	좋은 꿈 꿔.	좋은 꿈	Sweet dreams.	잘 자, 좋은 꿈 꿔.	Good night, sweet dreams.
+love	너무 귀여워.	귀여워	You're so cute.	자는 얼굴 너무 귀여워.	Your sleeping face is so cute.
+love	우리 사귈래?	사귈래	Do you want to go out with me?	나랑 사귈래?	Will you go out with me?	Koreans often "confess" (고백) to officially start dating.
+miss	보고 싶어.	보고 싶어	I miss you.	너무 보고 싶어.	I miss you so much.	Literally "I want to see you". It's how Koreans say "I miss you".
+miss	벌써 보고 싶어.	벌써 보고 싶어	I miss you already.	방금 헤어졌는데 벌써 보고 싶어.	We just said goodbye and I already miss you.
+miss	빨리 보고 싶어!	빨리 보고 싶어	I can't wait to see you!	3일만 더! 빨리 보고 싶어!	Just three more days! I can't wait to see you!
+miss	손꼽아 기다리고 있어.	손꼽아	I'm counting the days.	만날 날만 손꼽아 기다리고 있어.	I'm counting down the days until we meet.	손꼽아 means counting on your fingers.
+miss	네가 여기 있으면 좋겠다.	있으면 좋겠다	I wish you were here.	경치 진짜 예뻐. 네가 여기 있으면 좋겠다.	The view is so pretty. I wish you were here.
+miss	네 생각 하고 있었어.	생각 하고 있었어	I was thinking of you.	그냥 네 생각 하고 있었어.	I was just thinking of you.
+miss	또 보자!	또 보자	See you again!	또 보자! 조심히 가.	See you again! Get home safe.
+miss	너 없으니까 허전해.	허전해	It feels empty without you.	너 없으니까 이 카페도 허전해.	This café feels empty without you.	허전하다 is the feeling that something is missing.
+miss	목소리 듣고 싶어.	목소리	I want to hear your voice.	전화할 수 있어? 목소리 듣고 싶어.	Can you call? I want to hear your voice.
+miss	꼭 안아 주고 싶어.	안아 주고 싶어	I want to give you a big hug.	힘들었지? 꼭 안아 주고 싶어.	Rough day, right? I want to give you a big hug.
+miss	머릿속에 온통 너야.	온통 너	You're all I think about.	일할 때도 머릿속에 온통 너야.	Even at work, you're all I think about.
+miss	빨리 와.	빨리 와	Come back soon.	기다릴게, 빨리 와.	I'll be waiting, come back soon.
+miss	기다릴게.	기다릴게	I'll wait for you.	천천히 해, 기다릴게.	Take your time, I'll wait.
+miss	우리 언제 만나?	언제 만나	When are we meeting?	우리 다음에 언제 만나?	When do we see each other next?
+text	ㅋㅋ	ㅋㅋ	lol	너무 웃기다 ㅋㅋ	That's so funny lol	ㅋ is the sound "k" from 크크 (laughing). More ㅋ = funnier.
+text	ㅎㅎ	ㅎㅎ	hehe (a soft smile)	알았어 ㅎㅎ	Okay hehe	Softer than ㅋㅋ. Adds a friendly, smiling tone.
+text	ㅇㅇ	ㅇㅇ	yeah, ok	ㅇㅇ 이따 봐	Yeah, see you later	From 응응. Very short, so it can feel a bit cold.
+text	ㄱㄱ	ㄱㄱ	let's go	치킨? ㄱㄱ	Chicken? Let's go!	From 고고 (go go).
+text	ㅠㅠ	ㅠㅠ	crying, so sad	오늘 너무 피곤해 ㅠㅠ	I'm so tired today T_T	Looks like crying eyes. Also ㅜㅜ.
+text	ㄴㄴ	ㄴㄴ	no no	ㄴㄴ 괜찮아	Nah, it's fine	From 노노 (no no).
+text	ㄱㅅ	ㄱㅅ	thanks	도와줘서 ㄱㅅ!	Thanks for helping!	From 감사.
+text	ㅈㅅ	ㅈㅅ	sorry	늦어서 ㅈㅅ	Sorry I'm late	From 죄송. Only with close friends.
+text	ㅇㅋ	ㅇㅋ	OK	ㅇㅋ 7시에 봐	OK, see you at 7
+text	뭐 해?	뭐 해	What are you doing?	지금 뭐 해?	What are you doing now?
+text	굿밤	굿밤	good night	오늘도 수고했어, 굿밤!	Good job today, good night!	A cute mix of English "good" and 밤 (night).
+text	대박	대박	awesome, no way	이거 대박이다!	This is awesome!	Used for both good surprises and shocking news.
+text	헐	헐	OMG, what?!	헐, 진짜?	OMG, really?	A very common reaction to surprising news.
+text	레알	레알	for real	이거 레알 맛있어.	This is seriously delicious.	Slang from English "real".
+text	ㄹㅇ	ㄹㅇ	for real	ㄹㅇ 피곤해	Seriously tired	Short for 레알.
+text	ㅊㅋ	ㅊㅋ	congrats	합격 ㅊㅋㅊㅋ!	Congrats on passing!	From 축하.
+text	꿀잼	꿀잼	super fun	이 영화 꿀잼이야.	This movie is so much fun.	꿀 (honey) + 잼 (from 재미, fun). The opposite is 노잼.
+text	오키	오키	okay	오키, 이따 연락할게.	Okay, I'll text you later.
+chat	뭐 하고 있어?	뭐 하고 있어	What are you up to?	주말에 뭐 하고 있어?	What are you up to this weekend?
+chat	오늘 하루 어땠어?	어땠어	How was your day?	오늘 하루 어땠어? 다 얘기해 줘.	How was your day? Tell me everything.
+chat	그냥 있어.	그냥 있어	Not much, just here.	그냥 집에서 쉬고 있어.	Nothing much, just resting at home.
+chat	나도!	나도	Me too!	나도, 거의 못 잤어.	Me too, I barely slept.
+chat	쉬는 중이야.	쉬는 중	I'm just chilling.	고양이랑 쉬는 중이야.	Just chilling with my cat.
+chat	말도 안 돼!	말도 안 돼	No way!	말도 안 돼! 걔를 만났다고?	No way! You met him?
+chat	대박이다!	대박이다	That's amazing!	연예인 봤어? 대박이다!	You saw a celebrity? That's amazing!
+chat	내 말이.	내 말이	Tell me about it.	내 말이, 월요일은 최악이야.	Tell me about it, Mondays are the worst.	Literally "my words". Means "exactly what I'm saying".
+chat	있잖아!	있잖아	Guess what! / You know what?	있잖아! 나 합격했어!	Guess what! I got in!	Used to start a story or share news.
+chat	무슨 일 있어?	무슨 일	What's wrong?	오늘 조용하네, 무슨 일 있어?	You're quiet today, what's wrong?
+chat	밥 먹었어?	밥 먹었어	Did you eat?	밥 먹었어? 굶지 마.	Did you eat? Don't skip meals.	A very common Korean greeting that means "I care about you", not only about food.
+chat	요즘 어때?	요즘 어때	How have you been?	오랜만이야! 요즘 어때?	Long time no see! How have you been?
+chat	수고했어.	수고했어	Good job today. / You worked hard.	오늘도 수고했어.	You worked hard today too.	Said at the end of a long day. It means "thank you for your hard work".
+chat	그렇구나.	그렇구나	I see.	아, 그렇구나.	Oh, I see.
+chat	재밌다!	재밌다	That's fun! / Interesting!	재밌다, 더 얘기해 줘!	That's fun, tell me more!
+chat	진짜?	진짜	Really?	여기로 이사 온다고? 진짜?	You're moving here? Really?
+chat	늘 똑같지 뭐.	똑같지	Same old, same old.	일은 늘 똑같지 뭐.	Work is the same as always.
+chat	요즘 뭐에 빠져 있어?	빠져 있어	What are you into these days?	요즘 뭐에 빠져 있어?	What are you obsessed with lately?
+tease	바보야.	바보	silly (cute)	바보야, 그래도 좋아.	You silly thing, I still love you.	With a soft voice it's affectionate, not an insult.
+tease	장난이야.	장난이야	Just kidding.	화내지 마, 장난이야.	Don't be mad, I'm just kidding.
+tease	하지 마!	하지 마	Stop it!	하지 마, 부끄러워!	Stop it, I'm embarrassed!
+tease	꿈 깨.	꿈 깨	Dream on.	또 해 달라고? 꿈 깨.	You want me to do it again? Dream on.
+tease	어림없지.	어림없지	Nice try.	어림없지, 안 속아.	Nice try, I'm not falling for it.
+tease	하나도 안 웃겨.	안 웃겨	Not funny at all.	하나도 안 웃겨. 폰 돌려줘.	Not funny. Give me back my phone.
+tease	오버하지 마.	오버	Don't overdo it.	생일에 풍선까지? 오버하지 마.	Balloons for my birthday? You're so extra.	오버 comes from English "over" and means "too much".
+tease	맘대로 해.	맘대로 해	Whatever you want.	맘대로 해, 네가 이겼어.	Do what you want, you win.	Can sound cold, so say it with a smile.
+tease	너무해!	너무해	That's so mean!	너무해! 열심히 했단 말이야.	That's so mean! I tried my best.
+tease	속았지!	속았지	Gotcha!	속았지! 장난이야.	Gotcha! Just kidding.
+tease	딱 걸렸어!	걸렸어	Busted!	딱 걸렸어! 내 과자 먹었지?	Busted! You ate my snacks, right?
+tease	누가 그래?	누가 그래	Says who?	내가 요리 못한다고? 누가 그래?	I'm a bad cook? Says who?
+tease	진짜 못 말려.	못 말려	You're impossible.	진짜 못 말려, 그만 웃어.	You're impossible, stop laughing.
+tease	잘난 척하지 마.	잘난 척	Don't show off.	한 번 이겼다고 잘난 척하지 마.	You won once, don't show off.
+tease	뻥이야!	뻥이야	Just kidding! / That was a lie!	뻥이야! 너 오늘 멋있어.	Kidding! You look great today.
+tease	콜!	콜	Deal! / I'm in!	치킨 먹을래? 콜!	Want chicken? Deal!	From English "call", like accepting a bet.
+tease	귀요미	귀요미	cutie	우리 귀요미 뭐 해?	What's my cutie doing?	A cute nickname, half teasing.
+date	오늘 밤 시간 돼?	시간 돼	Are you free tonight?	오늘 밤 시간 돼? 보고 싶어.	Are you free tonight? I miss you.
+date	밥 먹으러 갈래?	밥 먹으러 갈래	Want to grab food?	퇴근하고 밥 먹으러 갈래?	Want to grab food after work?
+date	그럼 약속한 거다.	약속한 거다	It's a date then.	금요일 7시? 약속한 거다.	Friday at 7? It's a date.
+date	데리러 갈까?	데리러 갈까	Should I pick you up?	7시에 데리러 갈까?	Should I pick you up at 7?
+date	몇 시가 편해?	몇 시가 편해	What time works for you?	내일 몇 시가 편해?	What time works for you tomorrow?
+date	약속 미뤄도 돼?	미뤄도 돼	Can we reschedule?	일이 생겼는데 약속 미뤄도 돼?	Something came up, can we reschedule?
+date	갑자기 일이 생겼어.	일이 생겼어	Something came up.	미안, 갑자기 일이 생겼어.	Sorry, something suddenly came up.
+date	10분 뒤에 도착해.	도착해	I'll be there in 10.	10분 뒤에 도착해!	I'll be there in 10 minutes!
+date	어디서 볼까?	어디서 볼까	Where should we meet?	어디서 볼까? 역 앞?	Where should we meet? In front of the station?
+date	더치페이하자.	더치페이	Let's split the bill.	오늘은 더치페이하자.	Let's go Dutch today.	From English "Dutch pay". In Korea, couples often take turns paying instead.
+date	오늘은 내가 살게.	내가 살게	It's on me today.	오늘은 내가 살게.	Today it's my treat.
+date	우리 집에서 영화 볼래?	영화 볼래	Movie night at my place?	주말에 우리 집에서 영화 볼래?	Want to watch a movie at my place this weekend?
+date	도착하면 연락해.	도착하면 연락해	Text me when you get home.	집에 도착하면 연락해.	Let me know when you get home.	Koreans say this a lot. It shows you care.
+date	집까지 데려다줄게.	데려다줄게	I'll walk you home.	늦었으니까 집까지 데려다줄게.	It's late, I'll take you home.
+date	오늘 진짜 즐거웠어.	즐거웠어	I had a great time today.	오늘 진짜 즐거웠어, 고마워.	I had a really great time today, thank you.
+date	또 가자!	또 가자	Let's do this again!	재밌었다! 또 가자!	That was fun! Let's go again!
+date	오늘 약속 그대로지?	그대로지	Are we still on for today?	오늘 저녁 약속 그대로지?	Are we still on for dinner tonight?
+call	들려?	들려	Can you hear me?	여보세요? 들려?	Hello? Can you hear me?
+call	소리가 끊겨.	끊겨	You're breaking up.	미안, 소리가 끊겨.	Sorry, you're breaking up.
+call	화면 멈췄어.	멈췄어	You froze.	화면 잠깐 멈췄어.	Your screen froze for a second.
+call	전화해도 돼?	전화해도 돼	Can I call you?	퇴근하고 전화해도 돼?	Can I call you after work?
+call	이따 다시 전화할게.	다시 전화할게	I'll call you back.	버스 안이라 이따 다시 전화할게.	I'm on the bus, I'll call you back later.
+call	영상통화하자.	영상통화	Let's video call.	자기 전에 영상통화하자.	Let's video call before bed.	Koreans often say 영통 for short.
+call	거기 지금 몇 시야?	몇 시야	What time is it there?	거기 지금 몇 시야? 나 때문에 깼어?	What time is it there? Did I wake you up?
+call	여기는 늦었어.	늦었어	It's late here.	여기는 늦어서 이제 잘게.	It's late here, I'm going to sleep now.
+call	시차	시차	time difference	시차 때문에 너무 힘들어.	The time difference is so hard.
+call	음소거돼 있어.	음소거	You're on mute.	잠깐, 너 음소거돼 있어!	Wait, you're on mute!
+call	카메라 켜 줘.	카메라 켜	Turn on your camera.	카메라 켜 줘, 얼굴 보고 싶어.	Turn on your camera, I want to see your face.
+call	통화하다 잠들었어.	잠들었어	I fell asleep on the call.	미안, 어제 통화하다 잠들었어.	Sorry, I fell asleep on the call last night.
+call	장거리 연애	장거리	long-distance relationship	장거리 연애는 힘들지만 너라서 괜찮아.	Long distance is hard, but it's okay because it's you.	Often shortened to 장거리.
+call	안 자고 기다릴게.	안 자고	I'll stay up and wait.	전화할 때까지 안 자고 기다릴게.	I'll stay up until you call.
+call	너 먼저 끊어.	먼저 끊어	You hang up first.	싫어, 너 먼저 끊어!	No, you hang up first!	A classic cute couple moment in Korea too.
+call	내일 또 얘기하자.	또 얘기하자	Let's talk tomorrow.	잘 자, 내일 또 얘기하자.	Good night, let's talk again tomorrow.
+call	나 보여?	보여	Can you see me?	나 보여? 여기 너무 어둡다.	Can you see me? It's really dark here.
+fight	그런 뜻 아니었어.	그런 뜻	I didn't mean it like that.	미안, 그런 뜻 아니었어.	Sorry, I didn't mean it like that.
+fight	우리 얘기 좀 할래?	얘기 좀	Can we talk?	오늘 밤에 얘기 좀 할래? 중요한 거야.	Can we talk tonight? It's important.
+fight	잠깐 혼자 있고 싶어.	혼자 있고 싶어	I need some space.	화난 거 아니야, 잠깐 혼자 있고 싶어.	I'm not mad, I just need some time alone.	It doesn't mean breaking up. It means "I need time".
+fight	상처받았어.	상처받았어	That hurt my feelings.	솔직히 그 말에 상처받았어.	Honestly, that really hurt me.
+fight	우리 싸우지 말자.	싸우지 말자	Let's not fight.	싸우지 말자, 보고 싶어.	Let's not fight, I miss you.
+fight	내가 말이 심했어.	말이 심했어	I went too far.	미안, 내가 말이 심했어.	Sorry, I said too much.
+fight	우리 괜찮은 거지?	괜찮은 거지	Are we okay?	우리 이제 괜찮은 거지?	We're okay now, right?
+fight	화해하자.	화해하자	Let's make up.	싸우기 싫어, 화해하자.	I hate fighting, let's make up.
+fight	용서할게.	용서할게	I forgive you.	괜찮아, 용서할게.	It's okay, I forgive you.
+fight	그렇게 말 안 했어.	말 안 했어	That's not what I said.	잠깐, 나 그렇게 말 안 했어.	Wait, I didn't say that.
+fight	내가 잘못했어.	잘못했어	I was wrong.	네 말이 맞아, 내가 잘못했어.	You're right, I was wrong.
+fight	화내지 마.	화내지 마	Don't be mad.	화내지 마, 설명할게.	Don't be mad, let me explain.
+fight	너한테 화난 거 아니야.	화난 거 아니야	I'm not mad at you.	너한테 화난 거 아니야, 그냥 피곤해.	I'm not mad at you, I'm just tired.
+fight	처음부터 다시 하자.	다시 하자	Let's start over.	우리 처음부터 다시 하자.	Let's start over.
+fight	무슨 말인지 알아.	무슨 말인지	I see your point.	무슨 말인지 알아, 근데 난 생각이 달라.	I see your point, but I think differently.	Good to say before you disagree.
+fight	이제 다 풀렸어.	풀렸어	We're good now.	걱정 마, 이제 다 풀렸어.	Don't worry, we're all good now.	풀리다 means a bad feeling is "untied" or gone.
+fight	속상하게 해서 미안해.	속상하게 해서	Sorry I upset you.	속상하게 해서 정말 미안해.	I'm really sorry I upset you.
+care	내가 있잖아.	내가 있잖아	I'm here for you.	무슨 일이 있어도 내가 있잖아.	Whatever happens, I'm here for you.
+care	넌 할 수 있어!	할 수 있어	You've got this!	내일 중요한 날이지? 넌 할 수 있어!	Big day tomorrow? You've got this!
+care	속상하겠다.	속상하겠다	That sucks.	버스 놓쳤어? 속상하겠다.	You missed the bus? That must be annoying.
+care	몸 잘 챙겨.	몸 잘 챙겨	Take care of yourself.	날씨 추우니까 몸 잘 챙겨.	It's cold, so take care of yourself.
+care	푹 쉬어.	푹 쉬어	Get some good rest.	고생했어, 푹 쉬어.	You worked hard, get some rest.
+care	빨리 나아.	빨리 나아	Get well soon.	빨리 나아! 물 많이 마셔.	Get well soon! Drink lots of water.
+care	다 잘될 거야.	잘될 거야	Everything will be okay.	울지 마, 다 잘될 거야.	Don't cry, everything will be okay.
+care	네가 자랑스러워.	자랑스러워	I'm proud of you.	해냈구나! 네가 자랑스러워.	You did it! I'm proud of you.
+care	조금만 힘내.	힘내	Hang in there.	시험 거의 끝났어, 조금만 힘내!	Exams are almost over, hang in there!	힘내 literally means "find your strength".
+care	얘기하고 싶어?	얘기하고 싶어	Do you want to talk about it?	기운 없어 보여. 얘기하고 싶어?	You look down. Want to talk about it?
+care	최선을 다했잖아.	최선을 다했잖아	You did your best.	괜찮아, 최선을 다했잖아.	It's okay, you did your best.
+care	난 네 편이야.	네 편	I've got your back.	걱정 마, 난 언제나 네 편이야.	Don't worry, I'm always on your side.
+care	무리하지 마.	무리하지 마	Don't push yourself too hard.	바빠도 무리하지 마.	Even if you're busy, don't overdo it.
+care	조심히 들어가.	조심히 들어가	Get home safe.	늦었으니까 조심히 들어가.	It's late, so get home safe.	A very common goodbye between friends and couples.
+care	난 너 믿어.	너 믿어	I believe in you.	난 너 믿어, 잘할 거야.	I believe in you, you'll do great.
+care	너무 자책하지 마.	자책	Don't be so hard on yourself.	너무 자책하지 마.	Don't blame yourself so much.
+care	필요한 거 있으면 말해.	필요한 거	Let me know if you need anything.	필요한 거 있으면 언제든 말해.	If you need anything, just tell me.
+react	오늘 진짜 예쁘다!	예쁘다	You look so pretty today!	그 원피스 진짜 예쁘다!	That dress looks so pretty!	For a man, say 멋있다 (you look cool/handsome).
+react	너무 다정하다.	다정하다	That's so sweet of you.	도시락 싸 줬어? 너무 다정하다.	You packed me lunch? That's so sweet.
+react	귀여워!	귀여워	So cute!	이 강아지 봐, 너무 귀여워!	Look at this puppy, so cute!
+react	좋다!	좋다	I love that!	그림 시작했어? 좋다!	You started painting? I love that!
+react	잘됐다!	잘됐다	Good for you! / That's great!	합격했어? 잘됐다!	You passed? That's great!
+react	웃겨 죽겠어.	웃겨 죽겠어	I'm dying of laughter.	네 얘기 웃겨 죽겠어.	Your story is killing me.
+react	내 일처럼 기뻐.	내 일처럼	I'm so happy for you.	약혼했어? 내 일처럼 기뻐!	You got engaged? I'm as happy as if it were me!
+react	맛있겠다!	맛있겠다	Looks delicious!	맛있겠다! 직접 만들었어?	Looks delicious! Did you make it yourself?
+react	대단하다!	대단하다	That's awesome!	10킬로 뛰었어? 대단하다!	You ran 10 km? That's awesome!
+react	재능 있다.	재능	You're so talented.	이거 네가 그렸어? 재능 있다.	You drew this? You're talented.
+react	덕분에 힘이 났어.	힘이 났어	You made my day.	네 메시지 덕분에 힘이 났어.	Your message really cheered me up.
+react	완전 빠졌어.	완전 빠졌어	I'm obsessed.	이 노래에 완전 빠졌어.	I'm totally obsessed with this song.
+react	완전 너답다.	너답다	That's so you.	분홍 캐리어? 완전 너답다.	A pink suitcase? That's so you.
+react	멋있다!	멋있다	You look cool!	오늘 옷 진짜 멋있다!	Your outfit is so cool today!
+react	부럽다!	부럽다	I'm jealous! (in a good way)	바닷가 근처 새 직장? 부럽다!	A new job near the beach? I'm jealous!
+react	천재야!	천재	You're a genius!	벌써 고쳤어? 천재야!	You fixed it already? You're a genius!
+react	짱이다!	짱	The best! Awesome!	이 카페 진짜 짱이다!	This café is the best!	짱 means "the best" in casual speech.
+culture	무슨 뜻이야?	무슨 뜻	What do you mean?	그게 무슨 뜻이야?	What does that mean?	Say it softly so it doesn't sound like you're arguing.
+culture	이거 한국어로 뭐라고 해?	뭐라고 해	How do you say this in Korean?	이거 한국어로 뭐라고 해?	How do you say this in Korean?
+culture	다시 말해 줄래?	다시 말해	Can you say that again?	미안, 다시 말해 줄래?	Sorry, can you say that again?
+culture	조금 천천히 말해 줄래?	천천히 말해	Could you speak a little slower?	조금 천천히 말해 줄래? 다 알아듣고 싶어.	Could you speak a bit slower? I want to catch everything.
+culture	한국에서는 원래 그래?	한국에서는	Is that normal in Korea?	그거 한국에서는 원래 그래?	Is that just how it is in Korea?
+culture	아직 한국어 배우는 중이야.	배우는 중	I'm still learning Korean.	미안, 아직 한국어 배우는 중이야.	Sorry, I'm still learning Korean.
+culture	내가 맞게 말했어?	맞게 말했어	Did I say that right?	내가 맞게 말했어? 솔직하게 말해 줘.	Did I say it right? Be honest.
+culture	틀리면 고쳐 줘.	고쳐 줘	Correct me if I'm wrong.	틀리면 고쳐 줘, 알았지?	Correct me if I'm wrong, okay?
+culture	이거 반말해도 돼?	반말	Can I talk casually?	너희 부모님께 반말해도 돼?	Is it okay to speak casually to your parents?	반말 is casual speech. Use 존댓말 (polite speech) with elders and people you just met.
+culture	우리나라에서는 ~해.	우리나라	In my country, we ~.	우리나라에서는 생일에 케이크를 먹어.	In my country, we eat cake on birthdays.	Koreans say 우리나라 (our country) for their own country.
+culture	영어 좀 알려 줄게.	알려 줄게	Let me teach you some English.	영어 좀 알려 줄게. "I miss you" 해 봐!	Let me teach you some English. Say "I miss you"!
+culture	진짜 신기하다.	신기하다	That's so interesting.	여름에 축하한다고? 진짜 신기하다.	You celebrate it in summer? That's so interesting.
+culture	이거 뭐라고 불러?	뭐라고 불러	What's this called?	이거 한국어로 뭐라고 불러?	What's this called in Korean?
+culture	번역하면 느낌이 안 살아.	번역하면	It gets lost in translation.	그 농담은 번역하면 느낌이 안 살아.	That joke loses its feel in translation.
+culture	잘 못 알아들었어.	못 알아들었어	I didn't catch that.	미안, 잘 못 알아들었어.	Sorry, I didn't quite catch that.
+culture	부모님 뵙는 거 긴장돼.	부모님 뵙는	I'm nervous to meet your parents.	너희 부모님 뵙는 거 너무 긴장돼.	I'm so nervous about meeting your parents.	뵙다 is the humble word for meeting elders.
+culture	그 말 처음 들어.	처음 들어	I've never heard that word.	그 말 처음 들어. 무슨 뜻이야?	I've never heard that before. What does it mean?

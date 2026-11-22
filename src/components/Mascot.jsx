@@ -1,39 +1,41 @@
-// 우리 앱의 캐릭터 "말랑이". 말랑한 찹쌀떡 몸에 작은 말풍선 꼬리, 머리에 체리 하나.
-// 외곽선 없이 면으로만 그려 작게 써도 부드럽게 보인다.
+// 우리 앱의 캐릭터 "말새". 동그란 노란 아기 새로, 연인·친구와 주고받는 말을 물어다 주는 새.
+// 얇은 외곽선의 2D 일러스트라 작게 써도 바탕에서 또렷하게 보인다.
 // mood: 'happy'(기본, 동그란 눈) 또는 그 밖의 값(웃는 눈)
+const LINE = { stroke: 'var(--mascot-line)', strokeWidth: 2, strokeLinejoin: 'round' }
+
 export default function Mascot({ size = 64, mood = 'happy' }) {
   const face = 'var(--mascot-face)'
+  const cheek = 'var(--mascot-cheek)'
 
   return (
     <svg className="mascot" aria-hidden="true" width={size} height={size} viewBox="0 0 100 100">
-      <ellipse cx="50" cy="95" rx="26" ry="3.5" fill="var(--mascot-shadow)" />
+      <ellipse cx="50" cy="94" rx="28" ry="3.4" fill="var(--mascot-shadow)" />
+      {/* 머리 깃털, 날개, 몸 */}
+      <path d="M44 24 C44 17 49 15 50 20 C51 15 56 17 55 24" fill="var(--mascot-body)" {...LINE} />
+      <path d="M14 62 C7 58 6 68 13 70" fill="var(--mascot-wing)" {...LINE} />
+      <path d="M86 62 C93 58 94 68 87 70" fill="var(--mascot-wing)" {...LINE} />
       <path
-        d="M50 22 C74 22 88 42 88 64 C88 84 72 92 50 92 C30 92 13 86 12 66 L6 74 Q4 76 5 73 L11 60 C13 38 28 22 50 22 Z"
+        d="M50 24 C72 24 86 40 86 60 C86 79 70 89 50 89 C30 89 14 79 14 60 C14 40 28 24 50 24 Z"
         fill="var(--mascot-body)"
+        {...LINE}
       />
-      <ellipse cx="38" cy="36" rx="9" ry="4.5" transform="rotate(-20 38 36)" fill="#fff" opacity="0.6" />
 
       {mood === 'happy' ? (
         <g>
-          <ellipse cx="39" cy="60" rx="3.2" ry="3.8" fill={face} />
-          <ellipse cx="61" cy="60" rx="3.2" ry="3.8" fill={face} />
-          <circle cx="40.1" cy="58.7" r="1.1" fill="#fff" />
-          <circle cx="62.1" cy="58.7" r="1.1" fill="#fff" />
+          <ellipse cx="36" cy="55" rx="3.6" ry="4.3" fill={face} />
+          <ellipse cx="64" cy="55" rx="3.6" ry="4.3" fill={face} />
+          <circle cx="37.3" cy="53.4" r="1.3" fill="#fff" />
+          <circle cx="65.3" cy="53.4" r="1.3" fill="#fff" />
         </g>
       ) : (
-        <g stroke={face} strokeWidth="2.6" fill="none" strokeLinecap="round">
-          <path d="M35 60 Q39 56 43 60" />
-          <path d="M57 60 Q61 56 65 60" />
+        <g stroke={face} strokeWidth="2.4" fill="none" strokeLinecap="round">
+          <path d="M31.5 56 Q36 51 40.5 56" />
+          <path d="M59.5 56 Q64 51 68.5 56" />
         </g>
       )}
-      <ellipse cx="32" cy="68" rx="6" ry="3.6" fill="var(--mascot-cheek)" opacity="0.9" />
-      <ellipse cx="68" cy="68" rx="6" ry="3.6" fill="var(--mascot-cheek)" opacity="0.9" />
-      <path d="M46 67 Q50 70.5 54 67" stroke={face} strokeWidth="2.4" fill="none" strokeLinecap="round" />
-
-      <path d="M56 16 Q57.5 10 62 8" stroke="var(--mascot-stem)" strokeWidth="1.8" fill="none" strokeLinecap="round" />
-      <ellipse cx="63" cy="8" rx="3.4" ry="1.9" transform="rotate(-25 63 8)" fill="var(--mascot-leaf)" />
-      <circle cx="56" cy="20" r="5" fill="var(--mascot-cherry)" />
-      <circle cx="54.4" cy="18.4" r="1.3" fill="#fff" opacity="0.8" />
+      <ellipse cx="26" cy="66" rx="5.6" ry="3.3" fill={cheek} />
+      <ellipse cx="74" cy="66" rx="5.6" ry="3.3" fill={cheek} />
+      <path d="M46 62 L54 62 L50 67.5 Z" fill="var(--mascot-beak)" stroke="var(--mascot-line)" strokeWidth="1.6" strokeLinejoin="round" />
     </svg>
   )
 }

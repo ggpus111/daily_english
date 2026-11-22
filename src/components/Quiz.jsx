@@ -19,7 +19,7 @@ function buildDeck(items, mode) {
 const flipsFor = (mode, card) => mode === 'toMeaning' || (mode === 'review' && card?.source !== 'journal')
 
 export default function Quiz({ items, onClose, onAnswer }) {
-  const { t } = useApp()
+  const { t, learningLang } = useApp()
   const inputId = useId()
   const [mode, setMode] = useState('review')
   const [deck, setDeck] = useState(() => buildDeck(items, 'review'))
@@ -111,7 +111,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
     body = (
       <div className="stack-form">
         <p className="quiz-progress">{t('quizScore', { current: index + 1, total: deck.length, score })}</p>
-        <h2 className="quiz-question" lang="en">
+        <h2 className="quiz-question" lang={learningLang}>
           {card.text}
         </h2>
         {!revealed ? (
@@ -126,7 +126,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
             <div className="quiz-reveal" role="status">
               <p className="quiz-answer">{card.meaning}</p>
               {card.example && (
-                <p className="muted" lang="en">
+                <p className="muted" lang={learningLang}>
                   {card.example}
                 </p>
               )}
@@ -150,7 +150,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
         <p className="quiz-progress">{t('quizScore', { current: index + 1, total: deck.length, score })}</p>
         {blank ? (
           <>
-            <h2 className="quiz-question quiz-sentence" lang="en">
+            <h2 className="quiz-question quiz-sentence" lang={learningLang}>
               {blank.before}
               <span className="quiz-blank" aria-hidden="true">
                 ____
@@ -171,7 +171,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
             id={inputId}
             ref={inputRef}
             value={input}
-            lang="en"
+            lang={learningLang}
             readOnly={result !== null}
             autoComplete="off"
             autoCapitalize="off"

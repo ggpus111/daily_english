@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useApp } from '../context'
+import ChoiceChips from './ChoiceChips'
 import { notificationPermission, requestNotificationPermission } from '../lib/notifications'
 import { isNative } from '../lib/platform'
 import { GOALS, REVIEW_TIMES, planReminders, readSettings, saveSettings } from '../lib/reminders'
@@ -42,16 +43,14 @@ export default function ReminderSettings() {
       <h2 id="reminder-title">{t('reminderTitle')}</h2>
       <p className="muted">{t('reminderBody')}</p>
 
-      <div className="field">
-        <label htmlFor="daily-goal">{t('reminderGoal')}</label>
-        <select id="daily-goal" value={settings.goal} onChange={(event) => change({ goal: Number(event.target.value) })}>
-          {GOALS.map((goal) => (
-            <option key={goal} value={goal}>
-              {goal === 0 ? t('reminderGoalOff') : t('reminderGoalCount', { count: goal })}
-            </option>
-          ))}
-        </select>
-      </div>
+      <ChoiceChips
+        compact
+        label={t('reminderGoal')}
+        name="daily-goal"
+        value={settings.goal}
+        options={GOALS.map((goal) => ({ value: goal, label: goal === 0 ? t('reminderGoalOff') : t('reminderGoalCount', { count: goal }) }))}
+        onChange={(goal) => change({ goal: Number(goal) })}
+      />
 
       <label className="check-row">
         <input
@@ -79,16 +78,14 @@ export default function ReminderSettings() {
       </label>
 
       {settings.reviewReminder && (
-        <div className="field">
-          <label htmlFor="review-time">{t('reminderReviewTime')}</label>
-          <select id="review-time" value={settings.reviewTime} onChange={(event) => change({ reviewTime: event.target.value })}>
-            {REVIEW_TIMES.map((time) => (
-              <option key={time} value={time}>
-                {time}
-              </option>
-            ))}
-          </select>
-        </div>
+        <ChoiceChips
+          compact
+          label={t('reminderReviewTime')}
+          name="review-time"
+          value={settings.reviewTime}
+          options={REVIEW_TIMES.map((time) => ({ value: time, label: time }))}
+          onChange={(reviewTime) => change({ reviewTime })}
+        />
       )}
 
       <p className="tiny-note" role="status">

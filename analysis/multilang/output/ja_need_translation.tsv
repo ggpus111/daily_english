@@ -1,0 +1,239 @@
+# 단계	단어	뜻	예문	(여기에 한국어 해석)	영어 번역(참고)	Tatoeba 번호
+# 해석을 채워 drafts/{언어}_word_examples.tsv에 '단어	예문	해석	번호'로 옮긴다
+beginner	兄	형, 오빠	彼女は私を兄と間違えた。		She took me for my brother.	89277
+beginner	妹	여동생	彼女は私を妹と間違えた。		She mistook me for my sister.	89245
+beginner	道	길	女の人が私に道を尋ねた。		A woman asked me for directions.	147359
+beginner	花	꽃	私は野生の花が好きです。		I like wild flowers.	152531
+beginner	顔	얼굴	私はちょっと顔を出した。		I put in an appearance.	159484
+beginner	スマホ	스마트폰	俺のスマホ、充電してるよ。		My phone is charging.	9725650
+beginner	メール	메일, 메시지	私のメールアドレスです。		This is my email address.	164102
+beginner	帰る	돌아가다	もう私たちが帰る時間だ。		It's time for us to go home.	194188
+beginner	会う	만나다	私は週に一回彼女と会う。		I meet her once a week.	156031
+beginner	聞く	듣다, 묻다	僕は今夜聞くつもりなんだ。		I intend to listen to it tonight.	81889
+beginner	飲む	마시다	私は何か飲む物がほしい。		I want something to drink.	158171
+beginner	知る	알다	私の知る限りではないね。		Not that I know of.	163041
+beginner	作る	만들다	君のために朝食を作るよ。		I'll make breakfast for you.	7427346
+beginner	売る	팔다	私は家を売るつもりです。		I'm going to sell my house.	158021
+beginner	遊ぶ	놀다	僕と遊ぶの好きじゃないの？		Don't you like playing with me?	9966243
+beginner	入る	들어가다	私が入る場所がありますか。		Is there any room for me?	167514
+beginner	出る	나가다	君、何時に出るの。		What time will you leave?	179216
+beginner	持つ	들다, 가지다	僕には車を持つ余裕がない。		I can't afford to keep a car.	82288
+beginner	送る	보내다	招待状を送るときには私も入れてね。		Don't leave me out when you're sending the invitations!	146440
+beginner	着る	입다	私たちは冬に毛織物を着る。		We wear wool in winter.	165399
+beginner	悲しい	슬프다	私は悲しい映画は嫌いだ。		I don't like sad movies.	153157
+beginner	寂しい	외롭다	私はこのごろとても寂しい。		I feel very lonely these days.	161008
+beginner	少ない	적다	私の父は口数が少ない。		My father is a man of few words.	162838
+beginner	遅い	늦다, 느리다	私、歩くのめちゃ遅いの。		I walk very slowly.	10931322
+beginner	暑い	덥다	僕は暑い天気も気にならない。		I don't mind hot weather.	81853
+beginner	寒い	춥다	私は寒いのが好きなんだ。		I like the cold.	9933929
+beginner	冷たい	차갑다	私は、冷たいものが好き。		I like the cold.	162130
+beginner	おいしい	맛있다	君のケーキはおいしいね。		Your cake is delicious.	178543
+beginner	優しい	다정하다	母は優しい目で私を見た。		My mother gazed at me fondly.	82848
+beginner	時々	가끔	彼は時々私に会いに来る。		He comes to meet me sometimes.	105282
+beginner	後ろ	뒤	彼は私の真後ろにいた。		He was just behind me.	105771
+beginner	右	오른쪽	私は右の目が見えない。		I am blind in the right eye.	158402
+beginner	半分	절반	僕には彼の半分の本しかない。		I have only half as many books as he.	82284
+beginner	いいえ	아니요	いいえ、違いますよ、君。		No, no, my dear.	229443
+beginner	おやすみ	잘 자	私は彼女におやすみといった。		I bade good night to her.	153402
+beginner	先週	지난주	私は野球部を先週やめた。		I quit the baseball club last week.	152535
+beginner	去年	작년	去年、俺と結婚したんだ。		She married me last year.	10605057
+beginner	来年	내년	来年、私は外国に留学したい。		I want to study abroad next year.	78608
+beginner	レストラン	레스토랑	私たちはレストランに行きました。		We went to a restaurant.	166112
+beginner	チョコレート	초콜릿	僕のチョコレートはどこだ。		Where's my box of chocolates?	82259
+beginner	お客さん	손님	あの店はお客さんが多い。		That shop has many customers.	230538
+beginner	彼氏	남자친구	私の彼氏、私より随分年下なの。		My boyfriend is quite a bit younger than I am.	10225045
+beginner	結婚	결혼	僕と結婚してくれますか。		Will you marry me?	82308
+beginner	笑う	웃다	君は私を笑うかもしれない。		You may laugh at me.	177227
+beginner	泣く	울다	あなたはまもなく泣くだろう。		You'll be crying before long.	232390
+beginner	怒る	화내다	君が怒るのももっともだ。		You have good reason to be angry.	178922
+beginner	教える	가르치다	俺も教えるのが好きなんだ。		I like teaching, too.	8584617
+beginner	覚える	외우다, 기억하다	僕は覚えるのが遅いんだ。		I'm a slow learner.	12288648
+beginner	始まる	시작되다	あなたの未来は今日始まる。		Your future begins today.	10794390
+beginner	終わる	끝나다	私たちの会話はいつもけんかで終わる。		Our conversation always ends in a quarrel.	167052
+beginner	開ける	열다	私は彼に窓を開けるよう頼んだ。		I asked him to open the window.	118548
+beginner	座る	앉다	彼女は私の横に座るほうがよい。		I'd rather she sat next to me.	89414
+beginner	見せる	보여 주다	私はあなたに見せる写真がある。		I have some pictures to show you.	161748
+beginner	手伝う	돕다	僕は手伝うためにきた。		I've come here to help you.	81862
+beginner	楽しみ	기대	私は釣りが大きな楽しみだ。		I find much enjoyment in fishing.	154983
+intermediate	付き合う	사귀다	君が彼と付き合うのは認められない。		I can't approve of your going out with him.	178904
+intermediate	別れる	헤어지다	私と別れるっていうこと？		Are you breaking up with me?	8749916
+intermediate	告白	고백	私は無理に告白させられた。		I was compelled to confess.	152662
+intermediate	デート	데이트	今晩、私とデートしない？		Do you want to go out with me tonight?	3598791
+intermediate	片思い	짝사랑	それは片思いの恋だった。		It was a one-sided love affair.	204871
+intermediate	遠距離	장거리	あなたが許容できる『遠距離恋愛』の距離は？		How much distance could you accept in a long distance relationship?	519580
+intermediate	記念日	기념일	明日は僕らの記念日だよ。		It's our anniversary tomorrow.	10153781
+intermediate	婚約	약혼	私は婚約を解消しました。		I have broken off our engagement.	74891
+intermediate	見つめる	바라보다	人をじっと見つめるのは無礼である。		It's impolite to stare at people.	144417
+intermediate	焼きもち	질투	焼きもち女は大嫌いだ。		I hate jealous women.	1772470
+intermediate	浮気	바람	私は彼の浮気を責めた。		I accused him of cheating.	1181261
+intermediate	正直	솔직함	私は正直に話しています。		I'm an honest person.	4763647
+intermediate	素直	솔직하고 순수함	彼は素直に私の欠点を指摘した。		He frankly pointed out my faults.	102887
+intermediate	甘える	어리광 부리다	甘えるのも大概にしろ！		Do limit your spoilt behaviour!	11924381
+intermediate	慰める	위로하다	私は彼女を慰めることができる。		I can comfort her.	153195
+intermediate	支える	지탱하다, 힘이 되다	今の俺を支えるものは希望だけ。		Only hope can keep me together now.	172720
+intermediate	応援	응원	何事が起ころうとも、君を応援するよ。		I will stand by you whatever happens.	187498
+intermediate	感謝	감사	私はあなたに感謝する。		I thank you.	161750
+intermediate	謝る	사과하다	あなたは謝る必要がない。		You don't have to apologize.	3271027
+intermediate	許す	용서하다	君がそうすることを許すわけにはいかない。		I can't allow you to do that.	179162
+intermediate	喧嘩	싸움	私は喧嘩を終わらせたい。		I want to put an end to the quarrel.	157305
+intermediate	仲直り	화해	私と仲直りしてくれませんか。		Will you make up with me?	164881
+intermediate	説明	설명	私は彼の説明で納得した。		I was convinced by his explanation.	153837
+intermediate	経験	경험	私はそれをじかに経験した。		I experienced it firsthand.	10919601
+intermediate	思い出	추억	私はそれを思い出します。		It comes to my remembrance.	159708
+intermediate	将来	장래	母は私の将来を案じている。		Mother is anxious about my future.	82946
+intermediate	未来	미래	君には明るい未来がある。		You have a bright future.	178645
+intermediate	過去	과거	僕は、過去を捨てたんだ。		I abandoned my past.	10906712
+intermediate	特別	특별	あなたは別に特別じゃない。		You're not so special.	5748461
+intermediate	普通	보통	私は普通の仕事に飽きた。		I'm tired of working a nine-to-five job.	153041
+intermediate	平和	평화	私達は平和を望みます。		We hope for peace.	151287
+intermediate	不安	불안	君が不安になる必要ないよ。		There's no need for you to get anxious.	9601878
+intermediate	興奮	흥분	私はとても興奮していた。		I was so excited!	4527903
+intermediate	感動	감동	私は彼の音楽に感動した。		I was impressed by his music.	153992
+intermediate	迷う	망설이다, 길을 잃다	君が迷うんじゃないかと心配だ。		I am afraid that you will get lost.	1727012
+intermediate	決める	정하다	それは君の決めることだ。		It is up to you.	205251
+intermediate	選ぶ	고르다	彼を私たちの代表として選ぶ。		We adopt him as our representative.	95866
+intermediate	比べる	비교하다	私達の市は東京に比べるとかなり小さい。		Our city is rather small in comparison with Tokyo.	151963
+intermediate	変わる	바뀌다	俺の気が変わる前に、行け。		Go, before I change my mind.	11199139
+intermediate	やめる	그만두다	君は酒をやめるべきだ。		You should give up drinking.	177155
+intermediate	頑張る	힘내다, 노력하다	頑張るのよ省吾、あなたなら出来るわ。		Come on, Shougo. You can do it.	183653
+intermediate	諦める	포기하다	しかたがないと諦める。		Abide by the inevitable.	216203
+intermediate	期待	기대	私の胸は期待にはずむ。		My heart bounds with expectation.	163852
+intermediate	想像	상상	私は月での生活を想像してみた。		I tried to imagine life on the moon.	157325
+intermediate	経済	경제	観光は私の国の経済にとって重要です。		Tourism is important to the economy of my country.	183805
+intermediate	文化	문화	私はギリシャ文化について学んだ。		I learned about Greek culture.	225764
+intermediate	習慣	습관	あなたは習慣の奴隷ですか？		Are you a creature of habit?	997191
+intermediate	伝統	전통	私は家の伝統を維持していくつもりはなかった。		I was not going to keep up the family tradition.	158026
+intermediate	景色	경치	私は窓からの景色を眺めた。		I gazed out of the window at the landscape.	155357
+intermediate	空気	공기, 분위기	私達には新鮮な空気が必要だ。		We need fresh air.	152013
+intermediate	雰囲気	분위기	私はカフェバーで雰囲気に浸っていた。		I was in a coffee bar soaking in the atmosphere.	161180
+intermediate	環境	환경	僕は新しい環境に順応するのが遅い。		I am slow to adapt myself to new circumstances.	81840
+intermediate	近所	근처, 이웃	私は近所の人と仲が良い。		I'm on good terms with the neighbors.	157572
+intermediate	都会	도시	俺は今、都会に住んでいる。		I'm living in the city.	188362
+intermediate	実家	본가	私の両親は二人とも今、実家にいます。		Both my parents are at home now.	162425
+intermediate	一人暮らし	자취	私は一人暮らしには慣れている。		I am accustomed to living alone.	158455
+intermediate	引っ越す	이사하다	来月に引っ越す予定です。		I am moving next month.	78685
+intermediate	卒業	졸업	私は去年大学を卒業した。		I graduated from university last year.	157646
+intermediate	就職	취직	彼は保険会社に就職した。		He took a job with an insurance company.	100096
+intermediate	残業	야근	わたしは、彼女の残業を免除してやった。		I exempted her from working overtime.	191885
+intermediate	同僚	동료	二人とも私の同僚です。		Both are my colleagues.	123122
+intermediate	面接	면접	彼はその仕事で私が面接した最初の人だった。		He was the first man I interviewed for the job.	112861
+intermediate	授業	수업	私は彼の授業がなつかしい。		I miss his lessons so much.	153886
+intermediate	成績	성적	私は今年は成績が悪かった。		I have had a bad report this year.	156930
+intermediate	運動	운동	私は毎朝軽い運動をする。		I take light exercise every morning.	152740
+intermediate	体重	체중	私は体重が減らなかった。		I haven't lost weight.	155247
+intermediate	ダイエット	다이어트	私はダイエットしています。		I'm on a diet.	159635
+intermediate	睡眠	수면	私は十分な睡眠をとった。		I had a good sleep.	156015
+intermediate	掃除	청소	私は彼に床を掃除させた。		I made him sweep the floor.	154105
+intermediate	洗濯	빨래	私は掃除や洗濯が嫌いです。		I hate cleaning and doing laundry.	10982419
+intermediate	料理する	요리하다	夫は私より上手に料理する。		My husband is better able to cook than I.	84992
+intermediate	割引	할인	夜間の割引はありますか。		Are there special evening rates?	79700
+intermediate	切符	표	僕はただで切符をもらった。		I got the ticket for nothing.	82056
+intermediate	乗り換え	환승	私は上野駅で乗り換えた。		I changed trains at Ueno Station.	155809
+intermediate	渋滞	교통 체증	渋滞のため私達は飛行機に乗り遅れた。		We missed our plane because of the traffic jam.	147986
+intermediate	時差	시차	私はまだ時差ぼけに苦しんでいます。		I'm still suffering from jet lag.	158880
+intermediate	お土産	기념품	あなたは国のお土産を送った。		You sent gifts from your country.	5388430
+intermediate	観光	관광	僕たち、横浜を観光したよ。		We did the sights of Yokohama.	9550094
+intermediate	温泉	온천	私はひなびた温泉が好きだ。		I like hot springs off the beaten track.	159034
+intermediate	お祭り	축제	彼らはお祭りを中止した。		They cancelled the festival.	2349395
+intermediate	お正月	설날	お正月に私と踊ったお友達かも〜？		Isn't that the friend I danced with on New Year's?	3409701
+intermediate	お盆	오봉 (일본의 추석)	お盆が近づいてきた。		The Bon Festival is near at hand.	226586
+intermediate	着物	기모노	私は急いで着物を着た。		I hurried my clothes on.	157681
+intermediate	味	맛	私は玉ねぎの味が嫌いだ。		I don't like the taste of onions.	157580
+intermediate	甘い	달다	私は甘いものが好きだ。		I have a fondness for sweets.	157810
+intermediate	辛い	맵다	私は辛いので韓国料理が好きです。		I love Korean food because of the hot spices.	155681
+intermediate	しょっぱい	짜다	この料理、しょっぱいよ。		This food is too salty.	9831568
+intermediate	苦い	쓰다	私は苦いものが好きだ。		I have a fancy for bitter things.	157543
+intermediate	喉	목	そのカラーは私の喉にきつすぎる。		The collar is too tight round my throat.	213276
+intermediate	態度	태도	あなたの態度は良くない。		You are rude.	233110
+intermediate	本音	속마음	彼の本音が分からない。		I don't know what his real intentions are.	8876195
+intermediate	遠慮	사양, 조심	遠慮なく私に質問して下さい。		Please feel free to ask me questions.	188639
+intermediate	迷惑	폐	僕は彼に迷惑をかけてしまった。		I have gotten him into trouble.	81796
+intermediate	敬語	존댓말	日本語には敬語があります。		The Japanese language has honorific expressions.	122356
+intermediate	方言	사투리	大阪の方言は聞き取り難い。		It's hard to catch words in the Osakan dialect.	137547
+intermediate	翻訳	번역	私は翻訳は無料ではやってない。		I don't translate for free.	2197705
+intermediate	通訳	통역	叔父は僕に通訳をやらせた。		My uncle made me serve as interpreter.	147907
+intermediate	会話	회화, 대화	私たちは酒と会話に耽った。		We indulged in conversation and drink.	165659
+intermediate	通知	알림	あなたは住所の変更を郵便局に通知したか。		Did you inform the post office of the change of your address?	231861
+intermediate	充電	충전	俺のスマホ、充電してるよ。		My phone is charging.	9725650
+intermediate	画面	화면	画面にひびが入ってる。		My screen is cracked.	10616336
+intermediate	動画	동영상	私が見るのはゆっくり動画だけです。		All I watch is let's plays with text-to-speech narration.	12969921
+intermediate	検索	검색	Ｂｉｎｇで検索させてよ。		Let me Google it using Bing.	10276563
+intermediate	登録	등록	チャンネル登録お願いします。		Please subscribe to my channel.	10984804
+intermediate	変更	변경	私は彼に計画を変更させた。		I made him change his plan.	154164
+intermediate	急ぐ	서두르다	私たちは急ぐ必要がある。		We need to hurry.	2040883
+intermediate	慌てる	허둥대다	慌てることは無駄を作る。		Haste makes waste.	173597
+intermediate	落ち着く	진정하다	私はジェーンに落ち着くように言いました。		I told Jane to calm herself.	160646
+intermediate	驚く	놀라다	真実を知ったら君は驚くだろう。		If you knew the truth, you'd be surprised.	144977
+intermediate	悩む	고민하다	そのことで悩むな。		Don't worry about that.	213186
+intermediate	困る	곤란하다	僕はしばしばお金に困る。		I am often in difficulties.	82088
+intermediate	疲れる	지치다	私はこの仕事は疲れると思う。		I think that this work is tiring.	160914
+intermediate	休む	쉬다	私はときどき学校を休む。		I am absent from school on occasion.	159328
+intermediate	目覚める	깨어나다	私が目覚めるともう日は高く昇っていた。		It was broad daylight when I woke up.	167395
+intermediate	探す	찾다	私は駅で切符を探すのに大変苦労した。		I had great difficulty in finding my ticket at the station.	158269
+intermediate	落とす	떨어뜨리다	私達は命を落とす危険がある。		We're in danger of losing our lives.	151268
+intermediate	拾う	줍다	タクシーを拾うのに苦労した。		I had trouble getting a taxi.	203697
+intermediate	貸す	빌려주다	彼は君に本を貸すだろう。		He'll lend you his book.	108051
+intermediate	借りる	빌리다	お金を借りる事は私の主義に反する。		It is against my principles to borrow money.	227221
+intermediate	返す	돌려주다	君はいつも言い返す。		You always talk back to me, don't you?	177921
+intermediate	届く	도착하다, 닿다	ここからでも声は届くよ。		You can make yourself heard even from here.	224786
+intermediate	受け取る	받다	この金は君が受け取るべきものだ。		This money is due to you.	222292
+intermediate	渡す	건네다	君に渡す物がある。		I have something to give you.	1866514
+intermediate	誘う	권하다, 꼬시다	宇宙の果てへと私を誘う。		I am invited to the end of the universe.	189882
+intermediate	断る	거절하다	僕だったら、断るな。		I'd say no if I were you.	10230338
+intermediate	頼む	부탁하다	僕はあの人に頼む気持ちはありません。		I'm not about to ask him.	82132
+intermediate	伝える	전하다	私たちは言葉によって意志を伝える。		We use words to communicate.	165867
+intermediate	気づく	깨닫다	彼女は後で私の真意に気づくでしょう。		She may realize later on what I meant.	90170
+intermediate	感じる	느끼다	私はときどき悲しく感じる。		I feel sad every now and then.	159320
+intermediate	信じる	믿다	君の言うことを信じるよ。		I believe you.	178569
+intermediate	疑う	의심하다	わたしはそれの真意を疑う。		I doubt whether it is true or not.	191836
+intermediate	育てる	키우다	母は私たちを育てるために一生懸命働いた。		My mother worked hard in order to rear us.	82981
+intermediate	似る	닮다	息子は父親に似る。		Like father, like son.	139908
+intermediate	懐かしい	그립다	この歌は私に懐かしい昔を思い出させる。		This song reminds me of the good old days.	222776
+intermediate	悔しい	분하다	決勝戦で負けるほど悔しいものはない。		Nothing is more disappointing than to lose in the finals.	175912
+intermediate	賑やか	북적임	この通りは賑やかだ。		This street is lively.	220474
+intermediate	便利	편리함	私の家は駅に近くて便利です。		My house is conveniently close to the station.	163969
+intermediate	不便	불편함	私は田舎生活の不便さは我慢できない。		I can't bear the inconvenience of country life.	162209
+intermediate	丁寧	정중함	彼女は私に丁寧に頭を下げた。		She bowed to me politely.	89463
+intermediate	適当	대충, 적당함	私は適当な答えを探し求めた。		I cast about for a suitable reply.	154953
+intermediate	真面目	성실함	私の性格は全然真面目ではない！		My personality is not at all serious!	2480804
+intermediate	格好いい	멋있다	私が格好いいと思いますか。		Do you think I'm cool?	1590756
+intermediate	可愛らしい	사랑스럽다	本当に可愛らしい人ね。		You're so very adorable.	8907378
+intermediate	明るい	밝다	私は明るい色が好きです。		I like light colors.	1820284
+intermediate	暗い	어둡다	僕は暗いうちに起きた。		I got up while it was still dark.	82003
+intermediate	優しさ	다정함	彼女の優しさは私にとって良い手本だ。		She is a model of kindness for me.	93872
+intermediate	一生懸命	열심히	私は一生懸命勉強している。		I am studying very hard.	158449
+intermediate	やっぱり	역시	やっぱり、君はバカだね。		Like I thought, you're an idiot.	4216106
+intermediate	さっき	아까	私は仕事でさっきつきました。		I just flew in on business.	156640
+intermediate	そろそろ	슬슬	君もそろそろ結婚してもいい年頃だね。		It's about time you got married.	176807
+intermediate	たぶん	아마	たぶん、私が間違っていた。		Maybe I was mistaken.	5751905
+intermediate	意外	의외	君って、意外に純情だね。		I'm surprised that you're so naïve.	177469
+intermediate	偶然	우연	私は旧友に偶然であった。		I ran into an old friend of mine.	157664
+intermediate	運命	운명	私は運命に満足している。		I am contented with my lot.	158379
+intermediate	奇跡	기적	あなたは奇跡を信じますか？		Do you believe in miracles?	2664703
+intermediate	約束する	약속하다	仕事は俺が見つけてやる。約束するよ。		I promise I'll find you a job.	11257872
+intermediate	待ち合わせ	만나기로 한 약속	私たちはいつも学校へ行く途中で待ち合わせた。		We used to meet on our way to school.	166609
+intermediate	手作り	손수 만듦	このラグは手作りなんだよ。		This rug is handmade.	8720575
+beginner	お姉さん	언니, 누나	あの方、あなたのお姉さん？		Is that your sister?	8689098
+beginner	おばあさん	할머니	私はおばあさんに席を譲った。		I gave my seat to the old lady.	1166902
+beginner	おじいさん	할아버지	私はおじいさんの家に一度も行ったことがない。		I've never been to my grandfather's house.	161297
+beginner	風	바람	私は風のように走った。		I ran like the wind.	2633810
+beginner	椅子	의자	俺のお気に入り椅子だぞ。		I love that chair.	188392
+beginner	かばん	가방	このかばんは私のものだ。		This bag is mine.	223895
+intermediate	成長	성장	あなたは成長しました。		You've grown up.	4757713
+intermediate	才能	재능	僕には多くの才能がある。		I have many abilities.	82285
+intermediate	自信	자신감	私は足には自信がある。		I am a good walker.	155300
+intermediate	勇気	용기	私は彼の勇気に驚愕した。		I marveled at his courage.	153779
+intermediate	印象	인상	それは深い印象を私に与えた。		That made a profound impression on me.	205060
+intermediate	魅力	매력	私の魅力って何だと思う？		What do you find attractive about me?	3337873
+intermediate	相手	상대	私は話し相手がはほしい。		I want somebody to talk to.	152240
+intermediate	新婚	신혼	お二人は、新婚さんなのよ。		Those two are a newly-wed couple.	11737674
+intermediate	家事	집안일	私の家事は皿を洗うことです。		My housework is to wash the dishes.	163942
+intermediate	節約	절약	私たちは時間とお金を節約したほうがよい。		We had better save our time and money.	165710
+intermediate	貯金	저금	私は貯金を使い果たしてしまった。		I've run out of my savings.	155074
+intermediate	楽器	악기	あなたは楽器を演奏しますよね。		You play a musical instrument, don't you?	232151
+intermediate	泊まる	묵다	彼は上京するたびに私の家に泊まる。		Whenever he comes up to Tokyo, he stays at our house.	104022
+intermediate	迎える	맞이하다	彼女は私に駅で出迎えるように頼みました。		She asked me to meet her at the station.	89525
+intermediate	別々	따로따로	俺たち、別々の学校に行ってたんだ。		We went to different schools.	9331187
+intermediate	一生	평생	芸術は私の一生の仕事だ。		Art is my lifework.	176031
+intermediate	最高	최고	私は最高に幸せだ。		I am as happy as can be.	156866
+intermediate	仲良し	사이 좋음	私たちね、仲良しなんだ。		We are good friends.	9075041

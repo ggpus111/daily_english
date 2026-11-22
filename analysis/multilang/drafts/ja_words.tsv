@@ -1,0 +1,318 @@
+# ja 단어 원고(대화 주제별). 첫 칸이 주제 id: love bond feel talk trip food life. 기초 낱말(zipf 5.3 이상)은 뺐다. to_themes.py로 바꾼 뒤 직접 고쳐도 된다.
+# 주제	단어	뜻	[예문]	[예문 해석]
+bond	友達	친구
+bond	家族	가족
+love	愛	사랑
+love	恋	연애, 사랑
+talk	質問	질문
+talk	答え	대답
+trip	旅行	여행
+talk	メール	메일, 메시지
+talk	話す	이야기하다
+love	会いたい	보고 싶다
+feel	嬉しい	기쁘다
+feel	悲しい	슬프다
+feel	寂しい	외롭다
+love	優しい	다정하다
+love	大切	소중함
+feel	冬	겨울
+trip	空港	공항
+trip	ホテル	호텔
+love	恋人	연인
+love	彼氏	남자친구
+love	結婚	결혼
+trip	約束	약속
+talk	返事	답장
+talk	連絡	연락
+feel	気分	기분
+feel	笑う	웃다
+feel	泣く	울다
+feel	怒る	화내다
+bond	手伝う	돕다
+feel	心配	걱정
+feel	安心	안심
+love	付き合う	사귀다
+love	別れる	헤어지다
+love	告白	고백
+love	デート	데이트
+love	片思い	짝사랑
+bond	両思い	서로 좋아함
+love	遠距離	장거리
+love	記念日	기념일
+love	婚約	약혼
+love	指輪	반지
+love	抱きしめる	꼭 안다
+love	キス	키스
+love	手をつなぐ	손을 잡다
+life	見つめる	바라보다
+life	照れる	쑥스러워하다
+love	焼きもち	질투
+love	浮気	바람
+bond	信頼	신뢰
+bond	正直	솔직함
+bond	素直	솔직하고 순수함
+life	我慢	참음
+love	甘える	어리광 부리다
+bond	慰める	위로하다
+bond	励ます	격려하다
+life	支える	지탱하다, 힘이 되다
+bond	応援	응원
+bond	感謝	감사
+bond	謝る	사과하다
+bond	許す	용서하다
+bond	喧嘩	싸움
+bond	仲直り	화해
+bond	誤解	오해
+talk	説明	설명
+life	性格	성격
+life	趣味	취미
+life	経験	경험
+life	思い出	추억
+life	将来	장래
+life	未来	미래
+life	過去	과거
+life	普段	평소
+life	特別	특별
+life	大事	중요함
+life	自由	자유
+life	平和	평화
+feel	幸せ	행복
+feel	不安	불안
+feel	緊張	긴장
+feel	興奮	흥분
+feel	感動	감동
+feel	後悔	후회
+feel	迷う	망설이다, 길을 잃다
+life	決める	정하다
+life	選ぶ	고르다
+life	比べる	비교하다
+life	変わる	바뀌다
+life	続ける	계속하다
+life	やめる	그만두다
+life	頑張る	힘내다, 노력하다
+life	諦める	포기하다
+life	期待	기대
+life	想像	상상
+trip	準備	준비
+trip	予定	예정, 계획
+trip	計画	계획
+trip	目標	목표
+life	夢中	몰두함
+trip	機会	기회
+life	経済	경제
+life	文化	문화
+life	習慣	습관
+life	伝統	전통
+life	季節	계절
+life	景色	경치
+life	空気	공기, 분위기
+life	雰囲気	분위기
+life	環境	환경
+trip	地図	지도
+trip	住所	주소
+bond	近所	근처, 이웃
+life	都会	도시
+life	田舎	시골
+life	実家	본가
+life	一人暮らし	자취
+trip	引っ越す	이사하다
+trip	留学	유학
+life	卒業	졸업
+life	就職	취직
+life	給料	월급
+life	残業	야근
+life	上司	상사
+bond	同僚	동료
+life	会議	회의
+life	締め切り	마감
+life	面接	면접
+life	試験	시험
+life	合格	합격
+life	宿題	숙제
+life	授業	수업
+life	成績	성적
+food	健康	건강
+food	風邪	감기
+food	熱	열
+food	薬	약
+food	怪我	부상
+food	運動	운동
+food	体重	체중
+food	ダイエット	다이어트
+food	睡眠	수면
+food	疲れ	피로
+food	ストレス	스트레스
+food	休憩	휴식
+life	散歩	산책
+life	掃除	청소
+life	洗濯	빨래
+food	料理する	요리하다
+life	買い物	쇼핑
+life	値段	가격
+life	割引	할인
+life	財布	지갑
+food	鍵	열쇠
+life	傘	우산
+trip	荷物	짐
+trip	切符	표
+trip	乗り換え	환승
+trip	渋滞	교통 체증
+trip	事故	사고
+trip	時差	시차
+trip	飛行機	비행기
+trip	パスポート	여권
+trip	お土産	기념품
+trip	観光	관광
+trip	温泉	온천
+trip	お祭り	축제
+trip	花火	불꽃놀이
+trip	お正月	설날
+trip	お盆	오봉 (일본의 추석)
+life	着物	기모노
+food	味	맛
+food	甘い	달다
+food	辛い	맵다
+food	しょっぱい	짜다
+food	苦い	쓰다
+food	お腹	배
+food	喉	목
+food	背中	등
+food	髪	머리카락
+feel	笑顔	웃는 얼굴
+feel	涙	눈물
+feel	表情	표정
+talk	態度	태도
+talk	噂	소문
+talk	秘密	비밀
+talk	嘘	거짓말
+talk	冗談	농담
+life	本気	진심
+feel	本音	속마음
+talk	建前	겉으로 하는 말	本音と建前は違う。	속마음과 겉말은 달라.
+life	遠慮	사양, 조심
+life	迷惑	폐
+talk	挨拶	인사
+talk	敬語	존댓말
+talk	方言	사투리
+talk	発音	발음
+talk	翻訳	번역
+talk	通訳	통역
+talk	会話	회화, 대화
+talk	文章	문장
+talk	単語	단어
+talk	文法	문법
+talk	意見	의견
+talk	相談	상담
+talk	連絡先	연락처
+talk	既読	읽음 표시
+talk	通知	알림
+life	充電	충전
+talk	画面	화면
+talk	配信	방송, 스트리밍
+talk	検索	검색
+talk	登録	등록
+trip	予約	예약
+trip	キャンセル	취소
+trip	変更	변경
+trip	遅刻	지각
+life	間に合う	시간에 맞추다
+life	急ぐ	서두르다
+feel	慌てる	허둥대다
+feel	落ち着く	진정하다
+feel	驚く	놀라다
+feel	喜ぶ	기뻐하다
+feel	悩む	고민하다
+feel	困る	곤란하다
+life	疲れる	지치다
+life	休む	쉬다
+life	眠る	잠들다
+life	目覚める	깨어나다
+life	見つける	찾아내다
+life	探す	찾다
+life	落とす	떨어뜨리다
+life	拾う	줍다
+life	貸す	빌려주다
+life	借りる	빌리다
+life	返す	돌려주다
+life	払う	내다, 지불하다
+life	届く	도착하다, 닿다
+life	受け取る	받다
+life	渡す	건네다
+life	誘う	권하다, 꼬시다
+bond	断る	거절하다
+bond	頼む	부탁하다
+life	伝える	전하다
+life	気づく	깨닫다
+life	感じる	느끼다
+bond	信じる	믿다
+bond	疑う	의심하다
+life	守る	지키다
+life	育てる	키우다
+feel	似合う	어울리다
+life	似る	닮다
+feel	懐かしい	그립다
+feel	恥ずかしい	부끄럽다
+feel	羨ましい	부럽다
+feel	悔しい	분하다
+feel	怖い	무섭다
+feel	眠い	졸리다
+life	うるさい	시끄럽다
+life	静か	조용함
+life	賑やか	북적임
+life	便利	편리함
+life	不便	불편함
+life	丁寧	정중함
+life	適当	대충, 적당함
+life	真面目	성실함
+trip	素敵	멋짐
+life	格好いい	멋있다
+love	可愛らしい	사랑스럽다
+life	明るい	밝다
+life	暗い	어둡다
+love	優しさ	다정함
+food	一生懸命	열심히
+life	なかなか	꽤, 좀처럼
+life	やっぱり	역시
+life	きっと	분명
+life	ずっと	계속
+life	さっき	아까
+life	そろそろ	슬슬
+life	ちょうど	딱, 마침
+life	ほとんど	거의
+life	必ず	반드시
+life	たぶん	아마
+life	実は	사실은
+life	やっと	겨우, 드디어
+life	意外	의외
+life	当然	당연함
+life	偶然	우연
+love	運命	운명
+love	奇跡	기적
+trip	約束する	약속하다
+trip	待ち合わせ	만나기로 한 약속
+life	手作り	손수 만듦
+love	風	바람
+life	成長	성장
+life	努力	노력
+life	才能	재능
+life	自信	자신감
+life	勇気	용기
+bond	責任	책임
+life	印象	인상
+life	魅力	매력
+love	恋愛	연애
+love	結婚式	결혼식
+love	新婚	신혼
+life	家事	집안일
+food	節約	절약
+life	貯金	저금
+life	楽器	악기
+trip	旅	여행
+life	撮る	찍다
+life	泊まる	묵다
+life	迎える	맞이하다
+life	別々	따로따로
+love	一生	평생
+life	毎晩	매일 밤
+life	最悪	최악
+life	仲良し	사이 좋음

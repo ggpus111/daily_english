@@ -202,6 +202,19 @@ create policy "admins write pack fixes" on public.pack_fixes
 grant select on public.pack_fixes to anon, authenticated;
 grant insert, update, delete on public.pack_fixes to authenticated;
 
+-- ---------- 앱 안 AI 일기 교정 ----------
+-- 서버 함수 supabase/functions/correct-journal이 Google Gemini(무료 요금제)로 교정을 받아 온다.
+-- 무료 한도를 지키고 남용을 막으려고 사용자마다 하루 사용 횟수를 센다. 앱에서는 읽거나 쓸 수 없고(정책 없음),
+-- 서버 함수만 service role로 쓴다. 교정 내용 자체는 저장하지 않는다(일기에 붙이는 건 사용자가 저장할 때).
+create table if not exists public.ai_usage (
+  user_id uuid not null references auth.users (id) on delete cascade,
+  day date not null,
+  count integer not null default 0 check (count >= 0),
+  primary key (user_id, day)
+);
+
+alter table public.ai_usage enable row level security;
+
 -- ---------- 웹 알림(브라우저를 닫아도 오는 알림) ----------
 -- 웹은 탭이 닫히면 앱이 알림을 보낼 수 없어서, 앱이 계획한 알림(src/lib/reminders.js)을 서버 대기열에 올리고
 -- 서버 함수(supabase/functions/send-reminders)가 10분마다 보낼 때가 된 것을 웹 푸시로 보낸다.

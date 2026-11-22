@@ -46,7 +46,7 @@ describe('앱 흐름', () => {
     const input = screen.getByLabelText('단어 / 표현')
     expect(input.getAttribute('aria-invalid')).toBe('true')
     const error = document.getElementById(input.getAttribute('aria-describedby'))
-    expect(error.textContent).toBe('꼭 입력해 주세요.')
+    expect(error.textContent).toBe('여기를 채워 주세요.')
     expect(localStorage.getItem('savedWords')).toBeNull()
   })
 
@@ -70,7 +70,7 @@ describe('앱 흐름', () => {
     localStorage.setItem('onboarded', '1')
     window.location.hash = '#nowhere'
     render(<App />)
-    expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('오늘은 어떤 표현을 배워 볼까요?')
+    expect(screen.getByRole('heading', { level: 1 }).textContent).toContain('오늘은 어떤 말을 모아 볼까요?')
   })
 
   it('기록이 없는 첫 실행에는 홈 대신 안내를 보여 준다', () => {

@@ -32,6 +32,21 @@ describe('빈칸 만들기', () => {
     expect(blankOf('cat', 'Let me educate you.')).toBeNull()
   })
 
+  it('일본어·중국어는 띄어쓰기 없이 글자 그대로 찾는다', () => {
+    expect(blankOf('会いたい', '本当に会いたいよ。')).toEqual({ before: '本当に', answer: '会いたい', after: 'よ。' })
+    expect(blankOf('想你', '我好想你啊。').answer).toBe('想你')
+  })
+
+  it('한국어는 어미가 바뀌어도 어절 끝까지 찾는다', () => {
+    expect(blankOf('보고 싶어요', '오늘 너무 보고 싶었어요.').answer).toBe('보고 싶었어요')
+  })
+
+  it('스페인어·프랑스어는 악센트 글자를 낱말의 일부로 본다', () => {
+    expect(blankOf('mañana', 'Nos vemos mañana.').answer).toBe('mañana')
+    expect(blankOf('été', "C'était un bel été.").answer).toBe('été')
+    expect(blankOf('ver', 'Quiero verte.')).toBeNull()
+  })
+
   it('예문이 없거나, 단어가 없거나, 예문 전체가 단어뿐이면 빈칸을 만들지 않는다', () => {
     expect(blankOf('mess', '')).toBeNull()
     expect(blankOf('mess', 'My room is clean.')).toBeNull()

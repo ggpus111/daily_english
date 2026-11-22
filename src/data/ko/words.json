@@ -1,0 +1,2926 @@
+{
+ "source": {
+  "corpus": "Tatoeba (tatoeba.org) kor sentences, CC BY 2.0 FR",
+  "sentences": 15966,
+  "note": "단어는 연인·친구와의 대화에서 쓰는 말을 사람이 골랐고(analyze_words.py로 점검), 뜻은 Daily English가 직접 썼습니다(AI 도움)."
+ },
+ "levels": [
+  {
+   "id": "love",
+   "title": {
+    "ko": "연애·애정",
+    "en": "Love & romance"
+   },
+   "items": [
+    {
+     "id": "ko-w-love001",
+     "word": "고백",
+     "meaning": "confession of love",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love002",
+     "word": "짝사랑",
+     "meaning": "one-sided love",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love003",
+     "word": "데이트",
+     "meaning": "date",
+     "sentences": 7,
+     "example": "저랑 데이트하실래요?",
+     "exampleKo": "Would you like to go on a date with me?",
+     "tatoeba": 8119565
+    },
+    {
+     "id": "ko-w-love004",
+     "word": "키스",
+     "meaning": "kiss",
+     "sentences": 20,
+     "example": "너에게 키스하고 싶다.",
+     "exampleKo": "I want to kiss you.",
+     "tatoeba": 11106177
+    },
+    {
+     "id": "ko-w-love005",
+     "word": "뽀뽀",
+     "meaning": "peck, kiss",
+     "sentences": 3,
+     "example": "그는 그의 딸 이마에 뽀뽀를 했다",
+     "exampleKo": "He kissed his daughter on the forehead.",
+     "tatoeba": 8306492
+    },
+    {
+     "id": "ko-w-love006",
+     "word": "안다",
+     "meaning": "to hug",
+     "sentences": 37,
+     "example": "나는 네 엄마를 안다.",
+     "exampleKo": "I know your mother.",
+     "tatoeba": 11106717
+    },
+    {
+     "id": "ko-w-love007",
+     "word": "포옹",
+     "meaning": "embrace",
+     "sentences": 1,
+     "example": "그 사람들은 서로 포옹했어.",
+     "exampleKo": "They hugged.",
+     "tatoeba": 8363450
+    },
+    {
+     "id": "ko-w-love008",
+     "word": "손잡다",
+     "meaning": "to hold hands",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love009",
+     "word": "반지",
+     "meaning": "ring",
+     "sentences": 3,
+     "example": "어, 반지는 어쨌어?",
+     "exampleKo": "Hey, where's your ring?",
+     "tatoeba": 13161193
+    },
+    {
+     "id": "ko-w-love010",
+     "word": "약혼",
+     "meaning": "engagement",
+     "sentences": 5,
+     "example": "한번이라도 약혼한 적 있어?",
+     "exampleKo": "Have you ever been engaged?",
+     "tatoeba": 8362254
+    },
+    {
+     "id": "ko-w-love011",
+     "word": "결혼",
+     "meaning": "marriage",
+     "sentences": 71,
+     "example": "나는 로리랑 결혼했어.",
+     "exampleKo": "I'm married to Laurie.",
+     "tatoeba": 13755077
+    },
+    {
+     "id": "ko-w-love012",
+     "word": "신혼",
+     "meaning": "newlywed",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love013",
+     "word": "기념일",
+     "meaning": "anniversary",
+     "sentences": 1,
+     "example": "결혼한 남자가 절대 잊으면 안 되는 건 결혼기념일이야.",
+     "exampleKo": "One thing a married man should never forget is his wedding anniversary.",
+     "tatoeba": 13755152
+    },
+    {
+     "id": "ko-w-love014",
+     "word": "사귀다",
+     "meaning": "to date, to go out",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love015",
+     "word": "헤어지다",
+     "meaning": "to break up",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love016",
+     "word": "질투",
+     "meaning": "jealousy",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love017",
+     "word": "바람",
+     "meaning": "cheating",
+     "sentences": 18,
+     "example": "바람이 거세졌다.",
+     "exampleKo": "The wind picked up.",
+     "tatoeba": 11597177
+    },
+    {
+     "id": "ko-w-love018",
+     "word": "설레다",
+     "meaning": "to be excited (flutter)",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love019",
+     "word": "자기",
+     "meaning": "babe, honey",
+     "sentences": 108,
+     "example": "내가 어디서 자기로 되어 있어?",
+     "exampleKo": "Where am I supposed to sleep?",
+     "tatoeba": 8363511
+    },
+    {
+     "id": "ko-w-love020",
+     "word": "애인",
+     "meaning": "lover, partner",
+     "sentences": 4,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love021",
+     "word": "연인",
+     "meaning": "couple, lover",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love022",
+     "word": "그립다",
+     "meaning": "to long for",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love023",
+     "word": "다정하다",
+     "meaning": "to be sweet, affectionate",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love024",
+     "word": "귀엽다",
+     "meaning": "to be cute",
+     "sentences": 3,
+     "example": "둘 다 너무 귀엽다.",
+     "exampleKo": "Both of them are very cute.",
+     "tatoeba": 11106775
+    },
+    {
+     "id": "ko-w-love025",
+     "word": "예쁘다",
+     "meaning": "to be pretty",
+     "sentences": 5,
+     "example": "이 여자 엄청 예쁘다.",
+     "exampleKo": "This woman is very good looking.",
+     "tatoeba": 1587130
+    },
+    {
+     "id": "ko-w-love026",
+     "word": "멋있다",
+     "meaning": "to be cool, handsome",
+     "sentences": 4,
+     "example": "너는 정말 멋있다.",
+     "exampleKo": "You're very nice.",
+     "tatoeba": 11106153
+    },
+    {
+     "id": "ko-w-love027",
+     "word": "잘생기다",
+     "meaning": "to be handsome",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love028",
+     "word": "로맨틱하다",
+     "meaning": "to be romantic",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love029",
+     "word": "달콤하다",
+     "meaning": "to be sweet",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love030",
+     "word": "서프라이즈",
+     "meaning": "surprise",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love031",
+     "word": "꽃다발",
+     "meaning": "bouquet",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love032",
+     "word": "운명",
+     "meaning": "fate",
+     "sentences": 3,
+     "example": "운명을 받아들여라.",
+     "exampleKo": "Accept your fate.",
+     "tatoeba": 11104751
+    },
+    {
+     "id": "ko-w-love033",
+     "word": "인연",
+     "meaning": "fate, connection",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love034",
+     "word": "평생",
+     "meaning": "lifetime",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love035",
+     "word": "영원히",
+     "meaning": "forever",
+     "sentences": 5,
+     "example": "기쁨도 슬픔도 영원히 계속되지는 않아.",
+     "exampleKo": "Neither joy nor sorrow can last forever.",
+     "tatoeba": 13755195
+    },
+    {
+     "id": "ko-w-love036",
+     "word": "곁",
+     "meaning": "side, beside",
+     "sentences": 3,
+     "example": "왕비가 왕 곁에 서 있었다.",
+     "exampleKo": "The queen stood by the king.",
+     "tatoeba": 14103243
+    },
+    {
+     "id": "ko-w-love037",
+     "word": "눈빛",
+     "meaning": "look in the eyes",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love038",
+     "word": "볼",
+     "meaning": "cheek",
+     "sentences": 69,
+     "example": "내가 찾아 볼게.",
+     "exampleKo": "I'll find them.",
+     "tatoeba": 3681018
+    },
+    {
+     "id": "ko-w-love039",
+     "word": "부끄럽다",
+     "meaning": "to be shy",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love040",
+     "word": "수줍다",
+     "meaning": "to be shy",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love041",
+     "word": "장거리 연애",
+     "meaning": "long-distance relationship",
+     "sentences": 1,
+     "example": "장거리 연애 해본 적 있어?",
+     "exampleKo": "Have you ever been in a long distance relationship?",
+     "tatoeba": 8362286
+    },
+    {
+     "id": "ko-w-love042",
+     "word": "소개팅",
+     "meaning": "blind date",
+     "sentences": 1,
+     "example": "소개팅 해본 적 있어?",
+     "exampleKo": "Have you ever been on a blind date?",
+     "tatoeba": 8362269
+    },
+    {
+     "id": "ko-w-love043",
+     "word": "썸",
+     "meaning": "situationship, talking stage",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-love044",
+     "word": "커플",
+     "meaning": "couple",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    }
+   ]
+  },
+  {
+   "id": "feel",
+   "title": {
+    "ko": "기분·마음",
+    "en": "Feelings"
+   },
+   "items": [
+    {
+     "id": "ko-w-feel001",
+     "word": "기쁘다",
+     "meaning": "to be glad",
+     "sentences": 3,
+     "example": "여기 있어서 기쁘다.",
+     "exampleKo": "I am glad you are here.",
+     "tatoeba": 3681050
+    },
+    {
+     "id": "ko-w-feel002",
+     "word": "즐겁다",
+     "meaning": "to be joyful",
+     "sentences": 1,
+     "example": "나는 아이들이 노는 것을 보는 게 즐겁다.",
+     "exampleKo": "I enjoy watching children play.",
+     "tatoeba": 11106728
+    },
+    {
+     "id": "ko-w-feel003",
+     "word": "슬프다",
+     "meaning": "to be sad",
+     "sentences": 3,
+     "example": "이렇게나 슬프다니!",
+     "exampleKo": "How tragic!",
+     "tatoeba": 8368348
+    },
+    {
+     "id": "ko-w-feel004",
+     "word": "외롭다",
+     "meaning": "to be lonely",
+     "sentences": 5,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel005",
+     "word": "무섭다",
+     "meaning": "to be scared",
+     "sentences": 3,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel006",
+     "word": "창피하다",
+     "meaning": "to be embarrassed",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel007",
+     "word": "화나다",
+     "meaning": "to get angry",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel008",
+     "word": "짜증나다",
+     "meaning": "to be annoyed",
+     "sentences": 1,
+     "example": "이렇게나 짜증나다니!",
+     "exampleKo": "How annoying!",
+     "tatoeba": 8368234
+    },
+    {
+     "id": "ko-w-feel009",
+     "word": "긴장되다",
+     "meaning": "to be nervous",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel010",
+     "word": "안심하다",
+     "meaning": "to be relieved",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel011",
+     "word": "놀라다",
+     "meaning": "to be surprised",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel012",
+     "word": "감동하다",
+     "meaning": "to be moved",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel013",
+     "word": "자랑스럽다",
+     "meaning": "to be proud",
+     "sentences": 3,
+     "example": "내가 캐나다 사람인 것이 자랑스럽다.",
+     "exampleKo": "I'm proud to be a Canadian.",
+     "tatoeba": 11105186
+    },
+    {
+     "id": "ko-w-feel014",
+     "word": "실망하다",
+     "meaning": "to be disappointed",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel015",
+     "word": "지치다",
+     "meaning": "to be worn out",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel016",
+     "word": "피곤하다",
+     "meaning": "to be tired",
+     "sentences": 2,
+     "example": "그들은 피곤하다.",
+     "exampleKo": "They're tired.",
+     "tatoeba": 2881613
+    },
+    {
+     "id": "ko-w-feel017",
+     "word": "편안하다",
+     "meaning": "to be comfortable",
+     "sentences": 1,
+     "example": "마음이 편안하다.",
+     "exampleKo": "I feel relaxed.",
+     "tatoeba": 9694229
+    },
+    {
+     "id": "ko-w-feel018",
+     "word": "차분하다",
+     "meaning": "to be calm",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel019",
+     "word": "불안하다",
+     "meaning": "to be anxious",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel020",
+     "word": "걱정되다",
+     "meaning": "to be worried",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel021",
+     "word": "그리움",
+     "meaning": "longing",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel022",
+     "word": "지루하다",
+     "meaning": "to be bored",
+     "sentences": 1,
+     "example": "집에서 머무르는 것은 지루하다.",
+     "exampleKo": "Staying at home is boring.",
+     "tatoeba": 11105236
+    },
+    {
+     "id": "ko-w-feel023",
+     "word": "귀찮다",
+     "meaning": "to be bothersome",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel024",
+     "word": "설렘",
+     "meaning": "excitement",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel025",
+     "word": "부럽다",
+     "meaning": "to be envious",
+     "sentences": 1,
+     "example": "네가 부럽다고 말해야할 것 같아.",
+     "exampleKo": "I have to say I envy you.",
+     "tatoeba": 8365119
+    },
+    {
+     "id": "ko-w-feel026",
+     "word": "졸리다",
+     "meaning": "to be sleepy",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel027",
+     "word": "당황하다",
+     "meaning": "to be flustered",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel028",
+     "word": "속상하다",
+     "meaning": "to be upset",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel029",
+     "word": "서운하다",
+     "meaning": "to feel hurt",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel030",
+     "word": "아쉽다",
+     "meaning": "to feel regret",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel031",
+     "word": "답답하다",
+     "meaning": "to feel stuffy, frustrated",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel032",
+     "word": "후련하다",
+     "meaning": "to feel relieved",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel033",
+     "word": "뿌듯하다",
+     "meaning": "to feel proud",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel034",
+     "word": "든든하다",
+     "meaning": "to feel reassured",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel035",
+     "word": "울다",
+     "meaning": "to cry",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel036",
+     "word": "웃다",
+     "meaning": "to laugh",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel037",
+     "word": "미소",
+     "meaning": "smile",
+     "sentences": 9,
+     "example": "그 사람은 미소지었어.",
+     "exampleKo": "He smiled.",
+     "tatoeba": 8363339
+    },
+    {
+     "id": "ko-w-feel038",
+     "word": "눈물",
+     "meaning": "tears",
+     "sentences": 13,
+     "example": "그녀의 눈에 눈물이 고였다.",
+     "exampleKo": "Her eyes welled up with tears.",
+     "tatoeba": 1015637
+    },
+    {
+     "id": "ko-w-feel039",
+     "word": "한숨",
+     "meaning": "sigh",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel040",
+     "word": "떨리다",
+     "meaning": "to tremble, be nervous",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel041",
+     "word": "기분",
+     "meaning": "mood",
+     "sentences": 54,
+     "example": "너는 어떤 기분이니?",
+     "exampleKo": "How do you feel?",
+     "tatoeba": 8370326
+    },
+    {
+     "id": "ko-w-feel042",
+     "word": "감정",
+     "meaning": "emotion",
+     "sentences": 6,
+     "example": "그 감정은 정말 강렬했다.",
+     "exampleKo": "The feeling was really strong.",
+     "tatoeba": 8533853
+    },
+    {
+     "id": "ko-w-feel043",
+     "word": "표정",
+     "meaning": "facial expression",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-feel044",
+     "word": "외로움",
+     "meaning": "loneliness",
+     "sentences": 4,
+     "example": "가끔 너무 외로움을 느껴.",
+     "exampleKo": "I feel so lonely sometimes.",
+     "tatoeba": 8384616
+    },
+    {
+     "id": "ko-w-feel045",
+     "word": "슬픔",
+     "meaning": "sadness",
+     "sentences": 5,
+     "example": "나의 슬픔을 뭐라 표현할 수가 없네.",
+     "exampleKo": "I can't describe my sadness.",
+     "tatoeba": 8362539
+    },
+    {
+     "id": "ko-w-feel046",
+     "word": "기쁨",
+     "meaning": "joy",
+     "sentences": 5,
+     "example": "기쁨도 슬픔도 영원히 계속되지는 않아.",
+     "exampleKo": "Neither joy nor sorrow can last forever.",
+     "tatoeba": 13755195
+    },
+    {
+     "id": "ko-w-feel047",
+     "word": "분노",
+     "meaning": "anger",
+     "sentences": 3,
+     "example": "아담은 내가 그의 시계를 고장냈을 때 분노했다.",
+     "exampleKo": "Adam was furious with me when I broke his watch.",
+     "tatoeba": 13118474
+    },
+    {
+     "id": "ko-w-feel048",
+     "word": "후회",
+     "meaning": "regret",
+     "sentences": 17,
+     "example": "나는 후회가 전혀 없다.",
+     "exampleKo": "I have no regrets.",
+     "tatoeba": 11105671
+    },
+    {
+     "id": "ko-w-feel049",
+     "word": "희망",
+     "meaning": "hope",
+     "sentences": 10,
+     "example": "나한테는 희망이 없어.",
+     "exampleKo": "There's no hope for me.",
+     "tatoeba": 13048444
+    },
+    {
+     "id": "ko-w-feel050",
+     "word": "용기",
+     "meaning": "courage",
+     "sentences": 9,
+     "example": "그럴 용기는 있어?",
+     "exampleKo": "You think you can do this?",
+     "tatoeba": 11161796
+    },
+    {
+     "id": "ko-w-feel051",
+     "word": "자신감",
+     "meaning": "confidence",
+     "sentences": 5,
+     "example": "자신감을 가지세요.",
+     "exampleKo": "Be confident.",
+     "tatoeba": 11104697
+    }
+   ]
+  },
+  {
+   "id": "bond",
+   "title": {
+    "ko": "관계·위로·부탁",
+    "en": "People & support"
+   },
+   "items": [
+    {
+     "id": "ko-w-bond001",
+     "word": "용서하다",
+     "meaning": "to forgive",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond002",
+     "word": "사과하다",
+     "meaning": "to apologize",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond003",
+     "word": "신뢰",
+     "meaning": "trust",
+     "sentences": 6,
+     "example": "믿음과 신뢰의 차이점은 무엇입니까?",
+     "exampleKo": "What's the difference between faith and trust?",
+     "tatoeba": 6820138
+    },
+    {
+     "id": "ko-w-bond004",
+     "word": "의심하다",
+     "meaning": "to doubt",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond005",
+     "word": "솔직하다",
+     "meaning": "to be honest",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond006",
+     "word": "정직하다",
+     "meaning": "to be honest",
+     "sentences": 3,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond007",
+     "word": "거짓말하다",
+     "meaning": "to lie",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond008",
+     "word": "싸우다",
+     "meaning": "to fight",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond009",
+     "word": "다투다",
+     "meaning": "to quarrel",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond010",
+     "word": "화해하다",
+     "meaning": "to make up",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond011",
+     "word": "오해",
+     "meaning": "misunderstanding",
+     "sentences": 9,
+     "example": "오해 하지 마세요.",
+     "exampleKo": "Don't let me be misunderstood.",
+     "tatoeba": 2730462
+    },
+    {
+     "id": "ko-w-bond012",
+     "word": "위로하다",
+     "meaning": "to comfort",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond013",
+     "word": "격려하다",
+     "meaning": "to encourage",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond014",
+     "word": "응원하다",
+     "meaning": "to cheer on",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond015",
+     "word": "지지하다",
+     "meaning": "to support",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond016",
+     "word": "돕다",
+     "meaning": "to help",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond017",
+     "word": "부탁하다",
+     "meaning": "to ask a favor",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond018",
+     "word": "거절하다",
+     "meaning": "to refuse",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond019",
+     "word": "받아들이다",
+     "meaning": "to accept",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond020",
+     "word": "초대하다",
+     "meaning": "to invite",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond021",
+     "word": "약속하다",
+     "meaning": "to promise",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond022",
+     "word": "약속",
+     "meaning": "promise, appointment",
+     "sentences": 21,
+     "example": "나는 그와의 약속을 지켰다.",
+     "exampleKo": "I kept my promise to him.",
+     "tatoeba": 4568855
+    },
+    {
+     "id": "ko-w-bond023",
+     "word": "인내",
+     "meaning": "patience",
+     "sentences": 7,
+     "example": "인내심을 가져.",
+     "exampleKo": "Be patient.",
+     "tatoeba": 8368206
+    },
+    {
+     "id": "ko-w-bond024",
+     "word": "존중하다",
+     "meaning": "to respect",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond025",
+     "word": "배려하다",
+     "meaning": "to be considerate",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond026",
+     "word": "돌보다",
+     "meaning": "to look after",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond027",
+     "word": "지키다",
+     "meaning": "to protect, keep",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond028",
+     "word": "나누다",
+     "meaning": "to share",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond029",
+     "word": "부모님",
+     "meaning": "parents",
+     "sentences": 24,
+     "example": "어제 너희 부모님을 만났다.",
+     "exampleKo": "I met your parents yesterday.",
+     "tatoeba": 11105941
+    },
+    {
+     "id": "ko-w-bond030",
+     "word": "시부모님",
+     "meaning": "parents-in-law (husband's)",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond031",
+     "word": "장인",
+     "meaning": "father-in-law (wife's)",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond032",
+     "word": "장모",
+     "meaning": "mother-in-law (wife's)",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond033",
+     "word": "사촌",
+     "meaning": "cousin",
+     "sentences": 11,
+     "example": "걔하고 나는 사촌이야.",
+     "exampleKo": "Him and me are cousins.",
+     "tatoeba": 1533092
+    },
+    {
+     "id": "ko-w-bond034",
+     "word": "삼촌",
+     "meaning": "uncle",
+     "sentences": 5,
+     "example": "우리 삼촌들이 갑부였다면 말이지.",
+     "exampleKo": "It would be nice if my uncles were very rich.",
+     "tatoeba": 13248314
+    },
+    {
+     "id": "ko-w-bond035",
+     "word": "이모",
+     "meaning": "maternal aunt",
+     "sentences": 5,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond036",
+     "word": "고모",
+     "meaning": "paternal aunt",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond037",
+     "word": "조카",
+     "meaning": "nephew, niece",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond038",
+     "word": "할아버지",
+     "meaning": "grandfather",
+     "sentences": 19,
+     "example": "나는 할아버지를 돌보고 있어.",
+     "exampleKo": "I take care of my grandfather.",
+     "tatoeba": 8358597
+    },
+    {
+     "id": "ko-w-bond039",
+     "word": "할머니",
+     "meaning": "grandmother",
+     "sentences": 6,
+     "example": "할머니는 구수한 옛날 얘기를 들려주시곤 했다.",
+     "exampleKo": "My grandmother used to tell me pleasant fairy tales.",
+     "tatoeba": 2655686
+    },
+    {
+     "id": "ko-w-bond040",
+     "word": "오빠",
+     "meaning": "older brother (female speaker)",
+     "sentences": 5,
+     "example": "내 오빠는 교수야.",
+     "exampleKo": "My brother is a professor.",
+     "tatoeba": 8396639
+    },
+    {
+     "id": "ko-w-bond041",
+     "word": "누나",
+     "meaning": "older sister (male speaker)",
+     "sentences": 10,
+     "example": "우리 누나는 단 것을 좋아한다.",
+     "exampleKo": "My sister has a sweet tooth.",
+     "tatoeba": 11105172
+    },
+    {
+     "id": "ko-w-bond042",
+     "word": "언니",
+     "meaning": "older sister (female speaker)",
+     "sentences": 11,
+     "example": "나 너네 언니 만나고 싶어",
+     "exampleKo": "I'd like to meet your older sister.",
+     "tatoeba": 8306577
+    },
+    {
+     "id": "ko-w-bond043",
+     "word": "동생",
+     "meaning": "younger sibling",
+     "sentences": 37,
+     "example": "우리 여동생은 날마다 피아노를 친다.",
+     "exampleKo": "My younger sister plays piano every day.",
+     "tatoeba": 3677083
+    },
+    {
+     "id": "ko-w-bond044",
+     "word": "이웃",
+     "meaning": "neighbor",
+     "sentences": 13,
+     "example": "북한과 남한은 이웃이다.",
+     "exampleKo": "North Korea and South Korea are neighbors.",
+     "tatoeba": 6305092
+    },
+    {
+     "id": "ko-w-bond045",
+     "word": "동료",
+     "meaning": "coworker",
+     "sentences": 1,
+     "example": "오늘 동료 한명이 본인 직장에 대해서 애기해줬어.",
+     "exampleKo": "Today one of my colleagues talked about his job.",
+     "tatoeba": 3718255
+    },
+    {
+     "id": "ko-w-bond046",
+     "word": "동창",
+     "meaning": "classmate, alumnus",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond047",
+     "word": "선배",
+     "meaning": "senior",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond048",
+     "word": "후배",
+     "meaning": "junior",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond049",
+     "word": "절친",
+     "meaning": "best friend",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond050",
+     "word": "소꿉친구",
+     "meaning": "childhood friend",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond051",
+     "word": "낯선 사람",
+     "meaning": "stranger",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond052",
+     "word": "가깝다",
+     "meaning": "to be close",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-bond053",
+     "word": "서로",
+     "meaning": "each other",
+     "sentences": 23,
+     "example": "우리 서로 처음 만났을 때 기억나?",
+     "exampleKo": "Can you remember the first time we met each other?",
+     "tatoeba": 11106522
+    },
+    {
+     "id": "ko-w-bond054",
+     "word": "의리",
+     "meaning": "loyalty",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    }
+   ]
+  },
+  {
+   "id": "talk",
+   "title": {
+    "ko": "말·연락",
+    "en": "Talking & messages"
+   },
+   "items": [
+    {
+     "id": "ko-w-talk001",
+     "word": "메시지",
+     "meaning": "message",
+     "sentences": 13,
+     "example": "제가 어제 보낸 문자 메시지를 받으셨나요?",
+     "exampleKo": "Did you receive the message I sent you yesterday?",
+     "tatoeba": 6295767
+    },
+    {
+     "id": "ko-w-talk002",
+     "word": "답장",
+     "meaning": "reply",
+     "sentences": 11,
+     "example": "나는 답장을 기다리고 있다.",
+     "exampleKo": "I'm waiting for a reply.",
+     "tatoeba": 7500612
+    },
+    {
+     "id": "ko-w-talk003",
+     "word": "대답",
+     "meaning": "answer",
+     "sentences": 29,
+     "example": "내가 대답하길 원해?",
+     "exampleKo": "Do you want me to answer?",
+     "tatoeba": 8362066
+    },
+    {
+     "id": "ko-w-talk004",
+     "word": "소식",
+     "meaning": "news",
+     "sentences": 18,
+     "example": "나는 우리팀이 우승했다는 소식을 들었다.",
+     "exampleKo": "I heard the news that our team had won.",
+     "tatoeba": 1533306
+    },
+    {
+     "id": "ko-w-talk005",
+     "word": "읽씹",
+     "meaning": "left on read",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk006",
+     "word": "알림",
+     "meaning": "notification",
+     "sentences": 5,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk007",
+     "word": "화면",
+     "meaning": "screen",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk008",
+     "word": "영상",
+     "meaning": "video",
+     "sentences": 5,
+     "example": "누가 동영상 보고 싶어?",
+     "exampleKo": "Who wants to watch a video?",
+     "tatoeba": 13755243
+    },
+    {
+     "id": "ko-w-talk009",
+     "word": "생방송",
+     "meaning": "live broadcast",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk010",
+     "word": "검색하다",
+     "meaning": "to search",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk011",
+     "word": "번역하다",
+     "meaning": "to translate",
+     "sentences": 1,
+     "example": "번역하다.",
+     "exampleKo": "Translate.",
+     "tatoeba": 13118386
+    },
+    {
+     "id": "ko-w-talk012",
+     "word": "번역",
+     "meaning": "translation",
+     "sentences": 35,
+     "example": "나는 소설 번역은 더 이상 안할 거야.",
+     "exampleKo": "I don't translate novels anymore.",
+     "tatoeba": 8361705
+    },
+    {
+     "id": "ko-w-talk013",
+     "word": "통역",
+     "meaning": "interpretation",
+     "sentences": 3,
+     "example": "통역사가 필요합니다.",
+     "exampleKo": "I need an interpreter.",
+     "tatoeba": 13117382
+    },
+    {
+     "id": "ko-w-talk014",
+     "word": "대화",
+     "meaning": "conversation",
+     "sentences": 21,
+     "example": "우리는 전화로 대화했다.",
+     "exampleKo": "We talked over the phone.",
+     "tatoeba": 11106748
+    },
+    {
+     "id": "ko-w-talk015",
+     "word": "문장",
+     "meaning": "sentence",
+     "sentences": 37,
+     "example": "우리는 완전한 문장을 원합니다.",
+     "exampleKo": "We want complete sentences.",
+     "tatoeba": 3944956
+    },
+    {
+     "id": "ko-w-talk016",
+     "word": "단어",
+     "meaning": "word",
+     "sentences": 27,
+     "example": "이건 내가 좋아하는 단어야.",
+     "exampleKo": "That's one of my favorite words.",
+     "tatoeba": 8363232
+    },
+    {
+     "id": "ko-w-talk017",
+     "word": "문법",
+     "meaning": "grammar",
+     "sentences": 11,
+     "example": "문법은 매우 복잡하다.",
+     "exampleKo": "Grammar is very complicated.",
+     "tatoeba": 978693
+    },
+    {
+     "id": "ko-w-talk018",
+     "word": "발음",
+     "meaning": "pronunciation",
+     "sentences": 14,
+     "example": "나는 그의 이름을 어떻게 발음해야 하는지 모른다.",
+     "exampleKo": "I don't know how to pronounce his name.",
+     "tatoeba": 11105689
+    },
+    {
+     "id": "ko-w-talk019",
+     "word": "억양",
+     "meaning": "intonation",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk020",
+     "word": "사투리",
+     "meaning": "dialect",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk021",
+     "word": "언어",
+     "meaning": "language",
+     "sentences": 82,
+     "example": "내가 사랑 오크어 언어입니다.",
+     "exampleKo": "I like the Occitan language.",
+     "tatoeba": 1043438
+    },
+    {
+     "id": "ko-w-talk022",
+     "word": "존댓말",
+     "meaning": "polite speech",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk023",
+     "word": "반말",
+     "meaning": "casual speech",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk024",
+     "word": "예의",
+     "meaning": "manners",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk025",
+     "word": "무례하다",
+     "meaning": "to be rude",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk026",
+     "word": "농담",
+     "meaning": "joke",
+     "sentences": 17,
+     "example": "그 사람의 농담은 우리 모두를 웃게 했었어.",
+     "exampleKo": "Her jokes made us all laugh.",
+     "tatoeba": 8356252
+    },
+    {
+     "id": "ko-w-talk027",
+     "word": "장난",
+     "meaning": "prank, teasing",
+     "sentences": 10,
+     "example": "그 아이는 장난이 심하다.",
+     "exampleKo": "That child is full of mischief.",
+     "tatoeba": 1533312
+    },
+    {
+     "id": "ko-w-talk028",
+     "word": "진지하다",
+     "meaning": "to be serious",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk029",
+     "word": "비밀",
+     "meaning": "secret",
+     "sentences": 15,
+     "example": "너는 이걸 비밀로 할 수는 없어.",
+     "exampleKo": "You can't keep this a secret.",
+     "tatoeba": 8361485
+    },
+    {
+     "id": "ko-w-talk030",
+     "word": "소문",
+     "meaning": "rumor",
+     "sentences": 3,
+     "example": "누가 소문을 내기 시작했는지 난 몰라.",
+     "exampleKo": "I don't know who started the rumor.",
+     "tatoeba": 8366715
+    },
+    {
+     "id": "ko-w-talk031",
+     "word": "거짓말",
+     "meaning": "lie",
+     "sentences": 54,
+     "example": "나는 거짓말 하지 않아.",
+     "exampleKo": "I don't lie.",
+     "tatoeba": 5254836
+    },
+    {
+     "id": "ko-w-talk032",
+     "word": "진실",
+     "meaning": "truth",
+     "sentences": 17,
+     "example": "우리는 곧 진실을 알게 될거야.",
+     "exampleKo": "We'll learn the truth soon.",
+     "tatoeba": 8363844
+    },
+    {
+     "id": "ko-w-talk033",
+     "word": "의견",
+     "meaning": "opinion",
+     "sentences": 20,
+     "example": "나는 그 점에서 그와 의견이 일치했다.",
+     "exampleKo": "I agreed with him on that point.",
+     "tatoeba": 11107478
+    },
+    {
+     "id": "ko-w-talk034",
+     "word": "조언",
+     "meaning": "advice",
+     "sentences": 14,
+     "example": "우리는 당신의 조언이 필요하다.",
+     "exampleKo": "We need your advice.",
+     "tatoeba": 11106532
+    },
+    {
+     "id": "ko-w-talk035",
+     "word": "제안",
+     "meaning": "suggestion",
+     "sentences": 16,
+     "example": "나는 제안을 철회했다.",
+     "exampleKo": "I withdrew the offer.",
+     "tatoeba": 8543990
+    },
+    {
+     "id": "ko-w-talk036",
+     "word": "설명하다",
+     "meaning": "to explain",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk037",
+     "word": "설명",
+     "meaning": "explanation",
+     "sentences": 25,
+     "example": "제가 상황 설명해드릴게요.",
+     "exampleKo": "Let me explain the situation to you.",
+     "tatoeba": 14034726
+    },
+    {
+     "id": "ko-w-talk038",
+     "word": "질문",
+     "meaning": "question",
+     "sentences": 45,
+     "example": "저는 질문이 있습니다.",
+     "exampleKo": "I have a question.",
+     "tatoeba": 13177679
+    },
+    {
+     "id": "ko-w-talk039",
+     "word": "반복하다",
+     "meaning": "to repeat",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk040",
+     "word": "연락처",
+     "meaning": "contact info",
+     "sentences": 1,
+     "example": "이게 제 연락처입니다.",
+     "exampleKo": "This is my contact information.",
+     "tatoeba": 13229404
+    },
+    {
+     "id": "ko-w-talk041",
+     "word": "인사",
+     "meaning": "greeting",
+     "sentences": 14,
+     "example": "지리는 우리에게 반갑게 인사했고, 우리도 인사했어.",
+     "exampleKo": "Ziri gave us a friendly greeting and we gave him one back.",
+     "tatoeba": 13756513
+    },
+    {
+     "id": "ko-w-talk042",
+     "word": "속삭이다",
+     "meaning": "to whisper",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk043",
+     "word": "소리치다",
+     "meaning": "to shout",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk044",
+     "word": "놀리다",
+     "meaning": "to tease",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk045",
+     "word": "칭찬하다",
+     "meaning": "to compliment",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk046",
+     "word": "칭찬",
+     "meaning": "compliment",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk047",
+     "word": "눈치채다",
+     "meaning": "to notice",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk048",
+     "word": "속마음",
+     "meaning": "true feelings",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk049",
+     "word": "말투",
+     "meaning": "way of speaking",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-talk050",
+     "word": "목소리",
+     "meaning": "voice",
+     "sentences": 21,
+     "example": "나는 내 목소리가 싫다.",
+     "exampleKo": "I hate my voice.",
+     "tatoeba": 5526769
+    }
+   ]
+  },
+  {
+   "id": "trip",
+   "title": {
+    "ko": "여행·약속",
+    "en": "Trips & plans"
+   },
+   "items": [
+    {
+     "id": "ko-w-trip001",
+     "word": "여행",
+     "meaning": "trip",
+     "sentences": 32,
+     "example": "저는 여행을 좋아해요!",
+     "exampleKo": "I like travel!",
+     "tatoeba": 8119542
+    },
+    {
+     "id": "ko-w-trip002",
+     "word": "여행하다",
+     "meaning": "to travel",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip003",
+     "word": "공항",
+     "meaning": "airport",
+     "sentences": 18,
+     "example": "나는 그를 공항에서 만났다.",
+     "exampleKo": "I met him at the airport.",
+     "tatoeba": 13043451
+    },
+    {
+     "id": "ko-w-trip004",
+     "word": "비행기",
+     "meaning": "airplane",
+     "sentences": 21,
+     "example": "우리는 비행기로 한국에 갔다.",
+     "exampleKo": "We went to Korea by plane.",
+     "tatoeba": 6305080
+    },
+    {
+     "id": "ko-w-trip005",
+     "word": "여권",
+     "meaning": "passport",
+     "sentences": 9,
+     "example": "여기 나의 여권이에요.",
+     "exampleKo": "Here's my passport.",
+     "tatoeba": 13152336
+    },
+    {
+     "id": "ko-w-trip006",
+     "word": "표",
+     "meaning": "ticket",
+     "sentences": 70,
+     "example": "우리는 목표를 달성했다.",
+     "exampleKo": "We reached our goal.",
+     "tatoeba": 11105439
+    },
+    {
+     "id": "ko-w-trip007",
+     "word": "짐",
+     "meaning": "luggage",
+     "sentences": 13,
+     "example": "너는 짐작도 못 할 거야.",
+     "exampleKo": "You'll never guess.",
+     "tatoeba": 10730733
+    },
+    {
+     "id": "ko-w-trip008",
+     "word": "시차",
+     "meaning": "time difference",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip009",
+     "word": "지연",
+     "meaning": "delay",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip010",
+     "word": "환승",
+     "meaning": "transfer",
+     "sentences": 1,
+     "example": "여기에서 지하철과 경전철을 환승하는 것이 편리한가요?",
+     "exampleKo": "Is it convenient to transfer between the subway and the light rail here?",
+     "tatoeba": 13591517
+    },
+    {
+     "id": "ko-w-trip011",
+     "word": "예약하다",
+     "meaning": "to reserve",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip012",
+     "word": "예약",
+     "meaning": "reservation",
+     "sentences": 11,
+     "example": "예약을 변경하고 싶습니다.",
+     "exampleKo": "I'd like to change my reservation.",
+     "tatoeba": 11105992
+    },
+    {
+     "id": "ko-w-trip013",
+     "word": "취소하다",
+     "meaning": "to cancel",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip014",
+     "word": "바꾸다",
+     "meaning": "to change",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip015",
+     "word": "호텔",
+     "meaning": "hotel",
+     "sentences": 11,
+     "example": "그녀는 호텔에 머물렀다.",
+     "exampleKo": "She stayed back at the hotel.",
+     "tatoeba": 11156745
+    },
+    {
+     "id": "ko-w-trip016",
+     "word": "기념품",
+     "meaning": "souvenir",
+     "sentences": 1,
+     "example": "부장님께서 저에게 기념품을 주셨어요.",
+     "exampleKo": "The boss gave me a souvenir.",
+     "tatoeba": 8437708
+    },
+    {
+     "id": "ko-w-trip017",
+     "word": "관광객",
+     "meaning": "tourist",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip018",
+     "word": "관광",
+     "meaning": "sightseeing",
+     "sentences": 5,
+     "example": "다음 관광 여행이 언제예요?",
+     "exampleKo": "When is the next guided tour?",
+     "tatoeba": 948486
+    },
+    {
+     "id": "ko-w-trip019",
+     "word": "해변",
+     "meaning": "beach",
+     "sentences": 5,
+     "example": "이 해변에 와본 적 있어?",
+     "exampleKo": "Have you ever been to this beach before?",
+     "tatoeba": 8462518
+    },
+    {
+     "id": "ko-w-trip020",
+     "word": "축제",
+     "meaning": "festival",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip021",
+     "word": "불꽃놀이",
+     "meaning": "fireworks",
+     "sentences": 2,
+     "example": "불꽃놀이 봤어?",
+     "exampleKo": "Did you see the fireworks?",
+     "tatoeba": 13167621
+    },
+    {
+     "id": "ko-w-trip022",
+     "word": "크리스마스",
+     "meaning": "Christmas",
+     "sentences": 19,
+     "example": "너 크리스마스에 뭘 원해?",
+     "exampleKo": "What do you want for Christmas?",
+     "tatoeba": 12977494
+    },
+    {
+     "id": "ko-w-trip023",
+     "word": "설날",
+     "meaning": "Lunar New Year",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip024",
+     "word": "추석",
+     "meaning": "Chuseok",
+     "sentences": 3,
+     "example": "즐거운 추석 되시기 바랍니다.",
+     "exampleKo": "Happy wishing you a Thanksgiving.",
+     "tatoeba": 1219141
+    },
+    {
+     "id": "ko-w-trip025",
+     "word": "휴가",
+     "meaning": "vacation",
+     "sentences": 14,
+     "example": "나는 휴가중이었어.",
+     "exampleKo": "I was in the middle of my holiday.",
+     "tatoeba": 3685002
+    },
+    {
+     "id": "ko-w-trip026",
+     "word": "일정",
+     "meaning": "schedule",
+     "sentences": 7,
+     "example": "일정한 속도로 운전해.",
+     "exampleKo": "Drive at a steady speed.",
+     "tatoeba": 8362095
+    },
+    {
+     "id": "ko-w-trip027",
+     "word": "목표",
+     "meaning": "goal",
+     "sentences": 12,
+     "example": "우리는 목표를 달성했다.",
+     "exampleKo": "We reached our goal.",
+     "tatoeba": 11105439
+    },
+    {
+     "id": "ko-w-trip028",
+     "word": "기회",
+     "meaning": "chance",
+     "sentences": 15,
+     "example": "우리는 우승의 기회를 조금이나마 가지고 있다.",
+     "exampleKo": "We have little chance of winning.",
+     "tatoeba": 11105222
+    },
+    {
+     "id": "ko-w-trip029",
+     "word": "재회",
+     "meaning": "reunion",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip030",
+     "word": "출발",
+     "meaning": "departure",
+     "sentences": 18,
+     "example": "폭우 때문에 우리는 출발을 늦춰야했다.",
+     "exampleKo": "The heavy rain compelled us to put off our departure.",
+     "tatoeba": 13250549
+    },
+    {
+     "id": "ko-w-trip031",
+     "word": "도착",
+     "meaning": "arrival",
+     "sentences": 44,
+     "example": "나는 지난 밤에 도착했다.",
+     "exampleKo": "I arrived last night.",
+     "tatoeba": 11106527
+    },
+    {
+     "id": "ko-w-trip032",
+     "word": "이사하다",
+     "meaning": "to move",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip033",
+     "word": "유학",
+     "meaning": "studying abroad",
+     "sentences": 3,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip034",
+     "word": "주소",
+     "meaning": "address",
+     "sentences": 24,
+     "example": "이메일 주소가 뭐예요?",
+     "exampleKo": "What is your email address?",
+     "tatoeba": 13224732
+    },
+    {
+     "id": "ko-w-trip035",
+     "word": "지도",
+     "meaning": "map",
+     "sentences": 38,
+     "example": "난 너무 늙었을지도 몰라.",
+     "exampleKo": "I may be too old.",
+     "tatoeba": 8491001
+    },
+    {
+     "id": "ko-w-trip036",
+     "word": "동네",
+     "meaning": "neighborhood",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip037",
+     "word": "시골",
+     "meaning": "countryside",
+     "sentences": 7,
+     "example": "나는 시골에 산다.",
+     "exampleKo": "I live in the country.",
+     "tatoeba": 11105185
+    },
+    {
+     "id": "ko-w-trip038",
+     "word": "교통",
+     "meaning": "traffic",
+     "sentences": 5,
+     "example": "저는 열세 살 때 교통사고로 부모님을 잃었어요.",
+     "exampleKo": "My parents died in an automobile accident when I was thirteen.",
+     "tatoeba": 13128189
+    },
+    {
+     "id": "ko-w-trip039",
+     "word": "사고",
+     "meaning": "accident",
+     "sentences": 29,
+     "example": "나는 이것을 사고 싶다.",
+     "exampleKo": "I'd like to buy this.",
+     "tatoeba": 11104816
+    },
+    {
+     "id": "ko-w-trip040",
+     "word": "늦다",
+     "meaning": "to be late",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-trip041",
+     "word": "일찍",
+     "meaning": "early",
+     "sentences": 27,
+     "example": "제가 많이 일찍 왔어요.",
+     "exampleKo": "I came very early.",
+     "tatoeba": 6961443
+    },
+    {
+     "id": "ko-w-trip042",
+     "word": "미리",
+     "meaning": "in advance",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "title": {
+    "ko": "음식·건강",
+    "en": "Food & health"
+   },
+   "items": [
+    {
+     "id": "ko-w-food001",
+     "word": "맛",
+     "meaning": "taste",
+     "sentences": 52,
+     "example": "나는 수박맛이 좋다.",
+     "exampleKo": "I like the taste of watermelon.",
+     "tatoeba": 11104911
+    },
+    {
+     "id": "ko-w-food002",
+     "word": "짜다",
+     "meaning": "to be salty",
+     "sentences": 1,
+     "example": "부뚜막의 소금도 집어넣어야 짜다.",
+     "exampleKo": "Salt in the kitchen will only make food salty if you use it.",
+     "tatoeba": 2655631
+    },
+    {
+     "id": "ko-w-food003",
+     "word": "맵다",
+     "meaning": "to be spicy",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-food004",
+     "word": "맛있다",
+     "meaning": "to be delicious",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-food005",
+     "word": "요리하다",
+     "meaning": "to cook",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-food006",
+     "word": "식사",
+     "meaning": "meal",
+     "sentences": 26,
+     "example": "나는 레스토랑에서 식사했다.",
+     "exampleKo": "I ate at a restaurant.",
+     "tatoeba": 11110718
+    },
+    {
+     "id": "ko-w-food007",
+     "word": "아침",
+     "meaning": "breakfast, morning",
+     "sentences": 74,
+     "example": "나는 아직 아침을 다 먹지 못했다.",
+     "exampleKo": "I haven't finished breakfast yet.",
+     "tatoeba": 11106773
+    },
+    {
+     "id": "ko-w-food008",
+     "word": "점심",
+     "meaning": "lunch",
+     "sentences": 23,
+     "example": "우리, 점심 먹으러 나갈 건데 같이 갈래?",
+     "exampleKo": "We're going out for lunch. Why don't you come along?",
+     "tatoeba": 13139945
+    },
+    {
+     "id": "ko-w-food009",
+     "word": "저녁",
+     "meaning": "dinner, evening",
+     "sentences": 33,
+     "example": "나는 저녁을 준비했다.",
+     "exampleKo": "I made supper.",
+     "tatoeba": 1533328
+    },
+    {
+     "id": "ko-w-food010",
+     "word": "커피",
+     "meaning": "coffee",
+     "sentences": 45,
+     "example": "커피가 너무 진해요.",
+     "exampleKo": "The coffee is too strong.",
+     "tatoeba": 14020515
+    },
+    {
+     "id": "ko-w-food011",
+     "word": "술",
+     "meaning": "alcohol",
+     "sentences": 54,
+     "example": "예술은 우리를 단조로운 일상에서 벗어나게 해준다.",
+     "exampleKo": "Art breaks the monotony of our life.",
+     "tatoeba": 1535410
+    },
+    {
+     "id": "ko-w-food012",
+     "word": "김치",
+     "meaning": "kimchi",
+     "sentences": 3,
+     "example": "모두들 김치~ 하세요.",
+     "exampleKo": "Everyone, say cheese.",
+     "tatoeba": 11105939
+    },
+    {
+     "id": "ko-w-food013",
+     "word": "밥",
+     "meaning": "rice, meal",
+     "sentences": 26,
+     "example": "나는 김밥을 먹고 싶어요.",
+     "exampleKo": "I want to eat kimbap.",
+     "tatoeba": 447683
+    },
+    {
+     "id": "ko-w-food014",
+     "word": "국",
+     "meaning": "soup",
+     "sentences": 327,
+     "example": "저는 미국인이 아니에요",
+     "exampleKo": "I'm not an American.",
+     "tatoeba": 8624195
+    },
+    {
+     "id": "ko-w-food015",
+     "word": "치킨",
+     "meaning": "fried chicken",
+     "sentences": 2,
+     "example": "치킨 주세요.",
+     "exampleKo": "Chicken, please.",
+     "tatoeba": 11104684
+    },
+    {
+     "id": "ko-w-food016",
+     "word": "떡볶이",
+     "meaning": "tteokbokki",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-food017",
+     "word": "디저트",
+     "meaning": "dessert",
+     "sentences": 12,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-food018",
+     "word": "감기",
+     "meaning": "cold",
+     "sentences": 25,
+     "example": "나는 감기에 걸렸다.",
+     "exampleKo": "I have a cold.",
+     "tatoeba": 10605465
+    },
+    {
+     "id": "ko-w-food019",
+     "word": "상처",
+     "meaning": "wound",
+     "sentences": 10,
+     "example": "상처에서 피가 흘렀다.",
+     "exampleKo": "The wound bled.",
+     "tatoeba": 912399
+    },
+    {
+     "id": "ko-w-food020",
+     "word": "체중",
+     "meaning": "weight",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-food021",
+     "word": "다이어트",
+     "meaning": "diet",
+     "sentences": 3,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-food022",
+     "word": "수면",
+     "meaning": "sleep",
+     "sentences": 4,
+     "example": "수면 부족은 몸에 나빠.",
+     "exampleKo": "Lack of sleep is bad for the body.",
+     "tatoeba": 8363515
+    },
+    {
+     "id": "ko-w-food023",
+     "word": "피로",
+     "meaning": "fatigue",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-food024",
+     "word": "휴식",
+     "meaning": "rest",
+     "sentences": 4,
+     "example": "우리한테 필요한 건 휴식이야.",
+     "exampleKo": "What we need is a break.",
+     "tatoeba": 8367169
+    },
+    {
+     "id": "ko-w-food025",
+     "word": "목",
+     "meaning": "throat, neck",
+     "sentences": 106,
+     "example": "나는 내 목소리가 싫다.",
+     "exampleKo": "I hate my voice.",
+     "tatoeba": 5526769
+    },
+    {
+     "id": "ko-w-food026",
+     "word": "머리카락",
+     "meaning": "hair",
+     "sentences": 6,
+     "example": "그녀의 머리카락은 길어.",
+     "exampleKo": "Her hair is long.",
+     "tatoeba": 4965764
+    },
+    {
+     "id": "ko-w-food027",
+     "word": "얼굴",
+     "meaning": "face",
+     "sentences": 21,
+     "example": "너 얼굴이 왜 그래?",
+     "exampleKo": "What happened to your face?",
+     "tatoeba": 12507022
+    },
+    {
+     "id": "ko-w-food028",
+     "word": "건강",
+     "meaning": "health",
+     "sentences": 26,
+     "example": "난 그 사람의 건강이 너무 걱정돼.",
+     "exampleKo": "I am very concerned about his health.",
+     "tatoeba": 8361501
+    },
+    {
+     "id": "ko-w-food029",
+     "word": "의사",
+     "meaning": "doctor",
+     "sentences": 42,
+     "example": "나는 의사가 아닙니다.",
+     "exampleKo": "I'm not a doctor.",
+     "tatoeba": 2661369
+    },
+    {
+     "id": "ko-w-food030",
+     "word": "병원",
+     "meaning": "hospital",
+     "sentences": 23,
+     "example": "내가 병원으로 데려다 줄게요.",
+     "exampleKo": "Let me take you to the hospital.",
+     "tatoeba": 4965199
+    },
+    {
+     "id": "ko-w-food031",
+     "word": "낫다",
+     "meaning": "to recover",
+     "sentences": 7,
+     "example": "기분이 훨씬 낫다.",
+     "exampleKo": "I feel much better.",
+     "tatoeba": 11105670
+    }
+   ]
+  },
+  {
+   "id": "life",
+   "title": {
+    "ko": "생활·그 밖의 말",
+    "en": "Daily life & more"
+   },
+   "items": [
+    {
+     "id": "ko-w-life001",
+     "word": "직장",
+     "meaning": "workplace",
+     "sentences": 10,
+     "example": "너 직장에서 해고당한 적 있어?",
+     "exampleKo": "Have you ever been fired from a job?",
+     "tatoeba": 8362294
+    },
+    {
+     "id": "ko-w-life002",
+     "word": "상사",
+     "meaning": "boss",
+     "sentences": 9,
+     "example": "그는 내 상사였다.",
+     "exampleKo": "She was my boss.",
+     "tatoeba": 8408624
+    },
+    {
+     "id": "ko-w-life003",
+     "word": "월급",
+     "meaning": "salary",
+     "sentences": 3,
+     "example": "그 남자 월급이 얼마야?",
+     "exampleKo": "How much does he earn per month?",
+     "tatoeba": 11104600
+    },
+    {
+     "id": "ko-w-life004",
+     "word": "회의",
+     "meaning": "meeting",
+     "sentences": 18,
+     "example": "내일 비가 내린다면 나는 회의에 가지 않을 것이다.",
+     "exampleKo": "If it rains tomorrow, I'm not going to the meeting.",
+     "tatoeba": 11106723
+    },
+    {
+     "id": "ko-w-life005",
+     "word": "마감",
+     "meaning": "deadline",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life006",
+     "word": "면접",
+     "meaning": "interview",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life007",
+     "word": "시험",
+     "meaning": "exam",
+     "sentences": 24,
+     "example": "그는 시험에 무사히 붙었다.",
+     "exampleKo": "He successfully passed the exam.",
+     "tatoeba": 11106882
+    },
+    {
+     "id": "ko-w-life008",
+     "word": "합격하다",
+     "meaning": "to pass",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life009",
+     "word": "숙제",
+     "meaning": "homework",
+     "sentences": 19,
+     "example": "오늘 숙제가 너무 많아요.",
+     "exampleKo": "Today, I have a lot of homework.",
+     "tatoeba": 472896
+    },
+    {
+     "id": "ko-w-life010",
+     "word": "수업",
+     "meaning": "class",
+     "sentences": 20,
+     "example": "나는 프랑스어 수업을 듣고 있어.",
+     "exampleKo": "I'm taking a French class.",
+     "tatoeba": 8410354
+    },
+    {
+     "id": "ko-w-life011",
+     "word": "성적",
+     "meaning": "grades",
+     "sentences": 6,
+     "example": "남자들은 남성적으로 보이고 싶어한다.",
+     "exampleKo": "Men like to look masculine.",
+     "tatoeba": 6820117
+    },
+    {
+     "id": "ko-w-life012",
+     "word": "졸업하다",
+     "meaning": "to graduate",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life013",
+     "word": "경제",
+     "meaning": "economy",
+     "sentences": 7,
+     "example": "나는 경제학 책을 다섯권 런던에 주문했다.",
+     "exampleKo": "I ordered five books on economics from London.",
+     "tatoeba": 9689687
+    },
+    {
+     "id": "ko-w-life014",
+     "word": "습관",
+     "meaning": "habit",
+     "sentences": 8,
+     "example": "내가 어렸을 때 매일 수영을 하는 습관이 있었다.",
+     "exampleKo": "When I was young, I had a habit of swimming every day.",
+     "tatoeba": 10576618
+    },
+    {
+     "id": "ko-w-life015",
+     "word": "전통",
+     "meaning": "tradition",
+     "sentences": 4,
+     "example": "이건 터키 전통이야.",
+     "exampleKo": "This is a Turkish tradition.",
+     "tatoeba": 4739065
+    },
+    {
+     "id": "ko-w-life016",
+     "word": "계절",
+     "meaning": "season",
+     "sentences": 13,
+     "example": "겨울은 내가 제일 좋아하는 계절이다.",
+     "exampleKo": "Winter is my favorite season.",
+     "tatoeba": 11105932
+    },
+    {
+     "id": "ko-w-life017",
+     "word": "경치",
+     "meaning": "scenery",
+     "sentences": 5,
+     "example": "여기서 보는 경치가 멋있다.",
+     "exampleKo": "It is a nice view from here.",
+     "tatoeba": 11105387
+    },
+    {
+     "id": "ko-w-life018",
+     "word": "분위기",
+     "meaning": "atmosphere",
+     "sentences": 12,
+     "example": "이 치마는 네 스타일(분위기)에 딱 맞는다.",
+     "exampleKo": "This skirt fits your style perfectly.",
+     "tatoeba": 4031849
+    },
+    {
+     "id": "ko-w-life019",
+     "word": "환경",
+     "meaning": "environment",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life020",
+     "word": "자유",
+     "meaning": "freedom",
+     "sentences": 13,
+     "example": "너는 자유로운 사람이야.",
+     "exampleKo": "You're a free man.",
+     "tatoeba": 13209363
+    },
+    {
+     "id": "ko-w-life021",
+     "word": "평화",
+     "meaning": "peace",
+     "sentences": 19,
+     "example": "우리는 평화를 원합니다.",
+     "exampleKo": "We want peace.",
+     "tatoeba": 6304996
+    },
+    {
+     "id": "ko-w-life022",
+     "word": "경험",
+     "meaning": "experience",
+     "sentences": 20,
+     "example": "내가 경험했던 것 중에 가장 무서운 경험이었어.",
+     "exampleKo": "It was the most frightening experience that I've ever had.",
+     "tatoeba": 8361451
+    },
+    {
+     "id": "ko-w-life023",
+     "word": "미래",
+     "meaning": "future",
+     "sentences": 7,
+     "example": "우리는 미래를 위해 과거를 공부해.",
+     "exampleKo": "We study the past for the sake of the future.",
+     "tatoeba": 8364900
+    },
+    {
+     "id": "ko-w-life024",
+     "word": "과거",
+     "meaning": "past",
+     "sentences": 9,
+     "example": "우리는 미래를 위해 과거를 공부해.",
+     "exampleKo": "We study the past for the sake of the future.",
+     "tatoeba": 8364900
+    },
+    {
+     "id": "ko-w-life025",
+     "word": "성격",
+     "meaning": "personality",
+     "sentences": 7,
+     "example": "기후가 우리 성격에 영향을 준다고 생각하십니까?",
+     "exampleKo": "Do you think our climate has an influence on our character?",
+     "tatoeba": 10576565
+    },
+    {
+     "id": "ko-w-life026",
+     "word": "취미",
+     "meaning": "hobby",
+     "sentences": 8,
+     "example": "취미가 뭡니까?",
+     "exampleKo": "What is your hobby?",
+     "tatoeba": 6963567
+    },
+    {
+     "id": "ko-w-life027",
+     "word": "고르다",
+     "meaning": "to choose",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life028",
+     "word": "망설이다",
+     "meaning": "to hesitate",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life029",
+     "word": "비교하다",
+     "meaning": "to compare",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life030",
+     "word": "포기하다",
+     "meaning": "to give up",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life031",
+     "word": "시도하다",
+     "meaning": "to try",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life032",
+     "word": "자라다",
+     "meaning": "to grow",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life033",
+     "word": "변하다",
+     "meaning": "to change",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life034",
+     "word": "청소하다",
+     "meaning": "to clean",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life035",
+     "word": "씻다",
+     "meaning": "to wash",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life036",
+     "word": "할인",
+     "meaning": "discount",
+     "sentences": 7,
+     "example": "대용량 할인 있어요?",
+     "exampleKo": "Is there a bulk discount?",
+     "tatoeba": 4963077
+    },
+    {
+     "id": "ko-w-life037",
+     "word": "지갑",
+     "meaning": "wallet",
+     "sentences": 4,
+     "example": "지갑을 잃어버렸습니다.",
+     "exampleKo": "I lost my wallet.",
+     "tatoeba": 13121283
+    },
+    {
+     "id": "ko-w-life038",
+     "word": "열쇠",
+     "meaning": "key",
+     "sentences": 25,
+     "example": "나는 그들이 열쇠를 어디에 숨겼는지 모른다.",
+     "exampleKo": "I don't know where they hid the key.",
+     "tatoeba": 11105411
+    },
+    {
+     "id": "ko-w-life039",
+     "word": "우산",
+     "meaning": "umbrella",
+     "sentences": 14,
+     "example": "제 우산 같이 쓰세요.",
+     "exampleKo": "Please share my umbrella.",
+     "tatoeba": 4748257
+    },
+    {
+     "id": "ko-w-life040",
+     "word": "서두르다",
+     "meaning": "to hurry",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life041",
+     "word": "진정하다",
+     "meaning": "to calm down",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life042",
+     "word": "잊다",
+     "meaning": "to forget",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life043",
+     "word": "잃어버리다",
+     "meaning": "to lose",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life044",
+     "word": "빌려주다",
+     "meaning": "to lend",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life045",
+     "word": "빌리다",
+     "meaning": "to borrow",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life046",
+     "word": "돌려주다",
+     "meaning": "to return",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life047",
+     "word": "지불하다",
+     "meaning": "to pay",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life048",
+     "word": "저축하다",
+     "meaning": "to save",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life049",
+     "word": "악기",
+     "meaning": "instrument",
+     "sentences": 3,
+     "example": "악기를 배우는 건 정신을 훈련시킬 수 있어.",
+     "exampleKo": "Learning a musical instrument trains the mind.",
+     "tatoeba": 8363855
+    },
+    {
+     "id": "ko-w-life050",
+     "word": "최근",
+     "meaning": "recently",
+     "sentences": 23,
+     "example": "저는 최근에 그분한테서 연락이 업서요.",
+     "exampleKo": "I don't have contact recently from him.",
+     "tatoeba": 373213
+    },
+    {
+     "id": "ko-w-life051",
+     "word": "아마",
+     "meaning": "probably",
+     "sentences": 43,
+     "example": "난 아마 너무 늙었어.",
+     "exampleKo": "I may be too old.",
+     "tatoeba": 8491002
+    },
+    {
+     "id": "ko-w-life052",
+     "word": "분명히",
+     "meaning": "clearly",
+     "sentences": 7,
+     "example": "그는 분명히 올 것이다.",
+     "exampleKo": "He will definitely come.",
+     "tatoeba": 5262010
+    },
+    {
+     "id": "ko-w-life053",
+     "word": "갑자기",
+     "meaning": "suddenly",
+     "sentences": 9,
+     "example": "난 갑자기 너무 걱정이 되었어.",
+     "exampleKo": "I suddenly got very worried.",
+     "tatoeba": 8365810
+    },
+    {
+     "id": "ko-w-life054",
+     "word": "드디어",
+     "meaning": "finally",
+     "sentences": 12,
+     "example": "너 드디어 취직 성공했구나.",
+     "exampleKo": "You finally succeeded in getting a job.",
+     "tatoeba": 11105693
+    },
+    {
+     "id": "ko-w-life055",
+     "word": "그런데",
+     "meaning": "by the way",
+     "sentences": 3,
+     "example": "그런데, 그때 잃어버린 우산은 찾았어?",
+     "exampleKo": "By the way, did you find the umbrella that you lost that time?",
+     "tatoeba": 13250285
+    },
+    {
+     "id": "ko-w-life056",
+     "word": "꽤",
+     "meaning": "quite",
+     "sentences": 34,
+     "example": "선생님께 보스턴을 떠나는 건 꽤나 힘든 일일 거예요.",
+     "exampleKo": "It's probably going to be hard for you to leave Boston.",
+     "tatoeba": 13400560
+    },
+    {
+     "id": "ko-w-life057",
+     "word": "겨우",
+     "meaning": "barely",
+     "sentences": 3,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "ko-w-life058",
+     "word": "보통",
+     "meaning": "usually",
+     "sentences": 25,
+     "example": "나는 보통 여섯 시에 집에 온다.",
+     "exampleKo": "I usually get home by six o'clock.",
+     "tatoeba": 11105112
+    },
+    {
+     "id": "ko-w-life059",
+     "word": "곧",
+     "meaning": "soon",
+     "sentences": 35,
+     "example": "우리는 곧 진실을 알게 될거야.",
+     "exampleKo": "We'll learn the truth soon.",
+     "tatoeba": 8363844
+    },
+    {
+     "id": "ko-w-life060",
+     "word": "오랫동안",
+     "meaning": "for a long time",
+     "sentences": 6,
+     "example": "내가 그렇게 오랫동안에 멀리 있지 않았어야 했어.",
+     "exampleKo": "I shouldn't have stayed away so long.",
+     "tatoeba": 3677014
+    },
+    {
+     "id": "ko-w-life061",
+     "word": "다르다",
+     "meaning": "to be different",
+     "sentences": 7,
+     "example": "내 시계는 당신의 것과 다르다.",
+     "exampleKo": "My watch is different than yours.",
+     "tatoeba": 3675020
+    },
+    {
+     "id": "ko-w-life062",
+     "word": "누군가",
+     "meaning": "someone",
+     "sentences": 39,
+     "example": "걱정하지 마. 결국 누군가 와서 우리를 구출할 거야.",
+     "exampleKo": "Don't worry. Someone will come and rescue us eventually.",
+     "tatoeba": 11110670
+    },
+    {
+     "id": "ko-w-life063",
+     "word": "무언가",
+     "meaning": "something",
+     "sentences": 16,
+     "example": "무언가가 일어나고 있었어.",
+     "exampleKo": "Something was happening.",
+     "tatoeba": 8367350
+    }
+   ]
+  }
+ ]
+}

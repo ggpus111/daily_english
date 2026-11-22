@@ -6,6 +6,2092 @@
  },
  "packs": [
   {
+   "id": "love",
+   "title": {
+    "ko": "애정 표현",
+    "en": "Love & affection"
+   },
+   "items": [
+    {
+     "id": "love-01",
+     "text": "I love you.",
+     "meaning": "사랑해",
+     "example": "I love you more than anything.",
+     "exampleKo": "세상 무엇보다 사랑해.",
+     "tip": "처음 말할 땐 무게가 있는 말이에요. 사귄 지 얼마 안 됐으면 상대가 놀랄 수도 있어요.",
+     "easyWords": false,
+     "sentences": 602,
+     "perMillion": 295.0
+    },
+    {
+     "id": "love-02",
+     "text": "Love you",
+     "meaning": "사랑해 (가볍게)",
+     "example": "Good night, love you!",
+     "exampleKo": "잘 자, 사랑해!",
+     "tip": "I를 빼면 더 가볍고 일상적이에요. 가족이나 아주 친한 친구에게도 써요.",
+     "easyWords": true,
+     "sentences": 1185,
+     "perMillion": 580.7
+    },
+    {
+     "id": "love-03",
+     "text": "I'm crazy about you.",
+     "meaning": "너한테 푹 빠졌어",
+     "example": "I'm crazy about you, you know that?",
+     "exampleKo": "나 너한테 푹 빠진 거 알지?",
+     "tip": "crazy about은 '미치도록 좋아하다'예요. 음식이나 취미에도 써요.",
+     "easyWords": true,
+     "sentences": 10,
+     "perMillion": 4.9
+    },
+    {
+     "id": "love-04",
+     "text": "You mean a lot to me.",
+     "meaning": "넌 나한테 정말 소중해",
+     "example": "You mean a lot to me. I hope you know that.",
+     "exampleKo": "넌 나한테 정말 소중해. 알아줬으면 좋겠어.",
+     "tip": "친구에게 고마움을 진지하게 전할 때도 좋아요.",
+     "easyWords": false,
+     "sentences": 49,
+     "perMillion": 24.0
+    },
+    {
+     "id": "love-05",
+     "text": "I'm into you.",
+     "meaning": "너 좋아해",
+     "example": "I think I'm really into you.",
+     "exampleKo": "나 너 진짜 좋아하는 것 같아.",
+     "tip": "사귀기 전 마음을 고백할 때 자주 써요.",
+     "easyWords": true,
+     "sentences": 49,
+     "perMillion": 24.0
+    },
+    {
+     "id": "love-06",
+     "text": "I have a crush on you.",
+     "meaning": "너한테 반했어",
+     "example": "I've had a crush on you for a while.",
+     "exampleKo": "꽤 오래전부터 너 좋아했어.",
+     "tip": "crush는 설레는 짝사랑이에요. 'my crush'는 내가 좋아하는 사람.",
+     "easyWords": true,
+     "sentences": 23,
+     "perMillion": 11.3
+    },
+    {
+     "id": "love-07",
+     "text": "You make me happy.",
+     "meaning": "너 덕분에 행복해",
+     "example": "You always make me happy.",
+     "exampleKo": "넌 항상 날 행복하게 해.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 130,
+     "perMillion": 63.7
+    },
+    {
+     "id": "love-08",
+     "text": "I'm lucky to have you.",
+     "meaning": "네가 있어서 다행이야",
+     "example": "I'm so lucky to have you.",
+     "exampleKo": "너 같은 사람이 있어서 정말 다행이야.",
+     "tip": "연인, 친구, 가족 누구에게나 쓸 수 있어요.",
+     "easyWords": true,
+     "sentences": 8,
+     "perMillion": 3.9
+    },
+    {
+     "id": "love-09",
+     "text": "babe",
+     "meaning": "자기야",
+     "example": "Morning, babe! Did you sleep well?",
+     "exampleKo": "자기야 좋은 아침! 잘 잤어?",
+     "tip": "사귀는 사이에서 써요. 친구한테 쓰면 오해할 수 있어요. baby, honey도 비슷해요.",
+     "easyWords": true,
+     "sentences": 43,
+     "perMillion": 21.1
+    },
+    {
+     "id": "love-10",
+     "text": "You're the best.",
+     "meaning": "네가 최고야",
+     "example": "Thanks for the coffee. You're the best!",
+     "exampleKo": "커피 고마워. 네가 최고야!",
+     "tip": "고마울 때 친구에게도 아주 자주 써요.",
+     "easyWords": true,
+     "sentences": 64,
+     "perMillion": 31.4
+    },
+    {
+     "id": "love-11",
+     "text": "I'm falling for you.",
+     "meaning": "너한테 빠지고 있어",
+     "example": "I think I'm falling for you.",
+     "exampleKo": "나 너한테 빠지고 있는 것 같아.",
+     "tip": "fall for는 '반하다'예요. 속임수에 넘어가다는 뜻도 있어요.",
+     "easyWords": true
+    },
+    {
+     "id": "love-12",
+     "text": "I can't stop thinking about you.",
+     "meaning": "네 생각만 나",
+     "example": "I can't stop thinking about you today.",
+     "exampleKo": "오늘 계속 네 생각만 나.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 6,
+     "perMillion": 2.9
+    },
+    {
+     "id": "love-13",
+     "text": "You're my everything.",
+     "meaning": "넌 내 전부야",
+     "example": "You're my everything, you know that?",
+     "exampleKo": "넌 내 전부야, 알지?",
+     "tip": "아주 달콤한 말이라 특별한 날에 아껴 써요.",
+     "easyWords": false,
+     "sentences": 16,
+     "perMillion": 7.8
+    },
+    {
+     "id": "love-14",
+     "text": "xoxo",
+     "meaning": "쪽, 꼭 안아 (메시지 끝인사)",
+     "example": "See you tomorrow, xoxo",
+     "exampleKo": "내일 봐, 쪽",
+     "tip": "x는 뽀뽀, o는 포옹이에요. 메시지나 편지 끝에 붙여요.",
+     "easyWords": false
+    },
+    {
+     "id": "love-15",
+     "text": "I adore you.",
+     "meaning": "너무 좋아, 사랑스러워",
+     "example": "I adore you and your silly jokes.",
+     "exampleKo": "너랑 네 썰렁한 농담까지 다 좋아.",
+     "tip": "love보다 다정하고 귀여운 느낌이에요.",
+     "easyWords": false,
+     "sentences": 16,
+     "perMillion": 7.8
+    },
+    {
+     "id": "love-16",
+     "text": "You complete me.",
+     "meaning": "넌 날 완성해 줘",
+     "example": "Cheesy, but you complete me.",
+     "exampleKo": "오글거리지만, 넌 날 완성해 줘.",
+     "tip": "영화에서 나온 유명한 오글 대사예요. 장난처럼 써도 좋아요.",
+     "easyWords": false,
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "love-17",
+     "text": "I'm all yours.",
+     "meaning": "난 다 네 거야",
+     "example": "Tonight I'm all yours.",
+     "exampleKo": "오늘 밤 난 다 네 거야.",
+     "tip": "상황에 따라 '먼저 써(다 썼어)'라는 뜻도 돼요.",
+     "easyWords": true,
+     "sentences": 24,
+     "perMillion": 11.8
+    }
+   ]
+  },
+  {
+   "id": "miss",
+   "title": {
+    "ko": "보고 싶을 때",
+    "en": "Missing you"
+   },
+   "items": [
+    {
+     "id": "miss-01",
+     "text": "I miss you.",
+     "meaning": "보고 싶어",
+     "example": "I miss you so much.",
+     "exampleKo": "너무 보고 싶어.",
+     "tip": "miss는 '놓치다'도 되지만 사람에게 쓰면 '보고 싶다'예요.",
+     "easyWords": true,
+     "sentences": 372,
+     "perMillion": 182.3
+    },
+    {
+     "id": "miss-02",
+     "text": "Miss you already.",
+     "meaning": "벌써 보고 싶어",
+     "example": "You just left and I miss you already.",
+     "exampleKo": "방금 갔는데 벌써 보고 싶어.",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "miss-03",
+     "text": "I can't wait to see you.",
+     "meaning": "빨리 보고 싶어",
+     "example": "Only three more days. I can't wait to see you!",
+     "exampleKo": "3일만 더! 빨리 보고 싶어.",
+     "tip": "can't wait는 '너무 기대돼'라는 뜻이에요.",
+     "easyWords": true,
+     "sentences": 13,
+     "perMillion": 6.4
+    },
+    {
+     "id": "miss-04",
+     "text": "I'm counting the days.",
+     "meaning": "손꼽아 기다리는 중이야",
+     "example": "I'm counting the days until you come.",
+     "exampleKo": "너 오는 날만 손꼽아 기다려.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "miss-05",
+     "text": "I wish you were here.",
+     "meaning": "네가 여기 있으면 좋겠다",
+     "example": "The view is so pretty. I wish you were here.",
+     "exampleKo": "경치 너무 예뻐. 네가 여기 있으면 좋을 텐데.",
+     "tip": "wish 뒤에는 were를 써서 '그렇지 않아서 아쉽다'는 느낌을 내요.",
+     "easyWords": true,
+     "sentences": 9,
+     "perMillion": 4.4
+    },
+    {
+     "id": "miss-06",
+     "text": "Thinking of you.",
+     "meaning": "네 생각 하고 있어",
+     "example": "Just thinking of you. Hope your day is going well.",
+     "exampleKo": "그냥 네 생각 나서. 오늘 잘 보내고 있지?",
+     "tip": "힘든 일을 겪는 친구에게 위로로도 써요.",
+     "easyWords": true,
+     "sentences": 19,
+     "perMillion": 9.3
+    },
+    {
+     "id": "miss-07",
+     "text": "See you soon.",
+     "meaning": "곧 보자",
+     "example": "See you soon! Safe flight.",
+     "exampleKo": "곧 보자! 조심히 와.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 37,
+     "perMillion": 18.1
+    },
+    {
+     "id": "miss-08",
+     "text": "It's not the same without you.",
+     "meaning": "너 없으니까 허전해",
+     "example": "This cafe is not the same without you.",
+     "exampleKo": "너 없으니까 이 카페도 허전하다.",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "miss-09",
+     "text": "I miss your voice.",
+     "meaning": "네 목소리 듣고 싶어",
+     "example": "Can you call me? I miss your voice.",
+     "exampleKo": "전화해 줄래? 네 목소리 듣고 싶어.",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "miss-10",
+     "text": "Sending you a hug.",
+     "meaning": "멀리서 꼭 안아 줄게",
+     "example": "Rough day? Sending you a big hug.",
+     "exampleKo": "힘든 하루였어? 멀리서 꼭 안아 줄게.",
+     "tip": "직접 안아 줄 수 없을 때 메시지로 쓰는 말이에요.",
+     "easyWords": true
+    },
+    {
+     "id": "miss-11",
+     "text": "You're always on my mind.",
+     "meaning": "늘 네 생각뿐이야",
+     "example": "You're always on my mind, even at work.",
+     "exampleKo": "일할 때도 늘 네 생각뿐이야.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 68,
+     "perMillion": 33.3
+    },
+    {
+     "id": "miss-12",
+     "text": "Come back soon.",
+     "meaning": "빨리 돌아와",
+     "example": "I'll be waiting. Come back soon.",
+     "exampleKo": "기다릴게. 빨리 돌아와.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 68,
+     "perMillion": 33.3
+    },
+    {
+     "id": "miss-13",
+     "text": "I'll be right here.",
+     "meaning": "나 여기 있을게",
+     "example": "Take your time. I'll be right here.",
+     "exampleKo": "천천히 해. 나 여기 있을게.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 32,
+     "perMillion": 15.7
+    },
+    {
+     "id": "miss-14",
+     "text": "I want to see you.",
+     "meaning": "너 보고 싶어 (만나고 싶어)",
+     "example": "I want to see you this weekend.",
+     "exampleKo": "이번 주말에 너 보고 싶어.",
+     "tip": "I miss you는 그리움, I want to see you는 '만나고 싶다'에 가까워요.",
+     "easyWords": true,
+     "sentences": 249,
+     "perMillion": 122.0
+    }
+   ]
+  },
+  {
+   "id": "text",
+   "title": {
+    "ko": "메시지 줄임말",
+    "en": "Texting shortcuts"
+   },
+   "items": [
+    {
+     "id": "text-01",
+     "text": "lol",
+     "meaning": "ㅋㅋ",
+     "example": "That's so funny lol",
+     "exampleKo": "완전 웃기다 ㅋㅋ",
+     "tip": "laughing out loud의 줄임말이에요. 요즘은 가벼운 'ㅋㅋ' 정도로 써요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-02",
+     "text": "lmao",
+     "meaning": "ㅋㅋㅋㅋ (빵 터짐)",
+     "example": "lmao I can't stop laughing",
+     "exampleKo": "ㅋㅋㅋㅋ 웃음이 안 멈춰",
+     "tip": "lol보다 더 크게 웃을 때 써요. 조금 거친 말이라 윗사람에겐 피해요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-03",
+     "text": "omg",
+     "meaning": "헐, 대박",
+     "example": "omg is that real??",
+     "exampleKo": "헐 그거 진짜야??",
+     "tip": "oh my god의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-04",
+     "text": "idk",
+     "meaning": "몰라",
+     "example": "idk, what do you want to eat?",
+     "exampleKo": "몰라, 너 뭐 먹고 싶어?",
+     "tip": "I don't know의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-05",
+     "text": "tbh",
+     "meaning": "솔직히",
+     "example": "tbh I liked the first one better.",
+     "exampleKo": "솔직히 난 첫 번째가 더 좋았어.",
+     "tip": "to be honest의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-06",
+     "text": "ngl",
+     "meaning": "솔직히 말하면",
+     "example": "ngl that was kind of cute",
+     "exampleKo": "솔직히 그거 좀 귀여웠어",
+     "tip": "not gonna lie(거짓말 안 할게)의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-07",
+     "text": "btw",
+     "meaning": "그건 그렇고",
+     "example": "btw, did you eat yet?",
+     "exampleKo": "그건 그렇고 밥 먹었어?",
+     "tip": "by the way의 줄임말이에요. 화제를 바꿀 때 써요.",
+     "easyWords": true,
+     "texting": true
+    },
+    {
+     "id": "text-08",
+     "text": "brb",
+     "meaning": "잠깐만, 금방 올게",
+     "example": "brb, my mom's calling",
+     "exampleKo": "잠깐만, 엄마 전화 와서",
+     "tip": "be right back의 줄임말이에요.",
+     "easyWords": true,
+     "texting": true
+    },
+    {
+     "id": "text-09",
+     "text": "ttyl",
+     "meaning": "나중에 얘기하자",
+     "example": "Gotta go, ttyl!",
+     "exampleKo": "가 봐야 해, 나중에 얘기하자!",
+     "tip": "talk to you later의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-10",
+     "text": "wyd",
+     "meaning": "뭐 해?",
+     "example": "wyd rn?",
+     "exampleKo": "지금 뭐 해?",
+     "tip": "what (are) you doing의 줄임말이에요. 늦은 밤에 보내면 만나자는 뜻으로 들리기도 해요.",
+     "easyWords": true,
+     "texting": true
+    },
+    {
+     "id": "text-11",
+     "text": "hbu",
+     "meaning": "너는?",
+     "example": "I'm good, hbu?",
+     "exampleKo": "난 잘 지내, 너는?",
+     "tip": "how about you의 줄임말이에요. wbu(what about you)도 같아요.",
+     "easyWords": true,
+     "texting": true
+    },
+    {
+     "id": "text-12",
+     "text": "rn",
+     "meaning": "지금",
+     "example": "I'm so tired rn",
+     "exampleKo": "나 지금 너무 피곤해",
+     "tip": "right now의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-13",
+     "text": "omw",
+     "meaning": "가는 중",
+     "example": "omw! 5 mins",
+     "exampleKo": "가는 중! 5분",
+     "tip": "on my way의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-14",
+     "text": "ily",
+     "meaning": "사랑해",
+     "example": "ily, sleep well",
+     "exampleKo": "사랑해, 잘 자",
+     "tip": "I love you의 줄임말이에요. 친구끼리 장난으로도 써요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-15",
+     "text": "jk",
+     "meaning": "농담이야",
+     "example": "You're so annoying jk",
+     "exampleKo": "너 진짜 짜증 나 ㅋ 농담이야",
+     "tip": "just kidding의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-16",
+     "text": "fr",
+     "meaning": "진짜로, 인정",
+     "example": "That movie was so good fr",
+     "exampleKo": "그 영화 진짜 좋았어, 인정",
+     "tip": "for real의 줄임말이에요. 맞장구로도 써요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-17",
+     "text": "smh",
+     "meaning": "어이없다",
+     "example": "You forgot again? smh",
+     "exampleKo": "또 까먹었어? 어이없다",
+     "tip": "shaking my head(고개를 절레절레)의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-18",
+     "text": "ty",
+     "meaning": "고마워",
+     "example": "ty for the help!",
+     "exampleKo": "도와줘서 고마워!",
+     "tip": "thank you의 줄임말이에요. tysm은 thank you so much.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-19",
+     "text": "np",
+     "meaning": "괜찮아, 별거 아냐",
+     "example": "np, anytime!",
+     "exampleKo": "괜찮아, 언제든지!",
+     "tip": "no problem의 줄임말이에요. ty에 대한 답으로 써요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-20",
+     "text": "gn",
+     "meaning": "잘 자",
+     "example": "gn, talk tomorrow",
+     "exampleKo": "잘 자, 내일 얘기해",
+     "tip": "good night의 줄임말이에요. gm은 good morning.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-21",
+     "text": "imo",
+     "meaning": "내 생각엔",
+     "example": "imo the blue one looks better",
+     "exampleKo": "내 생각엔 파란 게 더 예뻐",
+     "tip": "in my opinion의 줄임말이에요.",
+     "easyWords": false,
+     "texting": true
+    },
+    {
+     "id": "text-22",
+     "text": "tho",
+     "meaning": "근데",
+     "example": "It was fun tho",
+     "exampleKo": "근데 재밌었어",
+     "tip": "though를 줄여 문장 끝에 붙여요.",
+     "easyWords": false,
+     "texting": true
+    }
+   ]
+  },
+  {
+   "id": "chat",
+   "title": {
+    "ko": "안부·수다",
+    "en": "Catching up"
+   },
+   "items": [
+    {
+     "id": "chat-01",
+     "text": "What are you up to?",
+     "meaning": "뭐 하고 있어?",
+     "example": "Hey, what are you up to this weekend?",
+     "exampleKo": "이번 주말에 뭐 해?",
+     "tip": "지금 뭐 하는지, 또는 계획이 뭔지 물을 때 둘 다 써요.",
+     "easyWords": true,
+     "sentences": 24,
+     "perMillion": 11.8
+    },
+    {
+     "id": "chat-02",
+     "text": "How was your day?",
+     "meaning": "오늘 하루 어땠어?",
+     "example": "How was your day? Tell me everything.",
+     "exampleKo": "오늘 어땠어? 다 얘기해 줘.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 11,
+     "perMillion": 5.4
+    },
+    {
+     "id": "chat-03",
+     "text": "Not much.",
+     "meaning": "별거 없어",
+     "example": "Not much, just chilling at home.",
+     "exampleKo": "별거 없어, 집에서 쉬는 중.",
+     "tip": "What's up?에 대한 가장 흔한 대답이에요.",
+     "easyWords": true,
+     "sentences": 259,
+     "perMillion": 126.9
+    },
+    {
+     "id": "chat-04",
+     "text": "Same here.",
+     "meaning": "나도 그래",
+     "example": "Same here, I barely slept.",
+     "exampleKo": "나도, 거의 못 잤어.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 16,
+     "perMillion": 7.8
+    },
+    {
+     "id": "chat-05",
+     "text": "Just chilling.",
+     "meaning": "그냥 쉬는 중",
+     "example": "Just chilling with my cat.",
+     "exampleKo": "고양이랑 그냥 쉬는 중이야.",
+     "tip": "chill은 '느긋하게 쉬다'예요.",
+     "easyWords": true,
+     "sentences": 7,
+     "perMillion": 3.4
+    },
+    {
+     "id": "chat-06",
+     "text": "No way!",
+     "meaning": "말도 안 돼!",
+     "example": "No way! You met him?",
+     "exampleKo": "말도 안 돼! 걔를 만났다고?",
+     "tip": "놀라움에도, '절대 안 돼'라는 거절에도 써요.",
+     "easyWords": true,
+     "sentences": 671,
+     "perMillion": 328.8
+    },
+    {
+     "id": "chat-07",
+     "text": "That's wild.",
+     "meaning": "대박이다",
+     "example": "You saw a celebrity? That's wild.",
+     "exampleKo": "연예인을 봤다고? 대박이다.",
+     "tip": "놀랍거나 믿기 힘든 이야기를 들었을 때 써요.",
+     "easyWords": true
+    },
+    {
+     "id": "chat-08",
+     "text": "Tell me about it.",
+     "meaning": "내 말이",
+     "example": "Tell me about it. Mondays are the worst.",
+     "exampleKo": "내 말이. 월요일이 제일 싫어.",
+     "tip": "'얘기해 줘'가 아니라 '완전 공감'이라는 뜻으로 자주 써요.",
+     "easyWords": false,
+     "sentences": 74,
+     "perMillion": 36.3
+    },
+    {
+     "id": "chat-09",
+     "text": "Guess what?",
+     "meaning": "있잖아!",
+     "example": "Guess what? I got the job!",
+     "exampleKo": "있잖아! 나 합격했어!",
+     "tip": "좋은 소식을 꺼낼 때 써요.",
+     "easyWords": true,
+     "sentences": 165,
+     "perMillion": 80.9
+    },
+    {
+     "id": "chat-10",
+     "text": "Did you eat?",
+     "meaning": "밥 먹었어?",
+     "example": "Did you eat yet? Don't skip dinner.",
+     "exampleKo": "밥 먹었어? 저녁 거르지 마.",
+     "tip": "한국식 안부라, 외국인에겐 진짜 배고픈지 묻는 걸로 들릴 수 있어요. 챙겨 주는 마음이라고 알려 주면 좋아요.",
+     "easyWords": true,
+     "sentences": 171,
+     "perMillion": 83.8
+    },
+    {
+     "id": "chat-11",
+     "text": "Anything new?",
+     "meaning": "별일 없어?",
+     "example": "Long time! Anything new?",
+     "exampleKo": "오랜만이야! 별일 없어?",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 71,
+     "perMillion": 34.8
+    },
+    {
+     "id": "chat-12",
+     "text": "Long day?",
+     "meaning": "오늘 힘들었지?",
+     "example": "Long day? You sound tired.",
+     "exampleKo": "오늘 길었지? 목소리가 피곤해 보여.",
+     "tip": "long day는 일이 많아 길게 느껴진 하루예요.",
+     "easyWords": true,
+     "sentences": 74,
+     "perMillion": 36.3
+    },
+    {
+     "id": "chat-13",
+     "text": "Fair enough.",
+     "meaning": "그럴 만하네, 인정",
+     "example": "You were busy? Fair enough.",
+     "exampleKo": "바빴구나? 그럴 만하네.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 7,
+     "perMillion": 3.4
+    },
+    {
+     "id": "chat-14",
+     "text": "I feel you.",
+     "meaning": "무슨 마음인지 알아",
+     "example": "I feel you. I had the same problem.",
+     "exampleKo": "무슨 말인지 알아. 나도 똑같았어.",
+     "tip": "느낀다는 뜻이 아니라 '공감해'라는 뜻이에요.",
+     "easyWords": false,
+     "sentences": 12,
+     "perMillion": 5.9
+    },
+    {
+     "id": "chat-15",
+     "text": "That's so random.",
+     "meaning": "완전 뜬금없다",
+     "example": "You dreamed about a penguin? That's so random.",
+     "exampleKo": "펭귄 꿈을 꿨다고? 완전 뜬금없다.",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "chat-16",
+     "text": "For real?",
+     "meaning": "진짜로?",
+     "example": "You're moving here? For real?",
+     "exampleKo": "여기로 이사 온다고? 진짜로?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 44,
+     "perMillion": 21.6
+    },
+    {
+     "id": "chat-17",
+     "text": "Same old, same old.",
+     "meaning": "늘 똑같지 뭐",
+     "example": "Work is same old, same old.",
+     "exampleKo": "일은 늘 똑같지 뭐.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 35,
+     "perMillion": 17.2
+    },
+    {
+     "id": "chat-18",
+     "text": "What's new with you?",
+     "meaning": "요즘 어떻게 지내?",
+     "example": "What's new with you these days?",
+     "exampleKo": "요즘 어떻게 지내?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 33,
+     "perMillion": 16.2
+    }
+   ]
+  },
+  {
+   "id": "tease",
+   "title": {
+    "ko": "장난·놀리기",
+    "en": "Teasing & jokes"
+   },
+   "items": [
+    {
+     "id": "tease-01",
+     "text": "You're such a dork.",
+     "meaning": "너 진짜 바보 같아 (귀엽게)",
+     "example": "You're such a dork, but I like it.",
+     "exampleKo": "너 진짜 바보 같아, 근데 그게 좋아.",
+     "tip": "dork는 귀여운 바보예요. 다정하게 놀릴 때 써요.",
+     "easyWords": true
+    },
+    {
+     "id": "tease-02",
+     "text": "I'm just messing with you.",
+     "meaning": "장난친 거야",
+     "example": "Relax, I'm just messing with you.",
+     "exampleKo": "진정해, 그냥 장난친 거야.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 10,
+     "perMillion": 4.9
+    },
+    {
+     "id": "tease-03",
+     "text": "Stop it!",
+     "meaning": "그만해!",
+     "example": "Stop it! You're making me blush.",
+     "exampleKo": "그만해! 얼굴 빨개지잖아.",
+     "tip": "웃으면서 말하면 부끄러울 때의 '아 왜 그래~'예요.",
+     "easyWords": true,
+     "sentences": 180,
+     "perMillion": 88.2
+    },
+    {
+     "id": "tease-04",
+     "text": "You wish.",
+     "meaning": "꿈 깨",
+     "example": "You want me to cook again? You wish.",
+     "exampleKo": "또 요리해 달라고? 꿈 깨.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 296,
+     "perMillion": 145.1
+    },
+    {
+     "id": "tease-05",
+     "text": "Nice try.",
+     "meaning": "어림없지",
+     "example": "Nice try, but I'm not falling for that.",
+     "exampleKo": "어림없지, 안 속아.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 8,
+     "perMillion": 3.9
+    },
+    {
+     "id": "tease-06",
+     "text": "Very funny.",
+     "meaning": "하나도 안 웃기거든",
+     "example": "Very funny. Now give me my phone back.",
+     "exampleKo": "하나도 안 웃겨. 이제 폰 돌려줘.",
+     "tip": "말 그대로가 아니라 살짝 비꼬는 말이에요.",
+     "easyWords": true,
+     "sentences": 114,
+     "perMillion": 55.9
+    },
+    {
+     "id": "tease-07",
+     "text": "You're so extra.",
+     "meaning": "너 너무 오버야",
+     "example": "Balloons for my birthday? You're so extra.",
+     "exampleKo": "생일이라고 풍선까지? 너무 오버야 ㅋㅋ",
+     "tip": "extra는 '지나치게 요란한'이라는 요즘 말이에요.",
+     "easyWords": true
+    },
+    {
+     "id": "tease-08",
+     "text": "Whatever.",
+     "meaning": "됐어, 몰라",
+     "example": "Whatever, you win.",
+     "exampleKo": "됐어, 네가 이겼어.",
+     "tip": "차갑게 들릴 수 있으니 웃는 이모지와 함께 써요.",
+     "easyWords": false,
+     "sentences": 1782,
+     "perMillion": 873.3
+    },
+    {
+     "id": "tease-09",
+     "text": "Don't be mean.",
+     "meaning": "못되게 굴지 마",
+     "example": "Don't be mean, I tried my best!",
+     "exampleKo": "못되게 굴지 마, 최선을 다했단 말이야!",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "tease-10",
+     "text": "Gotcha!",
+     "meaning": "속았지!",
+     "example": "Gotcha! It was a joke.",
+     "exampleKo": "속았지! 농담이었어.",
+     "tip": "'알겠어'라는 뜻으로도 자주 써요.",
+     "easyWords": false,
+     "sentences": 6,
+     "perMillion": 2.9
+    },
+    {
+     "id": "tease-11",
+     "text": "Busted!",
+     "meaning": "딱 걸렸어!",
+     "example": "Busted! You ate my snacks.",
+     "exampleKo": "딱 걸렸어! 내 과자 먹었지.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 38,
+     "perMillion": 18.6
+    },
+    {
+     "id": "tease-12",
+     "text": "Says who?",
+     "meaning": "누가 그래?",
+     "example": "I'm a bad cook? Says who?",
+     "exampleKo": "내가 요리 못한다고? 누가 그래?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "tease-13",
+     "text": "You're impossible.",
+     "meaning": "너 진짜 못 말려",
+     "example": "You're impossible! Stop laughing.",
+     "exampleKo": "진짜 못 말려! 그만 웃어.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "tease-14",
+     "text": "In your dreams.",
+     "meaning": "꿈에서나",
+     "example": "You'll beat me at this game? In your dreams.",
+     "exampleKo": "이 게임에서 날 이긴다고? 꿈에서나.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 22,
+     "perMillion": 10.8
+    },
+    {
+     "id": "tease-15",
+     "text": "I'm kidding!",
+     "meaning": "농담이야!",
+     "example": "I'm kidding! You look great.",
+     "exampleKo": "농담이야! 너 멋있어.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 7,
+     "perMillion": 3.4
+    },
+    {
+     "id": "tease-16",
+     "text": "Bet.",
+     "meaning": "콜, 좋아",
+     "example": "Bet, see you at eight.",
+     "exampleKo": "콜, 8시에 봐.",
+     "tip": "요즘 젊은 사람들이 '좋아, 그러자'라는 뜻으로 짧게 써요.",
+     "easyWords": true,
+     "sentences": 778,
+     "perMillion": 381.3
+    },
+    {
+     "id": "tease-17",
+     "text": "You're such a goofball.",
+     "meaning": "너 진짜 웃긴 애야",
+     "example": "You're such a goofball, I love it.",
+     "exampleKo": "너 진짜 엉뚱해, 그게 좋아.",
+     "tip": "goofball은 엉뚱하고 웃긴 사람이에요.",
+     "easyWords": false
+    }
+   ]
+  },
+  {
+   "id": "date",
+   "title": {
+    "ko": "약속·데이트",
+    "en": "Plans & dates"
+   },
+   "items": [
+    {
+     "id": "date-01",
+     "text": "Are you free tonight?",
+     "meaning": "오늘 밤 시간 돼?",
+     "example": "Are you free tonight? I want to see you.",
+     "exampleKo": "오늘 밤 시간 돼? 보고 싶어.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 60,
+     "perMillion": 29.4
+    },
+    {
+     "id": "date-02",
+     "text": "Wanna grab dinner?",
+     "meaning": "저녁 먹을래?",
+     "example": "Wanna grab dinner after work?",
+     "exampleKo": "퇴근하고 저녁 먹을래?",
+     "tip": "grab은 '가볍게 먹다·마시다'예요. wanna는 want to를 말하듯 쓴 거예요.",
+     "easyWords": true
+    },
+    {
+     "id": "date-03",
+     "text": "It's a date.",
+     "meaning": "그럼 약속한 거다",
+     "example": "Friday at seven? It's a date.",
+     "exampleKo": "금요일 7시? 약속한 거다.",
+     "tip": "데이트가 아니어도 '약속 확정!'이라는 뜻으로 써요.",
+     "easyWords": true
+    },
+    {
+     "id": "date-04",
+     "text": "Can I pick you up?",
+     "meaning": "데리러 갈까?",
+     "example": "Can I pick you up at seven?",
+     "exampleKo": "7시에 데리러 가도 돼?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 146,
+     "perMillion": 71.5
+    },
+    {
+     "id": "date-05",
+     "text": "What time works for you?",
+     "meaning": "몇 시가 편해?",
+     "example": "What time works for you tomorrow?",
+     "exampleKo": "내일 몇 시가 편해?",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "date-06",
+     "text": "Can we reschedule?",
+     "meaning": "약속 미룰 수 있을까?",
+     "example": "Something came up. Can we reschedule?",
+     "exampleKo": "일이 생겼어. 약속 미뤄도 될까?",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 57,
+     "perMillion": 27.9
+    },
+    {
+     "id": "date-07",
+     "text": "Something came up.",
+     "meaning": "갑자기 일이 생겼어",
+     "example": "Sorry, something came up at work.",
+     "exampleKo": "미안, 회사에 갑자기 일이 생겼어.",
+     "tip": "자세한 이유를 말하지 않고 약속을 미룰 때 써요.",
+     "easyWords": false,
+     "sentences": 24,
+     "perMillion": 11.8
+    },
+    {
+     "id": "date-08",
+     "text": "Be there in 10.",
+     "meaning": "10분 뒤 도착",
+     "example": "Be there in 10!",
+     "exampleKo": "10분 뒤 도착!",
+     "tip": "minutes를 빼고 숫자만 말해요.",
+     "easyWords": true,
+     "sentences": 370,
+     "perMillion": 181.3
+    },
+    {
+     "id": "date-09",
+     "text": "Where should we meet?",
+     "meaning": "어디서 볼까?",
+     "example": "Where should we meet? Near the station?",
+     "exampleKo": "어디서 볼까? 역 근처?",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "date-10",
+     "text": "Let's split the bill.",
+     "meaning": "반반 내자",
+     "example": "Let's split the bill this time.",
+     "exampleKo": "이번엔 반반 내자.",
+     "tip": "'더치페이'는 영어에서 잘 안 써요. split it도 같아요.",
+     "easyWords": true,
+     "sentences": 19,
+     "perMillion": 9.3
+    },
+    {
+     "id": "date-11",
+     "text": "My treat.",
+     "meaning": "내가 살게",
+     "example": "Dinner's my treat tonight.",
+     "exampleKo": "오늘 저녁은 내가 살게.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 10,
+     "perMillion": 4.9
+    },
+    {
+     "id": "date-12",
+     "text": "Movie night?",
+     "meaning": "영화 볼래?",
+     "example": "Movie night at my place?",
+     "exampleKo": "우리 집에서 영화 볼래?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 7,
+     "perMillion": 3.4
+    },
+    {
+     "id": "date-13",
+     "text": "Text me when you get home.",
+     "meaning": "집에 도착하면 문자해",
+     "example": "Text me when you get home safe.",
+     "exampleKo": "집에 잘 도착하면 문자해.",
+     "tip": "한국의 '도착하면 연락해'랑 같은 마음이에요.",
+     "easyWords": false
+    },
+    {
+     "id": "date-14",
+     "text": "I'll walk you home.",
+     "meaning": "집까지 데려다줄게",
+     "example": "It's late. I'll walk you home.",
+     "exampleKo": "늦었어. 집까지 데려다줄게.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 13,
+     "perMillion": 6.4
+    },
+    {
+     "id": "date-15",
+     "text": "I had a great time.",
+     "meaning": "오늘 정말 즐거웠어",
+     "example": "I had a great time tonight. Thank you.",
+     "exampleKo": "오늘 밤 정말 즐거웠어. 고마워.",
+     "tip": "만남이 끝나고 보내는 메시지로 좋아요.",
+     "easyWords": true,
+     "sentences": 73,
+     "perMillion": 35.8
+    },
+    {
+     "id": "date-16",
+     "text": "Let's do this again.",
+     "meaning": "또 만나자",
+     "example": "That was fun. Let's do this again soon!",
+     "exampleKo": "재밌었다. 곧 또 만나자!",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 167,
+     "perMillion": 81.8
+    },
+    {
+     "id": "date-17",
+     "text": "Are we still on for tonight?",
+     "meaning": "오늘 밤 약속 그대로지?",
+     "example": "Are we still on for tonight?",
+     "exampleKo": "오늘 밤 약속 그대로지?",
+     "tip": "약속이 그대로인지 확인할 때 써요.",
+     "easyWords": true,
+     "sentences": 9,
+     "perMillion": 4.4
+    }
+   ]
+  },
+  {
+   "id": "call",
+   "title": {
+    "ko": "영상통화·장거리",
+    "en": "Calls & distance"
+   },
+   "items": [
+    {
+     "id": "call-01",
+     "text": "Can you hear me?",
+     "meaning": "내 목소리 들려?",
+     "example": "Hello? Can you hear me now?",
+     "exampleKo": "여보세요? 이제 들려?",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 29,
+     "perMillion": 14.2
+    },
+    {
+     "id": "call-02",
+     "text": "You're breaking up.",
+     "meaning": "소리가 끊겨",
+     "example": "Sorry, you're breaking up.",
+     "exampleKo": "미안, 소리가 끊겨.",
+     "tip": "통화 중에는 '소리가 끊긴다'예요. 연인 사이엔 '헤어지다'로 오해하기 쉬우니 조심!",
+     "easyWords": true,
+     "sentences": 54,
+     "perMillion": 26.5
+    },
+    {
+     "id": "call-03",
+     "text": "You froze.",
+     "meaning": "화면 멈췄어",
+     "example": "You froze for a second.",
+     "exampleKo": "화면이 잠깐 멈췄어.",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "call-04",
+     "text": "Can I call you?",
+     "meaning": "전화해도 돼?",
+     "example": "Can I call you after work?",
+     "exampleKo": "퇴근하고 전화해도 돼?",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 21,
+     "perMillion": 10.3
+    },
+    {
+     "id": "call-05",
+     "text": "I'll call you back.",
+     "meaning": "다시 전화할게",
+     "example": "I'm on the bus. I'll call you back.",
+     "exampleKo": "버스 안이야. 다시 전화할게.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 64,
+     "perMillion": 31.4
+    },
+    {
+     "id": "call-06",
+     "text": "Let's FaceTime tonight.",
+     "meaning": "오늘 밤 영상통화하자",
+     "example": "Let's FaceTime tonight before bed.",
+     "exampleKo": "자기 전에 영상통화하자.",
+     "tip": "FaceTime을 동사로 써요. 다른 앱이면 video call.",
+     "easyWords": false
+    },
+    {
+     "id": "call-07",
+     "text": "What time is it there?",
+     "meaning": "거기 지금 몇 시야?",
+     "example": "What time is it there? Did I wake you up?",
+     "exampleKo": "거기 지금 몇 시야? 나 때문에 깼어?",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "call-08",
+     "text": "It's late here.",
+     "meaning": "여기는 늦었어",
+     "example": "It's late here, I should sleep.",
+     "exampleKo": "여기 늦었어, 자야겠다.",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "call-09",
+     "text": "The time difference",
+     "meaning": "시차",
+     "example": "The time difference is so hard.",
+     "exampleKo": "시차 때문에 너무 힘들어.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 6,
+     "perMillion": 2.9
+    },
+    {
+     "id": "call-10",
+     "text": "You're on mute.",
+     "meaning": "음소거돼 있어",
+     "example": "Wait, you're on mute!",
+     "exampleKo": "잠깐, 너 음소거야!",
+     "tip": "",
+     "easyWords": false
+    },
+    {
+     "id": "call-11",
+     "text": "Turn on your camera.",
+     "meaning": "카메라 켜 줘",
+     "example": "Turn on your camera, I want to see you.",
+     "exampleKo": "카메라 켜 줘, 얼굴 보고 싶어.",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "call-12",
+     "text": "I fell asleep on the call.",
+     "meaning": "통화하다 잠들었어",
+     "example": "Sorry, I fell asleep on the call last night.",
+     "exampleKo": "미안, 어젯밤 통화하다 잠들었어.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 645,
+     "perMillion": 316.1
+    },
+    {
+     "id": "call-13",
+     "text": "Long distance",
+     "meaning": "장거리 (연애)",
+     "example": "Long distance is hard, but you're worth it.",
+     "exampleKo": "장거리는 힘들지만 너라면 괜찮아.",
+     "tip": "long-distance relationship을 줄여 LDR이라고도 해요.",
+     "easyWords": true,
+     "sentences": 78,
+     "perMillion": 38.2
+    },
+    {
+     "id": "call-14",
+     "text": "I'll stay up for you.",
+     "meaning": "안 자고 기다릴게",
+     "example": "I'll stay up until you call.",
+     "exampleKo": "너 전화할 때까지 안 자고 있을게.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 439,
+     "perMillion": 215.1
+    },
+    {
+     "id": "call-15",
+     "text": "You hang up first.",
+     "meaning": "너 먼저 끊어",
+     "example": "No, you hang up first!",
+     "exampleKo": "아니야, 너 먼저 끊어!",
+     "tip": "hang up은 '전화를 끊다'예요. '먼저 끊어' 놀이는 영어권에도 있어요.",
+     "easyWords": true,
+     "sentences": 321,
+     "perMillion": 157.3
+    },
+    {
+     "id": "call-16",
+     "text": "Talk to you tomorrow.",
+     "meaning": "내일 얘기하자",
+     "example": "Good night. Talk to you tomorrow.",
+     "exampleKo": "잘 자. 내일 얘기하자.",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "call-17",
+     "text": "Can you see me?",
+     "meaning": "나 보여?",
+     "example": "Can you see me? It's so dark here.",
+     "exampleKo": "나 보여? 여기 너무 어둡다.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 5,
+     "perMillion": 2.5
+    }
+   ]
+  },
+  {
+   "id": "fight",
+   "title": {
+    "ko": "다툼·화해",
+    "en": "Fights & making up"
+   },
+   "items": [
+    {
+     "id": "fight-01",
+     "text": "I didn't mean it.",
+     "meaning": "그럴 뜻이 아니었어",
+     "example": "I'm sorry, I didn't mean it like that.",
+     "exampleKo": "미안, 그런 뜻으로 한 말 아니었어.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 22,
+     "perMillion": 10.8
+    },
+    {
+     "id": "fight-02",
+     "text": "Can we talk?",
+     "meaning": "우리 얘기 좀 할까?",
+     "example": "Can we talk tonight? It's important.",
+     "exampleKo": "오늘 밤 얘기 좀 할 수 있어? 중요한 거야.",
+     "tip": "진지한 이야기를 꺼낼 때 써요.",
+     "easyWords": true,
+     "sentences": 79,
+     "perMillion": 38.7
+    },
+    {
+     "id": "fight-03",
+     "text": "I need some space.",
+     "meaning": "잠깐 혼자 있고 싶어",
+     "example": "I'm not mad, I just need some space.",
+     "exampleKo": "화난 건 아니고 잠깐 혼자 있고 싶어.",
+     "tip": "헤어지자는 뜻이 아니라 시간이 필요하다는 말이에요.",
+     "easyWords": true,
+     "sentences": 17,
+     "perMillion": 8.3
+    },
+    {
+     "id": "fight-04",
+     "text": "You hurt my feelings.",
+     "meaning": "나 상처받았어",
+     "example": "Honestly, that hurt my feelings.",
+     "exampleKo": "솔직히 그 말에 상처받았어.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 10,
+     "perMillion": 4.9
+    },
+    {
+     "id": "fight-05",
+     "text": "Let's not fight.",
+     "meaning": "우리 싸우지 말자",
+     "example": "Let's not fight. I miss you.",
+     "exampleKo": "우리 싸우지 말자. 보고 싶어.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 8,
+     "perMillion": 3.9
+    },
+    {
+     "id": "fight-06",
+     "text": "I overreacted.",
+     "meaning": "내가 너무 예민했어",
+     "example": "Sorry, I overreacted.",
+     "exampleKo": "미안, 내가 너무 과했어.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 18,
+     "perMillion": 8.8
+    },
+    {
+     "id": "fight-07",
+     "text": "Are we okay?",
+     "meaning": "우리 괜찮은 거지?",
+     "example": "Are we okay now?",
+     "exampleKo": "우리 이제 괜찮은 거지?",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "fight-08",
+     "text": "Let's make up.",
+     "meaning": "화해하자",
+     "example": "I hate fighting. Let's make up.",
+     "exampleKo": "싸우는 거 싫어. 화해하자.",
+     "tip": "make up은 화장, 지어내다라는 뜻도 있어요.",
+     "easyWords": true,
+     "sentences": 1110,
+     "perMillion": 544.0
+    },
+    {
+     "id": "fight-09",
+     "text": "I forgive you.",
+     "meaning": "용서할게",
+     "example": "It's okay. I forgive you.",
+     "exampleKo": "괜찮아. 용서할게.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 142,
+     "perMillion": 69.6
+    },
+    {
+     "id": "fight-10",
+     "text": "That's not what I said.",
+     "meaning": "내가 한 말은 그게 아니야",
+     "example": "Wait, that's not what I said.",
+     "exampleKo": "잠깐, 내가 한 말은 그게 아니야.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 11,
+     "perMillion": 5.4
+    },
+    {
+     "id": "fight-11",
+     "text": "I was wrong.",
+     "meaning": "내가 잘못했어",
+     "example": "You were right. I was wrong.",
+     "exampleKo": "네 말이 맞았어. 내가 잘못했어.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 138,
+     "perMillion": 67.6
+    },
+    {
+     "id": "fight-12",
+     "text": "Don't be mad.",
+     "meaning": "화내지 마",
+     "example": "Don't be mad, I can explain.",
+     "exampleKo": "화내지 마, 설명할게.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 9,
+     "perMillion": 4.4
+    },
+    {
+     "id": "fight-13",
+     "text": "I'm not mad at you.",
+     "meaning": "너한테 화난 거 아니야",
+     "example": "I'm not mad at you, just tired.",
+     "exampleKo": "너한테 화난 거 아니야, 그냥 피곤해.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 16,
+     "perMillion": 7.8
+    },
+    {
+     "id": "fight-14",
+     "text": "Let's start over.",
+     "meaning": "처음부터 다시 하자",
+     "example": "Can we start over? I want to fix this.",
+     "exampleKo": "처음부터 다시 할 수 있을까? 잘 풀고 싶어.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 100,
+     "perMillion": 49.0
+    },
+    {
+     "id": "fight-15",
+     "text": "I see your point.",
+     "meaning": "네 말도 일리 있어",
+     "example": "I see your point, but I feel different.",
+     "exampleKo": "네 말도 일리 있는데, 나는 생각이 달라.",
+     "tip": "반대하기 전에 먼저 상대를 인정할 때 좋아요.",
+     "easyWords": true,
+     "sentences": 8,
+     "perMillion": 3.9
+    },
+    {
+     "id": "fight-16",
+     "text": "We're good.",
+     "meaning": "우리 괜찮아",
+     "example": "Don't worry, we're good.",
+     "exampleKo": "걱정 마, 우리 괜찮아.",
+     "tip": "화해한 뒤 '앙금 없어'라는 뜻이에요.",
+     "easyWords": true,
+     "sentences": 23,
+     "perMillion": 11.3
+    },
+    {
+     "id": "fight-17",
+     "text": "I'm sorry I hurt you.",
+     "meaning": "상처 줘서 미안해",
+     "example": "I'm really sorry I hurt you.",
+     "exampleKo": "상처 줘서 정말 미안해.",
+     "tip": "",
+     "easyWords": false
+    }
+   ]
+  },
+  {
+   "id": "care",
+   "title": {
+    "ko": "위로·응원",
+    "en": "Comfort & cheering"
+   },
+   "items": [
+    {
+     "id": "care-01",
+     "text": "I'm here for you.",
+     "meaning": "내가 있잖아",
+     "example": "Whatever happens, I'm here for you.",
+     "exampleKo": "무슨 일이 있어도 내가 있잖아.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 63,
+     "perMillion": 30.9
+    },
+    {
+     "id": "care-02",
+     "text": "You've got this.",
+     "meaning": "넌 할 수 있어",
+     "example": "Big day tomorrow? You've got this!",
+     "exampleKo": "내일 중요한 날이지? 넌 할 수 있어!",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "care-03",
+     "text": "That sucks.",
+     "meaning": "아 진짜 속상하겠다",
+     "example": "You missed the bus? That sucks.",
+     "exampleKo": "버스 놓쳤어? 짜증 났겠다.",
+     "tip": "친구 사이 공감 표현이에요. 공식적인 자리에선 피해요.",
+     "easyWords": true,
+     "sentences": 8,
+     "perMillion": 3.9
+    },
+    {
+     "id": "care-04",
+     "text": "Take care of yourself.",
+     "meaning": "몸 잘 챙겨",
+     "example": "Take care of yourself, okay?",
+     "exampleKo": "몸 잘 챙겨, 알았지?",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 86,
+     "perMillion": 42.1
+    },
+    {
+     "id": "care-05",
+     "text": "Get some rest.",
+     "meaning": "좀 쉬어",
+     "example": "You worked so hard. Get some rest.",
+     "exampleKo": "고생 많았어. 좀 쉬어.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 83,
+     "perMillion": 40.7
+    },
+    {
+     "id": "care-06",
+     "text": "Feel better soon.",
+     "meaning": "빨리 나아",
+     "example": "Feel better soon! Drink lots of water.",
+     "exampleKo": "빨리 나아! 물 많이 마셔.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 470,
+     "perMillion": 230.3
+    },
+    {
+     "id": "care-07",
+     "text": "It's going to be okay.",
+     "meaning": "다 괜찮아질 거야",
+     "example": "Don't cry. It's going to be okay.",
+     "exampleKo": "울지 마. 다 괜찮아질 거야.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 13,
+     "perMillion": 6.4
+    },
+    {
+     "id": "care-08",
+     "text": "I'm proud of you.",
+     "meaning": "네가 자랑스러워",
+     "example": "You did it! I'm so proud of you.",
+     "exampleKo": "해냈구나! 정말 자랑스러워.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 126,
+     "perMillion": 61.7
+    },
+    {
+     "id": "care-09",
+     "text": "Do you want to talk about it?",
+     "meaning": "얘기하고 싶어?",
+     "example": "You seem down. Do you want to talk about it?",
+     "exampleKo": "기운 없어 보여. 얘기하고 싶어?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 512,
+     "perMillion": 250.9
+    },
+    {
+     "id": "care-10",
+     "text": "You did your best.",
+     "meaning": "최선을 다했잖아",
+     "example": "It's okay. You did your best.",
+     "exampleKo": "괜찮아. 최선을 다했잖아.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 6,
+     "perMillion": 2.9
+    },
+    {
+     "id": "care-11",
+     "text": "I've got your back.",
+     "meaning": "내가 네 편이야",
+     "example": "Don't worry, I've got your back.",
+     "exampleKo": "걱정 마, 내가 네 편이야.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "care-12",
+     "text": "Sleep well.",
+     "meaning": "잘 자",
+     "example": "Sleep well, talk tomorrow.",
+     "exampleKo": "잘 자, 내일 얘기해.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 217,
+     "perMillion": 106.3
+    },
+    {
+     "id": "care-13",
+     "text": "Be safe.",
+     "meaning": "조심해",
+     "example": "Be safe on your way home.",
+     "exampleKo": "집에 갈 때 조심해.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 788,
+     "perMillion": 386.2
+    },
+    {
+     "id": "care-14",
+     "text": "I believe in you.",
+     "meaning": "난 너 믿어",
+     "example": "I believe in you. You'll do great.",
+     "exampleKo": "난 너 믿어. 잘할 거야.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 35,
+     "perMillion": 17.2
+    },
+    {
+     "id": "care-15",
+     "text": "Don't be so hard on yourself.",
+     "meaning": "너무 자책하지 마",
+     "example": "Don't be so hard on yourself.",
+     "exampleKo": "너무 자책하지 마.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 11,
+     "perMillion": 5.4
+    },
+    {
+     "id": "care-16",
+     "text": "Let me know if you need anything.",
+     "meaning": "필요한 거 있으면 말해",
+     "example": "Let me know if you need anything.",
+     "exampleKo": "필요한 거 있으면 말해.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 45,
+     "perMillion": 22.1
+    }
+   ]
+  },
+  {
+   "id": "react",
+   "title": {
+    "ko": "칭찬·리액션",
+    "en": "Compliments & reactions"
+   },
+   "items": [
+    {
+     "id": "react-01",
+     "text": "You look amazing.",
+     "meaning": "너 진짜 예쁘다·멋있다",
+     "example": "You look amazing in that dress.",
+     "exampleKo": "그 원피스 입으니까 진짜 예쁘다.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 43,
+     "perMillion": 21.1
+    },
+    {
+     "id": "react-02",
+     "text": "That's so sweet.",
+     "meaning": "너무 다정하다",
+     "example": "You made me lunch? That's so sweet.",
+     "exampleKo": "점심 만들어 줬어? 너무 다정하다.",
+     "tip": "sweet은 '달다'보다 '다정하다, 고맙다'로 더 자주 써요.",
+     "easyWords": true,
+     "sentences": 64,
+     "perMillion": 31.4
+    },
+    {
+     "id": "react-03",
+     "text": "Aww",
+     "meaning": "아이고 귀여워",
+     "example": "Aww, look at your puppy!",
+     "exampleKo": "아 귀여워, 너네 강아지 좀 봐!",
+     "tip": "귀엽거나 감동받았을 때 내는 소리예요.",
+     "easyWords": true,
+     "sentences": 14,
+     "perMillion": 6.9
+    },
+    {
+     "id": "react-04",
+     "text": "That's adorable.",
+     "meaning": "너무 귀엽다",
+     "example": "Your little sister is adorable.",
+     "exampleKo": "네 여동생 너무 귀엽다.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 158,
+     "perMillion": 77.4
+    },
+    {
+     "id": "react-05",
+     "text": "I love that!",
+     "meaning": "그거 너무 좋다!",
+     "example": "You started painting? I love that!",
+     "exampleKo": "그림 시작했어? 너무 좋다!",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 252,
+     "perMillion": 123.5
+    },
+    {
+     "id": "react-06",
+     "text": "You're so cute.",
+     "meaning": "너 진짜 귀엽다",
+     "example": "You're so cute when you're sleepy.",
+     "exampleKo": "졸릴 때 너 진짜 귀엽다.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 166,
+     "perMillion": 81.3
+    },
+    {
+     "id": "react-07",
+     "text": "Good for you!",
+     "meaning": "잘됐다!",
+     "example": "You passed? Good for you!",
+     "exampleKo": "합격했어? 잘됐다!",
+     "tip": "말투에 따라 비꼬는 말이 될 수도 있어요.",
+     "easyWords": true,
+     "sentences": 133,
+     "perMillion": 65.2
+    },
+    {
+     "id": "react-08",
+     "text": "That's hilarious.",
+     "meaning": "완전 웃기다",
+     "example": "Your story is hilarious.",
+     "exampleKo": "네 얘기 완전 웃기다.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 90,
+     "perMillion": 44.1
+    },
+    {
+     "id": "react-09",
+     "text": "I'm so happy for you.",
+     "meaning": "내 일처럼 기뻐",
+     "example": "You got engaged? I'm so happy for you!",
+     "exampleKo": "약혼했어? 내 일처럼 기뻐!",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 35,
+     "perMillion": 17.2
+    },
+    {
+     "id": "react-10",
+     "text": "Looks delicious!",
+     "meaning": "맛있겠다!",
+     "example": "Looks delicious! Did you cook that?",
+     "exampleKo": "맛있겠다! 네가 만들었어?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 18,
+     "perMillion": 8.8
+    },
+    {
+     "id": "react-11",
+     "text": "That's awesome.",
+     "meaning": "대박, 멋지다",
+     "example": "You ran ten kilometers? That's awesome.",
+     "exampleKo": "10킬로 뛰었어? 대박이다.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 7,
+     "perMillion": 3.4
+    },
+    {
+     "id": "react-12",
+     "text": "You're so talented.",
+     "meaning": "너 정말 재능 있다",
+     "example": "You drew this? You're so talented.",
+     "exampleKo": "이거 네가 그렸어? 정말 재능 있다.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 10,
+     "perMillion": 4.9
+    },
+    {
+     "id": "react-13",
+     "text": "You made my day.",
+     "meaning": "덕분에 하루가 행복해졌어",
+     "example": "Your message made my day.",
+     "exampleKo": "네 메시지 덕분에 하루가 행복해졌어.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 7,
+     "perMillion": 3.4
+    },
+    {
+     "id": "react-14",
+     "text": "I'm obsessed.",
+     "meaning": "완전 빠졌어",
+     "example": "This song? I'm obsessed.",
+     "exampleKo": "이 노래? 완전 빠졌어.",
+     "tip": "요즘은 '너무 좋아'를 과장해서 이렇게 말해요.",
+     "easyWords": true,
+     "sentences": 325,
+     "perMillion": 159.3
+    },
+    {
+     "id": "react-15",
+     "text": "Love that for you.",
+     "meaning": "너한테 딱이다, 잘됐다",
+     "example": "A new job near the beach? Love that for you.",
+     "exampleKo": "바닷가 근처 새 직장? 너한테 딱이다.",
+     "tip": "요즘 SNS에서 자주 쓰는 축하 표현이에요.",
+     "easyWords": true
+    },
+    {
+     "id": "react-16",
+     "text": "You're glowing.",
+     "meaning": "얼굴 좋아 보인다",
+     "example": "You're glowing today. What's your secret?",
+     "exampleKo": "오늘 얼굴 빛난다. 비결이 뭐야?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 74,
+     "perMillion": 36.3
+    },
+    {
+     "id": "react-17",
+     "text": "That's so you.",
+     "meaning": "완전 너답다",
+     "example": "A pink suitcase? That's so you.",
+     "exampleKo": "분홍 캐리어? 완전 너답다.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 327,
+     "perMillion": 160.2
+    }
+   ]
+  },
+  {
+   "id": "culture",
+   "title": {
+    "ko": "되묻기·문화 차이",
+    "en": "Asking & culture"
+   },
+   "items": [
+    {
+     "id": "culture-01",
+     "text": "What do you mean?",
+     "meaning": "무슨 뜻이야?",
+     "example": "What do you mean by that?",
+     "exampleKo": "그게 무슨 뜻이야?",
+     "tip": "따지는 말투가 되지 않게 부드럽게 말해요.",
+     "easyWords": true,
+     "sentences": 168,
+     "perMillion": 82.3
+    },
+    {
+     "id": "culture-02",
+     "text": "How do you say this in English?",
+     "meaning": "이거 영어로 뭐라고 해?",
+     "example": "How do you say this in English?",
+     "exampleKo": "이거 영어로 뭐라고 해?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 142,
+     "perMillion": 69.6
+    },
+    {
+     "id": "culture-03",
+     "text": "Can you say that again?",
+     "meaning": "다시 말해 줄래?",
+     "example": "Sorry, can you say that again?",
+     "exampleKo": "미안, 다시 말해 줄래?",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 58,
+     "perMillion": 28.4
+    },
+    {
+     "id": "culture-04",
+     "text": "Could you speak a little slower?",
+     "meaning": "조금만 천천히 말해 줄래?",
+     "example": "Could you speak a little slower? I want to catch every word.",
+     "exampleKo": "조금만 천천히 말해 줄래? 하나도 안 놓치고 싶어.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 8,
+     "perMillion": 3.9
+    },
+    {
+     "id": "culture-05",
+     "text": "Is that a thing in your country?",
+     "meaning": "너네 나라에도 그런 거 있어?",
+     "example": "Is that a thing in your country too?",
+     "exampleKo": "너네 나라에도 그런 거 있어?",
+     "tip": "a thing은 '흔한 일, 문화'라는 뜻이에요.",
+     "easyWords": true
+    },
+    {
+     "id": "culture-06",
+     "text": "I'm still learning English.",
+     "meaning": "아직 영어 배우는 중이야",
+     "example": "Sorry, I'm still learning English.",
+     "exampleKo": "미안, 아직 영어 배우는 중이야.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 36,
+     "perMillion": 17.6
+    },
+    {
+     "id": "culture-07",
+     "text": "Did I say that right?",
+     "meaning": "내가 맞게 말했어?",
+     "example": "Did I say that right? Be honest.",
+     "exampleKo": "내가 맞게 말했어? 솔직하게 말해 줘.",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "culture-08",
+     "text": "Correct me if I'm wrong.",
+     "meaning": "틀리면 고쳐 줘",
+     "example": "Correct me if I'm wrong, okay?",
+     "exampleKo": "틀리면 고쳐 줘, 알았지?",
+     "tip": "영어를 배우는 중이라고 편하게 부탁할 때 좋아요.",
+     "easyWords": false,
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "culture-09",
+     "text": "Is that rude?",
+     "meaning": "그거 무례한 말이야?",
+     "example": "Wait, is that rude in English?",
+     "exampleKo": "잠깐, 영어로는 그게 무례한 말이야?",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "culture-10",
+     "text": "In Korea, we...",
+     "meaning": "한국에서는 ~해",
+     "example": "In Korea, we eat seaweed soup on birthdays.",
+     "exampleKo": "한국에서는 생일에 미역국을 먹어.",
+     "tip": "",
+     "easyWords": false,
+     "sentences": 36,
+     "perMillion": 17.6
+    },
+    {
+     "id": "culture-11",
+     "text": "Let me teach you some Korean.",
+     "meaning": "한국어 좀 알려 줄게",
+     "example": "Let me teach you some Korean. Say 'saranghae'!",
+     "exampleKo": "한국어 좀 알려 줄게. '사랑해' 해 봐!",
+     "tip": "",
+     "easyWords": false
+    },
+    {
+     "id": "culture-12",
+     "text": "That's so interesting.",
+     "meaning": "진짜 신기하다",
+     "example": "You celebrate it in summer? That's so interesting.",
+     "exampleKo": "여름에 축하한다고? 진짜 신기하다.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 40,
+     "perMillion": 19.6
+    },
+    {
+     "id": "culture-13",
+     "text": "What's that called?",
+     "meaning": "그거 뭐라고 불러?",
+     "example": "What's that called in English?",
+     "exampleKo": "그거 영어로 뭐라고 불러?",
+     "tip": "",
+     "easyWords": true
+    },
+    {
+     "id": "culture-14",
+     "text": "It gets lost in translation.",
+     "meaning": "번역하면 느낌이 안 살아",
+     "example": "That joke gets lost in translation.",
+     "exampleKo": "그 농담은 번역하면 재미가 없어져.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 7,
+     "perMillion": 3.4
+    },
+    {
+     "id": "culture-15",
+     "text": "I didn't catch that.",
+     "meaning": "잘 못 알아들었어",
+     "example": "Sorry, I didn't catch that.",
+     "exampleKo": "미안, 잘 못 들었어.",
+     "tip": "catch는 '알아듣다'라는 뜻으로도 써요.",
+     "easyWords": false
+    },
+    {
+     "id": "culture-16",
+     "text": "I'm nervous to meet your parents.",
+     "meaning": "너희 부모님 뵙는 거 긴장돼",
+     "example": "I'm nervous to meet your parents.",
+     "exampleKo": "너희 부모님 뵙는 거 긴장돼.",
+     "tip": "",
+     "easyWords": true,
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "culture-17",
+     "text": "What does that word mean?",
+     "meaning": "그 단어 무슨 뜻이야?",
+     "example": "What does that word mean? I've never heard it.",
+     "exampleKo": "그 단어 무슨 뜻이야? 처음 들어 봐.",
+     "tip": "",
+     "easyWords": true
+    }
+   ]
+  },
+  {
    "id": "daily",
    "title": {
     "ko": "일상 대화",
@@ -19,9 +2105,9 @@
      "example": "Hey, how's it going?",
      "exampleKo": "안녕, 잘 지내?",
      "tip": "How are you?보다 가볍게 자주 써요.",
+     "easyWords": true,
      "sentences": 39,
-     "perMillion": 19.1,
-     "easyWords": true
+     "perMillion": 19.1
     },
     {
      "id": "daily-02",
@@ -30,9 +2116,9 @@
      "example": "What's up? You look tired.",
      "exampleKo": "무슨 일이야? 피곤해 보여.",
      "tip": "인사로 쓰면 \"별일 없어?\" 정도의 뜻이에요.",
+     "easyWords": true,
      "sentences": 109,
-     "perMillion": 53.4,
-     "easyWords": true
+     "perMillion": 53.4
     },
     {
      "id": "daily-03",
@@ -41,9 +2127,9 @@
      "example": "Pretty good, thanks. How about you?",
      "exampleKo": "잘 지내, 고마워. 너는?",
      "tip": "I'm fine, thank you 대신 훨씬 자주 써요.",
+     "easyWords": true,
      "sentences": 852,
-     "perMillion": 417.5,
-     "easyWords": true
+     "perMillion": 417.5
     },
     {
      "id": "daily-04",
@@ -52,9 +2138,9 @@
      "example": "Not bad. Just a little busy.",
      "exampleKo": "나쁘지 않아. 그냥 좀 바빠.",
      "tip": "",
+     "easyWords": true,
      "sentences": 95,
-     "perMillion": 46.6,
-     "easyWords": true
+     "perMillion": 46.6
     },
     {
      "id": "daily-05",
@@ -63,9 +2149,9 @@
      "example": "More coffee? — I'm good, thanks.",
      "exampleKo": "커피 더 줄까? — 괜찮아, 고마워.",
      "tip": "무언가 권할 때 I'm good은 \"됐어요\"라는 정중한 거절이에요.",
+     "easyWords": false,
      "sentences": 108,
-     "perMillion": 52.9,
-     "easyWords": false
+     "perMillion": 52.9
     },
     {
      "id": "daily-06",
@@ -74,9 +2160,9 @@
      "example": "See you tomorrow!",
      "exampleKo": "내일 봐!",
      "tip": "Goodbye보다 일상에서 더 자주 써요.",
+     "easyWords": true,
      "sentences": 3236,
-     "perMillion": 1585.8,
-     "easyWords": true
+     "perMillion": 1585.8
     },
     {
      "id": "daily-07",
@@ -85,9 +2171,9 @@
      "example": "I have to go now. See you later!",
      "exampleKo": "이제 가야 해. 나중에 봐!",
      "tip": "",
+     "easyWords": true,
      "sentences": 49,
-     "perMillion": 24.0,
-     "easyWords": true
+     "perMillion": 24.0
     },
     {
      "id": "daily-08",
@@ -96,9 +2182,9 @@
      "example": "Take care, and text me when you get home.",
      "exampleKo": "조심히 가고, 집에 도착하면 문자 줘.",
      "tip": "헤어질 때 인사로 자주 써요.",
+     "easyWords": true,
      "sentences": 2562,
-     "perMillion": 1255.5,
-     "easyWords": true
+     "perMillion": 1255.5
     },
     {
      "id": "daily-09",
@@ -107,9 +2193,9 @@
      "example": "Where's Tom? — No idea.",
      "exampleKo": "톰 어디 있어? — 전혀 모르겠어.",
      "tip": "I don't know보다 짧고 강하게 말할 때 써요.",
+     "easyWords": true,
      "sentences": 1763,
-     "perMillion": 864.0,
-     "easyWords": true
+     "perMillion": 864.0
     },
     {
      "id": "daily-10",
@@ -118,9 +2204,9 @@
      "example": "I'm not sure, but I think it's closed today.",
      "exampleKo": "잘 모르겠지만 오늘 문 닫은 것 같아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1780,
-     "perMillion": 872.3,
-     "easyWords": true
+     "perMillion": 872.3
     },
     {
      "id": "daily-11",
@@ -129,9 +2215,9 @@
      "example": "I'm kind of hungry.",
      "exampleKo": "나 좀 배고파.",
      "tip": "말할 때는 kinda처럼 들리기도 해요.",
+     "easyWords": true,
      "sentences": 5160,
-     "perMillion": 2528.7,
-     "easyWords": true
+     "perMillion": 2528.7
     },
     {
      "id": "daily-12",
@@ -140,9 +2226,9 @@
      "example": "It's a bit cold today.",
      "exampleKo": "오늘 좀 춥다.",
      "tip": "",
+     "easyWords": true,
      "sentences": 3045,
-     "perMillion": 1492.2,
-     "easyWords": true
+     "perMillion": 1492.2
     },
     {
      "id": "daily-13",
@@ -151,9 +2237,9 @@
      "example": "I feel like pizza tonight.",
      "exampleKo": "오늘 밤엔 피자가 당겨.",
      "tip": "feel like 뒤에 음식이나 -ing를 붙여요.",
+     "easyWords": true,
      "sentences": 2668,
-     "perMillion": 1307.5,
-     "easyWords": true
+     "perMillion": 1307.5
     },
     {
      "id": "daily-14",
@@ -162,9 +2248,9 @@
      "example": "Do you want to hang out this weekend?",
      "exampleKo": "이번 주말에 같이 놀래?",
      "tip": "단어는 쉽지만 뜻을 모르기 쉬운 대표 표현이에요.",
+     "easyWords": true,
      "sentences": 995,
-     "perMillion": 487.6,
-     "easyWords": true
+     "perMillion": 487.6
     },
     {
      "id": "daily-15",
@@ -173,9 +2259,9 @@
      "example": "Can I sit here? — Sure, go ahead.",
      "exampleKo": "여기 앉아도 돼? — 그럼, 앉아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 324,
-     "perMillion": 158.8,
-     "easyWords": true
+     "perMillion": 158.8
     },
     {
      "id": "daily-16",
@@ -184,9 +2270,9 @@
      "example": "Don't worry, I've got it.",
      "exampleKo": "걱정 마, 내가 할게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 703,
-     "perMillion": 344.5,
-     "easyWords": true
+     "perMillion": 344.5
     },
     {
      "id": "daily-17",
@@ -195,9 +2281,9 @@
      "example": "Take it easy. You worked hard today.",
      "exampleKo": "쉬엄쉬엄 해. 오늘 고생했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 128,
-     "perMillion": 62.7,
-     "easyWords": true
+     "perMillion": 62.7
     },
     {
      "id": "daily-18",
@@ -206,9 +2292,9 @@
      "example": "You're late again! Just kidding.",
      "exampleKo": "또 늦었네! 농담이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 46,
-     "perMillion": 22.5,
-     "easyWords": true
+     "perMillion": 22.5
     },
     {
      "id": "daily-19",
@@ -217,9 +2303,9 @@
      "example": "It's a little messy, but who cares?",
      "exampleKo": "좀 지저분하지만 무슨 상관이야?",
      "tip": "",
+     "easyWords": true,
      "sentences": 108,
-     "perMillion": 52.9,
-     "easyWords": true
+     "perMillion": 52.9
     },
     {
      "id": "daily-20",
@@ -228,9 +2314,9 @@
      "example": "I'll call you back right away.",
      "exampleKo": "바로 다시 전화할게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1086,
-     "perMillion": 532.2,
-     "easyWords": true
+     "perMillion": 532.2
     },
     {
      "id": "daily-21",
@@ -239,9 +2325,9 @@
      "example": "By the way, did you eat lunch?",
      "exampleKo": "그나저나 점심 먹었어?",
      "tip": "문자로는 BTW라고 줄여 써요.",
+     "easyWords": true,
      "sentences": 222,
-     "perMillion": 108.8,
-     "easyWords": true
+     "perMillion": 108.8
     },
     {
      "id": "daily-22",
@@ -250,9 +2336,9 @@
      "example": "What's going on? Why is everyone outside?",
      "exampleKo": "무슨 일이야? 왜 다들 밖에 있어?",
      "tip": "",
+     "easyWords": true,
      "sentences": 671,
-     "perMillion": 328.8,
-     "easyWords": true
+     "perMillion": 328.8
     },
     {
      "id": "daily-23",
@@ -261,9 +2347,9 @@
      "example": "What's the matter? You look upset.",
      "exampleKo": "무슨 일 있어? 속상해 보여.",
      "tip": "",
+     "easyWords": true,
      "sentences": 90,
-     "perMillion": 44.1,
-     "easyWords": true
+     "perMillion": 44.1
     },
     {
      "id": "daily-24",
@@ -272,9 +2358,9 @@
      "example": "Long time no see! How are you doing?",
      "exampleKo": "오랜만이야! 어떻게 지내?",
      "tip": "",
+     "easyWords": true,
      "sentences": 53,
-     "perMillion": 26.0,
-     "easyWords": true
+     "perMillion": 26.0
     },
     {
      "id": "daily-25",
@@ -283,9 +2369,9 @@
      "example": "Feel free to ask me anything.",
      "exampleKo": "뭐든 편하게 물어봐.",
      "tip": "",
+     "easyWords": true,
      "sentences": 167,
-     "perMillion": 81.8,
-     "easyWords": true
+     "perMillion": 81.8
     },
     {
      "id": "daily-26",
@@ -294,9 +2380,9 @@
      "example": "Hurry up, the bus is coming!",
      "exampleKo": "서둘러, 버스 온다!",
      "tip": "",
+     "easyWords": true,
      "sentences": 292,
-     "perMillion": 143.1,
-     "easyWords": true
+     "perMillion": 143.1
     },
     {
      "id": "daily-27",
@@ -305,9 +2391,9 @@
      "example": "Calm down and tell me what happened.",
      "exampleKo": "진정하고 무슨 일인지 말해 봐.",
      "tip": "",
+     "easyWords": true,
      "sentences": 319,
-     "perMillion": 156.3,
-     "easyWords": true
+     "perMillion": 156.3
     },
     {
      "id": "daily-28",
@@ -316,9 +2402,9 @@
      "example": "Come on, it'll be fun!",
      "exampleKo": "에이, 재밌을 거야!",
      "tip": "말투에 따라 재촉, 격려, 핀잔이 돼요.",
+     "easyWords": true,
      "sentences": 899,
-     "perMillion": 440.6,
-     "easyWords": true
+     "perMillion": 440.6
     },
     {
      "id": "daily-29",
@@ -327,9 +2413,9 @@
      "example": "Drop by anytime.",
      "exampleKo": "언제든 들러.",
      "tip": "",
+     "easyWords": true,
      "sentences": 192,
-     "perMillion": 94.1,
-     "easyWords": true
+     "perMillion": 94.1
     },
     {
      "id": "daily-30",
@@ -338,9 +2424,9 @@
      "example": "Can you pick me up at six?",
      "exampleKo": "6시에 데리러 와 줄 수 있어?",
      "tip": "pick up some bread처럼 \"사 오다\"로도 써요.",
+     "easyWords": true,
      "sentences": 1297,
-     "perMillion": 635.6,
-     "easyWords": true
+     "perMillion": 635.6
     },
     {
      "id": "daily-31",
@@ -349,9 +2435,9 @@
      "example": "I woke up late this morning.",
      "exampleKo": "오늘 아침에 늦게 일어났어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1668,
-     "perMillion": 817.4,
-     "easyWords": true
+     "perMillion": 817.4
     },
     {
      "id": "daily-32",
@@ -360,9 +2446,9 @@
      "example": "I'm going to sleep in on Sunday.",
      "exampleKo": "일요일엔 늦잠 잘 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 806,
-     "perMillion": 395.0,
-     "easyWords": true
+     "perMillion": 395.0
     },
     {
      "id": "daily-33",
@@ -371,9 +2457,9 @@
      "example": "Can you take a look at this?",
      "exampleKo": "이것 좀 봐 줄래?",
      "tip": "",
+     "easyWords": true,
      "sentences": 348,
-     "perMillion": 170.5,
-     "easyWords": true
+     "perMillion": 170.5
     },
     {
      "id": "daily-34",
@@ -382,9 +2468,9 @@
      "example": "Let's take a walk after dinner.",
      "exampleKo": "저녁 먹고 산책하자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 311,
-     "perMillion": 152.4,
-     "easyWords": true
+     "perMillion": 152.4
     },
     {
      "id": "daily-35",
@@ -393,9 +2479,9 @@
      "example": "Pizza at seven? — Sounds good.",
      "exampleKo": "7시에 피자? — 좋아.",
      "tip": "OK보다 자연스럽게 찬성할 때 써요.",
+     "easyWords": true,
      "sentences": 32,
-     "perMillion": 15.7,
-     "easyWords": true
+     "perMillion": 15.7
     },
     {
      "id": "daily-36",
@@ -404,9 +2490,9 @@
      "example": "Oh, that makes sense now.",
      "exampleKo": "아, 이제 이해된다.",
      "tip": "",
+     "easyWords": true,
      "sentences": 105,
-     "perMillion": 51.5,
-     "easyWords": true
+     "perMillion": 51.5
     },
     {
      "id": "daily-37",
@@ -415,9 +2501,9 @@
      "example": "Let's grab a bite to eat before the movie.",
      "exampleKo": "영화 보기 전에 간단히 뭐 좀 먹자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 39,
-     "perMillion": 19.1,
-     "easyWords": true
+     "perMillion": 19.1
     },
     {
      "id": "daily-38",
@@ -426,9 +2512,9 @@
      "example": "The subway is crowded during rush hour.",
      "exampleKo": "출퇴근 시간엔 지하철이 붐벼.",
      "tip": "",
+     "easyWords": true,
      "sentences": 68,
-     "perMillion": 33.3,
-     "easyWords": true
+     "perMillion": 33.3
     },
     {
      "id": "daily-39",
@@ -437,9 +2523,9 @@
      "example": "There's food in the fridge. Help yourself.",
      "exampleKo": "냉장고에 음식 있어. 마음껏 먹어.",
      "tip": "",
+     "easyWords": false,
      "sentences": 86,
-     "perMillion": 42.1,
-     "easyWords": false
+     "perMillion": 42.1
     },
     {
      "id": "daily-40",
@@ -448,9 +2534,9 @@
      "example": "Thanks for the ride. I appreciate it.",
      "exampleKo": "태워 줘서 고마워. 정말 고마워.",
      "tip": "Thank you very much보다 일상에서 자연스러워요.",
+     "easyWords": false,
      "sentences": 14,
-     "perMillion": 6.9,
-     "easyWords": false
+     "perMillion": 6.9
     }
    ]
   },
@@ -468,9 +2554,9 @@
      "example": "I fell asleep on the sofa again.",
      "exampleKo": "또 소파에서 잠들었어.",
      "tip": "go to sleep은 자러 가는 것, fall asleep은 실제로 잠이 드는 순간이에요.",
+     "easyWords": true,
      "sentences": 1099,
-     "perMillion": 538.6,
-     "easyWords": true
+     "perMillion": 538.6
     },
     {
      "id": "routine-02",
@@ -479,9 +2565,9 @@
      "example": "It's late. Go to sleep.",
      "exampleKo": "늦었어. 이제 자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 516,
-     "perMillion": 252.9,
-     "easyWords": true
+     "perMillion": 252.9
     },
     {
      "id": "routine-03",
@@ -490,9 +2576,9 @@
      "example": "I dozed off during the movie.",
      "exampleKo": "영화 보다가 깜빡 졸았어.",
      "tip": "nod off도 같은 뜻으로 써요.",
+     "easyWords": true,
      "sentences": 76,
-     "perMillion": 37.2,
-     "easyWords": true
+     "perMillion": 37.2
     },
     {
      "id": "routine-04",
@@ -501,9 +2587,9 @@
      "example": "I was fast asleep when you called.",
      "exampleKo": "네가 전화했을 때 푹 자고 있었어.",
      "tip": "sound asleep도 같은 뜻이에요.",
+     "easyWords": true,
      "sentences": 63,
-     "perMillion": 30.9,
-     "easyWords": true
+     "perMillion": 30.9
     },
     {
      "id": "routine-05",
@@ -512,9 +2598,9 @@
      "example": "It's past midnight and I'm still wide awake.",
      "exampleKo": "자정이 넘었는데 아직 말똥말똥해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 47,
-     "perMillion": 23.0,
-     "easyWords": true
+     "perMillion": 23.0
     },
     {
      "id": "routine-06",
@@ -523,9 +2609,9 @@
      "example": "I didn't sleep a wink last night.",
      "exampleKo": "어젯밤 한숨도 못 잤어.",
      "tip": "거의 항상 부정문(didn't, couldn't)으로 써요.",
+     "easyWords": true,
      "sentences": 45,
-     "perMillion": 22.1,
-     "easyWords": true
+     "perMillion": 22.1
     },
     {
      "id": "routine-07",
@@ -534,9 +2620,9 @@
      "example": "You need a good night's sleep.",
      "exampleKo": "너 푹 좀 자야겠다.",
      "tip": "",
+     "easyWords": true,
      "sentences": 51,
-     "perMillion": 25.0,
-     "easyWords": true
+     "perMillion": 25.0
     },
     {
      "id": "routine-08",
@@ -545,9 +2631,9 @@
      "example": "I go to work by subway.",
      "exampleKo": "나는 지하철로 출근해.",
      "tip": "go to the work라고 하지 않아요.",
+     "easyWords": true,
      "sentences": 712,
-     "perMillion": 348.9,
-     "easyWords": true
+     "perMillion": 348.9
     },
     {
      "id": "routine-09",
@@ -556,9 +2642,9 @@
      "example": "I take a bath to relax.",
      "exampleKo": "쉬려고 목욕을 해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 267,
-     "perMillion": 130.8,
-     "easyWords": true
+     "perMillion": 130.8
     },
     {
      "id": "routine-10",
@@ -567,9 +2653,9 @@
      "example": "Let's clean up the kitchen.",
      "exampleKo": "부엌 치우자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 510,
-     "perMillion": 249.9,
-     "easyWords": true
+     "perMillion": 249.9
     },
     {
      "id": "routine-11",
@@ -578,9 +2664,9 @@
      "example": "Tidy up your room before dinner.",
      "exampleKo": "저녁 먹기 전에 방 정리해.",
      "tip": "영국 영어에서 특히 자주 써요.",
+     "easyWords": true,
      "sentences": 87,
-     "perMillion": 42.6,
-     "easyWords": true
+     "perMillion": 42.6
     },
     {
      "id": "routine-12",
@@ -589,9 +2675,9 @@
      "example": "It's your turn to take out the trash.",
      "exampleKo": "쓰레기 버릴 차례는 너야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 66,
-     "perMillion": 32.3,
-     "easyWords": true
+     "perMillion": 32.3
     },
     {
      "id": "routine-13",
@@ -600,9 +2686,9 @@
      "example": "I walk the dog every morning.",
      "exampleKo": "매일 아침 개를 산책시켜.",
      "tip": "walk가 '산책시키다'라는 동사로 쓰였어요.",
+     "easyWords": true,
      "sentences": 54,
-     "perMillion": 26.5,
-     "easyWords": true
+     "perMillion": 26.5
     },
     {
      "id": "routine-14",
@@ -611,9 +2697,9 @@
      "example": "Can you help me clear the table?",
      "exampleKo": "식탁 치우는 것 좀 도와줄래?",
      "tip": "",
+     "easyWords": true,
      "sentences": 45,
-     "perMillion": 22.1,
-     "easyWords": true
+     "perMillion": 22.1
     },
     {
      "id": "routine-15",
@@ -622,9 +2708,9 @@
      "example": "Don't throw away that box.",
      "exampleKo": "그 상자 버리지 마.",
      "tip": "",
+     "easyWords": true,
      "sentences": 200,
-     "perMillion": 98.0,
-     "easyWords": true
+     "perMillion": 98.0
     },
     {
      "id": "routine-16",
@@ -633,9 +2719,9 @@
      "example": "Turn off the lights when you leave.",
      "exampleKo": "나갈 때 불 꺼.",
      "tip": "켜는 건 turn on이에요.",
+     "easyWords": true,
      "sentences": 887,
-     "perMillion": 434.7,
-     "easyWords": true
+     "perMillion": 434.7
     },
     {
      "id": "routine-17",
@@ -644,9 +2730,9 @@
      "example": "I switch off my phone at night.",
      "exampleKo": "밤에는 휴대폰을 꺼 둬.",
      "tip": "사람에게 쓰면 '신경을 끄다, 멍해지다'라는 뜻도 돼요.",
+     "easyWords": true,
      "sentences": 123,
-     "perMillion": 60.3,
-     "easyWords": true
+     "perMillion": 60.3
     },
     {
      "id": "routine-18",
@@ -655,9 +2741,9 @@
      "example": "Let me write down your number.",
      "exampleKo": "네 번호 적어 둘게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 245,
-     "perMillion": 120.1,
-     "easyWords": true
+     "perMillion": 120.1
     },
     {
      "id": "routine-19",
@@ -666,9 +2752,9 @@
      "example": "Can I have your phone number?",
      "exampleKo": "전화번호 좀 알려 줄래?",
      "tip": "",
+     "easyWords": true,
      "sentences": 564,
-     "perMillion": 276.4,
-     "easyWords": true
+     "perMillion": 276.4
     },
     {
      "id": "routine-20",
@@ -677,9 +2763,9 @@
      "example": "Don't hang up! I'm not done yet.",
      "exampleKo": "끊지 마! 아직 할 말 남았어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 321,
-     "perMillion": 157.3,
-     "easyWords": true
+     "perMillion": 157.3
     },
     {
      "id": "routine-21",
@@ -688,9 +2774,9 @@
      "example": "I'll send you a message later.",
      "exampleKo": "이따 메시지 보낼게.",
      "tip": "문자는 text를 동사로 써서 I'll text you라고도 해요.",
+     "easyWords": true,
      "sentences": 50,
-     "perMillion": 24.5,
-     "easyWords": true
+     "perMillion": 24.5
     },
     {
      "id": "routine-22",
@@ -699,9 +2785,9 @@
      "example": "My brother plays games all day.",
      "exampleKo": "동생은 하루 종일 게임해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 151,
-     "perMillion": 74.0,
-     "easyWords": true
+     "perMillion": 74.0
     },
     {
      "id": "routine-23",
@@ -710,9 +2796,9 @@
      "example": "I need a cup of coffee first.",
      "exampleKo": "일단 커피 한 잔 마셔야겠어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 657,
-     "perMillion": 322.0,
-     "easyWords": true
+     "perMillion": 322.0
     },
     {
      "id": "routine-24",
@@ -721,9 +2807,9 @@
      "example": "Horror movies aren't my cup of tea.",
      "exampleKo": "공포 영화는 내 취향이 아니야.",
      "tip": "차 한 잔이라는 뜻 말고 '내 취향'이라는 관용 표현으로도 자주 써요.",
+     "easyWords": true,
      "sentences": 291,
-     "perMillion": 142.6,
-     "easyWords": true
+     "perMillion": 142.6
     },
     {
      "id": "routine-25",
@@ -732,9 +2818,9 @@
      "example": "A hot chocolate, please.",
      "exampleKo": "핫초코 하나 주세요.",
      "tip": "",
+     "easyWords": true,
      "sentences": 57,
-     "perMillion": 27.9,
-     "easyWords": true
+     "perMillion": 27.9
     },
     {
      "id": "routine-26",
@@ -743,9 +2829,9 @@
      "example": "Let the soup cool down a little.",
      "exampleKo": "국을 좀 식혀.",
      "tip": "사람에게 쓰면 '진정해'라는 뜻이에요.",
+     "easyWords": true,
      "sentences": 65,
-     "perMillion": 31.9,
-     "easyWords": true
+     "perMillion": 31.9
     },
     {
      "id": "routine-27",
@@ -754,9 +2840,9 @@
      "example": "Fill up the bottle with water.",
      "exampleKo": "병에 물을 가득 채워.",
      "tip": "",
+     "easyWords": true,
      "sentences": 104,
-     "perMillion": 51.0,
-     "easyWords": true
+     "perMillion": 51.0
     },
     {
      "id": "routine-28",
@@ -765,9 +2851,9 @@
      "example": "I work two jobs to pay the bills.",
      "exampleKo": "생활비 대려고 일을 두 개 해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 52,
-     "perMillion": 25.5,
-     "easyWords": true
+     "perMillion": 25.5
     },
     {
      "id": "routine-29",
@@ -776,9 +2862,9 @@
      "example": "I have to pay the rent tomorrow.",
      "exampleKo": "내일 월세 내야 해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 79,
-     "perMillion": 38.7,
-     "easyWords": true
+     "perMillion": 38.7
     },
     {
      "id": "routine-30",
@@ -787,9 +2873,9 @@
      "example": "I'm going outside to get some air.",
      "exampleKo": "밖에 바람 좀 쐬러 갈게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 34,
-     "perMillion": 16.7,
-     "easyWords": true
+     "perMillion": 16.7
     },
     {
      "id": "routine-31",
@@ -798,9 +2884,9 @@
      "example": "Wear a jacket, or you'll catch a cold.",
      "exampleKo": "재킷 입어, 안 그러면 감기 걸려.",
      "tip": "",
+     "easyWords": true,
      "sentences": 196,
-     "perMillion": 96.1,
-     "easyWords": true
+     "perMillion": 96.1
     },
     {
      "id": "routine-32",
@@ -809,9 +2895,9 @@
      "example": "I think I'm coming down with the flu.",
      "exampleKo": "독감에 걸리려나 봐.",
      "tip": "가벼운 병에 막 걸리기 시작할 때 써요.",
+     "easyWords": true,
      "sentences": 48,
-     "perMillion": 23.5,
-     "easyWords": true
+     "perMillion": 23.5
     },
     {
      "id": "routine-33",
@@ -820,9 +2906,9 @@
      "example": "Can you look after my cat this weekend?",
      "exampleKo": "이번 주말에 우리 고양이 좀 봐 줄래?",
      "tip": "",
+     "easyWords": true,
      "sentences": 567,
-     "perMillion": 277.9,
-     "easyWords": true
+     "perMillion": 277.9
     },
     {
      "id": "routine-34",
@@ -831,9 +2917,9 @@
      "example": "I grew up in Busan.",
      "exampleKo": "나 부산에서 자랐어.",
      "tip": "Grow up!은 '철 좀 들어!'라는 뜻이에요.",
+     "easyWords": true,
      "sentences": 1585,
-     "perMillion": 776.7,
-     "easyWords": true
+     "perMillion": 776.7
     },
     {
      "id": "routine-35",
@@ -842,9 +2928,9 @@
      "example": "Have a good time at the party!",
      "exampleKo": "파티 재밌게 놀아!",
      "tip": "",
+     "easyWords": true,
      "sentences": 607,
-     "perMillion": 297.5,
-     "easyWords": true
+     "perMillion": 297.5
     },
     {
      "id": "routine-36",
@@ -853,9 +2939,9 @@
      "example": "Could you take a picture of us?",
      "exampleKo": "저희 사진 좀 찍어 주실래요?",
      "tip": "",
+     "easyWords": true,
      "sentences": 236,
-     "perMillion": 115.7,
-     "easyWords": true
+     "perMillion": 115.7
     },
     {
      "id": "routine-37",
@@ -864,9 +2950,9 @@
      "example": "Please sit down.",
      "exampleKo": "앉으세요.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1113,
-     "perMillion": 545.4,
-     "easyWords": true
+     "perMillion": 545.4
     },
     {
      "id": "routine-38",
@@ -875,9 +2961,9 @@
      "example": "Stand up and stretch for a minute.",
      "exampleKo": "일어나서 잠깐 스트레칭해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 658,
-     "perMillion": 322.5,
-     "easyWords": true
+     "perMillion": 322.5
     },
     {
      "id": "routine-39",
@@ -886,9 +2972,9 @@
      "example": "I need to lie down for a bit.",
      "exampleKo": "좀 누워야겠어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 166,
-     "perMillion": 81.3,
-     "easyWords": true
+     "perMillion": 81.3
     },
     {
      "id": "routine-40",
@@ -897,9 +2983,9 @@
      "example": "Good night. Sweet dreams!",
      "exampleKo": "잘 자. 좋은 꿈 꿔!",
      "tip": "",
+     "easyWords": true,
      "sentences": 20,
-     "perMillion": 9.8,
-     "easyWords": true
+     "perMillion": 9.8
     }
    ]
   },
@@ -917,9 +3003,9 @@
      "example": "Go straight and turn left.",
      "exampleKo": "쭉 가다가 왼쪽으로 도세요.",
      "tip": "",
+     "easyWords": true,
      "sentences": 255,
-     "perMillion": 125.0,
-     "easyWords": true
+     "perMillion": 125.0
     },
     {
      "id": "out-02",
@@ -928,9 +3014,9 @@
      "example": "The bakery is just around the corner.",
      "exampleKo": "빵집은 모퉁이 돌면 바로 있어.",
      "tip": "Summer is just around the corner처럼 '곧 다가온다'는 뜻도 있어요.",
+     "easyWords": true,
      "sentences": 147,
-     "perMillion": 72.0,
-     "easyWords": true
+     "perMillion": 72.0
     },
     {
      "id": "out-03",
@@ -939,9 +3025,9 @@
      "example": "I'll wait for you at the bus stop.",
      "exampleKo": "버스 정류장에서 기다릴게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 326,
-     "perMillion": 159.8,
-     "easyWords": true
+     "perMillion": 159.8
     },
     {
      "id": "out-04",
@@ -950,9 +3036,9 @@
      "example": "I saw your sister on the street.",
      "exampleKo": "길에서 너희 언니 봤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 328,
-     "perMillion": 160.7,
-     "easyWords": true
+     "perMillion": 160.7
     },
     {
      "id": "out-05",
@@ -961,9 +3047,9 @@
      "example": "Stop! It's a red light.",
      "exampleKo": "멈춰! 빨간불이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 89,
-     "perMillion": 43.6,
-     "easyWords": true
+     "perMillion": 43.6
     },
     {
      "id": "out-06",
@@ -972,9 +3058,9 @@
      "example": "Slow down! You're driving too fast.",
      "exampleKo": "속도 줄여! 너무 빨리 달리잖아.",
      "tip": "말이 빠른 사람에게 '천천히 말해'라고 할 때도 써요.",
+     "easyWords": true,
      "sentences": 250,
-     "perMillion": 122.5,
-     "easyWords": true
+     "perMillion": 122.5
     },
     {
      "id": "out-07",
@@ -983,9 +3069,9 @@
      "example": "Can you pull over here?",
      "exampleKo": "여기 좀 세워 주실래요?",
      "tip": "",
+     "easyWords": true,
      "sentences": 124,
-     "perMillion": 60.8,
-     "easyWords": true
+     "perMillion": 60.8
     },
     {
      "id": "out-08",
@@ -994,9 +3080,9 @@
      "example": "We ran out of gas on the highway.",
      "exampleKo": "고속도로에서 기름이 떨어졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 63,
-     "perMillion": 30.9,
-     "easyWords": true
+     "perMillion": 30.9
     },
     {
      "id": "out-09",
@@ -1005,9 +3091,9 @@
      "example": "Hop in! I'll give you a ride.",
      "exampleKo": "얼른 타! 태워 줄게.",
      "tip": "hop on은 버스·자전거 같은 데 올라탈 때 써요.",
+     "easyWords": true,
      "sentences": 42,
-     "perMillion": 20.6,
-     "easyWords": true
+     "perMillion": 20.6
     },
     {
      "id": "out-10",
@@ -1016,9 +3102,9 @@
      "example": "The kids are sleeping in the back seat.",
      "exampleKo": "애들은 뒷자리에서 자고 있어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 61,
-     "perMillion": 29.9,
-     "easyWords": true
+     "perMillion": 29.9
     },
     {
      "id": "out-11",
@@ -1027,9 +3113,9 @@
      "example": "Let's go for a bike ride.",
      "exampleKo": "자전거 타러 가자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 32,
-     "perMillion": 15.7,
-     "easyWords": true
+     "perMillion": 15.7
     },
     {
      "id": "out-12",
@@ -1038,9 +3124,9 @@
      "example": "We walked around the old town.",
      "exampleKo": "구시가지를 돌아다녔어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 346,
-     "perMillion": 169.6,
-     "easyWords": true
+     "perMillion": 169.6
     },
     {
      "id": "out-13",
@@ -1049,9 +3135,9 @@
      "example": "Can I help you? — I'm just looking around.",
      "exampleKo": "도와드릴까요? — 그냥 둘러보는 중이에요.",
      "tip": "가게에서 점원에게 자주 하는 말이에요.",
+     "easyWords": true,
      "sentences": 499,
-     "perMillion": 244.5,
-     "easyWords": true
+     "perMillion": 244.5
     },
     {
      "id": "out-14",
@@ -1060,9 +3146,9 @@
      "example": "We arrived at the airport early.",
      "exampleKo": "공항에 일찍 도착했어.",
      "tip": "도시나 나라처럼 넓은 곳은 arrive in을 써요.",
+     "easyWords": true,
      "sentences": 848,
-     "perMillion": 415.6,
-     "easyWords": true
+     "perMillion": 415.6
     },
     {
      "id": "out-15",
@@ -1071,9 +3157,9 @@
      "example": "When did you come back from Japan?",
      "exampleKo": "일본에서 언제 돌아왔어?",
      "tip": "",
+     "easyWords": true,
      "sentences": 234,
-     "perMillion": 114.7,
-     "easyWords": true
+     "perMillion": 114.7
     },
     {
      "id": "out-16",
@@ -1082,9 +3168,9 @@
      "example": "Someone is knocking on the door.",
      "exampleKo": "누가 문을 두드려.",
      "tip": "",
+     "easyWords": true,
      "sentences": 344,
-     "perMillion": 168.6,
-     "easyWords": true
+     "perMillion": 168.6
     },
     {
      "id": "out-17",
@@ -1093,9 +3179,9 @@
      "example": "Can I pay by credit card?",
      "exampleKo": "신용카드로 계산할 수 있나요?",
      "tip": "",
+     "easyWords": true,
      "sentences": 262,
-     "perMillion": 128.4,
-     "easyWords": true
+     "perMillion": 128.4
     },
     {
      "id": "out-18",
@@ -1104,9 +3190,9 @@
      "example": "I bought a new pair of shoes.",
      "exampleKo": "새 신발 한 켤레 샀어.",
      "tip": "신발·바지·안경은 a pair of로 세어요.",
+     "easyWords": true,
      "sentences": 182,
-     "perMillion": 89.2,
-     "easyWords": true
+     "perMillion": 89.2
     },
     {
      "id": "out-19",
@@ -1115,9 +3201,9 @@
      "example": "We had lunch on the beach.",
      "exampleKo": "해변에서 점심 먹었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 517,
-     "perMillion": 253.4,
-     "easyWords": true
+     "perMillion": 253.4
     },
     {
      "id": "out-20",
@@ -1126,9 +3212,9 @@
      "example": "Take an umbrella so you don't get wet.",
      "exampleKo": "젖지 않게 우산 챙겨.",
      "tip": "",
+     "easyWords": true,
      "sentences": 119,
-     "perMillion": 58.3,
-     "easyWords": true
+     "perMillion": 58.3
     },
     {
      "id": "out-21",
@@ -1137,9 +3223,9 @@
      "example": "I got caught in the rain and I'm soaking wet.",
      "exampleKo": "비를 만나서 흠뻑 젖었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 45,
-     "perMillion": 22.1,
-     "easyWords": true
+     "perMillion": 22.1
     },
     {
      "id": "out-22",
@@ -1148,9 +3234,9 @@
      "example": "It's freezing cold outside.",
      "exampleKo": "밖에 엄청 추워.",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "out-23",
@@ -1159,9 +3245,9 @@
      "example": "We're having a heat wave this week.",
      "exampleKo": "이번 주에 폭염이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 22,
-     "perMillion": 10.8,
-     "easyWords": true
+     "perMillion": 10.8
     },
     {
      "id": "out-24",
@@ -1170,9 +3256,9 @@
      "example": "I'm saving money for a rainy day.",
      "exampleKo": "만일을 대비해서 돈을 모으고 있어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 73,
-     "perMillion": 35.8,
-     "easyWords": true
+     "perMillion": 35.8
     },
     {
      "id": "out-25",
@@ -1181,9 +3267,9 @@
      "example": "The market opens every Sunday, rain or shine.",
      "exampleKo": "시장은 날씨와 상관없이 일요일마다 열어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "out-26",
@@ -1192,9 +3278,9 @@
      "example": "Let's throw a party for her birthday.",
      "exampleKo": "그 애 생일에 파티 열어 주자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 66,
-     "perMillion": 32.3,
-     "easyWords": true
+     "perMillion": 32.3
     },
     {
      "id": "out-27",
@@ -1203,9 +3289,9 @@
      "example": "Are you coming to the party tonight?",
      "exampleKo": "오늘 밤 파티에 올 거야?",
      "tip": "",
+     "easyWords": true,
      "sentences": 224,
-     "perMillion": 109.8,
-     "easyWords": true
+     "perMillion": 109.8
     },
     {
      "id": "out-28",
@@ -1214,9 +3300,9 @@
      "example": "Is my name on the guest list?",
      "exampleKo": "손님 명단에 제 이름 있나요?",
      "tip": "",
+     "easyWords": true,
      "sentences": 21,
-     "perMillion": 10.3,
-     "easyWords": true
+     "perMillion": 10.3
     },
     {
      "id": "out-29",
@@ -1225,9 +3311,9 @@
      "example": "We moved into a new apartment.",
      "exampleKo": "새 아파트로 이사했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 222,
-     "perMillion": 108.8,
-     "easyWords": true
+     "perMillion": 108.8
     },
     {
      "id": "out-30",
@@ -1236,9 +3322,9 @@
      "example": "My best friend moved away last year.",
      "exampleKo": "제일 친한 친구가 작년에 멀리 이사 갔어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 134,
-     "perMillion": 65.7,
-     "easyWords": true
+     "perMillion": 65.7
     },
     {
      "id": "out-31",
@@ -1247,9 +3333,9 @@
      "example": "The café is on the ground floor.",
      "exampleKo": "카페는 1층에 있어.",
      "tip": "영국 영어예요. 미국에서는 first floor라고 해요.",
+     "easyWords": true,
      "sentences": 44,
-     "perMillion": 21.6,
-     "easyWords": true
+     "perMillion": 21.6
     },
     {
      "id": "out-32",
@@ -1258,9 +3344,9 @@
      "example": "We sat in the front row.",
      "exampleKo": "우리는 맨 앞줄에 앉았어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 37,
-     "perMillion": 18.1,
-     "easyWords": true
+     "perMillion": 18.1
     },
     {
      "id": "out-33",
@@ -1269,9 +3355,9 @@
      "example": "I met him at summer camp.",
      "exampleKo": "걔는 여름 캠프에서 만났어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 51,
-     "perMillion": 25.0,
-     "easyWords": true
+     "perMillion": 25.0
     },
     {
      "id": "out-34",
@@ -1280,9 +3366,9 @@
      "example": "We've been friends since junior high.",
      "exampleKo": "우리는 중학교 때부터 친구야.",
      "tip": "high school은 고등학교예요.",
+     "easyWords": true,
      "sentences": 103,
-     "perMillion": 50.5,
-     "easyWords": true
+     "perMillion": 50.5
     },
     {
      "id": "out-35",
@@ -1291,9 +3377,9 @@
      "example": "I was nervous about my report card.",
      "exampleKo": "성적표 때문에 긴장했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 31,
-     "perMillion": 15.2,
-     "easyWords": true
+     "perMillion": 15.2
     },
     {
      "id": "out-36",
@@ -1302,9 +3388,9 @@
      "example": "My grandma is in the hospital.",
      "exampleKo": "할머니가 입원해 계셔.",
      "tip": "영국에서는 in hospital이라고 해요.",
+     "easyWords": true,
      "sentences": 652,
-     "perMillion": 319.5,
-     "easyWords": true
+     "perMillion": 319.5
     },
     {
      "id": "out-37",
@@ -1313,9 +3399,9 @@
      "example": "I had a small accident on my bike.",
      "exampleKo": "자전거 타다가 작은 사고가 났어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 119,
-     "perMillion": 58.3,
-     "easyWords": true
+     "perMillion": 58.3
     },
     {
      "id": "out-38",
@@ -1324,9 +3410,9 @@
      "example": "I have some bad news.",
      "exampleKo": "안 좋은 소식이 있어.",
      "tip": "news는 셀 수 없어서 a news라고 하지 않아요.",
+     "easyWords": true,
      "sentences": 186,
-     "perMillion": 91.2,
-     "easyWords": true
+     "perMillion": 91.2
     },
     {
      "id": "out-39",
@@ -1335,9 +3421,9 @@
      "example": "Happy birthday! Here's a little gift.",
      "exampleKo": "생일 축하해! 작은 선물이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 94,
-     "perMillion": 46.1,
-     "easyWords": true
+     "perMillion": 46.1
     },
     {
      "id": "out-40",
@@ -1346,9 +3432,9 @@
      "example": "I watched her break the world record.",
      "exampleKo": "그 선수가 세계 기록을 깨는 걸 봤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 36,
-     "perMillion": 17.6,
-     "easyWords": true
+     "perMillion": 17.6
     }
    ]
   },
@@ -1366,9 +3452,9 @@
      "example": "She's been my best friend since middle school.",
      "exampleKo": "그 애는 중학교 때부터 제일 친한 친구야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 613,
-     "perMillion": 300.4,
-     "easyWords": true
+     "perMillion": 300.4
     },
     {
      "id": "feelings-02",
@@ -1377,9 +3463,9 @@
      "example": "Do you get along with your roommate?",
      "exampleKo": "룸메이트랑 잘 지내?",
      "tip": "",
+     "easyWords": true,
      "sentences": 1019,
-     "perMillion": 499.4,
-     "easyWords": true
+     "perMillion": 499.4
     },
     {
      "id": "feelings-03",
@@ -1388,9 +3474,9 @@
      "example": "I broke up with my boyfriend last month.",
      "exampleKo": "지난달에 남자친구랑 헤어졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 613,
-     "perMillion": 300.4,
-     "easyWords": true
+     "perMillion": 300.4
     },
     {
      "id": "feelings-04",
@@ -1399,9 +3485,9 @@
      "example": "I have a crush on someone in my class.",
      "exampleKo": "우리 반에 좋아하는 사람이 있어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 278,
-     "perMillion": 136.2,
-     "easyWords": true
+     "perMillion": 136.2
     },
     {
      "id": "feelings-05",
@@ -1410,9 +3496,9 @@
      "example": "I fell in love with this song.",
      "exampleKo": "이 노래에 완전히 빠졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 787,
-     "perMillion": 385.7,
-     "easyWords": true
+     "perMillion": 385.7
     },
     {
      "id": "feelings-06",
@@ -1421,9 +3507,9 @@
      "example": "We hit it off right away.",
      "exampleKo": "우린 만나자마자 잘 통했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 38,
-     "perMillion": 18.6,
-     "easyWords": true
+     "perMillion": 18.6
     },
     {
      "id": "feelings-07",
@@ -1432,9 +3518,9 @@
      "example": "Did you two make up yet?",
      "exampleKo": "너희 둘 아직 화해 안 했어?",
      "tip": "make up은 \"지어내다\", \"화장\"이라는 뜻도 있어요.",
+     "easyWords": true,
      "sentences": 1110,
-     "perMillion": 544.0,
-     "easyWords": true
+     "perMillion": 544.0
     },
     {
      "id": "feelings-08",
@@ -1443,9 +3529,9 @@
      "example": "Cheer up! You'll do better next time.",
      "exampleKo": "힘내! 다음엔 더 잘할 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 47,
-     "perMillion": 23.0,
-     "easyWords": true
+     "perMillion": 23.0
     },
     {
      "id": "feelings-09",
@@ -1454,9 +3540,9 @@
      "example": "Don't freak out, but I lost your umbrella.",
      "exampleKo": "놀라지 마, 근데 네 우산 잃어버렸어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 252,
-     "perMillion": 123.5,
-     "easyWords": true
+     "perMillion": 123.5
     },
     {
      "id": "feelings-10",
@@ -1465,9 +3551,9 @@
      "example": "I'm so stressed out about exams.",
      "exampleKo": "시험 때문에 스트레스 엄청 받아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 48,
-     "perMillion": 23.5,
-     "easyWords": true
+     "perMillion": 23.5
     },
     {
      "id": "feelings-11",
@@ -1476,9 +3562,9 @@
      "example": "I was scared to death on that ride.",
      "exampleKo": "그 놀이기구 탈 때 무서워 죽는 줄 알았어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 42,
-     "perMillion": 20.6,
-     "easyWords": true
+     "perMillion": 20.6
     },
     {
      "id": "feelings-12",
@@ -1487,9 +3573,9 @@
      "example": "I'm sick and tired of this rain.",
      "exampleKo": "이 비 정말 지긋지긋해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 78,
-     "perMillion": 38.2,
-     "easyWords": true
+     "perMillion": 38.2
     },
     {
      "id": "feelings-13",
@@ -1498,9 +3584,9 @@
      "example": "I was over the moon when I passed the test.",
      "exampleKo": "시험에 붙어서 날아갈 듯이 기뻤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 42,
-     "perMillion": 20.6,
-     "easyWords": true
+     "perMillion": 20.6
     },
     {
      "id": "feelings-14",
@@ -1509,9 +3595,9 @@
      "example": "My sister is head over heels for her new boyfriend.",
      "exampleKo": "언니가 새 남자친구한테 홀딱 반했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 40,
-     "perMillion": 19.6,
-     "easyWords": true
+     "perMillion": 19.6
     },
     {
      "id": "feelings-15",
@@ -1520,9 +3606,9 @@
      "example": "My friend set me up on a blind date.",
      "exampleKo": "친구가 소개팅을 시켜 줬어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "feelings-16",
@@ -1531,9 +3617,9 @@
      "example": "Do you believe in love at first sight?",
      "exampleKo": "첫눈에 반하는 거 믿어?",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "feelings-17",
@@ -1542,9 +3628,9 @@
      "example": "My parents are made for each other.",
      "exampleKo": "우리 부모님은 천생연분이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 22,
-     "perMillion": 10.8,
-     "easyWords": true
+     "perMillion": 10.8
     },
     {
      "id": "feelings-18",
@@ -1553,9 +3639,9 @@
      "example": "I'm still on good terms with my ex.",
      "exampleKo": "전 애인이랑 아직 사이가 좋아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 60,
-     "perMillion": 29.4,
-     "easyWords": true
+     "perMillion": 29.4
     },
     {
      "id": "feelings-19",
@@ -1564,9 +3650,9 @@
      "example": "We drifted apart after high school.",
      "exampleKo": "고등학교 졸업하고 우린 점점 멀어졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 31,
-     "perMillion": 15.2,
-     "easyWords": true
+     "perMillion": 15.2
     },
     {
      "id": "feelings-20",
@@ -1575,9 +3661,9 @@
      "example": "I lost touch with my old classmates.",
      "exampleKo": "옛 반 친구들이랑 연락이 끊겼어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 30,
-     "perMillion": 14.7,
-     "easyWords": true
+     "perMillion": 14.7
     },
     {
      "id": "feelings-21",
@@ -1586,9 +3672,9 @@
      "example": "Let's keep in touch!",
      "exampleKo": "연락하고 지내자!",
      "tip": "",
+     "easyWords": true,
      "sentences": 97,
-     "perMillion": 47.5,
-     "easyWords": true
+     "perMillion": 47.5
     },
     {
      "id": "feelings-22",
@@ -1597,9 +3683,9 @@
      "example": "I've always looked up to my sister.",
      "exampleKo": "난 늘 언니를 존경해 왔어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 130,
-     "perMillion": 63.7,
-     "easyWords": true
+     "perMillion": 63.7
     },
     {
      "id": "feelings-23",
@@ -1608,9 +3694,9 @@
      "example": "Don't look down on people.",
      "exampleKo": "사람들을 얕보지 마.",
      "tip": "",
+     "easyWords": true,
      "sentences": 93,
-     "perMillion": 45.6,
-     "easyWords": true
+     "perMillion": 45.6
     },
     {
      "id": "feelings-24",
@@ -1619,9 +3705,9 @@
      "example": "Stop making fun of my accent.",
      "exampleKo": "내 억양 좀 그만 놀려.",
      "tip": "",
+     "easyWords": true,
      "sentences": 475,
-     "perMillion": 232.8,
-     "easyWords": true
+     "perMillion": 232.8
     },
     {
      "id": "feelings-25",
@@ -1630,9 +3716,9 @@
      "example": "Thanks for standing up for me.",
      "exampleKo": "내 편 들어 줘서 고마워.",
      "tip": "",
+     "easyWords": true,
      "sentences": 109,
-     "perMillion": 53.4,
-     "easyWords": true
+     "perMillion": 53.4
     },
     {
      "id": "feelings-26",
@@ -1641,9 +3727,9 @@
      "example": "I have a soft spot for cats.",
      "exampleKo": "난 고양이라면 사족을 못 써.",
      "tip": "",
+     "easyWords": true,
      "sentences": 25,
-     "perMillion": 12.3,
-     "easyWords": true
+     "perMillion": 12.3
     },
     {
      "id": "feelings-27",
@@ -1652,9 +3738,9 @@
      "example": "Time heals a broken heart.",
      "exampleKo": "시간이 지나면 실연의 상처도 아물어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 24,
-     "perMillion": 11.8,
-     "easyWords": true
+     "perMillion": 11.8
     },
     {
      "id": "feelings-28",
@@ -1663,9 +3749,9 @@
      "example": "I burst into tears at the end of the movie.",
      "exampleKo": "영화 마지막에 눈물이 터졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 119,
-     "perMillion": 58.3,
-     "easyWords": true
+     "perMillion": 58.3
     },
     {
      "id": "feelings-29",
@@ -1674,9 +3760,9 @@
      "example": "We all burst out laughing.",
      "exampleKo": "우리는 다 같이 웃음을 터뜨렸어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 77,
-     "perMillion": 37.7,
-     "easyWords": true
+     "perMillion": 37.7
     },
     {
      "id": "feelings-30",
@@ -1685,9 +3771,9 @@
      "example": "I've been feeling down lately.",
      "exampleKo": "요즘 기분이 좀 가라앉아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 27,
-     "perMillion": 13.2,
-     "easyWords": true
+     "perMillion": 13.2
     },
     {
      "id": "feelings-31",
@@ -1696,9 +3782,9 @@
      "example": "I'm really into K-dramas these days.",
      "exampleKo": "요즘 한국 드라마에 푹 빠졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 83,
-     "perMillion": 40.7,
-     "easyWords": true
+     "perMillion": 40.7
     },
     {
      "id": "feelings-32",
@@ -1707,9 +3793,9 @@
      "example": "I can't stand waiting in line.",
      "exampleKo": "줄 서서 기다리는 거 정말 싫어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 477,
-     "perMillion": 233.8,
-     "easyWords": true
+     "perMillion": 233.8
     },
     {
      "id": "feelings-33",
@@ -1718,9 +3804,9 @@
      "example": "Don't be such a drama queen.",
      "exampleKo": "그렇게 호들갑 떨지 마.",
      "tip": "남녀 모두에게 써요.",
+     "easyWords": true,
      "sentences": 26,
-     "perMillion": 12.7,
-     "easyWords": true
+     "perMillion": 12.7
     },
     {
      "id": "feelings-34",
@@ -1729,9 +3815,9 @@
      "example": "Thanks for helping! — It's no big deal.",
      "exampleKo": "도와줘서 고마워! — 별것 아니야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 206,
-     "perMillion": 101.0,
-     "easyWords": true
+     "perMillion": 101.0
     },
     {
      "id": "feelings-35",
@@ -1740,9 +3826,9 @@
      "example": "I want to settle down in a quiet town someday.",
      "exampleKo": "언젠가 조용한 동네에 자리 잡고 싶어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 135,
-     "perMillion": 66.2,
-     "easyWords": true
+     "perMillion": 66.2
     },
     {
      "id": "feelings-36",
@@ -1751,9 +3837,9 @@
      "example": "Don't worry, we're all in the same boat.",
      "exampleKo": "걱정 마, 우리 다 같은 처지야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 32,
-     "perMillion": 15.7,
-     "easyWords": true
+     "perMillion": 15.7
     },
     {
      "id": "feelings-37",
@@ -1762,9 +3848,9 @@
      "example": "We don't always see eye to eye.",
      "exampleKo": "우리가 늘 생각이 같은 건 아니야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 33,
-     "perMillion": 16.2,
-     "easyWords": true
+     "perMillion": 16.2
     },
     {
      "id": "feelings-38",
@@ -1773,9 +3859,9 @@
      "example": "I'll always be there for you.",
      "exampleKo": "난 언제나 네 곁에 있을게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 215,
-     "perMillion": 105.4,
-     "easyWords": true
+     "perMillion": 105.4
     },
     {
      "id": "feelings-39",
@@ -1784,9 +3870,9 @@
      "example": "I take pride in my handwriting.",
      "exampleKo": "내 글씨체가 자랑스러워.",
      "tip": "",
+     "easyWords": true,
      "sentences": 56,
-     "perMillion": 27.4,
-     "easyWords": true
+     "perMillion": 27.4
     },
     {
      "id": "feelings-40",
@@ -1795,9 +3881,9 @@
      "example": "Come with us! You don't want to miss out.",
      "exampleKo": "같이 가자! 놓치면 아쉬울 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 40,
-     "perMillion": 19.6,
-     "easyWords": true
+     "perMillion": 19.6
     }
    ]
   },
@@ -1815,9 +3901,9 @@
      "example": "What do you plan on doing this summer?",
      "exampleKo": "이번 여름에 뭐 할 계획이야?",
      "tip": "",
+     "easyWords": true,
      "sentences": 2837,
-     "perMillion": 1390.3,
-     "easyWords": true
+     "perMillion": 1390.3
     },
     {
      "id": "plans-02",
@@ -1826,9 +3912,9 @@
      "example": "I'm looking forward to the trip.",
      "exampleKo": "여행이 기대돼.",
      "tip": "to 뒤에는 명사나 -ing가 와요.",
+     "easyWords": true,
      "sentences": 781,
-     "perMillion": 382.7,
-     "easyWords": true
+     "perMillion": 382.7
     },
     {
      "id": "plans-03",
@@ -1837,9 +3923,9 @@
      "example": "Call me as soon as you get there.",
      "exampleKo": "도착하자마자 전화해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1954,
-     "perMillion": 957.6,
-     "easyWords": true
+     "perMillion": 957.6
     },
     {
      "id": "plans-04",
@@ -1848,9 +3934,9 @@
      "example": "So far, so good.",
      "exampleKo": "지금까진 순조로워.",
      "tip": "",
+     "easyWords": true,
      "sentences": 713,
-     "perMillion": 349.4,
-     "easyWords": true
+     "perMillion": 349.4
     },
     {
      "id": "plans-05",
@@ -1859,9 +3945,9 @@
      "example": "I still see her from time to time.",
      "exampleKo": "아직도 가끔 그녀를 봐.",
      "tip": "",
+     "easyWords": true,
      "sentences": 217,
-     "perMillion": 106.3,
-     "easyWords": true
+     "perMillion": 106.3
     },
     {
      "id": "plans-06",
@@ -1870,9 +3956,9 @@
      "example": "It's nice to eat out once in a while.",
      "exampleKo": "가끔 외식하는 것도 좋아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 158,
-     "perMillion": 77.4,
-     "easyWords": true
+     "perMillion": 77.4
     },
     {
      "id": "plans-07",
@@ -1881,9 +3967,9 @@
      "example": "I go hiking now and then.",
      "exampleKo": "때때로 등산을 가.",
      "tip": "",
+     "easyWords": true,
      "sentences": 159,
-     "perMillion": 77.9,
-     "easyWords": true
+     "perMillion": 77.9
     },
     {
      "id": "plans-08",
@@ -1892,9 +3978,9 @@
      "example": "I always pack at the last minute.",
      "exampleKo": "나는 늘 막판에 짐을 싸.",
      "tip": "",
+     "easyWords": true,
      "sentences": 136,
-     "perMillion": 66.6,
-     "easyWords": true
+     "perMillion": 66.6
     },
     {
      "id": "plans-09",
@@ -1903,9 +3989,9 @@
      "example": "It's about time you got a haircut.",
      "exampleKo": "머리 자를 때가 됐네.",
      "tip": "",
+     "easyWords": true,
      "sentences": 129,
-     "perMillion": 63.2,
-     "easyWords": true
+     "perMillion": 63.2
     },
     {
      "id": "plans-10",
@@ -1914,9 +4000,9 @@
      "example": "Let's call it a day.",
      "exampleKo": "오늘은 여기까지 하자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 38,
-     "perMillion": 18.6,
-     "easyWords": true
+     "perMillion": 18.6
     },
     {
      "id": "plans-11",
@@ -1925,9 +4011,9 @@
      "example": "It's late. Let's call it a night.",
      "exampleKo": "늦었다. 오늘은 그만하자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 32,
-     "perMillion": 15.7,
-     "easyWords": true
+     "perMillion": 15.7
     },
     {
      "id": "plans-12",
@@ -1936,9 +4022,9 @@
      "example": "We're going to the beach. Want to come along?",
      "exampleKo": "우리 해변 가는데 같이 갈래?",
      "tip": "",
+     "easyWords": true,
      "sentences": 199,
-     "perMillion": 97.5,
-     "easyWords": true
+     "perMillion": 97.5
     },
     {
      "id": "plans-13",
@@ -1947,9 +4033,9 @@
      "example": "Mind if I tag along?",
      "exampleKo": "나도 따라가도 돼?",
      "tip": "",
+     "easyWords": true,
      "sentences": 26,
-     "perMillion": 12.7,
-     "easyWords": true
+     "perMillion": 12.7
     },
     {
      "id": "plans-14",
@@ -1958,9 +4044,9 @@
      "example": "Let's set up a meeting for Monday.",
      "exampleKo": "월요일로 회의를 잡자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 586,
-     "perMillion": 287.2,
-     "easyWords": true
+     "perMillion": 287.2
     },
     {
      "id": "plans-15",
@@ -1969,9 +4055,9 @@
      "example": "Let's get coffee and catch up.",
      "exampleKo": "커피 마시면서 그동안 이야기 나누자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 507,
-     "perMillion": 248.5,
-     "easyWords": true
+     "perMillion": 248.5
     },
     {
      "id": "plans-16",
@@ -1980,9 +4066,9 @@
      "example": "My friend didn't show up, so I waited for an hour.",
      "exampleKo": "친구가 안 와서 한 시간이나 기다렸어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 943,
-     "perMillion": 462.1,
-     "easyWords": true
+     "perMillion": 462.1
     },
     {
      "id": "plans-17",
@@ -1991,9 +4077,9 @@
      "example": "Can you drop me off at the station?",
      "exampleKo": "역에 내려 줄 수 있어?",
      "tip": "",
+     "easyWords": true,
      "sentences": 55,
-     "perMillion": 27.0,
-     "easyWords": true
+     "perMillion": 27.0
     },
     {
      "id": "plans-18",
@@ -2002,9 +4088,9 @@
      "example": "Stick around after class.",
      "exampleKo": "수업 끝나고 좀 남아 있어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 138,
-     "perMillion": 67.6,
-     "easyWords": true
+     "perMillion": 67.6
     },
     {
      "id": "plans-19",
@@ -2013,9 +4099,9 @@
      "example": "Let's wrap up the meeting.",
      "exampleKo": "회의를 마무리하자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 53,
-     "perMillion": 26.0,
-     "easyWords": true
+     "perMillion": 26.0
     },
     {
      "id": "plans-20",
@@ -2024,9 +4110,9 @@
      "example": "It'll save you money in the long run.",
      "exampleKo": "길게 보면 돈이 절약될 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 74,
-     "perMillion": 36.3,
-     "easyWords": true
+     "perMillion": 36.3
     },
     {
      "id": "plans-21",
@@ -2035,9 +4121,9 @@
      "example": "Take an umbrella, just in case.",
      "exampleKo": "혹시 모르니까 우산 챙겨.",
      "tip": "",
+     "easyWords": true,
      "sentences": 70,
-     "perMillion": 34.3,
-     "easyWords": true
+     "perMillion": 34.3
     },
     {
      "id": "plans-22",
@@ -2046,9 +4132,9 @@
      "example": "I got to school on time today.",
      "exampleKo": "오늘은 학교에 제시간에 도착했어.",
      "tip": "in time은 \"늦지 않게\"라는 뜻이에요.",
+     "easyWords": true,
      "sentences": 1358,
-     "perMillion": 665.5,
-     "easyWords": true
+     "perMillion": 665.5
     },
     {
      "id": "plans-23",
@@ -2057,9 +4143,9 @@
      "example": "No rush. Take your time.",
      "exampleKo": "급할 거 없어. 천천히 해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 70,
-     "perMillion": 34.3,
-     "easyWords": true
+     "perMillion": 34.3
     },
     {
      "id": "plans-24",
@@ -2068,9 +4154,9 @@
      "example": "It won't stop raining any time soon.",
      "exampleKo": "비가 금방 그칠 것 같지 않아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 50,
-     "perMillion": 24.5,
-     "easyWords": true
+     "perMillion": 24.5
     },
     {
      "id": "plans-25",
@@ -2079,9 +4165,9 @@
      "example": "We might move to Busan down the road.",
      "exampleKo": "나중에 부산으로 이사할지도 몰라.",
      "tip": "",
+     "easyWords": true,
      "sentences": 98,
-     "perMillion": 48.0,
-     "easyWords": true
+     "perMillion": 48.0
     },
     {
      "id": "plans-26",
@@ -2090,9 +4176,9 @@
      "example": "I'm staying with my parents for the time being.",
      "exampleKo": "당분간 부모님 댁에서 지낼 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 97,
-     "perMillion": 47.5,
-     "easyWords": true
+     "perMillion": 47.5
     },
     {
      "id": "plans-27",
@@ -2101,9 +4187,9 @@
      "example": "I'm on the way. See you in ten minutes.",
      "exampleKo": "가는 중이야. 10분 뒤에 봐.",
      "tip": "",
+     "easyWords": true,
      "sentences": 425,
-     "perMillion": 208.3,
-     "easyWords": true
+     "perMillion": 208.3
     },
     {
      "id": "plans-28",
@@ -2112,9 +4198,9 @@
      "example": "I'm going to head out now.",
      "exampleKo": "이제 나가 볼게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 136,
-     "perMillion": 66.6,
-     "easyWords": true
+     "perMillion": 66.6
     },
     {
      "id": "plans-29",
@@ -2123,9 +4209,9 @@
      "example": "It's late. I should get going.",
      "exampleKo": "늦었네. 이만 가 봐야겠어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 112,
-     "perMillion": 54.9,
-     "easyWords": true
+     "perMillion": 54.9
     },
     {
      "id": "plans-30",
@@ -2134,9 +4220,9 @@
      "example": "Sorry, I'm running late.",
      "exampleKo": "미안, 좀 늦을 것 같아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 37,
-     "perMillion": 18.1,
-     "easyWords": true
+     "perMillion": 18.1
     },
     {
      "id": "plans-31",
@@ -2145,9 +4231,9 @@
      "example": "I stayed up all night studying.",
      "exampleKo": "공부하느라 밤을 새웠어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 439,
-     "perMillion": 215.1,
-     "easyWords": true
+     "perMillion": 215.1
     },
     {
      "id": "plans-32",
@@ -2156,9 +4242,9 @@
      "example": "Tomorrow is my day off.",
      "exampleKo": "내일 쉬는 날이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 338,
-     "perMillion": 165.6,
-     "easyWords": true
+     "perMillion": 165.6
     },
     {
      "id": "plans-33",
@@ -2167,9 +4253,9 @@
      "example": "Do you want to go out tonight?",
      "exampleKo": "오늘 밤에 나갈래?",
      "tip": "go out with someone은 \"사귀다\"예요.",
+     "easyWords": true,
      "sentences": 3561,
-     "perMillion": 1745.1,
-     "easyWords": true
+     "perMillion": 1745.1
     },
     {
      "id": "plans-34",
@@ -2178,9 +4264,9 @@
      "example": "Do you want to come over for dinner?",
      "exampleKo": "저녁 먹으러 우리 집에 올래?",
      "tip": "",
+     "easyWords": true,
      "sentences": 917,
-     "perMillion": 449.4,
-     "easyWords": true
+     "perMillion": 449.4
     },
     {
      "id": "plans-35",
@@ -2189,9 +4275,9 @@
      "example": "I need ten minutes to get ready.",
      "exampleKo": "준비하는 데 10분 필요해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 699,
-     "perMillion": 342.6,
-     "easyWords": true
+     "perMillion": 342.6
     },
     {
      "id": "plans-36",
@@ -2200,9 +4286,9 @@
      "example": "We should hit the road before traffic gets bad.",
      "exampleKo": "차 막히기 전에 출발하자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 22,
-     "perMillion": 10.8,
-     "easyWords": true
+     "perMillion": 10.8
     },
     {
      "id": "plans-37",
@@ -2211,9 +4297,9 @@
      "example": "Just a minute, I'm almost done.",
      "exampleKo": "잠깐만, 거의 다 했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 61,
-     "perMillion": 29.9,
-     "easyWords": true
+     "perMillion": 29.9
     },
     {
      "id": "plans-38",
@@ -2222,9 +4308,9 @@
      "example": "Can I take a rain check on dinner?",
      "exampleKo": "저녁은 다음에 해도 될까?",
      "tip": "",
+     "easyWords": true,
      "sentences": 9,
-     "perMillion": 4.4,
-     "easyWords": true
+     "perMillion": 4.4
     },
     {
      "id": "plans-39",
@@ -2233,9 +4319,9 @@
      "example": "We decided to go ahead with the plan.",
      "exampleKo": "그 계획대로 진행하기로 했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 34,
-     "perMillion": 16.7,
-     "easyWords": true
+     "perMillion": 16.7
     },
     {
      "id": "plans-40",
@@ -2244,9 +4330,9 @@
      "example": "I'm trying to cut down on sugar.",
      "exampleKo": "설탕을 줄이려고 하는 중이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 259,
-     "perMillion": 126.9,
-     "easyWords": true
+     "perMillion": 126.9
     }
    ]
   },
@@ -2264,9 +4350,9 @@
      "example": "I'll have a coffee as well.",
      "exampleKo": "저도 커피 주세요.",
      "tip": "too와 비슷하게 문장 끝에 써요.",
+     "easyWords": true,
      "sentences": 2510,
-     "perMillion": 1230.1,
-     "easyWords": true
+     "perMillion": 1230.1
     },
     {
      "id": "connect-02",
@@ -2275,9 +4361,9 @@
      "example": "I'm sort of tired today.",
      "exampleKo": "오늘 좀 피곤해.",
      "tip": "kind of와 같은 뜻으로 말할 때 자주 써요.",
+     "easyWords": true,
      "sentences": 788,
-     "perMillion": 386.2,
-     "easyWords": true
+     "perMillion": 386.2
     },
     {
      "id": "connect-03",
@@ -2286,9 +4372,9 @@
      "example": "You can stay as long as you're quiet.",
      "exampleKo": "조용히만 하면 있어도 돼.",
      "tip": "",
+     "easyWords": true,
      "sentences": 905,
-     "perMillion": 443.5,
-     "easyWords": true
+     "perMillion": 443.5
     },
     {
      "id": "connect-04",
@@ -2297,9 +4383,9 @@
      "example": "I saw Minji the other day.",
      "exampleKo": "며칠 전에 민지 봤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 336,
-     "perMillion": 164.7,
-     "easyWords": true
+     "perMillion": 164.7
     },
     {
      "id": "connect-05",
@@ -2308,9 +4394,9 @@
      "example": "When it comes to cooking, my dad is the best.",
      "exampleKo": "요리라면 우리 아빠가 최고야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 220,
-     "perMillion": 107.8,
-     "easyWords": true
+     "perMillion": 107.8
     },
     {
      "id": "connect-06",
@@ -2319,9 +4405,9 @@
      "example": "The hotel was clean, not to mention cheap.",
      "exampleKo": "그 호텔은 싼 건 말할 것도 없고 깨끗했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 64,
-     "perMillion": 31.4,
-     "easyWords": true
+     "perMillion": 31.4
     },
     {
      "id": "connect-07",
@@ -2330,9 +4416,9 @@
      "example": "In any case, I'll call you tomorrow.",
      "exampleKo": "어쨌든 내일 전화할게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 101,
-     "perMillion": 49.5,
-     "easyWords": true
+     "perMillion": 49.5
     },
     {
      "id": "connect-08",
@@ -2341,9 +4427,9 @@
      "example": "I love fruit, for instance apples and grapes.",
      "exampleKo": "과일 좋아해, 예를 들면 사과랑 포도.",
      "tip": "for example과 같아요.",
+     "easyWords": true,
      "sentences": 54,
-     "perMillion": 26.5,
-     "easyWords": true
+     "perMillion": 26.5
     },
     {
      "id": "connect-09",
@@ -2352,9 +4438,9 @@
      "example": "The bus is late. We might as well walk.",
      "exampleKo": "버스가 늦네. 그냥 걸어가는 게 낫겠다.",
      "tip": "",
+     "easyWords": true,
      "sentences": 116,
-     "perMillion": 56.8,
-     "easyWords": true
+     "perMillion": 56.8
     },
     {
      "id": "connect-10",
@@ -2363,9 +4449,9 @@
      "example": "Why did you say yes in the first place?",
      "exampleKo": "애초에 왜 그러겠다고 했어?",
      "tip": "",
+     "easyWords": true,
      "sentences": 111,
-     "perMillion": 54.4,
-     "easyWords": true
+     "perMillion": 54.4
     },
     {
      "id": "connect-11",
@@ -2374,9 +4460,9 @@
      "example": "Don't eat it all at once.",
      "exampleKo": "한꺼번에 다 먹지 마.",
      "tip": "",
+     "easyWords": true,
      "sentences": 66,
-     "perMillion": 32.3,
-     "easyWords": true
+     "perMillion": 32.3
     },
     {
      "id": "connect-12",
@@ -2385,9 +4471,9 @@
      "example": "Let's settle this once and for all.",
      "exampleKo": "이번에 확실히 끝내자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 65,
-     "perMillion": 31.9,
-     "easyWords": true
+     "perMillion": 31.9
     },
     {
      "id": "connect-13",
@@ -2396,9 +4482,9 @@
      "example": "I've been there once or twice.",
      "exampleKo": "거기 한두 번 가 봤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 38,
-     "perMillion": 18.6,
-     "easyWords": true
+     "perMillion": 18.6
     },
     {
      "id": "connect-14",
@@ -2407,9 +4493,9 @@
      "example": "It rained day after day.",
      "exampleKo": "날마다 비가 왔어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "connect-15",
@@ -2418,9 +4504,9 @@
      "example": "As a matter of fact, I've never been there.",
      "exampleKo": "사실 거기 한 번도 안 가 봤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 83,
-     "perMillion": 40.7,
-     "easyWords": true
+     "perMillion": 40.7
     },
     {
      "id": "connect-16",
@@ -2429,9 +4515,9 @@
      "example": "I've learned a great deal this year.",
      "exampleKo": "올해 정말 많이 배웠어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 263,
-     "perMillion": 128.9,
-     "easyWords": true
+     "perMillion": 128.9
     },
     {
      "id": "connect-17",
@@ -2440,9 +4526,9 @@
      "example": "It costs quite a bit.",
      "exampleKo": "그거 돈이 꽤 많이 들어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 96,
-     "perMillion": 47.0,
-     "easyWords": true
+     "perMillion": 47.0
     },
     {
      "id": "connect-18",
@@ -2451,9 +4537,9 @@
      "example": "They sell all kinds of snacks.",
      "exampleKo": "온갖 과자를 다 팔아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 159,
-     "perMillion": 77.9,
-     "easyWords": true
+     "perMillion": 77.9
     },
     {
      "id": "connect-19",
@@ -2462,9 +4548,9 @@
      "example": "People all over the world love K-pop.",
      "exampleKo": "전 세계 사람들이 케이팝을 좋아해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 186,
-     "perMillion": 91.2,
-     "easyWords": true
+     "perMillion": 91.2
     },
     {
      "id": "connect-20",
@@ -2473,9 +4559,9 @@
      "example": "Your clothes are all over the place.",
      "exampleKo": "네 옷이 여기저기 널려 있어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 52,
-     "perMillion": 25.5,
-     "easyWords": true
+     "perMillion": 25.5
     },
     {
      "id": "connect-21",
@@ -2484,9 +4570,9 @@
      "example": "It's by no means easy.",
      "exampleKo": "그건 결코 쉽지 않아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 92,
-     "perMillion": 45.1,
-     "easyWords": true
+     "perMillion": 45.1
     },
     {
      "id": "connect-22",
@@ -2495,9 +4581,9 @@
      "example": "We went out in spite of the rain.",
      "exampleKo": "비가 오는데도 우리는 나갔어.",
      "tip": "despite와 같은 뜻이에요.",
+     "easyWords": true,
      "sentences": 211,
-     "perMillion": 103.4,
-     "easyWords": true
+     "perMillion": 103.4
     },
     {
      "id": "connect-23",
@@ -2506,9 +4592,9 @@
      "example": "I didn't do it on purpose!",
      "exampleKo": "일부러 그런 거 아니야!",
      "tip": "",
+     "easyWords": true,
      "sentences": 354,
-     "perMillion": 173.5,
-     "easyWords": true
+     "perMillion": 173.5
     },
     {
      "id": "connect-24",
@@ -2517,9 +4603,9 @@
      "example": "I ate too much.",
      "exampleKo": "너무 많이 먹었어.",
      "tip": "That's too much!는 '너무하다!'라는 뜻도 돼요.",
+     "easyWords": true,
      "sentences": 2632,
-     "perMillion": 1289.8,
-     "easyWords": true
+     "perMillion": 1289.8
     },
     {
      "id": "connect-25",
@@ -2528,9 +4614,9 @@
      "example": "It's never too late to learn.",
      "exampleKo": "배우는 데 늦은 때란 없어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 766,
-     "perMillion": 375.4,
-     "easyWords": true
+     "perMillion": 375.4
     },
     {
      "id": "connect-26",
@@ -2539,9 +4625,9 @@
      "example": "I haven't seen him for a long time.",
      "exampleKo": "그 사람 오랫동안 못 봤어.",
      "tip": "Long time no see는 '오랜만이야'라는 인사예요.",
+     "easyWords": true,
      "sentences": 2691,
-     "perMillion": 1318.8,
-     "easyWords": true
+     "perMillion": 1318.8
     },
     {
      "id": "connect-27",
@@ -2550,9 +4636,9 @@
      "example": "Like it or not, we have to go.",
      "exampleKo": "좋든 싫든 가야 해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 91,
-     "perMillion": 44.6,
-     "easyWords": true
+     "perMillion": 44.6
     },
     {
      "id": "connect-28",
@@ -2561,9 +4647,9 @@
      "example": "I could have sworn I locked the door.",
      "exampleKo": "분명히 문 잠갔는데.",
      "tip": "확실하다고 믿었는데 아닐 때 써요.",
+     "easyWords": true,
      "sentences": 21,
-     "perMillion": 10.3,
-     "easyWords": true
+     "perMillion": 10.3
     },
     {
      "id": "connect-29",
@@ -2572,9 +4658,9 @@
      "example": "How much was it? — You don't want to know.",
      "exampleKo": "얼마였어? — 모르는 게 나아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 21,
-     "perMillion": 10.3,
-     "easyWords": true
+     "perMillion": 10.3
     },
     {
      "id": "connect-30",
@@ -2583,9 +4669,9 @@
      "example": "Life is too short to worry so much.",
      "exampleKo": "그렇게 걱정하기엔 인생이 너무 짧아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 22,
-     "perMillion": 10.8,
-     "easyWords": true
+     "perMillion": 10.8
     },
     {
      "id": "connect-31",
@@ -2594,9 +4680,9 @@
      "example": "All things considered, it was a good trip.",
      "exampleKo": "이것저것 따져 보면 좋은 여행이었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 21,
-     "perMillion": 10.3,
-     "easyWords": true
+     "perMillion": 10.3
     },
     {
      "id": "connect-32",
@@ -2605,9 +4691,9 @@
      "example": "I'll do it straight away.",
      "exampleKo": "바로 할게.",
      "tip": "right away와 같은 뜻이에요.",
+     "easyWords": true,
      "sentences": 110,
-     "perMillion": 53.9,
-     "easyWords": true
+     "perMillion": 53.9
     },
     {
      "id": "connect-33",
@@ -2616,9 +4702,9 @@
      "example": "A cat jumped out of nowhere.",
      "exampleKo": "고양이가 난데없이 튀어나왔어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 53,
-     "perMillion": 26.0,
-     "easyWords": true
+     "perMillion": 26.0
     },
     {
      "id": "connect-34",
@@ -2627,9 +4713,9 @@
      "example": "We wore the exact same shirt!",
      "exampleKo": "우리 완전히 똑같은 셔츠를 입었어!",
      "tip": "",
+     "easyWords": true,
      "sentences": 60,
-     "perMillion": 29.4,
-     "easyWords": true
+     "perMillion": 29.4
     },
     {
      "id": "connect-35",
@@ -2638,9 +4724,9 @@
      "example": "It goes without saying that safety comes first.",
      "exampleKo": "안전이 먼저인 건 말할 필요도 없지.",
      "tip": "",
+     "easyWords": true,
      "sentences": 86,
-     "perMillion": 42.1,
-     "easyWords": true
+     "perMillion": 42.1
     },
     {
      "id": "connect-36",
@@ -2649,9 +4735,9 @@
      "example": "As a rule, I don't eat after nine.",
      "exampleKo": "보통 아홉 시 이후로는 안 먹어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 55,
-     "perMillion": 27.0,
-     "easyWords": true
+     "perMillion": 27.0
     },
     {
      "id": "connect-37",
@@ -2660,9 +4746,9 @@
      "example": "I knew at a glance that she was upset.",
      "exampleKo": "그 애가 속상하다는 걸 한눈에 알았어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 27,
-     "perMillion": 13.2,
-     "easyWords": true
+     "perMillion": 13.2
     },
     {
      "id": "connect-38",
@@ -2671,9 +4757,9 @@
      "example": "What do you say we order pizza?",
      "exampleKo": "피자 시키는 거 어때?",
      "tip": "What do you say we ...?는 제안할 때 써요.",
+     "easyWords": true,
      "sentences": 93,
-     "perMillion": 45.6,
-     "easyWords": true
+     "perMillion": 45.6
     },
     {
      "id": "connect-39",
@@ -2682,9 +4768,9 @@
      "example": "You'll never guess who I met today.",
      "exampleKo": "오늘 내가 누구 만났는지 절대 못 맞힐걸.",
      "tip": "",
+     "easyWords": true,
      "sentences": 40,
-     "perMillion": 19.6,
-     "easyWords": true
+     "perMillion": 19.6
     },
     {
      "id": "connect-40",
@@ -2693,9 +4779,9 @@
      "example": "My test results come out today. Fingers crossed!",
      "exampleKo": "오늘 시험 결과 나와. 잘되길 빌어 줘!",
      "tip": "검지와 중지를 꼬는 행운의 손짓에서 나온 말이에요.",
+     "easyWords": true,
      "sentences": 30,
-     "perMillion": 14.7,
-     "easyWords": true
+     "perMillion": 14.7
     }
    ]
   },
@@ -2713,9 +4799,9 @@
      "example": "I can't figure out this app.",
      "exampleKo": "이 앱 어떻게 쓰는지 모르겠어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1019,
-     "perMillion": 499.4,
-     "easyWords": true
+     "perMillion": 499.4
     },
     {
      "id": "trouble-02",
@@ -2724,9 +4810,9 @@
      "example": "I just found out we have a test tomorrow.",
      "exampleKo": "내일 시험이라는 걸 방금 알았어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 2790,
-     "perMillion": 1367.3,
-     "easyWords": true
+     "perMillion": 1367.3
     },
     {
      "id": "trouble-03",
@@ -2735,9 +4821,9 @@
      "example": "I'll deal with it later.",
      "exampleKo": "그건 나중에 처리할게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1285,
-     "perMillion": 629.7,
-     "easyWords": true
+     "perMillion": 629.7
     },
     {
      "id": "trouble-04",
@@ -2746,9 +4832,9 @@
      "example": "We ran out of milk.",
      "exampleKo": "우유가 다 떨어졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 994,
-     "perMillion": 487.1,
-     "easyWords": true
+     "perMillion": 487.1
     },
     {
      "id": "trouble-05",
@@ -2757,9 +4843,9 @@
      "example": "I messed up my presentation.",
      "exampleKo": "발표를 망쳤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 218,
-     "perMillion": 106.8,
-     "easyWords": true
+     "perMillion": 106.8
     },
     {
      "id": "trouble-06",
@@ -2768,9 +4854,9 @@
      "example": "Sorry, I screwed up.",
      "exampleKo": "미안, 내가 망쳤어.",
      "tip": "친한 사이에서 쓰는 말이에요.",
+     "easyWords": true,
      "sentences": 67,
-     "perMillion": 32.8,
-     "easyWords": true
+     "perMillion": 32.8
     },
     {
      "id": "trouble-07",
@@ -2779,9 +4865,9 @@
      "example": "Oops, my bad. I'll fix it.",
      "exampleKo": "앗, 내 실수야. 고칠게.",
      "tip": "I'm sorry보다 가볍게, 친구 사이에서 써요.",
+     "easyWords": false,
      "sentences": 40,
-     "perMillion": 19.6,
-     "easyWords": false
+     "perMillion": 19.6
     },
     {
      "id": "trouble-08",
@@ -2790,9 +4876,9 @@
      "example": "Sorry about that. It won't happen again.",
      "exampleKo": "그건 미안해. 다시는 안 그럴게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 22,
-     "perMillion": 10.8,
-     "easyWords": true
+     "perMillion": 10.8
     },
     {
      "id": "trouble-09",
@@ -2801,9 +4887,9 @@
      "example": "It turned out to be a great day.",
      "exampleKo": "결국 정말 좋은 하루가 됐어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 805,
-     "perMillion": 394.5,
-     "easyWords": true
+     "perMillion": 394.5
     },
     {
      "id": "trouble-10",
@@ -2812,9 +4898,9 @@
      "example": "We ended up eating at home.",
      "exampleKo": "결국 집에서 먹게 됐어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1222,
-     "perMillion": 598.9,
-     "easyWords": true
+     "perMillion": 598.9
     },
     {
      "id": "trouble-11",
@@ -2823,9 +4909,9 @@
      "example": "Don't give up now!",
      "exampleKo": "지금 포기하지 마!",
      "tip": "",
+     "easyWords": true,
      "sentences": 1769,
-     "perMillion": 866.9,
-     "easyWords": true
+     "perMillion": 866.9
     },
     {
      "id": "trouble-12",
@@ -2834,9 +4920,9 @@
      "example": "I need to get rid of these old clothes.",
      "exampleKo": "이 헌 옷들을 정리해야 해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 694,
-     "perMillion": 340.1,
-     "easyWords": true
+     "perMillion": 340.1
     },
     {
      "id": "trouble-13",
@@ -2845,9 +4931,9 @@
      "example": "How do you put up with the noise?",
      "exampleKo": "그 소음을 어떻게 참아?",
      "tip": "",
+     "easyWords": true,
      "sentences": 237,
-     "perMillion": 116.1,
-     "easyWords": true
+     "perMillion": 116.1
     },
     {
      "id": "trouble-14",
@@ -2856,9 +4942,9 @@
      "example": "I came up with a great idea for our project.",
      "exampleKo": "우리 프로젝트에 쓸 좋은 생각이 떠올랐어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 551,
-     "perMillion": 270.0,
-     "easyWords": true
+     "perMillion": 270.0
     },
     {
      "id": "trouble-15",
@@ -2867,9 +4953,9 @@
      "example": "The elevator is out of order.",
      "exampleKo": "엘리베이터가 고장 났어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 102,
-     "perMillion": 50.0,
-     "easyWords": true
+     "perMillion": 50.0
     },
     {
      "id": "trouble-16",
@@ -2878,9 +4964,9 @@
      "example": "I got stuck in traffic.",
      "exampleKo": "차가 막혀서 꼼짝 못 했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 160,
-     "perMillion": 78.4,
-     "easyWords": true
+     "perMillion": 78.4
     },
     {
      "id": "trouble-17",
@@ -2889,9 +4975,9 @@
      "example": "My old shoes are falling apart.",
      "exampleKo": "헌 신발이 다 망가져 가.",
      "tip": "",
+     "easyWords": true,
      "sentences": 91,
-     "perMillion": 44.6,
-     "easyWords": true
+     "perMillion": 44.6
     },
     {
      "id": "trouble-18",
@@ -2900,9 +4986,9 @@
      "example": "My bike broke down on the way to school.",
      "exampleKo": "학교 가는 길에 자전거가 고장 났어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 339,
-     "perMillion": 166.1,
-     "easyWords": true
+     "perMillion": 166.1
     },
     {
      "id": "trouble-19",
@@ -2911,9 +4997,9 @@
      "example": "Don't worry, everything is under control.",
      "exampleKo": "걱정 마, 다 잘 되고 있어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 128,
-     "perMillion": 62.7,
-     "easyWords": true
+     "perMillion": 62.7
     },
     {
      "id": "trouble-20",
@@ -2922,9 +5008,9 @@
      "example": "You'll get the hang of it soon.",
      "exampleKo": "금방 요령이 생길 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 35,
-     "perMillion": 17.2,
-     "easyWords": true
+     "perMillion": 17.2
     },
     {
      "id": "trouble-21",
@@ -2933,9 +5019,9 @@
      "example": "Sorry, I can't make it tonight.",
      "exampleKo": "미안, 오늘 밤엔 못 갈 것 같아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 2639,
-     "perMillion": 1293.3,
-     "easyWords": true
+     "perMillion": 1293.3
     },
     {
      "id": "trouble-22",
@@ -2944,9 +5030,9 @@
      "example": "It's no use crying about it now.",
      "exampleKo": "이제 와서 울어 봐야 소용없어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 72,
-     "perMillion": 35.3,
-     "easyWords": true
+     "perMillion": 35.3
     },
     {
      "id": "trouble-23",
@@ -2955,9 +5041,9 @@
      "example": "I was at a loss for words.",
      "exampleKo": "할 말을 잃었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 113,
-     "perMillion": 55.4,
-     "easyWords": true
+     "perMillion": 55.4
     },
     {
      "id": "trouble-24",
@@ -2966,9 +5052,9 @@
      "example": "You'll get into trouble if you're late again.",
      "exampleKo": "또 늦으면 혼날 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 160,
-     "perMillion": 78.4,
-     "easyWords": true
+     "perMillion": 78.4
     },
     {
      "id": "trouble-25",
@@ -2977,9 +5063,9 @@
      "example": "Skipping class is out of the question.",
      "exampleKo": "수업 빠지는 건 절대 안 돼.",
      "tip": "",
+     "easyWords": true,
      "sentences": 82,
-     "perMillion": 40.2,
-     "easyWords": true
+     "perMillion": 40.2
     },
     {
      "id": "trouble-26",
@@ -2988,9 +5074,9 @@
      "example": "I fell behind in math.",
      "exampleKo": "수학이 뒤처졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 65,
-     "perMillion": 31.9,
-     "easyWords": true
+     "perMillion": 31.9
     },
     {
      "id": "trouble-27",
@@ -2999,9 +5085,9 @@
      "example": "It's hard to keep up with the news.",
      "exampleKo": "뉴스를 따라가기가 힘들어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 250,
-     "perMillion": 122.5,
-     "easyWords": true
+     "perMillion": 122.5
     },
     {
      "id": "trouble-28",
@@ -3010,9 +5096,9 @@
      "example": "Cut it out! That's annoying.",
      "exampleKo": "그만해! 짜증 나.",
      "tip": "",
+     "easyWords": true,
      "sentences": 22,
-     "perMillion": 10.8,
-     "easyWords": true
+     "perMillion": 10.8
     },
     {
      "id": "trouble-29",
@@ -3021,9 +5107,9 @@
      "example": "Just leave it alone. It's fine.",
      "exampleKo": "그냥 내버려 둬. 괜찮아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 22,
-     "perMillion": 10.8,
-     "easyWords": true
+     "perMillion": 10.8
     },
     {
      "id": "trouble-30",
@@ -3032,9 +5118,9 @@
      "example": "Please get to the point.",
      "exampleKo": "요점만 말해 줘.",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "trouble-31",
@@ -3043,9 +5129,9 @@
      "example": "Stop beating around the bush.",
      "exampleKo": "돌려 말하지 마.",
      "tip": "",
+     "easyWords": true,
      "sentences": 46,
-     "perMillion": 22.5,
-     "easyWords": true
+     "perMillion": 22.5
     },
     {
      "id": "trouble-32",
@@ -3054,9 +5140,9 @@
      "example": "I bounced back after a bad week.",
      "exampleKo": "힘든 한 주를 보내고 다시 기운을 차렸어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 22,
-     "perMillion": 10.8,
-     "easyWords": true
+     "perMillion": 10.8
     },
     {
      "id": "trouble-33",
@@ -3065,9 +5151,9 @@
      "example": "We'll pull through this together.",
      "exampleKo": "우리 함께 이겨 낼 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 22,
-     "perMillion": 10.8,
-     "easyWords": true
+     "perMillion": 10.8
     },
     {
      "id": "trouble-34",
@@ -3076,9 +5162,9 @@
      "example": "I filled out the form for the club.",
      "exampleKo": "동아리 신청서를 작성했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 205,
-     "perMillion": 100.5,
-     "easyWords": true
+     "perMillion": 100.5
     },
     {
      "id": "trouble-35",
@@ -3087,9 +5173,9 @@
      "example": "I'll look into it.",
      "exampleKo": "제가 알아볼게요.",
      "tip": "",
+     "easyWords": true,
      "sentences": 415,
-     "perMillion": 203.4,
-     "easyWords": true
+     "perMillion": 203.4
     },
     {
      "id": "trouble-36",
@@ -3098,9 +5184,9 @@
      "example": "I want to try out the new phone.",
      "exampleKo": "새 휴대폰을 한번 써 보고 싶어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 66,
-     "perMillion": 32.3,
-     "easyWords": true
+     "perMillion": 32.3
     },
     {
      "id": "trouble-37",
@@ -3109,9 +5195,9 @@
      "example": "Take a deep breath and relax.",
      "exampleKo": "심호흡하고 긴장 풀어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 69,
-     "perMillion": 33.8,
-     "easyWords": true
+     "perMillion": 33.8
     },
     {
      "id": "trouble-38",
@@ -3120,9 +5206,9 @@
      "example": "Calling him is my last resort.",
      "exampleKo": "그에게 전화하는 건 최후의 수단이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 24,
-     "perMillion": 11.8,
-     "easyWords": true
+     "perMillion": 11.8
     },
     {
      "id": "trouble-39",
@@ -3131,9 +5217,9 @@
      "example": "Just stop worrying? Easier said than done.",
      "exampleKo": "걱정을 그냥 그만하라고? 말이 쉽지.",
      "tip": "",
+     "easyWords": true,
      "sentences": 24,
-     "perMillion": 11.8,
-     "easyWords": true
+     "perMillion": 11.8
     },
     {
      "id": "trouble-40",
@@ -3142,9 +5228,9 @@
      "example": "You can count on me.",
      "exampleKo": "나만 믿어.",
      "tip": "",
+     "easyWords": false,
      "sentences": 496,
-     "perMillion": 243.1,
-     "easyWords": false
+     "perMillion": 243.1
     }
    ]
   },
@@ -3162,9 +5248,9 @@
      "example": "Look at this picture!",
      "exampleKo": "이 사진 좀 봐!",
      "tip": "",
+     "easyWords": true,
      "sentences": 4989,
-     "perMillion": 2444.9,
-     "easyWords": true
+     "perMillion": 2444.9
     },
     {
      "id": "phrasal-02",
@@ -3173,9 +5259,9 @@
      "example": "I'm waiting for my friend.",
      "exampleKo": "친구 기다리는 중이야.",
      "tip": "wait 뒤에 바로 사람을 쓰지 않고 for를 붙여요.",
+     "easyWords": true,
      "sentences": 5233,
-     "perMillion": 2564.5,
-     "easyWords": true
+     "perMillion": 2564.5
     },
     {
      "id": "phrasal-03",
@@ -3184,9 +5270,9 @@
      "example": "What are you talking about?",
      "exampleKo": "무슨 소리야?",
      "tip": "",
+     "easyWords": true,
      "sentences": 5410,
-     "perMillion": 2651.2,
-     "easyWords": true
+     "perMillion": 2651.2
     },
     {
      "id": "phrasal-04",
@@ -3195,9 +5281,9 @@
      "example": "I'll come back in ten minutes.",
      "exampleKo": "10분 뒤에 돌아올게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 3386,
-     "perMillion": 1659.3,
-     "easyWords": true
+     "perMillion": 1659.3
     },
     {
      "id": "phrasal-05",
@@ -3206,9 +5292,9 @@
      "example": "I want to go back to bed.",
      "exampleKo": "다시 자고 싶다.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1982,
-     "perMillion": 971.3,
-     "easyWords": true
+     "perMillion": 971.3
     },
     {
      "id": "phrasal-06",
@@ -3217,9 +5303,9 @@
      "example": "Get out of my room!",
      "exampleKo": "내 방에서 나가!",
      "tip": "",
+     "easyWords": true,
      "sentences": 1781,
-     "perMillion": 872.8,
-     "easyWords": true
+     "perMillion": 872.8
     },
     {
      "id": "phrasal-07",
@@ -3228,9 +5314,9 @@
      "example": "Please take off your shoes.",
      "exampleKo": "신발 벗어 주세요.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1198,
-     "perMillion": 587.1,
-     "easyWords": true
+     "perMillion": 587.1
     },
     {
      "id": "phrasal-08",
@@ -3239,9 +5325,9 @@
      "example": "I totally agree with you.",
      "exampleKo": "완전 네 말에 동의해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 1153,
-     "perMillion": 565.0,
-     "easyWords": true
+     "perMillion": 565.0
     },
     {
      "id": "phrasal-09",
@@ -3250,9 +5336,9 @@
      "example": "The dog ran away from home.",
      "exampleKo": "개가 집을 나갔어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 892,
-     "perMillion": 437.1,
-     "easyWords": true
+     "perMillion": 437.1
     },
     {
      "id": "phrasal-10",
@@ -3261,9 +5347,9 @@
      "example": "Don't laugh at me!",
      "exampleKo": "나 비웃지 마!",
      "tip": "",
+     "easyWords": true,
      "sentences": 863,
-     "perMillion": 422.9,
-     "easyWords": true
+     "perMillion": 422.9
     },
     {
      "id": "phrasal-11",
@@ -3272,9 +5358,9 @@
      "example": "I ran into my teacher at the mall.",
      "exampleKo": "쇼핑몰에서 선생님을 우연히 만났어.",
      "tip": "bump into도 같은 뜻이에요.",
+     "easyWords": true,
      "sentences": 621,
-     "perMillion": 304.3,
-     "easyWords": true
+     "perMillion": 304.3
     },
     {
      "id": "phrasal-12",
@@ -3283,9 +5369,9 @@
      "example": "Guess who I bumped into today!",
      "exampleKo": "오늘 누구랑 마주쳤게!",
      "tip": "",
+     "easyWords": true,
      "sentences": 149,
-     "perMillion": 73.0,
-     "easyWords": true
+     "perMillion": 73.0
     },
     {
      "id": "phrasal-13",
@@ -3294,9 +5380,9 @@
      "example": "I came across an old photo.",
      "exampleKo": "옛날 사진을 우연히 발견했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 227,
-     "perMillion": 111.2,
-     "easyWords": true
+     "perMillion": 111.2
     },
     {
      "id": "phrasal-14",
@@ -3305,9 +5391,9 @@
      "example": "I'm searching for a cheap flight.",
      "exampleKo": "싼 비행기표를 찾고 있어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 567,
-     "perMillion": 277.9,
-     "easyWords": true
+     "perMillion": 277.9
     },
     {
      "id": "phrasal-15",
@@ -3316,9 +5402,9 @@
      "example": "The rain turned into snow.",
      "exampleKo": "비가 눈으로 바뀌었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 397,
-     "perMillion": 194.6,
-     "easyWords": true
+     "perMillion": 194.6
     },
     {
      "id": "phrasal-16",
@@ -3327,9 +5413,9 @@
      "example": "Turn around and look at me.",
      "exampleKo": "돌아서서 나 봐.",
      "tip": "",
+     "easyWords": true,
      "sentences": 392,
-     "perMillion": 192.1,
-     "easyWords": true
+     "perMillion": 192.1
     },
     {
      "id": "phrasal-17",
@@ -3338,9 +5424,9 @@
      "example": "Can you turn down the music?",
      "exampleKo": "음악 소리 좀 줄여 줄래?",
      "tip": "제안을 거절할 때도 써요. He turned down the job.",
+     "easyWords": true,
      "sentences": 242,
-     "perMillion": 118.6,
-     "easyWords": true
+     "perMillion": 118.6
     },
     {
      "id": "phrasal-18",
@@ -3349,9 +5435,9 @@
      "example": "We carried out the plan.",
      "exampleKo": "우리는 계획을 실행했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 378,
-     "perMillion": 185.2,
-     "easyWords": true
+     "perMillion": 185.2
     },
     {
      "id": "phrasal-19",
@@ -3360,9 +5446,9 @@
      "example": "Don't just walk away from me!",
      "exampleKo": "그냥 가 버리지 마!",
      "tip": "",
+     "easyWords": true,
      "sentences": 351,
-     "perMillion": 172.0,
-     "easyWords": true
+     "perMillion": 172.0
     },
     {
      "id": "phrasal-20",
@@ -3371,9 +5457,9 @@
      "example": "I hope your wish comes true.",
      "exampleKo": "네 소원이 이루어지길 바라.",
      "tip": "",
+     "easyWords": true,
      "sentences": 336,
-     "perMillion": 164.7,
-     "easyWords": true
+     "perMillion": 164.7
     },
     {
      "id": "phrasal-21",
@@ -3382,9 +5468,9 @@
      "example": "I took part in the school play.",
      "exampleKo": "학교 연극에 참여했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 332,
-     "perMillion": 162.7,
-     "easyWords": true
+     "perMillion": 162.7
     },
     {
      "id": "phrasal-22",
@@ -3393,9 +5479,9 @@
      "example": "The team consists of five people.",
      "exampleKo": "그 팀은 다섯 명으로 이루어져 있어.",
      "tip": "진행형으로 쓰지 않아요.",
+     "easyWords": true,
      "sentences": 331,
-     "perMillion": 162.2,
-     "easyWords": true
+     "perMillion": 162.2
     },
     {
      "id": "phrasal-23",
@@ -3404,9 +5490,9 @@
      "example": "I fell down the stairs.",
      "exampleKo": "계단에서 넘어졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 292,
-     "perMillion": 143.1,
-     "easyWords": true
+     "perMillion": 143.1
     },
     {
      "id": "phrasal-24",
@@ -3415,9 +5501,9 @@
      "example": "You won't get away with this!",
      "exampleKo": "이러고도 무사할 줄 알아?",
      "tip": "",
+     "easyWords": true,
      "sentences": 224,
-     "perMillion": 109.8,
-     "easyWords": true
+     "perMillion": 109.8
     },
     {
      "id": "phrasal-25",
@@ -3426,9 +5512,9 @@
      "example": "Our internet was cut off.",
      "exampleKo": "인터넷이 끊겼어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 217,
-     "perMillion": 106.3,
-     "easyWords": true
+     "perMillion": 106.3
     },
     {
      "id": "phrasal-26",
@@ -3437,9 +5523,9 @@
      "example": "I dropped out of the soccer club.",
      "exampleKo": "축구 동아리를 그만뒀어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 216,
-     "perMillion": 105.9,
-     "easyWords": true
+     "perMillion": 105.9
     },
     {
      "id": "phrasal-27",
@@ -3448,9 +5534,9 @@
      "example": "I feel like I'm going to throw up.",
      "exampleKo": "토할 것 같아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 213,
-     "perMillion": 104.4,
-     "easyWords": true
+     "perMillion": 104.4
     },
     {
      "id": "phrasal-28",
@@ -3459,9 +5545,9 @@
      "example": "We set off early in the morning.",
      "exampleKo": "우리는 아침 일찍 출발했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 169,
-     "perMillion": 82.8,
-     "easyWords": true
+     "perMillion": 82.8
     },
     {
      "id": "phrasal-29",
@@ -3470,9 +5556,9 @@
      "example": "How do you cope with stress?",
      "exampleKo": "스트레스는 어떻게 풀어?",
      "tip": "",
+     "easyWords": true,
      "sentences": 194,
-     "perMillion": 95.1,
-     "easyWords": true
+     "perMillion": 95.1
     },
     {
      "id": "phrasal-30",
@@ -3481,9 +5567,9 @@
      "example": "I suffer from hay fever every spring.",
      "exampleKo": "봄마다 꽃가루 알레르기로 고생해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 658,
-     "perMillion": 322.5,
-     "easyWords": true
+     "perMillion": 322.5
     },
     {
      "id": "phrasal-31",
@@ -3492,9 +5578,9 @@
      "example": "My grandfather passed away last year.",
      "exampleKo": "할아버지께서 작년에 돌아가셨어.",
      "tip": "die를 부드럽게 말하는 표현이에요.",
+     "easyWords": true,
      "sentences": 463,
-     "perMillion": 226.9,
-     "easyWords": true
+     "perMillion": 226.9
     },
     {
      "id": "phrasal-32",
@@ -3503,9 +5589,9 @@
      "example": "I'll go along with your idea.",
      "exampleKo": "네 생각대로 할게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 49,
-     "perMillion": 24.0,
-     "easyWords": true
+     "perMillion": 24.0
     },
     {
      "id": "phrasal-33",
@@ -3514,9 +5600,9 @@
      "example": "Let's put aside our differences.",
      "exampleKo": "서로 다른 점은 접어 두자.",
      "tip": "set aside도 비슷하게 써요.",
+     "easyWords": true,
      "sentences": 44,
-     "perMillion": 21.6,
-     "easyWords": true
+     "perMillion": 21.6
     },
     {
      "id": "phrasal-34",
@@ -3525,9 +5611,9 @@
      "example": "To sum up, we need more time.",
      "exampleKo": "요약하자면 시간이 더 필요해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 31,
-     "perMillion": 15.2,
-     "easyWords": true
+     "perMillion": 15.2
     },
     {
      "id": "phrasal-35",
@@ -3536,9 +5622,9 @@
      "example": "I finally tracked down my old friend.",
      "exampleKo": "드디어 옛 친구를 찾아냈어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 27,
-     "perMillion": 13.2,
-     "easyWords": true
+     "perMillion": 13.2
     },
     {
      "id": "phrasal-36",
@@ -3547,9 +5633,9 @@
      "example": "She picked up on my mood.",
      "exampleKo": "그 애가 내 기분을 눈치챘어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 20,
-     "perMillion": 9.8,
-     "easyWords": true
+     "perMillion": 9.8
     },
     {
      "id": "phrasal-37",
@@ -3558,9 +5644,9 @@
      "example": "Loosen up! It's just a game.",
      "exampleKo": "긴장 풀어! 그냥 게임이잖아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 21,
-     "perMillion": 10.3,
-     "easyWords": true
+     "perMillion": 10.3
     },
     {
      "id": "phrasal-38",
@@ -3569,9 +5655,9 @@
      "example": "I'm just checking up on you.",
      "exampleKo": "그냥 잘 있나 확인하는 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 20,
-     "perMillion": 9.8,
-     "easyWords": true
+     "perMillion": 9.8
     },
     {
      "id": "phrasal-39",
@@ -3580,9 +5666,9 @@
      "example": "Don't shy away from new things.",
      "exampleKo": "새로운 것을 피하지 마.",
      "tip": "",
+     "easyWords": true,
      "sentences": 20,
-     "perMillion": 9.8,
-     "easyWords": true
+     "perMillion": 9.8
     },
     {
      "id": "phrasal-40",
@@ -3591,9 +5677,9 @@
      "example": "We got kicked out of the café at closing time.",
      "exampleKo": "문 닫을 시간이라 카페에서 쫓겨났어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 233,
-     "perMillion": 114.2,
-     "easyWords": true
+     "perMillion": 114.2
     }
    ]
   },
@@ -3611,9 +5697,9 @@
      "example": "The test was a piece of cake.",
      "exampleKo": "시험은 식은 죽 먹기였어.",
      "tip": "말뭉치에서는 \"케이크 한 조각\"이라는 원래 뜻으로도 많이 쓰였어요.",
+     "easyWords": true,
      "sentences": 186,
-     "perMillion": 91.2,
-     "easyWords": true
+     "perMillion": 91.2
     },
     {
      "id": "idioms-02",
@@ -3622,9 +5708,9 @@
      "example": "I'm feeling a bit under the weather.",
      "exampleKo": "몸이 좀 안 좋아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 35,
-     "perMillion": 17.2,
-     "easyWords": true
+     "perMillion": 17.2
     },
     {
      "id": "idioms-03",
@@ -3633,9 +5719,9 @@
      "example": "I told a joke to break the ice.",
      "exampleKo": "어색함을 깨려고 농담을 했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 18,
-     "perMillion": 8.8,
-     "easyWords": true
+     "perMillion": 8.8
     },
     {
      "id": "idioms-04",
@@ -3644,9 +5730,9 @@
      "example": "Your name rings a bell.",
      "exampleKo": "네 이름 어디서 들어 본 것 같아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "idioms-05",
@@ -3655,9 +5741,9 @@
      "example": "Who spilled the beans about the party?",
      "exampleKo": "파티 얘기를 누가 흘렸어?",
      "tip": "",
+     "easyWords": true,
      "sentences": 25,
-     "perMillion": 12.3,
-     "easyWords": true
+     "perMillion": 12.3
     },
     {
      "id": "idioms-06",
@@ -3666,9 +5752,9 @@
      "example": "I eat fast food once in a blue moon.",
      "exampleKo": "패스트푸드는 아주 가끔 먹어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 17,
-     "perMillion": 8.3,
-     "easyWords": true
+     "perMillion": 8.3
     },
     {
      "id": "idioms-07",
@@ -3677,9 +5763,9 @@
      "example": "She called me out of the blue.",
      "exampleKo": "그녀가 난데없이 전화했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 48,
-     "perMillion": 23.5,
-     "easyWords": true
+     "perMillion": 23.5
     },
     {
      "id": "idioms-08",
@@ -3688,9 +5774,9 @@
      "example": "All of a sudden, the lights went out.",
      "exampleKo": "갑자기 불이 꺼졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 129,
-     "perMillion": 63.2,
-     "easyWords": true
+     "perMillion": 63.2
     },
     {
      "id": "idioms-09",
@@ -3699,9 +5785,9 @@
      "example": "That bag cost an arm and a leg.",
      "exampleKo": "그 가방 엄청 비쌌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "idioms-10",
@@ -3710,9 +5796,9 @@
      "example": "It's raining cats and dogs outside.",
      "exampleKo": "밖에 비가 억수같이 와.",
      "tip": "요즘엔 조금 옛날 말투로 들리기도 해요.",
+     "easyWords": true,
      "sentences": 21,
-     "perMillion": 10.3,
-     "easyWords": true
+     "perMillion": 10.3
     },
     {
      "id": "idioms-11",
@@ -3721,9 +5807,9 @@
      "example": "Can you keep an eye on my bag?",
      "exampleKo": "내 가방 좀 봐 줄래?",
      "tip": "",
+     "easyWords": true,
      "sentences": 188,
-     "perMillion": 92.1,
-     "easyWords": true
+     "perMillion": 92.1
     },
     {
      "id": "idioms-12",
@@ -3732,9 +5818,9 @@
      "example": "You have to read between the lines.",
      "exampleKo": "속뜻을 읽어야 해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 42,
-     "perMillion": 20.6,
-     "easyWords": true
+     "perMillion": 20.6
     },
     {
      "id": "idioms-13",
@@ -3743,9 +5829,9 @@
      "example": "Let's make sure we're on the same page.",
      "exampleKo": "우리 생각이 같은지 확인하자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "idioms-14",
@@ -3754,9 +5840,9 @@
      "example": "Our trip is still up in the air.",
      "exampleKo": "여행은 아직 정해진 게 없어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 25,
-     "perMillion": 12.3,
-     "easyWords": true
+     "perMillion": 12.3
     },
     {
      "id": "idioms-15",
@@ -3765,9 +5851,9 @@
      "example": "Seeing the ocean was a dream come true for me.",
      "exampleKo": "바다를 본 건 나한테 꿈만 같은 일이었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 71,
-     "perMillion": 34.8,
-     "easyWords": true
+     "perMillion": 34.8
     },
     {
      "id": "idioms-16",
@@ -3776,9 +5862,9 @@
      "example": "That price sounds too good to be true.",
      "exampleKo": "그 가격은 믿기지 않을 만큼 좋은데.",
      "tip": "",
+     "easyWords": true,
      "sentences": 37,
-     "perMillion": 18.1,
-     "easyWords": true
+     "perMillion": 18.1
     },
     {
      "id": "idioms-17",
@@ -3787,9 +5873,9 @@
      "example": "Believe it or not, I've never seen the sea.",
      "exampleKo": "믿기 힘들겠지만 난 바다를 본 적이 없어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 44,
-     "perMillion": 21.6,
-     "easyWords": true
+     "perMillion": 21.6
     },
     {
      "id": "idioms-18",
@@ -3798,9 +5884,9 @@
      "example": "Needless to say, we were exhausted.",
      "exampleKo": "말할 것도 없이 우린 녹초가 됐어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 45,
-     "perMillion": 22.1,
-     "easyWords": true
+     "perMillion": 22.1
     },
     {
      "id": "idioms-19",
@@ -3809,9 +5895,9 @@
      "example": "To be honest, I didn't like the movie.",
      "exampleKo": "솔직히 그 영화 별로였어.",
      "tip": "문자로는 TBH라고 줄여 써요.",
+     "easyWords": true,
      "sentences": 168,
-     "perMillion": 82.3,
-     "easyWords": true
+     "perMillion": 82.3
     },
     {
      "id": "idioms-20",
@@ -3820,9 +5906,9 @@
      "example": "To tell the truth, I forgot.",
      "exampleKo": "사실대로 말하면 깜빡했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 286,
-     "perMillion": 140.2,
-     "easyWords": true
+     "perMillion": 140.2
     },
     {
      "id": "idioms-21",
@@ -3831,9 +5917,9 @@
      "example": "In other words, we need more time.",
      "exampleKo": "다시 말해, 시간이 더 필요해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 82,
-     "perMillion": 40.2,
-     "easyWords": true
+     "perMillion": 40.2
     },
     {
      "id": "idioms-22",
@@ -3842,9 +5928,9 @@
      "example": "It's cheap. On the other hand, it's far.",
      "exampleKo": "싸긴 해. 반면에 멀어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 98,
-     "perMillion": 48.0,
-     "easyWords": true
+     "perMillion": 48.0
     },
     {
      "id": "idioms-23",
@@ -3853,9 +5939,9 @@
      "example": "It's only a matter of time.",
      "exampleKo": "그건 시간문제일 뿐이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 54,
-     "perMillion": 26.5,
-     "easyWords": true
+     "perMillion": 26.5
     },
     {
      "id": "idioms-24",
@@ -3864,9 +5950,9 @@
      "example": "The hotel was in the middle of nowhere.",
      "exampleKo": "호텔이 아무것도 없는 외딴 곳에 있었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 80,
-     "perMillion": 39.2,
-     "easyWords": true
+     "perMillion": 39.2
     },
     {
      "id": "idioms-25",
@@ -3875,9 +5961,9 @@
      "example": "I'm the black sheep of my family.",
      "exampleKo": "난 우리 집 골칫덩어리야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 26,
-     "perMillion": 12.7,
-     "easyWords": true
+     "perMillion": 12.7
     },
     {
      "id": "idioms-26",
@@ -3886,9 +5972,9 @@
      "example": "My dad is an early bird.",
      "exampleKo": "우리 아빠는 아침형 인간이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 25,
-     "perMillion": 12.3,
-     "easyWords": true
+     "perMillion": 12.3
     },
     {
      "id": "idioms-27",
@@ -3897,9 +5983,9 @@
      "example": "All that work went down the drain.",
      "exampleKo": "그 많은 노력이 다 헛수고가 됐어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "idioms-28",
@@ -3908,9 +5994,9 @@
      "example": "I'm not ready to throw in the towel.",
      "exampleKo": "아직 포기할 생각 없어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 26,
-     "perMillion": 12.7,
-     "easyWords": true
+     "perMillion": 12.7
     },
     {
      "id": "idioms-29",
@@ -3919,9 +6005,9 @@
      "example": "I turned a blind eye to my brother's mess.",
      "exampleKo": "동생이 어지른 건 못 본 척했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "idioms-30",
@@ -3930,9 +6016,9 @@
      "example": "Let's play it by ear.",
      "exampleKo": "상황 봐서 정하자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 10,
-     "perMillion": 4.9,
-     "easyWords": true
+     "perMillion": 4.9
     },
     {
      "id": "idioms-31",
@@ -3941,9 +6027,9 @@
      "example": "You finally called! Better late than never.",
      "exampleKo": "드디어 전화했네! 늦어도 안 하는 것보단 낫지.",
      "tip": "",
+     "easyWords": true,
      "sentences": 11,
-     "perMillion": 5.4,
-     "easyWords": true
+     "perMillion": 5.4
     },
     {
      "id": "idioms-32",
@@ -3952,9 +6038,9 @@
      "example": "The instructions were crystal clear.",
      "exampleKo": "설명은 아주 분명했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 34,
-     "perMillion": 16.7,
-     "easyWords": true
+     "perMillion": 16.7
     },
     {
      "id": "idioms-33",
@@ -3963,9 +6049,9 @@
      "example": "You're off the hook this time.",
      "exampleKo": "이번엔 봐줄게.",
      "tip": "",
+     "easyWords": true,
      "sentences": 36,
-     "perMillion": 17.6,
-     "easyWords": true
+     "perMillion": 17.6
     },
     {
      "id": "idioms-34",
@@ -3974,9 +6060,9 @@
      "example": "I watched it over and over again.",
      "exampleKo": "그걸 몇 번이고 계속 봤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 93,
-     "perMillion": 45.6,
-     "easyWords": true
+     "perMillion": 45.6
     },
     {
      "id": "idioms-35",
@@ -3985,9 +6071,9 @@
      "example": "I made the cake from scratch.",
      "exampleKo": "케이크를 처음부터 직접 만들었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 78,
-     "perMillion": 38.2,
-     "easyWords": true
+     "perMillion": 38.2
     },
     {
      "id": "idioms-36",
@@ -3996,9 +6082,9 @@
      "example": "A lot of work happens behind the scenes.",
      "exampleKo": "보이지 않는 곳에서 많은 일이 이뤄져.",
      "tip": "",
+     "easyWords": true,
      "sentences": 23,
-     "perMillion": 11.3,
-     "easyWords": true
+     "perMillion": 11.3
     },
     {
      "id": "idioms-37",
@@ -4007,9 +6093,9 @@
      "example": "Hang in there. It'll get better.",
      "exampleKo": "조금만 버텨. 나아질 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "idioms-38",
@@ -4018,9 +6104,9 @@
      "example": "Break a leg tonight!",
      "exampleKo": "오늘 밤 공연 잘해!",
      "tip": "말 그대로의 뜻이 아니니 걱정 마세요.",
+     "easyWords": true,
      "sentences": 18,
-     "perMillion": 8.8,
-     "easyWords": true
+     "perMillion": 8.8
     },
     {
      "id": "idioms-39",
@@ -4029,9 +6115,9 @@
      "example": "Let's kill two birds with one stone.",
      "exampleKo": "일석이조로 해결하자.",
      "tip": "",
+     "easyWords": true,
      "sentences": 16,
-     "perMillion": 7.8,
-     "easyWords": true
+     "perMillion": 7.8
     },
     {
      "id": "idioms-40",
@@ -4040,9 +6126,9 @@
      "example": "It's hard to make ends meet in a big city.",
      "exampleKo": "대도시에서 생활비를 감당하기가 힘들어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 95,
-     "perMillion": 46.6,
-     "easyWords": true
+     "perMillion": 46.6
     }
    ]
   },
@@ -4060,9 +6146,9 @@
      "example": "We'll get to the bottom of this.",
      "exampleKo": "이 일의 진상을 꼭 밝힐 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 42,
-     "perMillion": 20.6,
-     "easyWords": true
+     "perMillion": 20.6
     },
     {
      "id": "idioms-more-02",
@@ -4071,9 +6157,9 @@
      "example": "That joke went too far.",
      "exampleKo": "그 농담은 너무 지나쳤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 97,
-     "perMillion": 47.5,
-     "easyWords": true
+     "perMillion": 47.5
     },
     {
      "id": "idioms-more-03",
@@ -4082,9 +6168,9 @@
      "example": "You crossed the line this time.",
      "exampleKo": "이번엔 네가 선 넘었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 43,
-     "perMillion": 21.1,
-     "easyWords": true
+     "perMillion": 21.1
     },
     {
      "id": "idioms-more-04",
@@ -4093,9 +6179,9 @@
      "example": "I'm so out of shape.",
      "exampleKo": "나 체력이 완전 떨어졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 43,
-     "perMillion": 21.1,
-     "easyWords": true
+     "perMillion": 21.1
     },
     {
      "id": "idioms-more-05",
@@ -4104,9 +6190,9 @@
      "example": "Every relationship has its ups and downs.",
      "exampleKo": "모든 관계에는 좋을 때도 나쁠 때도 있어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 41,
-     "perMillion": 20.1,
-     "easyWords": true
+     "perMillion": 20.1
     },
     {
      "id": "idioms-more-06",
@@ -4115,9 +6201,9 @@
      "example": "Don't take your parents for granted.",
      "exampleKo": "부모님을 당연하게 여기지 마.",
      "tip": "",
+     "easyWords": true,
      "sentences": 34,
-     "perMillion": 16.7,
-     "easyWords": true
+     "perMillion": 16.7
     },
     {
      "id": "idioms-more-07",
@@ -4126,9 +6212,9 @@
      "example": "Lying to her is playing with fire.",
      "exampleKo": "그 애한테 거짓말하는 건 불장난이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 33,
-     "perMillion": 16.2,
-     "easyWords": true
+     "perMillion": 16.2
     },
     {
      "id": "idioms-more-08",
@@ -4137,9 +6223,9 @@
      "example": "I'm having second thoughts about the trip.",
      "exampleKo": "여행 가는 거 다시 생각 중이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 33,
-     "perMillion": 16.2,
-     "easyWords": true
+     "perMillion": 16.2
     },
     {
      "id": "idioms-more-09",
@@ -4148,9 +6234,9 @@
      "example": "Your English has come a long way!",
      "exampleKo": "너 영어 정말 많이 늘었다!",
      "tip": "",
+     "easyWords": true,
      "sentences": 32,
-     "perMillion": 15.7,
-     "easyWords": true
+     "perMillion": 15.7
     },
     {
      "id": "idioms-more-10",
@@ -4159,9 +6245,9 @@
      "example": "Try to step out of your comfort zone.",
      "exampleKo": "익숙한 데서 한 발 나가 봐.",
      "tip": "",
+     "easyWords": true,
      "sentences": 31,
-     "perMillion": 15.2,
-     "easyWords": true
+     "perMillion": 15.2
     },
     {
      "id": "idioms-more-11",
@@ -4170,9 +6256,9 @@
      "example": "I've had my fair share of bad days.",
      "exampleKo": "나도 안 좋은 날 꽤 겪어 봤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 31,
-     "perMillion": 15.2,
-     "easyWords": true
+     "perMillion": 15.2
     },
     {
      "id": "idioms-more-12",
@@ -4181,9 +6267,9 @@
      "example": "This map is out of date.",
      "exampleKo": "이 지도는 오래돼서 안 맞아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 30,
-     "perMillion": 14.7,
-     "easyWords": true
+     "perMillion": 14.7
     },
     {
      "id": "idioms-more-13",
@@ -4192,9 +6278,9 @@
      "example": "My keys vanished into thin air.",
      "exampleKo": "열쇠가 감쪽같이 사라졌어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 30,
-     "perMillion": 14.7,
-     "easyWords": true
+     "perMillion": 14.7
     },
     {
      "id": "idioms-more-14",
@@ -4203,9 +6289,9 @@
      "example": "We talked about the good old days.",
      "exampleKo": "좋았던 옛날 얘기를 했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 30,
-     "perMillion": 14.7,
-     "easyWords": true
+     "perMillion": 14.7
     },
     {
      "id": "idioms-more-15",
@@ -4214,9 +6300,9 @@
      "example": "The store is open around the clock.",
      "exampleKo": "그 가게는 24시간 열어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 30,
-     "perMillion": 14.7,
-     "easyWords": true
+     "perMillion": 14.7
     },
     {
      "id": "idioms-more-16",
@@ -4225,9 +6311,9 @@
      "example": "What you said was out of line.",
      "exampleKo": "네가 한 말은 선을 넘었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "idioms-more-17",
@@ -4236,9 +6322,9 @@
      "example": "Get a move on, or we'll be late!",
      "exampleKo": "서둘러, 안 그러면 늦어!",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "idioms-more-18",
@@ -4247,9 +6333,9 @@
      "example": "If you don't sleep, you'll pay the price tomorrow.",
      "exampleKo": "안 자면 내일 대가를 치를 거야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "idioms-more-19",
@@ -4258,9 +6344,9 @@
      "example": "My cat is up to no good again.",
      "exampleKo": "우리 고양이가 또 뭔가 꾸미고 있어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 29,
-     "perMillion": 14.2,
-     "easyWords": true
+     "perMillion": 14.2
     },
     {
      "id": "idioms-more-20",
@@ -4269,9 +6355,9 @@
      "example": "Don't play dumb with me.",
      "exampleKo": "나한테 모르는 척하지 마.",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "idioms-more-21",
@@ -4280,9 +6366,9 @@
      "example": "Why are you trying to pick a fight?",
      "exampleKo": "왜 싸움을 걸려고 해?",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "idioms-more-22",
@@ -4291,9 +6377,9 @@
      "example": "I just looked the other way.",
      "exampleKo": "나는 그냥 못 본 척했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "idioms-more-23",
@@ -4302,9 +6388,9 @@
      "example": "I jumped for joy when I heard the news.",
      "exampleKo": "그 소식 듣고 기뻐서 펄쩍 뛰었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "idioms-more-24",
@@ -4313,9 +6399,9 @@
      "example": "The movie fell short of my expectations.",
      "exampleKo": "그 영화는 기대에 못 미쳤어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 28,
-     "perMillion": 13.7,
-     "easyWords": true
+     "perMillion": 13.7
     },
     {
      "id": "idioms-more-25",
@@ -4324,9 +6410,9 @@
      "example": "The summer went by in the blink of an eye.",
      "exampleKo": "여름이 눈 깜짝할 사이에 지나갔어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 27,
-     "perMillion": 13.2,
-     "easyWords": true
+     "perMillion": 13.2
     },
     {
      "id": "idioms-more-26",
@@ -4335,9 +6421,9 @@
      "example": "We all breathed a sigh of relief.",
      "exampleKo": "우리 모두 안도의 한숨을 쉬었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 54,
-     "perMillion": 26.5,
-     "easyWords": true
+     "perMillion": 26.5
     },
     {
      "id": "idioms-more-27",
@@ -4346,9 +6432,9 @@
      "example": "My parents are out of touch with new music.",
      "exampleKo": "우리 부모님은 요즘 음악을 잘 몰라.",
      "tip": "사람과 연락이 끊겼다는 뜻으로도 써요.",
+     "easyWords": true,
      "sentences": 26,
-     "perMillion": 12.7,
-     "easyWords": true
+     "perMillion": 12.7
     },
     {
      "id": "idioms-more-28",
@@ -4357,9 +6443,9 @@
      "example": "They welcomed me with open arms.",
      "exampleKo": "그들은 나를 따뜻하게 맞아 줬어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 26,
-     "perMillion": 12.7,
-     "easyWords": true
+     "perMillion": 12.7
     },
     {
      "id": "idioms-more-29",
@@ -4368,9 +6454,9 @@
      "example": "There's a fine line between brave and stupid.",
      "exampleKo": "용감한 것과 무모한 건 한 끗 차이야.",
      "tip": "",
+     "easyWords": true,
      "sentences": 25,
-     "perMillion": 12.3,
-     "easyWords": true
+     "perMillion": 12.3
     },
     {
      "id": "idioms-more-30",
@@ -4379,9 +6465,9 @@
      "example": "I got wet from head to toe.",
      "exampleKo": "머리부터 발끝까지 다 젖었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 25,
-     "perMillion": 12.3,
-     "easyWords": true
+     "perMillion": 12.3
     },
     {
      "id": "idioms-more-31",
@@ -4390,9 +6476,9 @@
      "example": "I called in sick today.",
      "exampleKo": "오늘 아파서 못 간다고 연락했어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 25,
-     "perMillion": 12.3,
-     "easyWords": true
+     "perMillion": 12.3
     },
     {
      "id": "idioms-more-32",
@@ -4401,9 +6487,9 @@
      "example": "Sorry, you're out of luck. We're sold out.",
      "exampleKo": "죄송해요, 운이 없으시네요. 다 팔렸어요.",
      "tip": "",
+     "easyWords": true,
      "sentences": 25,
-     "perMillion": 12.3,
-     "easyWords": true
+     "perMillion": 12.3
     },
     {
      "id": "idioms-more-33",
@@ -4412,9 +6498,9 @@
      "example": "These shoes are selling like hot cakes.",
      "exampleKo": "이 신발 불티나게 팔려.",
      "tip": "",
+     "easyWords": true,
      "sentences": 24,
-     "perMillion": 11.8,
-     "easyWords": true
+     "perMillion": 11.8
     },
     {
      "id": "idioms-more-34",
@@ -4423,9 +6509,9 @@
      "example": "Insurance gives me peace of mind.",
      "exampleKo": "보험이 있으니 마음이 놓여.",
      "tip": "",
+     "easyWords": true,
      "sentences": 23,
-     "perMillion": 11.3,
-     "easyWords": true
+     "perMillion": 11.3
     },
     {
      "id": "idioms-more-35",
@@ -4434,9 +6520,9 @@
      "example": "Bear in mind that the shop closes at six.",
      "exampleKo": "가게가 여섯 시에 닫는다는 거 명심해.",
      "tip": "keep in mind와 같은 뜻이에요.",
+     "easyWords": true,
      "sentences": 23,
-     "perMillion": 11.3,
-     "easyWords": true
+     "perMillion": 11.3
     },
     {
      "id": "idioms-more-36",
@@ -4445,9 +6531,9 @@
      "example": "This homework is a pain in the neck.",
      "exampleKo": "이 숙제 진짜 골치 아파.",
      "tip": "",
+     "easyWords": true,
      "sentences": 21,
-     "perMillion": 10.3,
-     "easyWords": true
+     "perMillion": 10.3
     },
     {
      "id": "idioms-more-37",
@@ -4456,9 +6542,9 @@
      "example": "That trip was a turning point in my life.",
      "exampleKo": "그 여행이 내 인생의 전환점이었어.",
      "tip": "",
+     "easyWords": true,
      "sentences": 20,
-     "perMillion": 9.8,
-     "easyWords": true
+     "perMillion": 9.8
     },
     {
      "id": "idioms-more-38",
@@ -4467,9 +6553,9 @@
      "example": "Can you lend me a hand with these boxes?",
      "exampleKo": "이 상자들 옮기는 것 좀 도와줄래?",
      "tip": "",
+     "easyWords": true,
      "sentences": 20,
-     "perMillion": 9.8,
-     "easyWords": true
+     "perMillion": 9.8
     },
     {
      "id": "idioms-more-39",
@@ -4478,9 +6564,9 @@
      "example": "Look on the bright side. At least no one got hurt.",
      "exampleKo": "좋게 생각해. 적어도 다친 사람은 없잖아.",
      "tip": "",
+     "easyWords": true,
      "sentences": 20,
-     "perMillion": 9.8,
-     "easyWords": true
+     "perMillion": 9.8
     },
     {
      "id": "idioms-more-40",
@@ -4489,9 +6575,9 @@
      "example": "I have a sweet tooth.",
      "exampleKo": "나 단거 엄청 좋아해.",
      "tip": "",
+     "easyWords": true,
      "sentences": 20,
-     "perMillion": 9.8,
-     "easyWords": true
+     "perMillion": 9.8
     }
    ]
   }

@@ -1,0 +1,531 @@
+# 스페인어 단어 600개(초급 300, 중급 300). 형용사는 남성형 (여성형). AI(Claude)와 함께 고르고 썼다.
+# 단계	단어	뜻	[예문]	[예문 해석]
+beginner	yo	나
+beginner	tú	너
+beginner	él	그
+beginner	ella	그녀
+beginner	nosotros	우리
+beginner	ellos	그들
+beginner	persona	사람
+beginner	amigo (amiga)	친구
+beginner	familia	가족
+beginner	madre	어머니
+beginner	padre	아버지
+beginner	hermano (hermana)	형제, 자매
+beginner	hijo (hija)	아들, 딸
+beginner	niño (niña)	아이
+beginner	hombre	남자
+beginner	mujer	여자
+beginner	nombre	이름
+beginner	país	나라
+beginner	idioma	언어
+beginner	palabra	단어, 말
+beginner	casa	집
+beginner	cuarto	방
+beginner	escuela	학교
+beginner	trabajo	일
+beginner	estación	역, 계절
+beginner	tienda	가게
+beginner	calle	길, 거리
+beginner	ciudad	도시
+beginner	mar	바다
+beginner	montaña	산
+beginner	río	강
+beginner	cielo	하늘
+beginner	lluvia	비
+beginner	nieve	눈
+beginner	tiempo	시간, 날씨
+beginner	mañana	아침, 내일
+beginner	tarde	오후, 늦다
+beginner	noche	밤
+beginner	hoy	오늘
+beginner	ayer	어제
+beginner	ahora	지금
+beginner	hora	시각
+beginner	semana	주
+beginner	mes	달
+beginner	año	해
+beginner	día	날
+beginner	agua	물
+beginner	comida	음식
+beginner	café	커피
+beginner	té	차
+beginner	vino	와인
+beginner	carne	고기
+beginner	pescado	생선
+beginner	fruta	과일
+beginner	verdura	채소
+beginner	pan	빵
+beginner	teléfono	전화
+beginner	carta	편지
+beginner	foto	사진
+beginner	libro	책
+beginner	película	영화
+beginner	música	음악
+beginner	canción	노래
+beginner	coche	자동차
+beginner	dinero	돈
+beginner	ropa	옷
+beginner	zapatos	신발
+beginner	gato	고양이
+beginner	perro	개
+beginner	flor	꽃
+beginner	cuerpo	몸
+beginner	cabeza	머리
+beginner	cara	얼굴
+beginner	ojo	눈
+beginner	boca	입
+beginner	mano	손
+beginner	pie	발
+beginner	corazón	마음, 심장
+beginner	voz	목소리
+beginner	sueño	꿈, 졸음
+beginner	amor	사랑
+beginner	historia	이야기
+beginner	pregunta	질문
+beginner	respuesta	대답
+beginner	problema	문제
+beginner	viaje	여행
+beginner	fiesta	파티
+beginner	regalo	선물
+beginner	vacaciones	휴가
+beginner	ser	~이다
+beginner	estar	~에 있다, ~한 상태이다
+beginner	tener	가지다
+beginner	hacer	하다, 만들다
+beginner	ir	가다
+beginner	venir	오다
+beginner	volver	돌아가다
+beginner	ver	보다
+beginner	mirar	바라보다
+beginner	oír	듣다
+beginner	escuchar	귀 기울여 듣다
+beginner	hablar	말하다
+beginner	decir	말하다
+beginner	comer	먹다
+beginner	beber	마시다
+beginner	dormir	자다
+beginner	despertar	깨다
+beginner	saber	알다
+beginner	conocer	알다, 사귀다
+beginner	pensar	생각하다
+beginner	querer	원하다, 사랑하다
+beginner	amar	사랑하다
+beginner	gustar	좋아하다
+beginner	necesitar	필요하다
+beginner	esperar	기다리다, 바라다
+beginner	usar	쓰다
+beginner	comprar	사다
+beginner	vender	팔다
+beginner	leer	읽다
+beginner	escribir	쓰다
+beginner	caminar	걷다
+beginner	correr	달리다
+beginner	jugar	놀다
+beginner	vivir	살다
+beginner	entrar	들어가다
+beginner	salir	나가다
+beginner	llevar	가지고 가다, 입다
+beginner	traer	가져오다
+beginner	dar	주다
+beginner	enviar	보내다
+beginner	abrir	열다
+beginner	cerrar	닫다
+beginner	sentarse	앉다
+beginner	levantarse	일어나다
+beginner	ayudar	돕다
+beginner	llamar	부르다, 전화하다
+beginner	llegar	도착하다
+beginner	encontrar	찾다, 만나다
+beginner	buscar	찾다
+beginner	reír	웃다
+beginner	llorar	울다
+beginner	cantar	노래하다
+beginner	bailar	춤추다
+beginner	enseñar	가르치다
+beginner	aprender	배우다
+beginner	recordar	기억하다
+beginner	olvidar	잊다
+beginner	empezar	시작하다
+beginner	terminar	끝나다
+beginner	besar	키스하다
+beginner	abrazar	안다
+beginner	extrañar	그리워하다
+beginner	preocuparse	걱정하다
+beginner	bueno (buena)	좋은
+beginner	malo (mala)	나쁜
+beginner	grande	큰
+beginner	pequeño (pequeña)	작은
+beginner	nuevo (nueva)	새로운
+beginner	viejo (vieja)	낡은, 늙은
+beginner	bonito (bonita)	예쁜
+beginner	lindo (linda)	귀여운, 예쁜
+beginner	feliz	행복한
+beginner	triste	슬픈
+beginner	contento (contenta)	기쁜
+beginner	cansado (cansada)	피곤한
+beginner	ocupado (ocupada)	바쁜
+beginner	enfermo (enferma)	아픈
+beginner	caro (cara)	비싼
+beginner	barato (barata)	싼
+beginner	mucho (mucha)	많은
+beginner	poco (poca)	적은
+beginner	rápido (rápida)	빠른
+beginner	lento (lenta)	느린
+beginner	cerca	가까이
+beginner	lejos	멀리
+beginner	caliente	뜨거운
+beginner	frío (fría)	차가운
+beginner	rico (rica)	맛있는, 부유한
+beginner	dulce	달콤한, 다정한
+beginner	divertido (divertida)	재미있는
+beginner	difícil	어려운
+beginner	fácil	쉬운
+beginner	importante	중요한
+beginner	verdad	진실
+beginner	juntos	함께
+beginner	todo	모든 것
+beginner	algo	무언가
+beginner	nada	아무것도
+beginner	muy	매우
+beginner	más	더
+beginner	menos	덜
+beginner	ya	이미
+beginner	todavía	아직
+beginner	otra vez	다시
+beginner	siempre	항상
+beginner	nunca	결코
+beginner	a veces	가끔
+beginner	pronto	곧
+beginner	despacio	천천히
+beginner	solo (sola)	혼자인
+beginner	qué	무엇
+beginner	quién	누구
+beginner	dónde	어디
+beginner	cuándo	언제
+beginner	por qué	왜
+beginner	cómo	어떻게
+beginner	este (esta)	이
+beginner	ese (esa)	그
+beginner	aquí	여기
+beginner	allí	저기
+beginner	arriba	위
+beginner	abajo	아래
+beginner	delante	앞
+beginner	detrás	뒤
+beginner	dentro	안
+beginner	fuera	밖
+beginner	derecha	오른쪽
+beginner	izquierda	왼쪽
+beginner	al lado	옆
+beginner	primero	첫 번째
+beginner	último	마지막
+beginner	siguiente	다음
+beginner	mitad	절반
+beginner	sí	네
+beginner	no	아니요
+beginner	gracias	고마워
+beginner	perdón	미안
+beginner	por favor	제발
+beginner	hola	안녕
+beginner	adiós	안녕히 가
+beginner	buenas noches	잘 자
+beginner	esta noche	오늘 밤
+beginner	la semana pasada	지난주
+beginner	la semana que viene	다음 주
+beginner	este año	올해
+beginner	el año que viene	내년
+beginner	primavera	봄
+beginner	verano	여름
+beginner	otoño	가을
+beginner	invierno	겨울
+beginner	lunes	월요일
+beginner	viernes	금요일
+beginner	sábado	토요일
+beginner	domingo	일요일
+beginner	hospital	병원
+beginner	parque	공원
+beginner	biblioteca	도서관
+beginner	aeropuerto	공항
+beginner	hotel	호텔
+beginner	restaurante	식당
+beginner	supermercado	슈퍼마켓
+beginner	pastel	케이크
+beginner	chocolate	초콜릿
+beginner	juego	게임
+beginner	deporte	스포츠
+beginner	maestro (maestra)	선생님
+beginner	estudiante	학생
+beginner	médico (médica)	의사
+beginner	cliente	손님
+beginner	pareja	연인, 짝
+beginner	novio (novia)	남자친구, 여자친구
+beginner	boda	결혼식
+beginner	cita	데이트, 약속
+beginner	mensaje	메시지
+beginner	noticia	소식
+beginner	abuelo (abuela)	할아버지, 할머니
+beginner	viento	바람
+beginner	ventana	창문
+beginner	mesa	탁자
+beginner	silla	의자
+beginner	bolsa	가방
+beginner	reloj	시계
+beginner	baño	화장실
+beginner	refrigerador	냉장고
+beginner	paraguas	우산
+beginner	desayuno	아침 식사
+beginner	cena	저녁 식사
+beginner	leche	우유
+beginner	manzana	사과
+beginner	arroz	쌀밥
+beginner	sopa	수프
+intermediate	confesar	고백하다
+intermediate	enamorarse	사랑에 빠지다
+intermediate	salir con	사귀다
+intermediate	romper	헤어지다
+intermediate	relación	관계
+intermediate	aniversario	기념일
+intermediate	compromiso	약혼, 약속
+intermediate	anillo	반지
+intermediate	tomar la mano	손을 잡다
+intermediate	sonrojarse	얼굴이 붉어지다
+intermediate	celos	질투
+intermediate	infidelidad	바람
+intermediate	confianza	신뢰
+intermediate	honesto (honesta)	정직한
+intermediate	sincero (sincera)	솔직한
+intermediate	paciencia	인내
+intermediate	consentir	응석을 받아 주다
+intermediate	consolar	위로하다
+intermediate	animar	격려하다
+intermediate	apoyar	지지하다
+intermediate	agradecer	감사하다
+intermediate	disculparse	사과하다
+intermediate	perdonar	용서하다
+intermediate	discutir	다투다, 토론하다
+intermediate	reconciliarse	화해하다
+intermediate	malentendido	오해
+intermediate	explicar	설명하다
+intermediate	razón	이유
+intermediate	significado	의미
+intermediate	carácter	성격
+intermediate	pasatiempo	취미
+intermediate	experiencia	경험
+intermediate	recuerdo	추억
+intermediate	futuro	미래
+intermediate	pasado	과거
+intermediate	últimamente	요즘
+intermediate	normalmente	보통
+intermediate	especial	특별한
+intermediate	común	흔한, 공통의
+intermediate	necesario (necesaria)	필요한
+intermediate	libertad	자유
+intermediate	paz	평화
+intermediate	felicidad	행복
+intermediate	ansiedad	불안
+intermediate	nervios	긴장
+intermediate	emoción	감동, 설렘
+intermediate	arrepentirse	후회하다
+intermediate	dudar	망설이다
+intermediate	decidir	결정하다
+intermediate	elegir	고르다
+intermediate	comparar	비교하다
+intermediate	cambiar	바꾸다
+intermediate	continuar	계속하다
+intermediate	rendirse	포기하다
+intermediate	esforzarse	노력하다
+intermediate	esperanza	희망
+intermediate	imaginar	상상하다
+intermediate	preparar	준비하다
+intermediate	plan	계획
+intermediate	meta	목표
+intermediate	oportunidad	기회
+intermediate	economía	경제
+intermediate	cultura	문화
+intermediate	costumbre	관습
+intermediate	tradición	전통
+intermediate	paisaje	경치
+intermediate	ambiente	분위기, 환경
+intermediate	sociedad	사회
+intermediate	mundo	세계
+intermediate	mapa	지도
+intermediate	lugar	장소
+intermediate	dirección	주소
+intermediate	vecino (vecina)	이웃
+intermediate	campo	시골
+intermediate	pueblo	마을
+intermediate	mudarse	이사하다
+intermediate	estudiar en el extranjero	유학하다
+intermediate	graduarse	졸업하다
+intermediate	sueldo	월급
+intermediate	jefe (jefa)	상사
+intermediate	compañero (compañera)	동료
+intermediate	reunión	회의
+intermediate	plazo	기한
+intermediate	entrevista	면접
+intermediate	examen	시험
+intermediate	aprobar	합격하다
+intermediate	tarea	숙제
+intermediate	clase	수업
+intermediate	nota	성적
+intermediate	resfriado	감기
+intermediate	fiebre	열
+intermediate	medicina	약
+intermediate	herida	상처
+intermediate	ejercicio	운동
+intermediate	peso	체중
+intermediate	dieta	다이어트
+intermediate	descanso	휴식
+intermediate	estrés	스트레스
+intermediate	limpiar	청소하다
+intermediate	lavar	빨다, 씻다
+intermediate	precio	가격
+intermediate	descuento	할인
+intermediate	cartera	지갑
+intermediate	llave	열쇠
+intermediate	equipaje	짐
+intermediate	boleto	표
+intermediate	tráfico	교통
+intermediate	accidente	사고
+intermediate	diferencia horaria	시차
+intermediate	avión	비행기
+intermediate	pasaporte	여권
+intermediate	recuerdo de viaje	기념품
+intermediate	turismo	관광
+intermediate	playa	해변
+intermediate	fuegos artificiales	불꽃놀이
+intermediate	Navidad	크리스마스
+intermediate	sabor	맛
+intermediate	salado (salada)	짠
+intermediate	picante	매운
+intermediate	amargo (amarga)	쓴
+intermediate	estómago	배, 위
+intermediate	garganta	목
+intermediate	espalda	등
+intermediate	pelo	머리카락
+intermediate	sonrisa	미소
+intermediate	lágrima	눈물
+intermediate	expresión	표정
+intermediate	actitud	태도
+intermediate	rumor	소문
+intermediate	secreto	비밀
+intermediate	mentira	거짓말
+intermediate	broma	농담
+intermediate	en serio	진지하게
+intermediate	vergüenza	부끄러움
+intermediate	molestia	불편, 폐
+intermediate	saludo	인사
+intermediate	acento	억양, 사투리
+intermediate	pronunciación	발음
+intermediate	traducir	번역하다
+intermediate	intérprete	통역사
+intermediate	conversación	대화
+intermediate	frase	문장
+intermediate	gramática	문법
+intermediate	opinión	의견
+intermediate	consultar	상담하다
+intermediate	confirmar	확인하다
+intermediate	contacto	연락처
+intermediate	notificación	알림
+intermediate	pantalla	화면
+intermediate	video	동영상
+intermediate	transmisión	방송
+intermediate	buscar en internet	검색하다
+intermediate	registrarse	등록하다
+intermediate	reservar	예약하다
+intermediate	cancelar	취소하다
+intermediate	retraso	지연
+intermediate	apurarse	서두르다
+intermediate	calmarse	진정하다
+intermediate	sorprenderse	놀라다
+intermediate	preocuparse	걱정하다
+intermediate	cansarse	지치다
+intermediate	descansar	쉬다
+intermediate	despertarse	잠에서 깨다
+intermediate	encontrar	발견하다
+intermediate	perder	잃어버리다
+intermediate	recoger	줍다
+intermediate	prestar	빌려주다
+intermediate	pedir prestado	빌리다
+intermediate	devolver	돌려주다
+intermediate	pagar	지불하다
+intermediate	recibir	받다
+intermediate	entregar	건네다
+intermediate	invitar	초대하다
+intermediate	rechazar	거절하다
+intermediate	pedir	부탁하다, 주문하다
+intermediate	contar	말해 주다, 세다
+intermediate	darse cuenta	알아차리다
+intermediate	sentir	느끼다
+intermediate	creer	믿다
+intermediate	sospechar	의심하다
+intermediate	proteger	보호하다
+intermediate	criar	키우다
+intermediate	quedar bien	잘 어울리다
+intermediate	parecerse	닮다
+intermediate	nostalgia	그리움
+intermediate	envidiar	부러워하다
+intermediate	miedoso (miedosa)	무서워하는
+intermediate	ruidoso (ruidosa)	시끄러운
+intermediate	tranquilo (tranquila)	조용한, 차분한
+intermediate	animado (animada)	활기찬
+intermediate	cómodo (cómoda)	편안한
+intermediate	incómodo (incómoda)	불편한
+intermediate	educado (educada)	예의 바른
+intermediate	serio (seria)	진지한
+intermediate	guapo (guapa)	잘생긴
+intermediate	brillante	밝은, 빛나는
+intermediate	oscuro (oscura)	어두운
+intermediate	claramente	분명히
+intermediate	seguramente	아마도
+intermediate	recién	방금
+intermediate	casi	거의
+intermediate	justo	딱, 정확히
+intermediate	seguro	확실히
+intermediate	en realidad	사실은
+intermediate	por fin	드디어
+intermediate	inesperado (inesperada)	뜻밖의
+intermediate	por supuesto	당연히
+intermediate	casualidad	우연
+intermediate	destino	운명
+intermediate	milagro	기적
+intermediate	prometer	약속하다
+intermediate	hecho a mano	수제의
+intermediate	cuidar	돌보다
+intermediate	acompañar	함께하다
+intermediate	recoger a alguien	마중하다
+intermediate	cariño	애정, 자기
+intermediate	dulzura	다정함
+intermediate	romántico (romántica)	로맨틱한
+intermediate	sorpresa	서프라이즈
+intermediate	compañía	동반, 곁에 있음
+intermediate	valorar	소중히 여기다
+intermediate	suerte	행운
+intermediate	valentía	용기
+intermediate	confianza en sí mismo	자신감
+intermediate	encanto	매력
+intermediate	talento	재능
+intermediate	crecer	자라다
+intermediate	responsabilidad	책임
+intermediate	ahorrar	저축하다
+intermediate	instrumento	악기
+intermediate	quedarse	머무르다
+intermediate	tareas del hogar	집안일
+intermediate	recién casados	신혼부부
+intermediate	toda la vida	평생
+intermediate	lo peor	최악
+intermediate	mejor amigo (mejor amiga)	절친
+intermediate	mutuo (mutua)	서로의
+intermediate	a solas	단둘이
+intermediate	cercano (cercana)	가까운
+intermediate	depender	의지하다
+intermediate	extraño (extraña)	낯선
+intermediate	conocido (conocida)	익숙한
+intermediate	abrazo	포옹
+intermediate	beso	키스
+intermediate	susurrar	속삭이다
+intermediate	mirada	눈빛
+intermediate	ternura	다정함
+intermediate	nostálgico (nostálgica)	그리운
+intermediate	ilusión	설렘, 기대
