@@ -22,7 +22,9 @@ self.addEventListener('push', (event) => {
 
 self.addEventListener('notificationclick', (event) => {
   event.notification.close()
-  const target = new URL(event.notification.data?.url || '/', self.location.origin).href
+  // 알림에 담긴 주소가 이 앱 밖이면 열지 않고 처음 화면으로 보낸다.
+  const wanted = new URL(event.notification.data?.url || '/', self.location.origin)
+  const target = (wanted.origin === self.location.origin ? wanted : new URL('/', self.location.origin)).href
   event.waitUntil(
     self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then((windows) => {
       const open = windows.find((client) => client.url.startsWith(self.location.origin))

@@ -5,7 +5,7 @@
 // - 브라우저가 구독을 끊었으면(404, 410) 그 푸시 주소를 지운다.
 //
 // 필요한 비밀 값(Supabase 대시보드 > Edge Functions > Secrets):
-//   VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT(예: mailto:문의 이메일)
+//   VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT(예: mailto:문의 이메일), CRON_SECRET(길고 아무도 모르는 글자, push-cron.sql과 같은 값)
 // SUPABASE_URL과 SUPABASE_SERVICE_ROLE_KEY는 Supabase가 자동으로 넣어 준다.
 import { createClient } from 'npm:@supabase/supabase-js@2'
 import webpush from 'npm:web-push@3.6.7'
@@ -26,7 +26,13 @@ webpush.setVapidDetails(
 type Row = { id: number; user_id: string; send_at: string; kind: string; title: string; body: string; url: string }
 type Subscription = { endpoint: string; user_id: string; p256dh: string; auth: string }
 
-Deno.serve(async () => {
+// 예약 작업만 부를 수 있게 비밀 값을 확인한다(공개된 anon 키만으로는 호출되지 않게).
+const CRON_SECRET = Deno.env.get('CRON_SECRET') ?? ''
+
+Deno.serve(async (request) => {
+  if (!CRON_SECRET || request.headers.get('x-cron-secret') !== CRON_SECRET) {
+    return Response.json({ error: 'forbidden' }, { status: 403 })
+  }
   const now = Date.now()
   const { data: due, error } = await supabase
     .from('push_queue')

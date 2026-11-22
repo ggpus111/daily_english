@@ -15,7 +15,7 @@ select cron.schedule(
   $$
   select net.http_post(
     url := 'https://<PROJECT_REF>.supabase.co/functions/v1/send-reminders',
-    headers := jsonb_build_object('Content-Type', 'application/json', 'Authorization', 'Bearer <ANON_KEY>'),
+    headers := jsonb_build_object('Content-Type', 'application/json', 'Authorization', 'Bearer <ANON_KEY>', 'x-cron-secret', '<CRON_SECRET>'),
     body := '{}'::jsonb
   );
   $$

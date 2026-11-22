@@ -248,6 +248,10 @@ create table if not exists public.push_queue (
   url text not null default '/' check (char_length(url) <= 40)
 );
 
+-- 알림을 눌렀을 때 열 주소는 이 앱 안의 경로만 허용한다(바깥 주소로 보내는 알림을 막는다). 이미 만든 데이터베이스에도 더한다.
+alter table public.push_queue drop constraint if exists push_queue_url_check;
+alter table public.push_queue add constraint push_queue_url_check check (url ~ '^/([^/\\]|$)');
+
 create index if not exists push_queue_send_idx on public.push_queue (send_at);
 
 alter table public.push_queue enable row level security;
@@ -367,9 +371,21 @@ begin
 end;
 $$;
 
+-- 초대 번호를 틀린 기록. 함수(security definer)만 쓰고, 앱에서는 직접 읽거나 쓸 수 없다.
+create table if not exists public.couple_join_failures (
+  id bigint generated always as identity primary key,
+  user_id uuid not null references auth.users (id) on delete cascade,
+  failed_at timestamptz not null default now()
+);
+create index if not exists couple_join_failures_user_idx on public.couple_join_failures (user_id, failed_at);
+alter table public.couple_join_failures enable row level security;
+revoke all on public.couple_join_failures from anon, authenticated;
+
 -- 짝 들어가기: 초대 번호가 맞고 자리가 남아 있을 때만.
+-- 틀린 번호를 기록하려면 오류로 끝내지 않고 결과 글자를 돌려줘야 해서(오류가 나면 기록도 취소된다) 돌려주는 값이 text다.
+drop function if exists public.join_couple(text, text);
 create or replace function public.join_couple(invite text, nick text)
-returns void
+returns text
 language plpgsql
 security definer
 set search_path = public
@@ -381,12 +397,21 @@ begin
   if exists (select 1 from couple_members where user_id = auth.uid()) then
     raise exception 'already paired';
   end if;
+  -- 초대 번호를 마구 넣어 보는 것을 막는다: 최근 1시간에 5번 틀리면 잠시 막는다.
+  if (select count(*) from couple_join_failures
+      where user_id = auth.uid() and failed_at > now() - interval '1 hour') >= 5 then
+    return 'too many attempts';
+  end if;
   select id into target from couples where code = upper(trim(invite));
-  if target is null then raise exception 'invalid code'; end if;
+  if target is null then
+    insert into couple_join_failures (user_id) values (auth.uid());
+    return 'invalid code';
+  end if;
   if (select count(*) from couple_members where couple_id = target) >= 2 then
     raise exception 'couple full';
   end if;
   insert into couple_members (couple_id, user_id, nickname) values (target, auth.uid(), left(trim(nick), 30));
+  return 'ok';
 end;
 $$;
 

@@ -24,6 +24,7 @@ export const isValidCode = (value) => normalizeCode(value).length === CODE_LENGT
 export function coupleErrorKey(error) {
   const message = String(error?.message ?? '')
   if (message.includes('invalid code')) return 'coupleErrCode'
+  if (message.includes('too many attempts')) return 'coupleErrTooMany'
   if (message.includes('couple full')) return 'coupleErrFull'
   if (message.includes('already paired')) return 'coupleErrPaired'
   return null
@@ -98,8 +99,11 @@ async function rpc(name, args) {
 }
 
 export const createCouple = (nickname) => rpc('create_couple', { nick: nickname.trim().slice(0, NICKNAME_MAX) })
-export const joinCouple = (code, nickname) =>
-  rpc('join_couple', { invite: normalizeCode(code), nick: nickname.trim().slice(0, NICKNAME_MAX) })
+export async function joinCouple(code, nickname) {
+  const result = await rpc('join_couple', { invite: normalizeCode(code), nick: nickname.trim().slice(0, NICKNAME_MAX) })
+  // 서버는 틀린 번호를 기록하려고 오류 대신 결과 글자를 돌려준다. 앱에서는 오류로 바꿔 다룬다.
+  return result.data && result.data !== 'ok' ? failure(new Error(result.data)) : result
+}
 export const leaveCouple = () => rpc('leave_couple')
 
 /** 오늘 문장을 보낸다. 오늘 이미 보냈다면 고쳐 쓴다. */

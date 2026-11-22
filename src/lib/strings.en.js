@@ -119,6 +119,7 @@ export default {
   coupleKeep: 'Keep it',
   coupleLeft: 'You left the pair.',
   coupleError: 'Something went wrong. {message}',
+  coupleErrTooMany: 'Too many wrong codes, so we paused this for now. Please try again in an hour.',
   coupleErrCode: 'We could not find that code. Please check it.',
   coupleErrFull: 'Two people are already using that code.',
   coupleErrPaired: 'You are already paired with someone.',

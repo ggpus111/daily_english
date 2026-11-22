@@ -129,6 +129,7 @@ const ko = {
   coupleKeep: '그대로 두기',
   coupleLeft: '짝을 그만두었어요.',
   coupleError: '문제가 생겼어요. {message}',
+  coupleErrTooMany: '번호를 여러 번 틀려서 잠시 막았어요. 한 시간 뒤에 다시 해 주세요.',
   coupleErrCode: '초대 번호를 찾지 못했어요. 다시 확인해 주세요.',
   coupleErrFull: '이미 두 사람이 쓰고 있는 번호예요.',
   coupleErrPaired: '이미 다른 짝과 함께하고 있어요.',

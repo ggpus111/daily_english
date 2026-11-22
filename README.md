@@ -239,7 +239,7 @@ Supabase가 연결된 웹에서도 처음 온 사람은 로그인 화면에서 �
   1. VAPID 키는 `supabase/vapid-keys.local.txt`에 있습니다(저장소에 올리지 않음). 새로 만들려면 `node -e "const e=require('crypto').createECDH('prime256v1');e.generateKeys();const b=x=>x.toString('base64url');console.log(b(e.getPublicKey()),b(e.getPrivateKey()))"`.
   2. 공개 키를 `.env`와 Vercel의 `VITE_VAPID_PUBLIC_KEY`에 넣습니다.
   3. Supabase 대시보드 > Edge Functions에서 `send-reminders`를 만들고 `index.ts` 내용을 붙여 넣어 배포합니다. Secrets에 `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT`(`mailto:문의 이메일`)를 넣습니다.
-  4. `supabase/push-cron.sql`의 프로젝트 값과 anon key를 바꿔 SQL Editor에서 실행합니다(10분마다 호출, 한 달 약 4,300번으로 무료 한도 안).
+  4. `supabase/push-cron.sql`의 프로젝트 값, anon key, 그리고 `CRON_SECRET`(아무도 모르는 긴 글자를 정해 Edge Function 비밀 값 `CRON_SECRET`에도 똑같이 넣기)을 바꿔 SQL Editor에서 실행합니다(10분마다 호출, 한 달 약 4,300번으로 무료 한도 안).
 - 리뷰 분석에서 압박·죄책감이 불만 요인이라, 문구는 다그치지 않게 쓰고 홈에는 진행 막대만 보여 줍니다.
 
 ## 오류 추적
@@ -321,3 +321,14 @@ insert into public.admins (user_id) values ('<관리자 사용자 ID>');
 - `supabase/migrate-from-original.sql`: 원본 앱 기록 이전
 - `vercel.json`: 보안 헤더와 캐시 설정
 - `scripts/make-images.mjs`: 앱 아이콘과 공유 이미지 생성
+
+## 보안 점검과 보완
+
+- 웹 보안 헤더(`vercel.json`): 내용 보안 정책(CSP, 자기 사이트와 Supabase만 허용), HSTS, 프레임 삽입 금지, MIME 추측 금지 등.
+- 모든 표에 행 단위 보안(RLS)이 켜져 있어 남의 기록은 읽거나 쓸 수 없습니다.
+- 연인 초대 번호: 한 사람이 1시간에 5번 틀리면 잠시 막아 무작위 대입을 막습니다(`couple_join_failures`).
+- 알림 대기열: 눌렀을 때 열 주소는 앱 안의 경로만 허용합니다(DB 제약 + 서비스 워커 검사).
+- `send-reminders`는 `x-cron-secret`이 맞을 때만 동작합니다. 공개된 anon 키만으로는 부를 수 없습니다.
+- 운영 의존성 취약점 0건(`npm audit --omit=dev`). 개발 도구(eslint 등)의 중간 단계 경고 6건은 배포물에 들어가지 않습니다.
+- 비밀 값 점검: `npm run build && npm run check:secrets`가 배포물에 비밀 키, 서버 전용 이름, 소스맵이 섞였는지 검사합니다(안드로이드는 `node scripts/check-secrets.mjs android/app/src/main/assets/public`). 배포 전에 한 번 돌리세요.
+- 비밀 값은 서버에만 둡니다: Gemini 키, VAPID 비밀 키, `CRON_SECRET`, 서비스 롤 키는 Supabase 비밀 값에만 있고, 화면 코드에는 공개해도 되는 Supabase anon 키와 VAPID 공개 키만 들어갑니다. `.env`, `.env.*`는 git에서 제외됩니다(`.env.example`만 올림).
