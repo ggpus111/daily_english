@@ -3007,3 +3007,115 @@ h2:focus {
   line-height: 1.55;
 }
 
+
+/* 연인과 오늘의 한 문장 */
+.couple-grid {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 760px) {
+  .couple-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.couple-card {
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.couple-card h2 {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.couple-code {
+  margin: 4px 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.3em;
+  color: var(--accent-ink);
+}
+
+.couple-bubble {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: var(--warm);
+  border: 1px solid var(--warm-line);
+}
+
+.couple-bubble.mine {
+  background: var(--accent-soft);
+  border-color: transparent;
+}
+
+.couple-bubble p {
+  margin: 0;
+  font-size: 1.0625rem;
+}
+
+.couple-bubble small {
+  color: var(--sub);
+}
+
+.couple-bubble .soft-button {
+  justify-self: start;
+}
+
+.couple-suggest {
+  display: grid;
+  gap: 4px;
+  justify-items: start;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--sunken);
+  border: 1px dashed var(--warm-line);
+}
+
+.couple-suggest p {
+  margin: 0;
+}
+
+.couple-history {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.couple-history time {
+  color: var(--sub);
+  font-size: 0.8125rem;
+}
+
+.couple-history p {
+  margin: 2px 0 0;
+}
+
+.couple-leave {
+  display: grid;
+  gap: 8px;
+  justify-items: start;
+  margin: 8px 0 24px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.couple-home {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.couple-home:hover {
+  background: var(--hover);
+}
