@@ -1,0 +1,602 @@
+# 일본어 단어 600개(초급 300, 중급 300). 일상·연인·친구 대화에 자주 나오는 낱말을 사람이 고르고 wordfreq 빈도로 확인. 뜻은 AI(Claude)와 함께 썼다.
+# 단계	단어	뜻	[예문]	[예문 해석]
+beginner	私	나, 저
+beginner	あなた	당신, 너
+beginner	君	너
+beginner	彼	그, 남자친구
+beginner	彼女	그녀, 여자친구
+beginner	人	사람
+beginner	友達	친구
+beginner	家族	가족
+beginner	母	어머니
+beginner	父	아버지
+beginner	お母さん	엄마
+beginner	お父さん	아빠
+beginner	兄	형, 오빠
+beginner	姉	누나, 언니
+beginner	弟	남동생
+beginner	妹	여동생
+beginner	子供	아이
+beginner	男	남자
+beginner	女	여자
+beginner	名前	이름
+beginner	日本	일본
+beginner	韓国	한국
+beginner	日本語	일본어
+beginner	韓国語	한국어
+beginner	英語	영어
+beginner	言葉	말, 단어
+beginner	家	집
+beginner	部屋	방
+beginner	学校	학교
+beginner	会社	회사
+beginner	仕事	일
+beginner	駅	역
+beginner	店	가게
+beginner	道	길
+beginner	町	동네, 마을
+beginner	国	나라
+beginner	海	바다
+beginner	山	산
+beginner	川	강
+beginner	空	하늘
+beginner	雨	비
+beginner	雪	눈
+beginner	天気	날씨
+beginner	朝	아침
+beginner	昼	낮, 점심
+beginner	夜	밤
+beginner	今日	오늘
+beginner	明日	내일
+beginner	昨日	어제
+beginner	今	지금
+beginner	時間	시간
+beginner	週末	주말
+beginner	毎日	매일
+beginner	年	해, 나이
+beginner	月	달, 월
+beginner	日	날, 해
+beginner	水	물
+beginner	ご飯	밥
+beginner	お茶	차
+beginner	コーヒー	커피
+beginner	お酒	술
+beginner	肉	고기
+beginner	魚	생선
+beginner	野菜	채소
+beginner	果物	과일
+beginner	パン	빵
+beginner	料理	요리
+beginner	電話	전화
+beginner	手紙	편지
+beginner	写真	사진
+beginner	本	책
+beginner	映画	영화
+beginner	音楽	음악
+beginner	歌	노래
+beginner	車	차
+beginner	電車	전철
+beginner	お金	돈
+beginner	服	옷
+beginner	靴	신발
+beginner	猫	고양이
+beginner	犬	개
+beginner	花	꽃
+beginner	体	몸
+beginner	頭	머리
+beginner	顔	얼굴
+beginner	目	눈
+beginner	耳	귀
+beginner	口	입
+beginner	手	손
+beginner	足	발, 다리
+beginner	心	마음
+beginner	気持ち	기분, 마음
+beginner	声	목소리
+beginner	夢	꿈
+beginner	愛	사랑
+beginner	恋	연애, 사랑
+beginner	話	이야기
+beginner	質問	질문
+beginner	答え	대답
+beginner	問題	문제
+beginner	旅行	여행
+beginner	誕生日	생일
+beginner	休み	휴일, 쉬는 날
+beginner	勉強	공부
+beginner	テレビ	텔레비전
+beginner	スマホ	스마트폰
+beginner	メール	메일, 메시지
+beginner	行く	가다
+beginner	来る	오다
+beginner	帰る	돌아가다
+beginner	会う	만나다
+beginner	見る	보다
+beginner	聞く	듣다, 묻다
+beginner	言う	말하다
+beginner	話す	이야기하다
+beginner	食べる	먹다
+beginner	飲む	마시다
+beginner	寝る	자다
+beginner	起きる	일어나다
+beginner	する	하다
+beginner	ある	있다 (물건)
+beginner	いる	있다 (사람·동물)
+beginner	なる	되다
+beginner	思う	생각하다
+beginner	知る	알다
+beginner	分かる	알다, 이해하다
+beginner	待つ	기다리다
+beginner	使う	쓰다, 사용하다
+beginner	作る	만들다
+beginner	買う	사다
+beginner	売る	팔다
+beginner	読む	읽다
+beginner	書く	쓰다
+beginner	歩く	걷다
+beginner	走る	달리다
+beginner	遊ぶ	놀다
+beginner	働く	일하다
+beginner	住む	살다
+beginner	入る	들어가다
+beginner	出る	나가다
+beginner	持つ	들다, 가지다
+beginner	送る	보내다
+beginner	着る	입다
+beginner	会いたい	보고 싶다
+beginner	好き	좋아함
+beginner	嫌い	싫어함
+beginner	大好き	정말 좋아함
+beginner	欲しい	갖고 싶다
+beginner	楽しい	즐겁다
+beginner	嬉しい	기쁘다
+beginner	悲しい	슬프다
+beginner	寂しい	외롭다
+beginner	痛い	아프다
+beginner	忙しい	바쁘다
+beginner	暇	한가함
+beginner	大きい	크다
+beginner	小さい	작다
+beginner	新しい	새롭다
+beginner	古い	오래되다
+beginner	いい	좋다
+beginner	悪い	나쁘다
+beginner	高い	비싸다, 높다
+beginner	安い	싸다
+beginner	多い	많다
+beginner	少ない	적다
+beginner	早い	이르다, 빠르다
+beginner	遅い	늦다, 느리다
+beginner	近い	가깝다
+beginner	遠い	멀다
+beginner	暑い	덥다
+beginner	寒い	춥다
+beginner	温かい	따뜻하다
+beginner	冷たい	차갑다
+beginner	おいしい	맛있다
+beginner	かわいい	귀엽다
+beginner	きれい	예쁘다, 깨끗하다
+beginner	優しい	다정하다
+beginner	面白い	재미있다
+beginner	難しい	어렵다
+beginner	簡単	쉽다, 간단하다
+beginner	大丈夫	괜찮음
+beginner	元気	건강함, 기운
+beginner	大切	소중함
+beginner	本当	정말
+beginner	一緒	함께
+beginner	全部	전부
+beginner	少し	조금
+beginner	たくさん	많이
+beginner	とても	매우
+beginner	すごく	엄청
+beginner	もっと	더
+beginner	まだ	아직
+beginner	もう	벌써, 이제
+beginner	また	또
+beginner	いつも	항상
+beginner	時々	가끔
+beginner	すぐ	곧, 바로
+beginner	ゆっくり	천천히
+beginner	一人	혼자, 한 명
+beginner	二人	둘, 두 명
+beginner	何	무엇
+beginner	誰	누구
+beginner	どこ	어디
+beginner	いつ	언제
+beginner	なぜ	왜
+beginner	どう	어떻게
+beginner	これ	이것
+beginner	それ	그것
+beginner	あれ	저것
+beginner	ここ	여기
+beginner	そこ	거기
+beginner	上	위
+beginner	下	아래
+beginner	前	앞, 전
+beginner	後ろ	뒤
+beginner	中	안
+beginner	外	밖
+beginner	右	오른쪽
+beginner	左	왼쪽
+beginner	隣	옆
+beginner	最初	처음
+beginner	最後	마지막
+beginner	次	다음
+beginner	半分	절반
+beginner	はい	네
+beginner	いいえ	아니요
+beginner	ありがとう	고마워
+beginner	ごめん	미안
+beginner	お願い	부탁
+beginner	おやすみ	잘 자
+beginner	また今度	다음에 또
+beginner	毎朝	매일 아침
+beginner	今夜	오늘 밤
+beginner	先週	지난주
+beginner	来週	다음 주
+beginner	去年	작년
+beginner	今年	올해
+beginner	来年	내년
+beginner	春	봄
+beginner	夏	여름
+beginner	秋	가을
+beginner	冬	겨울
+beginner	月曜日	월요일
+beginner	金曜日	금요일
+beginner	土曜日	토요일
+beginner	日曜日	일요일
+beginner	病院	병원
+beginner	公園	공원
+beginner	図書館	도서관
+beginner	空港	공항
+beginner	ホテル	호텔
+beginner	レストラン	레스토랑
+beginner	コンビニ	편의점
+beginner	パーティー	파티
+beginner	プレゼント	선물
+beginner	ケーキ	케이크
+beginner	チョコレート	초콜릿
+beginner	ゲーム	게임
+beginner	スポーツ	스포츠
+beginner	先生	선생님
+beginner	学生	학생
+beginner	医者	의사
+beginner	お客さん	손님
+beginner	恋人	연인
+beginner	彼氏	남자친구
+beginner	結婚	결혼
+beginner	約束	약속
+beginner	返事	답장
+beginner	連絡	연락
+beginner	気分	기분
+beginner	笑う	웃다
+beginner	泣く	울다
+beginner	怒る	화내다
+beginner	歌う	노래하다
+beginner	踊る	춤추다
+beginner	教える	가르치다
+beginner	習う	배우다
+beginner	覚える	외우다, 기억하다
+beginner	忘れる	잊다
+beginner	始まる	시작되다
+beginner	終わる	끝나다
+beginner	開ける	열다
+beginner	閉める	닫다
+beginner	座る	앉다
+beginner	立つ	서다
+beginner	見せる	보여 주다
+beginner	手伝う	돕다
+beginner	心配	걱정
+beginner	安心	안심
+beginner	楽しみ	기대
+intermediate	気になる	신경 쓰이다
+intermediate	付き合う	사귀다
+intermediate	別れる	헤어지다
+intermediate	告白	고백
+intermediate	デート	데이트
+intermediate	片思い	짝사랑
+intermediate	両思い	서로 좋아함
+intermediate	遠距離	장거리
+intermediate	記念日	기념일
+intermediate	婚約	약혼
+intermediate	指輪	반지
+intermediate	抱きしめる	꼭 안다
+intermediate	キス	키스
+intermediate	手をつなぐ	손을 잡다
+intermediate	見つめる	바라보다
+intermediate	照れる	쑥스러워하다
+intermediate	焼きもち	질투
+intermediate	浮気	바람
+intermediate	信頼	신뢰
+intermediate	正直	솔직함
+intermediate	素直	솔직하고 순수함
+intermediate	我慢	참음
+intermediate	甘える	어리광 부리다
+intermediate	慰める	위로하다
+intermediate	励ます	격려하다
+intermediate	支える	지탱하다, 힘이 되다
+intermediate	応援	응원
+intermediate	感謝	감사
+intermediate	謝る	사과하다
+intermediate	許す	용서하다
+intermediate	喧嘩	싸움
+intermediate	仲直り	화해
+intermediate	誤解	오해
+intermediate	説明	설명
+intermediate	理由	이유
+intermediate	意味	의미
+intermediate	関係	관계
+intermediate	性格	성격
+intermediate	趣味	취미
+intermediate	経験	경험
+intermediate	思い出	추억
+intermediate	将来	장래
+intermediate	未来	미래
+intermediate	過去	과거
+intermediate	最近	최근
+intermediate	普段	평소
+intermediate	特別	특별
+intermediate	普通	보통
+intermediate	大事	중요함
+intermediate	必要	필요
+intermediate	無理	무리
+intermediate	自由	자유
+intermediate	平和	평화
+intermediate	幸せ	행복
+intermediate	不安	불안
+intermediate	緊張	긴장
+intermediate	興奮	흥분
+intermediate	感動	감동
+intermediate	後悔	후회
+intermediate	迷う	망설이다, 길을 잃다
+intermediate	決める	정하다
+intermediate	選ぶ	고르다
+intermediate	比べる	비교하다
+intermediate	変わる	바뀌다
+intermediate	続ける	계속하다
+intermediate	やめる	그만두다
+intermediate	頑張る	힘내다, 노력하다
+intermediate	諦める	포기하다
+intermediate	期待	기대
+intermediate	想像	상상
+intermediate	準備	준비
+intermediate	予定	예정, 계획
+intermediate	計画	계획
+intermediate	目標	목표
+intermediate	夢中	몰두함
+intermediate	機会	기회
+intermediate	経済	경제
+intermediate	文化	문화
+intermediate	習慣	습관
+intermediate	伝統	전통
+intermediate	季節	계절
+intermediate	景色	경치
+intermediate	空気	공기, 분위기
+intermediate	雰囲気	분위기
+intermediate	環境	환경
+intermediate	社会	사회
+intermediate	世界	세계
+intermediate	地図	지도
+intermediate	場所	장소
+intermediate	住所	주소
+intermediate	近所	근처, 이웃
+intermediate	都会	도시
+intermediate	田舎	시골
+intermediate	実家	본가
+intermediate	一人暮らし	자취
+intermediate	引っ越す	이사하다
+intermediate	留学	유학
+intermediate	卒業	졸업
+intermediate	就職	취직
+intermediate	給料	월급
+intermediate	残業	야근
+intermediate	上司	상사
+intermediate	同僚	동료
+intermediate	会議	회의
+intermediate	締め切り	마감
+intermediate	面接	면접
+intermediate	試験	시험
+intermediate	合格	합격
+intermediate	宿題	숙제
+intermediate	授業	수업
+intermediate	成績	성적
+intermediate	健康	건강
+intermediate	風邪	감기
+intermediate	熱	열
+intermediate	薬	약
+intermediate	怪我	부상
+intermediate	運動	운동
+intermediate	体重	체중
+intermediate	ダイエット	다이어트
+intermediate	睡眠	수면
+intermediate	疲れ	피로
+intermediate	ストレス	스트레스
+intermediate	休憩	휴식
+intermediate	散歩	산책
+intermediate	掃除	청소
+intermediate	洗濯	빨래
+intermediate	料理する	요리하다
+intermediate	買い物	쇼핑
+intermediate	値段	가격
+intermediate	割引	할인
+intermediate	財布	지갑
+intermediate	鍵	열쇠
+intermediate	傘	우산
+intermediate	荷物	짐
+intermediate	切符	표
+intermediate	乗り換え	환승
+intermediate	渋滞	교통 체증
+intermediate	事故	사고
+intermediate	時差	시차
+intermediate	飛行機	비행기
+intermediate	パスポート	여권
+intermediate	お土産	기념품
+intermediate	観光	관광
+intermediate	温泉	온천
+intermediate	お祭り	축제
+intermediate	花火	불꽃놀이
+intermediate	お正月	설날
+intermediate	お盆	오봉 (일본의 추석)
+intermediate	着物	기모노
+intermediate	味	맛
+intermediate	甘い	달다
+intermediate	辛い	맵다
+intermediate	しょっぱい	짜다
+intermediate	苦い	쓰다
+intermediate	お腹	배
+intermediate	喉	목
+intermediate	背中	등
+intermediate	髪	머리카락
+intermediate	笑顔	웃는 얼굴
+intermediate	涙	눈물
+intermediate	表情	표정
+intermediate	態度	태도
+intermediate	噂	소문
+intermediate	秘密	비밀
+intermediate	嘘	거짓말
+intermediate	冗談	농담
+intermediate	本気	진심
+intermediate	本音	속마음
+intermediate	建前	겉으로 하는 말	本音と建前は違う。	속마음과 겉말은 달라.
+intermediate	遠慮	사양, 조심
+intermediate	迷惑	폐
+intermediate	挨拶	인사
+intermediate	敬語	존댓말
+intermediate	方言	사투리
+intermediate	発音	발음
+intermediate	翻訳	번역
+intermediate	通訳	통역
+intermediate	会話	회화, 대화
+intermediate	文章	문장
+intermediate	単語	단어
+intermediate	文法	문법
+intermediate	意見	의견
+intermediate	相談	상담
+intermediate	確認	확인
+intermediate	連絡先	연락처
+intermediate	既読	읽음 표시
+intermediate	通知	알림
+intermediate	充電	충전
+intermediate	画面	화면
+intermediate	動画	동영상
+intermediate	配信	방송, 스트리밍
+intermediate	検索	검색
+intermediate	登録	등록
+intermediate	予約	예약
+intermediate	キャンセル	취소
+intermediate	変更	변경
+intermediate	遅刻	지각
+intermediate	間に合う	시간에 맞추다
+intermediate	急ぐ	서두르다
+intermediate	慌てる	허둥대다
+intermediate	落ち着く	진정하다
+intermediate	驚く	놀라다
+intermediate	喜ぶ	기뻐하다
+intermediate	悩む	고민하다
+intermediate	困る	곤란하다
+intermediate	疲れる	지치다
+intermediate	休む	쉬다
+intermediate	眠る	잠들다
+intermediate	目覚める	깨어나다
+intermediate	見つける	찾아내다
+intermediate	探す	찾다
+intermediate	落とす	떨어뜨리다
+intermediate	拾う	줍다
+intermediate	貸す	빌려주다
+intermediate	借りる	빌리다
+intermediate	返す	돌려주다
+intermediate	払う	내다, 지불하다
+intermediate	届く	도착하다, 닿다
+intermediate	受け取る	받다
+intermediate	渡す	건네다
+intermediate	誘う	권하다, 꼬시다
+intermediate	断る	거절하다
+intermediate	頼む	부탁하다
+intermediate	伝える	전하다
+intermediate	気づく	깨닫다
+intermediate	感じる	느끼다
+intermediate	信じる	믿다
+intermediate	疑う	의심하다
+intermediate	守る	지키다
+intermediate	育てる	키우다
+intermediate	似合う	어울리다
+intermediate	似る	닮다
+intermediate	懐かしい	그립다
+intermediate	恥ずかしい	부끄럽다
+intermediate	羨ましい	부럽다
+intermediate	悔しい	분하다
+intermediate	怖い	무섭다
+intermediate	眠い	졸리다
+intermediate	うるさい	시끄럽다
+intermediate	静か	조용함
+intermediate	賑やか	북적임
+intermediate	便利	편리함
+intermediate	不便	불편함
+intermediate	丁寧	정중함
+intermediate	適当	대충, 적당함
+intermediate	真面目	성실함
+intermediate	素敵	멋짐
+intermediate	格好いい	멋있다
+intermediate	可愛らしい	사랑스럽다
+intermediate	明るい	밝다
+intermediate	暗い	어둡다
+intermediate	優しさ	다정함
+intermediate	一生懸命	열심히
+intermediate	なかなか	꽤, 좀처럼
+intermediate	やっぱり	역시
+intermediate	きっと	분명
+intermediate	ずっと	계속
+intermediate	さっき	아까
+intermediate	そろそろ	슬슬
+intermediate	ちょうど	딱, 마침
+intermediate	ほとんど	거의
+intermediate	必ず	반드시
+intermediate	絶対	절대
+intermediate	たぶん	아마
+intermediate	実は	사실은
+intermediate	やっと	겨우, 드디어
+intermediate	意外	의외
+intermediate	当然	당연함
+intermediate	偶然	우연
+intermediate	運命	운명
+intermediate	奇跡	기적
+intermediate	約束する	약속하다
+intermediate	待ち合わせ	만나기로 한 약속
+intermediate	手作り	손수 만듦
+beginner	お姉さん	언니, 누나
+beginner	おばあさん	할머니
+beginner	おじいさん	할아버지
+beginner	晴れ	맑음
+beginner	風	바람
+beginner	窓	창문
+beginner	机	책상
+beginner	椅子	의자
+beginner	かばん	가방
+beginner	時計	시계
+intermediate	成長	성장
+intermediate	努力	노력
+intermediate	才能	재능
+intermediate	自信	자신감
+intermediate	勇気	용기
+intermediate	責任	책임
+intermediate	印象	인상
+intermediate	魅力	매력
+intermediate	相手	상대
+intermediate	恋愛	연애
+intermediate	結婚式	결혼식
+intermediate	新婚	신혼
+intermediate	家事	집안일
+intermediate	節約	절약
+intermediate	貯金	저금
+intermediate	楽器	악기
+intermediate	旅	여행
+intermediate	撮る	찍다
+intermediate	泊まる	묵다
+intermediate	迎える	맞이하다
+intermediate	別々	따로따로
+intermediate	一生	평생
+intermediate	毎晩	매일 밤
+intermediate	最高	최고
+intermediate	最悪	최악
+intermediate	仲良し	사이 좋음

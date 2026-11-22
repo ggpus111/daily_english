@@ -198,7 +198,7 @@ const scenarios = [
       await page.getByRole('button', { name: '단어 퀴즈' }).click()
       await page.getByRole('button', { name: '뜻 보기' }).click()
       await page.getByRole('button', { name: '알았어요' }).click()
-      await expect(page.getByRole('heading', { name: /퀴즈 완료/ })).toBeVisible()
+      await expect(page.getByRole('heading', { name: /다 풀었어요/ })).toBeVisible()
     },
   ],
   [
@@ -206,8 +206,8 @@ const scenarios = [
     async (page) => {
       await page.evaluate(() => (location.hash = 'journal'))
       await page.locator('.mood-chips button', { hasText: 'tired' }).click()
-      await page.getByLabel('모국어로 작성하기').fill('오늘은 피곤했다.')
-      await page.getByLabel('영어로 직접 번역하기').fill('I was so tired today.')
+      await page.getByLabel('우리말로 쓰기').fill('오늘은 피곤했다.')
+      await page.getByLabel('영어로 옮겨 보기').fill('I was so tired today.')
       await expect(page.locator('.usage-box .usage-line')).toContainText('tired')
       await page.getByRole('button', { name: '일기 저장하기' }).click()
       await expect(page.locator('.journal-entry .mood-tag').first()).toContainText('tired')
@@ -230,14 +230,14 @@ const scenarios = [
     async (page, { detach, reconnect }) => {
       await page.evaluate(() => (location.hash = 'journal'))
       // 앞 화면에서 내려간 스크롤이 남아 있으면 입력칸이 화면 밖에 있어 터치할 수 없다.
-      await page.getByLabel('모국어로 작성하기').evaluate((element) => element.scrollIntoView({ block: 'center' }))
+      await page.getByLabel('우리말로 쓰기').evaluate((element) => element.scrollIntoView({ block: 'center' }))
       await wait(800)
       // 디버거(CDP)를 붙인 동안 쓴 내용은 웹뷰가 디스크에 남기지 않는다(테스트 도구의 제약).
       // 그래서 디버거를 떼고 실제 터치와 키 입력으로 쓴다.
       await detach()
       // 느린 에뮬레이터는 키보드가 늦게 떠서 글자가 빠지기도 한다. 화면에 글자가 보일 때까지 한 번 더 시도한다.
       for (let attempt = 0; attempt < 2 && !screenHas('draft_kept'); attempt += 1) {
-        await tapText('모국어로 작성하기')
+        await tapText('우리말로 쓰기')
         await wait(1500)
         adb('shell', 'input', 'text', 'draft_kept')
         await wait(1500)
@@ -251,7 +251,7 @@ const scenarios = [
       await wait(1500)
       const next = await reconnect()
       await next.evaluate(() => (location.hash = 'journal'))
-      await expect(next.getByLabel('모국어로 작성하기')).toHaveValue('draft_kept')
+      await expect(next.getByLabel('우리말로 쓰기')).toHaveValue('draft_kept')
       return next
     },
   ],

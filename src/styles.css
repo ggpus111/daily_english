@@ -39,13 +39,13 @@
   --butter: #ebe3cf;
   --shadow: 0 1px 2px rgb(110 70 40 / 5%), 0 8px 24px rgb(110 70 40 / 6%);
   --logo-bg: #d39a85;
-  --mascot-body: #fbe9d2;
-  --mascot-face: #5b4334;
-  --mascot-cheek: #f4c0a9;
-  --mascot-leaf: #9fd08f;
-  --mascot-stem: #9a7a63;
-  --mascot-cherry: #e25a55;
-  --mascot-shadow: rgb(90 60 40 / 10%);
+  --mascot-body: #ffe38f;
+  --mascot-wing: #ffd36a;
+  --mascot-beak: #f4a259;
+  --mascot-line: #5b3f30;
+  --mascot-face: #4a3226;
+  --mascot-cheek: #f6a394;
+  --mascot-shadow: rgb(90 60 40 / 16%);
   --chart: #b5603f;
   --topbar-height: 64px;
   /* 안드로이드 앱은 Capacitor가 --safe-area-inset-*를, 웹은 브라우저가 env()를 준다. */
@@ -2861,3 +2861,149 @@ h2:focus {
 .pack-fix-form textarea {
   resize: vertical;
 }
+
+/* 고르기 칩(ChoiceChips): 기본 선택 팝업 대신 부드러운 칩 */
+.choice-field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.choice-field legend {
+  margin-bottom: 8px;
+  padding: 0;
+  color: var(--sub);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.choice-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.choice-chip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.choice-chips.compact .choice-chip {
+  min-height: 38px;
+  padding: 0 14px;
+  font-size: 0.92rem;
+}
+
+.choice-chip:hover {
+  background: var(--hover);
+}
+
+.choice-chip.checked {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+}
+
+.choice-chip:active {
+  transform: scale(0.97);
+}
+
+/* 라디오 동그라미는 숨기고(칩 자체가 선택 표시), 키보드 포커스는 칩 테두리로 보여 준다 */
+.choice-chip input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.choice-chip:has(input:focus-visible) {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.choice-icon {
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .choice-chip {
+    transition: none;
+  }
+}
+
+.mood-more {
+  justify-self: start;
+  margin-top: 4px;
+}
+
+/* 꾸러미 묶음 제목(연인·친구와 / 일상 영어) */
+.pack-tabs-heading {
+  flex-basis: 100%;
+  margin: 6px 0 0;
+  color: var(--sub);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* 앱 안 AI 교정 */
+.ai-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  min-height: 48px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent-soft), var(--lilac));
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.ai-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, var(--accent-soft-hover), var(--lilac));
+}
+
+.ai-button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.ai-consent {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 14px;
+  border: 1px solid var(--warm-line);
+  border-radius: 14px;
+  background: var(--warm);
+}
+
+.ai-consent h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.ai-consent p {
+  margin: 0;
+  color: var(--sub);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+

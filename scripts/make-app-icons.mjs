@@ -1,4 +1,4 @@
-// 앱 아이콘·파비콘은 "d." 로고(src/components/Logo.jsx)로, 시작 화면은 말랑이 캐릭터로 만든다.
+// 앱 아이콘·파비콘은 "d." 로고(src/components/Logo.jsx)로, 시작 화면은 말새 캐릭터로 만든다.
 // 캐릭터는 src/components/Mascot.jsx를 실제 화면에서 그려 가져온다.
 // 실행: npm run dev 를 켜 둔 상태에서 node scripts/make-app-icons.mjs [개발 서버 주소]
 import { readFileSync, unlinkSync, writeFileSync } from 'node:fs'
@@ -19,6 +19,8 @@ const browser = await chromium.launch({ channel: 'chrome' })
 
 // 1. 화면에 그려진 캐릭터를 CSS 변수 없는 독립 SVG로 바꾼다.
 const page = await browser.newPage()
+// 첫 실행 안내를 건너뛰어 홈(캐릭터가 있는 칸)이 바로 보이게 한다.
+await page.addInitScript(() => localStorage.setItem('onboarded', '1'))
 await page.goto(DEV_URL)
 await page.waitForSelector('.quote-panel .mascot')
 const svg = await page.evaluate(() => {

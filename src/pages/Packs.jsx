@@ -5,28 +5,37 @@ import { useApp } from '../context'
 import { usePackData } from '../hooks/usePackData'
 import { openExternal } from '../lib/native'
 import { START_LEVEL_KEY } from '../components/Onboarding'
-import { chunks, isSaved } from '../lib/packs'
+import { languageName } from '../lib/i18n'
+import { TALK_PACKS, chunks, hasPackData, isSaved } from '../lib/packs'
 import { isNative } from '../lib/platform'
 import { local } from '../lib/storage'
 
 // 미리 준비한 꾸러미. 표현은 주제별, 단어는 단계별로 보고 고른다. 담은 뒤에는 내 기록처럼 복습한다.
 const MODES = {
-  expressions: { page: 'packs', kind: 'expression', title: 'packs', intro: 'packsIntro', tab: 'packKindExpressions', count: 400 },
+  expressions: { page: 'packs', kind: 'expression', title: 'packs', intro: 'packsIntro', tab: 'packKindExpressions', count: 589 },
   words: { page: 'packs-words', kind: 'word', title: 'packsWordsTitle', intro: 'packsWordsIntro', tab: 'packKindWords', count: 600 },
 }
 
 export default function Packs({ mode = 'expressions' }) {
-  const { t, go, learningLang } = useApp()
+  const { t, go, learningLang, nativeLang } = useApp()
   const config = MODES[mode]
   const { data, error, retry } = usePackData(mode)
 
   const head = <PageHead title={t(config.title)} intro={t(config.intro)} />
 
-  if (learningLang !== 'en') {
+  // 탭 이름: 지금 보는 꾸러미는 실제 개수, 영어의 다른 꾸러미는 알려진 개수, 아직 없는 언어 꾸러미는 "준비 중"
+  function modeLabel(id, item) {
+    const plain = t(id === 'words' ? 'packKindWordsPlain' : 'packKindExpressionsPlain')
+    if (!hasPackData(id, learningLang)) return t('packKindSoon', { kind: plain })
+    if (id === mode && data) return t(item.tab, { count: data.items.length })
+    return learningLang === 'en' ? t(item.tab, { count: item.count }) : plain
+  }
+
+  if (!hasPackData(mode, learningLang)) {
     return (
       <>
         {head}
-        <p className="panel muted">{t('packsEnglishOnly')}</p>
+        <p className="panel muted">{t('packsComingSoon', { lang: languageName(learningLang, nativeLang) })}</p>
       </>
     )
   }
@@ -43,7 +52,7 @@ export default function Packs({ mode = 'expressions' }) {
             aria-pressed={id === mode}
             onClick={() => id !== mode && go(item.page)}
           >
-            {t(item.tab, { count: item.count })}
+            {modeLabel(id, item)}
           </button>
         ))}
       </div>
@@ -65,15 +74,28 @@ export default function Packs({ mode = 'expressions' }) {
         <ExpressionPacks data={data} />
       )}
 
-      {data && <SourceNote text={t(mode === 'words' ? 'wordSource' : 'packSource', { count: data.source.sentences.toLocaleString() })} />}
+      {data && (
+        <SourceNote
+          text={t(
+            learningLang === 'en' ? (mode === 'words' ? 'wordSource' : 'packSource') : mode === 'words' ? 'wordSourceOther' : 'packSourceOther',
+            { count: data.source.sentences.toLocaleString(), lang: languageName(learningLang, nativeLang) },
+          )}
+        />
+      )}
     </>
   )
 }
 
-function GroupTabs({ groups, current, onPick, label }) {
+function GroupTabs({ groups, current, onPick, label, heading }) {
   const { nativeLang } = useApp()
+  if (groups.length === 0) return null
   return (
     <div className="pack-tabs" role="group" aria-label={label}>
+      {heading && (
+        <p className="pack-tabs-heading" aria-hidden="true">
+          {heading}
+        </p>
+      )}
       {groups.map((group) => (
         <button
           key={group.id}
@@ -97,7 +119,21 @@ function ExpressionPacks({ data }) {
 
   return (
     <>
-      <GroupTabs groups={data.groups} current={packId} onPick={setPackId} label={t('packChoose')} />
+      {/* 외국인 연인·친구와 주고받는 말을 먼저, 처음 만든 일상 표현을 뒤에 따로 묶어 보여 준다 */}
+      <GroupTabs
+        groups={data.groups.filter((group) => TALK_PACKS.includes(group.id))}
+        current={packId}
+        onPick={setPackId}
+        label={t('packsTalkGroup')}
+        heading={t('packsTalkGroup')}
+      />
+      <GroupTabs
+        groups={data.groups.filter((group) => !TALK_PACKS.includes(group.id))}
+        current={packId}
+        onPick={setPackId}
+        label={t('packsDailyGroup')}
+        heading={t('packsDailyGroup')}
+      />
       <section className="panel pack-panel" aria-labelledby="pack-title">
         <div className="section-head">
           <h2 id="pack-title">{pack.title[nativeLang === 'ko' ? 'ko' : 'en']}</h2>

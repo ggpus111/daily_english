@@ -1,0 +1,1135 @@
+﻿lang,pack,text,tatoeba,zipf
+fr,love,Je t'aime.,283,5.43
+fr,love,Je t'adore.,10,4.82
+fr,love,Je suis fou de toi.,6,4.85
+fr,love,Tu comptes beaucoup pour moi.,2,4.77
+fr,love,Tu me plais.,12,3.57
+fr,love,Coup de foudre,28,3.9
+fr,love,Tu me rends heureux.,1,4.26
+fr,love,J'ai de la chance de t'avoir.,0,5.07
+fr,love,mon cœur,378,5.13
+fr,love,T'es le meilleur !,590,5.36
+fr,love,Je tombe amoureux de toi.,11,4.4
+fr,love,Je pense à toi tout le temps.,23,5.37
+fr,love,Tu es tout pour moi.,9,5.94
+fr,love,Bisous,14,3.99
+fr,love,Fais de beaux rêves.,21,4.34
+fr,love,T'es trop mignon.,10,4.29
+fr,love,Tu veux sortir avec moi ?,20,5.13
+fr,miss,Tu me manques.,49,3.84
+fr,miss,Tu me manques déjà.,3,3.83
+fr,miss,J'ai trop hâte de te voir !,11,4.38
+fr,miss,Je compte les jours.,4,5.33
+fr,miss,J'aimerais que tu sois là.,43,4.64
+fr,miss,Je pense à toi.,19,5.35
+fr,miss,À bientôt !,19,5.05
+fr,miss,C'est pas pareil sans toi.,1,4.76
+fr,miss,Ta voix me manque.,1,4.8
+fr,miss,Je t'envoie un gros câlin.,43,3.59
+fr,miss,Tu es toujours dans ma tête.,19,5.39
+fr,miss,Reviens vite.,6,4.36
+fr,miss,Je t'attends.,34,4.73
+fr,miss,On se voit quand ?,2,5.16
+fr,text,mdr,4,3.8
+fr,text,ptdr,0,2.58
+fr,text,jsp,0,2.62
+fr,text,tkt,0,3.03
+fr,text,stp,0,3.78
+fr,text,slt,0,2.84
+fr,text,cc,1,4.08
+fr,text,bjr,0,2.6
+fr,text,tfq,0,0.0
+fr,text,jtm,0,2.15
+fr,text,dsl,0,3.27
+fr,text,mrc,1,3.65
+fr,text,pk,0,3.51
+fr,text,bcp,0,3.85
+fr,text,ok,48,5.04
+fr,text,a+,66426,7.0
+fr,text,tg,0,2.96
+fr,text,grave,290,4.94
+fr,chat,Tu fais quoi ?,14,5.39
+fr,chat,Ça s'est passé comment aujourd'hui ?,0,5.25
+fr,chat,Pas grand-chose.,137,5.43
+fr,chat,Moi aussi.,305,5.88
+fr,chat,Je me détends.,6,2.8
+fr,chat,Sérieux ?!,425,4.98
+fr,chat,C'est ouf !,2,3.99
+fr,chat,Clairement !,234,4.74
+fr,chat,Devine quoi !,5,3.74
+fr,chat,Qu'est-ce qui se passe ?,32,5.4
+fr,chat,T'as mangé ?,5,4.3
+fr,chat,Quoi de neuf ?,26,4.86
+fr,chat,Longue journée ?,21,4.81
+fr,chat,C'est logique.,3,4.7
+fr,chat,Je te comprends.,15,4.92
+fr,chat,C'est vrai ?,258,5.54
+fr,chat,Toujours pareil.,3,4.79
+fr,chat,T'écoutes quoi en ce moment ?,488,5.62
+fr,tease,T'es bête.,3,4.48
+fr,tease,Je rigole.,8,3.96
+fr,tease,Arrête !,936,4.98
+fr,tease,Tu rêves.,19,4.51
+fr,tease,Bien essayé.,7,4.63
+fr,tease,Très drôle.,26,4.82
+fr,tease,T'abuses.,2,2.6
+fr,tease,Comme tu veux.,20,5.5
+fr,tease,T'es méchant !,140,4.35
+fr,tease,Je t'ai eu !,4,5.51
+fr,tease,Pris sur le fait !,38,6.23
+fr,tease,Qui a dit ça ?,16,5.82
+fr,tease,T'es impossible.,543,4.98
+fr,tease,Te la pète pas.,0,3.73
+fr,tease,Mais non !,69,5.97
+fr,tease,Carrément !,31,4.36
+fr,tease,Andouille,23,2.86
+fr,date,T'es libre ce soir ?,4,5.0
+fr,date,On va dîner ?,1,4.28
+fr,date,C'est noté !,2,4.09
+fr,date,Je passe te prendre ?,5,5.18
+fr,date,Quelle heure t'arrange ?,6,3.95
+fr,date,On peut décaler ?,15,3.14
+fr,date,J'ai un imprévu.,7,3.35
+fr,date,J'arrive dans dix minutes.,202,5.32
+fr,date,On se retrouve où ?,30,4.92
+fr,date,On partage l'addition.,1,3.74
+fr,date,C'est moi qui invite.,2,4.49
+fr,date,Soirée film chez moi ?,2,4.84
+fr,date,Envoie-moi un message quand t'es rentré.,0,4.26
+fr,date,Je te raccompagne.,11,2.47
+fr,date,J'ai passé une super soirée.,1,4.81
+fr,date,On remet ça !,0,4.24
+fr,date,Ça tient toujours pour ce soir ?,1,4.84
+fr,call,Tu m'entends ?,11,4.55
+fr,call,Ça coupe.,1,5.08
+fr,call,T'as freezé.,0,0.0
+fr,call,Je peux t'appeler ?,47,4.74
+fr,call,Je te rappelle.,9,4.92
+fr,call,On fait un appel vidéo ?,0,4.86
+fr,call,Il est quelle heure chez toi ?,417,5.53
+fr,call,Il est tard ici.,0,5.18
+fr,call,Le décalage horaire,12,3.7
+fr,call,T'es en sourdine.,6,2.82
+fr,call,Allume ta caméra.,0,3.71
+fr,call,Je me suis endormi au téléphone.,259,3.72
+fr,call,Relation à distance,67,4.74
+fr,call,Je reste éveillé pour toi.,111,3.53
+fr,call,Raccroche en premier.,10,3.17
+fr,call,On se parle demain.,0,4.95
+fr,call,Tu me vois ?,7,5.36
+fr,fight,Je voulais pas dire ça.,5,4.81
+fr,fight,On peut parler ?,7,5.41
+fr,fight,J'ai besoin d'un peu d'espace.,65,5.05
+fr,fight,Ça m'a blessé.,3,4.58
+fr,fight,On se dispute pas.,140,4.11
+fr,fight,J'ai exagéré.,35,3.63
+fr,fight,Ça va entre nous ?,179,5.88
+fr,fight,On fait la paix ?,427,4.97
+fr,fight,Je te pardonne.,16,3.97
+fr,fight,J'ai pas dit ça.,28,5.86
+fr,fight,J'ai eu tort.,10,4.5
+fr,fight,Te fâche pas.,8,3.21
+fr,fight,Je suis pas fâché contre toi.,7,3.55
+fr,fight,On recommence à zéro ?,38,4.49
+fr,fight,Je comprends ton point de vue.,195,5.16
+fr,fight,C'est oublié.,0,4.8
+fr,fight,Désolé de t'avoir fait de la peine.,21,5.2
+fr,care,Je suis là pour toi.,33,5.6
+fr,care,Tu vas y arriver !,99,4.98
+fr,care,C'est nul.,18,4.76
+fr,care,Prends soin de toi.,15,4.46
+fr,care,Repose-toi.,27,4.43
+fr,care,Guéris vite.,0,3.08
+fr,care,Ça va aller.,12,5.44
+fr,care,Je suis fier de toi.,33,4.52
+fr,care,Courage !,433,4.77
+fr,care,Tu veux en parler ?,206,5.51
+fr,care,T'as fait de ton mieux.,30,5.43
+fr,care,Je suis de ton côté.,15,5.33
+fr,care,Te surmène pas.,2,1.35
+fr,care,Rentre bien.,0,4.68
+fr,care,Je crois en toi.,4,5.26
+fr,care,Sois pas trop dur avec toi.,6,4.89
+fr,care,"Si t'as besoin, je suis là.",0,5.25
+fr,react,T'es magnifique !,373,4.8
+fr,react,C'est trop gentil.,6,4.54
+fr,react,Trop chou !,4,4.04
+fr,react,J'adore !,655,4.83
+fr,react,Trop bien !,14,5.72
+fr,react,Je suis mort de rire.,12,4.73
+fr,react,Je suis trop contente pour toi.,2,4.48
+fr,react,Ça a l'air trop bon !,0,5.17
+fr,react,Bravo !,35,4.54
+fr,react,T'es trop doué.,171,3.91
+fr,react,Tu as illuminé ma journée.,0,3.27
+fr,react,J'en suis fan.,2,4.46
+fr,react,C'est tellement toi.,0,5.14
+fr,react,T'es trop beau !,21,5.16
+fr,react,Trop la chance !,389,5.15
+fr,react,T'es un génie !,191,4.6
+fr,react,Trop stylé !,2,3.2
+fr,culture,Ça veut dire quoi ?,7,5.28
+fr,culture,Comment on dit ça en français ?,9,5.52
+fr,culture,Tu peux répéter ?,182,4.23
+fr,culture,Tu peux parler plus lentement ?,94,4.25
+fr,culture,C'est normal chez vous ?,316,5.73
+fr,culture,J'apprends encore le français.,0,4.11
+fr,culture,Je l'ai bien dit ?,35,5.85
+fr,culture,Corrige-moi si je me trompe.,9,3.52
+fr,culture,C'est impoli ?,69,2.99
+fr,culture,"En Corée, on…",36,4.41
+fr,culture,Je t'apprends un peu de coréen.,58,4.0
+fr,culture,C'est trop intéressant.,614,4.76
+fr,culture,Ça s'appelle comment ?,15,5.08
+fr,culture,Ça se perd à la traduction.,451,4.59
+fr,culture,J'ai pas compris.,1,5.21
+fr,culture,Rencontrer tes parents me stresse.,266,5.01
+fr,culture,Je connaissais pas ce mot.,326,5.21
+fr,daily,Bonjour.,526,5.12
+fr,daily,Bonsoir.,53,4.24
+fr,daily,Salut !,256,4.79
+fr,daily,Ça va ?,567,5.93
+fr,daily,Ça va bien.,18,5.79
+fr,daily,"Comme ci, comme ça.",3,5.37
+fr,daily,Merci.,1589,5.62
+fr,daily,De rien.,324,5.96
+fr,daily,Pas de souci.,71,4.49
+fr,daily,Pardon.,284,4.46
+fr,daily,À plus tard.,50,5.32
+fr,daily,À demain.,60,5.14
+fr,daily,Au revoir.,217,4.7
+fr,daily,Je suis rentré.,89,4.27
+fr,daily,J'ai faim.,66,4.6
+fr,daily,J'ai sommeil.,12,4.45
+fr,daily,Je suis fatigué.,160,4.18
+fr,daily,Il fait chaud.,68,4.78
+fr,daily,Il fait froid.,121,4.81
+fr,daily,Il fait beau.,43,5.22
+fr,daily,Il pleut.,240,3.78
+fr,daily,Un instant.,215,4.97
+fr,daily,Il est quelle heure ?,6,5.02
+fr,daily,T'es où ?,3,5.5
+fr,daily,Tu veux manger quoi ?,8,4.96
+fr,daily,Ça m'est égal.,42,4.22
+fr,daily,C'est délicieux !,22,4.01
+fr,daily,On s'amuse bien !,3,4.11
+fr,daily,Génial !,140,4.51
+fr,daily,Je vois.,455,5.43
+fr,daily,D'accord.,1099,5.4
+fr,daily,Enchanté.,45,3.48
+fr,daily,Je m'en vais.,46,5.47
+fr,daily,Fais attention.,190,5.01
+fr,daily,Bonne nuit.,126,5.2
+fr,daily,Bon courage !,14,4.74
+fr,daily,Et toi ?,200,5.85
+fr,daily,Bonne journée !,64,5.15
+fr,daily,Bon appétit !,29,4.01
+fr,daily,À tes souhaits !,3,3.51
+fr,routine,T'es réveillé ?,373,4.02
+fr,routine,Je me suis réveillé en retard.,0,3.95
+fr,routine,se laver le visage,3,4.08
+fr,routine,se brosser les dents,12,3.29
+fr,routine,prendre une douche,62,4.4
+fr,routine,prendre le petit-déjeuner,619,4.44
+fr,routine,prendre le métro,9,4.55
+fr,routine,prendre le bus,36,4.68
+fr,routine,aller au boulot,0,4.74
+fr,routine,aller en cours,3,5.3
+fr,routine,déjeuner,1282,4.47
+fr,routine,finir le travail,18,4.75
+fr,routine,faire des heures sup,3,3.71
+fr,routine,rentrer à la maison,632,4.8
+fr,routine,préparer le dîner,60,4.14
+fr,routine,faire la lessive,11,3.49
+fr,routine,faire le ménage,14,4.39
+fr,routine,faire les courses,66,4.49
+fr,routine,rester à la maison,149,4.96
+fr,routine,regarder une série,2,4.82
+fr,routine,écouter de la musique,52,4.6
+fr,routine,aller à la salle de sport,32,4.74
+fr,routine,se promener,134,3.92
+fr,routine,prendre un bain,43,4.51
+fr,routine,se coucher,117,4.56
+fr,routine,se lever tôt,44,4.4
+fr,routine,veiller tard,10,3.97
+fr,routine,faire la grasse matinée,15,3.7
+fr,routine,apporter son déjeuner,0,4.23
+fr,routine,la boulangerie,92,3.76
+fr,routine,un jour de congé,69,4.17
+fr,routine,le week-end,375,4.53
+fr,routine,en semaine,7,5.41
+fr,routine,tous les jours,805,5.51
+fr,routine,toujours,7224,5.94
+fr,routine,parfois,1039,5.27
+fr,routine,faire du télétravail,8,3.22
+fr,routine,faire une pause,48,4.46
+fr,routine,regarder son téléphone,0,4.71
+fr,routine,se préparer,51,4.68
+fr,out,C'est combien ?,6,4.97
+fr,out,Je prends celui-ci.,295,5.24
+fr,out,Vous prenez la carte ?,0,4.4
+fr,out,Pas besoin de sac.,1,4.72
+fr,out,Où sont les toilettes ?,18,4.3
+fr,out,Où est la gare ?,10,4.61
+fr,out,Je suis perdu.,9,5.07
+fr,out,Allez tout droit.,58,5.51
+fr,out,Tourne à droite.,201,5.2
+fr,out,Tourne à gauche.,185,5.26
+fr,out,C'est tout près.,34,5.41
+fr,out,C'est loin.,15,5.37
+fr,out,Une table pour deux.,8,4.89
+fr,out,J'ai réservé.,19,4.31
+fr,out,"La carte, s'il vous plaît.",190,5.06
+fr,out,Qu'est-ce que vous me conseillez ?,9,3.07
+fr,out,"L'addition, s'il vous plaît.",82,3.78
+fr,out,À emporter.,17,4.13
+fr,out,Sur place.,92,5.63
+fr,out,Excusez-moi.,246,3.79
+fr,out,Il y a une table de libre ?,3,4.7
+fr,out,Il y a beaucoup de monde.,64,5.54
+fr,out,Le train a du retard.,33,4.75
+fr,out,changer de ligne,0,4.93
+fr,out,le ticket,127,4.01
+fr,out,prendre un taxi,23,4.22
+fr,out,Vous pouvez nous prendre en photo ?,26,5.01
+fr,out,On se prend en photo.,0,4.9
+fr,out,Je peux l'essayer ?,64,4.94
+fr,out,Vous l'avez en plus grand ?,3,5.72
+fr,out,C'est pas cher.,49,5.08
+fr,out,C'est cher.,5,5.07
+fr,out,les soldes,7,3.85
+fr,out,C'est ouvert ?,7,4.88
+fr,out,C'est fermé.,4,4.48
+fr,out,Il y a du wifi ?,3,4.04
+fr,out,Je dois recharger mon téléphone.,8,3.5
+fr,out,Comment on y va ?,1,5.49
+fr,feelings,Je suis heureux.,1810,4.98
+fr,feelings,Je suis triste.,34,4.72
+fr,feelings,Je me sens seul.,12,5.19
+fr,feelings,J'ai peur.,292,5.2
+fr,feelings,J'ai honte.,44,4.59
+fr,feelings,Ça m'énerve.,15,3.97
+fr,feelings,Je stresse.,2,3.25
+fr,feelings,Ouf !,19,3.99
+fr,feelings,J'ai eu peur.,19,5.08
+fr,feelings,Je suis furieux.,111,3.83
+fr,feelings,Ça m'a ému.,0,3.72
+fr,feelings,Ça me rappelle des souvenirs.,45,4.58
+fr,feelings,J'ai la flemme.,18,3.75
+fr,feelings,Je m'ennuie.,31,3.99
+fr,feelings,Je me sens bien avec toi.,37,5.38
+fr,feelings,J'ai trop envie de voyager.,0,4.22
+fr,feelings,Je me sens bizarre.,326,4.73
+fr,feelings,un ami,433,5.09
+fr,feelings,mon meilleur ami,139,4.9
+fr,feelings,mon copain,193,4.35
+fr,feelings,ma copine,328,4.5
+fr,feelings,la famille,351,5.51
+fr,feelings,mes parents,613,5.1
+fr,feelings,les frères et sœurs,76,4.14
+fr,feelings,bien s'entendre,34,4.97
+fr,feelings,une personne douce,0,4.49
+fr,feelings,une personne drôle,0,4.79
+fr,feelings,faire confiance,264,5.12
+fr,feelings,s'inquiéter,66,4.02
+fr,feelings,se disputer,57,3.92
+fr,feelings,ne pas avoir le moral,60,4.45
+fr,feelings,ne pas avoir la motivation,51,4.22
+fr,feelings,être de bonne humeur,101,4.36
+fr,feelings,être de mauvaise humeur,78,4.27
+fr,feelings,pleurer,690,4.35
+fr,plans,la prochaine fois,205,4.94
+fr,plans,demain,3416,5.14
+fr,plans,après-demain,92,5.1
+fr,plans,la semaine prochaine,358,4.85
+fr,plans,ce week-end,119,4.53
+fr,plans,le mois prochain,123,4.85
+fr,plans,T'as des projets ?,69,4.92
+fr,plans,Je suis libre.,53,5.06
+fr,plans,Je crois que je peux pas.,9,5.57
+fr,plans,À quelle heure ?,624,5.02
+fr,plans,À la gare.,412,4.63
+fr,plans,Je vais être en retard.,1069,4.75
+fr,plans,J'y serai à l'heure.,782,5.38
+fr,plans,annuler,72,4.09
+fr,plans,J'ai trop hâte.,1,4.38
+fr,plans,partir en voyage,25,4.87
+fr,plans,On y va ensemble.,1,5.31
+fr,plans,T'as décidé ?,0,4.83
+fr,plans,J'ai pas encore décidé.,39,4.87
+fr,plans,Je vais y réfléchir.,88,4.53
+fr,plans,Quand tu veux.,37,5.45
+fr,plans,Une autre fois.,52,5.64
+fr,plans,Je te tiens au courant.,337,4.97
+fr,plans,l'anniversaire,475,4.76
+fr,plans,fêter,38,4.07
+fr,plans,le cadeau,741,4.65
+fr,plans,les vacances,884,4.91
+fr,plans,Noël,1435,4.78
+fr,plans,le Nouvel An,73,4.71
+fr,plans,Vers quelle heure ?,2,4.93
+fr,plans,J'arrive bientôt.,3,4.86
+fr,plans,Je vais un peu tarder.,115,3.83
+fr,plans,Vas-y en premier.,1,5.03
+fr,plans,Viens me chercher.,4,4.81
+fr,plans,rester dormir,3,4.52
+fr,plans,faire un programme,0,5.14
+fr,plans,T'es prêt ?,1,4.9
+fr,connect,mais,10010,6.62
+fr,connect,donc,1727,5.92
+fr,connect,alors,2437,6.03
+fr,connect,au fait,137,6.27
+fr,connect,par exemple,120,5.38
+fr,connect,c'est-à-dire,103,5.87
+fr,connect,en fait,406,6.36
+fr,connect,finalement,569,5.02
+fr,connect,d'abord,480,5.18
+fr,connect,ensuite,325,5.35
+fr,connect,en plus,551,6.56
+fr,connect,pourtant,257,5.2
+fr,connect,de toute façon,69,5.25
+fr,connect,franchement,135,4.71
+fr,connect,peut-être,2409,5.97
+fr,connect,sûrement,224,4.7
+fr,connect,si,14572,6.46
+fr,connect,même si,383,6.08
+fr,connect,parce que,895,5.71
+fr,connect,quand,8101,6.13
+fr,connect,pendant que,317,5.65
+fr,connect,depuis,3545,5.92
+fr,connect,jusqu'à,1994,5.48
+fr,connect,tout à coup,114,5.49
+fr,connect,tout de suite,564,5.47
+fr,connect,petit à petit,71,5.36
+fr,connect,enfin,671,5.47
+fr,connect,encore,6862,6.04
+fr,connect,déjà,4684,5.84
+fr,connect,à l'instant,128,4.97
+fr,connect,presque toujours,56,5.15
+fr,connect,souvent,2631,5.49
+fr,connect,jamais,8558,5.89
+fr,connect,presque,1415,5.23
+fr,connect,surtout,300,5.48
+fr,connect,un peu,3822,5.96
+fr,connect,très,10876,6.12
+fr,connect,tellement,1285,5.23
+fr,connect,environ,385,5.2
+fr,connect,il y a un moment,5,5.55
+fr,connect,du coup,37,5.53
+fr,connect,genre,894,5.51
+fr,trouble,J'ai perdu mon téléphone.,6,4.74
+fr,trouble,J'ai oublié mon portefeuille.,212,4.13
+fr,trouble,J'ai plus de batterie.,4,4.5
+fr,trouble,J'ai raté le dernier métro.,0,4.54
+fr,trouble,Il y a des embouteillages.,32,3.32
+fr,trouble,Je suis enrhumé.,31,2.51
+fr,trouble,J'ai de la fièvre.,82,4.14
+fr,trouble,J'ai mal à la tête.,75,5.29
+fr,trouble,J'ai mal au ventre.,35,4.39
+fr,trouble,aller chez le médecin,97,4.83
+fr,trouble,prendre des médicaments,266,4.42
+fr,trouble,C'est cassé.,3,4.2
+fr,trouble,Ça marche pas.,1,5.14
+fr,trouble,J'ai plus d'internet.,1,5.11
+fr,trouble,J'ai oublié le mot de passe.,127,5.04
+fr,trouble,Je me suis trompé.,253,4.15
+fr,trouble,Je sais pas.,21,5.6
+fr,trouble,Aide-moi.,115,5.25
+fr,trouble,Au secours !,33,4.65
+fr,trouble,Je suis dans le pétrin.,31,2.93
+fr,trouble,Qu'est-ce que je fais ?,9,5.53
+fr,trouble,Oh non !,39,5.05
+fr,trouble,Dépêche-toi !,133,3.83
+fr,trouble,J'ai perdu mes clés.,99,4.46
+fr,trouble,T'as rien oublié ?,36,4.78
+fr,trouble,J'ai renversé mon café.,113,3.84
+fr,trouble,Je me suis fait mal.,16,5.42
+fr,trouble,Il y a eu un accident.,316,4.77
+fr,trouble,T'as un chargeur ?,27,3.71
+fr,trouble,Il répond pas.,34,4.68
+fr,trouble,Il m'a laissé en vu.,0,5.7
+fr,trouble,J'ai pas assez d'argent.,89,5.12
+fr,trouble,J'arrive pas à dormir.,0,4.57
+fr,trouble,On se comprend pas.,1,4.95
+fr,trouble,Calme-toi.,45,4.82
+fr,trouble,Ça va s'arranger.,25,3.9
+fr,trouble,Tant pis.,37,4.34
+fr,trouble,Zut !,24,3.5
+fr,reply,Oui.,1375,5.8
+fr,reply,Non.,3635,6.08
+fr,reply,Bien sûr.,372,5.24
+fr,reply,Exactement.,655,4.94
+fr,reply,Ah bon ?,24,5.22
+fr,reply,T'as raison.,3,5.27
+fr,reply,C'est super.,33,5.26
+fr,reply,C'est dingue !,10,4.35
+fr,reply,Tu as de la chance.,207,5.15
+fr,reply,Évidemment.,114,4.81
+fr,reply,Euh...,21,4.57
+fr,reply,Bof.,6,3.74
+fr,reply,Tu crois ?,184,5.37
+fr,reply,Pas vraiment.,573,5.77
+fr,reply,Tu me sauves.,2,2.86
+fr,reply,S'il te plaît.,1173,4.56
+fr,reply,Je peux ?,1914,5.59
+fr,reply,Vas-y.,168,5.13
+fr,reply,Ne t'inquiète pas.,154,4.58
+fr,reply,Quel bonheur !,11,4.71
+fr,reply,Dommage.,217,4.73
+fr,reply,Bien joué !,15,4.84
+fr,reply,"Ah, d'accord.",0,5.05
+fr,reply,Mmh.,1,3.11
+fr,reply,Félicitations !,85,4.23
+fr,reply,Je sais !,2808,5.62
+fr,reply,Je le savais pas.,15,4.66
+fr,reply,Ça marche.,82,5.14
+fr,polite,Enchanté de faire votre connaissance.,26,4.78
+fr,polite,Avec plaisir.,140,5.14
+fr,polite,Excusez-moi de vous déranger.,43,3.79
+fr,polite,Merci beaucoup.,123,5.38
+fr,polite,Je suis désolé.,555,4.76
+fr,polite,Pardonnez-moi.,48,3.45
+fr,polite,Ça fait longtemps.,82,5.2
+fr,polite,Comment allez-vous ?,79,5.09
+fr,polite,"Très bien, merci.",12,5.45
+fr,polite,Bon appétit à tous.,343,6.08
+fr,polite,Un petit cadeau pour vous.,14,4.61
+fr,polite,Je vous remercie.,78,4.29
+fr,polite,Avec mes remerciements.,35,3.49
+fr,polite,C'était délicieux.,6,4.01
+fr,polite,Après vous.,50,5.99
+fr,polite,"Un instant, s'il vous plaît.",14,4.42
+fr,polite,Pouvez-vous répéter ?,19,4.18
+fr,polite,Pouvez-vous parler plus lentement ?,94,4.25
+fr,polite,"Non, merci.",52,5.49
+fr,polite,Je vous en prie.,88,4.23
+fr,polite,Vous aussi.,93,6.04
+fr,polite,Désolé du retard.,33,4.75
+fr,polite,"Asseyez-vous, je vous prie.",86,2.85
+fr,polite,Comment vous appelez-vous ?,10,3.92
+fr,polite,monsieur,539,5.01
+fr,polite,madame,211,4.81
+fr,polite,vous,69418,6.56
+fr,polite,tutoyer,15,2.83
+fr,polite,Joyeux anniversaire !,34,4.19
+fr,polite,Félicitations pour votre mariage !,12,5.0
+fr,polite,Bonne année !,37,5.36
+fr,polite,Joyeux Noël !,55,4.2
+fr,polite,Bon rétablissement.,35,3.84
+fr,polite,Prenez soin de vous.,7,4.29
+fr,polite,Bon voyage !,38,4.94
+fr,polite,Bonne continuation.,7,3.71
+fr,polite,Bienvenue.,225,4.51
+fr,polite,"Entrez, je vous en prie.",66,3.64
+fr,polite,C'est un honneur.,10,5.0
+fr,idioms,faire d'une pierre deux coups,25,4.81
+fr,idioms,avoir la tête dans les nuages,16,4.14
+fr,idioms,C'est du gâteau.,102,4.22
+fr,idioms,coûter les yeux de la tête,10,5.1
+fr,idioms,jeter l'argent par les fenêtres,14,4.28
+fr,idioms,mettre dans le mille,9,4.64
+fr,idioms,être crevé,68,3.57
+fr,idioms,être comme un poisson dans l'eau,8,4.45
+fr,idioms,ne pas avoir la langue dans sa poche,2,4.38
+fr,idioms,être bavard comme une pie,0,3.11
+fr,idioms,faire une gaffe,53,4.09
+fr,idioms,se bouger,9,4.41
+fr,idioms,être fauché,39,3.17
+fr,idioms,être comme les deux doigts de la main,4,4.5
+fr,idioms,se moquer de quelqu'un,57,3.81
+fr,idioms,donner un coup de main,138,5.12
+fr,idioms,dormir comme un bébé,25,4.8
+fr,idioms,avoir l'eau à la bouche,6,4.7
+fr,idioms,fermer les yeux sur,18,4.46
+fr,idioms,devenir rouge comme une tomate,8,3.73
+fr,idioms,être d'accord,1099,5.4
+fr,idioms,avoir la pêche,123,4.49
+fr,idioms,avoir le cafard,23,3.14
+fr,idioms,se régaler,3,3.2
+fr,idioms,être surpris,557,4.52
+fr,idioms,avoir un coup de cœur,3,5.02
+fr,idioms,taper dans l'œil,0,4.16
+fr,idioms,manquer à quelqu'un,184,4.39
+fr,idioms,avoir envie de,5,5.14
+fr,idioms,ça ne fait rien,16,5.71
+fr,idioms,valoir le coup,0,4.12
+fr,idioms,en avoir marre,5,4.34
+fr,idioms,avoir de la chance,5,5.1
+fr,idioms,aucune idée,249,5.08
+fr,idioms,quel bazar,3,3.53
+fr,idioms,avoir honte,35,4.59
+fr,idioms,être à jour,105,5.74
+fr,idioms,sans raison,64,5.4
+fr,idioms,du fond du cœur,25,4.88
+fr,idioms,à la lettre,33,4.92
+fr,idioms,l'amour fou,0,4.75
+fr,idioms,un petit coin de paradis,3,4.27
+ko,love,사랑해.,28,5.78
+ko,love,좋아해.,112,6.09
+ko,love,너한테 푹 빠졌어.,0,3.93
+ko,love,넌 나한테 정말 소중해.,0,4.66
+ko,love,마음에 들어.,11,5.56
+ko,love,첫눈에 반했어.,1,0.0
+ko,love,너랑 있으면 행복해.,15,5.29
+ko,love,만나서 다행이야.,0,4.73
+ko,love,자기야,3,5.51
+ko,love,네가 최고야!,5,5.41
+ko,love,설레.,0,3.88
+ko,love,계속 네 생각만 나.,1,5.85
+ko,love,넌 내 전부야.,0,4.97
+ko,love,뽀뽀,3,3.83
+ko,love,좋은 꿈 꿔.,2,5.26
+ko,love,너무 귀여워.,6,3.82
+ko,love,우리 사귈래?,1,0.0
+ko,miss,보고 싶어.,12,5.86
+ko,miss,벌써 보고 싶어.,0,4.9
+ko,miss,빨리 보고 싶어!,0,5.11
+ko,miss,손꼽아 기다리고 있어.,0,3.3
+ko,miss,네가 여기 있으면 좋겠다.,0,5.63
+ko,miss,네 생각 하고 있었어.,0,5.88
+ko,miss,또 보자!,0,5.61
+ko,miss,너 없으니까 허전해.,0,3.35
+ko,miss,목소리 듣고 싶어.,21,4.98
+ko,miss,꼭 안아 주고 싶어.,0,5.71
+ko,miss,머릿속에 온통 너야.,0,3.92
+ko,miss,빨리 와.,4,5.18
+ko,miss,기다릴게.,1,4.15
+ko,miss,우리 언제 만나?,0,5.1
+ko,text,ㅋㅋ,0,4.17
+ko,text,ㅎㅎ,0,4.31
+ko,text,ㅇㅇ,0,3.22
+ko,text,ㄱㄱ,0,0.0
+ko,text,ㅠㅠ,0,4.25
+ko,text,ㄴㄴ,0,0.0
+ko,text,ㄱㅅ,0,0.0
+ko,text,ㅈㅅ,0,0.0
+ko,text,ㅇㅋ,0,0.0
+ko,text,뭐 해?,5,5.82
+ko,text,굿밤,0,4.35
+ko,text,대박,0,4.31
+ko,text,헐,1,4.08
+ko,text,레알,0,4.23
+ko,text,ㄹㅇ,0,0.0
+ko,text,ㅊㅋ,0,0.0
+ko,text,꿀잼,0,3.74
+ko,text,오키,2,3.79
+ko,chat,뭐 하고 있어?,4,5.78
+ko,chat,오늘 하루 어땠어?,4,3.88
+ko,chat,그냥 있어.,0,5.6
+ko,chat,나도!,37,6.53
+ko,chat,쉬는 중이야.,0,5.18
+ko,chat,말도 안 돼!,1,5.36
+ko,chat,대박이다!,0,4.31
+ko,chat,내 말이.,2,6.08
+ko,chat,있잖아!,4,5.17
+ko,chat,무슨 일 있어?,25,5.38
+ko,chat,밥 먹었어?,2,4.9
+ko,chat,요즘 어때?,0,4.25
+ko,chat,수고했어.,2,4.56
+ko,chat,그렇구나.,2,5.11
+ko,chat,재밌다!,0,5.04
+ko,chat,진짜?,156,5.63
+ko,chat,늘 똑같지 뭐.,0,4.8
+ko,chat,요즘 뭐에 빠져 있어?,1,4.64
+ko,tease,바보야.,16,4.67
+ko,tease,장난이야.,0,4.85
+ko,tease,하지 마!,65,5.54
+ko,tease,꿈 깨.,0,4.88
+ko,tease,어림없지.,0,0.0
+ko,tease,하나도 안 웃겨.,0,3.77
+ko,tease,오버하지 마.,0,4.51
+ko,tease,맘대로 해.,1,0.0
+ko,tease,너무해!,0,5.74
+ko,tease,속았지!,0,5.54
+ko,tease,딱 걸렸어!,11,4.37
+ko,tease,누가 그래?,1,4.92
+ko,tease,진짜 못 말려.,0,3.95
+ko,tease,잘난 척하지 마.,0,3.72
+ko,tease,뻥이야!,1,3.78
+ko,tease,콜!,12,4.6
+ko,tease,귀요미,0,3.3
+ko,date,오늘 밤 시간 돼?,0,5.35
+ko,date,밥 먹으러 갈래?,0,4.08
+ko,date,그럼 약속한 거다.,0,4.95
+ko,date,데리러 갈까?,0,3.96
+ko,date,몇 시가 편해?,0,3.65
+ko,date,약속 미뤄도 돼?,0,0.0
+ko,date,갑자기 일이 생겼어.,1,4.97
+ko,date,10분 뒤에 도착해.,4,4.98
+ko,date,어디서 볼까?,1,4.47
+ko,date,더치페이하자.,1,0.0
+ko,date,오늘은 내가 살게.,0,5.75
+ko,date,우리 집에서 영화 볼래?,0,3.93
+ko,date,도착하면 연락해.,0,4.65
+ko,date,집까지 데려다줄게.,0,0.0
+ko,date,오늘 진짜 즐거웠어.,1,4.12
+ko,date,또 가자!,0,5.66
+ko,date,오늘 약속 그대로지?,0,5.02
+ko,call,들려?,9,4.46
+ko,call,소리가 끊겨.,0,3.04
+ko,call,화면 멈췄어.,4,3.61
+ko,call,전화해도 돼?,0,4.94
+ko,call,이따 다시 전화할게.,0,5.19
+ko,call,영상통화하자.,0,4.57
+ko,call,거기 지금 몇 시야?,2,4.12
+ko,call,여기는 늦었어.,4,5.14
+ko,call,시차,0,3.57
+ko,call,음소거돼 있어.,0,3.25
+ko,call,카메라 켜 줘.,0,4.46
+ko,call,통화하다 잠들었어.,1,0.0
+ko,call,장거리 연애,1,3.95
+ko,call,안 자고 기다릴게.,0,6.04
+ko,call,너 먼저 끊어.,0,4.62
+ko,call,내일 또 얘기하자.,0,5.17
+ko,call,나 보여?,55,5.4
+ko,fight,그런 뜻 아니었어.,0,5.19
+ko,fight,우리 얘기 좀 할래?,3,5.22
+ko,fight,잠깐 혼자 있고 싶어.,0,5.19
+ko,fight,상처받았어.,0,4.75
+ko,fight,우리 싸우지 말자.,0,4.69
+ko,fight,내가 말이 심했어.,0,3.66
+ko,fight,우리 괜찮은 거지?,0,5.3
+ko,fight,화해하자.,0,4.14
+ko,fight,용서할게.,0,4.41
+ko,fight,그렇게 말 안 했어.,0,5.97
+ko,fight,내가 잘못했어.,0,5.2
+ko,fight,화내지 마.,2,3.99
+ko,fight,너한테 화난 거 아니야.,0,3.71
+ko,fight,처음부터 다시 하자.,0,5.65
+ko,fight,무슨 말인지 알아.,3,5.09
+ko,fight,이제 다 풀렸어.,0,3.72
+ko,fight,속상하게 해서 미안해.,0,0.0
+ko,care,내가 있잖아.,1,5.14
+ko,care,넌 할 수 있어!,26,6.1
+ko,care,속상하겠다.,0,0.0
+ko,care,몸 잘 챙겨.,0,4.43
+ko,care,푹 쉬어.,0,4.15
+ko,care,빨리 나아.,1,5.17
+ko,care,다 잘될 거야.,0,5.51
+ko,care,네가 자랑스러워.,4,4.39
+ko,care,조금만 힘내.,6,4.12
+ko,care,얘기하고 싶어?,0,5.24
+ko,care,최선을 다했잖아.,0,3.78
+ko,care,난 네 편이야.,1,5.26
+ko,care,무리하지 마.,1,4.69
+ko,care,조심히 들어가.,0,3.79
+ko,care,난 너 믿어.,0,5.18
+ko,care,너무 자책하지 마.,0,3.57
+ko,care,필요한 거 있으면 말해.,0,5.65
+ko,react,오늘 진짜 예쁘다!,5,3.33
+ko,react,너무 다정하다.,1,3.94
+ko,react,귀여워!,6,3.82
+ko,react,좋다!,62,6.34
+ko,react,잘됐다!,0,5.57
+ko,react,웃겨 죽겠어.,0,3.76
+ko,react,내 일처럼 기뻐.,0,5.58
+ko,react,맛있겠다!,0,4.9
+ko,react,대단하다!,1,4.87
+ko,react,재능 있다.,5,4.49
+ko,react,덕분에 힘이 났어.,0,4.88
+ko,react,완전 빠졌어.,0,4.22
+ko,react,완전 너답다.,0,5.16
+ko,react,멋있다!,4,4.39
+ko,react,부럽다!,1,3.8
+ko,react,천재야!,2,4.43
+ko,react,짱이다!,1,4.43
+ko,culture,무슨 뜻이야?,10,5.09
+ko,culture,이거 한국어로 뭐라고 해?,1,5.67
+ko,culture,다시 말해 줄래?,1,5.64
+ko,culture,조금 천천히 말해 줄래?,2,4.54
+ko,culture,한국에서는 원래 그래?,1,5.8
+ko,culture,아직 한국어 배우는 중이야.,0,5.23
+ko,culture,내가 맞게 말했어?,0,5.63
+ko,culture,틀리면 고쳐 줘.,0,4.05
+ko,culture,이거 반말해도 돼?,0,3.18
+ko,culture,우리나라에서는 ~해.,1,5.42
+ko,culture,영어 좀 알려 줄게.,0,5.09
+ko,culture,진짜 신기하다.,0,4.37
+ko,culture,이거 뭐라고 불러?,1,4.79
+ko,culture,번역하면 느낌이 안 살아.,0,4.8
+ko,culture,잘 못 알아들었어.,0,0.0
+ko,culture,부모님 뵙는 거 긴장돼.,0,4.03
+ko,culture,그 말 처음 들어.,1,5.51
+ko,daily,안녕!,42,5.37
+ko,daily,좋은 아침.,5,5.25
+ko,daily,잘 지내?,18,4.86
+ko,daily,그럭저럭.,1,3.61
+ko,daily,고마워.,23,4.97
+ko,daily,천만에.,2,4.69
+ko,daily,괜찮아.,27,5.33
+ko,daily,미안해.,35,5.04
+ko,daily,또 봐.,1,5.35
+ko,daily,조심히 가.,0,3.8
+ko,daily,다녀왔어.,2,4.14
+ko,daily,어서 와.,1,5.82
+ko,daily,배고파.,4,3.96
+ko,daily,졸려.,8,3.22
+ko,daily,피곤해.,13,4.62
+ko,daily,더워.,10,3.54
+ko,daily,추워.,15,3.98
+ko,daily,날씨 좋다.,0,4.7
+ko,daily,비 와.,0,5.63
+ko,daily,잠깐만.,8,4.79
+ko,daily,지금 몇 시야?,2,4.12
+ko,daily,어디야?,3,5.42
+ko,daily,뭐 먹고 싶어?,3,5.42
+ko,daily,아무거나 좋아.,2,3.82
+ko,daily,진짜 맛있다!,2,4.92
+ko,daily,알았어.,27,5.82
+ko,daily,잘 부탁해.,1,5.18
+ko,daily,먼저 갈게.,0,3.58
+ko,daily,잘 자.,4,5.92
+ko,daily,힘내!,6,4.12
+ko,daily,오랜만이야.,1,4.46
+ko,daily,너는?,131,5.8
+ko,daily,맛있게 먹어.,1,4.86
+ko,daily,잘 먹겠습니다.,1,5.52
+ko,daily,잘 먹었습니다.,1,5.57
+ko,daily,건강해.,3,4.98
+ko,routine,일어났어?,11,4.62
+ko,routine,늦잠 잤어!,5,3.27
+ko,routine,세수하다,1,3.59
+ko,routine,이를 닦다,0,4.49
+ko,routine,샤워하다,10,4.42
+ko,routine,아침을 먹다,74,5.29
+ko,routine,지하철을 타다,23,4.64
+ko,routine,버스를 타다,66,5.07
+ko,routine,출근하다,4,4.31
+ko,routine,퇴근하다,2,4.22
+ko,routine,학교에 가다,126,5.66
+ko,routine,점심,23,4.74
+ko,routine,야근하다,1,3.62
+ko,routine,집에 가다,14,5.78
+ko,routine,저녁을 만들다,33,5.11
+ko,routine,빨래하다,1,3.88
+ko,routine,청소하다,9,4.55
+ko,routine,장 보다,401,5.6
+ko,routine,집에 있다,31,5.77
+ko,routine,드라마를 보다,12,5.07
+ko,routine,음악을 듣다,45,5.25
+ko,routine,운동하다,36,5.33
+ko,routine,산책하다,20,4.39
+ko,routine,목욕하다,7,4.08
+ko,routine,잘 준비하다,0,5.38
+ko,routine,일찍 일어나다,2,4.56
+ko,routine,밤새다,9,4.1
+ko,routine,다시 자다,0,5.66
+ko,routine,도시락,0,3.97
+ko,routine,편의점,2,4.18
+ko,routine,쉬는 날,0,5.13
+ko,routine,주말,34,4.81
+ko,routine,평일,0,4.13
+ko,routine,매일,58,5.1
+ko,routine,항상,68,5.3
+ko,routine,가끔,25,4.92
+ko,routine,재택근무,0,0.0
+ko,routine,잠깐 쉬다,0,4.66
+ko,routine,폰을 보다,24,4.88
+ko,routine,준비하다,26,5.46
+ko,out,얼마예요?,8,0.0
+ko,out,이걸로 주세요.,2,4.26
+ko,out,카드 돼요?,10,5.16
+ko,out,봉투는 괜찮아요.,6,4.05
+ko,out,화장실이 어디예요?,19,4.71
+ko,out,지하철역이 어디예요?,1,3.55
+ko,out,길을 잃었어요.,7,4.93
+ko,out,쭉 가세요.,1,4.27
+ko,out,오른쪽,8,4.73
+ko,out,왼쪽,4,4.76
+ko,out,가까워요.,1,3.92
+ko,out,멀어요.,4,4.76
+ko,out,두 명이에요.,7,5.7
+ko,out,예약했어요.,11,4.89
+ko,out,메뉴판 주세요.,0,3.12
+ko,out,추천 메뉴가 뭐예요?,4,5.28
+ko,out,계산해 주세요.,18,4.72
+ko,out,포장해 주세요.,1,4.41
+ko,out,여기서 먹을게요.,42,5.47
+ko,out,저기요!,3,4.74
+ko,out,자리 있어요?,35,5.34
+ko,out,줄이 길어.,227,5.81
+ko,out,지하철이 늦어.,8,5.15
+ko,out,환승,1,3.69
+ko,out,표,70,4.99
+ko,out,택시를 타다,24,4.58
+ko,out,사진 찍어 주세요.,29,5.52
+ko,out,같이 사진 찍자.,0,5.35
+ko,out,입어 봐도 돼요?,0,4.61
+ko,out,더 큰 사이즈 있어요?,2,5.5
+ko,out,싸다!,5,4.78
+ko,out,비싸다.,4,4.3
+ko,out,세일,7,3.9
+ko,out,사람 많다.,3,5.79
+ko,out,사람 없다.,0,6.06
+ko,out,열었어요?,8,5.5
+ko,out,닫았어요.,6,4.6
+ko,out,와이파이 있어요?,1,3.91
+ko,out,충전하고 싶어요.,3,4.51
+ko,out,어떻게 가요?,4,0.0
+ko,feelings,기뻐.,9,4.18
+ko,feelings,슬퍼.,7,3.73
+ko,feelings,외로워.,17,3.56
+ko,feelings,무서워.,23,4.43
+ko,feelings,부끄러워.,5,3.88
+ko,feelings,분해.,5,4.1
+ko,feelings,짜증 나.,5,4.53
+ko,feelings,긴장돼.,5,4.54
+ko,feelings,다행이다.,18,4.85
+ko,feelings,깜짝 놀랐어.,6,4.48
+ko,feelings,열받아.,0,5.44
+ko,feelings,행복해.,47,5.31
+ko,feelings,감동했어.,7,4.63
+ko,feelings,그립다.,1,4.1
+ko,feelings,귀찮아.,9,4.36
+ko,feelings,지루해.,12,4.19
+ko,feelings,편안해.,8,4.37
+ko,feelings,찜찜해.,0,3.64
+ko,feelings,친구,123,5.7
+ko,feelings,절친,0,4.01
+ko,feelings,남자친구,11,5.45
+ko,feelings,여자친구,15,5.48
+ko,feelings,가족,25,5.43
+ko,feelings,부모님,24,5.08
+ko,feelings,형제,25,4.8
+ko,feelings,사이가 좋다,1,5.35
+ko,feelings,잘 맞다,2,5.67
+ko,feelings,다정한 사람,1,3.94
+ko,feelings,재밌는 사람,4,5.04
+ko,feelings,신경 쓰이다,1,0.0
+ko,feelings,믿다,77,5.31
+ko,feelings,걱정하다,45,5.17
+ko,feelings,싸우다,7,4.0
+ko,feelings,기운이 없다,1,4.38
+ko,feelings,의욕이 없다,2,4.48
+ko,feelings,기분이 좋다,6,5.26
+ko,feelings,기분이 안 좋다,2,5.23
+ko,feelings,울다,13,4.91
+ko,plans,다음에,9,5.68
+ko,plans,내일,88,5.2
+ko,plans,모레,2,3.53
+ko,plans,다음 주,7,5.62
+ko,plans,이번 주말,5,4.74
+ko,plans,다음 달,3,5.39
+ko,plans,약속 있어?,21,4.97
+ko,plans,시간 돼.,0,5.35
+ko,plans,안 될 것 같아.,3,5.73
+ko,plans,몇 시가 좋아?,0,5.38
+ko,plans,어디서 만나?,0,5.13
+ko,plans,역에서 만나.,11,4.96
+ko,plans,늦을 것 같아.,5,5.16
+ko,plans,시간에 맞다,0,5.61
+ko,plans,취소하다,8,4.7
+ko,plans,기대돼.,13,5.21
+ko,plans,여행 가다,32,5.07
+ko,plans,같이 가자.,2,5.7
+ko,plans,정했어?,20,3.88
+ko,plans,아직 안 정했어.,0,3.88
+ko,plans,생각해 볼게.,0,5.48
+ko,plans,언제든 좋아.,3,5.09
+ko,plans,다음에 하자.,0,5.58
+ko,plans,또 연락할게.,0,4.92
+ko,plans,생일,54,4.75
+ko,plans,기념일,1,3.85
+ko,plans,축하하다,40,4.96
+ko,plans,선물,24,5.18
+ko,plans,여름방학,4,4.18
+ko,plans,설날,2,3.79
+ko,plans,추석,3,4.46
+ko,plans,크리스마스,19,4.44
+ko,plans,몇 시쯤?,0,4.97
+ko,plans,금방 갈게.,7,4.45
+ko,plans,좀 늦어.,2,5.08
+ko,plans,먼저 가 있어.,0,5.28
+ko,plans,데리러 와.,2,4.46
+ko,plans,자고 가다,0,0.0
+ko,plans,계획을 세우다,24,5.43
+ko,plans,준비됐어?,3,5.27
+ko,connect,근데,15,5.45
+ko,connect,그래서,12,5.47
+ko,connect,그리고,12,5.83
+ko,connect,그런데,3,5.2
+ko,connect,사실은,6,5.67
+ko,connect,예를 들면,1,5.53
+ko,connect,결국,17,5.25
+ko,connect,먼저,12,5.29
+ko,connect,그다음에,3,5.63
+ko,connect,게다가,2,4.62
+ko,connect,그래도,2,5.23
+ko,connect,어쨌든,2,4.25
+ko,connect,솔직히,1,4.77
+ko,connect,아마,43,4.88
+ko,connect,꼭,13,5.32
+ko,connect,만약,22,4.93
+ko,connect,~는데,131,6.28
+ko,connect,~니까,390,5.83
+ko,connect,~면,556,6.55
+ko,connect,~때,290,6.22
+ko,connect,갑자기,9,4.94
+ko,connect,바로,51,5.67
+ko,connect,점점,9,4.8
+ko,connect,드디어,12,4.65
+ko,connect,아직,132,5.51
+ko,connect,벌써,22,4.95
+ko,connect,방금,9,4.92
+ko,connect,계속,59,5.51
+ko,connect,자주,39,5.0
+ko,connect,한 번도,11,5.99
+ko,connect,거의,48,5.29
+ko,connect,특히,4,5.22
+ko,connect,조금,50,5.42
+ko,connect,너무,204,5.79
+ko,connect,많이,82,5.67
+ko,connect,아까,4,4.74
+ko,connect,이따,6,4.21
+ko,connect,나중에,23,5.05
+ko,trouble,폰을 잃어버렸어.,17,3.92
+ko,trouble,지갑을 두고 왔어.,0,5.42
+ko,trouble,배터리가 없어.,2,4.42
+ko,trouble,막차를 놓쳤어.,0,3.28
+ko,trouble,차가 막혀.,0,3.82
+ko,trouble,감기 걸렸어.,25,4.29
+ko,trouble,열이 나.,153,5.53
+ko,trouble,머리가 아파.,2,4.49
+ko,trouble,배가 아파.,1,4.5
+ko,trouble,병원에 가다,23,5.28
+ko,trouble,약을 먹다,123,5.43
+ko,trouble,고장 났어.,20,4.27
+ko,trouble,안 돼.,22,5.41
+ko,trouble,인터넷이 안 돼.,8,5.3
+ko,trouble,비밀번호를 까먹었어.,3,3.98
+ko,trouble,잘못했어.,31,5.22
+ko,trouble,모르겠어.,58,5.57
+ko,trouble,도와줘.,12,0.0
+ko,trouble,살려 줘!,2,4.51
+ko,trouble,곤란해.,4,4.35
+ko,trouble,어떡하지?,1,4.77
+ko,trouble,큰일 났다!,3,4.17
+ko,trouble,서둘러!,10,3.78
+ko,trouble,지각하겠어.,10,4.22
+ko,trouble,열쇠를 잃어버렸어.,25,4.09
+ko,trouble,두고 온 거 없어?,0,5.4
+ko,trouble,쏟았어.,0,4.5
+ko,trouble,다쳤어.,9,3.75
+ko,trouble,사고가 났어.,29,5.19
+ko,trouble,충전기 있어?,1,3.64
+ko,trouble,답장이 없어.,11,3.88
+ko,trouble,읽씹,0,4.2
+ko,trouble,돈이 모자라.,1,3.99
+ko,trouble,잠이 안 와.,1,5.08
+ko,trouble,말이 안 통해.,0,4.67
+ko,trouble,진정해.,13,4.93
+ko,trouble,어떻게든 될 거야.,1,0.0
+ko,trouble,어쩔 수 없지.,6,4.66
+ko,trouble,아차!,2,3.26
+ko,reply,응.,34,5.25
+ko,reply,아니.,210,6.25
+ko,reply,맞아.,11,5.77
+ko,reply,와!,399,6.53
+ko,reply,설마!,5,4.51
+ko,reply,좋아!,415,6.21
+ko,reply,당연하지!,6,4.82
+ko,reply,음…,334,5.67
+ko,reply,그냥 그래.,0,5.06
+ko,reply,상관없어.,8,4.44
+ko,reply,그래?,100,5.19
+ko,reply,"아니야, 아직 멀었어.",0,4.68
+ko,reply,덕분이야.,4,4.82
+ko,reply,부탁해!,48,5.24
+ko,reply,해도 돼?,8,5.14
+ko,reply,"그래, 해.",100,5.19
+ko,reply,신경 쓰지 마.,6,4.87
+ko,reply,아쉽다.,4,4.33
+ko,reply,아~,2658,6.67
+ko,reply,응? 뭐?,0,5.16
+ko,reply,앗싸!,0,3.21
+ko,reply,축하해!,40,4.96
+ko,reply,꼭 그렇진 않아.,0,5.04
+ko,reply,알아!,91,6.05
+ko,reply,몰랐어.,43,4.76
+ko,reply,문제없어.,1,5.66
+ko,reply,알겠어.,11,5.92
+ko,reply,네 말대로 해.,0,5.23
+ko,reply,그러니까.,3,4.74
+ko,reply,아이고.,1,5.71
+ko,polite,처음 뵙겠습니다.,1,4.05
+ko,polite,잘 부탁드립니다.,1,0.0
+ko,polite,안녕하세요.,14,5.29
+ko,polite,감사합니다.,20,5.43
+ko,polite,고맙습니다.,6,4.87
+ko,polite,죄송합니다.,19,4.98
+ko,polite,실례합니다.,10,4.0
+ko,polite,오랜만이에요.,2,0.0
+ko,polite,잘 지내셨어요?,0,0.0
+ko,polite,덕분에요.,0,4.81
+ko,polite,많이 드세요.,0,4.12
+ko,polite,별거 아니지만 받아 주세요.,0,4.03
+ko,polite,신세 많이 졌습니다.,3,4.0
+ko,polite,배려해 주셔서 감사합니다.,1,4.22
+ko,polite,수고하셨습니다.,1,4.52
+ko,polite,먼저 들어가겠습니다.,0,5.2
+ko,polite,잠시만 기다려 주세요.,2,4.93
+ko,polite,다시 한번 말씀해 주세요.,3,5.59
+ko,polite,천천히 말씀해 주세요.,17,4.55
+ko,polite,괜찮습니다.,1,5.32
+ko,polite,부탁드려요.,1,4.35
+ko,polite,저도요.,0,3.94
+ko,polite,기다리셨죠?,0,4.89
+ko,polite,앉으세요.,3,4.48
+ko,polite,성함이 어떻게 되세요?,2,3.61
+ko,polite,~씨,86,5.73
+ko,polite,~님,142,6.17
+ko,polite,존댓말,0,0.0
+ko,polite,반말,0,3.18
+ko,polite,생신 축하드려요.,5,3.45
+ko,polite,결혼 축하드려요.,71,5.23
+ko,polite,새해 복 많이 받으세요.,2,3.89
+ko,polite,쾌차하세요.,0,0.0
+ko,polite,건강 조심하세요.,0,4.64
+ko,polite,조심히 가세요.,0,3.8
+ko,polite,어서 오세요.,2,5.56
+ko,polite,들어오세요.,1,4.8
+ko,polite,영광입니다.,1,4.54
+ko,polite,어머님,6,4.08
+ko,polite,아버님,2,3.99
+ko,idioms,일석이조,3,0.0
+ko,idioms,눈치,6,4.37
+ko,idioms,정,526,5.09
+ko,idioms,한,1660,6.92
+ko,idioms,식은 죽 먹기,0,5.02
+ko,idioms,발이 넓다,0,4.6
+ko,idioms,입이 무겁다,0,3.95
+ko,idioms,입이 가볍다,0,4.33
+ko,idioms,손이 크다,0,5.29
+ko,idioms,눈이 높다,0,5.12
+ko,idioms,귀가 얇다,0,4.17
+ko,idioms,배가 아프다,0,4.75
+ko,idioms,목이 빠지게 기다리다,0,0.0
+ko,idioms,열받다,0,5.44
+ko,idioms,죽이 잘 맞다,0,5.39
+ko,idioms,배부르다,1,3.05
+ko,idioms,작심삼일,0,0.0
+ko,idioms,금강산도 식후경,0,3.12
+ko,idioms,칠전팔기,0,0.0
+ko,idioms,티끌 모아 태산,1,2.96
+ko,idioms,가는 말이 고와야 오는 말이 곱다,0,4.04
+ko,idioms,고생 끝에 낙이 온다,0,3.84
+ko,idioms,시작이 반이다,1,5.26
+ko,idioms,우물 안 개구리,0,3.64
+ko,idioms,호랑이도 제 말 하면 온다,0,5.92
+ko,idioms,눈에 넣어도 안 아프다,0,4.83
+ko,idioms,마음이 통하다,0,4.64
+ko,idioms,마음에 들다,23,5.58
+ko,idioms,마음이 아프다,0,4.78
+ko,idioms,마음먹다,2,3.51
+ko,idioms,기가 막히다,0,5.37
+ko,idioms,어이없다,1,3.6
+ko,idioms,황당하다,2,3.96
+ko,idioms,속상하다,0,0.0
+ko,idioms,서운하다,4,3.51
+ko,idioms,섭섭하다,2,3.53
+ko,idioms,뿌듯하다,0,3.82
+ko,idioms,아깝다,1,3.89
+ko,idioms,애틋하다,0,3.47
+ko,idioms,든든하다,1,3.95
+ko,idioms,뭉클하다,0,3.25
+ko,idioms,ㅋㅋㅋ,0,3.92

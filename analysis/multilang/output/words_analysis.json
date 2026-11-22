@@ -1,0 +1,52 @@
+{
+ "ja": {
+  "sentences": 249007,
+  "personal_sentences": 46310,
+  "personal_share": 0.186,
+  "words_in_draft": 316,
+  "basic_words": 0,
+  "chat_median": 0.91,
+  "chat_above_1": 102,
+  "candidates": 543
+ },
+ "zh": {
+  "sentences": 89325,
+  "personal_sentences": 41308,
+  "personal_share": 0.462,
+  "words_in_draft": 277,
+  "basic_words": 0,
+  "chat_median": 1.06,
+  "chat_above_1": 56,
+  "candidates": 139
+ },
+ "es": {
+  "sentences": 443370,
+  "personal_sentences": 91082,
+  "personal_share": 0.205,
+  "words_in_draft": 269,
+  "basic_words": 0,
+  "chat_median": 1.08,
+  "chat_above_1": 120,
+  "candidates": 1073
+ },
+ "fr": {
+  "sentences": 731363,
+  "personal_sentences": 330112,
+  "personal_share": 0.451,
+  "words_in_draft": 354,
+  "basic_words": 1,
+  "chat_median": 1.08,
+  "chat_above_1": 169,
+  "candidates": 827
+ },
+ "ko": {
+  "sentences": 15966,
+  "personal_sentences": 3067,
+  "personal_share": 0.192,
+  "words_in_draft": 336,
+  "basic_words": 3,
+  "chat_median": 1.04,
+  "chat_above_1": 11,
+  "candidates": 29
+ }
+}

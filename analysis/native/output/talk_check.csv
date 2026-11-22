@@ -1,0 +1,192 @@
+﻿pack,text,words,zipf,tatoeba_sentences
+애정 표현,I love you.,3,5.77,602
+애정 표현,Love you,2,5.79,910
+애정 표현,I'm crazy about you.,3,5.05,10
+애정 표현,You mean a lot to me.,5,5.24,6
+애정 표현,I'm into you.,2,6.06,49
+애정 표현,I have a crush on you.,3,4.17,23
+애정 표현,You make me happy.,3,5.25,53
+애정 표현,I'm lucky to have you.,4,4.76,8
+애정 표현,babe,1,4.11,35
+애정 표현,You're the best.,3,5.55,64
+애정 표현,I'm falling for you.,3,4.66,1
+애정 표현,I can't stop thinking about you.,4,5.03,5
+애정 표현,You're my everything.,2,5.5,16
+애정 표현,xoxo,1,2.62,1
+애정 표현,Sweet dreams.,2,4.42,20
+애정 표현,I adore you.,2,3.7,12
+애정 표현,You complete me.,2,5.08,4
+애정 표현,I'm all yours.,2,4.74,24
+보고 싶을 때,I miss you.,2,5.21,238
+보고 싶을 때,Miss you already.,3,5.05,2
+보고 싶을 때,I can't wait to see you.,5,5.16,13
+보고 싶을 때,I'm counting the days.,3,4.25,5
+보고 싶을 때,I wish you were here.,4,5.08,9
+보고 싶을 때,Thinking of you.,3,5.23,19
+보고 싶을 때,See you soon.,3,5.25,30
+보고 싶을 때,It's not the same without you.,5,5.4,2
+보고 싶을 때,I miss your voice.,3,4.83,1
+보고 싶을 때,Sending you a hug.,4,3.97,0
+보고 싶을 때,You're always on my mind.,3,5.37,68
+보고 싶을 때,Come back soon.,3,5.13,49
+보고 싶을 때,I'll be right here.,3,5.63,9
+보고 싶을 때,I want to see you.,4,5.73,141
+메시지 줄임말,lol,1,5.05,15
+메시지 줄임말,lmao,1,4.28,3
+메시지 줄임말,omg,1,4.05,5
+메시지 줄임말,idk,1,4.17,0
+메시지 줄임말,tbh,1,4.18,0
+메시지 줄임말,ngl,1,2.93,1
+메시지 줄임말,btw,1,4.06,1
+메시지 줄임말,brb,1,3.0,1
+메시지 줄임말,ttyl,1,1.39,0
+메시지 줄임말,wyd,1,1.97,0
+메시지 줄임말,hbu,1,1.64,0
+메시지 줄임말,rn,1,3.71,11
+메시지 줄임말,omw,1,1.65,0
+메시지 줄임말,ily,1,2.42,0
+메시지 줄임말,jk,1,3.47,1
+메시지 줄임말,fr,1,4.09,11
+메시지 줄임말,smh,1,3.5,0
+메시지 줄임말,ty,1,3.73,0
+메시지 줄임말,np,1,3.57,1
+메시지 줄임말,gn,1,2.85,1
+메시지 줄임말,imo,1,3.71,1
+메시지 줄임말,tho,1,4.41,1
+안부·수다,What are you up to?,5,5.94,24
+안부·수다,How was your day?,4,5.67,11
+안부·수다,Not much.,2,5.92,259
+안부·수다,Same here.,2,5.58,16
+안부·수다,Just chilling.,2,3.69,7
+안부·수다,No way!,2,5.85,671
+안부·수다,That's wild.,2,4.76,1
+안부·수다,Tell me about it.,4,5.42,34
+안부·수다,Guess what?,2,5.14,158
+안부·수다,Did you eat?,3,5.06,171
+안부·수다,Anything new?,2,5.47,71
+안부·수다,Long day?,2,5.57,74
+안부·수다,Fair enough.,2,4.88,7
+안부·수다,I feel you.,3,5.63,12
+안부·수다,That's so random.,2,4.58,4
+안부·수다,For real?,2,5.58,44
+안부·수다,"Same old, same old.",2,5.47,35
+안부·수다,What's new with you?,2,5.16,33
+장난·놀리기,You're such a dork.,3,3.1,2
+장난·놀리기,I'm just messing with you.,3,3.82,10
+장난·놀리기,Stop it!,2,5.5,152
+장난·놀리기,You wish.,2,5.17,296
+장난·놀리기,Nice try.,2,5.13,8
+장난·놀리기,Very funny.,2,4.98,114
+장난·놀리기,You're so extra.,2,4.97,0
+장난·놀리기,Whatever.,1,5.14,1782
+장난·놀리기,Don't be mean.,3,5.43,4
+장난·놀리기,Gotcha!,1,3.38,6
+장난·놀리기,Busted!,1,3.77,38
+장난·놀리기,Says who?,2,5.43,5
+장난·놀리기,You're impossible.,2,4.75,5
+장난·놀리기,In your dreams.,3,4.58,22
+장난·놀리기,I'm kidding!,2,4.2,7
+장난·놀리기,Bet.,1,4.79,739
+장난·놀리기,You're such a goofball.,1,2.5,2
+약속·데이트,Are you free tonight?,3,5.58,60
+약속·데이트,Wanna grab dinner?,2,4.33,4
+약속·데이트,It's a date.,3,5.18,1
+약속·데이트,Can I pick you up?,3,5.05,137
+약속·데이트,What time works for you?,3,5.27,2
+약속·데이트,Can we reschedule?,1,2.92,42
+약속·데이트,Something came up.,3,5.29,24
+약속·데이트,Be there in 10.,3,6.15,108
+약속·데이트,Where should we meet?,4,5.11,3
+약속·데이트,Let's split the bill.,3,4.53,18
+약속·데이트,My treat.,2,4.74,10
+약속·데이트,Movie night?,2,5.03,7
+약속·데이트,Text me when you get home.,6,4.9,2
+약속·데이트,I'll walk you home.,3,5.0,13
+약속·데이트,I had a great time.,4,5.63,73
+약속·데이트,Let's do this again.,3,5.59,142
+약속·데이트,Are we still on for tonight?,3,5.85,9
+영상통화·장거리,Can you hear me?,4,5.18,29
+영상통화·장거리,You're breaking up.,2,4.73,54
+영상통화·장거리,You froze.,2,3.42,0
+영상통화·장거리,Can I call you?,4,5.44,21
+영상통화·장거리,I'll call you back.,3,5.39,58
+영상통화·장거리,Let's FaceTime tonight.,1,2.81,0
+영상통화·장거리,What time is it there?,5,5.79,2
+영상통화·장거리,It's late here.,2,5.25,0
+영상통화·장거리,The time difference,2,4.99,6
+영상통화·장거리,You're on mute.,2,3.66,2
+영상통화·장거리,Turn on your camera.,4,4.73,0
+영상통화·장거리,I fell asleep on the call.,2,4.24,645
+영상통화·장거리,Long distance,2,4.8,78
+영상통화·장거리,I'll stay up for you.,2,5.29,194
+영상통화·장거리,You hang up first.,2,4.59,98
+영상통화·장거리,Talk to you tomorrow.,4,4.87,1
+영상통화·장거리,Can you see me?,4,5.8,5
+다툼·화해,I didn't mean it.,3,5.29,22
+다툼·화해,Can we talk?,3,5.35,79
+다툼·화해,I need some space.,3,5.12,8
+다툼·화해,You hurt my feelings.,3,4.51,8
+다툼·화해,Let's not fight.,3,4.89,8
+다툼·화해,I overreacted.,1,2.69,18
+다툼·화해,Are we okay?,3,5.04,0
+다툼·화해,Let's make up.,2,5.91,424
+다툼·화해,I forgive you.,2,4.25,136
+다툼·화해,That's not what I said.,4,5.77,11
+다툼·화해,I was wrong.,3,5.37,138
+다툼·화해,Don't be mad.,3,4.72,9
+다툼·화해,I'm not mad at you.,4,4.73,16
+다툼·화해,Let's start over.,2,5.45,88
+다툼·화해,I see your point.,3,5.4,8
+다툼·화해,We're good.,2,5.32,23
+다툼·화해,I'm sorry I hurt you.,4,4.74,4
+위로·응원,I'm here for you.,3,5.89,63
+위로·응원,You've got this.,3,5.06,1
+위로·응원,That sucks.,2,4.38,8
+위로·응원,Take care of yourself.,4,5.05,80
+위로·응원,Get some rest.,3,5.15,82
+위로·응원,Feel better soon.,2,5.41,255
+위로·응원,It's going to be okay.,4,5.0,13
+위로·응원,I'm proud of you.,3,4.78,126
+위로·응원,Hang in there.,3,4.59,21
+위로·응원,Do you want to talk about it?,3,5.37,371
+위로·응원,You did your best.,3,5.55,6
+위로·응원,I've got your back.,3,5.61,5
+위로·응원,Sleep well.,2,5.01,147
+위로·응원,Be safe.,2,5.06,361
+위로·응원,I believe in you.,3,5.49,27
+위로·응원,Don't be so hard on yourself.,3,5.1,11
+위로·응원,Let me know if you need anything.,4,5.36,45
+칭찬·리액션,You look amazing.,2,5.02,16
+칭찬·리액션,That's so sweet.,2,4.9,64
+칭찬·리액션,Aww,1,3.67,14
+칭찬·리액션,That's adorable.,1,4.06,158
+칭찬·리액션,I love that!,2,5.79,151
+칭찬·리액션,You're so cute.,2,4.64,166
+칭찬·리액션,Good for you!,3,6.02,133
+칭찬·리액션,That's hilarious.,1,4.27,90
+칭찬·리액션,I'm so happy for you.,3,5.33,35
+칭찬·리액션,Looks delicious!,2,4.3,18
+칭찬·리액션,That's awesome.,2,4.87,7
+칭찬·리액션,You're so talented.,2,4.3,10
+칭찬·리액션,You made my day.,3,5.59,7
+칭찬·리액션,I'm obsessed.,1,4.08,325
+칭찬·리액션,Love that for you.,4,5.74,0
+칭찬·리액션,You're glowing.,1,3.75,74
+칭찬·리액션,That's so you.,2,6.39,327
+되묻기·문화 차이,What do you mean?,4,5.41,168
+되묻기·문화 차이,How do you say this in English?,4,5.62,142
+되묻기·문화 차이,Can you say that again?,3,5.47,55
+되묻기·문화 차이,Could you speak a little slower?,4,3.94,5
+되묻기·문화 차이,Is that a thing in your country?,4,5.67,0
+되묻기·문화 차이,I'm still learning English.,2,4.88,36
+되묻기·문화 차이,Did I say that right?,3,5.61,4
+되묻기·문화 차이,Correct me if I'm wrong.,5,4.66,5
+되묻기·문화 차이,Is that rude?,3,4.25,0
+되묻기·문화 차이,"In Korea, we...",2,4.65,36
+되묻기·문화 차이,Let me teach you some Korean.,4,4.26,0
+되묻기·문화 차이,That's so interesting.,2,4.99,40
+되묻기·문화 차이,What's that called?,3,5.05,1
+되묻기·문화 차이,It gets lost in translation.,3,4.35,7
+되묻기·문화 차이,I didn't catch that.,3,4.8,4
+되묻기·문화 차이,I'm nervous to meet your parents.,3,4.93,3
+되묻기·문화 차이,What does that word mean?,5,4.97,3

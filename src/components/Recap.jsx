@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { useApp } from '../context'
 import { recordError } from '../lib/errorLog'
 import { shareImageFile } from '../lib/native'
-import { moodOf, moodTone } from '../lib/moods'
+import { moodMeaning, moodOf, moodTone, moodWord } from '../lib/moods'
 import { isNative } from '../lib/platform'
 import { RECAP_SIZE, drawRecap, saveCanvas } from '../lib/recapImage'
 import { weeklyRecap } from '../lib/usage'
 
 // 이번 주(오늘 포함 7일) 돌아보기: 모은 말, 일기에 쓴 내 표현, 기분. 이미지로 저장해 친구에게 보낼 수 있다.
 export default function RecapCard({ today }) {
-  const { t, notify, records, nativeLang } = useApp()
+  const { t, notify, records, nativeLang, learningLang } = useApp()
   const [saving, setSaving] = useState(false)
   const recap = weeklyRecap(records, today)
   const locale = nativeLang === 'ko' ? 'ko-KR' : 'en-US'
@@ -42,7 +42,7 @@ export default function RecapCard({ today }) {
         used: recap.used,
         usedEmpty: t('recapUsedEmpty'),
         moodTitle: t('recapMoodTitle'),
-        moods: recap.moods.map((item) => ({ day: dayLabel(item.day), mood: item.mood, tone: moodTone(item.mood) })),
+        moods: recap.moods.map((item) => ({ day: dayLabel(item.day), mood: moodWord(moodOf(item.mood), learningLang), tone: moodTone(item.mood) })),
         moodEmpty: t('recapMoodEmpty'),
         footer: `Daily English · ${t('subtitle')}`,
       })
@@ -83,7 +83,7 @@ export default function RecapCard({ today }) {
         {recap.used.length > 0 ? (
           <ul className="recap-chips">
             {recap.used.map((text) => (
-              <li key={text} lang="en">
+              <li key={text} lang={learningLang}>
                 {text}
               </li>
             ))}
@@ -97,8 +97,8 @@ export default function RecapCard({ today }) {
           <ul className="recap-moods">
             {recap.moods.map((item, index) => (
               <li key={`${item.day}-${index}`} className={`mood-${moodTone(item.mood)}`}>
-                <small>{dayLabel(item.day)}</small> <b lang="en">{item.mood}</b>
-                {nativeLang === 'ko' && <small> {moodOf(item.mood).ko}</small>}
+                <small>{dayLabel(item.day)}</small> <b lang={learningLang}>{moodWord(moodOf(item.mood), learningLang)}</b>
+                <small> {moodMeaning(moodOf(item.mood), learningLang)}</small>
               </li>
             ))}
           </ul>

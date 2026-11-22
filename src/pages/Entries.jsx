@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { hasPackData } from '../lib/packs'
 import Field from '../components/Field'
 import PackMeaningHint from '../components/PackMeaningHint'
 import PageHead from '../components/PageHead'
@@ -77,7 +78,7 @@ export default function Entries({ type }) {
             {t(config.quiz)}
           </button>
           <span className="muted">{t('reviewDueHere', { count: dueCount })}</span>
-          {learningLang === 'en' && (
+          {hasPackData(type === 'word' ? 'words' : 'expressions', learningLang) && (
             <button className="text-button" onClick={() => go(type === 'word' ? 'packs-words' : 'packs')}>
               {t(type === 'word' ? 'packsBrowseWords' : 'packsBrowse')}
             </button>

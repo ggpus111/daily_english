@@ -9,8 +9,8 @@ import { activityDays, dayKey, lastSevenDays, streak } from '../lib/activity'
 import { findPhrase } from '../lib/blank'
 import { languageName } from '../lib/i18n'
 import { usePackData } from '../hooks/usePackData'
-import { todayItem } from '../lib/packs'
-import { moodOf, moodTone } from '../lib/moods'
+import { hasPackData, todayItem } from '../lib/packs'
+import { moodMeaning, moodOf, moodTone, moodWord } from '../lib/moods'
 import { readSettings, todayProgress } from '../lib/reminders'
 import { dueItems } from '../lib/review'
 import { moodsByDay } from '../lib/usage'
@@ -161,7 +161,7 @@ export default function Home() {
                   </span>
                   <span className="sr-only">
                     {fullDate.format(day.date)} {t(day.active ? 'dayActive' : 'dayRest')}
-                    {day.mood && ` · ${t('moodOfDay', { mood: day.mood })}`}
+                    {day.mood && ` · ${t('moodOfDay', { mood: moodWord(moodOf(day.mood), learningLang) })}`}
                   </span>
                 </li>
               ))}
@@ -170,8 +170,8 @@ export default function Home() {
               <p className="week-moods" aria-hidden="true">
                 {weekMoods.map((day) => (
                   <span key={day.date.toISOString()} className={`week-mood mood-${moodTone(day.mood)}`}>
-                    {weekday.format(day.date)} <b lang="en">{day.mood}</b>
-                    {nativeLang === 'ko' && <small> {moodOf(day.mood).ko}</small>}
+                    {weekday.format(day.date)} <b lang={learningLang}>{moodWord(moodOf(day.mood), learningLang)}</b>
+                    <small> {moodMeaning(moodOf(day.mood), learningLang)}</small>
                   </span>
                 ))}
               </p>
@@ -223,7 +223,7 @@ export default function Home() {
         </div>
       </section>
 
-      {learningLang === 'en' && (
+      {hasPackData('expressions', learningLang) && (
         <section className="home-section" aria-labelledby="today-expression-title">
           <div className="section-heading">
             <div>
@@ -242,7 +242,7 @@ export default function Home() {
       <RecapCard today={today} />
 
       <section className="quote-panel" aria-label="A note to yourself">
-        <Mascot size={46} mood="joy" />
+        <Mascot size={72} mood="joy" />
         <div>
           <p className="eyebrow">A NOTE TO YOURSELF</p>
           <p className="quote-text" lang="en">

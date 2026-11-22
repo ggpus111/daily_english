@@ -7,13 +7,13 @@ import SaveEntryButton from './SaveEntryButton'
 
 // 꾸러미 항목 한 개(표현 또는 단어): 영어, 뜻, 예문, 팁, 얼마나 자주 쓰이는지, 듣기와 담기.
 export default function ExpressionCard({ item, kind = 'expression', headingLevel = 3 }) {
-  const { t } = useApp()
+  const { t, learningLang } = useApp()
   const Heading = `h${headingLevel}`
 
   return (
     <article className="expression-card">
       <div className="expression-head">
-        <Heading className="expression-text" lang="en">
+        <Heading className="expression-text" lang={learningLang}>
           {item.text}
         </Heading>
         {item.perMillion !== undefined && (
@@ -21,10 +21,11 @@ export default function ExpressionCard({ item, kind = 'expression', headingLevel
             {t(`frequency.${frequencyLevel(item.perMillion)}`)}
           </span>
         )}
+        {item.texting && <span className="frequency common">{t('frequency.texting')}</span>}
       </div>
       <p className="expression-meaning">{item.meaning}</p>
       <p className="expression-example">
-        <span lang="en">{item.example}</span>
+        <span lang={learningLang}>{item.example}</span>
         <span className="muted">{item.exampleKo}</span>
         {item.tatoeba && (
           <a
@@ -50,13 +51,13 @@ export default function ExpressionCard({ item, kind = 'expression', headingLevel
             type="button"
             className="text-button"
             aria-label={t('listenTo', { text: item.text })}
-            onClick={() => speak(item.example === item.text ? item.text : `${item.text}. ${item.example}`)}
+            onClick={() => speak(item.example === item.text ? item.text : `${item.text}. ${item.example}`, learningLang)}
           >
             {t('listen')}
           </button>
         )}
         <SaveEntryButton kind={kind} entry={toEntry(item)} label="packSave" />
-        <span className="tiny-note">{t('packUsage', { count: item.sentences.toLocaleString() })}</span>
+        {item.sentences !== undefined && <span className="tiny-note">{t('packUsage', { count: item.sentences.toLocaleString() })}</span>}
       </div>
     </article>
   )

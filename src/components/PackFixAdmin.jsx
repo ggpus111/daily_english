@@ -11,7 +11,7 @@ const MAX_RESULTS = 20
 // 관리자 페이지의 "꾸러미 고치기": 신고로 받은 틀린 뜻·예문을 앱 업데이트 없이 바로 고치고, 맞지 않는 항목은 숨긴다.
 // 고친 내용은 서버(pack_fixes)에 저장되고, 사용자 앱은 다음에 꾸러미를 열 때 받는다.
 export default function PackFixAdmin() {
-  const { t, notify } = useApp()
+  const { t, notify, learningLang } = useApp()
   const [kind, setKind] = useState('words')
   const [base, setBase] = useState({})
   const [fixes, setFixes] = useState(null)
@@ -22,7 +22,7 @@ export default function PackFixAdmin() {
 
   useEffect(() => {
     let alive = true
-    Promise.all([loadBasePackData(kind), listPackFixes(kind)]).then(
+    Promise.all([loadBasePackData(kind, learningLang), listPackFixes(kind)]).then(
       ([data, result]) => {
         if (!alive) return
         setBase((current) => ({ ...current, [kind]: data }))
@@ -37,7 +37,7 @@ export default function PackFixAdmin() {
     return () => {
       alive = false
     }
-  }, [kind, t, refresh])
+  }, [kind, t, refresh, learningLang])
 
   const items = base[kind]?.items
   const fixById = useMemo(() => new Map((fixes ?? []).map((fix) => [fix.item_id, fix])), [fixes])
@@ -59,7 +59,7 @@ export default function PackFixAdmin() {
       notify(t('saveError', { message: errorMessage(result.error, t) }))
       return
     }
-    forgetPackData(kind)
+    forgetPackData(kind, learningLang)
     notify(t(message))
     setEditing(null)
     setRefresh((value) => value + 1)
@@ -137,11 +137,11 @@ export default function PackFixAdmin() {
 }
 
 function PackRow({ item, fix, onEdit }) {
-  const { t } = useApp()
+  const { t, learningLang } = useApp()
   return (
     <li className="admin-item pack-fix-row">
       <div>
-        <strong lang="en">{item.text}</strong> <span className="muted">{fix?.meaning ?? item.meaning}</span>
+        <strong lang={learningLang}>{item.text}</strong> <span className="muted">{fix?.meaning ?? item.meaning}</span>
         {fix && (
           <span className={`report-status ${fix.hidden ? 'status-wontfix' : 'status-fixed'}`}>
             {t(fix.hidden ? 'adminPackHiddenBadge' : 'adminPackFixedBadge')}
@@ -156,7 +156,7 @@ function PackRow({ item, fix, onEdit }) {
 }
 
 function PackFixForm({ kind, item, fix, onCancel, onSave, onReset }) {
-  const { t } = useApp()
+  const { t, learningLang } = useApp()
   const initial = Object.fromEntries(Object.entries(FIX_FIELDS).map(([field, column]) => [field, fix?.[column] ?? item[field] ?? '']))
   const [values, setValues] = useState({ ...initial, hidden: fix?.hidden ?? false, note: fix?.note ?? '' })
   const [saving, setSaving] = useState(false)
@@ -179,7 +179,7 @@ function PackFixForm({ kind, item, fix, onCancel, onSave, onReset }) {
       }}
     >
       <h3 id="pack-fix-title">
-        <span lang="en">{item.text}</span> <small className="muted">#{item.id}</small>
+        <span lang={learningLang}>{item.text}</span> <small className="muted">#{item.id}</small>
       </h3>
       {fields.map((field) => (
         <div className="field" key={field}>

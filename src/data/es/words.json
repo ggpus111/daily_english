@@ -1,0 +1,2438 @@
+{
+ "source": {
+  "corpus": "Tatoeba (tatoeba.org) spa sentences, CC BY 2.0 FR",
+  "sentences": 443370,
+  "note": "단어는 연인·친구와의 대화에서 쓰는 말을 사람이 골랐고(analyze_words.py로 점검), 뜻은 Daily English가 직접 썼습니다(AI 도움)."
+ },
+ "levels": [
+  {
+   "id": "love",
+   "title": {
+    "ko": "연애·애정",
+    "en": "Love & romance"
+   },
+   "items": [
+    {
+     "id": "es-w-love001",
+     "word": "conocer",
+     "meaning": "알다, 사귀다",
+     "sentences": 262,
+     "example": "¡Todos te quieren conocer! ¡Eres famosa!",
+     "exampleKo": "다들 너를 알고 싶어 해! 너 유명해!",
+     "tatoeba": 1862083
+    },
+    {
+     "id": "es-w-love002",
+     "word": "querer",
+     "meaning": "원하다, 사랑하다",
+     "sentences": 170,
+     "example": "Yo voy a querer un vino blanco, por favor.",
+     "exampleKo": "저는 화이트 와인으로 할게요.",
+     "tatoeba": 12874791
+    },
+    {
+     "id": "es-w-love003",
+     "word": "amar",
+     "meaning": "사랑하다",
+     "sentences": 135,
+     "example": "¿Cómo puede el amor amar al amor?",
+     "exampleKo": "사랑이 사랑을 어떻게 사랑할 수 있니?",
+     "tatoeba": 888550
+    },
+    {
+     "id": "es-w-love004",
+     "word": "gustar",
+     "meaning": "좋아하다",
+     "sentences": 86,
+     "example": "Estaba seguro de que no te iba a gustar.",
+     "exampleKo": "네 마음에 안 들 거라고 확신했어.",
+     "tatoeba": 9939051
+    },
+    {
+     "id": "es-w-love005",
+     "word": "besar",
+     "meaning": "키스하다",
+     "sentences": 62,
+     "example": "No te voy a besar si no quieres.",
+     "exampleKo": "네가 싫다면 키스 안 할게.",
+     "tatoeba": 2102181
+    },
+    {
+     "id": "es-w-love006",
+     "word": "abrazar",
+     "meaning": "안다",
+     "sentences": 19,
+     "example": "Quiero abrazarte fuerte.",
+     "exampleKo": "너를 꼭 안아 주고 싶어."
+    },
+    {
+     "id": "es-w-love007",
+     "word": "dulce",
+     "meaning": "달콤한, 다정한",
+     "sentences": 280,
+     "example": "Qué dulce eres conmigo.",
+     "exampleKo": "넌 나한테 정말 다정해."
+    },
+    {
+     "id": "es-w-love008",
+     "word": "pareja",
+     "meaning": "연인, 짝",
+     "sentences": 181,
+     "example": "Mi pareja y yo vivimos juntos.",
+     "exampleKo": "내 연인과 나는 같이 살아."
+    },
+    {
+     "id": "es-w-love009",
+     "word": "novio (novia)",
+     "meaning": "남자친구, 여자친구",
+     "sentences": 324,
+     "example": "¿Serías mi novio?",
+     "exampleKo": "내 남자친구가 되어줄래?",
+     "tatoeba": 2857750
+    },
+    {
+     "id": "es-w-love010",
+     "word": "boda",
+     "meaning": "결혼식",
+     "sentences": 182,
+     "example": "La mayoría de las mujeres sueñan con una boda espléndida.",
+     "exampleKo": "여자들은 대부분 화려한 결혼식을 꿈꿔.",
+     "tatoeba": 2864080
+    },
+    {
+     "id": "es-w-love011",
+     "word": "cita",
+     "meaning": "데이트, 약속",
+     "sentences": 207,
+     "example": "Tengo una cita esta noche.",
+     "exampleKo": "오늘 밤 데이트가 있어."
+    },
+    {
+     "id": "es-w-love012",
+     "word": "viento",
+     "meaning": "바람",
+     "sentences": 441,
+     "example": "¿Hace mucho viento en tu pueblo en otoño?",
+     "exampleKo": "너네 마을은 가을에 바람이 많이 불어?",
+     "tatoeba": 11560007
+    },
+    {
+     "id": "es-w-love013",
+     "word": "confesar",
+     "meaning": "고백하다",
+     "sentences": 38,
+     "example": "Tengo que confesarte algo.",
+     "exampleKo": "너한테 고백할 게 있어."
+    },
+    {
+     "id": "es-w-love014",
+     "word": "enamorarse",
+     "meaning": "사랑에 빠지다",
+     "sentences": 10,
+     "example": "Enamorarse es una cosa, casarse es otra.",
+     "exampleKo": "사랑에 빠지는 것과 결혼하는 것은 달라.",
+     "tatoeba": 1001401
+    },
+    {
+     "id": "es-w-love015",
+     "word": "romper",
+     "meaning": "헤어지다",
+     "sentences": 135,
+     "example": "Creo que deberías romper con tu novio.",
+     "exampleKo": "네가 남자친구랑 헤어져야 할 것 같아.",
+     "tatoeba": 864267
+    },
+    {
+     "id": "es-w-love016",
+     "word": "aniversario",
+     "meaning": "기념일",
+     "sentences": 38,
+     "example": "Hoy es el aniversario de bodas de mis padres.",
+     "exampleKo": "오늘은 부모님 결혼기념일이야.",
+     "tatoeba": 3037608
+    },
+    {
+     "id": "es-w-love017",
+     "word": "compromiso",
+     "meaning": "약혼, 약속",
+     "sentences": 85,
+     "example": "Me gustaría, pero ya tengo un compromiso.",
+     "exampleKo": "그러고 싶은데 이미 약속이 있어.",
+     "tatoeba": 4988698
+    },
+    {
+     "id": "es-w-love018",
+     "word": "anillo",
+     "meaning": "반지",
+     "sentences": 130,
+     "example": "Me regaló un anillo precioso.",
+     "exampleKo": "그가 예쁜 반지를 선물했어."
+    },
+    {
+     "id": "es-w-love019",
+     "word": "tomar la mano",
+     "meaning": "손을 잡다",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-love020",
+     "word": "celos",
+     "meaning": "질투",
+     "sentences": 56,
+     "example": "Tenía celos de mi hermano.",
+     "exampleKo": "나는 내 형제를 질투했어.",
+     "tatoeba": 1173836
+    },
+    {
+     "id": "es-w-love021",
+     "word": "infidelidad",
+     "meaning": "바람",
+     "sentences": 10,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-love022",
+     "word": "consentir",
+     "meaning": "응석을 받아 주다",
+     "sentences": 6,
+     "example": "Me gusta consentir a mi pareja.",
+     "exampleKo": "연인을 아껴 주는 게 좋아."
+    },
+    {
+     "id": "es-w-love023",
+     "word": "destino",
+     "meaning": "운명",
+     "sentences": 196,
+     "example": "Nuestro destino depende de tus decisiones.",
+     "exampleKo": "우리 운명은 네 결정에 달려 있어.",
+     "tatoeba": 750416
+    },
+    {
+     "id": "es-w-love024",
+     "word": "milagro",
+     "meaning": "기적",
+     "sentences": 72,
+     "example": "Es un milagro que yo pudiera vencer el cáncer.",
+     "exampleKo": "내가 암을 이겨 낸 건 기적이야.",
+     "tatoeba": 343195
+    },
+    {
+     "id": "es-w-love025",
+     "word": "cariño",
+     "meaning": "애정, 자기",
+     "sentences": 100,
+     "example": "Gracias, cariño.",
+     "exampleKo": "고마워, 자기야."
+    },
+    {
+     "id": "es-w-love026",
+     "word": "dulzura",
+     "meaning": "다정함",
+     "sentences": 9,
+     "example": "Kim sonrió con dulzura.",
+     "exampleKo": "킴은 다정하게 웃었어.",
+     "tatoeba": 2042123
+    },
+    {
+     "id": "es-w-love027",
+     "word": "romántico (romántica)",
+     "meaning": "로맨틱한",
+     "sentences": 37,
+     "example": "¡Eso es muy romántico!",
+     "exampleKo": "그거 너무 낭만적이다!",
+     "tatoeba": 2881198
+    },
+    {
+     "id": "es-w-love028",
+     "word": "sorpresa",
+     "meaning": "서프라이즈",
+     "sentences": 199,
+     "example": "Para mi sorpresa, él se ganó el premio.",
+     "exampleKo": "놀랍게도 그가 상을 탔어.",
+     "tatoeba": 2041126
+    },
+    {
+     "id": "es-w-love029",
+     "word": "compañía",
+     "meaning": "동반, 곁에 있음",
+     "sentences": 384,
+     "example": "Él fue echado de la compañía por flojo.",
+     "exampleKo": "그는 게으름 때문에 회사에서 짤렸다.",
+     "tatoeba": 2880161
+    },
+    {
+     "id": "es-w-love030",
+     "word": "valorar",
+     "meaning": "소중히 여기다",
+     "sentences": 11,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-love031",
+     "word": "recién casados",
+     "meaning": "신혼부부",
+     "sentences": 12,
+     "example": "¿Cuántos regalos reciben los recién casados?",
+     "exampleKo": "신혼부부는 선물을 얼마나 받아?",
+     "tatoeba": 2930701
+    },
+    {
+     "id": "es-w-love032",
+     "word": "abrazo",
+     "meaning": "포옹",
+     "sentences": 55,
+     "example": "No abrazo a mis hijos tan a menudo como debería.",
+     "exampleKo": "나는 아이들을 마땅히 안아 줘야 할 만큼 자주 안아 주지 못해.",
+     "tatoeba": 13884208
+    },
+    {
+     "id": "es-w-love033",
+     "word": "beso",
+     "meaning": "키스",
+     "sentences": 162,
+     "example": "Un beso sin bigote es como una sopa sin sal.",
+     "exampleKo": "수염 없는 키스는 소금 없는 국과 같다.",
+     "tatoeba": 1068544
+    },
+    {
+     "id": "es-w-love034",
+     "word": "susurrar",
+     "meaning": "속삭이다",
+     "sentences": 3,
+     "example": "Quiero susurrarte algo al oído.",
+     "exampleKo": "네 귀에 대고 속삭이고 싶어."
+    },
+    {
+     "id": "es-w-love035",
+     "word": "mirada",
+     "meaning": "눈빛",
+     "sentences": 184,
+     "example": "Sentí su mirada en mi espalda.",
+     "exampleKo": "그녀의 시선을 등 뒤에서 느꼈다.",
+     "tatoeba": 3252134
+    },
+    {
+     "id": "es-w-love036",
+     "word": "ternura",
+     "meaning": "다정함",
+     "sentences": 14,
+     "example": "Ella es la ternura personificada.",
+     "exampleKo": "그녀는 다정함 그 자체야.",
+     "tatoeba": 994917
+    }
+   ]
+  },
+  {
+   "id": "feel",
+   "title": {
+    "ko": "기분·마음",
+    "en": "Feelings"
+   },
+   "items": [
+    {
+     "id": "es-w-feel001",
+     "word": "corazón",
+     "meaning": "마음, 심장",
+     "sentences": 928,
+     "example": "Esperamos la visita de nuestro tío con el corazón alegre.",
+     "exampleKo": "우리는 삼촌의 방문을 기쁜 마음으로 기다리고 있다.",
+     "tatoeba": 3119663
+    },
+    {
+     "id": "es-w-feel002",
+     "word": "escuchar",
+     "meaning": "귀 기울여 듣다",
+     "sentences": 446,
+     "example": "No quiero escuchar tus quejas nunca más.",
+     "exampleKo": "네 불평은 더 이상 듣고 싶지 않아.",
+     "tatoeba": 1076499
+    },
+    {
+     "id": "es-w-feel003",
+     "word": "reír",
+     "meaning": "웃다",
+     "sentences": 165,
+     "example": "El noventa y nueve siempre me hace reír.",
+     "exampleKo": "99는 늘 나를 웃게 해.",
+     "tatoeba": 859677
+    },
+    {
+     "id": "es-w-feel004",
+     "word": "llorar",
+     "meaning": "울다",
+     "sentences": 424,
+     "example": "Ay, parece que va a llorar.",
+     "exampleKo": "아, 울 것 같아.",
+     "tatoeba": 4952595
+    },
+    {
+     "id": "es-w-feel005",
+     "word": "preocuparse",
+     "meaning": "걱정하다",
+     "sentences": 67,
+     "example": "No te preocupes, todo saldrá bien.",
+     "exampleKo": "걱정 마, 다 잘될 거야."
+    },
+    {
+     "id": "es-w-feel006",
+     "word": "feliz",
+     "meaning": "행복한",
+     "sentences": 1275,
+     "example": "Yo quiero vivir una vida feliz.",
+     "exampleKo": "나는 행복한 삶을 살고 싶어요.",
+     "tatoeba": 1192070
+    },
+    {
+     "id": "es-w-feel007",
+     "word": "cansado (cansada)",
+     "meaning": "피곤한",
+     "sentences": 613,
+     "example": "Estoy cansado, más que por hacer calor, por que está humedo.",
+     "exampleKo": "내가 피곤한 건 더워서라기 보다 습해서야.",
+     "tatoeba": 2894401
+    },
+    {
+     "id": "es-w-feel008",
+     "word": "invierno",
+     "meaning": "겨울",
+     "sentences": 449,
+     "example": "¿Qué día empiezan las vacaciones de invierno?",
+     "exampleKo": "겨울방학은 며칠부터야?",
+     "tatoeba": 4708556
+    },
+    {
+     "id": "es-w-feel009",
+     "word": "felicidad",
+     "meaning": "행복",
+     "sentences": 292,
+     "example": "Contigo siento mucha felicidad.",
+     "exampleKo": "너랑 있으면 행복을 크게 느껴."
+    },
+    {
+     "id": "es-w-feel010",
+     "word": "ansiedad",
+     "meaning": "불안",
+     "sentences": 22,
+     "example": "Espero un día curar mi ansiedad social.",
+     "exampleKo": "언젠가 내 사회 불안을 극복하길 바라.",
+     "tatoeba": 1515297
+    },
+    {
+     "id": "es-w-feel011",
+     "word": "nervios",
+     "meaning": "긴장",
+     "sentences": 58,
+     "example": "Es un lío total y me pone de los nervios.",
+     "exampleKo": "완전 엉망이라 신경이 곤두서.",
+     "tatoeba": 856988
+    },
+    {
+     "id": "es-w-feel012",
+     "word": "emoción",
+     "meaning": "감동, 설렘",
+     "sentences": 51,
+     "example": "Me quedé mudo de la emoción.",
+     "exampleKo": "감동해서 말을 잃었어.",
+     "tatoeba": 2267133
+    },
+    {
+     "id": "es-w-feel013",
+     "word": "arrepentirse",
+     "meaning": "후회하다",
+     "sentences": 23,
+     "example": "No sirve de nada arrepentirse ahora.",
+     "exampleKo": "지금 후회해 봐야 소용없어.",
+     "tatoeba": 1630446
+    },
+    {
+     "id": "es-w-feel014",
+     "word": "dudar",
+     "meaning": "망설이다",
+     "sentences": 31,
+     "example": "Perdóname por dudar.",
+     "exampleKo": "의심해서 미안.",
+     "tatoeba": 4952603
+    },
+    {
+     "id": "es-w-feel015",
+     "word": "sonrisa",
+     "meaning": "미소",
+     "sentences": 242,
+     "example": "Ella nos cautivó a todos con su sonrisa.",
+     "exampleKo": "그녀의 미소가 우리 모두를 사로잡았어.",
+     "tatoeba": 1606701
+    },
+    {
+     "id": "es-w-feel016",
+     "word": "lágrima",
+     "meaning": "눈물",
+     "sentences": 24,
+     "example": "Me miró con una lágrima en su ojo.",
+     "exampleKo": "그가 눈에 눈물을 머금고 나를 봤어.",
+     "tatoeba": 13273765
+    },
+    {
+     "id": "es-w-feel017",
+     "word": "expresión",
+     "meaning": "표정",
+     "sentences": 136,
+     "example": "Me miró con una expresión extraña.",
+     "exampleKo": "그가 이상한 표정으로 나를 봤어.",
+     "tatoeba": 2724467
+    },
+    {
+     "id": "es-w-feel018",
+     "word": "vergüenza",
+     "meaning": "부끄러움",
+     "sentences": 211,
+     "example": "No tengas vergüenza al entrar a mi casa.",
+     "exampleKo": "우리 집에 들어올 때 어려워하지 마.",
+     "tatoeba": 998955
+    },
+    {
+     "id": "es-w-feel019",
+     "word": "calmarse",
+     "meaning": "진정하다",
+     "sentences": 6,
+     "example": "El dolor ha empezado a calmarse ahora.",
+     "exampleKo": "통증이 이제 가라앉기 시작했어.",
+     "tatoeba": 1280119
+    },
+    {
+     "id": "es-w-feel020",
+     "word": "sorprenderse",
+     "meaning": "놀라다",
+     "sentences": 10,
+     "example": "Sorprenderse, extrañarse, es comenzar a entender.",
+     "exampleKo": "놀라워 하고, 궁금해 하는 것이 이해의 시작이다.",
+     "tatoeba": 2811
+    },
+    {
+     "id": "es-w-feel021",
+     "word": "quedar bien",
+     "meaning": "잘 어울리다",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-feel022",
+     "word": "cómodo (cómoda)",
+     "meaning": "편안한",
+     "sentences": 95,
+     "example": "Me siento cómodo en su compañía (de él)",
+     "exampleKo": "그와 함께 있으면 편해.",
+     "tatoeba": 2864622
+    },
+    {
+     "id": "es-w-feel023",
+     "word": "conocido (conocida)",
+     "meaning": "익숙한",
+     "sentences": 288,
+     "example": "No habrá ningún conocido.",
+     "exampleKo": "아는분이 없을겁니다.",
+     "tatoeba": 3159260
+    },
+    {
+     "id": "es-w-feel024",
+     "word": "ilusión",
+     "meaning": "설렘, 기대",
+     "sentences": 75,
+     "example": "Tengo mucha ilusión por el viaje.",
+     "exampleKo": "여행이 너무 기대돼."
+    }
+   ]
+  },
+  {
+   "id": "bond",
+   "title": {
+    "ko": "관계·위로·부탁",
+    "en": "People & support"
+   },
+   "items": [
+    {
+     "id": "es-w-bond001",
+     "word": "hermano (hermana)",
+     "meaning": "형제, 자매",
+     "sentences": 1422,
+     "example": "El niño que está nadando es mi hermano menor.",
+     "exampleKo": "수영하고 있는 소년은 내 남동생이다.",
+     "tatoeba": 608650
+    },
+    {
+     "id": "es-w-bond002",
+     "word": "ayudar",
+     "meaning": "돕다",
+     "sentences": 710,
+     "example": "No te puedo ayudar porque estoy ocupado.",
+     "exampleKo": "바빠서 널 도와줄 수 없어.",
+     "tatoeba": 531141
+    },
+    {
+     "id": "es-w-bond003",
+     "word": "manzana",
+     "meaning": "사과",
+     "sentences": 385,
+     "example": "Mayuko le dio una mascada a mi manzana.",
+     "exampleKo": "마유코는 내 사과를 한 입 베어물었다.",
+     "tatoeba": 1702897
+    },
+    {
+     "id": "es-w-bond004",
+     "word": "confianza",
+     "meaning": "신뢰",
+     "sentences": 186,
+     "example": "Mis ministros tienen toda mi confianza.",
+     "exampleKo": "내 장관들에게 전적인 신뢰를 보내.",
+     "tatoeba": 3062537
+    },
+    {
+     "id": "es-w-bond005",
+     "word": "honesto (honesta)",
+     "meaning": "정직한",
+     "sentences": 156,
+     "example": "Eres honesto como para admitir tu error.",
+     "exampleKo": "잘못을 인정할 만큼 넌 정직해.",
+     "tatoeba": 1406633
+    },
+    {
+     "id": "es-w-bond006",
+     "word": "sincero (sincera)",
+     "meaning": "솔직한",
+     "sentences": 71,
+     "example": "Para ser sincero, yo no soy tu padre.",
+     "exampleKo": "사실, 난 너의 아버지가 아니란다.",
+     "tatoeba": 744875
+    },
+    {
+     "id": "es-w-bond007",
+     "word": "paciencia",
+     "meaning": "인내",
+     "sentences": 239,
+     "example": "Adquirir un idioma extranjero requiere paciencia.",
+     "exampleKo": "외국어 습득에는 인내가 필요하다.",
+     "tatoeba": 3232664
+    },
+    {
+     "id": "es-w-bond008",
+     "word": "consolar",
+     "meaning": "위로하다",
+     "sentences": 14,
+     "example": "Nadie te puede consolar de esa pena, salvo tú mismo.",
+     "exampleKo": "그 슬픔은 너 자신 말고는 누구도 위로할 수 없어.",
+     "tatoeba": 10652306
+    },
+    {
+     "id": "es-w-bond009",
+     "word": "animar",
+     "meaning": "격려하다",
+     "sentences": 8,
+     "example": "Vamos a animar a los jugadores.",
+     "exampleKo": "선수들을 응원하자.",
+     "tatoeba": 2259029
+    },
+    {
+     "id": "es-w-bond010",
+     "word": "apoyar",
+     "meaning": "지지하다",
+     "sentences": 35,
+     "example": "Todo depende de si nos van a apoyar.",
+     "exampleKo": "그들이 우리를 지지할지에 달렸어.",
+     "tatoeba": 4351259
+    },
+    {
+     "id": "es-w-bond011",
+     "word": "agradecer",
+     "meaning": "감사하다",
+     "sentences": 31,
+     "example": "De hecho, te debería agradecer por esto.",
+     "exampleKo": "사실 이것 때문에 너한테 고마워해야 해.",
+     "tatoeba": 1508914
+    },
+    {
+     "id": "es-w-bond012",
+     "word": "disculparse",
+     "meaning": "사과하다",
+     "sentences": 30,
+     "example": "No hay necesidad de disculparse; yo entiendo.",
+     "exampleKo": "사과할 필요 없어, 이해해.",
+     "tatoeba": 3301977
+    },
+    {
+     "id": "es-w-bond013",
+     "word": "perdonar",
+     "meaning": "용서하다",
+     "sentences": 57,
+     "example": "No te puedo perdonar lo que has hecho.",
+     "exampleKo": "네가 한 일은 용서할 수 없어.",
+     "tatoeba": 4482614
+    },
+    {
+     "id": "es-w-bond014",
+     "word": "discutir",
+     "meaning": "다투다, 토론하다",
+     "sentences": 157,
+     "example": "Yo quiero que ustedes dos paren de discutir.",
+     "exampleKo": "너희 둘이 싸우는 걸 그만뒀으면 좋겠어.",
+     "tatoeba": 3150303
+    },
+    {
+     "id": "es-w-bond015",
+     "word": "reconciliarse",
+     "meaning": "화해하다",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-bond016",
+     "word": "malentendido",
+     "meaning": "오해",
+     "sentences": 48,
+     "example": "Debe haber un malentendido entre nosotros.",
+     "exampleKo": "우리 사이에 오해가 있는 게 분명해.",
+     "tatoeba": 2781050
+    },
+    {
+     "id": "es-w-bond017",
+     "word": "esperanza",
+     "meaning": "희망",
+     "sentences": 345,
+     "example": "Ni el temor ni la esperanza nos salvará.",
+     "exampleKo": "두려움도 희망도 우리를 구하지 못할 거야.",
+     "tatoeba": 13588323
+    },
+    {
+     "id": "es-w-bond018",
+     "word": "vecino (vecina)",
+     "meaning": "이웃",
+     "sentences": 226,
+     "example": "Portugal tiene sólo un vecino y es España.",
+     "exampleKo": "포르투갈은 이웃이 하나 있고 그건 스페인이다.",
+     "tatoeba": 1044753
+    },
+    {
+     "id": "es-w-bond019",
+     "word": "compañero (compañera)",
+     "meaning": "동료",
+     "sentences": 112,
+     "example": "Mi compañero de habitación está aprendiendo chino.",
+     "exampleKo": "내 룸메이트는 중국어를 공부하고 있어요.",
+     "tatoeba": 1144034
+    },
+    {
+     "id": "es-w-bond020",
+     "word": "invitar",
+     "meaning": "초대하다",
+     "sentences": 55,
+     "example": "Intentaré invitar a Jinsu a cenar como agradecimiento de haberme ayudado.",
+     "exampleKo": "진수 씨가 저를 도와주신 것을 감사하는 뜻으로 저녁에 초대하려고 해요.",
+     "tatoeba": 2861739
+    },
+    {
+     "id": "es-w-bond021",
+     "word": "rechazar",
+     "meaning": "거절하다",
+     "sentences": 39,
+     "example": "Tienes el derecho a rechazar un comunicado.",
+     "exampleKo": "당신에게는 진술을 거부할 권리가 있습니다.",
+     "tatoeba": 3060050
+    },
+    {
+     "id": "es-w-bond022",
+     "word": "pedir",
+     "meaning": "부탁하다, 주문하다",
+     "sentences": 239,
+     "example": "¿Le puedo pedir que me ayude con algo?",
+     "exampleKo": "뭐 하나 도와 달라고 부탁해도 될까요?",
+     "tatoeba": 1715641
+    },
+    {
+     "id": "es-w-bond023",
+     "word": "creer",
+     "meaning": "믿다",
+     "sentences": 550,
+     "example": "No puedo creer que haya pasado esto.",
+     "exampleKo": "설마 일이 이렇게 될 줄이야.",
+     "tatoeba": 3706344
+    },
+    {
+     "id": "es-w-bond024",
+     "word": "sospechar",
+     "meaning": "의심하다",
+     "sentences": 17,
+     "example": "¿Qué te hizo sospechar?",
+     "exampleKo": "뭐 때문에 의심하게 됐어?",
+     "tatoeba": 3481042
+    },
+    {
+     "id": "es-w-bond025",
+     "word": "proteger",
+     "meaning": "보호하다",
+     "sentences": 93,
+     "example": "¿De qué me estáis intentando proteger?",
+     "exampleKo": "나를 무엇으로부터 지키려는 거야?",
+     "tatoeba": 13436184
+    },
+    {
+     "id": "es-w-bond026",
+     "word": "cuidar",
+     "meaning": "돌보다",
+     "sentences": 160,
+     "example": "Tienes que cuidar de tus seres queridos.",
+     "exampleKo": "사랑하는 사람들을 돌봐야 해.",
+     "tatoeba": 568050
+    },
+    {
+     "id": "es-w-bond027",
+     "word": "responsabilidad",
+     "meaning": "책임",
+     "sentences": 115,
+     "example": "Él tiene un gran sentido de la responsabilidad.",
+     "exampleKo": "그는 큰 책임감을 느낀다.",
+     "tatoeba": 970954
+    },
+    {
+     "id": "es-w-bond028",
+     "word": "mejor amigo (mejor amiga)",
+     "meaning": "절친",
+     "sentences": 126,
+     "example": "Puedo ser tu mejor amigo o tu peor enemigo.",
+     "exampleKo": "나는 너의 가장 친한 친구도 가장 나쁜 적도 될 수 있어.",
+     "tatoeba": 2881231
+    },
+    {
+     "id": "es-w-bond029",
+     "word": "mutuo (mutua)",
+     "meaning": "서로의",
+     "sentences": 21,
+     "example": "No te confundas, el sentimiento es mutuo.",
+     "exampleKo": "오해 마, 그 마음은 서로 같아.",
+     "tatoeba": 4651803
+    },
+    {
+     "id": "es-w-bond030",
+     "word": "a solas",
+     "meaning": "단둘이",
+     "sentences": 71,
+     "example": "Me gustaría hablar contigo a solas.",
+     "exampleKo": "너랑 단둘이 얘기하고 싶어.",
+     "tatoeba": 584370
+    },
+    {
+     "id": "es-w-bond031",
+     "word": "depender",
+     "meaning": "의지하다",
+     "sentences": 20,
+     "example": "No deberías depender de tus padres.",
+     "exampleKo": "부모님께 의지하면 안 돼.",
+     "tatoeba": 1141431
+    }
+   ]
+  },
+  {
+   "id": "talk",
+   "title": {
+    "ko": "말·연락",
+    "en": "Talking & messages"
+   },
+   "items": [
+    {
+     "id": "es-w-talk001",
+     "word": "palabra",
+     "meaning": "단어, 말",
+     "sentences": 973,
+     "example": "Creo que esta palabra está mal traducida.",
+     "exampleKo": "이 단어는 잘못 번역된 것 같다.",
+     "tatoeba": 1476942
+    },
+    {
+     "id": "es-w-talk002",
+     "word": "voz",
+     "meaning": "목소리",
+     "sentences": 556,
+     "example": "Ese hombre habló con voz baja.",
+     "exampleKo": "그 남자는 작은 목소리로 말했다.",
+     "tatoeba": 3450321
+    },
+    {
+     "id": "es-w-talk003",
+     "word": "pregunta",
+     "meaning": "질문",
+     "sentences": 828,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-talk004",
+     "word": "respuesta",
+     "meaning": "대답",
+     "sentences": 604,
+     "example": "La respuesta es sí.",
+     "exampleKo": "대답은 그렇다이다.",
+     "tatoeba": 1617839
+    },
+    {
+     "id": "es-w-talk005",
+     "word": "mensaje",
+     "meaning": "메시지",
+     "sentences": 336,
+     "example": "Me pidieron que te entregara un mensaje.",
+     "exampleKo": "너에게 메시지를 전해 달라고 부탁받았어.",
+     "tatoeba": 3389890
+    },
+    {
+     "id": "es-w-talk006",
+     "word": "noticia",
+     "meaning": "소식",
+     "sentences": 380,
+     "example": "Nos sorprendimos al escuchar la noticia.",
+     "exampleKo": "그 소식을 듣고 우리는 놀랐어.",
+     "tatoeba": 1199236
+    },
+    {
+     "id": "es-w-talk007",
+     "word": "explicar",
+     "meaning": "설명하다",
+     "sentences": 199,
+     "example": "Si me dejas hablar, podré explicar todo.",
+     "exampleKo": "말하게 해 주면 다 설명할 수 있어.",
+     "tatoeba": 2990224
+    },
+    {
+     "id": "es-w-talk008",
+     "word": "actitud",
+     "meaning": "태도",
+     "sentences": 144,
+     "example": "Lo que me molesta de él es su actitud.",
+     "exampleKo": "그에게서 거슬리는 건 그 태도야.",
+     "tatoeba": 464517
+    },
+    {
+     "id": "es-w-talk009",
+     "word": "rumor",
+     "meaning": "소문",
+     "sentences": 97,
+     "example": "Hasta donde yo sé, el rumor es falso.",
+     "exampleKo": "내가 아는 한 그 소문은 거짓이야.",
+     "tatoeba": 858771
+    },
+    {
+     "id": "es-w-talk010",
+     "word": "secreto",
+     "meaning": "비밀",
+     "sentences": 453,
+     "example": "Esto es un secreto.",
+     "exampleKo": "이건 비밀이에요.",
+     "tatoeba": 3245149
+    },
+    {
+     "id": "es-w-talk011",
+     "word": "mentira",
+     "meaning": "거짓말",
+     "sentences": 236,
+     "example": "¡Eso es mentira! ¡Yo no voy contra nadie!",
+     "exampleKo": "그건 거짓말이야! 난 누구 편도 안 들어!",
+     "tatoeba": 1138854
+    },
+    {
+     "id": "es-w-talk012",
+     "word": "broma",
+     "meaning": "농담",
+     "sentences": 191,
+     "example": "Te aseguro que esto no es una broma.",
+     "exampleKo": "이건 농담이 아니라고 장담해.",
+     "tatoeba": 2314625
+    },
+    {
+     "id": "es-w-talk013",
+     "word": "en serio",
+     "meaning": "진지하게",
+     "sentences": 263,
+     "example": "En verdad hablo en serio.",
+     "exampleKo": "정말 진심이야!",
+     "tatoeba": 4410023
+    },
+    {
+     "id": "es-w-talk014",
+     "word": "saludo",
+     "meaning": "인사",
+     "sentences": 22,
+     "example": "Te mando un saludo.",
+     "exampleKo": "안부 전할게."
+    },
+    {
+     "id": "es-w-talk015",
+     "word": "acento",
+     "meaning": "억양, 사투리",
+     "sentences": 176,
+     "example": "Odio cuando la gente se burla de mi acento.",
+     "exampleKo": "사람들이 내 억양을 놀릴 때 정말 싫어.",
+     "tatoeba": 9511795
+    },
+    {
+     "id": "es-w-talk016",
+     "word": "pronunciación",
+     "meaning": "발음",
+     "sentences": 44,
+     "example": "Disculpa la mala pronunciación.",
+     "exampleKo": "발음이 나빠서 미안해.",
+     "tatoeba": 4952721
+    },
+    {
+     "id": "es-w-talk017",
+     "word": "traducir",
+     "meaning": "번역하다",
+     "sentences": 348,
+     "example": "No sé cómo traducir esta oración al ruso.",
+     "exampleKo": "난 이 문장을 러시아어로 어떻게 번역해야 할지 몰라.",
+     "tatoeba": 8854321
+    },
+    {
+     "id": "es-w-talk018",
+     "word": "intérprete",
+     "meaning": "통역사",
+     "sentences": 43,
+     "example": "Ella quiere ser intérprete.",
+     "exampleKo": "그녀는 통역사가 되고 싶어 해."
+    },
+    {
+     "id": "es-w-talk019",
+     "word": "conversación",
+     "meaning": "대화",
+     "sentences": 165,
+     "example": "¿Por qué no te unes a la conversación?",
+     "exampleKo": "대화에 같이 끼지 그래?",
+     "tatoeba": 1606496
+    },
+    {
+     "id": "es-w-talk020",
+     "word": "frase",
+     "meaning": "문장",
+     "sentences": 649,
+     "example": "¡Pero está bien esta frase!",
+     "exampleKo": "이 문장은 괜찮은데.",
+     "tatoeba": 3468293
+    },
+    {
+     "id": "es-w-talk021",
+     "word": "gramática",
+     "meaning": "문법",
+     "sentences": 102,
+     "example": "La gramática, a la que odio, me viene bien.",
+     "exampleKo": "싫어하는 문법인데 나한텐 도움이 돼.",
+     "tatoeba": 7974069
+    },
+    {
+     "id": "es-w-talk022",
+     "word": "opinión",
+     "meaning": "의견",
+     "sentences": 556,
+     "example": "Parece que ella podría cambiar de opinión.",
+     "exampleKo": "그녀가 마음을 바꿀 것 같다.",
+     "tatoeba": 698555
+    },
+    {
+     "id": "es-w-talk023",
+     "word": "consultar",
+     "meaning": "상담하다",
+     "sentences": 40,
+     "example": "Deberías consultar con tu médico.",
+     "exampleKo": "의사와 상담해 보는 게 좋겠어.",
+     "tatoeba": 9859308
+    },
+    {
+     "id": "es-w-talk024",
+     "word": "confirmar",
+     "meaning": "확인하다",
+     "sentences": 22,
+     "example": "Me gustaría confirmar nuestras reservas.",
+     "exampleKo": "우리 예약을 확인하고 싶어요.",
+     "tatoeba": 1711440
+    },
+    {
+     "id": "es-w-talk025",
+     "word": "contacto",
+     "meaning": "연락처",
+     "sentences": 193,
+     "example": "¿Todavía te pones en contacto con ellos?",
+     "exampleKo": "아직도 그들이랑 연락해?",
+     "tatoeba": 641808
+    },
+    {
+     "id": "es-w-talk026",
+     "word": "notificación",
+     "meaning": "알림",
+     "sentences": 4,
+     "example": "Tienes una nueva notificación.",
+     "exampleKo": "새 알림이 왔어.",
+     "tatoeba": 9421410
+    },
+    {
+     "id": "es-w-talk027",
+     "word": "pantalla",
+     "meaning": "화면",
+     "sentences": 86,
+     "example": "Gira tu pantalla para ver otras imágenes.",
+     "exampleKo": "화면을 돌려서 다른 사진을 봐.",
+     "tatoeba": 5995326
+    },
+    {
+     "id": "es-w-talk028",
+     "word": "video",
+     "meaning": "동영상",
+     "sentences": 58,
+     "example": "Este video no está disponible en tu país.",
+     "exampleKo": "이 영상은 네 나라에서 볼 수 없어.",
+     "tatoeba": 2464918
+    },
+    {
+     "id": "es-w-talk029",
+     "word": "transmisión",
+     "meaning": "방송",
+     "sentences": 17,
+     "example": "Voy a ver la transmisión en vivo.",
+     "exampleKo": "생방송을 볼 거야."
+    },
+    {
+     "id": "es-w-talk030",
+     "word": "buscar en internet",
+     "meaning": "검색하다",
+     "sentences": 1,
+     "example": "Uso Yahoo! para buscar en Internet.",
+     "exampleKo": "인터넷 검색엔 야후를 써.",
+     "tatoeba": 437006
+    },
+    {
+     "id": "es-w-talk031",
+     "word": "registrarse",
+     "meaning": "등록하다",
+     "sentences": 3,
+     "example": "Tiene que registrarse antes de realizar la compra.",
+     "exampleKo": "구매하기 전에 등록해야 해요.",
+     "tatoeba": 1632690
+    },
+    {
+     "id": "es-w-talk032",
+     "word": "educado (educada)",
+     "meaning": "예의 바른",
+     "sentences": 56,
+     "example": "Tienes que ser educado con tus invitados.",
+     "exampleKo": "손님에게 예의 바르게 대해야 해.",
+     "tatoeba": 1903396
+    },
+    {
+     "id": "es-w-talk033",
+     "word": "serio (seria)",
+     "meaning": "진지한",
+     "sentences": 377,
+     "example": "En verdad hablo en serio.",
+     "exampleKo": "정말 진심이야!",
+     "tatoeba": 4410023
+    }
+   ]
+  },
+  {
+   "id": "trip",
+   "title": {
+    "ko": "여행·약속",
+    "en": "Trips & plans"
+   },
+   "items": [
+    {
+     "id": "es-w-trip001",
+     "word": "viaje",
+     "meaning": "여행",
+     "sentences": 639,
+     "example": "Fue mi primer viaje a bordo de un barco.",
+     "exampleKo": "배를 타고 간 첫 여행이었어.",
+     "tatoeba": 9764419
+    },
+    {
+     "id": "es-w-trip002",
+     "word": "vacaciones",
+     "meaning": "휴가",
+     "sentences": 575,
+     "example": "¿Qué hiciste las vacaciones pasadas?",
+     "exampleKo": "지난 방학 때 뭐 했어요?",
+     "tatoeba": 1466609
+    },
+    {
+     "id": "es-w-trip003",
+     "word": "aeropuerto",
+     "meaning": "공항",
+     "sentences": 303,
+     "example": "¿Cuánta es la distancia desde el aeropuerto hasta el hotel?",
+     "exampleKo": "공항에서부터 호텔까지는 거리가 얼마나 됩니까?",
+     "tatoeba": 2861530
+    },
+    {
+     "id": "es-w-trip004",
+     "word": "hotel",
+     "meaning": "호텔",
+     "sentences": 511,
+     "example": "¿Cuánta es la distancia desde el aeropuerto hasta el hotel?",
+     "exampleKo": "공항에서부터 호텔까지는 거리가 얼마나 됩니까?",
+     "tatoeba": 2861530
+    },
+    {
+     "id": "es-w-trip005",
+     "word": "preparar",
+     "meaning": "준비하다",
+     "sentences": 144,
+     "example": "Necesitamos un poco más de tiempo para preparar.",
+     "exampleKo": "좀더 준비할 시간이 필요해.",
+     "tatoeba": 2881235
+    },
+    {
+     "id": "es-w-trip006",
+     "word": "plan",
+     "meaning": "계획",
+     "sentences": 633,
+     "example": "Él nos explicó su plan a mi hijo y a mí.",
+     "exampleKo": "그는 내 아들과 나에게 자기 계획을 설명했어.",
+     "tatoeba": 342350
+    },
+    {
+     "id": "es-w-trip007",
+     "word": "meta",
+     "meaning": "목표",
+     "sentences": 111,
+     "example": "Ella se esforzó en alcanzar su meta.",
+     "exampleKo": "그녀는 목표에 도달하기 위해 노력했다.",
+     "tatoeba": 1682820
+    },
+    {
+     "id": "es-w-trip008",
+     "word": "oportunidad",
+     "meaning": "기회",
+     "sentences": 473,
+     "example": "Me gustaría aprovechar esta oportunidad.",
+     "exampleKo": "이 기회를 활용하고 싶어.",
+     "tatoeba": 679868
+    },
+    {
+     "id": "es-w-trip009",
+     "word": "mapa",
+     "meaning": "지도",
+     "sentences": 194,
+     "example": "Muéstrame en qué parte del mapa está Puerto Rico.",
+     "exampleKo": "푸에르토리코의 위치를 지도 위에 보여주세요.",
+     "tatoeba": 727030
+    },
+    {
+     "id": "es-w-trip010",
+     "word": "dirección",
+     "meaning": "주소",
+     "sentences": 354,
+     "example": "Escribe la dirección y el número de teléfono de casa.",
+     "exampleKo": "주소하고 집 전화 번호를 쓰세요.",
+     "tatoeba": 1466627
+    },
+    {
+     "id": "es-w-trip011",
+     "word": "mudarse",
+     "meaning": "이사하다",
+     "sentences": 26,
+     "example": "Uno de mis amigos quiere mudarse conmigo.",
+     "exampleKo": "내 친구 한 명이 나랑 같이 살고 싶어 해.",
+     "tatoeba": 9952985
+    },
+    {
+     "id": "es-w-trip012",
+     "word": "estudiar en el extranjero",
+     "meaning": "유학하다",
+     "sentences": 25,
+     "example": "Mi sueño es estudiar en el extranjero.",
+     "exampleKo": "내 꿈은 해외에서 공부하는 거야.",
+     "tatoeba": 767218
+    },
+    {
+     "id": "es-w-trip013",
+     "word": "equipaje",
+     "meaning": "짐",
+     "sentences": 97,
+     "example": "¿Podría usted llevar mi equipaje arriba?",
+     "exampleKo": "제 짐을 위로 옮겨 주실 수 있나요?",
+     "tatoeba": 619224
+    },
+    {
+     "id": "es-w-trip014",
+     "word": "boleto",
+     "meaning": "표",
+     "sentences": 70,
+     "example": "Cada boleto vale veinte yen.",
+     "exampleKo": "티켓은 각각 20엔 입니다.",
+     "tatoeba": 3244867
+    },
+    {
+     "id": "es-w-trip015",
+     "word": "tráfico",
+     "meaning": "교통",
+     "sentences": 210,
+     "example": "Ayer mi tío tuvo un accidente de tráfico.",
+     "exampleKo": "어제 삼촌이 교통사고를 당했어.",
+     "tatoeba": 1118671
+    },
+    {
+     "id": "es-w-trip016",
+     "word": "accidente",
+     "meaning": "사고",
+     "sentences": 870,
+     "example": "Esto no es un accidente.",
+     "exampleKo": "이건 사고가 아냐.",
+     "tatoeba": 1298503
+    },
+    {
+     "id": "es-w-trip017",
+     "word": "diferencia horaria",
+     "meaning": "시차",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-trip018",
+     "word": "avión",
+     "meaning": "비행기",
+     "sentences": 500,
+     "example": "¿Jamás te has sentido mareado en un avión?",
+     "exampleKo": "비행기에서 어지러웠던 적 없어?",
+     "tatoeba": 1717763
+    },
+    {
+     "id": "es-w-trip019",
+     "word": "pasaporte",
+     "meaning": "여권",
+     "sentences": 163,
+     "example": "Pasaporte, por favor.",
+     "exampleKo": "여권 주세요.",
+     "tatoeba": 571814
+    },
+    {
+     "id": "es-w-trip020",
+     "word": "recuerdo de viaje",
+     "meaning": "기념품",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-trip021",
+     "word": "turismo",
+     "meaning": "관광",
+     "sentences": 32,
+     "example": "Yo trabajo en una agencia de turismo.",
+     "exampleKo": "나는 여행사에서 일해.",
+     "tatoeba": 1344484
+    },
+    {
+     "id": "es-w-trip022",
+     "word": "playa",
+     "meaning": "해변",
+     "sentences": 434,
+     "example": "Me ha propuesto que vayamos a la playa.",
+     "exampleKo": "그가 바닷가에 가자고 했어.",
+     "tatoeba": 843174
+    },
+    {
+     "id": "es-w-trip023",
+     "word": "fuegos artificiales",
+     "meaning": "불꽃놀이",
+     "sentences": 35,
+     "example": "Iré afuera a ver los fuegos artificiales.",
+     "exampleKo": "밖에 나가서 불꽃놀이 볼래.",
+     "tatoeba": 2951242
+    },
+    {
+     "id": "es-w-trip024",
+     "word": "Navidad",
+     "meaning": "크리스마스",
+     "sentences": 452,
+     "example": "Papá, ¿qué me vas a regalar para Navidad?",
+     "exampleKo": "아빠, 크리스마스에 뭐 사 줄 거예요?",
+     "tatoeba": 1218407
+    },
+    {
+     "id": "es-w-trip025",
+     "word": "reservar",
+     "meaning": "예약하다",
+     "sentences": 44,
+     "example": "Me gustaría reservar una mesa para tres.",
+     "exampleKo": "세 명 자리를 예약하고 싶어요.",
+     "tatoeba": 398955
+    },
+    {
+     "id": "es-w-trip026",
+     "word": "cancelar",
+     "meaning": "취소하다",
+     "sentences": 59,
+     "example": "Debo cancelar mi viaje a Los Ángeles.",
+     "exampleKo": "로스앤젤레스 여행을 취소해야 해.",
+     "tatoeba": 1948093
+    },
+    {
+     "id": "es-w-trip027",
+     "word": "prometer",
+     "meaning": "약속하다",
+     "sentences": 23,
+     "example": "Ella me hizo prometer no decir.",
+     "exampleKo": "그녀는 말하지 않겠다고 나한테 약속하게 했어.",
+     "tatoeba": 5250774
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "title": {
+    "ko": "음식·건강",
+    "en": "Food & health"
+   },
+   "items": [
+    {
+     "id": "es-w-food001",
+     "word": "resfriado",
+     "meaning": "감기",
+     "sentences": 146,
+     "example": "Tan solo no quiero pescarme tu resfriado.",
+     "exampleKo": "네 감기가 옮는 건 싫어.",
+     "tatoeba": 2964498
+    },
+    {
+     "id": "es-w-food002",
+     "word": "fiebre",
+     "meaning": "열",
+     "sentences": 152,
+     "example": "Me quedé en la cama porque tenía fiebre.",
+     "exampleKo": "열이 나서 침대에 누워 있었어.",
+     "tatoeba": 10106206
+    },
+    {
+     "id": "es-w-food003",
+     "word": "medicina",
+     "meaning": "약",
+     "sentences": 232,
+     "example": "La medicina sabe amarga.",
+     "exampleKo": "그 약은 쓰다.",
+     "tatoeba": 1340438
+    },
+    {
+     "id": "es-w-food004",
+     "word": "herida",
+     "meaning": "상처",
+     "sentences": 159,
+     "example": "El médico ha dicho que no te rasques la herida.",
+     "exampleKo": "의사가 상처를 긁지 말라고 했어.",
+     "tatoeba": 1203652
+    },
+    {
+     "id": "es-w-food005",
+     "word": "ejercicio",
+     "meaning": "운동",
+     "sentences": 205,
+     "example": "El doctor me recomendó hacer más ejercicio.",
+     "exampleKo": "의사가 운동을 더 하라고 했어.",
+     "tatoeba": 1271415
+    },
+    {
+     "id": "es-w-food006",
+     "word": "peso",
+     "meaning": "체중",
+     "sentences": 327,
+     "example": "Quiero bajar de peso.",
+     "exampleKo": "살을 빼고 싶어."
+    },
+    {
+     "id": "es-w-food007",
+     "word": "dieta",
+     "meaning": "다이어트",
+     "sentences": 167,
+     "example": "Yo he llevado una dieta por dos semanas.",
+     "exampleKo": "나는 2주 동안 다이어트를 했어.",
+     "tatoeba": 1258524
+    },
+    {
+     "id": "es-w-food008",
+     "word": "descanso",
+     "meaning": "휴식",
+     "sentences": 171,
+     "example": "Como andaba cansado, me di un descanso.",
+     "exampleKo": "피곤해서 좀 쉬었어.",
+     "tatoeba": 1508786
+    },
+    {
+     "id": "es-w-food009",
+     "word": "estrés",
+     "meaning": "스트레스",
+     "sentences": 45,
+     "example": "Yo tengo problema manejando el estrés.",
+     "exampleKo": "나는 스트레스를 다스리는 게 힘들어.",
+     "tatoeba": 12849124
+    },
+    {
+     "id": "es-w-food010",
+     "word": "llave",
+     "meaning": "열쇠",
+     "sentences": 476,
+     "example": "Perdió la llave.",
+     "exampleKo": "열쇠를 잃어버렸다.",
+     "tatoeba": 3668081
+    },
+    {
+     "id": "es-w-food011",
+     "word": "sabor",
+     "meaning": "맛",
+     "sentences": 161,
+     "example": "La mezcla me deja un mal sabor en la boca.",
+     "exampleKo": "그 조합은 입에 안 좋은 맛이 남아.",
+     "tatoeba": 2404936
+    },
+    {
+     "id": "es-w-food012",
+     "word": "estómago",
+     "meaning": "배, 위",
+     "sentences": 153,
+     "example": "Tus ojos son más grandes que tu estómago.",
+     "exampleKo": "네 눈이 배보다 더 커. (욕심이 많아)",
+     "tatoeba": 1358463
+    },
+    {
+     "id": "es-w-food013",
+     "word": "garganta",
+     "meaning": "목",
+     "sentences": 92,
+     "example": "Yo desperté con un dolor de garganta.",
+     "exampleKo": "목이 아픈 채로 일어났어.",
+     "tatoeba": 1220194
+    },
+    {
+     "id": "es-w-food014",
+     "word": "espalda",
+     "meaning": "등",
+     "sentences": 241,
+     "example": "Sentí su mirada en mi espalda.",
+     "exampleKo": "그녀의 시선을 등 뒤에서 느꼈다.",
+     "tatoeba": 3252134
+    },
+    {
+     "id": "es-w-food015",
+     "word": "pelo",
+     "meaning": "머리카락",
+     "sentences": 778,
+     "example": "Mi mamá me dejó el pelo demasiado corto.",
+     "exampleKo": "엄마가 내 머리를 너무 짧게 잘랐어.",
+     "tatoeba": 2929667
+    }
+   ]
+  },
+  {
+   "id": "life",
+   "title": {
+    "ko": "생활·그 밖의 말",
+    "en": "Daily life & more"
+   },
+   "items": [
+    {
+     "id": "es-w-life001",
+     "word": "relación",
+     "meaning": "관계",
+     "sentences": 247,
+     "example": "Tengo una relación especial con mi tía.",
+     "exampleKo": "나는 이모(고모)와 특별한 사이야.",
+     "tatoeba": 860778
+    },
+    {
+     "id": "es-w-life002",
+     "word": "sonrojarse",
+     "meaning": "얼굴이 붉어지다",
+     "sentences": 2,
+     "example": "Me sonrojé cuando me miró.",
+     "exampleKo": "그가 나를 쳐다봐서 얼굴이 빨개졌어."
+    },
+    {
+     "id": "es-w-life003",
+     "word": "significado",
+     "meaning": "의미",
+     "sentences": 182,
+     "example": "¿Te sabes el significado de esta palabra?",
+     "exampleKo": "이 단어의 뜻을 알아?",
+     "tatoeba": 1860117
+    },
+    {
+     "id": "es-w-life004",
+     "word": "carácter",
+     "meaning": "성격",
+     "sentences": 138,
+     "example": "Tienes un carácter muy dulce.",
+     "exampleKo": "너는 성격이 정말 다정해."
+    },
+    {
+     "id": "es-w-life005",
+     "word": "pasatiempo",
+     "meaning": "취미",
+     "sentences": 81,
+     "example": "Mi pasatiempo es visitar templos antiguos.",
+     "exampleKo": "내 취미는 오래된 절을 찾아가는 거야.",
+     "tatoeba": 503615
+    },
+    {
+     "id": "es-w-life006",
+     "word": "experiencia",
+     "meaning": "경험",
+     "sentences": 348,
+     "example": "Él es maestro con experiencia.",
+     "exampleKo": "그는 경험이 있는 선생님이에요.",
+     "tatoeba": 2861754
+    },
+    {
+     "id": "es-w-life007",
+     "word": "recuerdo",
+     "meaning": "추억",
+     "sentences": 448,
+     "example": "¿Cuál es tu primer recuerdo de la niñez?",
+     "exampleKo": "어린 시절 가장 처음 기억이 뭐야?",
+     "tatoeba": 10124681
+    },
+    {
+     "id": "es-w-life008",
+     "word": "futuro",
+     "meaning": "미래",
+     "sentences": 473,
+     "example": "En el futuro me gustaría ser un piloto.",
+     "exampleKo": "나는 앞으로 조종사가 되고 싶어.",
+     "tatoeba": 1023433
+    },
+    {
+     "id": "es-w-life009",
+     "word": "últimamente",
+     "meaning": "요즘",
+     "sentences": 284,
+     "example": "Últimamente no se qué es lo que debo hacer.",
+     "exampleKo": "더이상 어떻게 해야할지 모르겠어.",
+     "tatoeba": 3159289
+    },
+    {
+     "id": "es-w-life010",
+     "word": "normalmente",
+     "meaning": "보통",
+     "sentences": 239,
+     "example": "Normalmente me voy a dormir a las nueve.",
+     "exampleKo": "나는 보통 9시에 자.",
+     "tatoeba": 2799989
+    },
+    {
+     "id": "es-w-life011",
+     "word": "especial",
+     "meaning": "특별한",
+     "sentences": 214,
+     "example": "Hoy es un día muy especial.",
+     "exampleKo": "오늘은 아주 특별한 날이야."
+    },
+    {
+     "id": "es-w-life012",
+     "word": "común",
+     "meaning": "흔한, 공통의",
+     "sentences": 356,
+     "example": "Este apellido es muy común en tu región.",
+     "exampleKo": "이 성은 너네 지역에서 아주 흔해.",
+     "tatoeba": 11778524
+    },
+    {
+     "id": "es-w-life013",
+     "word": "necesario (necesaria)",
+     "meaning": "필요한",
+     "sentences": 426,
+     "example": "Iré y me reuniré con él, si es necesario.",
+     "exampleKo": "필요하면 가서 그를 만날게.",
+     "tatoeba": 1427708
+    },
+    {
+     "id": "es-w-life014",
+     "word": "libertad",
+     "meaning": "자유",
+     "sentences": 339,
+     "example": "El tribunal la condenó a seis meses de libertad condicional.",
+     "exampleKo": "법원은 그녀에세 6개월의 징역에 집행유예를 선고하였다.",
+     "tatoeba": 2881271
+    },
+    {
+     "id": "es-w-life015",
+     "word": "paz",
+     "meaning": "평화",
+     "sentences": 509,
+     "example": "Déjame en paz.",
+     "exampleKo": "나 좀 내버려 둬.",
+     "tatoeba": 1042891
+    },
+    {
+     "id": "es-w-life016",
+     "word": "decidir",
+     "meaning": "결정하다",
+     "sentences": 105,
+     "example": "Depende de ti decidir si vamos allí o no.",
+     "exampleKo": "우리가 가든지 안 가든지는 네가 결정해.",
+     "tatoeba": 2721
+    },
+    {
+     "id": "es-w-life017",
+     "word": "elegir",
+     "meaning": "고르다",
+     "sentences": 159,
+     "example": "Ella me ayudará a elegir un auto nuevo.",
+     "exampleKo": "그녀가 새 차 고르는 걸 도와줄 거야.",
+     "tatoeba": 1214196
+    },
+    {
+     "id": "es-w-life018",
+     "word": "comparar",
+     "meaning": "비교하다",
+     "sentences": 21,
+     "example": "Se puede comparar un libro con un amigo.",
+     "exampleKo": "책은 친구에 비유할 수 있어.",
+     "tatoeba": 1327327
+    },
+    {
+     "id": "es-w-life019",
+     "word": "cambiar",
+     "meaning": "바꾸다",
+     "sentences": 535,
+     "example": "Parece que ella podría cambiar de opinión.",
+     "exampleKo": "그녀가 마음을 바꿀 것 같다.",
+     "tatoeba": 698555
+    },
+    {
+     "id": "es-w-life020",
+     "word": "continuar",
+     "meaning": "계속하다",
+     "sentences": 135,
+     "example": "Quiero continuar aprendiendo español.",
+     "exampleKo": "스페인어를 계속 배우고 싶어."
+    },
+    {
+     "id": "es-w-life021",
+     "word": "rendirse",
+     "meaning": "포기하다",
+     "sentences": 31,
+     "example": "Los piratas no pudieron más que rendirse.",
+     "exampleKo": "해적들은 항복할 수 밖에 없었다.",
+     "tatoeba": 2851734
+    },
+    {
+     "id": "es-w-life022",
+     "word": "esforzarse",
+     "meaning": "노력하다",
+     "sentences": 9,
+     "example": "Hay que esforzarse al máximo en todo.",
+     "exampleKo": "뭐든 최선을 다해야 해.",
+     "tatoeba": 563675
+    },
+    {
+     "id": "es-w-life023",
+     "word": "imaginar",
+     "meaning": "상상하다",
+     "sentences": 108,
+     "example": "No me puedo imaginar que eso sea cierto.",
+     "exampleKo": "그게 사실이라고는 상상이 안 가.",
+     "tatoeba": 3883687
+    },
+    {
+     "id": "es-w-life024",
+     "word": "economía",
+     "meaning": "경제",
+     "sentences": 157,
+     "example": "La economía va mejorando poco a poco.",
+     "exampleKo": "경제가 조금씩 나아지고 있어."
+    },
+    {
+     "id": "es-w-life025",
+     "word": "cultura",
+     "meaning": "문화",
+     "sentences": 235,
+     "example": "Me interesa estudiar la cultura alemana.",
+     "exampleKo": "독일 문화를 공부하는 데 관심이 있어.",
+     "tatoeba": 765167
+    },
+    {
+     "id": "es-w-life026",
+     "word": "costumbre",
+     "meaning": "관습",
+     "sentences": 209,
+     "example": "Me levanté más temprano que de costumbre.",
+     "exampleKo": "평소보다 일찍 일어났어.",
+     "tatoeba": 1356908
+    },
+    {
+     "id": "es-w-life027",
+     "word": "tradición",
+     "meaning": "전통",
+     "sentences": 51,
+     "example": "Es una tradición estadounidense pedir un deseo por tu cumpleaños.",
+     "exampleKo": "생일에 소원을 빌고 하는 건 미국의 전통이야.",
+     "tatoeba": 803466
+    },
+    {
+     "id": "es-w-life028",
+     "word": "paisaje",
+     "meaning": "경치",
+     "sentences": 78,
+     "example": "Me gusta este paisaje.",
+     "exampleKo": "이 경치가 좋아.",
+     "tatoeba": 5084899
+    },
+    {
+     "id": "es-w-life029",
+     "word": "ambiente",
+     "meaning": "분위기, 환경",
+     "sentences": 124,
+     "example": "Y también quiero sentir el ambiente de Francia.",
+     "exampleKo": "또한 프랑스의 분위기를 느끼고 싶다.",
+     "tatoeba": 3712970
+    },
+    {
+     "id": "es-w-life030",
+     "word": "campo",
+     "meaning": "시골",
+     "sentences": 459,
+     "example": "Me encanta pasear por el campo.",
+     "exampleKo": "시골길 산책을 정말 좋아해."
+    },
+    {
+     "id": "es-w-life031",
+     "word": "graduarse",
+     "meaning": "졸업하다",
+     "sentences": 14,
+     "example": "Acaba de graduarse de la universidad.",
+     "exampleKo": "그는 막 대학을 졸업했어.",
+     "tatoeba": 10909009
+    },
+    {
+     "id": "es-w-life032",
+     "word": "sueldo",
+     "meaning": "월급",
+     "sentences": 101,
+     "example": "Le pedí a mi jefe un aumento de sueldo.",
+     "exampleKo": "사장님께 월급 인상을 부탁했어.",
+     "tatoeba": 1416431
+    },
+    {
+     "id": "es-w-life033",
+     "word": "jefe (jefa)",
+     "meaning": "상사",
+     "sentences": 376,
+     "example": "Mi jefe es muy amable.",
+     "exampleKo": "우리 상사는 아주 친절해."
+    },
+    {
+     "id": "es-w-life034",
+     "word": "reunión",
+     "meaning": "회의",
+     "sentences": 535,
+     "example": "¿Se te informó en dónde será la reunión?",
+     "exampleKo": "회의가 어디서 열리는지 들었어?",
+     "tatoeba": 1274018
+    },
+    {
+     "id": "es-w-life035",
+     "word": "plazo",
+     "meaning": "기한",
+     "sentences": 64,
+     "example": "Te estoy dando plazo hasta mañana.",
+     "exampleKo": "내일까지 기한을 줄게.",
+     "tatoeba": 3696682
+    },
+    {
+     "id": "es-w-life036",
+     "word": "entrevista",
+     "meaning": "면접",
+     "sentences": 67,
+     "example": "Envié mi solicitud y tuve una entrevista.",
+     "exampleKo": "지원서를 보냈고 면접을 봤어.",
+     "tatoeba": 10304871
+    },
+    {
+     "id": "es-w-life037",
+     "word": "examen",
+     "meaning": "시험",
+     "sentences": 720,
+     "example": "Que te vaya bien en el examen.",
+     "exampleKo": "시험 잘쳐.",
+     "tatoeba": 4710436
+    },
+    {
+     "id": "es-w-life038",
+     "word": "aprobar",
+     "meaning": "합격하다",
+     "sentences": 58,
+     "example": "Mi padre nunca va a aprobar mi casamiento.",
+     "exampleKo": "아버지는 내 결혼을 절대 승낙하지 않을 거야.",
+     "tatoeba": 1258530
+    },
+    {
+     "id": "es-w-life039",
+     "word": "tarea",
+     "meaning": "숙제",
+     "sentences": 441,
+     "example": "¿Terminaste tu tarea?",
+     "exampleKo": "숙제 다 끝냈니?",
+     "tatoeba": 1582873
+    },
+    {
+     "id": "es-w-life040",
+     "word": "nota",
+     "meaning": "성적",
+     "sentences": 185,
+     "example": "Este año saqué buenas notas.",
+     "exampleKo": "올해는 성적이 좋았어."
+    },
+    {
+     "id": "es-w-life041",
+     "word": "limpiar",
+     "meaning": "청소하다",
+     "sentences": 203,
+     "example": "Era mi turno para limpiar la habitación.",
+     "exampleKo": "내가 방을 청소할 차례였어.",
+     "tatoeba": 958700
+    },
+    {
+     "id": "es-w-life042",
+     "word": "lavar",
+     "meaning": "빨다, 씻다",
+     "sentences": 163,
+     "example": "¿Me puedes ayudar a lavar estos trastes?",
+     "exampleKo": "이 그릇 씻는 거 도와줄래?",
+     "tatoeba": 754695
+    },
+    {
+     "id": "es-w-life043",
+     "word": "precio",
+     "meaning": "가격",
+     "sentences": 323,
+     "example": "Me gusta el azul. ¿Qué precio tiene?",
+     "exampleKo": "파란 게 마음에 들어요. 얼마예요?",
+     "tatoeba": 436744
+    },
+    {
+     "id": "es-w-life044",
+     "word": "descuento",
+     "meaning": "할인",
+     "sentences": 38,
+     "example": "¿Si pago en efectivo me da un descuento?",
+     "exampleKo": "현금으로 내면 할인해 주나요?",
+     "tatoeba": 569404
+    },
+    {
+     "id": "es-w-life045",
+     "word": "cartera",
+     "meaning": "지갑",
+     "sentences": 130,
+     "example": "Se me olvidó la cartera en casa.",
+     "exampleKo": "지갑을 집에 두고 왔어."
+    },
+    {
+     "id": "es-w-life046",
+     "word": "salado (salada)",
+     "meaning": "짠",
+     "sentences": 29,
+     "example": "Me gusta el sabor único del caramelo salado.",
+     "exampleKo": "짠 캐러멜의 독특한 맛이 좋아.",
+     "tatoeba": 5096333
+    },
+    {
+     "id": "es-w-life047",
+     "word": "picante",
+     "meaning": "매운",
+     "sentences": 69,
+     "example": "Espero que te guste la comida picante.",
+     "exampleKo": "매운 음식 좋아하면 좋겠어.",
+     "tatoeba": 2864985
+    },
+    {
+     "id": "es-w-life048",
+     "word": "amargo (amarga)",
+     "meaning": "쓴",
+     "sentences": 47,
+     "example": "Me resulta muy amargo el té de boldo.",
+     "exampleKo": "볼도 차는 나한테 너무 써.",
+     "tatoeba": 1393855
+    },
+    {
+     "id": "es-w-life049",
+     "word": "molestia",
+     "meaning": "불편, 폐",
+     "sentences": 32,
+     "example": "Perdona la molestia.",
+     "exampleKo": "불편을 끼쳐서 미안해."
+    },
+    {
+     "id": "es-w-life050",
+     "word": "retraso",
+     "meaning": "지연",
+     "sentences": 80,
+     "example": "Mi reloj tiene cinco minutos de retraso.",
+     "exampleKo": "내 시계는 5분 느려.",
+     "tatoeba": 1669639
+    },
+    {
+     "id": "es-w-life051",
+     "word": "apurarse",
+     "meaning": "서두르다",
+     "sentences": 6,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-life052",
+     "word": "cansarse",
+     "meaning": "지치다",
+     "sentences": 5,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-life053",
+     "word": "descansar",
+     "meaning": "쉬다",
+     "sentences": 169,
+     "example": "Me quedé en casa para descansar.",
+     "exampleKo": "쉬려고 집에 있었어.",
+     "tatoeba": 840768
+    },
+    {
+     "id": "es-w-life054",
+     "word": "despertarse",
+     "meaning": "잠에서 깨다",
+     "sentences": 17,
+     "example": "No necesita despertarse tan temprano.",
+     "exampleKo": "그는 그렇게 일찍 일어날 필요 없어.",
+     "tatoeba": 1639093
+    },
+    {
+     "id": "es-w-life055",
+     "word": "encontrar",
+     "meaning": "발견하다",
+     "sentences": 872,
+     "example": "Nos acabamos de encontrar en el pasillo.",
+     "exampleKo": "우리는 복도에서 방금 마주쳤어.",
+     "tatoeba": 1939830
+    },
+    {
+     "id": "es-w-life056",
+     "word": "perder",
+     "meaning": "잃어버리다",
+     "sentences": 621,
+     "example": "Acabo de perder mi trabajo por tu culpa.",
+     "exampleKo": "너 때문에 방금 일자리를 잃었어.",
+     "tatoeba": 1138664
+    },
+    {
+     "id": "es-w-life057",
+     "word": "recoger",
+     "meaning": "줍다",
+     "sentences": 120,
+     "example": "Voy a recoger mi paquete.",
+     "exampleKo": "내 택배를 찾으러 갈게."
+    },
+    {
+     "id": "es-w-life058",
+     "word": "prestar",
+     "meaning": "빌려주다",
+     "sentences": 133,
+     "example": "¿Le podrías prestar dinero a mi hermano?",
+     "exampleKo": "내 형제한테 돈 좀 빌려줄 수 있어?",
+     "tatoeba": 2128016
+    },
+    {
+     "id": "es-w-life059",
+     "word": "pedir prestado",
+     "meaning": "빌리다",
+     "sentences": 11,
+     "example": "¿Te puedo pedir prestado tu teléfono?",
+     "exampleKo": "네 폰 좀 빌려도 돼?",
+     "tatoeba": 5028997
+    },
+    {
+     "id": "es-w-life060",
+     "word": "devolver",
+     "meaning": "돌려주다",
+     "sentences": 50,
+     "example": "¿Puedo devolver esto para que me lo reembolsen?",
+     "exampleKo": "이거 환불받으려고 반품할 수 있나요?",
+     "tatoeba": 5674469
+    },
+    {
+     "id": "es-w-life061",
+     "word": "pagar",
+     "meaning": "지불하다",
+     "sentences": 452,
+     "example": "¿Puedo pagar con tarjeta de crédito?",
+     "exampleKo": "카드 돼요?",
+     "tatoeba": 590039
+    },
+    {
+     "id": "es-w-life062",
+     "word": "recibir",
+     "meaning": "받다",
+     "sentences": 180,
+     "example": "Recibí tu mensaje.",
+     "exampleKo": "네 메시지 받았어."
+    },
+    {
+     "id": "es-w-life063",
+     "word": "entregar",
+     "meaning": "건네다",
+     "sentences": 45,
+     "example": "Tengo que entregar la tarea mañana.",
+     "exampleKo": "내일까지 숙제를 제출해야 해."
+    },
+    {
+     "id": "es-w-life064",
+     "word": "contar",
+     "meaning": "말해 주다, 세다",
+     "sentences": 324,
+     "example": "Solo podemos contar con nosotros mismos.",
+     "exampleKo": "우리는 우리 자신에게만 의지할 수 있어.",
+     "tatoeba": 11394364
+    },
+    {
+     "id": "es-w-life065",
+     "word": "darse cuenta",
+     "meaning": "알아차리다",
+     "sentences": 42,
+     "example": "Pocos pueden darse cuenta de sus defectos.",
+     "exampleKo": "자기 결점을 알아차리는 사람은 드물어.",
+     "tatoeba": 1174309
+    },
+    {
+     "id": "es-w-life066",
+     "word": "sentir",
+     "meaning": "느끼다",
+     "sentences": 202,
+     "example": "Y también quiero sentir el ambiente de Francia.",
+     "exampleKo": "또한 프랑스의 분위기를 느끼고 싶다.",
+     "tatoeba": 3712970
+    },
+    {
+     "id": "es-w-life067",
+     "word": "criar",
+     "meaning": "키우다",
+     "sentences": 27,
+     "example": "Quiero criar a mis hijos con amor.",
+     "exampleKo": "사랑으로 아이들을 키우고 싶어."
+    },
+    {
+     "id": "es-w-life068",
+     "word": "parecerse",
+     "meaning": "닮다",
+     "sentences": 5,
+     "example": "Te pareces mucho a tu mamá.",
+     "exampleKo": "너는 엄마를 많이 닮았어."
+    },
+    {
+     "id": "es-w-life069",
+     "word": "nostalgia",
+     "meaning": "그리움",
+     "sentences": 38,
+     "example": "No te dejes arrastrar por la nostalgia.",
+     "exampleKo": "그리움에 휩쓸리지 마.",
+     "tatoeba": 10351356
+    },
+    {
+     "id": "es-w-life070",
+     "word": "envidiar",
+     "meaning": "부러워하다",
+     "sentences": 4,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-life071",
+     "word": "miedoso (miedosa)",
+     "meaning": "무서워하는",
+     "sentences": 2,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-life072",
+     "word": "ruidoso (ruidosa)",
+     "meaning": "시끄러운",
+     "sentences": 24,
+     "example": "No me gusta vivir en un lugar tan ruidoso.",
+     "exampleKo": "이렇게 시끄러운 곳에서 사는 게 싫어.",
+     "tatoeba": 1017919
+    },
+    {
+     "id": "es-w-life073",
+     "word": "tranquilo (tranquila)",
+     "meaning": "조용한, 차분한",
+     "sentences": 156,
+     "example": "Me deja tranquilo que me hayas perdonado.",
+     "exampleKo": "네가 날 용서해 줘서 마음이 놓여.",
+     "tatoeba": 6986460
+    },
+    {
+     "id": "es-w-life074",
+     "word": "animado (animada)",
+     "meaning": "활기찬",
+     "sentences": 11,
+     "example": "Nunca me he sentido tan animado.",
+     "exampleKo": "이렇게 신난 적이 없어.",
+     "tatoeba": 5918949
+    },
+    {
+     "id": "es-w-life075",
+     "word": "incómodo (incómoda)",
+     "meaning": "불편한",
+     "sentences": 60,
+     "example": "Ahora mismo me siento bastante incómodo.",
+     "exampleKo": "지금 꽤 불편해.",
+     "tatoeba": 7589349
+    },
+    {
+     "id": "es-w-life076",
+     "word": "guapo (guapa)",
+     "meaning": "잘생긴",
+     "sentences": 114,
+     "example": "Mi padre está orgulloso de ser alto y guapo.",
+     "exampleKo": "아버지는 키 크고 잘생긴 걸 자랑스러워하셔.",
+     "tatoeba": 625849
+    },
+    {
+     "id": "es-w-life077",
+     "word": "brillante",
+     "meaning": "밝은, 빛나는",
+     "sentences": 109,
+     "example": "Tienes una sonrisa brillante.",
+     "exampleKo": "네 미소는 빛나."
+    },
+    {
+     "id": "es-w-life078",
+     "word": "oscuro (oscura)",
+     "meaning": "어두운",
+     "sentences": 177,
+     "example": "Me levanté cuando todavía estaba oscuro.",
+     "exampleKo": "아직 어두울 때 일어났어.",
+     "tatoeba": 1699460
+    },
+    {
+     "id": "es-w-life079",
+     "word": "claramente",
+     "meaning": "분명히",
+     "sentences": 136,
+     "example": "Están claramente en contra de nosotros.",
+     "exampleKo": "그들은 분명히 우리에게 반대해.",
+     "tatoeba": 11470019
+    },
+    {
+     "id": "es-w-life080",
+     "word": "seguramente",
+     "meaning": "아마도",
+     "sentences": 136,
+     "example": "Seguramente me gustará este libro.",
+     "exampleKo": "이 책은 분명 마음에 들 거야.",
+     "tatoeba": 345503
+    },
+    {
+     "id": "es-w-life081",
+     "word": "recién",
+     "meaning": "방금",
+     "sentences": 150,
+     "example": "Me gusta cómo huele el pan recién hecho.",
+     "exampleKo": "갓 구운 빵 냄새가 좋아.",
+     "tatoeba": 10119851
+    },
+    {
+     "id": "es-w-life082",
+     "word": "justo",
+     "meaning": "딱, 정확히",
+     "sentences": 424,
+     "example": "Alimento a mi perro justo antes de cenar.",
+     "exampleKo": "저녁 먹기 바로 전에 강아지한테 밥을 줘.",
+     "tatoeba": 1337494
+    },
+    {
+     "id": "es-w-life083",
+     "word": "inesperado (inesperada)",
+     "meaning": "뜻밖의",
+     "sentences": 64,
+     "example": "Encontraron la joya en un lugar inesperado.",
+     "exampleKo": "보석은 뜻밖의 장소에서 발견됐어.",
+     "tatoeba": 5106289
+    },
+    {
+     "id": "es-w-life084",
+     "word": "por supuesto",
+     "meaning": "당연히",
+     "sentences": 156,
+     "example": "Por supuesto, yo tengo mi propia copia.",
+     "exampleKo": "물론 내 사본이 따로 있지.",
+     "tatoeba": 8673945
+    },
+    {
+     "id": "es-w-life085",
+     "word": "casualidad",
+     "meaning": "우연",
+     "sentences": 174,
+     "example": "Nos encontramos con ella por casualidad.",
+     "exampleKo": "우리는 그녀를 우연히 만났어.",
+     "tatoeba": 1306244
+    },
+    {
+     "id": "es-w-life086",
+     "word": "hecho a mano",
+     "meaning": "수제의",
+     "sentences": 6,
+     "example": "Este suéter es hecho a mano.",
+     "exampleKo": "이 스웨터는 수제야.",
+     "tatoeba": 1748469
+    },
+    {
+     "id": "es-w-life087",
+     "word": "acompañar",
+     "meaning": "함께하다",
+     "sentences": 32,
+     "example": "¿Me puedes acompañar hasta allá, por favor?",
+     "exampleKo": "거기까지 같이 가 줄래?",
+     "tatoeba": 11945886
+    },
+    {
+     "id": "es-w-life088",
+     "word": "recoger a alguien",
+     "meaning": "마중하다",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "es-w-life089",
+     "word": "suerte",
+     "meaning": "행운",
+     "sentences": 611,
+     "example": "Tienes suerte que no te hayan disparado.",
+     "exampleKo": "총에 맞지 않은 걸 다행으로 알아.",
+     "tatoeba": 4140303
+    },
+    {
+     "id": "es-w-life090",
+     "word": "valentía",
+     "meaning": "용기",
+     "sentences": 23,
+     "example": "Ella levantó su cabeza con valentía.",
+     "exampleKo": "그녀는 용감하게 고개를 들었어.",
+     "tatoeba": 5451669
+    },
+    {
+     "id": "es-w-life091",
+     "word": "confianza en sí mismo",
+     "meaning": "자신감",
+     "sentences": 6,
+     "example": "Tiene mucha confianza en sí mismo.",
+     "exampleKo": "그는 자신감이 넘쳐.",
+     "tatoeba": 10051258
+    },
+    {
+     "id": "es-w-life092",
+     "word": "encanto",
+     "meaning": "매력",
+     "sentences": 42,
+     "example": "La vieja cabaña tiene un cierto encanto.",
+     "exampleKo": "그 낡은 오두막은 나름의 매력이 있어.",
+     "tatoeba": 5882446
+    },
+    {
+     "id": "es-w-life093",
+     "word": "talento",
+     "meaning": "재능",
+     "sentences": 157,
+     "example": "Él tenía talento para la pintura.",
+     "exampleKo": "그는 그림에 재능이 있었다.",
+     "tatoeba": 1080889
+    },
+    {
+     "id": "es-w-life094",
+     "word": "crecer",
+     "meaning": "자라다",
+     "sentences": 67,
+     "example": "Los niños crecen muy rápido.",
+     "exampleKo": "아이들은 아주 빨리 자라."
+    },
+    {
+     "id": "es-w-life095",
+     "word": "ahorrar",
+     "meaning": "저축하다",
+     "sentences": 91,
+     "example": "Tu ayuda nos va a ahorrar mucho trabajo.",
+     "exampleKo": "네 도움 덕분에 일이 많이 줄겠어.",
+     "tatoeba": 2198628
+    },
+    {
+     "id": "es-w-life096",
+     "word": "instrumento",
+     "meaning": "악기",
+     "sentences": 71,
+     "example": "¿Sabe tocar instrumento?",
+     "exampleKo": "악기 연주할 줄 아세요?",
+     "tatoeba": 2894377
+    },
+    {
+     "id": "es-w-life097",
+     "word": "quedarse",
+     "meaning": "머무르다",
+     "sentences": 271,
+     "example": "Empezó a quedarse calvo siendo bastante joven.",
+     "exampleKo": "그는 꽤 젊었을 때부터 대머리가 되기 시작했다.",
+     "tatoeba": 1638223
+    },
+    {
+     "id": "es-w-life098",
+     "word": "tareas del hogar",
+     "meaning": "집안일",
+     "sentences": 16,
+     "example": "No me importa hacer las tareas del hogar.",
+     "exampleKo": "집안일 하는 건 괜찮아.",
+     "tatoeba": 722294
+    },
+    {
+     "id": "es-w-life099",
+     "word": "lo peor",
+     "meaning": "최악",
+     "sentences": 109,
+     "example": "Me has enseñado a esperar lo peor de ti.",
+     "exampleKo": "네 최악의 모습을 기대하게 만들었어.",
+     "tatoeba": 9062186
+    },
+    {
+     "id": "es-w-life100",
+     "word": "cercano (cercana)",
+     "meaning": "가까운",
+     "sentences": 85,
+     "example": "¿Eres más cercano a tu madre o a tu padre?",
+     "exampleKo": "너는 엄마랑 아빠 중 누구랑 더 가까워?",
+     "tatoeba": 1233185
+    },
+    {
+     "id": "es-w-life101",
+     "word": "extraño (extraña)",
+     "meaning": "낯선",
+     "sentences": 444,
+     "example": "Él me trata como si yo fuera un extraño.",
+     "exampleKo": "그는 나를 낯선 사람처럼 대해.",
+     "tatoeba": 1236880
+    },
+    {
+     "id": "es-w-life102",
+     "word": "nostálgico (nostálgica)",
+     "meaning": "그리운",
+     "sentences": 15,
+     "example": "Me siento tan nostálgico hoy.",
+     "exampleKo": "오늘은 정말 그리운 기분이 들어.",
+     "tatoeba": 1783140
+    }
+   ]
+  }
+ ]
+}

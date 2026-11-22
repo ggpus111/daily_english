@@ -1,0 +1,5358 @@
+{
+ "source": {
+  "corpus": "Tatoeba (tatoeba.org) cmn sentences, CC BY 2.0 FR",
+  "sentences": 89325,
+  "note": "표현과 예문, 풀이는 Daily English가 직접 썼고(AI 도움), 빈도만 말뭉치에서 셌습니다."
+ },
+ "packs": [
+  {
+   "id": "love",
+   "title": {
+    "ko": "애정 표현",
+    "en": "Love & affection"
+   },
+   "items": [
+    {
+     "id": "zh-love-01",
+     "text": "我爱你。",
+     "meaning": "사랑해",
+     "example": "我爱你，比什么都爱。",
+     "exampleKo": "세상 무엇보다 사랑해.",
+     "tip": "무게가 큰 말이라 평소에는 「我喜欢你」나 「爱你」를 더 자주 써요.",
+     "sentences": 26,
+     "perMillion": 291.1
+    },
+    {
+     "id": "zh-love-02",
+     "text": "爱你",
+     "meaning": "사랑해 (가볍게)",
+     "example": "晚安，爱你！",
+     "exampleKo": "잘 자, 사랑해!",
+     "tip": "我를 빼면 더 가볍고 일상적이에요.",
+     "sentences": 50,
+     "perMillion": 559.8
+    },
+    {
+     "id": "zh-love-03",
+     "text": "我好喜欢你。",
+     "meaning": "너 정말 좋아해",
+     "example": "我真的好喜欢你。",
+     "exampleKo": "나 너 정말 좋아해.",
+     "tip": "",
+     "sentences": 50,
+     "perMillion": 559.8
+    },
+    {
+     "id": "zh-love-04",
+     "text": "你对我很重要。",
+     "meaning": "넌 나한테 정말 소중해",
+     "example": "你对我很重要，你知道吗？",
+     "exampleKo": "넌 나한테 정말 소중해, 알지?",
+     "tip": "친구에게도 쓸 수 있어요."
+    },
+    {
+     "id": "zh-love-05",
+     "text": "我对你有感觉。",
+     "meaning": "너한테 마음 있어",
+     "example": "我好像对你有感觉。",
+     "exampleKo": "나 너한테 마음이 있는 것 같아.",
+     "tip": "사귀기 전 마음을 고백할 때 써요."
+    },
+    {
+     "id": "zh-love-06",
+     "text": "一见钟情",
+     "meaning": "첫눈에 반함",
+     "example": "其实我对你一见钟情。",
+     "exampleKo": "사실 너한테 첫눈에 반했어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-love-07",
+     "text": "跟你在一起很开心。",
+     "meaning": "너랑 있으면 행복해",
+     "example": "跟你在一起总是很开心。",
+     "exampleKo": "너랑 있으면 항상 행복해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-love-08",
+     "text": "遇见你真好。",
+     "meaning": "너를 만나서 다행이야",
+     "example": "遇见你真好。",
+     "exampleKo": "너를 만나서 정말 다행이야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-love-09",
+     "text": "宝贝",
+     "meaning": "자기야",
+     "example": "早安，宝贝！睡得好吗？",
+     "exampleKo": "자기야 좋은 아침! 잘 잤어?",
+     "tip": "연인끼리 가장 흔한 애칭이에요. 「亲爱的」도 써요.",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-love-10",
+     "text": "你最好了！",
+     "meaning": "네가 최고야!",
+     "example": "谢谢你的咖啡，你最好了！",
+     "exampleKo": "커피 고마워, 네가 최고야!",
+     "tip": "고마울 때 친구에게도 자주 써요."
+    },
+    {
+     "id": "zh-love-11",
+     "text": "我心动了。",
+     "meaning": "설레, 마음이 움직였어",
+     "example": "看到你笑，我心动了。",
+     "exampleKo": "네가 웃는 걸 보고 설렜어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-love-12",
+     "text": "一直在想你。",
+     "meaning": "계속 네 생각만 해",
+     "example": "今天一直在想你。",
+     "exampleKo": "오늘 계속 네 생각만 했어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-love-13",
+     "text": "你是我的全部。",
+     "meaning": "넌 내 전부야",
+     "example": "你是我的全部。",
+     "exampleKo": "넌 내 전부야.",
+     "tip": "아주 달콤한 말이라 특별한 날에 아껴 써요."
+    },
+    {
+     "id": "zh-love-14",
+     "text": "么么哒",
+     "meaning": "쪽 (뽀뽀, 귀엽게)",
+     "example": "明天见，么么哒！",
+     "exampleKo": "내일 봐, 쪽!",
+     "tip": "메시지 끝에 붙이는 애교 표현이에요."
+    },
+    {
+     "id": "zh-love-15",
+     "text": "晚安，好梦。",
+     "meaning": "잘 자, 좋은 꿈 꿔",
+     "example": "晚安，好梦。",
+     "exampleKo": "잘 자, 좋은 꿈 꿔.",
+     "tip": ""
+    },
+    {
+     "id": "zh-love-16",
+     "text": "你太可爱了。",
+     "meaning": "너무 귀여워",
+     "example": "你睡觉的样子太可爱了。",
+     "exampleKo": "자는 모습 너무 귀여워.",
+     "tip": ""
+    },
+    {
+     "id": "zh-love-17",
+     "text": "做我女朋友好吗？",
+     "meaning": "내 여자친구 해 줄래?",
+     "example": "做我女朋友好吗？",
+     "exampleKo": "내 여자친구가 되어 줄래?",
+     "tip": "남자친구에게는 「做我男朋友好吗？」라고 해요."
+    }
+   ]
+  },
+  {
+   "id": "miss",
+   "title": {
+    "ko": "보고 싶을 때",
+    "en": "Missing you"
+   },
+   "items": [
+    {
+     "id": "zh-miss-01",
+     "text": "我想你。",
+     "meaning": "보고 싶어",
+     "example": "我好想你。",
+     "exampleKo": "너무 보고 싶어.",
+     "tip": "「想」 하나로 '보고 싶다, 그립다'를 말해요.",
+     "sentences": 69,
+     "perMillion": 772.5
+    },
+    {
+     "id": "zh-miss-02",
+     "text": "已经开始想你了。",
+     "meaning": "벌써 보고 싶어",
+     "example": "你刚走，我已经开始想你了。",
+     "exampleKo": "방금 갔는데 벌써 보고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-03",
+     "text": "好想早点见到你！",
+     "meaning": "빨리 보고 싶어!",
+     "example": "还有三天！好想早点见到你！",
+     "exampleKo": "3일만 더! 빨리 보고 싶어!",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-04",
+     "text": "我在数日子。",
+     "meaning": "날짜 세는 중이야",
+     "example": "我在数日子等你来。",
+     "exampleKo": "너 올 날만 세고 있어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-05",
+     "text": "要是你在这里就好了。",
+     "meaning": "네가 여기 있으면 좋을 텐데",
+     "example": "风景好美，要是你在这里就好了。",
+     "exampleKo": "경치 너무 예뻐, 네가 여기 있으면 좋을 텐데.",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-06",
+     "text": "在想你呢。",
+     "meaning": "네 생각 하고 있었어",
+     "example": "没什么，就是在想你呢。",
+     "exampleKo": "별일 없어, 그냥 네 생각 하고 있었어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-07",
+     "text": "下次见！",
+     "meaning": "다음에 봐!",
+     "example": "下次见！路上小心。",
+     "exampleKo": "다음에 봐! 조심히 가.",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-08",
+     "text": "没有你好无聊。",
+     "meaning": "너 없으니까 허전해",
+     "example": "没有你，这家咖啡店都好无聊。",
+     "exampleKo": "너 없으니까 이 카페도 심심해.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 235.1
+    },
+    {
+     "id": "zh-miss-09",
+     "text": "想听你的声音。",
+     "meaning": "네 목소리 듣고 싶어",
+     "example": "可以打电话吗？想听你的声音。",
+     "exampleKo": "전화할 수 있어? 목소리 듣고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-10",
+     "text": "抱抱",
+     "meaning": "꼭 안아 줄게",
+     "example": "今天辛苦了，抱抱。",
+     "exampleKo": "오늘 고생했어, 꼭 안아 줄게.",
+     "tip": "직접 안아 줄 수 없을 때 메시지로 자주 써요."
+    },
+    {
+     "id": "zh-miss-11",
+     "text": "满脑子都是你。",
+     "meaning": "머릿속이 온통 너야",
+     "example": "上班的时候满脑子都是你。",
+     "exampleKo": "일할 때도 머릿속이 온통 너야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-12",
+     "text": "早点回来。",
+     "meaning": "빨리 돌아와",
+     "example": "我等你，早点回来。",
+     "exampleKo": "기다릴게, 빨리 돌아와.",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-13",
+     "text": "我等你。",
+     "meaning": "기다릴게",
+     "example": "慢慢来，我等你。",
+     "exampleKo": "천천히 해, 기다릴게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-miss-14",
+     "text": "什么时候能见面？",
+     "meaning": "언제 만날 수 있어?",
+     "example": "我们什么时候能见面？",
+     "exampleKo": "우리 언제 만날 수 있어?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "text",
+   "title": {
+    "ko": "메시지 줄임말",
+    "en": "Texting shortcuts"
+   },
+   "items": [
+    {
+     "id": "zh-text-01",
+     "text": "哈哈哈",
+     "meaning": "ㅋㅋㅋ",
+     "example": "太好笑了哈哈哈",
+     "exampleKo": "너무 웃기다 ㅋㅋㅋ",
+     "tip": "웃음소리를 그대로 써요. 많이 웃기면 「哈」를 늘려요.",
+     "texting": true
+    },
+    {
+     "id": "zh-text-02",
+     "text": "233",
+     "meaning": "ㅋㅋㅋ (빵 터짐)",
+     "example": "这个视频233333",
+     "exampleKo": "이 영상 ㅋㅋㅋㅋㅋ",
+     "tip": "인터넷에서 크게 웃을 때 쓰는 숫자 말이에요.",
+     "texting": true
+    },
+    {
+     "id": "zh-text-03",
+     "text": "666",
+     "meaning": "대박, 잘한다",
+     "example": "你这么快就做完了？666",
+     "exampleKo": "벌써 다 했어? 대박",
+     "tip": "「溜(liù)」와 소리가 같아 '능숙하다, 멋지다'라는 뜻이에요.",
+     "texting": true
+    },
+    {
+     "id": "zh-text-04",
+     "text": "88",
+     "meaning": "바이바이",
+     "example": "我先睡了，88！",
+     "exampleKo": "먼저 잘게, 바이!",
+     "tip": "拜拜(bàibai)와 소리가 비슷해서 써요.",
+     "texting": true
+    },
+    {
+     "id": "zh-text-05",
+     "text": "520",
+     "meaning": "사랑해",
+     "example": "520，宝贝！",
+     "exampleKo": "사랑해, 자기야!",
+     "tip": "「我爱你(wǒ ài nǐ)」와 소리가 비슷해서 숫자로 써요. 5월 20일은 중국의 연인의 날이에요.",
+     "texting": true
+    },
+    {
+     "id": "zh-text-06",
+     "text": "好的",
+     "meaning": "알았어, 좋아",
+     "example": "好的，一会儿见！",
+     "exampleKo": "알았어, 이따 봐!",
+     "tip": "짧게 「好」만 쓰면 조금 차갑게 들릴 수 있어요.",
+     "texting": true
+    },
+    {
+     "id": "zh-text-07",
+     "text": "嗯嗯",
+     "meaning": "응응",
+     "example": "嗯嗯，我知道了。",
+     "exampleKo": "응응, 알겠어.",
+     "tip": "「嗯」 하나만 쓰면 무뚝뚝하게 들려서 두 번 쓰는 경우가 많아요.",
+     "texting": true
+    },
+    {
+     "id": "zh-text-08",
+     "text": "在吗？",
+     "meaning": "있어? (메시지 시작)",
+     "example": "在吗？想问你个事。",
+     "exampleKo": "있어? 뭐 하나 물어보려고.",
+     "tip": "메시지를 시작할 때 자주 써요.",
+     "texting": true
+    },
+    {
+     "id": "zh-text-09",
+     "text": "干嘛呢？",
+     "meaning": "뭐 해?",
+     "example": "干嘛呢？",
+     "exampleKo": "지금 뭐 해?",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "zh-text-10",
+     "text": "早安",
+     "meaning": "좋은 아침",
+     "example": "早安！睡得好吗？",
+     "exampleKo": "좋은 아침! 잘 잤어?",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "zh-text-11",
+     "text": "晚安",
+     "meaning": "잘 자",
+     "example": "我先睡了，晚安。",
+     "exampleKo": "먼저 잘게, 잘 자.",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "zh-text-12",
+     "text": "真的假的？",
+     "meaning": "진짜야?",
+     "example": "真的假的？不敢相信！",
+     "exampleKo": "진짜야? 말도 안 돼!",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "zh-text-13",
+     "text": "绝了",
+     "meaning": "대박이다, 최고다",
+     "example": "这家火锅绝了！",
+     "exampleKo": "이 훠궈 집 대박이야!",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "zh-text-14",
+     "text": "我也是",
+     "meaning": "나도",
+     "example": "我也是，好累啊。",
+     "exampleKo": "나도, 너무 피곤해.",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "zh-text-15",
+     "text": "稍等",
+     "meaning": "잠깐만",
+     "example": "稍等，我妈打电话来了。",
+     "exampleKo": "잠깐만, 엄마 전화 왔어.",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "zh-text-16",
+     "text": "谢啦",
+     "meaning": "고마워 (가볍게)",
+     "example": "谢啦，帮大忙了！",
+     "exampleKo": "고마워, 큰 도움 됐어!",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "zh-text-17",
+     "text": "没事",
+     "meaning": "괜찮아, 별거 아냐",
+     "example": "没事，随时找我。",
+     "exampleKo": "괜찮아, 언제든 연락해.",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "zh-text-18",
+     "text": "真的",
+     "meaning": "진짜로",
+     "example": "这部电影真的好看。",
+     "exampleKo": "이 영화 진짜 재밌어.",
+     "tip": "",
+     "texting": true
+    }
+   ]
+  },
+  {
+   "id": "chat",
+   "title": {
+    "ko": "안부·수다",
+    "en": "Catching up"
+   },
+   "items": [
+    {
+     "id": "zh-chat-01",
+     "text": "你在干什么？",
+     "meaning": "뭐 하고 있어?",
+     "example": "周末你在干什么？",
+     "exampleKo": "주말에 뭐 해?",
+     "tip": ""
+    },
+    {
+     "id": "zh-chat-02",
+     "text": "今天过得怎么样？",
+     "meaning": "오늘 어땠어?",
+     "example": "今天过得怎么样？都跟我说说。",
+     "exampleKo": "오늘 어땠어? 다 얘기해 줘.",
+     "tip": ""
+    },
+    {
+     "id": "zh-chat-03",
+     "text": "没干什么。",
+     "meaning": "별거 안 해",
+     "example": "没干什么，在家躺着。",
+     "exampleKo": "별거 안 해, 집에서 누워 있어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-chat-04",
+     "text": "我懂你。",
+     "meaning": "무슨 마음인지 알아",
+     "example": "我懂你，我也遇到过。",
+     "exampleKo": "무슨 마음인지 알아, 나도 겪어 봤어.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 201.5
+    },
+    {
+     "id": "zh-chat-05",
+     "text": "在家休息呢。",
+     "meaning": "집에서 쉬는 중이야",
+     "example": "在家跟猫一起休息呢。",
+     "exampleKo": "집에서 고양이랑 쉬는 중이야.",
+     "tip": "",
+     "sentences": 139,
+     "perMillion": 1556.1
+    },
+    {
+     "id": "zh-chat-06",
+     "text": "不会吧！",
+     "meaning": "설마! 말도 안 돼!",
+     "example": "不会吧！你见到他了？",
+     "exampleKo": "설마! 걔를 만났다고?",
+     "tip": ""
+    },
+    {
+     "id": "zh-chat-07",
+     "text": "太厉害了！",
+     "meaning": "대단하다!",
+     "example": "你见到明星了？太厉害了！",
+     "exampleKo": "연예인 봤어? 대박!",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 201.5
+    },
+    {
+     "id": "zh-chat-08",
+     "text": "就是说啊。",
+     "meaning": "내 말이",
+     "example": "就是说啊，星期一最累了。",
+     "exampleKo": "내 말이, 월요일이 제일 힘들어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-chat-09",
+     "text": "跟你说个好消息！",
+     "meaning": "좋은 소식 있어!",
+     "example": "跟你说个好消息！我找到工作了！",
+     "exampleKo": "좋은 소식 있어! 나 취업했어!",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 134.3
+    },
+    {
+     "id": "zh-chat-10",
+     "text": "怎么了？",
+     "meaning": "무슨 일이야?",
+     "example": "你今天好安静，怎么了？",
+     "exampleKo": "오늘 조용하네, 무슨 일이야?",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 268.7
+    },
+    {
+     "id": "zh-chat-11",
+     "text": "吃饭了吗？",
+     "meaning": "밥 먹었어?",
+     "example": "吃饭了吗？别饿着。",
+     "exampleKo": "밥 먹었어? 굶지 마.",
+     "tip": "한국처럼 중국에서도 안부로 자주 써요."
+    },
+    {
+     "id": "zh-chat-12",
+     "text": "最近怎么样？",
+     "meaning": "요즘 어때?",
+     "example": "好久不见！最近怎么样？",
+     "exampleKo": "오랜만이야! 요즘 어때?",
+     "tip": ""
+    },
+    {
+     "id": "zh-chat-13",
+     "text": "辛苦了！",
+     "meaning": "수고했어!",
+     "example": "今天辛苦了！",
+     "exampleKo": "오늘 수고했어!",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 134.3
+    },
+    {
+     "id": "zh-chat-14",
+     "text": "原来如此。",
+     "meaning": "그렇구나",
+     "example": "原来如此，我明白了。",
+     "exampleKo": "그렇구나, 이해했어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-chat-15",
+     "text": "好有意思！",
+     "meaning": "재밌다!",
+     "example": "好有意思，再多说点！",
+     "exampleKo": "재밌다, 더 얘기해 줘!",
+     "tip": "",
+     "sentences": 60,
+     "perMillion": 671.7
+    },
+    {
+     "id": "zh-chat-16",
+     "text": "真的吗？",
+     "meaning": "진짜?",
+     "example": "你要搬来这里？真的吗？",
+     "exampleKo": "여기로 이사 온다고? 진짜?",
+     "tip": "",
+     "sentences": 40,
+     "perMillion": 447.8
+    },
+    {
+     "id": "zh-chat-17",
+     "text": "老样子。",
+     "meaning": "늘 똑같지 뭐",
+     "example": "工作还是老样子。",
+     "exampleKo": "일은 늘 똑같지 뭐.",
+     "tip": ""
+    },
+    {
+     "id": "zh-chat-18",
+     "text": "最近在追什么剧？",
+     "meaning": "요즘 무슨 드라마 봐?",
+     "example": "最近在追什么剧？",
+     "exampleKo": "요즘 무슨 드라마 챙겨 봐?",
+     "tip": "「追剧」는 드라마를 챙겨 보는 거예요."
+    }
+   ]
+  },
+  {
+   "id": "tease",
+   "title": {
+    "ko": "장난·놀리기",
+    "en": "Teasing & jokes"
+   },
+   "items": [
+    {
+     "id": "zh-tease-01",
+     "text": "你好笨啊。",
+     "meaning": "바보야 (귀엽게)",
+     "example": "你好笨啊，不过我喜欢。",
+     "exampleKo": "너 바보 같아, 근데 그게 좋아.",
+     "tip": "웃으며 말하면 다정한 놀림이에요."
+    },
+    {
+     "id": "zh-tease-02",
+     "text": "开玩笑的啦。",
+     "meaning": "농담이야",
+     "example": "别生气，开玩笑的啦。",
+     "exampleKo": "화내지 마, 농담이야.",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 246.3
+    },
+    {
+     "id": "zh-tease-03",
+     "text": "讨厌！",
+     "meaning": "미워! (부끄러울 때)",
+     "example": "讨厌！你让我脸红了。",
+     "exampleKo": "미워! 얼굴 빨개지잖아.",
+     "tip": "웃으며 말하면 부끄러워서 하는 애교예요.",
+     "sentences": 94,
+     "perMillion": 1052.3
+    },
+    {
+     "id": "zh-tease-04",
+     "text": "想得美。",
+     "meaning": "꿈 깨",
+     "example": "还要我做饭？想得美。",
+     "exampleKo": "또 밥 해 달라고? 꿈 깨.",
+     "tip": ""
+    },
+    {
+     "id": "zh-tease-05",
+     "text": "没门儿。",
+     "meaning": "어림없어",
+     "example": "想让我认输？没门儿。",
+     "exampleKo": "내가 지라고? 어림없어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-tease-06",
+     "text": "一点都不好笑。",
+     "meaning": "하나도 안 웃겨",
+     "example": "一点都不好笑，把手机还我。",
+     "exampleKo": "하나도 안 웃겨, 폰 돌려줘.",
+     "tip": ""
+    },
+    {
+     "id": "zh-tease-07",
+     "text": "你太夸张了。",
+     "meaning": "오버야",
+     "example": "生日还买气球？你太夸张了。",
+     "exampleKo": "생일에 풍선까지? 너무 오버야.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-tease-08",
+     "text": "随便你。",
+     "meaning": "맘대로 해",
+     "example": "随便你，你赢了。",
+     "exampleKo": "맘대로 해, 네가 이겼어.",
+     "tip": "화났을 때도 쓰니 말투에 주의해요.",
+     "sentences": 23,
+     "perMillion": 257.5
+    },
+    {
+     "id": "zh-tease-09",
+     "text": "你好坏！",
+     "meaning": "너 못됐어!",
+     "example": "你好坏！我那么努力了！",
+     "exampleKo": "너 못됐어! 열심히 했단 말이야!",
+     "tip": ""
+    },
+    {
+     "id": "zh-tease-10",
+     "text": "上当了吧！",
+     "meaning": "속았지!",
+     "example": "上当了吧！骗你的。",
+     "exampleKo": "속았지! 뻥이야.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-tease-11",
+     "text": "被我发现了！",
+     "meaning": "딱 걸렸어!",
+     "example": "被我发现了！你吃了我的零食。",
+     "exampleKo": "딱 걸렸어! 내 과자 먹었지.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 347.0
+    },
+    {
+     "id": "zh-tease-12",
+     "text": "谁说的？",
+     "meaning": "누가 그래?",
+     "example": "我做饭不好吃？谁说的？",
+     "exampleKo": "내가 요리 못한다고? 누가 그래?",
+     "tip": ""
+    },
+    {
+     "id": "zh-tease-13",
+     "text": "真拿你没办法。",
+     "meaning": "너 진짜 못 말려",
+     "example": "真拿你没办法，别笑了。",
+     "exampleKo": "진짜 못 말려, 그만 웃어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-tease-14",
+     "text": "别得意。",
+     "meaning": "잘난 척하지 마",
+     "example": "赢了一次就别得意。",
+     "exampleKo": "한 번 이겼다고 잘난 척하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-tease-15",
+     "text": "骗你的！",
+     "meaning": "뻥이야!",
+     "example": "骗你的！你今天很好看。",
+     "exampleKo": "뻥이야! 오늘 예뻐.",
+     "tip": ""
+    },
+    {
+     "id": "zh-tease-16",
+     "text": "走起！",
+     "meaning": "가자, 콜!",
+     "example": "吃火锅？走起！",
+     "exampleKo": "훠궈? 콜!",
+     "tip": ""
+    },
+    {
+     "id": "zh-tease-17",
+     "text": "你是戏精吧。",
+     "meaning": "너 연기 중이지?",
+     "example": "又装可怜，你是戏精吧。",
+     "exampleKo": "또 불쌍한 척, 너 연기 중이지?",
+     "tip": "「戏精」는 오버해서 연기하는 사람을 놀리는 말이에요."
+    }
+   ]
+  },
+  {
+   "id": "date",
+   "title": {
+    "ko": "약속·데이트",
+    "en": "Plans & dates"
+   },
+   "items": [
+    {
+     "id": "zh-date-01",
+     "text": "今晚有空吗？",
+     "meaning": "오늘 밤 시간 돼?",
+     "example": "今晚有空吗？想见你。",
+     "exampleKo": "오늘 밤 시간 돼? 보고 싶어.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 145.5
+    },
+    {
+     "id": "zh-date-02",
+     "text": "一起吃饭吧？",
+     "meaning": "같이 밥 먹을래?",
+     "example": "下班后一起吃饭吧？",
+     "exampleKo": "퇴근하고 같이 밥 먹을래?",
+     "tip": ""
+    },
+    {
+     "id": "zh-date-03",
+     "text": "那就说定了。",
+     "meaning": "그럼 약속한 거다",
+     "example": "周五七点？那就说定了。",
+     "exampleKo": "금요일 7시? 그럼 약속한 거다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-date-04",
+     "text": "我去接你吧？",
+     "meaning": "데리러 갈까?",
+     "example": "七点我去接你吧？",
+     "exampleKo": "7시에 데리러 갈까?",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 123.1
+    },
+    {
+     "id": "zh-date-05",
+     "text": "你几点方便？",
+     "meaning": "몇 시가 편해?",
+     "example": "明天你几点方便？",
+     "exampleKo": "내일 몇 시가 편해?",
+     "tip": ""
+    },
+    {
+     "id": "zh-date-06",
+     "text": "可以改天吗？",
+     "meaning": "다른 날로 바꿀 수 있어?",
+     "example": "我有急事，可以改天吗？",
+     "exampleKo": "급한 일이 생겼어, 다른 날로 해도 될까?",
+     "tip": ""
+    },
+    {
+     "id": "zh-date-07",
+     "text": "突然有事。",
+     "meaning": "갑자기 일이 생겼어",
+     "example": "对不起，突然有事。",
+     "exampleKo": "미안, 갑자기 일이 생겼어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-date-08",
+     "text": "十分钟到。",
+     "meaning": "10분 뒤 도착",
+     "example": "我十分钟到！",
+     "exampleKo": "10분 뒤 도착!",
+     "tip": ""
+    },
+    {
+     "id": "zh-date-09",
+     "text": "在哪儿见？",
+     "meaning": "어디서 만날까?",
+     "example": "我们在哪儿见？地铁站？",
+     "exampleKo": "어디서 만날까? 지하철역?",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-date-10",
+     "text": "我们AA吧。",
+     "meaning": "반반 내자",
+     "example": "这次我们AA吧。",
+     "exampleKo": "이번엔 반반 내자.",
+     "tip": "각자 내는 걸 「AA制」라고 해요.",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-date-11",
+     "text": "我请客。",
+     "meaning": "내가 살게",
+     "example": "今天我请客。",
+     "exampleKo": "오늘은 내가 살게.",
+     "tip": "중국에서는 서로 내겠다고 다투는 모습도 흔해요.",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-date-12",
+     "text": "来我家看电影吧？",
+     "meaning": "우리 집에서 영화 볼래?",
+     "example": "周末来我家看电影吧？",
+     "exampleKo": "주말에 우리 집에서 영화 볼래?",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 246.3
+    },
+    {
+     "id": "zh-date-13",
+     "text": "到家了告诉我。",
+     "meaning": "집에 도착하면 알려 줘",
+     "example": "到家了告诉我一声。",
+     "exampleKo": "집에 도착하면 말해 줘.",
+     "tip": "한국의 '도착하면 연락해'와 같은 마음이에요."
+    },
+    {
+     "id": "zh-date-14",
+     "text": "我送你回家。",
+     "meaning": "집까지 데려다줄게",
+     "example": "太晚了，我送你回家。",
+     "exampleKo": "너무 늦었어, 집까지 데려다줄게.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-date-15",
+     "text": "今天玩得很开心。",
+     "meaning": "오늘 정말 즐거웠어",
+     "example": "今天玩得很开心，谢谢你。",
+     "exampleKo": "오늘 정말 즐거웠어, 고마워.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-date-16",
+     "text": "下次再约！",
+     "meaning": "다음에 또 만나자!",
+     "example": "今天好开心，下次再约！",
+     "exampleKo": "오늘 즐거웠어, 다음에 또 보자!",
+     "tip": ""
+    },
+    {
+     "id": "zh-date-17",
+     "text": "今晚还见吗？",
+     "meaning": "오늘 밤 그대로 보는 거지?",
+     "example": "今晚还见吗？",
+     "exampleKo": "오늘 밤 약속 그대로지?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "call",
+   "title": {
+    "ko": "영상통화·장거리",
+    "en": "Calls & distance"
+   },
+   "items": [
+    {
+     "id": "zh-call-01",
+     "text": "听得到吗？",
+     "meaning": "들려?",
+     "example": "喂，听得到吗？",
+     "exampleKo": "여보세요, 들려?",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-02",
+     "text": "信号不好。",
+     "meaning": "신호가 안 좋아",
+     "example": "你那边信号不好，声音断断续续的。",
+     "exampleKo": "거기 신호가 안 좋아, 소리가 끊겨.",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-03",
+     "text": "画面卡住了。",
+     "meaning": "화면 멈췄어",
+     "example": "你的画面卡住了。",
+     "exampleKo": "네 화면 멈췄어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-04",
+     "text": "可以给你打电话吗？",
+     "meaning": "전화해도 돼?",
+     "example": "下班后可以给你打电话吗？",
+     "exampleKo": "퇴근하고 전화해도 돼?",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 145.5
+    },
+    {
+     "id": "zh-call-05",
+     "text": "我等会儿打给你。",
+     "meaning": "이따 전화할게",
+     "example": "我在公交上，等会儿打给你。",
+     "exampleKo": "버스 안이라 이따 전화할게.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-call-06",
+     "text": "视频吧！",
+     "meaning": "영상통화하자!",
+     "example": "睡前视频吧！",
+     "exampleKo": "자기 전에 영상통화하자!",
+     "tip": "「视频」만으로 '영상통화하다'라는 뜻이 돼요.",
+     "sentences": 15,
+     "perMillion": 167.9
+    },
+    {
+     "id": "zh-call-07",
+     "text": "你那边几点？",
+     "meaning": "거기 지금 몇 시야?",
+     "example": "你那边几点了？吵醒你了吗？",
+     "exampleKo": "거기 지금 몇 시야? 나 때문에 깼어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-08",
+     "text": "我这边很晚了。",
+     "meaning": "여기는 늦었어",
+     "example": "我这边很晚了，先睡了。",
+     "exampleKo": "여기 늦어서 먼저 잘게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-09",
+     "text": "时差",
+     "meaning": "시차",
+     "example": "时差好难熬。",
+     "exampleKo": "시차 너무 힘들다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-10",
+     "text": "你静音了。",
+     "meaning": "음소거됐어",
+     "example": "等等，你静音了！",
+     "exampleKo": "잠깐, 너 음소거야!",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-11",
+     "text": "开一下摄像头。",
+     "meaning": "카메라 좀 켜 줘",
+     "example": "开一下摄像头，想看看你。",
+     "exampleKo": "카메라 좀 켜 줘, 얼굴 보고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-12",
+     "text": "打着电话睡着了。",
+     "meaning": "통화하다 잠들었어",
+     "example": "对不起，昨天打着电话睡着了。",
+     "exampleKo": "미안, 어제 통화하다 잠들었어.",
+     "tip": "",
+     "sentences": 27,
+     "perMillion": 302.3
+    },
+    {
+     "id": "zh-call-13",
+     "text": "异地恋",
+     "meaning": "장거리 연애",
+     "example": "异地恋很辛苦，但是值得。",
+     "exampleKo": "장거리 연애는 힘들지만 그만한 가치가 있어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-14",
+     "text": "我等你电话。",
+     "meaning": "전화 기다릴게",
+     "example": "我不睡，等你电话。",
+     "exampleKo": "안 자고 전화 기다릴게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-15",
+     "text": "你先挂。",
+     "meaning": "너 먼저 끊어",
+     "example": "不要，你先挂！",
+     "exampleKo": "싫어, 너 먼저 끊어!",
+     "tip": "「挂」는 '전화를 끊다'예요.",
+     "sentences": 39,
+     "perMillion": 436.6
+    },
+    {
+     "id": "zh-call-16",
+     "text": "明天再聊。",
+     "meaning": "내일 또 얘기하자",
+     "example": "晚安，明天再聊。",
+     "exampleKo": "잘 자, 내일 또 얘기하자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-call-17",
+     "text": "看得到我吗？",
+     "meaning": "나 보여?",
+     "example": "看得到我吗？这里好暗。",
+     "exampleKo": "나 보여? 여기 어둡다.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "fight",
+   "title": {
+    "ko": "다툼·화해",
+    "en": "Fights & making up"
+   },
+   "items": [
+    {
+     "id": "zh-fight-01",
+     "text": "我不是那个意思。",
+     "meaning": "그런 뜻이 아니었어",
+     "example": "对不起，我不是那个意思。",
+     "exampleKo": "미안, 그런 뜻이 아니었어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-fight-02",
+     "text": "我们能谈谈吗？",
+     "meaning": "우리 얘기 좀 할 수 있어?",
+     "example": "今晚我们能谈谈吗？很重要。",
+     "exampleKo": "오늘 밤 얘기 좀 할 수 있어? 중요한 거야.",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 358.2
+    },
+    {
+     "id": "zh-fight-03",
+     "text": "让我一个人静一静。",
+     "meaning": "잠깐 혼자 있고 싶어",
+     "example": "我没生气，只是想一个人静一静。",
+     "exampleKo": "화난 거 아니야, 잠깐 혼자 있고 싶어.",
+     "tip": "헤어지자는 뜻이 아니라 시간이 필요하다는 말이에요."
+    },
+    {
+     "id": "zh-fight-04",
+     "text": "我很受伤。",
+     "meaning": "나 상처받았어",
+     "example": "说实话，那句话让我很受伤。",
+     "exampleKo": "솔직히 그 말에 상처받았어.",
+     "tip": "",
+     "sentences": 82,
+     "perMillion": 918.0
+    },
+    {
+     "id": "zh-fight-05",
+     "text": "别吵了。",
+     "meaning": "우리 싸우지 말자",
+     "example": "别吵了，我想你了。",
+     "exampleKo": "싸우지 말자, 보고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-fight-06",
+     "text": "我说得太过分了。",
+     "meaning": "내가 말이 심했어",
+     "example": "对不起，我说得太过分了。",
+     "exampleKo": "미안, 내가 말이 심했어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-fight-07",
+     "text": "我们没事吧？",
+     "meaning": "우리 괜찮은 거지?",
+     "example": "我们现在没事了吧？",
+     "exampleKo": "우리 이제 괜찮은 거지?",
+     "tip": ""
+    },
+    {
+     "id": "zh-fight-08",
+     "text": "和好吧。",
+     "meaning": "화해하자",
+     "example": "不想吵架了，我们和好吧。",
+     "exampleKo": "싸우기 싫어, 화해하자.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 112.0
+    },
+    {
+     "id": "zh-fight-09",
+     "text": "我原谅你。",
+     "meaning": "용서할게",
+     "example": "没关系，我原谅你。",
+     "exampleKo": "괜찮아, 용서할게.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-fight-10",
+     "text": "我没这么说。",
+     "meaning": "나 그렇게 말 안 했어",
+     "example": "等等，我没这么说。",
+     "exampleKo": "잠깐, 나 그렇게 말 안 했어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-fight-11",
+     "text": "是我不对。",
+     "meaning": "내가 잘못했어",
+     "example": "你说得对，是我不对。",
+     "exampleKo": "네 말이 맞아, 내가 잘못했어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-fight-12",
+     "text": "别生气了。",
+     "meaning": "화내지 마",
+     "example": "别生气了，听我解释。",
+     "exampleKo": "화내지 마, 설명할게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-fight-13",
+     "text": "我不是生你的气。",
+     "meaning": "너한테 화난 거 아니야",
+     "example": "我不是生你的气，只是太累了。",
+     "exampleKo": "너한테 화난 게 아니라 너무 피곤해서 그래.",
+     "tip": ""
+    },
+    {
+     "id": "zh-fight-14",
+     "text": "我们重新开始吧。",
+     "meaning": "다시 시작하자",
+     "example": "我们重新开始吧。",
+     "exampleKo": "우리 다시 시작하자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-fight-15",
+     "text": "我明白你的意思。",
+     "meaning": "무슨 말인지 알아",
+     "example": "我明白你的意思，但我不这么想。",
+     "exampleKo": "무슨 말인지 알지만 난 생각이 달라.",
+     "tip": ""
+    },
+    {
+     "id": "zh-fight-16",
+     "text": "已经不在意了。",
+     "meaning": "이제 신경 안 써",
+     "example": "已经不在意了，别担心。",
+     "exampleKo": "이제 신경 안 써, 걱정 마.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-fight-17",
+     "text": "对不起，让你难过了。",
+     "meaning": "속상하게 해서 미안해",
+     "example": "对不起，让你难过了。",
+     "exampleKo": "속상하게 해서 미안해.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "care",
+   "title": {
+    "ko": "위로·응원",
+    "en": "Comfort & cheering"
+   },
+   "items": [
+    {
+     "id": "zh-care-01",
+     "text": "有我在。",
+     "meaning": "내가 있잖아",
+     "example": "别怕，有我在。",
+     "exampleKo": "무서워하지 마, 내가 있잖아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-02",
+     "text": "你可以的！",
+     "meaning": "넌 할 수 있어!",
+     "example": "明天加油，你可以的！",
+     "exampleKo": "내일 힘내, 넌 할 수 있어!",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-03",
+     "text": "太惨了吧。",
+     "meaning": "너무 속상하겠다",
+     "example": "错过公交了？太惨了吧。",
+     "exampleKo": "버스 놓쳤어? 너무 속상하겠다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-04",
+     "text": "照顾好自己。",
+     "meaning": "몸 잘 챙겨",
+     "example": "天冷了，照顾好自己。",
+     "exampleKo": "날 추워졌어, 몸 잘 챙겨.",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-05",
+     "text": "好好休息。",
+     "meaning": "푹 쉬어",
+     "example": "辛苦了，好好休息。",
+     "exampleKo": "고생했어, 푹 쉬어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-06",
+     "text": "多喝热水。",
+     "meaning": "따뜻한 물 많이 마셔",
+     "example": "感冒了？多喝热水。",
+     "exampleKo": "감기 걸렸어? 따뜻한 물 많이 마셔.",
+     "tip": "중국에서 아플 때 가장 흔히 하는 말이에요. 너무 이것만 말하면 무심하다고 놀림받기도 해요."
+    },
+    {
+     "id": "zh-care-07",
+     "text": "一切都会好的。",
+     "meaning": "다 괜찮아질 거야",
+     "example": "别哭，一切都会好的。",
+     "exampleKo": "울지 마, 다 괜찮아질 거야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-08",
+     "text": "我为你骄傲。",
+     "meaning": "네가 자랑스러워",
+     "example": "你做到了！我为你骄傲。",
+     "exampleKo": "해냈구나! 네가 자랑스러워.",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-09",
+     "text": "再坚持一下。",
+     "meaning": "조금만 버텨",
+     "example": "快考完了，再坚持一下！",
+     "exampleKo": "시험 거의 끝났어, 조금만 버텨!",
+     "tip": "",
+     "sentences": 38,
+     "perMillion": 425.4
+    },
+    {
+     "id": "zh-care-10",
+     "text": "想聊聊吗？",
+     "meaning": "얘기하고 싶어?",
+     "example": "你看起来不开心，想聊聊吗？",
+     "exampleKo": "기운 없어 보여, 얘기하고 싶어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-11",
+     "text": "你已经尽力了。",
+     "meaning": "최선을 다했잖아",
+     "example": "没关系，你已经尽力了。",
+     "exampleKo": "괜찮아, 최선을 다했잖아.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 100.8
+    },
+    {
+     "id": "zh-care-12",
+     "text": "我永远站在你这边。",
+     "meaning": "난 언제나 네 편이야",
+     "example": "别担心，我永远站在你这边。",
+     "exampleKo": "걱정 마, 난 언제나 네 편이야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-13",
+     "text": "别太累了。",
+     "meaning": "너무 무리하지 마",
+     "example": "工作再忙也别太累了。",
+     "exampleKo": "일이 바빠도 너무 무리하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-14",
+     "text": "路上小心。",
+     "meaning": "조심히 가",
+     "example": "太晚了，路上小心。",
+     "exampleKo": "늦었으니까 조심히 가.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-care-15",
+     "text": "我相信你。",
+     "meaning": "난 너 믿어",
+     "example": "我相信你，一定没问题。",
+     "exampleKo": "난 너 믿어, 분명 괜찮을 거야.",
+     "tip": "",
+     "sentences": 43,
+     "perMillion": 481.4
+    },
+    {
+     "id": "zh-care-16",
+     "text": "别太自责了。",
+     "meaning": "너무 자책하지 마",
+     "example": "别太自责了。",
+     "exampleKo": "너무 자책하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-care-17",
+     "text": "有事随时找我。",
+     "meaning": "무슨 일 있으면 언제든 말해",
+     "example": "有事随时找我。",
+     "exampleKo": "무슨 일 있으면 언제든 연락해.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "react",
+   "title": {
+    "ko": "칭찬·리액션",
+    "en": "Compliments & reactions"
+   },
+   "items": [
+    {
+     "id": "zh-react-01",
+     "text": "你今天好好看！",
+     "meaning": "오늘 너무 예쁘다!",
+     "example": "你穿这条裙子好好看！",
+     "exampleKo": "그 원피스 입으니까 너무 예쁘다!",
+     "tip": ""
+    },
+    {
+     "id": "zh-react-02",
+     "text": "你真贴心。",
+     "meaning": "너 정말 다정하다",
+     "example": "你给我做了午饭？你真贴心。",
+     "exampleKo": "점심 만들어 줬어? 정말 다정하다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-react-03",
+     "text": "好可爱啊！",
+     "meaning": "너무 귀여워!",
+     "example": "好可爱啊！你看这只小狗！",
+     "exampleKo": "너무 귀여워! 이 강아지 봐!",
+     "tip": ""
+    },
+    {
+     "id": "zh-react-04",
+     "text": "我喜欢！",
+     "meaning": "그거 좋다!",
+     "example": "你开始画画了？我喜欢！",
+     "exampleKo": "그림 시작했어? 좋다!",
+     "tip": "",
+     "sentences": 206,
+     "perMillion": 2306.2
+    },
+    {
+     "id": "zh-react-05",
+     "text": "太好了！",
+     "meaning": "잘됐다!",
+     "example": "你考上了？太好了！",
+     "exampleKo": "합격했어? 잘됐다!",
+     "tip": "",
+     "sentences": 70,
+     "perMillion": 783.7
+    },
+    {
+     "id": "zh-react-06",
+     "text": "笑死我了。",
+     "meaning": "웃겨 죽겠어",
+     "example": "你的故事笑死我了。",
+     "exampleKo": "네 얘기 웃겨 죽겠어.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-react-07",
+     "text": "真替你高兴。",
+     "meaning": "내 일처럼 기뻐",
+     "example": "你订婚了？真替你高兴！",
+     "exampleKo": "약혼했어? 내 일처럼 기뻐!",
+     "tip": ""
+    },
+    {
+     "id": "zh-react-08",
+     "text": "看起来好好吃！",
+     "meaning": "맛있겠다!",
+     "example": "看起来好好吃！你自己做的？",
+     "exampleKo": "맛있겠다! 네가 만들었어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-react-09",
+     "text": "太棒了！",
+     "meaning": "최고다! 대단해!",
+     "example": "你跑了十公里？太棒了！",
+     "exampleKo": "10킬로 뛰었어? 대단해!",
+     "tip": "",
+     "sentences": 36,
+     "perMillion": 403.0
+    },
+    {
+     "id": "zh-react-10",
+     "text": "你好有才华。",
+     "meaning": "너 재능 있다",
+     "example": "这是你画的？你好有才华。",
+     "exampleKo": "이거 네가 그렸어? 재능 있다.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-react-11",
+     "text": "你让我开心了一整天。",
+     "meaning": "덕분에 하루 종일 행복했어",
+     "example": "你的消息让我开心了一整天。",
+     "exampleKo": "네 메시지 덕분에 하루 종일 행복했어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-react-12",
+     "text": "我超爱这首歌。",
+     "meaning": "완전 좋아해",
+     "example": "这首歌我超爱。",
+     "exampleKo": "이 노래 완전 좋아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-react-13",
+     "text": "很像你的风格。",
+     "meaning": "완전 너답다",
+     "example": "粉色行李箱？很像你的风格。",
+     "exampleKo": "분홍 캐리어? 완전 너답다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-react-14",
+     "text": "好帅！",
+     "meaning": "멋있다!",
+     "example": "你今天穿得好帅！",
+     "exampleKo": "오늘 옷 멋있다!",
+     "tip": ""
+    },
+    {
+     "id": "zh-react-15",
+     "text": "羡慕！",
+     "meaning": "부럽다!",
+     "example": "海边的新工作？好羡慕！",
+     "exampleKo": "바닷가 근처 새 직장? 부럽다!",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 179.1
+    },
+    {
+     "id": "zh-react-16",
+     "text": "你是天才吧！",
+     "meaning": "너 천재야!",
+     "example": "已经修好了？你是天才吧！",
+     "exampleKo": "벌써 고쳤어? 너 천재야!",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 291.1
+    },
+    {
+     "id": "zh-react-17",
+     "text": "厉害了我的…",
+     "meaning": "대단해, 내 ○○",
+     "example": "厉害了我的宝贝！",
+     "exampleKo": "대단하다, 우리 자기!",
+     "tip": "인터넷에서 유행한 칭찬 말투예요."
+    }
+   ]
+  },
+  {
+   "id": "culture",
+   "title": {
+    "ko": "되묻기·문화 차이",
+    "en": "Asking & culture"
+   },
+   "items": [
+    {
+     "id": "zh-culture-01",
+     "text": "什么意思？",
+     "meaning": "무슨 뜻이야?",
+     "example": "这句话是什么意思？",
+     "exampleKo": "이 말 무슨 뜻이야?",
+     "tip": "따지는 말투가 되지 않게 부드럽게 말해요.",
+     "sentences": 31,
+     "perMillion": 347.0
+    },
+    {
+     "id": "zh-culture-02",
+     "text": "这个用中文怎么说？",
+     "meaning": "이거 중국어로 뭐라고 해?",
+     "example": "这个用中文怎么说？",
+     "exampleKo": "이거 중국어로 뭐라고 해?",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 279.9
+    },
+    {
+     "id": "zh-culture-03",
+     "text": "可以再说一遍吗？",
+     "meaning": "한 번 더 말해 줄래?",
+     "example": "不好意思，可以再说一遍吗？",
+     "exampleKo": "미안, 한 번 더 말해 줄래?",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 100.8
+    },
+    {
+     "id": "zh-culture-04",
+     "text": "可以说慢一点吗？",
+     "meaning": "조금 천천히 말해 줄래?",
+     "example": "可以说慢一点吗？我想听懂每个字。",
+     "exampleKo": "조금 천천히 말해 줄래? 하나도 안 놓치고 싶어.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-culture-05",
+     "text": "你们那边也这样吗？",
+     "meaning": "너네 나라도 그래?",
+     "example": "你们那边也这样吗？",
+     "exampleKo": "너네 나라에서도 그래?",
+     "tip": ""
+    },
+    {
+     "id": "zh-culture-06",
+     "text": "我还在学中文。",
+     "meaning": "아직 중국어 배우는 중이야",
+     "example": "不好意思，我还在学中文。",
+     "exampleKo": "미안, 아직 중국어 배우는 중이야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-culture-07",
+     "text": "我说得对吗？",
+     "meaning": "내가 맞게 말했어?",
+     "example": "我刚才说得对吗？",
+     "exampleKo": "방금 맞게 말했어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-culture-08",
+     "text": "说错了请纠正我。",
+     "meaning": "틀리면 고쳐 줘",
+     "example": "我说错了请纠正我。",
+     "exampleKo": "내가 틀리면 고쳐 줘.",
+     "tip": "배우는 중이라고 편하게 부탁할 때 좋아요."
+    },
+    {
+     "id": "zh-culture-09",
+     "text": "这样说不礼貌吗？",
+     "meaning": "이렇게 말하면 무례해?",
+     "example": "等等，这样说不礼貌吗？",
+     "exampleKo": "잠깐, 이렇게 말하면 무례해?",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-culture-10",
+     "text": "在韩国，我们…",
+     "meaning": "한국에서는 ~해",
+     "example": "在韩国，我们生日喝海带汤。",
+     "exampleKo": "한국에서는 생일에 미역국 먹어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-culture-11",
+     "text": "我教你说韩语。",
+     "meaning": "한국어 알려 줄게",
+     "example": "我教你说韩语，说「사랑해」！",
+     "exampleKo": "한국어 알려 줄게, '사랑해' 해 봐!",
+     "tip": ""
+    },
+    {
+     "id": "zh-culture-12",
+     "text": "好神奇啊。",
+     "meaning": "정말 신기하다",
+     "example": "你们夏天过这个节？好神奇啊。",
+     "exampleKo": "여름에 그 명절을 지내? 정말 신기하다.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-culture-13",
+     "text": "这个叫什么？",
+     "meaning": "이거 뭐라고 불러?",
+     "example": "这个用中文叫什么？",
+     "exampleKo": "이거 중국어로 뭐라고 불러?",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 347.0
+    },
+    {
+     "id": "zh-culture-14",
+     "text": "翻译过来就不好笑了。",
+     "meaning": "번역하면 느낌이 안 살아",
+     "example": "这个笑话翻译过来就不好笑了。",
+     "exampleKo": "그 농담은 번역하면 재미가 없어져.",
+     "tip": ""
+    },
+    {
+     "id": "zh-culture-15",
+     "text": "我没听清楚。",
+     "meaning": "잘 못 들었어",
+     "example": "不好意思，我没听清楚。",
+     "exampleKo": "미안, 잘 못 들었어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-culture-16",
+     "text": "见你父母我好紧张。",
+     "meaning": "너희 부모님 뵙는 거 긴장돼",
+     "example": "要见你父母了，我好紧张。",
+     "exampleKo": "너희 부모님 뵙는다니 너무 긴장돼.",
+     "tip": ""
+    },
+    {
+     "id": "zh-culture-17",
+     "text": "这个词我第一次听到。",
+     "meaning": "이 말 처음 들어",
+     "example": "这个词我第一次听到，什么意思？",
+     "exampleKo": "이 말 처음 들어, 무슨 뜻이야?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "daily",
+   "title": {
+    "ko": "일상 대화",
+    "en": "Everyday talk"
+   },
+   "items": [
+    {
+     "id": "zh-daily-01",
+     "text": "你好。",
+     "meaning": "안녕하세요",
+     "example": "你好，很高兴认识你。",
+     "exampleKo": "안녕하세요, 만나서 반가워요.",
+     "tip": "",
+     "sentences": 94,
+     "perMillion": 1052.3
+    },
+    {
+     "id": "zh-daily-02",
+     "text": "早上好。",
+     "meaning": "좋은 아침",
+     "example": "早上好！今天天气不错。",
+     "exampleKo": "좋은 아침! 오늘 날씨 좋네.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-daily-03",
+     "text": "晚上好。",
+     "meaning": "안녕하세요 (저녁)",
+     "example": "晚上好，吃过饭了吗？",
+     "exampleKo": "안녕, 저녁 먹었어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-04",
+     "text": "你好吗？",
+     "meaning": "잘 지내?",
+     "example": "好久不见，你好吗？",
+     "exampleKo": "오랜만이야, 잘 지내?",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-daily-05",
+     "text": "我很好。",
+     "meaning": "잘 지내",
+     "example": "我很好，你呢？",
+     "exampleKo": "잘 지내, 너는?",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 223.9
+    },
+    {
+     "id": "zh-daily-06",
+     "text": "还可以。",
+     "meaning": "그럭저럭",
+     "example": "工作还可以。",
+     "exampleKo": "일은 그럭저럭이야.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 112.0
+    },
+    {
+     "id": "zh-daily-07",
+     "text": "谢谢。",
+     "meaning": "고마워",
+     "example": "谢谢你帮我。",
+     "exampleKo": "도와줘서 고마워.",
+     "tip": "",
+     "sentences": 123,
+     "perMillion": 1377.0
+    },
+    {
+     "id": "zh-daily-08",
+     "text": "不客气。",
+     "meaning": "천만에",
+     "example": "不客气，应该的。",
+     "exampleKo": "천만에, 당연한 거야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-09",
+     "text": "没关系。",
+     "meaning": "괜찮아",
+     "example": "没关系，别担心。",
+     "exampleKo": "괜찮아, 걱정 마.",
+     "tip": "",
+     "sentences": 28,
+     "perMillion": 313.5
+    },
+    {
+     "id": "zh-daily-10",
+     "text": "对不起。",
+     "meaning": "미안해",
+     "example": "对不起，我迟到了。",
+     "exampleKo": "미안, 늦었어.",
+     "tip": "",
+     "sentences": 60,
+     "perMillion": 671.7
+    },
+    {
+     "id": "zh-daily-11",
+     "text": "再见。",
+     "meaning": "안녕, 또 봐",
+     "example": "再见，明天见。",
+     "exampleKo": "안녕, 내일 봐.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 347.0
+    },
+    {
+     "id": "zh-daily-12",
+     "text": "慢走。",
+     "meaning": "조심히 가",
+     "example": "时间不早了，慢走。",
+     "exampleKo": "시간 늦었어, 조심히 가.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-daily-13",
+     "text": "我回来了。",
+     "meaning": "다녀왔어",
+     "example": "我回来了！好饿。",
+     "exampleKo": "다녀왔어! 배고파.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-daily-14",
+     "text": "欢迎回来。",
+     "meaning": "어서 와",
+     "example": "欢迎回来，今天累吗？",
+     "exampleKo": "어서 와, 오늘 힘들었어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-15",
+     "text": "我饿了。",
+     "meaning": "배고파",
+     "example": "我饿了，我们吃饭吧。",
+     "exampleKo": "배고파, 밥 먹자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-16",
+     "text": "我困了。",
+     "meaning": "졸려",
+     "example": "我困了，先去睡了。",
+     "exampleKo": "졸려, 먼저 잘게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-17",
+     "text": "我累了。",
+     "meaning": "피곤해",
+     "example": "今天太累了。",
+     "exampleKo": "오늘 너무 피곤했어.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-daily-18",
+     "text": "好热啊。",
+     "meaning": "너무 더워",
+     "example": "今天好热啊。",
+     "exampleKo": "오늘 너무 덥다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-19",
+     "text": "好冷啊。",
+     "meaning": "너무 추워",
+     "example": "外面好冷啊，多穿点。",
+     "exampleKo": "밖에 너무 추워, 따뜻하게 입어.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-daily-20",
+     "text": "天气真好。",
+     "meaning": "날씨 정말 좋다",
+     "example": "天气真好，出去走走吧。",
+     "exampleKo": "날씨 정말 좋다, 산책 가자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-21",
+     "text": "下雨了。",
+     "meaning": "비 와",
+     "example": "下雨了，带伞吧。",
+     "exampleKo": "비 와, 우산 챙겨.",
+     "tip": "",
+     "sentences": 60,
+     "perMillion": 671.7
+    },
+    {
+     "id": "zh-daily-22",
+     "text": "等一下。",
+     "meaning": "잠깐만",
+     "example": "等一下，我马上来。",
+     "exampleKo": "잠깐만, 금방 갈게.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 391.8
+    },
+    {
+     "id": "zh-daily-23",
+     "text": "现在几点？",
+     "meaning": "지금 몇 시야?",
+     "example": "现在几点了？",
+     "exampleKo": "지금 몇 시야?",
+     "tip": "",
+     "sentences": 62,
+     "perMillion": 694.1
+    },
+    {
+     "id": "zh-daily-24",
+     "text": "你在哪儿？",
+     "meaning": "어디야?",
+     "example": "你现在在哪儿？",
+     "exampleKo": "지금 어디야?",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-daily-25",
+     "text": "想吃什么？",
+     "meaning": "뭐 먹고 싶어?",
+     "example": "晚上想吃什么？",
+     "exampleKo": "저녁 뭐 먹고 싶어?",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 100.8
+    },
+    {
+     "id": "zh-daily-26",
+     "text": "都可以。",
+     "meaning": "다 괜찮아",
+     "example": "都可以，你决定吧。",
+     "exampleKo": "다 괜찮아, 네가 정해.",
+     "tip": "",
+     "sentences": 59,
+     "perMillion": 660.5
+    },
+    {
+     "id": "zh-daily-27",
+     "text": "真好吃！",
+     "meaning": "진짜 맛있다!",
+     "example": "这个面条真好吃！",
+     "exampleKo": "이 국수 진짜 맛있다!",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-daily-28",
+     "text": "真开心！",
+     "meaning": "정말 즐겁다!",
+     "example": "跟你在一起真开心！",
+     "exampleKo": "너랑 있으니까 정말 즐거워!",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-29",
+     "text": "原来是这样。",
+     "meaning": "아, 그렇구나",
+     "example": "哦，原来是这样。",
+     "exampleKo": "아, 그런 거였구나.",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-30",
+     "text": "我知道了。",
+     "meaning": "알았어",
+     "example": "我知道了，一会儿联系你。",
+     "exampleKo": "알았어, 이따 연락할게.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-daily-31",
+     "text": "请多关照。",
+     "meaning": "잘 부탁해요",
+     "example": "以后请多关照。",
+     "exampleKo": "앞으로 잘 부탁해요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-32",
+     "text": "我先走了。",
+     "meaning": "먼저 갈게",
+     "example": "不好意思，我先走了。",
+     "exampleKo": "미안, 먼저 갈게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-33",
+     "text": "注意安全。",
+     "meaning": "조심해",
+     "example": "下雪了，注意安全。",
+     "exampleKo": "눈 와, 조심해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-daily-34",
+     "text": "加油！",
+     "meaning": "힘내!",
+     "example": "考试加油！",
+     "exampleKo": "시험 힘내!",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 123.1
+    },
+    {
+     "id": "zh-daily-35",
+     "text": "好久不见。",
+     "meaning": "오랜만이야",
+     "example": "好久不见，你瘦了。",
+     "exampleKo": "오랜만이야, 살 빠졌네.",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 223.9
+    },
+    {
+     "id": "zh-daily-36",
+     "text": "你呢？",
+     "meaning": "너는?",
+     "example": "我喝咖啡，你呢？",
+     "exampleKo": "나는 커피 마셔, 너는?",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 347.0
+    }
+   ]
+  },
+  {
+   "id": "routine",
+   "title": {
+    "ko": "하루 일과",
+    "en": "Daily routine"
+   },
+   "items": [
+    {
+     "id": "zh-routine-01",
+     "text": "起床了吗？",
+     "meaning": "일어났어?",
+     "example": "你起床了吗？",
+     "exampleKo": "일어났어?",
+     "tip": "",
+     "sentences": 143,
+     "perMillion": 1600.9
+    },
+    {
+     "id": "zh-routine-02",
+     "text": "睡过头了！",
+     "meaning": "늦잠 잤어!",
+     "example": "糟了，睡过头了！",
+     "exampleKo": "큰일 났다, 늦잠 잤어!",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 112.0
+    },
+    {
+     "id": "zh-routine-03",
+     "text": "洗脸",
+     "meaning": "세수하다",
+     "example": "起床先洗脸。",
+     "exampleKo": "일어나서 먼저 세수해.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-routine-04",
+     "text": "刷牙",
+     "meaning": "양치하다",
+     "example": "睡前要刷牙。",
+     "exampleKo": "자기 전에 양치해야 해.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 201.5
+    },
+    {
+     "id": "zh-routine-05",
+     "text": "洗澡",
+     "meaning": "샤워하다",
+     "example": "我去洗澡了。",
+     "exampleKo": "샤워하러 갈게.",
+     "tip": "",
+     "sentences": 58,
+     "perMillion": 649.3
+    },
+    {
+     "id": "zh-routine-06",
+     "text": "吃早饭",
+     "meaning": "아침 먹다",
+     "example": "你吃早饭了吗？",
+     "exampleKo": "아침 먹었어?",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 167.9
+    },
+    {
+     "id": "zh-routine-07",
+     "text": "坐地铁",
+     "meaning": "지하철 타다",
+     "example": "我坐地铁上班。",
+     "exampleKo": "지하철 타고 출근해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-08",
+     "text": "坐公交",
+     "meaning": "버스 타다",
+     "example": "今天坐公交去。",
+     "exampleKo": "오늘은 버스 타고 갈게.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 100.8
+    },
+    {
+     "id": "zh-routine-09",
+     "text": "上班",
+     "meaning": "출근하다",
+     "example": "我八点上班。",
+     "exampleKo": "8시에 출근해.",
+     "tip": "",
+     "sentences": 94,
+     "perMillion": 1052.3
+    },
+    {
+     "id": "zh-routine-10",
+     "text": "下班",
+     "meaning": "퇴근하다",
+     "example": "你几点下班？",
+     "exampleKo": "몇 시에 퇴근해?",
+     "tip": "",
+     "sentences": 27,
+     "perMillion": 302.3
+    },
+    {
+     "id": "zh-routine-11",
+     "text": "上学",
+     "meaning": "등교하다",
+     "example": "明天还要上学。",
+     "exampleKo": "내일도 학교 가야 해.",
+     "tip": "",
+     "sentences": 84,
+     "perMillion": 940.4
+    },
+    {
+     "id": "zh-routine-12",
+     "text": "午饭",
+     "meaning": "점심",
+     "example": "午饭吃什么？",
+     "exampleKo": "점심 뭐 먹어?",
+     "tip": "",
+     "sentences": 53,
+     "perMillion": 593.3
+    },
+    {
+     "id": "zh-routine-13",
+     "text": "加班",
+     "meaning": "야근하다",
+     "example": "今天又要加班。",
+     "exampleKo": "오늘도 야근해야 해.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 167.9
+    },
+    {
+     "id": "zh-routine-14",
+     "text": "回家",
+     "meaning": "집에 가다",
+     "example": "我现在回家了。",
+     "exampleKo": "지금 집에 가는 중이야.",
+     "tip": "",
+     "sentences": 348,
+     "perMillion": 3895.9
+    },
+    {
+     "id": "zh-routine-15",
+     "text": "做晚饭",
+     "meaning": "저녁을 하다",
+     "example": "我正在做晚饭。",
+     "exampleKo": "지금 저녁 만들고 있어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-16",
+     "text": "洗衣服",
+     "meaning": "빨래하다",
+     "example": "周末要洗衣服。",
+     "exampleKo": "주말에 빨래해야 해.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-routine-17",
+     "text": "打扫房间",
+     "meaning": "방 청소하다",
+     "example": "我打扫了房间。",
+     "exampleKo": "방 청소했어.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-routine-18",
+     "text": "买菜",
+     "meaning": "장 보다",
+     "example": "我去超市买菜。",
+     "exampleKo": "마트에 장 보러 가.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-19",
+     "text": "宅在家",
+     "meaning": "집에 틀어박히다",
+     "example": "休息日我喜欢宅在家。",
+     "exampleKo": "쉬는 날엔 집에 있는 게 좋아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-20",
+     "text": "追剧",
+     "meaning": "드라마를 챙겨 보다",
+     "example": "晚上我在追剧。",
+     "exampleKo": "밤엔 드라마 봐.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-21",
+     "text": "听音乐",
+     "meaning": "음악을 듣다",
+     "example": "上班路上听音乐。",
+     "exampleKo": "출근길에 음악 들어.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 167.9
+    },
+    {
+     "id": "zh-routine-22",
+     "text": "健身",
+     "meaning": "운동하다",
+     "example": "下班后去健身。",
+     "exampleKo": "퇴근하고 운동해.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 201.5
+    },
+    {
+     "id": "zh-routine-23",
+     "text": "散步",
+     "meaning": "산책하다",
+     "example": "晚饭后去散步。",
+     "exampleKo": "저녁 먹고 산책해.",
+     "tip": "",
+     "sentences": 103,
+     "perMillion": 1153.1
+    },
+    {
+     "id": "zh-routine-24",
+     "text": "泡澡",
+     "meaning": "목욕하다",
+     "example": "冬天喜欢泡澡。",
+     "exampleKo": "겨울엔 목욕하는 게 좋아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-25",
+     "text": "准备睡觉",
+     "meaning": "잘 준비하다",
+     "example": "我准备睡觉了。",
+     "exampleKo": "잘 준비할게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-26",
+     "text": "早起",
+     "meaning": "일찍 일어나다",
+     "example": "明天要早起。",
+     "exampleKo": "내일 일찍 일어나야 해.",
+     "tip": "",
+     "sentences": 64,
+     "perMillion": 716.5
+    },
+    {
+     "id": "zh-routine-27",
+     "text": "熬夜",
+     "meaning": "밤을 새우다",
+     "example": "昨晚又熬夜了。",
+     "exampleKo": "어젯밤 또 밤샘했어.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 279.9
+    },
+    {
+     "id": "zh-routine-28",
+     "text": "睡回笼觉",
+     "meaning": "다시 자다",
+     "example": "周末睡回笼觉。",
+     "exampleKo": "주말엔 다시 자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-29",
+     "text": "带饭",
+     "meaning": "도시락을 싸 가다",
+     "example": "今天带饭了。",
+     "exampleKo": "오늘은 도시락 싸 왔어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-30",
+     "text": "便利店",
+     "meaning": "편의점",
+     "example": "在便利店买了饭团。",
+     "exampleKo": "편의점에서 주먹밥 샀어.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 112.0
+    },
+    {
+     "id": "zh-routine-31",
+     "text": "放假",
+     "meaning": "쉬다, 방학하다",
+     "example": "明天放假。",
+     "exampleKo": "내일 쉬어.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 268.7
+    },
+    {
+     "id": "zh-routine-32",
+     "text": "周末",
+     "meaning": "주말",
+     "example": "周末有什么计划？",
+     "exampleKo": "주말에 뭐 해?",
+     "tip": "",
+     "sentences": 50,
+     "perMillion": 559.8
+    },
+    {
+     "id": "zh-routine-33",
+     "text": "工作日",
+     "meaning": "평일",
+     "example": "工作日总是很忙。",
+     "exampleKo": "평일엔 늘 바빠.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-routine-34",
+     "text": "每天",
+     "meaning": "매일",
+     "example": "我每天学中文。",
+     "exampleKo": "매일 중국어 공부해.",
+     "tip": "",
+     "sentences": 410,
+     "perMillion": 4590.0
+    },
+    {
+     "id": "zh-routine-35",
+     "text": "总是",
+     "meaning": "항상",
+     "example": "他总是很早到。",
+     "exampleKo": "그는 항상 일찍 와.",
+     "tip": "",
+     "sentences": 183,
+     "perMillion": 2048.7
+    },
+    {
+     "id": "zh-routine-36",
+     "text": "偶尔",
+     "meaning": "가끔",
+     "example": "偶尔自己做饭。",
+     "exampleKo": "가끔 직접 요리해.",
+     "tip": "",
+     "sentences": 27,
+     "perMillion": 302.3
+    },
+    {
+     "id": "zh-routine-37",
+     "text": "在家办公",
+     "meaning": "재택근무하다",
+     "example": "今天在家办公。",
+     "exampleKo": "오늘은 재택근무야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-38",
+     "text": "休息一下",
+     "meaning": "잠깐 쉬다",
+     "example": "我们休息一下吧。",
+     "exampleKo": "우리 잠깐 쉬자.",
+     "tip": "",
+     "sentences": 27,
+     "perMillion": 302.3
+    },
+    {
+     "id": "zh-routine-39",
+     "text": "刷手机",
+     "meaning": "폰을 보다",
+     "example": "睡前总刷手机。",
+     "exampleKo": "자기 전에 늘 폰을 봐.",
+     "tip": ""
+    },
+    {
+     "id": "zh-routine-40",
+     "text": "收拾东西",
+     "meaning": "짐을 챙기다",
+     "example": "我在收拾东西。",
+     "exampleKo": "지금 짐 챙기는 중이야.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "out",
+   "title": {
+    "ko": "밖에서",
+    "en": "Out and about"
+   },
+   "items": [
+    {
+     "id": "zh-out-01",
+     "text": "多少钱？",
+     "meaning": "얼마예요?",
+     "example": "这个多少钱？",
+     "exampleKo": "이거 얼마예요?",
+     "tip": "",
+     "sentences": 53,
+     "perMillion": 593.3
+    },
+    {
+     "id": "zh-out-02",
+     "text": "我要这个。",
+     "meaning": "이걸로 할게요",
+     "example": "我要这个，谢谢。",
+     "exampleKo": "이걸로 할게요, 감사합니다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-03",
+     "text": "可以刷卡吗？",
+     "meaning": "카드 돼요?",
+     "example": "这里可以刷卡吗？",
+     "exampleKo": "여기 카드 돼요?",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-out-04",
+     "text": "不要袋子。",
+     "meaning": "봉투는 필요 없어요",
+     "example": "不用袋子，谢谢。",
+     "exampleKo": "봉투 괜찮아요, 감사합니다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-05",
+     "text": "洗手间在哪儿？",
+     "meaning": "화장실 어디예요?",
+     "example": "请问洗手间在哪儿？",
+     "exampleKo": "실례지만 화장실 어디예요?",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-out-06",
+     "text": "地铁站在哪儿？",
+     "meaning": "지하철역 어디예요?",
+     "example": "请问地铁站在哪儿？",
+     "exampleKo": "실례지만 지하철역 어디예요?",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-out-07",
+     "text": "我迷路了。",
+     "meaning": "길을 잃었어",
+     "example": "对不起，我迷路了。",
+     "exampleKo": "미안, 길을 잃었어.",
+     "tip": "",
+     "sentences": 42,
+     "perMillion": 470.2
+    },
+    {
+     "id": "zh-out-08",
+     "text": "一直走",
+     "meaning": "쭉 가세요",
+     "example": "一直走，然后右转。",
+     "exampleKo": "쭉 가서 오른쪽으로 도세요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-09",
+     "text": "右转",
+     "meaning": "우회전",
+     "example": "到路口右转。",
+     "exampleKo": "사거리에서 우회전하세요.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 112.0
+    },
+    {
+     "id": "zh-out-10",
+     "text": "左转",
+     "meaning": "좌회전",
+     "example": "红绿灯左转。",
+     "exampleKo": "신호등에서 좌회전하세요.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-out-11",
+     "text": "很近。",
+     "meaning": "가까워요",
+     "example": "离地铁站很近。",
+     "exampleKo": "지하철역에서 가까워요.",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 190.3
+    },
+    {
+     "id": "zh-out-12",
+     "text": "有点远。",
+     "meaning": "좀 멀어요",
+     "example": "走过去有点远。",
+     "exampleKo": "걸어가면 좀 멀어요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-13",
+     "text": "两位。",
+     "meaning": "두 명이요",
+     "example": "两位，有座位吗？",
+     "exampleKo": "두 명이에요, 자리 있어요?",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-14",
+     "text": "我订了位。",
+     "meaning": "예약했어요",
+     "example": "我订了七点的位子。",
+     "exampleKo": "7시로 예약했어요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-15",
+     "text": "请给我菜单。",
+     "meaning": "메뉴판 주세요",
+     "example": "服务员，请给我菜单。",
+     "exampleKo": "저기요, 메뉴판 주세요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-16",
+     "text": "有什么推荐的？",
+     "meaning": "추천 메뉴 있어요?",
+     "example": "有什么推荐的吗？",
+     "exampleKo": "추천하는 거 있어요?",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 201.5
+    },
+    {
+     "id": "zh-out-17",
+     "text": "买单。",
+     "meaning": "계산해 주세요",
+     "example": "服务员，买单。",
+     "exampleKo": "저기요, 계산해 주세요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-18",
+     "text": "打包。",
+     "meaning": "포장해 주세요",
+     "example": "这些打包，谢谢。",
+     "exampleKo": "이거 포장해 주세요.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-out-19",
+     "text": "在这里吃。",
+     "meaning": "여기서 먹을게요",
+     "example": "我在这里吃。",
+     "exampleKo": "여기서 먹을게요.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-out-20",
+     "text": "服务员！",
+     "meaning": "저기요!",
+     "example": "服务员，点菜！",
+     "exampleKo": "저기요, 주문할게요!",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 156.7
+    },
+    {
+     "id": "zh-out-21",
+     "text": "有空位吗？",
+     "meaning": "빈자리 있어요?",
+     "example": "请问有空位吗？",
+     "exampleKo": "빈자리 있나요?",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-22",
+     "text": "要排队。",
+     "meaning": "줄 서야 해",
+     "example": "这家店要排很久的队。",
+     "exampleKo": "이 가게는 오래 줄 서야 해.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 123.1
+    },
+    {
+     "id": "zh-out-23",
+     "text": "地铁晚点了。",
+     "meaning": "지하철이 늦어요",
+     "example": "地铁晚点了，我会晚到。",
+     "exampleKo": "지하철이 늦어서 조금 늦을 거야.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 212.7
+    },
+    {
+     "id": "zh-out-24",
+     "text": "换乘",
+     "meaning": "환승",
+     "example": "下一站换乘。",
+     "exampleKo": "다음 역에서 환승해요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-25",
+     "text": "车票",
+     "meaning": "표",
+     "example": "我去买车票。",
+     "exampleKo": "표 사러 갈게.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 134.3
+    },
+    {
+     "id": "zh-out-26",
+     "text": "打车",
+     "meaning": "택시 타다",
+     "example": "太晚了，我们打车吧。",
+     "exampleKo": "늦었으니 택시 타자.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-out-27",
+     "text": "能帮我拍张照吗？",
+     "meaning": "사진 좀 찍어 주실래요?",
+     "example": "不好意思，能帮我拍张照吗？",
+     "exampleKo": "실례지만 사진 좀 찍어 주실래요?",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-28",
+     "text": "一起拍照吧。",
+     "meaning": "같이 사진 찍자",
+     "example": "我们在这里一起拍照吧！",
+     "exampleKo": "여기서 같이 사진 찍자!",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-29",
+     "text": "可以试穿吗？",
+     "meaning": "입어 봐도 돼요?",
+     "example": "这件可以试穿吗？",
+     "exampleKo": "이거 입어 봐도 돼요?",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-30",
+     "text": "有大一点的吗？",
+     "meaning": "더 큰 거 있어요?",
+     "example": "有大一点的吗？",
+     "exampleKo": "더 큰 사이즈 있어요?",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-out-31",
+     "text": "好便宜！",
+     "meaning": "너무 싸다!",
+     "example": "这个好便宜！",
+     "exampleKo": "이거 너무 싸다!",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-32",
+     "text": "太贵了。",
+     "meaning": "너무 비싸다",
+     "example": "这个太贵了。",
+     "exampleKo": "이거 너무 비싸.",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 223.9
+    },
+    {
+     "id": "zh-out-33",
+     "text": "打折",
+     "meaning": "할인하다",
+     "example": "现在在打折。",
+     "exampleKo": "지금 할인 중이야.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-out-34",
+     "text": "人好多。",
+     "meaning": "사람 많다",
+     "example": "今天人好多。",
+     "exampleKo": "오늘 사람 진짜 많다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-35",
+     "text": "人不多。",
+     "meaning": "사람 별로 없다",
+     "example": "工作日人不多。",
+     "exampleKo": "평일이라 사람 별로 없네.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-36",
+     "text": "开门了吗？",
+     "meaning": "문 열었어요?",
+     "example": "这家店开门了吗？",
+     "exampleKo": "이 가게 문 열었어요?",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 391.8
+    },
+    {
+     "id": "zh-out-37",
+     "text": "关门了。",
+     "meaning": "문 닫았어요",
+     "example": "已经关门了。",
+     "exampleKo": "벌써 문 닫았어요.",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 223.9
+    },
+    {
+     "id": "zh-out-38",
+     "text": "有无线网吗？",
+     "meaning": "와이파이 있어요?",
+     "example": "这里有无线网吗？",
+     "exampleKo": "여기 와이파이 있어요?",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-39",
+     "text": "想充电。",
+     "meaning": "충전하고 싶어요",
+     "example": "我想给手机充电。",
+     "exampleKo": "폰 충전하고 싶어요.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-out-40",
+     "text": "怎么去？",
+     "meaning": "어떻게 가요?",
+     "example": "去那儿怎么去？",
+     "exampleKo": "거기 어떻게 가요?",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 123.1
+    }
+   ]
+  },
+  {
+   "id": "feelings",
+   "title": {
+    "ko": "감정·관계",
+    "en": "Feelings & people"
+   },
+   "items": [
+    {
+     "id": "zh-feelings-01",
+     "text": "我很高兴。",
+     "meaning": "기뻐",
+     "example": "见到你我很高兴。",
+     "exampleKo": "널 만나서 기뻐.",
+     "tip": "",
+     "sentences": 75,
+     "perMillion": 839.6
+    },
+    {
+     "id": "zh-feelings-02",
+     "text": "我很难过。",
+     "meaning": "슬퍼",
+     "example": "听到这个消息我很难过。",
+     "exampleKo": "그 소식 들으니 슬퍼.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-feelings-03",
+     "text": "好孤单。",
+     "meaning": "외로워",
+     "example": "一个人好孤单。",
+     "exampleKo": "혼자 있으면 외로워.",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 145.5
+    },
+    {
+     "id": "zh-feelings-04",
+     "text": "好害怕。",
+     "meaning": "무서워",
+     "example": "看恐怖片好害怕。",
+     "exampleKo": "공포 영화는 무서워.",
+     "tip": "",
+     "sentences": 124,
+     "perMillion": 1388.2
+    },
+    {
+     "id": "zh-feelings-05",
+     "text": "好害羞。",
+     "meaning": "부끄러워",
+     "example": "当众唱歌好害羞。",
+     "exampleKo": "사람들 앞에서 노래하면 부끄러워.",
+     "tip": "",
+     "sentences": 30,
+     "perMillion": 335.9
+    },
+    {
+     "id": "zh-feelings-06",
+     "text": "好不甘心。",
+     "meaning": "분하다",
+     "example": "比赛输了好不甘心。",
+     "exampleKo": "경기에 져서 너무 분해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-07",
+     "text": "好烦。",
+     "meaning": "짜증 나",
+     "example": "堵车好烦。",
+     "exampleKo": "차 막혀서 짜증 나.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-08",
+     "text": "好紧张。",
+     "meaning": "너무 긴장돼",
+     "example": "面试我好紧张。",
+     "exampleKo": "면접이라 너무 긴장돼.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-09",
+     "text": "放心了。",
+     "meaning": "안심이다",
+     "example": "你没事我就放心了。",
+     "exampleKo": "네가 괜찮으니 안심이야.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 167.9
+    },
+    {
+     "id": "zh-feelings-10",
+     "text": "吓了一跳。",
+     "meaning": "깜짝 놀랐어",
+     "example": "你突然出现，吓我一跳！",
+     "exampleKo": "갑자기 나타나서 깜짝 놀랐어!",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-11",
+     "text": "气死我了。",
+     "meaning": "열받아 죽겠어",
+     "example": "他那样说，气死我了。",
+     "exampleKo": "그가 그렇게 말해서 열받아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-12",
+     "text": "好幸福。",
+     "meaning": "행복해",
+     "example": "现在好幸福。",
+     "exampleKo": "지금 너무 행복해.",
+     "tip": "",
+     "sentences": 125,
+     "perMillion": 1399.4
+    },
+    {
+     "id": "zh-feelings-13",
+     "text": "好感动。",
+     "meaning": "감동적이야",
+     "example": "这部电影好感动。",
+     "exampleKo": "이 영화 감동적이야.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 156.7
+    },
+    {
+     "id": "zh-feelings-14",
+     "text": "好怀念。",
+     "meaning": "그립다",
+     "example": "这首歌好怀念。",
+     "exampleKo": "이 노래 완전 추억이다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-15",
+     "text": "好麻烦。",
+     "meaning": "귀찮아",
+     "example": "今天做饭好麻烦。",
+     "exampleKo": "오늘 밥하기 귀찮아.",
+     "tip": "",
+     "sentences": 57,
+     "perMillion": 638.1
+    },
+    {
+     "id": "zh-feelings-16",
+     "text": "好无聊。",
+     "meaning": "지루해",
+     "example": "这节课好无聊。",
+     "exampleKo": "이 수업 지루해.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 268.7
+    },
+    {
+     "id": "zh-feelings-17",
+     "text": "很放松。",
+     "meaning": "마음이 편해",
+     "example": "跟你在一起很放松。",
+     "exampleKo": "너랑 있으면 마음이 편해.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 212.7
+    },
+    {
+     "id": "zh-feelings-18",
+     "text": "好期待。",
+     "meaning": "기대돼",
+     "example": "旅行好期待！",
+     "exampleKo": "여행 너무 기대돼!",
+     "tip": "",
+     "sentences": 57,
+     "perMillion": 638.1
+    },
+    {
+     "id": "zh-feelings-19",
+     "text": "心里不舒服。",
+     "meaning": "마음이 찜찜해",
+     "example": "心里有点不舒服。",
+     "exampleKo": "마음이 좀 찜찜해.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 391.8
+    },
+    {
+     "id": "zh-feelings-20",
+     "text": "朋友",
+     "meaning": "친구",
+     "example": "我遇到了高中朋友。",
+     "exampleKo": "고등학교 친구를 만났어.",
+     "tip": "",
+     "sentences": 926,
+     "perMillion": 10366.6
+    },
+    {
+     "id": "zh-feelings-21",
+     "text": "好朋友",
+     "meaning": "절친",
+     "example": "她是我的好朋友。",
+     "exampleKo": "그 애는 내 절친이야.",
+     "tip": "",
+     "sentences": 38,
+     "perMillion": 425.4
+    },
+    {
+     "id": "zh-feelings-22",
+     "text": "男朋友",
+     "meaning": "남자친구",
+     "example": "你有男朋友吗？",
+     "exampleKo": "남자친구 있어?",
+     "tip": "",
+     "sentences": 52,
+     "perMillion": 582.1
+    },
+    {
+     "id": "zh-feelings-23",
+     "text": "女朋友",
+     "meaning": "여자친구",
+     "example": "我女朋友很可爱。",
+     "exampleKo": "내 여자친구는 귀여워.",
+     "tip": "",
+     "sentences": 93,
+     "perMillion": 1041.1
+    },
+    {
+     "id": "zh-feelings-24",
+     "text": "家人",
+     "meaning": "가족",
+     "example": "我和家人去旅游。",
+     "exampleKo": "가족이랑 여행 가.",
+     "tip": "",
+     "sentences": 92,
+     "perMillion": 1029.9
+    },
+    {
+     "id": "zh-feelings-25",
+     "text": "父母",
+     "meaning": "부모님",
+     "example": "我想介绍你给我父母。",
+     "exampleKo": "너를 부모님께 소개하고 싶어.",
+     "tip": "",
+     "sentences": 233,
+     "perMillion": 2608.5
+    },
+    {
+     "id": "zh-feelings-26",
+     "text": "兄弟姐妹",
+     "meaning": "형제자매",
+     "example": "你有兄弟姐妹吗？",
+     "exampleKo": "형제자매 있어?",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 145.5
+    },
+    {
+     "id": "zh-feelings-27",
+     "text": "关系很好",
+     "meaning": "사이가 좋다",
+     "example": "我们关系很好。",
+     "exampleKo": "우리 사이 좋아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-28",
+     "text": "合得来",
+     "meaning": "잘 맞다",
+     "example": "我跟你很合得来。",
+     "exampleKo": "나는 너랑 잘 맞아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-29",
+     "text": "温柔的人",
+     "meaning": "다정한 사람",
+     "example": "他是个很温柔的人。",
+     "exampleKo": "그는 정말 다정한 사람이야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-30",
+     "text": "有趣的人",
+     "meaning": "재밌는 사람",
+     "example": "你是个有趣的人。",
+     "exampleKo": "너 재밌는 사람이야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-31",
+     "text": "在意",
+     "meaning": "신경 쓰이다",
+     "example": "我有点在意他。",
+     "exampleKo": "그 사람이 좀 신경 쓰여.",
+     "tip": "",
+     "sentences": 36,
+     "perMillion": 403.0
+    },
+    {
+     "id": "zh-feelings-32",
+     "text": "信任",
+     "meaning": "신뢰하다",
+     "example": "我很信任你。",
+     "exampleKo": "널 많이 믿어.",
+     "tip": "",
+     "sentences": 55,
+     "perMillion": 615.7
+    },
+    {
+     "id": "zh-feelings-33",
+     "text": "担心",
+     "meaning": "걱정하다",
+     "example": "妈妈很担心你。",
+     "exampleKo": "엄마가 너 걱정하셔.",
+     "tip": "",
+     "sentences": 102,
+     "perMillion": 1141.9
+    },
+    {
+     "id": "zh-feelings-34",
+     "text": "吵架了",
+     "meaning": "다퉜어",
+     "example": "昨天跟朋友吵架了。",
+     "exampleKo": "어제 친구랑 다퉜어.",
+     "tip": "",
+     "sentences": 20,
+     "perMillion": 223.9
+    },
+    {
+     "id": "zh-feelings-35",
+     "text": "没精神",
+     "meaning": "기운이 없다",
+     "example": "你今天没精神。",
+     "exampleKo": "너 오늘 기운 없어 보여.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-36",
+     "text": "提不起劲",
+     "meaning": "의욕이 안 나",
+     "example": "周一提不起劲。",
+     "exampleKo": "월요일엔 의욕이 안 나.",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-37",
+     "text": "心情很好",
+     "meaning": "기분이 좋다",
+     "example": "今天心情很好！",
+     "exampleKo": "오늘 기분 좋아!",
+     "tip": ""
+    },
+    {
+     "id": "zh-feelings-38",
+     "text": "心情不好",
+     "meaning": "기분이 안 좋다",
+     "example": "我今天心情不好。",
+     "exampleKo": "오늘 기분이 안 좋아.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-feelings-39",
+     "text": "哭了",
+     "meaning": "울었어",
+     "example": "看电影看哭了。",
+     "exampleKo": "영화 보다가 울었어.",
+     "tip": "",
+     "sentences": 68,
+     "perMillion": 761.3
+    }
+   ]
+  },
+  {
+   "id": "plans",
+   "title": {
+    "ko": "약속·계획",
+    "en": "Plans & time"
+   },
+   "items": [
+    {
+     "id": "zh-plans-01",
+     "text": "下次",
+     "meaning": "다음에",
+     "example": "下次一起去吧。",
+     "exampleKo": "다음에 같이 가자.",
+     "tip": "",
+     "sentences": 51,
+     "perMillion": 570.9
+    },
+    {
+     "id": "zh-plans-02",
+     "text": "明天",
+     "meaning": "내일",
+     "example": "明天能见面吗？",
+     "exampleKo": "내일 만날 수 있어?",
+     "tip": "",
+     "sentences": 647,
+     "perMillion": 7243.2
+    },
+    {
+     "id": "zh-plans-03",
+     "text": "后天",
+     "meaning": "모레",
+     "example": "后天怎么样？",
+     "exampleKo": "모레는 어때?",
+     "tip": "",
+     "sentences": 13,
+     "perMillion": 145.5
+    },
+    {
+     "id": "zh-plans-04",
+     "text": "下周",
+     "meaning": "다음 주",
+     "example": "下周六有空吗？",
+     "exampleKo": "다음 주 토요일에 시간 돼?",
+     "tip": "",
+     "sentences": 49,
+     "perMillion": 548.6
+    },
+    {
+     "id": "zh-plans-05",
+     "text": "这个周末",
+     "meaning": "이번 주말",
+     "example": "这个周末做什么？",
+     "exampleKo": "이번 주말에 뭐 해?",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-06",
+     "text": "下个月",
+     "meaning": "다음 달",
+     "example": "下个月我去韩国。",
+     "exampleKo": "다음 달에 한국 가.",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 246.3
+    },
+    {
+     "id": "zh-plans-07",
+     "text": "有安排吗？",
+     "meaning": "일정 있어?",
+     "example": "周五有安排吗？",
+     "exampleKo": "금요일에 일정 있어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-08",
+     "text": "有空。",
+     "meaning": "시간 돼",
+     "example": "那天我有空。",
+     "exampleKo": "그날 시간 돼.",
+     "tip": "",
+     "sentences": 97,
+     "perMillion": 1085.9
+    },
+    {
+     "id": "zh-plans-09",
+     "text": "可能不行。",
+     "meaning": "안 될 것 같아",
+     "example": "抱歉，那天可能不行。",
+     "exampleKo": "미안, 그날은 안 될 것 같아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-10",
+     "text": "几点好？",
+     "meaning": "몇 시가 좋아?",
+     "example": "我们几点见面好？",
+     "exampleKo": "우리 몇 시에 만나는 게 좋아?",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-11",
+     "text": "在车站见。",
+     "meaning": "역에서 만나",
+     "example": "我们在车站见。",
+     "exampleKo": "우리 역에서 보자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-12",
+     "text": "会晚到。",
+     "meaning": "늦을 거야",
+     "example": "抱歉，我会晚到五分钟。",
+     "exampleKo": "미안, 5분 늦을 거야.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-plans-13",
+     "text": "来得及。",
+     "meaning": "시간에 맞출 수 있어",
+     "example": "快点的话还来得及。",
+     "exampleKo": "서두르면 늦지 않아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-14",
+     "text": "取消",
+     "meaning": "취소하다",
+     "example": "我把预约取消了。",
+     "exampleKo": "예약 취소했어.",
+     "tip": "",
+     "sentences": 42,
+     "perMillion": 470.2
+    },
+    {
+     "id": "zh-plans-15",
+     "text": "很期待。",
+     "meaning": "기대돼",
+     "example": "下周的旅行我很期待！",
+     "exampleKo": "다음 주 여행 정말 기대돼!",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 134.3
+    },
+    {
+     "id": "zh-plans-16",
+     "text": "去旅行",
+     "meaning": "여행 가다",
+     "example": "暑假一起去旅行吧。",
+     "exampleKo": "여름방학에 같이 여행 가자.",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 179.1
+    },
+    {
+     "id": "zh-plans-17",
+     "text": "一起去吧。",
+     "meaning": "같이 가자",
+     "example": "庙会一起去吧！",
+     "exampleKo": "축제 같이 가자!",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-18",
+     "text": "决定了吗？",
+     "meaning": "정했어?",
+     "example": "去哪儿决定了吗？",
+     "exampleKo": "어디 갈지 정했어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-19",
+     "text": "还没决定。",
+     "meaning": "아직 안 정했어",
+     "example": "还没决定呢。",
+     "exampleKo": "아직 안 정했어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-20",
+     "text": "我想想。",
+     "meaning": "생각해 볼게",
+     "example": "嗯，我想想。",
+     "exampleKo": "음, 생각해 볼게.",
+     "tip": "부드럽게 거절할 때도 써요."
+    },
+    {
+     "id": "zh-plans-21",
+     "text": "什么时候都行。",
+     "meaning": "언제든 좋아",
+     "example": "什么时候都行，我配合你。",
+     "exampleKo": "언제든 좋아, 맞출게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-22",
+     "text": "改天吧。",
+     "meaning": "다음에 하자",
+     "example": "今天不行，改天吧。",
+     "exampleKo": "오늘은 안 돼, 다음에 하자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-23",
+     "text": "再联系你。",
+     "meaning": "또 연락할게",
+     "example": "时间确定了再联系你。",
+     "exampleKo": "시간 정해지면 또 연락할게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-24",
+     "text": "生日",
+     "meaning": "생일",
+     "example": "你的生日是什么时候？",
+     "exampleKo": "네 생일 언제야?",
+     "tip": "",
+     "sentences": 129,
+     "perMillion": 1444.2
+    },
+    {
+     "id": "zh-plans-25",
+     "text": "纪念日",
+     "meaning": "기념일",
+     "example": "下周是我们的纪念日。",
+     "exampleKo": "다음 주가 우리 기념일이야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-26",
+     "text": "庆祝一下",
+     "meaning": "축하하다",
+     "example": "考上了，庆祝一下吧！",
+     "exampleKo": "합격했으니 축하하자!",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 212.7
+    },
+    {
+     "id": "zh-plans-27",
+     "text": "礼物",
+     "meaning": "선물",
+     "example": "生日礼物想要什么？",
+     "exampleKo": "생일 선물 뭐 받고 싶어?",
+     "tip": "",
+     "sentences": 64,
+     "perMillion": 716.5
+    },
+    {
+     "id": "zh-plans-28",
+     "text": "暑假",
+     "meaning": "여름방학",
+     "example": "暑假你去哪儿？",
+     "exampleKo": "여름방학에 어디 가?",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 347.0
+    },
+    {
+     "id": "zh-plans-29",
+     "text": "春节",
+     "meaning": "설 (음력 설)",
+     "example": "春节我回老家。",
+     "exampleKo": "설에는 고향에 가.",
+     "tip": "중국 최대 명절이에요.",
+     "sentences": 11,
+     "perMillion": 123.1
+    },
+    {
+     "id": "zh-plans-30",
+     "text": "中秋节",
+     "meaning": "추석",
+     "example": "中秋节一起吃月饼。",
+     "exampleKo": "추석에 같이 월병 먹자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-31",
+     "text": "国庆节",
+     "meaning": "국경절",
+     "example": "国庆节去旅游。",
+     "exampleKo": "국경절에 여행 가.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-32",
+     "text": "大概几点？",
+     "meaning": "몇 시쯤?",
+     "example": "大概几点到？",
+     "exampleKo": "몇 시쯤 도착해?",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-33",
+     "text": "马上到。",
+     "meaning": "금방 도착해",
+     "example": "我刚出门，马上到。",
+     "exampleKo": "방금 나왔어, 금방 도착해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-34",
+     "text": "会晚一点。",
+     "meaning": "좀 늦을 거야",
+     "example": "工作会晚一点。",
+     "exampleKo": "일 때문에 좀 늦을 거야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-35",
+     "text": "你先去吧。",
+     "meaning": "먼저 가 있어",
+     "example": "你先去，我一会儿到。",
+     "exampleKo": "먼저 가 있어, 이따 갈게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-36",
+     "text": "来接我。",
+     "meaning": "데리러 와",
+     "example": "来车站接我。",
+     "exampleKo": "역으로 데리러 와.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-plans-37",
+     "text": "留宿",
+     "meaning": "자고 가다",
+     "example": "今晚在我家留宿吧？",
+     "exampleKo": "오늘 밤 우리 집에서 자고 갈래?",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-38",
+     "text": "做计划",
+     "meaning": "계획을 세우다",
+     "example": "我们来做旅行计划吧。",
+     "exampleKo": "여행 계획 세우자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-plans-39",
+     "text": "准备好了吗？",
+     "meaning": "준비됐어?",
+     "example": "准备好了吗？我们出发。",
+     "exampleKo": "준비됐어? 출발하자.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 100.8
+    }
+   ]
+  },
+  {
+   "id": "connect",
+   "title": {
+    "ko": "말 잇기",
+    "en": "Linking words"
+   },
+   "items": [
+    {
+     "id": "zh-connect-01",
+     "text": "但是",
+     "meaning": "하지만",
+     "example": "我想去，但是没时间。",
+     "exampleKo": "가고 싶은데 시간이 없어.",
+     "tip": "",
+     "sentences": 397,
+     "perMillion": 4444.4
+    },
+    {
+     "id": "zh-connect-02",
+     "text": "所以",
+     "meaning": "그래서",
+     "example": "下雨了，所以我在家。",
+     "exampleKo": "비가 와서 집에 있어.",
+     "tip": "",
+     "sentences": 406,
+     "perMillion": 4545.2
+    },
+    {
+     "id": "zh-connect-03",
+     "text": "然后",
+     "meaning": "그리고 나서",
+     "example": "先吃饭，然后看电影。",
+     "exampleKo": "먼저 밥 먹고 영화 보자.",
+     "tip": "",
+     "sentences": 56,
+     "perMillion": 626.9
+    },
+    {
+     "id": "zh-connect-04",
+     "text": "对了",
+     "meaning": "참, 그런데",
+     "example": "对了，明天你有空吗？",
+     "exampleKo": "참, 내일 시간 돼?",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 190.3
+    },
+    {
+     "id": "zh-connect-05",
+     "text": "顺便说一下",
+     "meaning": "참고로",
+     "example": "顺便说一下，我也去。",
+     "exampleKo": "참고로 나도 가.",
+     "tip": ""
+    },
+    {
+     "id": "zh-connect-06",
+     "text": "比如",
+     "meaning": "예를 들어",
+     "example": "比如，你喜欢什么电影？",
+     "exampleKo": "예를 들어 어떤 영화 좋아해?",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 123.1
+    },
+    {
+     "id": "zh-connect-07",
+     "text": "也就是说",
+     "meaning": "즉",
+     "example": "也就是说，你不来了？",
+     "exampleKo": "그러니까 안 온다는 거야?",
+     "tip": ""
+    },
+    {
+     "id": "zh-connect-08",
+     "text": "其实",
+     "meaning": "사실은",
+     "example": "其实，我有话想跟你说。",
+     "exampleKo": "사실 할 말이 있어.",
+     "tip": "",
+     "sentences": 41,
+     "perMillion": 459.0
+    },
+    {
+     "id": "zh-connect-09",
+     "text": "还是",
+     "meaning": "역시, 그래도",
+     "example": "还是算了，我不去了。",
+     "exampleKo": "역시 그냥 안 갈래.",
+     "tip": "",
+     "sentences": 332,
+     "perMillion": 3716.8
+    },
+    {
+     "id": "zh-connect-10",
+     "text": "先",
+     "meaning": "먼저",
+     "example": "先吃饭吧。",
+     "exampleKo": "먼저 밥 먹자.",
+     "tip": "",
+     "sentences": 507,
+     "perMillion": 5675.9
+    },
+    {
+     "id": "zh-connect-11",
+     "text": "可能",
+     "meaning": "아마",
+     "example": "可能没问题。",
+     "exampleKo": "아마 괜찮을 거야.",
+     "tip": "",
+     "sentences": 756,
+     "perMillion": 8463.5
+    },
+    {
+     "id": "zh-connect-12",
+     "text": "一定",
+     "meaning": "꼭",
+     "example": "我们一定要再来。",
+     "exampleKo": "우리 꼭 또 오자.",
+     "tip": "",
+     "sentences": 303,
+     "perMillion": 3392.1
+    },
+    {
+     "id": "zh-connect-13",
+     "text": "如果",
+     "meaning": "만약",
+     "example": "如果有时间，给我打电话。",
+     "exampleKo": "시간 되면 전화해.",
+     "tip": "",
+     "sentences": 813,
+     "perMillion": 9101.6
+    },
+    {
+     "id": "zh-connect-14",
+     "text": "虽然",
+     "meaning": "비록",
+     "example": "虽然很累，但是很开心。",
+     "exampleKo": "피곤하지만 즐거웠어.",
+     "tip": "",
+     "sentences": 88,
+     "perMillion": 985.2
+    },
+    {
+     "id": "zh-connect-15",
+     "text": "因为",
+     "meaning": "왜냐하면",
+     "example": "因为太晚了，所以先睡了。",
+     "exampleKo": "너무 늦어서 먼저 잤어.",
+     "tip": "",
+     "sentences": 382,
+     "perMillion": 4276.5
+    },
+    {
+     "id": "zh-connect-16",
+     "text": "可是",
+     "meaning": "그런데",
+     "example": "我想帮你，可是我不会。",
+     "exampleKo": "돕고 싶은데 할 줄 몰라.",
+     "tip": "",
+     "sentences": 81,
+     "perMillion": 906.8
+    },
+    {
+     "id": "zh-connect-17",
+     "text": "只是",
+     "meaning": "다만, 그냥",
+     "example": "只是有点贵。",
+     "exampleKo": "다만 좀 비싸.",
+     "tip": "",
+     "sentences": 296,
+     "perMillion": 3313.7
+    },
+    {
+     "id": "zh-connect-18",
+     "text": "而且",
+     "meaning": "게다가",
+     "example": "又便宜，而且好吃。",
+     "exampleKo": "싸고 게다가 맛있어.",
+     "tip": "",
+     "sentences": 92,
+     "perMillion": 1029.9
+    },
+    {
+     "id": "zh-connect-19",
+     "text": "反而",
+     "meaning": "오히려",
+     "example": "反而这样更好。",
+     "exampleKo": "오히려 이게 더 좋아.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 156.7
+    },
+    {
+     "id": "zh-connect-20",
+     "text": "总之",
+     "meaning": "아무튼",
+     "example": "总之，我们见面谈吧。",
+     "exampleKo": "아무튼 만나서 얘기하자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-connect-21",
+     "text": "说起来",
+     "meaning": "말이 나와서 말인데",
+     "example": "说起来，你昨天干嘛了？",
+     "exampleKo": "말이 나와서 말인데, 어제 뭐 했어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-connect-22",
+     "text": "老实说",
+     "meaning": "솔직히",
+     "example": "老实说，我有点累。",
+     "exampleKo": "솔직히 좀 피곤해.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 112.0
+    },
+    {
+     "id": "zh-connect-23",
+     "text": "简单来说",
+     "meaning": "간단히 말해서",
+     "example": "简单来说，明天不行。",
+     "exampleKo": "간단히 말해서 내일은 안 돼.",
+     "tip": ""
+    },
+    {
+     "id": "zh-connect-24",
+     "text": "可是呀",
+     "meaning": "그치만",
+     "example": "可是呀，我真的困了嘛。",
+     "exampleKo": "그치만 나 진짜 졸렸단 말이야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-connect-25",
+     "text": "那么",
+     "meaning": "그럼",
+     "example": "那么，就七点吧。",
+     "exampleKo": "그럼 7시로 하자.",
+     "tip": "",
+     "sentences": 296,
+     "perMillion": 3313.7
+    },
+    {
+     "id": "zh-connect-26",
+     "text": "另一方面",
+     "meaning": "한편으로는",
+     "example": "另一方面，我也担心。",
+     "exampleKo": "한편으로는 걱정도 돼.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-connect-27",
+     "text": "结果",
+     "meaning": "결국",
+     "example": "结果，我一直在家。",
+     "exampleKo": "결국 집에 있었어.",
+     "tip": "",
+     "sentences": 62,
+     "perMillion": 694.1
+    },
+    {
+     "id": "zh-connect-28",
+     "text": "突然",
+     "meaning": "갑자기",
+     "example": "突然下起雨来。",
+     "exampleKo": "갑자기 비가 왔어.",
+     "tip": "",
+     "sentences": 149,
+     "perMillion": 1668.1
+    },
+    {
+     "id": "zh-connect-29",
+     "text": "马上",
+     "meaning": "바로",
+     "example": "我马上回复你。",
+     "exampleKo": "바로 답장할게.",
+     "tip": "",
+     "sentences": 85,
+     "perMillion": 951.6
+    },
+    {
+     "id": "zh-connect-30",
+     "text": "渐渐",
+     "meaning": "점점",
+     "example": "我的中文渐渐变好了。",
+     "exampleKo": "내 중국어가 점점 늘고 있어.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 100.8
+    },
+    {
+     "id": "zh-connect-31",
+     "text": "终于",
+     "meaning": "드디어",
+     "example": "我们终于见面了。",
+     "exampleKo": "우리 드디어 만났네.",
+     "tip": "",
+     "sentences": 54,
+     "perMillion": 604.5
+    },
+    {
+     "id": "zh-connect-32",
+     "text": "还",
+     "meaning": "아직",
+     "example": "你还没睡吗？",
+     "exampleKo": "아직 안 잤어?",
+     "tip": "",
+     "sentences": 1058,
+     "perMillion": 11844.4
+    },
+    {
+     "id": "zh-connect-33",
+     "text": "已经",
+     "meaning": "이미",
+     "example": "我已经到了。",
+     "exampleKo": "나 이미 도착했어.",
+     "tip": "",
+     "sentences": 508,
+     "perMillion": 5687.1
+    },
+    {
+     "id": "zh-connect-34",
+     "text": "刚刚",
+     "meaning": "방금",
+     "example": "我刚刚到家。",
+     "exampleKo": "방금 집에 도착했어.",
+     "tip": "",
+     "sentences": 38,
+     "perMillion": 425.4
+    },
+    {
+     "id": "zh-connect-35",
+     "text": "一直",
+     "meaning": "계속",
+     "example": "我一直在等你。",
+     "exampleKo": "계속 기다리고 있었어.",
+     "tip": "",
+     "sentences": 345,
+     "perMillion": 3862.3
+    },
+    {
+     "id": "zh-connect-36",
+     "text": "经常",
+     "meaning": "자주",
+     "example": "我经常去那家店。",
+     "exampleKo": "나는 그 가게에 자주 가.",
+     "tip": "",
+     "sentences": 152,
+     "perMillion": 1701.7
+    },
+    {
+     "id": "zh-connect-37",
+     "text": "有时候",
+     "meaning": "가끔은",
+     "example": "有时候我会想家。",
+     "exampleKo": "가끔은 집 생각이 나.",
+     "tip": "",
+     "sentences": 50,
+     "perMillion": 559.8
+    },
+    {
+     "id": "zh-connect-38",
+     "text": "从来不",
+     "meaning": "한 번도 ~ 안 하다",
+     "example": "我从来不喝酒。",
+     "exampleKo": "나는 술을 전혀 안 마셔.",
+     "tip": "",
+     "sentences": 27,
+     "perMillion": 302.3
+    },
+    {
+     "id": "zh-connect-39",
+     "text": "差不多",
+     "meaning": "거의, 비슷하게",
+     "example": "我们差不多到了。",
+     "exampleKo": "우리 거의 다 왔어.",
+     "tip": "",
+     "sentences": 67,
+     "perMillion": 750.1
+    },
+    {
+     "id": "zh-connect-40",
+     "text": "特别",
+     "meaning": "특히, 아주",
+     "example": "我特别喜欢这里。",
+     "exampleKo": "난 여기가 특히 좋아.",
+     "tip": "",
+     "sentences": 59,
+     "perMillion": 660.5
+    },
+    {
+     "id": "zh-connect-41",
+     "text": "有点",
+     "meaning": "좀",
+     "example": "我有点累。",
+     "exampleKo": "나 좀 피곤해.",
+     "tip": "",
+     "sentences": 134,
+     "perMillion": 1500.1
+    }
+   ]
+  },
+  {
+   "id": "trouble",
+   "title": {
+    "ko": "문제 해결",
+    "en": "Problems & fixes"
+   },
+   "items": [
+    {
+     "id": "zh-trouble-01",
+     "text": "手机丢了。",
+     "meaning": "폰 잃어버렸어",
+     "example": "糟了，手机丢了！",
+     "exampleKo": "큰일이야, 폰 잃어버렸어!",
+     "tip": "",
+     "sentences": 49,
+     "perMillion": 548.6
+    },
+    {
+     "id": "zh-trouble-02",
+     "text": "忘带钱包了。",
+     "meaning": "지갑 두고 왔어",
+     "example": "我忘带钱包了。",
+     "exampleKo": "지갑 두고 왔어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-03",
+     "text": "手机快没电了。",
+     "meaning": "폰 배터리 없어",
+     "example": "手机快没电了。",
+     "exampleKo": "폰 배터리 거의 없어.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-trouble-04",
+     "text": "错过末班车了。",
+     "meaning": "막차 놓쳤어",
+     "example": "我错过末班车了。",
+     "exampleKo": "막차 놓쳤어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-trouble-05",
+     "text": "堵车了。",
+     "meaning": "차가 막혀",
+     "example": "堵车了，我会晚到。",
+     "exampleKo": "차가 막혀서 늦을 거야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-06",
+     "text": "感冒了。",
+     "meaning": "감기 걸렸어",
+     "example": "我感冒了。",
+     "exampleKo": "나 감기 걸렸어.",
+     "tip": "",
+     "sentences": 82,
+     "perMillion": 918.0
+    },
+    {
+     "id": "zh-trouble-07",
+     "text": "发烧了。",
+     "meaning": "열나",
+     "example": "我有点发烧。",
+     "exampleKo": "열이 좀 있어.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 212.7
+    },
+    {
+     "id": "zh-trouble-08",
+     "text": "头疼。",
+     "meaning": "머리 아파",
+     "example": "我从早上就头疼。",
+     "exampleKo": "아침부터 머리 아파.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 167.9
+    },
+    {
+     "id": "zh-trouble-09",
+     "text": "肚子疼。",
+     "meaning": "배 아파",
+     "example": "肚子疼得动不了。",
+     "exampleKo": "배 아파서 움직일 수 없어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-10",
+     "text": "去医院",
+     "meaning": "병원 가다",
+     "example": "你最好去医院看看。",
+     "exampleKo": "병원 가 보는 게 좋겠어.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 167.9
+    },
+    {
+     "id": "zh-trouble-11",
+     "text": "吃药",
+     "meaning": "약 먹다",
+     "example": "吃了药就睡吧。",
+     "exampleKo": "약 먹고 자.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-trouble-12",
+     "text": "坏了",
+     "meaning": "고장 났어",
+     "example": "耳机坏了。",
+     "exampleKo": "이어폰 고장 났어.",
+     "tip": "",
+     "sentences": 61,
+     "perMillion": 682.9
+    },
+    {
+     "id": "zh-trouble-13",
+     "text": "用不了",
+     "meaning": "안 돼",
+     "example": "电脑用不了了。",
+     "exampleKo": "컴퓨터가 안 돼.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-14",
+     "text": "连不上网。",
+     "meaning": "인터넷이 안 돼",
+     "example": "家里连不上网。",
+     "exampleKo": "집에서 인터넷이 안 돼.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-15",
+     "text": "忘记密码了。",
+     "meaning": "비밀번호 잊어버렸어",
+     "example": "我忘记密码了。",
+     "exampleKo": "비밀번호 까먹었어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-16",
+     "text": "弄错了。",
+     "meaning": "잘못했어",
+     "example": "对不起，我弄错了地方。",
+     "exampleKo": "미안, 장소를 잘못 알았어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-17",
+     "text": "我不知道。",
+     "meaning": "몰라",
+     "example": "我不知道该怎么办。",
+     "exampleKo": "어떻게 해야 할지 모르겠어.",
+     "tip": "",
+     "sentences": 698,
+     "perMillion": 7814.2
+    },
+    {
+     "id": "zh-trouble-18",
+     "text": "帮帮我。",
+     "meaning": "도와줘",
+     "example": "帮帮我，好吗？",
+     "exampleKo": "도와줄래?",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 112.0
+    },
+    {
+     "id": "zh-trouble-19",
+     "text": "救命！",
+     "meaning": "도와주세요!",
+     "example": "救命，有虫子！",
+     "exampleKo": "도와줘, 벌레 있어!",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-trouble-20",
+     "text": "我很为难。",
+     "meaning": "곤란해",
+     "example": "我现在有点为难。",
+     "exampleKo": "나 지금 좀 곤란해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-21",
+     "text": "怎么办？",
+     "meaning": "어떡하지?",
+     "example": "怎么办，来不及了！",
+     "exampleKo": "어떡하지, 늦겠어!",
+     "tip": "",
+     "sentences": 29,
+     "perMillion": 324.7
+    },
+    {
+     "id": "zh-trouble-22",
+     "text": "不好了！",
+     "meaning": "큰일 났어!",
+     "example": "不好了，漏水了！",
+     "exampleKo": "큰일 났어, 물이 새!",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-23",
+     "text": "快点！",
+     "meaning": "서둘러!",
+     "example": "快点，要开始了！",
+     "exampleKo": "서둘러, 시작해!",
+     "tip": "",
+     "sentences": 45,
+     "perMillion": 503.8
+    },
+    {
+     "id": "zh-trouble-24",
+     "text": "要迟到了。",
+     "meaning": "지각하겠어",
+     "example": "要迟到了，快跑！",
+     "exampleKo": "지각하겠어, 뛰자!",
+     "tip": "",
+     "sentences": 90,
+     "perMillion": 1007.6
+    },
+    {
+     "id": "zh-trouble-25",
+     "text": "钥匙丢了。",
+     "meaning": "열쇠 잃어버렸어",
+     "example": "我把家里钥匙丢了。",
+     "exampleKo": "집 열쇠 잃어버렸어.",
+     "tip": "",
+     "sentences": 63,
+     "perMillion": 705.3
+    },
+    {
+     "id": "zh-trouble-26",
+     "text": "落东西了。",
+     "meaning": "물건을 두고 왔어",
+     "example": "你有没有落东西？",
+     "exampleKo": "두고 간 거 없어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-27",
+     "text": "洒了。",
+     "meaning": "쏟았어",
+     "example": "咖啡洒了。",
+     "exampleKo": "커피 쏟았어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-28",
+     "text": "受伤了。",
+     "meaning": "다쳤어",
+     "example": "我摔倒受伤了。",
+     "exampleKo": "넘어져서 다쳤어.",
+     "tip": "",
+     "sentences": 82,
+     "perMillion": 918.0
+    },
+    {
+     "id": "zh-trouble-29",
+     "text": "出事故了。",
+     "meaning": "사고 났어",
+     "example": "出事故了，地铁停了。",
+     "exampleKo": "사고가 나서 지하철이 멈췄어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-30",
+     "text": "掉了。",
+     "meaning": "떨어졌어",
+     "example": "手机掉了。",
+     "exampleKo": "폰 떨어졌어.",
+     "tip": "",
+     "sentences": 125,
+     "perMillion": 1399.4
+    },
+    {
+     "id": "zh-trouble-31",
+     "text": "有充电器吗？",
+     "meaning": "충전기 있어?",
+     "example": "你有充电器吗？",
+     "exampleKo": "충전기 있어?",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-32",
+     "text": "没回复。",
+     "meaning": "답장이 없어",
+     "example": "他一直没回复。",
+     "exampleKo": "그가 계속 답장이 없어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-33",
+     "text": "已读不回",
+     "meaning": "읽씹",
+     "example": "别已读不回嘛。",
+     "exampleKo": "읽씹하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-34",
+     "text": "钱不够。",
+     "meaning": "돈이 모자라",
+     "example": "钱可能不够。",
+     "exampleKo": "돈이 모자랄 것 같아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-35",
+     "text": "睡不着。",
+     "meaning": "잠이 안 와",
+     "example": "昨晚我睡不着。",
+     "exampleKo": "어젯밤 잠이 안 왔어.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 134.3
+    },
+    {
+     "id": "zh-trouble-36",
+     "text": "语言不通。",
+     "meaning": "말이 안 통해",
+     "example": "语言不通，很麻烦。",
+     "exampleKo": "말이 안 통해서 곤란해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-37",
+     "text": "冷静点。",
+     "meaning": "진정해",
+     "example": "冷静点，没事的。",
+     "exampleKo": "진정해, 괜찮아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-trouble-38",
+     "text": "会好起来的。",
+     "meaning": "잘 될 거야",
+     "example": "别怕，会好起来的。",
+     "exampleKo": "무서워 마, 잘 될 거야.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-trouble-39",
+     "text": "没办法。",
+     "meaning": "어쩔 수 없지",
+     "example": "下雨了，没办法。",
+     "exampleKo": "비 오니까 어쩔 수 없지.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 347.0
+    },
+    {
+     "id": "zh-trouble-40",
+     "text": "糟糕！",
+     "meaning": "아차!",
+     "example": "糟糕，忘了作业！",
+     "exampleKo": "아차, 숙제 깜빡했어!",
+     "tip": "",
+     "sentences": 51,
+     "perMillion": 570.9
+    }
+   ]
+  },
+  {
+   "id": "reply",
+   "title": {
+    "ko": "맞장구·대답",
+    "en": "Replies & reactions"
+   },
+   "items": [
+    {
+     "id": "zh-reply-01",
+     "text": "嗯。",
+     "meaning": "응",
+     "example": "嗯，好啊。",
+     "exampleKo": "응, 좋아.",
+     "tip": "",
+     "sentences": 50,
+     "perMillion": 559.8
+    },
+    {
+     "id": "zh-reply-02",
+     "text": "不。",
+     "meaning": "아니",
+     "example": "不，没关系。",
+     "exampleKo": "아니, 괜찮아.",
+     "tip": "",
+     "sentences": 13381,
+     "perMillion": 149801.3
+    },
+    {
+     "id": "zh-reply-03",
+     "text": "是啊。",
+     "meaning": "그래, 맞아",
+     "example": "是啊，就这么办。",
+     "exampleKo": "그래, 그렇게 하자.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 100.8
+    },
+    {
+     "id": "zh-reply-04",
+     "text": "哇！",
+     "meaning": "와!",
+     "example": "哇，好漂亮！",
+     "exampleKo": "와, 예쁘다!",
+     "tip": "",
+     "sentences": 27,
+     "perMillion": 302.3
+    },
+    {
+     "id": "zh-reply-05",
+     "text": "的确。",
+     "meaning": "확실히 그래",
+     "example": "的确，这样很好。",
+     "exampleKo": "확실히, 이게 좋네.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-reply-06",
+     "text": "果然。",
+     "meaning": "역시",
+     "example": "果然是你。",
+     "exampleKo": "역시 너구나.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-reply-07",
+     "text": "好呀！",
+     "meaning": "좋아!",
+     "example": "好呀，一起去！",
+     "exampleKo": "좋아, 같이 가!",
+     "tip": ""
+    },
+    {
+     "id": "zh-reply-08",
+     "text": "好羡慕。",
+     "meaning": "부럽다",
+     "example": "你去夏威夷？好羡慕。",
+     "exampleKo": "하와이 가? 부럽다.",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 179.1
+    },
+    {
+     "id": "zh-reply-09",
+     "text": "当然！",
+     "meaning": "당연하지!",
+     "example": "当然，我会去的！",
+     "exampleKo": "당연하지, 갈게!",
+     "tip": "",
+     "sentences": 53,
+     "perMillion": 593.3
+    },
+    {
+     "id": "zh-reply-10",
+     "text": "那个…",
+     "meaning": "그게…",
+     "example": "那个…我想想。",
+     "exampleKo": "그게… 생각해 볼게.",
+     "tip": "",
+     "sentences": 445,
+     "perMillion": 4981.8
+    },
+    {
+     "id": "zh-reply-11",
+     "text": "还行吧。",
+     "meaning": "그럭저럭이야",
+     "example": "还行吧，习惯了。",
+     "exampleKo": "그럭저럭, 익숙해졌어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-reply-12",
+     "text": "无所谓。",
+     "meaning": "상관없어",
+     "example": "无所谓，我不介意。",
+     "exampleKo": "상관없어, 난 신경 안 써.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-reply-13",
+     "text": "是吗？",
+     "meaning": "그래?",
+     "example": "是吗？我觉得很普通。",
+     "exampleKo": "그래? 난 평범한 것 같은데.",
+     "tip": "",
+     "sentences": 100,
+     "perMillion": 1119.5
+    },
+    {
+     "id": "zh-reply-14",
+     "text": "没有啦。",
+     "meaning": "아니에요",
+     "example": "没有啦，还差得远。",
+     "exampleKo": "아니에요, 아직 멀었어요.",
+     "tip": "칭찬받았을 때 겸손하게 받는 말이에요."
+    },
+    {
+     "id": "zh-reply-15",
+     "text": "多亏了你。",
+     "meaning": "네 덕분이야",
+     "example": "多亏了你，帮大忙了！",
+     "exampleKo": "네 덕분에 큰 도움이 됐어!",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-reply-16",
+     "text": "拜托了！",
+     "meaning": "부탁해!",
+     "example": "拜托了，就一次！",
+     "exampleKo": "부탁해, 한 번만!",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 100.8
+    },
+    {
+     "id": "zh-reply-17",
+     "text": "可以吗？",
+     "meaning": "괜찮아?",
+     "example": "我可以拿走吗？",
+     "exampleKo": "가져가도 돼?",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 156.7
+    },
+    {
+     "id": "zh-reply-18",
+     "text": "请。",
+     "meaning": "드세요, 하세요",
+     "example": "请坐。",
+     "exampleKo": "앉으세요.",
+     "tip": "",
+     "sentences": 826,
+     "perMillion": 9247.1
+    },
+    {
+     "id": "zh-reply-19",
+     "text": "别介意。",
+     "meaning": "신경 쓰지 마",
+     "example": "别介意，我没事。",
+     "exampleKo": "신경 쓰지 마, 난 괜찮아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-reply-20",
+     "text": "真可惜。",
+     "meaning": "아쉽다",
+     "example": "你不能来？真可惜。",
+     "exampleKo": "못 와? 아쉽다.",
+     "tip": "",
+     "sentences": 40,
+     "perMillion": 447.8
+    },
+    {
+     "id": "zh-reply-21",
+     "text": "你真厉害！",
+     "meaning": "대단하다!",
+     "example": "第一名？你真厉害！",
+     "exampleKo": "1등? 대단하다!",
+     "tip": ""
+    },
+    {
+     "id": "zh-reply-22",
+     "text": "这样啊。",
+     "meaning": "그렇구나",
+     "example": "这样啊，我知道了。",
+     "exampleKo": "그렇구나, 알겠어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-reply-23",
+     "text": "哦～",
+     "meaning": "아~",
+     "example": "哦～原来如此。",
+     "exampleKo": "아~ 그렇구나.",
+     "tip": "",
+     "sentences": 68,
+     "perMillion": 761.3
+    },
+    {
+     "id": "zh-reply-24",
+     "text": "耶！",
+     "meaning": "앗싸!",
+     "example": "耶！我通过了！",
+     "exampleKo": "앗싸! 합격했어!",
+     "tip": "",
+     "sentences": 49,
+     "perMillion": 548.6
+    },
+    {
+     "id": "zh-reply-25",
+     "text": "恭喜！",
+     "meaning": "축하해!",
+     "example": "恭喜你！",
+     "exampleKo": "축하해!",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 112.0
+    },
+    {
+     "id": "zh-reply-26",
+     "text": "不一定。",
+     "meaning": "꼭 그런 건 아니야",
+     "example": "不一定，要看情况。",
+     "exampleKo": "꼭 그런 건 아니야, 상황 봐야지.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 212.7
+    },
+    {
+     "id": "zh-reply-27",
+     "text": "我知道！",
+     "meaning": "알아!",
+     "example": "我知道那家店！",
+     "exampleKo": "그 가게 알아!",
+     "tip": "",
+     "sentences": 314,
+     "perMillion": 3515.3
+    },
+    {
+     "id": "zh-reply-28",
+     "text": "没问题。",
+     "meaning": "문제없어",
+     "example": "没问题，包在我身上。",
+     "exampleKo": "문제없어, 나한테 맡겨.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 123.1
+    },
+    {
+     "id": "zh-reply-29",
+     "text": "收到。",
+     "meaning": "알겠어",
+     "example": "收到，明天我过去。",
+     "exampleKo": "알겠어, 내일 갈게.",
+     "tip": "",
+     "sentences": 92,
+     "perMillion": 1029.9
+    },
+    {
+     "id": "zh-reply-30",
+     "text": "好的呀。",
+     "meaning": "응 좋아",
+     "example": "好的呀，听你的。",
+     "exampleKo": "응 좋아, 네 말대로 할게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-reply-31",
+     "text": "随你。",
+     "meaning": "맘대로 해",
+     "example": "随你，我都行。",
+     "exampleKo": "맘대로 해, 난 다 괜찮아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-reply-32",
+     "text": "就是。",
+     "meaning": "그러니까",
+     "example": "就是，我也这么想。",
+     "exampleKo": "그러니까, 나도 그렇게 생각해.",
+     "tip": "",
+     "sentences": 636,
+     "perMillion": 7120.1
+    }
+   ]
+  },
+  {
+   "id": "polite",
+   "title": {
+    "ko": "예의 있게 말하기",
+    "en": "Polite speech"
+   },
+   "items": [
+    {
+     "id": "zh-polite-01",
+     "text": "初次见面。",
+     "meaning": "처음 뵙겠습니다",
+     "example": "初次见面，我姓金。",
+     "exampleKo": "처음 뵙겠습니다, 김입니다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-02",
+     "text": "请多指教。",
+     "meaning": "잘 부탁드립니다",
+     "example": "以后请多指教。",
+     "exampleKo": "앞으로 잘 부탁드립니다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-03",
+     "text": "打扰了。",
+     "meaning": "실례하겠습니다",
+     "example": "打扰了，我进来了。",
+     "exampleKo": "실례합니다, 들어갈게요.",
+     "tip": "연인 부모님 댁에 갈 때 쓰기 좋아요."
+    },
+    {
+     "id": "zh-polite-04",
+     "text": "谢谢您。",
+     "meaning": "감사합니다",
+     "example": "谢谢您的帮助。",
+     "exampleKo": "도와주셔서 감사합니다.",
+     "tip": "您은 你의 존칭이에요.",
+     "sentences": 18,
+     "perMillion": 201.5
+    },
+    {
+     "id": "zh-polite-05",
+     "text": "不好意思。",
+     "meaning": "죄송합니다, 실례합니다",
+     "example": "不好意思，迟到了。",
+     "exampleKo": "죄송해요, 늦었어요.",
+     "tip": "",
+     "sentences": 81,
+     "perMillion": 906.8
+    },
+    {
+     "id": "zh-polite-06",
+     "text": "非常抱歉。",
+     "meaning": "정말 죄송합니다",
+     "example": "给您添麻烦，非常抱歉。",
+     "exampleKo": "폐를 끼쳐 정말 죄송합니다.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-polite-07",
+     "text": "失陪了。",
+     "meaning": "먼저 실례하겠습니다",
+     "example": "我有事，先失陪了。",
+     "exampleKo": "일이 있어서 먼저 실례하겠습니다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-08",
+     "text": "您身体好吗？",
+     "meaning": "건강하세요?",
+     "example": "叔叔，您身体好吗？",
+     "exampleKo": "아버님, 건강하세요?",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-09",
+     "text": "托您的福。",
+     "meaning": "덕분입니다",
+     "example": "托您的福，我很好。",
+     "exampleKo": "덕분에 잘 지내요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-10",
+     "text": "请用。",
+     "meaning": "드세요",
+     "example": "请用茶。",
+     "exampleKo": "차 드세요.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-polite-11",
+     "text": "不成敬意。",
+     "meaning": "변변치 않지만",
+     "example": "一点小礼物，不成敬意。",
+     "exampleKo": "작은 선물이에요, 변변치 않지만요.",
+     "tip": "선물을 건넬 때 하는 겸손한 말이에요."
+    },
+    {
+     "id": "zh-polite-12",
+     "text": "麻烦您了。",
+     "meaning": "번거롭게 해 드렸어요",
+     "example": "麻烦您了，真不好意思。",
+     "exampleKo": "번거롭게 해 드려 죄송해요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-13",
+     "text": "您太客气了。",
+     "meaning": "별말씀을요",
+     "example": "您太客气了，不用谢。",
+     "exampleKo": "별말씀을요, 고마워하실 것 없어요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-14",
+     "text": "我吃饱了。",
+     "meaning": "잘 먹었습니다",
+     "example": "我吃饱了，谢谢款待。",
+     "exampleKo": "잘 먹었습니다, 대접 감사해요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-15",
+     "text": "您先请。",
+     "meaning": "먼저 하세요",
+     "example": "您先请，我不着急。",
+     "exampleKo": "먼저 하세요, 전 급하지 않아요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-16",
+     "text": "请稍等。",
+     "meaning": "잠시만 기다려 주세요",
+     "example": "请稍等，马上就好。",
+     "exampleKo": "잠시만 기다려 주세요, 금방 돼요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-17",
+     "text": "请再说一遍。",
+     "meaning": "다시 한번 말씀해 주세요",
+     "example": "对不起，请再说一遍。",
+     "exampleKo": "죄송하지만 다시 한번 말씀해 주세요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-18",
+     "text": "请说慢一点。",
+     "meaning": "천천히 말씀해 주세요",
+     "example": "请说慢一点，好吗？",
+     "exampleKo": "천천히 말씀해 주시겠어요?",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 89.6
+    },
+    {
+     "id": "zh-polite-19",
+     "text": "不用了，谢谢。",
+     "meaning": "괜찮습니다 (사양)",
+     "example": "不用了，谢谢。",
+     "exampleKo": "괜찮아요, 감사합니다.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-polite-20",
+     "text": "麻烦您。",
+     "meaning": "부탁드려요",
+     "example": "麻烦您，来杯咖啡。",
+     "exampleKo": "커피 한 잔 부탁드려요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-21",
+     "text": "彼此彼此。",
+     "meaning": "저도요, 피차일반이에요",
+     "example": "彼此彼此，你也辛苦了。",
+     "exampleKo": "저도요, 고생하셨어요.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-polite-22",
+     "text": "让您久等了。",
+     "meaning": "오래 기다리셨죠",
+     "example": "让您久等了，我们走吧。",
+     "exampleKo": "오래 기다리셨죠, 가요.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-polite-23",
+     "text": "请坐。",
+     "meaning": "앉으세요",
+     "example": "请坐，别客气。",
+     "exampleKo": "앉으세요, 편하게 계세요.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-polite-24",
+     "text": "请问您贵姓？",
+     "meaning": "성함이 어떻게 되세요?",
+     "example": "请问您贵姓？",
+     "exampleKo": "성함이 어떻게 되세요?",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
+    },
+    {
+     "id": "zh-polite-25",
+     "text": "先生",
+     "meaning": "선생님, ~씨 (남성)",
+     "example": "王先生，您好。",
+     "exampleKo": "왕 선생님, 안녕하세요.",
+     "tip": "",
+     "sentences": 214,
+     "perMillion": 2395.7
+    },
+    {
+     "id": "zh-polite-26",
+     "text": "女士",
+     "meaning": "여사님, ~씨 (여성)",
+     "example": "李女士，请进。",
+     "exampleKo": "이 여사님, 들어오세요.",
+     "tip": "",
+     "sentences": 44,
+     "perMillion": 492.6
+    },
+    {
+     "id": "zh-polite-27",
+     "text": "您",
+     "meaning": "당신(존칭)",
+     "example": "请问您需要什么？",
+     "exampleKo": "무엇이 필요하세요?",
+     "tip": "",
+     "sentences": 1149,
+     "perMillion": 12863.1
+    },
+    {
+     "id": "zh-polite-28",
+     "text": "敬语",
+     "meaning": "존댓말",
+     "example": "中文的敬语不多。",
+     "exampleKo": "중국어에는 존댓말이 많지 않아요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-29",
+     "text": "生日快乐！",
+     "meaning": "생일 축하해!",
+     "example": "祝你生日快乐！",
+     "exampleKo": "생일 축하해!",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 78.4
+    },
+    {
+     "id": "zh-polite-30",
+     "text": "新年快乐！",
+     "meaning": "새해 복 많이 받으세요",
+     "example": "祝您新年快乐！",
+     "exampleKo": "새해 복 많이 받으세요!",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-31",
+     "text": "恭喜发财！",
+     "meaning": "부자 되세요 (설 인사)",
+     "example": "恭喜发财，红包拿来！",
+     "exampleKo": "부자 되세요, 세뱃돈 주세요!",
+     "tip": "중국 설에 하는 대표 인사예요."
+    },
+    {
+     "id": "zh-polite-32",
+     "text": "祝你幸福。",
+     "meaning": "행복하길 빌어요",
+     "example": "祝你们幸福。",
+     "exampleKo": "두 분 행복하길 빌어요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-33",
+     "text": "早日康复。",
+     "meaning": "빨리 나으세요",
+     "example": "祝您早日康复。",
+     "exampleKo": "빨리 쾌차하세요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-34",
+     "text": "注意身体。",
+     "meaning": "건강 조심하세요",
+     "example": "天冷了，请注意身体。",
+     "exampleKo": "추워졌으니 건강 조심하세요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-35",
+     "text": "有劳了。",
+     "meaning": "수고하셨어요",
+     "example": "今天有劳了。",
+     "exampleKo": "오늘 수고하셨어요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-36",
+     "text": "承蒙关照。",
+     "meaning": "신세 많이 졌습니다",
+     "example": "这段时间承蒙关照。",
+     "exampleKo": "그동안 신세 많이 졌습니다.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-37",
+     "text": "欢迎光临。",
+     "meaning": "어서 오세요",
+     "example": "欢迎光临，几位？",
+     "exampleKo": "어서 오세요, 몇 분이세요?",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-38",
+     "text": "请进。",
+     "meaning": "들어오세요",
+     "example": "请进，随便坐。",
+     "exampleKo": "들어오세요, 편하게 앉으세요.",
+     "tip": ""
+    },
+    {
+     "id": "zh-polite-39",
+     "text": "久仰大名。",
+     "meaning": "성함은 많이 들었습니다",
+     "example": "久仰大名，今天终于见到了。",
+     "exampleKo": "성함은 많이 들었어요, 오늘 드디어 뵙네요.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "idioms",
+   "title": {
+    "ko": "자주 쓰는 관용 표현",
+    "en": "Common idioms"
+   },
+   "items": [
+    {
+     "id": "zh-idioms-01",
+     "text": "一石二鸟",
+     "meaning": "일석이조",
+     "example": "边走路边购物，一石二鸟。",
+     "exampleKo": "걸으면서 쇼핑하니 일석이조야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-02",
+     "text": "入乡随俗",
+     "meaning": "로마에 가면 로마법을 따라라",
+     "example": "入乡随俗，我也试试。",
+     "exampleKo": "그 지방 풍속을 따라 나도 해 볼게.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-03",
+     "text": "事半功倍",
+     "meaning": "적은 노력으로 큰 효과",
+     "example": "这样学事半功倍。",
+     "exampleKo": "이렇게 공부하면 효율이 좋아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-04",
+     "text": "马马虎虎",
+     "meaning": "그저 그렇다, 대충",
+     "example": "我的中文马马虎虎。",
+     "exampleKo": "내 중국어는 그저 그래.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-05",
+     "text": "三心二意",
+     "meaning": "마음이 갈팡질팡하다",
+     "example": "别三心二意，好好选。",
+     "exampleKo": "갈팡질팡하지 말고 잘 골라.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-06",
+     "text": "一见如故",
+     "meaning": "처음 봤는데 오랜 친구 같다",
+     "example": "我们一见如故。",
+     "exampleKo": "우리는 처음 봤는데도 오랜 친구 같았어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-07",
+     "text": "心想事成",
+     "meaning": "마음먹은 대로 이루어지다",
+     "example": "祝你心想事成。",
+     "exampleKo": "원하는 대로 다 이루어지길 빌어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-08",
+     "text": "好事多磨",
+     "meaning": "좋은 일엔 시련이 따른다",
+     "example": "好事多磨，别灰心。",
+     "exampleKo": "좋은 일엔 시련이 따르니 낙심하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-09",
+     "text": "半途而废",
+     "meaning": "중도에 포기하다",
+     "example": "学习不要半途而废。",
+     "exampleKo": "공부는 중간에 포기하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-10",
+     "text": "对牛弹琴",
+     "meaning": "소귀에 경 읽기",
+     "example": "跟他说这些是对牛弹琴。",
+     "exampleKo": "그에게 이런 말 해 봤자 소귀에 경 읽기야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-11",
+     "text": "画蛇添足",
+     "meaning": "쓸데없는 짓을 해서 망치다",
+     "example": "别画蛇添足了，这样就好。",
+     "exampleKo": "괜히 덧붙이지 마, 이대로 좋아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-12",
+     "text": "脚踏实地",
+     "meaning": "착실하다",
+     "example": "做事要脚踏实地。",
+     "exampleKo": "일은 착실히 해야 해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-13",
+     "text": "一举两得",
+     "meaning": "일거양득",
+     "example": "这样做一举两得。",
+     "exampleKo": "이렇게 하면 일거양득이야.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-14",
+     "text": "井底之蛙",
+     "meaning": "우물 안 개구리",
+     "example": "出去看看，别做井底之蛙。",
+     "exampleKo": "나가 봐, 우물 안 개구리가 되지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-15",
+     "text": "亡羊补牢",
+     "meaning": "소 잃고 외양간 고친다",
+     "example": "亡羊补牢，未为晚矣。",
+     "exampleKo": "소 잃고 외양간 고쳐도 늦진 않아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-16",
+     "text": "守株待兔",
+     "meaning": "요행만 기다리다",
+     "example": "别守株待兔，主动点。",
+     "exampleKo": "요행만 기다리지 말고 적극적으로 해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-17",
+     "text": "熟能生巧",
+     "meaning": "익숙해지면 능숙해진다",
+     "example": "熟能生巧，多练练。",
+     "exampleKo": "많이 해 봐야 능숙해져.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-18",
+     "text": "不见不散",
+     "meaning": "만날 때까지 기다린다",
+     "example": "明晚七点，不见不散！",
+     "exampleKo": "내일 저녁 7시, 꼭 만나!",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-19",
+     "text": "天长地久",
+     "meaning": "영원하다",
+     "example": "愿我们天长地久。",
+     "exampleKo": "우리 영원하기를.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-20",
+     "text": "相亲相爱",
+     "meaning": "서로 사랑하다",
+     "example": "他们一家相亲相爱。",
+     "exampleKo": "그 집은 가족끼리 서로 사랑해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-21",
+     "text": "千里迢迢",
+     "meaning": "멀고 먼 길",
+     "example": "他千里迢迢来看我。",
+     "exampleKo": "그가 먼 길을 와서 나를 봤어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-22",
+     "text": "日久见人心",
+     "meaning": "오래 지내 봐야 사람을 안다",
+     "example": "日久见人心，慢慢来。",
+     "exampleKo": "오래 지내 봐야 알아, 천천히 해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-23",
+     "text": "一言为定",
+     "meaning": "한 말씀으로 정했다",
+     "example": "明天去吃火锅，一言为定！",
+     "exampleKo": "내일 훠궈 먹으러 가자, 약속이야!",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-24",
+     "text": "说曹操，曹操到",
+     "meaning": "호랑이도 제 말 하면 온다",
+     "example": "说曹操，曹操到！",
+     "exampleKo": "호랑이도 제 말 하면 온다더니!",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-25",
+     "text": "吃醋",
+     "meaning": "질투하다",
+     "example": "他看到别人跟我说话就吃醋。",
+     "exampleKo": "그는 내가 다른 사람이랑 얘기하면 질투해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-26",
+     "text": "拍马屁",
+     "meaning": "아부하다",
+     "example": "别拍马屁了。",
+     "exampleKo": "아부하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-27",
+     "text": "走后门",
+     "meaning": "뒷문으로 해결하다",
+     "example": "他是走后门进来的。",
+     "exampleKo": "그는 연줄로 들어왔어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-28",
+     "text": "开夜车",
+     "meaning": "밤샘 공부하다",
+     "example": "考试前要开夜车。",
+     "exampleKo": "시험 전에 밤샘 공부해야 해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-29",
+     "text": "吃闭门羹",
+     "meaning": "문전박대당하다",
+     "example": "我去找他，吃了闭门羹。",
+     "exampleKo": "그를 찾아갔는데 문전박대당했어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-30",
+     "text": "唱反调",
+     "meaning": "반대로 말하다",
+     "example": "你怎么总跟我唱反调？",
+     "exampleKo": "너는 왜 맨날 나랑 반대로 말해?",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-31",
+     "text": "面子",
+     "meaning": "체면",
+     "example": "给我点面子吧。",
+     "exampleKo": "내 체면 좀 세워 줘.",
+     "tip": "중국 문화에서 아주 중요한 개념이에요.",
+     "sentences": 5,
+     "perMillion": 56.0
+    },
+    {
+     "id": "zh-idioms-32",
+     "text": "关系",
+     "meaning": "인맥, 관계",
+     "example": "在中国，关系很重要。",
+     "exampleKo": "중국에서는 인맥이 중요해.",
+     "tip": "",
+     "sentences": 92,
+     "perMillion": 1029.9
+    },
+    {
+     "id": "zh-idioms-33",
+     "text": "缘分",
+     "meaning": "인연",
+     "example": "我们真有缘分。",
+     "exampleKo": "우리 정말 인연이네.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-34",
+     "text": "心有灵犀",
+     "meaning": "마음이 통하다",
+     "example": "我们心有灵犀。",
+     "exampleKo": "우리 마음이 통해.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-35",
+     "text": "来日方长",
+     "meaning": "앞날이 창창하다",
+     "example": "来日方长，别着急。",
+     "exampleKo": "앞날이 길어, 서두르지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-36",
+     "text": "随遇而安",
+     "meaning": "어디서든 적응하다",
+     "example": "他随遇而安，很好相处。",
+     "exampleKo": "그는 어디서든 잘 적응해서 같이 지내기 좋아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-37",
+     "text": "顺其自然",
+     "meaning": "순리에 맡기다",
+     "example": "顺其自然吧，别想太多。",
+     "exampleKo": "순리에 맡기고 너무 생각하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-38",
+     "text": "无话不谈",
+     "meaning": "못 할 말이 없다",
+     "example": "我们无话不谈。",
+     "exampleKo": "우리는 못 할 말이 없어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-39",
+     "text": "一言难尽",
+     "meaning": "한마디로 말하기 어렵다",
+     "example": "说来话长，一言难尽。",
+     "exampleKo": "얘기하자면 길어, 한마디로 말하기 어려워.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-40",
+     "text": "恰到好处",
+     "meaning": "딱 알맞다",
+     "example": "这个咸淡恰到好处。",
+     "exampleKo": "이 간이 딱 알맞아.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-41",
+     "text": "大吃一惊",
+     "meaning": "깜짝 놀라다",
+     "example": "听到消息我大吃一惊。",
+     "exampleKo": "소식을 듣고 깜짝 놀랐어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-idioms-42",
+     "text": "开心果",
+     "meaning": "분위기 메이커",
+     "example": "他是我们的开心果。",
+     "exampleKo": "그는 우리 분위기 메이커야.",
+     "tip": ""
+    }
+   ]
+  }
+ ]
+}

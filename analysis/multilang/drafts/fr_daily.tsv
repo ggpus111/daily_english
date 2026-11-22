@@ -1,0 +1,388 @@
+# 프랑스어 일상 표현 꾸러미(10개 주제 × 40). 프랑스 일상 말투 기준. AI(Claude)와 함께 쓰고 사람이 고른다.
+# 꾸러미	표현	셀 형태	뜻	예문	예문 해석	팁
+daily	Bonjour.	bonjour	안녕하세요 (낮)	Bonjour, ça va ?	안녕하세요, 잘 지내요?	낮 인사예요. 처음 만나는 사람, 가게 직원에게도 꼭 해요.
+daily	Bonsoir.	bonsoir	안녕하세요 (저녁)	Bonsoir, tu as bien mangé ?	안녕, 저녁 잘 먹었어?
+daily	Salut !	salut	안녕!	Salut, quoi de neuf ?	안녕, 별일 없어?	친구끼리 인사예요. 헤어질 때도 써요.
+daily	Ça va ?	ça va	잘 지내?	Salut, ça va ?	안녕, 잘 지내?
+daily	Ça va bien.	ça va bien	잘 지내	Ça va bien, merci. Et toi ?	잘 지내, 고마워. 너는?
+daily	Comme ci, comme ça.	comme ci comme ça	그저 그래	Le boulot, comme ci, comme ça.	일은 그저 그래.
+daily	Merci.	merci	고마워	Merci de m'avoir aidé.	도와줘서 고마워.
+daily	De rien.	de rien	천만에	De rien, c'est normal.	천만에, 당연한 거야.
+daily	Pas de souci.	pas de souci	문제없어	Pas de souci, je t'attends.	문제없어, 기다릴게.
+daily	Pardon.	pardon	미안, 실례	Pardon, j'étais en retard.	미안, 늦었어.
+daily	À plus tard.	à plus tard	이따 봐	À plus tard, je file.	이따 봐, 나 갈게.
+daily	À demain.	à demain	내일 봐	Bonne nuit, à demain.	잘 자, 내일 봐.
+daily	Au revoir.	au revoir	안녕히 가세요	Au revoir, bonne journée.	안녕히 가세요, 좋은 하루 보내세요.
+daily	Je suis rentré.	je suis rentré	나 왔어	Je suis rentré, j'ai faim.	나 왔어, 배고파.	여자가 말하면 rentrée예요.
+daily	J'ai faim.	j'ai faim	배고파	J'ai faim, on mange ?	배고파, 밥 먹을까?
+daily	J'ai sommeil.	j'ai sommeil	졸려	J'ai sommeil, je vais dormir.	졸려, 자러 갈게.
+daily	Je suis fatigué.	je suis fatigué	피곤해	Je suis très fatigué aujourd'hui.	오늘 너무 피곤해.	여자가 말하면 fatiguée예요.
+daily	Il fait chaud.	il fait chaud	덥다	Il fait super chaud aujourd'hui.	오늘 엄청 더워.
+daily	Il fait froid.	il fait froid	춥다	Il fait froid, mets ton manteau.	추워, 코트 입어.
+daily	Il fait beau.	il fait beau	날씨 좋다	Il fait beau, on sort se promener ?	날씨 좋다, 산책 갈까?
+daily	Il pleut.	il pleut	비 와	Il pleut, prends un parapluie.	비 와, 우산 챙겨.
+daily	Un instant.	un instant	잠깐만	Un instant, j'arrive.	잠깐만, 금방 가.
+daily	Il est quelle heure ?	il est quelle heure	몇 시야?	Il est quelle heure maintenant ?	지금 몇 시야?
+daily	T'es où ?	t'es où	어디야?	T'es où là ?	지금 어디야?
+daily	Tu veux manger quoi ?	manger quoi	뭐 먹고 싶어?	Tu veux manger quoi ce soir ?	오늘 저녁 뭐 먹고 싶어?
+daily	Ça m'est égal.	ça m'est égal	난 상관없어	Ça m'est égal, choisis toi.	난 상관없어, 네가 골라.
+daily	C'est délicieux !	c'est délicieux	너무 맛있다!	Ce gratin est délicieux !	이 그라탱 너무 맛있다!
+daily	On s'amuse bien !	on s'amuse bien	재밌다!	On s'amuse bien avec toi !	너랑 있으니 재밌어!
+daily	Génial !	génial	대박!	Génial, on a réussi !	대박, 우리 해냈어!
+daily	Je vois.	je vois	그렇구나	Ah, je vois, ça a du sens.	아, 그렇구나, 말이 되네.
+daily	D'accord.	d'accord	알겠어, 좋아	D'accord, je te dis ça plus tard.	알겠어, 이따 말해 줄게.
+daily	Enchanté.	enchanté	만나서 반가워요	Enchanté de te rencontrer.	만나서 반가워.	여자가 말하면 enchantée예요.
+daily	Je m'en vais.	je m'en vais	나 갈게	Bon, je m'en vais.	그럼 나 갈게.
+daily	Fais attention.	fais attention	조심해	Fais attention, il neige.	조심해, 눈 와.
+daily	Bonne nuit.	bonne nuit	잘 자	Bonne nuit, dors bien.	잘 자, 푹 자.
+daily	Bon courage !	bon courage	힘내!	Bon courage pour l'examen !	시험 힘내!
+daily	Et toi ?	et toi	너는?	Moi je prends un café, et toi ?	난 커피 마셔, 너는?
+daily	Bonne journée !	bonne journée	좋은 하루!	Bonne journée, à ce soir !	좋은 하루 보내, 이따 저녁에 봐!
+daily	Bon appétit !	bon appétit	맛있게 먹어!	Bon appétit, mon cœur !	맛있게 먹어, 자기야!	식사 전에 하는 정해진 인사예요.
+daily	À tes souhaits !	à tes souhaits	건강하길! (재채기할 때)	Atchoum ! — À tes souhaits !	에취! — 건강하길!
+routine	T'es réveillé ?	réveillé	일어났어?	T'es déjà réveillé ?	벌써 일어났어?
+routine	Je me suis réveillé en retard.	réveillé en retard	늦게 일어났어	Je me suis réveillé en retard !	늦게 일어났어!
+routine	se laver le visage	se laver le visage	세수하다	Je me lave le visage au réveil.	일어나서 세수해.
+routine	se brosser les dents	se brosser les dents	양치하다	Brosse-toi les dents avant de dormir.	자기 전에 양치해.
+routine	prendre une douche	prendre une douche	샤워하다	Je vais prendre une douche.	샤워할게.
+routine	prendre le petit-déjeuner	petit-déjeuner	아침을 먹다	T'as pris ton petit-déjeuner ?	아침 먹었어?
+routine	prendre le métro	prendre le métro	지하철 타다	Je prends le métro pour aller au boulot.	출근할 때 지하철 타.
+routine	prendre le bus	prendre le bus	버스 타다	Aujourd'hui, je prends le bus.	오늘은 버스 타.
+routine	aller au boulot	aller au boulot	출근하다	Je dois aller au boulot.	출근해야 해.
+routine	aller en cours	aller en cours	수업에 가다	Demain, j'ai cours à huit heures.	내일 8시 수업이야.
+routine	déjeuner	déjeuner	점심을 먹다	Tu as déjeuné où ?	점심 어디서 먹었어?
+routine	finir le travail	finir le travail	퇴근하다	Tu finis à quelle heure ?	몇 시에 끝나?
+routine	faire des heures sup	heures sup	야근하다	Ce soir, je fais des heures sup.	오늘 밤 야근해.
+routine	rentrer à la maison	rentrer	집에 가다	Je rentre à la maison.	집에 가는 중이야.
+routine	préparer le dîner	préparer le dîner	저녁을 준비하다	Je prépare le dîner.	저녁 준비하는 중이야.
+routine	faire la lessive	faire la lessive	빨래하다	Ce week-end, je fais la lessive.	주말에 빨래해.
+routine	faire le ménage	faire le ménage	청소하다	J'ai fait le ménage dans ma chambre.	방 청소했어.
+routine	faire les courses	faire les courses	장 보다	Je vais faire les courses.	장 보러 갈게.
+routine	rester à la maison	rester à la maison	집에 있다	Le dimanche, je reste à la maison.	일요일엔 집에 있어.
+routine	regarder une série	regarder une série	드라마를 보다	Le soir, je regarde une série.	밤엔 드라마 봐.
+routine	écouter de la musique	écouter de la musique	음악을 듣다	J'écoute de la musique dans le métro.	지하철에서 음악 들어.
+routine	aller à la salle de sport	salle de sport	헬스장에 가다	Après le boulot, je vais à la salle de sport.	퇴근하고 헬스장 가.
+routine	se promener	se promener	산책하다	On se promène près de la Seine.	센강 근처에서 산책해.
+routine	prendre un bain	prendre un bain	목욕하다	Je vais prendre un bain.	목욕하고 올게.
+routine	se coucher	se coucher	잠자리에 들다	Je me couche vers minuit.	자정쯤 잠자리에 들어.
+routine	se lever tôt	se lever tôt	일찍 일어나다	Demain, je dois me lever tôt.	내일 일찍 일어나야 해.
+routine	veiller tard	veiller tard	밤늦게까지 깨어 있다	J'ai encore veillé tard hier.	어제도 늦게까지 안 잤어.
+routine	faire la grasse matinée	grasse matinée	늦잠 자다	Le dimanche, je fais la grasse matinée.	일요일엔 늦잠 자.
+routine	apporter son déjeuner	apporter son déjeuner	도시락을 싸 가다	Aujourd'hui, j'ai apporté mon déjeuner.	오늘은 도시락 싸 왔어.
+routine	la boulangerie	boulangerie	빵집	J'ai acheté une baguette à la boulangerie.	빵집에서 바게트 샀어.
+routine	un jour de congé	jour de congé	쉬는 날	Demain, c'est mon jour de congé.	내일 쉬는 날이야.
+routine	le week-end	week-end	주말	Qu'est-ce que tu fais ce week-end ?	이번 주말에 뭐 해?
+routine	en semaine	en semaine	평일에	En semaine, je suis toujours occupé.	평일엔 항상 바빠.
+routine	tous les jours	tous les jours	매일	J'étudie le français tous les jours.	매일 프랑스어 공부해.
+routine	toujours	toujours	항상	Je passe toujours par ici.	난 항상 여기로 지나가.
+routine	parfois	parfois	가끔	Parfois, je cuisine moi-même.	가끔 직접 요리해.
+routine	faire du télétravail	télétravail	재택근무하다	Aujourd'hui, je fais du télétravail.	오늘은 재택근무야.
+routine	faire une pause	faire une pause	잠깐 쉬다	On fait une pause ?	우리 잠깐 쉴까?
+routine	regarder son téléphone	regarder son téléphone	폰을 보다	Avant de dormir, je regarde mon téléphone.	자기 전에 폰을 봐.
+routine	se préparer	se préparer	준비하다	Je me prépare, attends-moi.	준비 중이니까 기다려.
+out	C'est combien ?	c'est combien	얼마예요?	Ça, c'est combien ?	이거 얼마예요?
+out	Je prends celui-ci.	celui-ci	이걸로 할게요	Je prends celui-ci, merci.	이걸로 할게요, 감사합니다.
+out	Vous prenez la carte ?	prenez la carte	카드 돼요?	Vous prenez la carte ?	카드 돼요?
+out	Pas besoin de sac.	pas besoin de sac	봉투 필요 없어요	Pas besoin de sac, merci.	봉투 괜찮아요, 감사합니다.
+out	Où sont les toilettes ?	où sont les toilettes	화장실 어디예요?	Pardon, où sont les toilettes ?	실례지만 화장실 어디예요?
+out	Où est la gare ?	où est la gare	역이 어디예요?	Où est la gare d'ici ?	여기서 역이 어디예요?
+out	Je suis perdu.	je suis perdu	길을 잃었어요	Désolé, je suis perdu.	죄송해요, 길을 잃었어요.	여자가 말하면 perdue예요.
+out	Allez tout droit.	tout droit	쭉 가세요	Allez tout droit puis tournez à droite.	쭉 가서 오른쪽으로 도세요.
+out	Tourne à droite.	à droite	오른쪽으로 돌아	Au coin, tourne à droite.	모퉁이에서 오른쪽으로 돌아.
+out	Tourne à gauche.	à gauche	왼쪽으로 돌아	Au feu, tourne à gauche.	신호등에서 왼쪽으로 돌아.
+out	C'est tout près.	tout près	아주 가까워요	C'est tout près de la gare.	역에서 아주 가까워요.
+out	C'est loin.	c'est loin	멀어요	À pied, c'est un peu loin.	걸어서 좀 멀어요.
+out	Une table pour deux.	table pour deux	두 명이에요	Une table pour deux, s'il vous plaît.	두 명 자리 부탁해요.
+out	J'ai réservé.	j'ai réservé	예약했어요	J'ai réservé pour dix-neuf heures.	19시에 예약했어요.
+out	La carte, s'il vous plaît.	la carte	메뉴판 주세요	La carte, s'il vous plaît.	메뉴판 주세요.
+out	Qu'est-ce que vous me conseillez ?	conseillez	추천 메뉴가 뭐예요?	Qu'est-ce que vous me conseillez ?	추천하는 게 뭐예요?
+out	L'addition, s'il vous plaît.	l'addition	계산해 주세요	L'addition, s'il vous plaît.	계산해 주세요.
+out	À emporter.	à emporter	포장이요	Deux cafés à emporter, s'il vous plaît.	커피 두 잔 포장해 주세요.
+out	Sur place.	sur place	여기서 먹을게요	C'est pour manger sur place.	여기서 먹을게요.
+out	Excusez-moi.	excusez-moi	저기요, 실례합니다	Excusez-moi, je peux commander ?	저기요, 주문해도 돼요?
+out	Il y a une table de libre ?	table de libre	빈 테이블 있어요?	Il y a une table de libre ?	빈 테이블 있어요?
+out	Il y a beaucoup de monde.	beaucoup de monde	사람 많다	Il y a beaucoup de monde aujourd'hui.	오늘 사람 많네.
+out	Le train a du retard.	du retard	열차가 늦어	Le train a du retard, je serai en retard.	열차가 늦어서 늦을 거야.
+out	changer de ligne	changer de ligne	환승하다	On doit changer de ligne à la prochaine.	다음 역에서 환승해야 해.
+out	le ticket	ticket	표	Je vais acheter un ticket.	표 사러 갈게.
+out	prendre un taxi	prendre un taxi	택시 타다	Il est tard, prenons un taxi.	늦었으니 택시 타자.
+out	Vous pouvez nous prendre en photo ?	prendre en photo	사진 좀 찍어 주실래요?	Excusez-moi, vous pouvez nous prendre en photo ?	실례지만 사진 좀 찍어 주실래요?
+out	On se prend en photo.	se prend en photo	같이 사진 찍자	On se prend en photo ici !	여기서 같이 사진 찍자!
+out	Je peux l'essayer ?	l'essayer	입어 봐도 돼요?	Je peux l'essayer ?	입어 봐도 돼요?
+out	Vous l'avez en plus grand ?	en plus grand	더 큰 사이즈 있어요?	Vous l'avez en plus grand ?	더 큰 사이즈 있어요?
+out	C'est pas cher.	pas cher	싸다	C'est pas cher du tout !	하나도 안 비싸!
+out	C'est cher.	c'est cher	비싸다	Je trouve ça un peu cher.	좀 비싼 것 같아.
+out	les soldes	les soldes	세일	Ce sont les soldes en ce moment.	지금 세일 기간이야.	프랑스는 겨울·여름에 정해진 기간에만 세일해요.
+out	C'est ouvert ?	c'est ouvert	열었어요?	C'est encore ouvert ?	아직 열었어요?
+out	C'est fermé.	c'est fermé	닫았어요	C'est déjà fermé.	벌써 닫았어요.
+out	Il y a du wifi ?	du wifi	와이파이 있어요?	Il y a du wifi ici ?	여기 와이파이 있어요?
+out	Je dois recharger mon téléphone.	recharger	폰 충전해야 해요	Je dois recharger mon téléphone.	폰 충전해야 해요.
+out	Comment on y va ?	comment on y va	어떻게 가요?	Comment on y va, là-bas ?	거기 어떻게 가요?
+feelings	Je suis heureux.	heureux	행복해	Je suis heureux de te voir.	널 봐서 행복해.
+feelings	Je suis triste.	je suis triste	슬퍼	Cette nouvelle me rend triste.	그 소식에 슬퍼.
+feelings	Je me sens seul.	je me sens seul	외로워	Je me sens seul ici.	여기선 외로워.
+feelings	J'ai peur.	j'ai peur	무서워	J'ai peur de ce film.	그 영화가 무서워.
+feelings	J'ai honte.	j'ai honte	부끄러워	J'ai honte de chanter devant tout le monde.	다들 앞에서 노래하기 부끄러워.
+feelings	Ça m'énerve.	ça m'énerve	짜증 나	Les embouteillages m'énervent.	교통 체증 짜증 나.
+feelings	Je stresse.	je stresse	긴장돼	Je stresse pour l'entretien.	면접 때문에 긴장돼.
+feelings	Ouf !	ouf	휴, 다행이다!	Ouf, tu vas bien !	휴, 너 괜찮구나!
+feelings	J'ai eu peur.	j'ai eu peur	깜짝 놀랐어	J'ai eu peur quand t'es arrivé.	네가 와서 깜짝 놀랐어.
+feelings	Je suis furieux.	furieux	화가 나	Je suis furieux de son attitude.	그 태도에 화가 나.
+feelings	Ça m'a ému.	ça m'a ému	감동받았어	Ce film m'a vraiment ému.	그 영화에 정말 감동받았어.
+feelings	Ça me rappelle des souvenirs.	des souvenirs	추억이 떠올라	Cette chanson me rappelle des souvenirs.	이 노래가 추억을 떠올리게 해.
+feelings	J'ai la flemme.	la flemme	귀찮아	J'ai la flemme de cuisiner aujourd'hui.	오늘 요리하기 귀찮아.
+feelings	Je m'ennuie.	je m'ennuie	지루해	Je m'ennuie dans ce cours.	이 수업 지루해.
+feelings	Je me sens bien avec toi.	je me sens bien	너랑 있으면 편해	Je me sens bien avec toi.	너랑 있으면 마음이 편해.
+feelings	J'ai trop envie de voyager.	envie de voyager	여행 너무 가고 싶어	J'ai trop envie de voyager.	여행이 너무 가고 싶어.
+feelings	Je me sens bizarre.	bizarre	기분이 이상해	Aujourd'hui, je me sens bizarre.	오늘 기분이 이상해.
+feelings	un ami	un ami	친구	J'ai croisé un ami du lycée.	고등학교 친구를 마주쳤어.
+feelings	mon meilleur ami	meilleur ami	절친	C'est ma meilleure amie.	그 애는 내 절친이야.
+feelings	mon copain	copain	남자친구	Tu as un copain ?	남자친구 있어?
+feelings	ma copine	copine	여자친구	Ma copine est très gentille.	내 여자친구는 정말 착해.
+feelings	la famille	la famille	가족	Je voyage avec ma famille.	가족이랑 여행 가.
+feelings	mes parents	mes parents	부모님	Je voudrais te présenter à mes parents.	너를 부모님께 소개하고 싶어.
+feelings	les frères et sœurs	frères et sœurs	형제자매	T'as des frères et sœurs ?	형제자매 있어?
+feelings	bien s'entendre	s'entendre	사이가 좋다	On s'entend très bien.	우리 사이 정말 좋아.
+feelings	une personne douce	personne douce	다정한 사람	C'est une personne très douce.	정말 다정한 사람이야.
+feelings	une personne drôle	personne drôle	재밌는 사람	T'es une personne drôle.	너 재밌는 사람이야.
+feelings	faire confiance	faire confiance	믿다	Je te fais confiance.	널 믿어.
+feelings	s'inquiéter	s'inquiéter	걱정하다	Ma mère s'inquiète pour toi.	엄마가 너를 걱정하셔.
+feelings	se disputer	se disputer	다투다	Hier, je me suis disputé avec un ami.	어제 친구랑 다퉜어.
+feelings	ne pas avoir le moral	le moral	기운이 없다	Aujourd'hui, t'as pas le moral.	오늘 기운 없어 보여.
+feelings	ne pas avoir la motivation	motivation	의욕이 없다	Le lundi, j'ai pas la motivation.	월요일엔 의욕이 없어.
+feelings	être de bonne humeur	bonne humeur	기분이 좋다	Aujourd'hui, je suis de bonne humeur !	오늘 기분 좋아!
+feelings	être de mauvaise humeur	mauvaise humeur	기분이 나쁘다	Aujourd'hui, je suis de mauvaise humeur.	오늘 기분이 안 좋아.
+feelings	pleurer	pleurer	울다	J'ai pleuré en regardant ce film.	영화 보다가 울었어.
+plans	la prochaine fois	prochaine fois	다음에	La prochaine fois, on y va ensemble.	다음엔 같이 가자.
+plans	demain	demain	내일	On se voit demain ?	내일 만날까?
+plans	après-demain	après-demain	모레	Et après-demain ?	모레는 어때?
+plans	la semaine prochaine	semaine prochaine	다음 주	T'es libre la semaine prochaine ?	다음 주에 시간 돼?
+plans	ce week-end	ce week-end	이번 주말	Tu fais quoi ce week-end ?	이번 주말에 뭐 해?
+plans	le mois prochain	mois prochain	다음 달	Le mois prochain, je vais en Corée.	다음 달에 한국 가.
+plans	T'as des projets ?	des projets	약속 있어?	T'as des projets vendredi ?	금요일에 약속 있어?
+plans	Je suis libre.	je suis libre	시간 돼	Ce jour-là, je suis libre.	그날은 시간 돼.
+plans	Je crois que je peux pas.	je peux pas	못 할 것 같아	Désolé, je crois que je peux pas ce jour-là.	미안, 그날은 못 할 것 같아.
+plans	À quelle heure ?	à quelle heure	몇 시에?	À quelle heure on se retrouve ?	몇 시에 만날까?
+plans	À la gare.	à la gare	역에서	Je t'attends à la gare.	역에서 기다릴게.
+plans	Je vais être en retard.	en retard	늦을 거야	Désolé, je vais avoir cinq minutes de retard.	미안, 5분 늦을 거야.
+plans	J'y serai à l'heure.	à l'heure	제시간에 갈게	Si je me dépêche, j'y serai à l'heure.	서두르면 제시간에 가.
+plans	annuler	annuler	취소하다	J'ai annulé la réservation.	예약 취소했어.
+plans	J'ai trop hâte.	trop hâte	너무 기대돼	J'ai trop hâte pour le voyage de la semaine prochaine.	다음 주 여행이 너무 기대돼.
+plans	partir en voyage	partir en voyage	여행 가다	Partons en voyage pendant les vacances.	방학에 여행 가자.
+plans	On y va ensemble.	on y va ensemble	같이 가자	On y va ensemble à la fête !	같이 파티 가자!
+plans	T'as décidé ?	t'as décidé	정했어?	T'as décidé où aller ?	어디 갈지 정했어?
+plans	J'ai pas encore décidé.	pas encore décidé	아직 안 정했어	J'ai pas encore décidé.	아직 안 정했어.
+plans	Je vais y réfléchir.	y réfléchir	생각해 볼게	Mmm, je vais y réfléchir.	음, 생각해 볼게.
+plans	Quand tu veux.	quand tu veux	언제든 좋아	Quand tu veux, je m'adapte.	언제든 좋아, 맞출게.
+plans	Une autre fois.	une autre fois	다음에 하자	Pas aujourd'hui, une autre fois.	오늘은 안 돼, 다음에 하자.
+plans	Je te tiens au courant.	au courant	알려 줄게	Quand je sais l'heure, je te tiens au courant.	시간 알면 알려 줄게.
+plans	l'anniversaire	anniversaire	생일, 기념일	C'est quand, ton anniversaire ?	생일이 언제야?
+plans	fêter	fêter	축하하다	On va fêter ta réussite !	합격 축하하자!
+plans	le cadeau	cadeau	선물	Tu veux quel cadeau pour ton anniversaire ?	생일 선물 뭐 받고 싶어?
+plans	les vacances	vacances	휴가	Tu pars où en vacances ?	휴가 때 어디 가?
+plans	Noël	noël	크리스마스	À Noël, on est en famille.	크리스마스엔 가족이랑 있어.
+plans	le Nouvel An	nouvel an	새해	Pour le Nouvel An, on fait la fête.	새해 전야에 파티를 해.
+plans	Vers quelle heure ?	vers quelle heure	몇 시쯤?	Vers quelle heure tu arrives ?	몇 시쯤 도착해?
+plans	J'arrive bientôt.	j'arrive bientôt	곧 도착해	Je viens de partir, j'arrive bientôt.	방금 출발했어, 곧 도착해.
+plans	Je vais un peu tarder.	tarder	좀 늦을 거야	Je vais un peu tarder à cause du boulot.	일 때문에 좀 늦을 거야.
+plans	Vas-y en premier.	vas-y en premier	먼저 가 있어	Vas-y en premier, j'arrive.	먼저 가 있어, 곧 갈게.
+plans	Viens me chercher.	viens me chercher	데리러 와	Viens me chercher à la gare.	역으로 데리러 와.
+plans	rester dormir	rester dormir	자고 가다	Tu restes dormir ce soir ?	오늘 자고 갈래?
+plans	faire un programme	faire un programme	계획을 세우다	Faisons un programme pour le voyage.	여행 계획 세우자.
+plans	T'es prêt ?	t'es prêt	준비됐어?	T'es prêt ? On y va.	준비됐어? 나가자.
+connect	mais	mais	하지만	Je veux y aller, mais j'ai pas le temps.	가고 싶은데 시간이 없어.
+connect	donc	donc	그래서	Il pleut, donc je reste à la maison.	비가 와서 집에 있어.
+connect	alors	alors	그러면	Alors, qu'est-ce qui s'est passé ?	그래서 무슨 일이 있었어?
+connect	au fait	au fait	그런데, 참	Au fait, t'es libre demain ?	참, 내일 시간 돼?
+connect	par exemple	par exemple	예를 들어	Par exemple, quels films tu aimes ?	예를 들어 어떤 영화 좋아해?
+connect	c'est-à-dire	c'est-à-dire	그러니까	C'est-à-dire que tu viens pas ?	그러니까 안 온다는 거야?
+connect	en fait	en fait	사실은	En fait, j'ai quelque chose à te dire.	사실 할 말이 있어.
+connect	finalement	finalement	결국	Finalement, je suis resté à la maison.	결국 집에 있었어.
+connect	d'abord	d'abord	먼저	D'abord, mangeons quelque chose.	먼저 뭐 좀 먹자.
+connect	ensuite	ensuite	그다음에	Ensuite, on a vu un film.	그다음에 영화 봤어.
+connect	en plus	en plus	게다가	C'est pas cher et en plus c'est bon.	싸고 게다가 맛있어.
+connect	pourtant	pourtant	그런데도	Je suis fatigué, pourtant je viens.	피곤한데도 갈게.
+connect	de toute façon	de toute façon	어쨌든	De toute façon, on en parle demain.	어쨌든 내일 얘기하자.
+connect	franchement	franchement	솔직히	Franchement, je suis un peu fatigué.	솔직히 좀 피곤해.
+connect	peut-être	peut-être	아마도	C'est peut-être rien.	아마 별일 아닐 거야.
+connect	sûrement	sûrement	분명히	Ça va sûrement bien se passer.	분명 잘될 거야.
+connect	si	si	만약	Si t'as le temps, appelle-moi.	시간 되면 전화해.
+connect	même si	même si	비록 ~이라도	Même si je suis fatigué, je me suis amusé.	피곤했지만 즐거웠어.
+connect	parce que	parce que	왜냐하면	J'ai dormi parce que j'étais fatigué.	피곤해서 잤어.
+connect	quand	quand	~할 때	Appelle-moi quand t'arrives.	도착하면 전화해.
+connect	pendant que	pendant que	~하는 동안	J'écoute de la musique pendant que j'étudie.	공부하는 동안 음악 들어.
+connect	depuis	depuis	~부터	Je t'attends depuis six heures.	6시부터 기다렸어.
+connect	jusqu'à	jusqu'à	~까지	J'étudie jusqu'à minuit.	자정까지 공부해.
+connect	tout à coup	tout à coup	갑자기	Tout à coup, il s'est mis à pleuvoir.	갑자기 비가 오기 시작했어.
+connect	tout de suite	tout de suite	바로	Je te réponds tout de suite.	바로 답할게.
+connect	petit à petit	petit à petit	조금씩	Petit à petit, mon français progresse.	조금씩 프랑스어가 늘고 있어.
+connect	enfin	enfin	드디어	Enfin, on se voit !	드디어 만나네!
+connect	encore	encore	아직, 또	T'as encore pas dormi ?	아직 안 잤어?
+connect	déjà	déjà	이미, 벌써	Je suis déjà arrivé.	이미 도착했어.
+connect	à l'instant	à l'instant	방금	Je viens de rentrer à l'instant.	방금 집에 왔어.
+connect	presque toujours	presque toujours	거의 항상	J'y vais presque toujours à pied.	거의 항상 걸어서 가.
+connect	souvent	souvent	자주	Je vais souvent dans ce magasin.	그 가게에 자주 가.
+connect	jamais	jamais	한 번도 ~ 않다	Je bois jamais d'alcool.	난 술을 전혀 안 마셔.
+connect	presque	presque	거의	On est presque arrivés.	우리 거의 다 왔어.
+connect	surtout	surtout	특히	J'aime surtout cet endroit.	난 특히 이곳이 좋아.
+connect	un peu	un peu	조금	Je suis un peu fatigué.	조금 피곤해.
+connect	très	très	매우	Je suis très content.	나 정말 기뻐.
+connect	tellement	tellement	너무	T'es tellement gentil.	너 너무 착해.
+connect	environ	environ	대략	Il est environ cinq heures.	대략 5시야.
+connect	il y a un moment	il y a un moment	좀 전에	Je suis arrivé il y a un moment.	좀 전에 도착했어.
+connect	du coup	du coup	그래서, 결국	Du coup, on fait quoi ?	그래서 우리 뭐 해?	일상 대화에서 아주 자주 써요.
+connect	genre	genre	뭐랄까, ~같은	C'est genre trop bien.	뭐랄까 너무 좋아.
+trouble	J'ai perdu mon téléphone.	perdu mon téléphone	폰 잃어버렸어	Oh non, j'ai perdu mon téléphone !	아 안 돼, 폰 잃어버렸어!
+trouble	J'ai oublié mon portefeuille.	portefeuille	지갑 두고 왔어	J'ai oublié mon portefeuille chez moi.	지갑을 집에 두고 왔어.
+trouble	J'ai plus de batterie.	plus de batterie	배터리가 없어	J'ai presque plus de batterie.	배터리가 거의 없어.
+trouble	J'ai raté le dernier métro.	dernier métro	막차 놓쳤어	J'ai raté le dernier métro.	막차 놓쳤어.
+trouble	Il y a des embouteillages.	embouteillages	차가 막혀	Il y a des embouteillages, je vais être en retard.	차가 막혀서 늦을 거야.
+trouble	Je suis enrhumé.	enrhumé	감기 걸렸어	Je suis enrhumé.	감기 걸렸어.
+trouble	J'ai de la fièvre.	de la fièvre	열나	J'ai un peu de fièvre.	열이 좀 있어.
+trouble	J'ai mal à la tête.	mal à la tête	머리 아파	J'ai mal à la tête depuis ce matin.	아침부터 머리 아파.
+trouble	J'ai mal au ventre.	mal au ventre	배 아파	J'ai mal au ventre, je peux pas bouger.	배 아파서 못 움직이겠어.
+trouble	aller chez le médecin	chez le médecin	병원 가다	Tu devrais aller chez le médecin.	병원 가 보는 게 좋겠어.
+trouble	prendre des médicaments	médicaments	약 먹다	Prends tes médicaments et dors.	약 먹고 자.
+trouble	C'est cassé.	c'est cassé	고장 났어	Mes écouteurs sont cassés.	이어폰 고장 났어.
+trouble	Ça marche pas.	ça marche pas	작동 안 해	L'ordinateur marche pas.	컴퓨터가 안 돼.
+trouble	J'ai plus d'internet.	plus d'internet	인터넷이 안 돼	À la maison, j'ai plus d'internet.	집에 인터넷이 안 돼.
+trouble	J'ai oublié le mot de passe.	mot de passe	비밀번호 잊어버렸어	J'ai oublié le mot de passe.	비밀번호 까먹었어.
+trouble	Je me suis trompé.	trompé	잘못했어, 틀렸어	Pardon, je me suis trompé de lieu.	미안, 장소를 잘못 알았어.
+trouble	Je sais pas.	je sais pas	몰라	Je sais pas quoi faire.	어떻게 해야 할지 모르겠어.
+trouble	Aide-moi.	aide-moi	도와줘	Tu m'aides deux minutes ?	잠깐 도와줄래?
+trouble	Au secours !	au secours	도와주세요!	Au secours, il y a un insecte !	도와줘, 벌레 있어!
+trouble	Je suis dans le pétrin.	dans le pétrin	곤경에 처했어	Je suis dans le pétrin, j'ai besoin d'aide.	곤경에 처했어, 도움이 필요해.
+trouble	Qu'est-ce que je fais ?	qu'est-ce que je fais	어떡하지?	Qu'est-ce que je fais ? Je suis en retard !	어떡하지? 늦겠어!
+trouble	Oh non !	oh non	아 안 돼!	Oh non, ça fuit !	아 안 돼, 물이 새!
+trouble	Dépêche-toi !	dépêche-toi	서둘러!	Dépêche-toi, ça commence !	서둘러, 시작해!
+trouble	J'ai perdu mes clés.	mes clés	열쇠 잃어버렸어	J'ai perdu mes clés de maison.	집 열쇠 잃어버렸어.
+trouble	T'as rien oublié ?	rien oublié	두고 온 거 없어?	T'as rien oublié ?	두고 온 거 없어?
+trouble	J'ai renversé mon café.	renversé	커피 쏟았어	J'ai renversé mon café.	커피 쏟았어.
+trouble	Je me suis fait mal.	je me suis fait mal	다쳤어	Je suis tombé et je me suis fait mal.	넘어져서 다쳤어.
+trouble	Il y a eu un accident.	un accident	사고가 났어	Il y a eu un accident, le métro est arrêté.	사고로 지하철이 멈췄어.
+trouble	T'as un chargeur ?	chargeur	충전기 있어?	T'as un chargeur ?	충전기 있어?
+trouble	Il répond pas.	répond pas	답이 없어	Il répond pas à mes messages.	그가 메시지에 답이 없어.
+trouble	Il m'a laissé en vu.	en vu	읽씹했어	Il m'a laissé en vu encore une fois.	또 읽씹했어.
+trouble	J'ai pas assez d'argent.	pas assez d'argent	돈이 모자라	Je crois que j'ai pas assez d'argent.	돈이 모자랄 것 같아.
+trouble	J'arrive pas à dormir.	arrive pas à dormir	잠이 안 와	Hier soir, j'arrivais pas à dormir.	어젯밤 잠이 안 왔어.
+trouble	On se comprend pas.	se comprend pas	말이 안 통해	On se comprend pas à cause de la langue.	언어 때문에 말이 안 통해.
+trouble	Calme-toi.	calme-toi	진정해	Calme-toi, tout va bien.	진정해, 다 괜찮아.
+trouble	Ça va s'arranger.	s'arranger	다 잘될 거야	Inquiète-toi pas, ça va s'arranger.	걱정 마, 다 잘될 거야.
+trouble	Tant pis.	tant pis	어쩔 수 없지	Il pleut, tant pis.	비 오니까 어쩔 수 없지.
+trouble	Zut !	zut	아차!	Zut ! J'ai oublié les devoirs.	아차, 숙제 깜빡했어!
+reply	Oui.	oui	응, 네	Oui, bien sûr.	응, 물론이지.
+reply	Non.	non	아니	Non, y'a pas de souci.	아니, 괜찮아.
+reply	Bien sûr.	bien sûr	물론이지	Bien sûr, je viens avec toi.	물론이지, 같이 갈게.
+reply	Exactement.	exactement	맞아	Exactement, c'est ça.	맞아, 바로 그거야.
+reply	Ah bon ?	ah bon	아, 그래?	Ah bon ? Je savais pas.	아, 그래? 몰랐어.
+reply	T'as raison.	t'as raison	네 말이 맞아	T'as raison, c'est mieux comme ça.	네 말이 맞아, 이게 낫다.
+reply	C'est super.	c'est super	잘됐다	T'as réussi ? C'est super.	합격했어? 잘됐다.
+reply	C'est dingue !	c'est dingue	미쳤다, 믿기지 않아!	C'est dingue, on a réussi !	믿기지 않아, 우리가 해냈어!
+reply	Tu as de la chance.	de la chance	운이 좋네, 부럽다	Tu pars à la plage ? Tu as de la chance.	바닷가 가? 부럽다.
+reply	Évidemment.	évidemment	당연하지	Évidemment, j'irai.	당연하지, 갈게.
+reply	Euh...	euh	음…	Euh... laisse-moi réfléchir.	음… 생각 좀 해 볼게.
+reply	Bof.	bof	그저 그래	Le film ? Bof.	그 영화? 그저 그래.
+reply	Ça m'est égal.	m'est égal	난 상관없어	Ça m'est égal, choisis toi.	난 상관없어, 네가 골라.
+reply	Tu crois ?	tu crois	그렇게 생각해?	Tu crois ? Moi je trouve ça normal.	그렇게 생각해? 난 평범한 것 같은데.
+reply	Pas vraiment.	pas vraiment	그다지	Pas vraiment, il me reste du chemin.	그다지, 아직 멀었어.	칭찬받았을 때 겸손하게 받는 말이에요.
+reply	Tu me sauves.	tu me sauves	살았어, 고마워	Merci, tu me sauves la vie.	고마워, 네가 날 살렸어.
+reply	S'il te plaît.	s'il te plaît	제발	S'il te plaît, juste une fois.	제발, 한 번만.
+reply	Je peux ?	je peux	해도 돼?	Je peux prendre ça ?	이거 가져가도 돼?
+reply	Vas-y.	vas-y	해, 그래	Vas-y, assieds-toi.	앉아.
+reply	Ne t'inquiète pas.	t'inquiète pas	걱정 마	T'inquiète pas, je vais bien.	걱정 마, 난 괜찮아.
+reply	Quel bonheur !	quel bonheur	기쁘다!	T'es bien arrivé ? Quel bonheur !	잘 도착했어? 기쁘다!
+reply	Dommage.	dommage	아쉽다	Tu peux pas venir ? Dommage.	못 와? 아쉽다.
+reply	Bien joué !	bien joué	잘했어!	Première place ? Bien joué !	1등? 잘했어!
+reply	Ah, d'accord.	ah d'accord	아, 그렇구나	Ah, d'accord, alors oui.	아, 그렇구나, 그럼 좋아.
+reply	Mmh.	mmh	음~	Mmh, ça se peut.	음~ 그럴 수도 있겠네.
+reply	Trop bien !	trop bien	너무 좋다!	Ta maison est trop bien !	너네 집 너무 좋다!
+reply	Félicitations !	félicitations	축하해!	Félicitations pour ton boulot !	취직 축하해!
+reply	Je sais pas.	je sais pas	글쎄	Je sais pas si je peux venir.	갈 수 있을지 글쎄.
+reply	Je sais !	je sais	알아!	Je sais ! Je connais ce magasin !	알아! 그 가게 알아!
+reply	Je le savais pas.	le savais pas	몰랐어	Ça, je le savais pas.	그건 몰랐어.
+reply	Ça marche.	ça marche	좋아, 그래	Ça marche, à ce soir.	좋아, 이따 저녁에 봐.
+reply	Comme tu veux.	comme tu veux	네 말대로 할게	Comme tu veux, je te suis.	네 말대로 할게, 따라갈게.
+reply	Tant pis.	tant pis	어쩔 수 없지	C'est annulé, tant pis.	취소됐네, 어쩔 수 없지.
+reply	Moi aussi.	moi aussi	나도	Moi aussi, j'aime ça.	나도 좋아해.
+reply	Carrément !	carrément	완전, 물론!	T'as aimé ? Carrément !	좋았어? 완전!
+polite	Enchanté de faire votre connaissance.	faire votre connaissance	처음 뵙겠습니다	Enchanté de faire votre connaissance, madame.	처음 뵙겠습니다, 부인.
+polite	Avec plaisir.	avec plaisir	기꺼이요	Voulez-vous un café ? Avec plaisir.	커피 드시겠어요? 기꺼이요.
+polite	Excusez-moi de vous déranger.	vous déranger	방해해서 죄송합니다	Excusez-moi de vous déranger.	방해해서 죄송합니다.
+polite	Merci beaucoup.	merci beaucoup	정말 감사합니다	Merci beaucoup pour votre aide.	도와주셔서 정말 감사합니다.
+polite	Je suis désolé.	je suis désolé	죄송합니다	Je suis désolé pour le retard.	늦어서 죄송합니다.
+polite	Pardonnez-moi.	pardonnez-moi	용서해 주세요	Pardonnez-moi, vous pouvez m'aider ?	죄송한데 도와주실 수 있나요?
+polite	Ça fait longtemps.	ça fait longtemps	오랜만입니다	Ça fait longtemps, comment allez-vous ?	오랜만이에요, 어떻게 지내세요?
+polite	Comment allez-vous ?	comment allez-vous	어떻게 지내세요?	Comment allez-vous, madame ?	어떻게 지내세요, 부인?	vous는 존칭이에요. 친구끼리는 tu를 써요.
+polite	Très bien, merci.	très bien merci	아주 잘 지내요, 고마워요	Très bien, merci, et vous ?	아주 잘 지내요, 당신은요?
+polite	Bon appétit à tous.	à tous	모두 맛있게 드세요	Bon appétit à tous !	모두 맛있게 드세요!
+polite	Un petit cadeau pour vous.	petit cadeau	작은 선물이에요	Un petit cadeau pour vous.	작은 선물이에요.	선물을 건넬 때 하는 겸손한 말이에요.
+polite	Je vous remercie.	je vous remercie	감사드립니다	Je vous remercie de tout cœur.	진심으로 감사드립니다.
+polite	Avec mes remerciements.	remerciements	감사의 마음으로	Avec mes remerciements les plus sincères.	진심 어린 감사를 담아.
+polite	C'était délicieux.	c'était délicieux	정말 맛있었어요	C'était délicieux, merci beaucoup.	정말 맛있었어요, 감사합니다.
+polite	Après vous.	après vous	먼저 하세요	Après vous, je vous en prie.	먼저 하세요.
+polite	Un instant, s'il vous plaît.	un instant s'il vous plaît	잠시만 기다려 주세요	Un instant, s'il vous plaît.	잠시만 기다려 주세요.
+polite	Pouvez-vous répéter ?	pouvez-vous répéter	다시 말씀해 주시겠어요?	Pardon, pouvez-vous répéter ?	죄송하지만 다시 말씀해 주시겠어요?
+polite	Pouvez-vous parler plus lentement ?	plus lentement	천천히 말씀해 주시겠어요?	Pouvez-vous parler plus lentement ?	천천히 말씀해 주시겠어요?
+polite	Non, merci.	non merci	괜찮습니다	Non, merci, ça va.	괜찮아요, 감사합니다.
+polite	Je vous en prie.	je vous en prie	천만에요, 먼저 하세요	Merci. — Je vous en prie.	고맙습니다. — 천만에요.
+polite	Vous aussi.	vous aussi	당신도요	Bonne journée. — Vous aussi.	좋은 하루 보내세요. — 당신도요.
+polite	Désolé du retard.	du retard	늦어서 죄송합니다	Désolé du retard.	늦어서 죄송합니다.
+polite	Asseyez-vous, je vous prie.	asseyez-vous	앉으세요	Asseyez-vous, je vous prie.	앉으세요.
+polite	Comment vous appelez-vous ?	vous appelez-vous	성함이 어떻게 되세요?	Comment vous appelez-vous ?	성함이 어떻게 되세요?
+polite	monsieur	monsieur	~씨, 선생님 (남성)	Bonjour, monsieur Martin.	마르탱 씨, 안녕하세요.
+polite	madame	madame	~씨, 부인	Bonsoir, madame Dupont.	뒤퐁 부인, 안녕하세요.
+polite	vous	vous	당신 (존칭)	Vous avez besoin de quelque chose ?	필요한 거 있으세요?
+polite	tutoyer	tutoyer	반말하다 (tu로 말하다)	On peut se tutoyer ?	우리 말 편하게 해도 될까요?	프랑스에서는 이 말을 먼저 꺼내는 게 자연스러워요.
+polite	Joyeux anniversaire !	joyeux anniversaire	생일 축하해요!	Joyeux anniversaire, mamie !	할머니, 생신 축하드려요!
+polite	Félicitations pour votre mariage !	votre mariage	결혼 축하드립니다	Félicitations pour votre mariage !	결혼 축하드립니다!
+polite	Bonne année !	bonne année	새해 복 많이 받으세요	Bonne année à tous !	모두 새해 복 많이 받으세요!
+polite	Joyeux Noël !	joyeux noël	메리 크리스마스!	Joyeux Noël, la famille !	가족 여러분, 메리 크리스마스!
+polite	Bon rétablissement.	rétablissement	빨리 나으세요	Je vous souhaite un bon rétablissement.	빨리 쾌차하시길 바랍니다.
+polite	Prenez soin de vous.	prenez soin de vous	건강 조심하세요	Prenez soin de vous, il fait froid.	추우니 건강 조심하세요.
+polite	Bon voyage !	bon voyage	즐거운 여행 되세요	Bon voyage, prévenez-moi à l'arrivée.	즐거운 여행 되세요, 도착하면 알려 주세요.
+polite	Bonne continuation.	bonne continuation	앞으로도 잘 되길 바라요	Bonne continuation pour la suite !	앞으로도 잘 되길 바랍니다!
+polite	Bienvenue.	bienvenue	어서 오세요	Bienvenue, vous êtes combien ?	어서 오세요, 몇 분이세요?
+polite	Entrez, je vous en prie.	entrez	들어오세요	Entrez, je vous en prie, faites comme chez vous.	들어오세요, 편하게 계세요.
+polite	C'est un honneur.	un honneur	영광입니다	C'est un honneur de vous rencontrer.	뵙게 되어 영광입니다.
+idioms	faire d'une pierre deux coups	deux coups	일석이조	Marcher et faire les courses : deux coups d'un seul.	걸으면서 장보기, 일석이조야.
+idioms	avoir la tête dans les nuages	dans les nuages	멍하니 있다	Aujourd'hui, t'as la tête dans les nuages.	너 오늘 멍하네.
+idioms	C'est du gâteau.	du gâteau	식은 죽 먹기야	Cet examen, c'était du gâteau.	그 시험은 식은 죽 먹기였어.
+idioms	coûter les yeux de la tête	yeux de la tête	엄청 비싸다	Ce sac coûte les yeux de la tête.	그 가방 엄청 비싸.
+idioms	jeter l'argent par les fenêtres	par les fenêtres	돈을 낭비하다	Il jette l'argent par les fenêtres.	그는 돈을 낭비해.
+idioms	mettre dans le mille	dans le mille	정확히 맞히다	Tu as mis dans le mille !	정확히 맞혔어!
+idioms	être crevé	crevé	녹초다	Je suis crevé après le boulot.	일하고 나서 녹초야.
+idioms	être comme un poisson dans l'eau	poisson dans l'eau	물 만난 고기 같다	Ici, je suis comme un poisson dans l'eau.	여기선 물 만난 고기 같아.
+idioms	ne pas avoir la langue dans sa poche	langue dans sa poche	거침없이 말하다	Elle a pas la langue dans sa poche.	그 애는 말을 거침없이 해.
+idioms	être bavard comme une pie	bavard comme une pie	수다쟁이다	Ma sœur est bavarde comme une pie.	내 여동생은 수다쟁이야.
+idioms	faire une gaffe	gaffe	실수하다	J'ai fait une gaffe avec cette remarque.	그 말로 실수했어.
+idioms	se bouger	se bouger	서두르다, 움직이다	Allez, bouge-toi un peu !	자, 좀 서둘러!
+idioms	être fauché	fauché	돈이 없다	Je suis fauché ce mois-ci.	이번 달엔 돈이 없어.
+idioms	être comme les deux doigts de la main	deux doigts de la main	아주 친하다	On est comme les deux doigts de la main.	우리는 아주 친해.
+idioms	se moquer de quelqu'un	se moquer	놀리다	Arrête de te moquer de moi.	날 놀리지 마.
+idioms	donner un coup de main	coup de main	돕다	Tu me donnes un coup de main ?	나 좀 도와줄래?
+idioms	dormir comme un bébé	comme un bébé	곤히 자다	Hier, j'ai dormi comme un bébé.	어제 푹 잤어.
+idioms	avoir l'eau à la bouche	l'eau à la bouche	군침이 돌다	Ça me met l'eau à la bouche.	군침이 돌아.
+idioms	fermer les yeux sur	fermer les yeux	눈감아 주다	Il a fermé les yeux sur ça.	그는 그걸 눈감아 줬어.
+idioms	devenir rouge comme une tomate	rouge comme une tomate	얼굴이 새빨개지다	Je suis devenu rouge comme une tomate.	얼굴이 새빨개졌어.
+idioms	être d'accord	d'accord	동의하다	Je suis d'accord avec toi.	네 말에 동의해.
+idioms	avoir la pêche	la pêche	기운이 넘치다	Aujourd'hui, j'ai la pêche !	오늘 기운이 넘쳐!
+idioms	avoir le cafard	le cafard	우울하다	J'ai le cafard ce soir.	오늘 밤 우울해.
+idioms	se régaler	se régaler	맛있게 즐기다	On s'est régalés au restaurant.	식당에서 맛있게 먹었어.
+idioms	être surpris	surpris	놀라다	J'ai été surpris de te voir.	널 보고 놀랐어.
+idioms	avoir un coup de cœur	coup de cœur	한눈에 반하다	J'ai eu un coup de cœur pour cette ville.	이 도시에 한눈에 반했어.
+idioms	taper dans l'œil	taper dans l'œil	눈에 쏙 들어오다	Cette robe m'a tapé dans l'œil.	그 원피스가 눈에 쏙 들어왔어.
+idioms	manquer à quelqu'un	manquer	그리워지다	Tu me manques beaucoup.	네가 많이 보고 싶어.
+idioms	avoir envie de	avoir envie de	~하고 싶다	J'ai envie de manger une pizza.	피자 먹고 싶어.
+idioms	ça ne fait rien	ça ne fait rien	상관없다	Ça ne fait rien, où qu'on aille.	어디 가든 상관없어.
+idioms	valoir le coup	valoir le coup	가치가 있다	Ce film vaut le coup.	이 영화 볼 만해.
+idioms	en avoir marre	en avoir marre	지겹다	J'en ai marre de cette pluie.	이 비에 지쳤어.
+idioms	avoir de la chance	avoir de la chance	운이 좋다	J'ai eu de la chance aujourd'hui.	오늘 운이 좋았어.
+idioms	aucune idée	aucune idée	전혀 모르겠다	Aucune idée de où c'est.	어디인지 전혀 몰라.
+idioms	quel bazar	quel bazar	얼마나 엉망이야	Quel bazar dans cette chambre !	이 방 정말 엉망이야!
+idioms	avoir honte	avoir honte	부끄럽다	J'ai honte de lui demander de l'aide.	도움을 청하기가 부끄러워.
+idioms	être à jour	à jour	최신 상태다	Je suis à jour dans mes études.	공부는 밀리지 않았어.
+idioms	sans raison	sans raison	아무 이유 없이	Il s'est fâché sans raison.	이유 없이 화를 냈어.
+idioms	du fond du cœur	fond du cœur	진심으로	Je te le dis du fond du cœur.	진심으로 말하는 거야.
+idioms	à la lettre	à la lettre	글자 그대로	Suis les instructions à la lettre.	설명서를 그대로 따라 해.
+idioms	l'amour fou	amour fou	열렬한 사랑	C'est l'amour fou entre eux.	둘은 열렬히 사랑해.
+idioms	un petit coin de paradis	coin de paradis	천국 같은 곳	Cet endroit, c'est un petit coin de paradis.	여기는 천국 같은 곳이야.

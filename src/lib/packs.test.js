@@ -1,28 +1,68 @@
 import { describe, expect, it } from 'vitest'
-import { MOODS } from './moods'
-import { chunks, frequencyLevel, isSaved, loadPackData, peekPackData, tatoebaUrl, toEntry, todayItem } from './packs'
+import { MOOD_LANGS, MOODS, moodExample, moodWord } from './moods'
+import { chunks, frequencyLevel, hasPackData, isSaved, loadPackData, peekPackData, tatoebaUrl, toEntry, todayItem } from './packs'
 
 const expressions = await loadPackData('expressions')
 const words = await loadPackData('words')
 
 describe('표현 꾸러미 데이터', () => {
-  it('꾸러미 10개, 표현 400개, id가 겹치지 않는다', () => {
-    expect(expressions.groups).toHaveLength(10)
-    expect(expressions.items).toHaveLength(400)
-    expect(new Set(expressions.items.map((item) => item.id)).size).toBe(400)
-    for (const group of expressions.groups) expect(group.items).toHaveLength(40)
+  const TALK = ['love', 'miss', 'text', 'chat', 'tease', 'date', 'call', 'fight', 'care', 'react', 'culture']
+
+  it('연인·친구 대화 꾸러미 11개가 앞에 오고, 처음 만든 일상 꾸러미 10개(400개)가 뒤에 있다', () => {
+    expect(expressions.groups.map((group) => group.id).slice(0, TALK.length)).toEqual(TALK)
+    const base = expressions.groups.slice(TALK.length)
+    expect(base).toHaveLength(10)
+    for (const group of base) expect(group.items).toHaveLength(40)
+    const talk = expressions.groups.slice(0, TALK.length).flatMap((group) => group.items)
+    expect(talk.length).toBeGreaterThanOrEqual(180)
+    expect(new Set(expressions.items.map((item) => item.id)).size).toBe(expressions.items.length)
   })
 
-  it('모든 표현에 뜻, 예문, 예문 해석, 말뭉치 빈도가 있다', () => {
+  it('모든 표현에 뜻, 예문, 예문 해석이 있고, 빈도는 Tatoeba에 5문장 이상 나온 것에만 붙는다', () => {
     for (const item of expressions.items) {
-      expect(item.text && item.meaning && item.example && item.exampleKo).toBeTruthy()
-      expect(item.sentences).toBeGreaterThanOrEqual(5)
+      expect(item.text && item.meaning && item.example && item.exampleKo, item.id).toBeTruthy()
+      if (item.sentences !== undefined) expect(item.sentences, item.id).toBeGreaterThanOrEqual(5)
     }
+    // 처음 만든 일상 표현 400개는 모두 빈도가 있다
+    const base = expressions.items.filter((item) => !TALK.includes(item.group))
+    expect(base.every((item) => item.perMillion !== undefined)).toBe(true)
+  })
+
+  it('대화 꾸러미 예문은 나나 너의 말이고, 메시지 줄임말은 메시지 말로 표시된다', () => {
+    const talk = expressions.items.filter((item) => TALK.includes(item.group))
+    const personal = talk.filter((item) => /\b(i|i'm|i've|i'll|me|my|we|our|us|you|your|you're|let's)\b/i.test(item.example))
+    expect(personal.length / talk.length).toBeGreaterThan(0.75)
+    expect(expressions.items.filter((item) => item.group === 'text').every((item) => item.texting)).toBe(true)
   })
 
   it('같은 표현이 두 번 들어 있지 않다', () => {
     const texts = expressions.items.map((item) => item.text.toLowerCase().replace(/[.!?,]/g, ''))
     expect(new Set(texts).size).toBe(texts.length)
+  })
+})
+
+describe('다른 언어 꾸러미(일본어, 중국어, 스페인어, 프랑스어, 한국어)', () => {
+  const TALK = ['love', 'miss', 'text', 'chat', 'tease', 'date', 'call', 'fight', 'care', 'react', 'culture']
+  const STARTERS = ['miss-01', 'chat-02', 'chat-01', 'text-01', 'love-10', 'miss-03']
+
+  for (const lang of ['ja', 'zh', 'es', 'fr', 'ko']) {
+    it(`${lang}: 연인·친구 대화 11개 꾸러미, 180개 이상, 언어 앞글자가 붙은 번호, 빠진 칸 없음`, async () => {
+      expect(hasPackData('expressions', lang)).toBe(true)
+      const data = await loadPackData('expressions', lang)
+      expect(data.groups.map((group) => group.id).slice(0, TALK.length)).toEqual(TALK)
+      expect(data.items.length).toBeGreaterThanOrEqual(180)
+      expect(new Set(data.items.map((item) => item.id)).size).toBe(data.items.length)
+      for (const item of data.items) {
+        expect(item.id.startsWith(`${lang}-`), item.id).toBe(true)
+        expect(item.text && item.meaning && item.example && item.exampleKo, item.id).toBeTruthy()
+      }
+      // 첫 실행 안내에서 고르는 번호(영어와 같은 뜻)가 다 있다
+      for (const id of STARTERS) expect(data.items.some((item) => item.id === `${lang}-${id}`), id).toBe(true)
+    })
+  }
+
+  it('아직 없는 꾸러미는 없다고 알려 준다', () => {
+    expect(hasPackData('words', 'xx')).toBe(false)
   })
 })
 
@@ -119,12 +159,20 @@ describe('앱 성격에 맞는 콘텐츠', () => {
 })
 
 describe('오늘의 기분', () => {
-  it('기분 낱말은 모두 단어 꾸러미에 있는 낱말이고, 예문에 그 낱말이 들어 있다', () => {
-    const texts = new Set(words.items.map((item) => item.text))
+  it('기분은 24개 이상이고, 겹치지 않고, 예문에 그 낱말이 들어 있다', () => {
+    expect(MOODS.length).toBeGreaterThanOrEqual(24)
+    expect(new Set(MOODS.map((mood) => mood.id)).size).toBe(MOODS.length)
     for (const mood of MOODS) {
-      expect(texts.has(mood.id), mood.id).toBe(true)
-      expect(mood.sentence).toContain(mood.id)
-      expect(mood.ko && mood.sentenceKo).toBeTruthy()
+      for (const lang of MOOD_LANGS) {
+        const { sentence, translation } = moodExample(mood, lang)
+        expect(moodWord(mood, lang) && sentence && translation, `${lang} ${mood.id}`).toBeTruthy()
+      }
+      expect(moodExample(mood, 'en').sentence, mood.id).toContain(mood.id)
     }
+  })
+
+  it('예전에 고른 기분(처음 12개)도 그대로 읽힌다', () => {
+    const before = ['happy', 'excited', 'proud', 'calm', 'comfortable', 'busy', 'tired', 'bored', 'nervous', 'sad', 'upset', 'angry']
+    for (const id of before) expect(MOODS.some((mood) => mood.id === id), id).toBe(true)
   })
 })

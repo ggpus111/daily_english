@@ -35,18 +35,37 @@ function firstWordPattern(word) {
  * 문장에서 단어·표현(활용형 포함)을 찾는다. 빈칸 퀴즈와 "일기에 쓴 내 표현 찾기"가 함께 쓴다.
  * @returns {{ index: number, match: string } | null}
  */
+// 일본어·중국어·한국어처럼 낱말 사이를 띄지 않거나 조사가 붙는 글은 글자 그대로 찾는다.
+const NO_SPACE_SCRIPT = /[぀-ヿ㐀-鿿가-힯]/
+// 한국어 표현은 어미가 바뀌어도 찾도록(보고 싶어요 → 보고 싶었어요) 끝의 "요"와 마지막 음절을 빼고 찾는다.
+const KOREAN = /[가-힯]/
+function koreanStem(text) {
+  const plain = text.endsWith('요') ? text.slice(0, -1) : text
+  return plain.length > 2 ? plain.slice(0, -1) : plain
+}
+
 export function findPhrase(phrase, sentence) {
   const text = String(phrase ?? '')
     .trim()
-    .replace(/[.!?]+$/, '')
+    .replace(/[.!?。！？]+$/, '')
   const target = String(sentence ?? '')
   if (!text || !target) return null
+
+  if (NO_SPACE_SCRIPT.test(text)) {
+    const needle = KOREAN.test(text) ? koreanStem(text) : text
+    const index = target.toLowerCase().indexOf(needle.toLowerCase())
+    if (index < 0) return null
+    // 한국어는 찾은 자리부터 어절 끝까지를 답으로 본다(보고 싶어요 → 보고 싶었어요)
+    const end = KOREAN.test(text) ? target.slice(index + needle.length).search(/[\s.,!?]|$/) : 0
+    return { index, match: target.slice(index, index + needle.length + Math.max(0, end)) }
+  }
+
   const words = text.split(/\s+/)
   if (words.length > MAX_WORDS) return null
-
+  // 영어 외 라틴 문자 언어(스페인어·프랑스어)도 악센트 글자를 낱말의 일부로 보게 유니코드 기준으로 끊는다.
   const rest = words.slice(1).map(escape)
-  const source = `(?<![\\w'])${firstWordPattern(words[0])}${rest.length ? `\\s+${rest.join('\\s+')}` : ''}(?![\\w'])`
-  const match = new RegExp(source, 'i').exec(target)
+  const source = `(?<![\\p{L}\\p{N}'])${firstWordPattern(words[0])}${rest.length ? `\\s+${rest.join('\\s+')}` : ''}(?![\\p{L}\\p{N}'])`
+  const match = new RegExp(source, 'iu').exec(target)
   return match ? { index: match.index, match: match[0] } : null
 }
 

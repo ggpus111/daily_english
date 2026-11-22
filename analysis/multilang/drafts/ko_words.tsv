@@ -1,0 +1,338 @@
+# 한국어 단어 원고(대화 주제별, 외국인 연인·친구가 배우는 용도, 뜻은 영어). 기초 낱말은 뺐다. AI(Claude)와 함께 고르고 썼다.
+# 주제	단어	뜻	[예문]	[예문 해석]
+love	고백	confession of love
+love	짝사랑	one-sided love
+love	데이트	date
+love	키스	kiss
+love	뽀뽀	peck, kiss
+love	안다	to hug
+love	포옹	embrace
+love	손잡다	to hold hands
+love	반지	ring
+love	약혼	engagement
+love	결혼	marriage
+love	신혼	newlywed
+love	기념일	anniversary
+love	사귀다	to date, to go out
+love	헤어지다	to break up
+love	질투	jealousy
+love	바람	cheating
+love	설레다	to be excited (flutter)
+love	자기	babe, honey
+love	애인	lover, partner
+love	연인	couple, lover
+love	그립다	to long for
+love	다정하다	to be sweet, affectionate
+love	귀엽다	to be cute
+love	예쁘다	to be pretty
+love	멋있다	to be cool, handsome
+love	잘생기다	to be handsome
+love	로맨틱하다	to be romantic
+love	달콤하다	to be sweet
+love	서프라이즈	surprise
+love	꽃다발	bouquet
+love	운명	fate
+love	인연	fate, connection
+love	평생	lifetime
+love	영원히	forever
+love	곁	side, beside
+love	눈빛	look in the eyes
+love	볼	cheek
+love	부끄럽다	to be shy
+love	수줍다	to be shy
+love	장거리 연애	long-distance relationship
+love	소개팅	blind date
+love	썸	situationship, talking stage
+love	커플	couple
+feel	기쁘다	to be glad
+feel	즐겁다	to be joyful
+feel	슬프다	to be sad
+feel	외롭다	to be lonely
+feel	무섭다	to be scared
+feel	부끄럽다	to be embarrassed
+feel	창피하다	to be embarrassed
+feel	화나다	to get angry
+feel	짜증나다	to be annoyed
+feel	긴장되다	to be nervous
+feel	안심하다	to be relieved
+feel	놀라다	to be surprised
+feel	감동하다	to be moved
+feel	자랑스럽다	to be proud
+feel	실망하다	to be disappointed
+feel	지치다	to be worn out
+feel	피곤하다	to be tired
+feel	편안하다	to be comfortable
+feel	차분하다	to be calm
+feel	불안하다	to be anxious
+feel	걱정되다	to be worried
+feel	그리움	longing
+feel	지루하다	to be bored
+feel	귀찮다	to be bothersome
+feel	설렘	excitement
+feel	부럽다	to be envious
+feel	졸리다	to be sleepy
+feel	당황하다	to be flustered
+feel	속상하다	to be upset
+feel	서운하다	to feel hurt
+feel	아쉽다	to feel regret
+feel	답답하다	to feel stuffy, frustrated
+feel	후련하다	to feel relieved
+feel	뿌듯하다	to feel proud
+feel	든든하다	to feel reassured
+feel	울다	to cry
+feel	웃다	to laugh
+feel	미소	smile
+feel	눈물	tears
+feel	한숨	sigh
+feel	떨리다	to tremble, be nervous
+feel	기분	mood
+feel	감정	emotion
+feel	표정	facial expression
+feel	외로움	loneliness
+feel	슬픔	sadness
+feel	기쁨	joy
+feel	분노	anger
+feel	후회	regret
+feel	희망	hope
+feel	용기	courage
+feel	자신감	confidence
+bond	용서하다	to forgive
+bond	사과하다	to apologize
+bond	신뢰	trust
+bond	의심하다	to doubt
+bond	솔직하다	to be honest
+bond	정직하다	to be honest
+bond	거짓말하다	to lie
+bond	싸우다	to fight
+bond	다투다	to quarrel
+bond	화해하다	to make up
+bond	오해	misunderstanding
+bond	위로하다	to comfort
+bond	격려하다	to encourage
+bond	응원하다	to cheer on
+bond	지지하다	to support
+bond	돕다	to help
+bond	부탁하다	to ask a favor
+bond	거절하다	to refuse
+bond	받아들이다	to accept
+bond	초대하다	to invite
+bond	약속하다	to promise
+bond	약속	promise, appointment
+bond	인내	patience
+bond	존중하다	to respect
+bond	배려하다	to be considerate
+bond	돌보다	to look after
+bond	지키다	to protect, keep
+bond	나누다	to share
+bond	부모님	parents
+bond	시부모님	parents-in-law (husband's)
+bond	장인	father-in-law (wife's)
+bond	장모	mother-in-law (wife's)
+bond	사촌	cousin
+bond	삼촌	uncle
+bond	이모	maternal aunt
+bond	고모	paternal aunt
+bond	조카	nephew, niece
+bond	할아버지	grandfather
+bond	할머니	grandmother
+bond	오빠	older brother (female speaker)
+bond	누나	older sister (male speaker)
+bond	언니	older sister (female speaker)
+bond	동생	younger sibling
+bond	이웃	neighbor
+bond	동료	coworker
+bond	동창	classmate, alumnus
+bond	선배	senior
+bond	후배	junior
+bond	절친	best friend
+bond	소꿉친구	childhood friend
+bond	낯선 사람	stranger
+bond	가깝다	to be close
+bond	서로	each other
+bond	의리	loyalty
+talk	메시지	message
+talk	답장	reply
+talk	대답	answer
+talk	소식	news
+talk	읽씹	left on read
+talk	알림	notification
+talk	화면	screen
+talk	영상	video
+talk	생방송	live broadcast
+talk	검색하다	to search
+talk	번역하다	to translate
+talk	번역	translation
+talk	통역	interpretation
+talk	대화	conversation
+talk	문장	sentence
+talk	단어	word
+talk	문법	grammar
+talk	발음	pronunciation
+talk	억양	intonation
+talk	사투리	dialect
+talk	언어	language
+talk	존댓말	polite speech
+talk	반말	casual speech
+talk	예의	manners
+talk	무례하다	to be rude
+talk	농담	joke
+talk	장난	prank, teasing
+talk	진지하다	to be serious
+talk	비밀	secret
+talk	소문	rumor
+talk	거짓말	lie
+talk	진실	truth
+talk	의견	opinion
+talk	조언	advice
+talk	제안	suggestion
+talk	설명하다	to explain
+talk	설명	explanation
+talk	질문	question
+talk	반복하다	to repeat
+talk	연락처	contact info
+talk	인사	greeting
+talk	속삭이다	to whisper
+talk	소리치다	to shout
+talk	놀리다	to tease
+talk	칭찬하다	to compliment
+talk	칭찬	compliment
+talk	눈치채다	to notice
+talk	속마음	true feelings
+talk	말투	way of speaking
+talk	목소리	voice
+trip	여행	trip
+trip	여행하다	to travel
+trip	공항	airport
+trip	비행기	airplane
+trip	여권	passport
+trip	표	ticket
+trip	짐	luggage
+trip	시차	time difference
+trip	지연	delay
+trip	환승	transfer
+trip	예약하다	to reserve
+trip	예약	reservation
+trip	취소하다	to cancel
+trip	바꾸다	to change
+trip	호텔	hotel
+trip	기념품	souvenir
+trip	관광객	tourist
+trip	관광	sightseeing
+trip	해변	beach
+trip	축제	festival
+trip	불꽃놀이	fireworks
+trip	크리스마스	Christmas
+trip	설날	Lunar New Year
+trip	추석	Chuseok
+trip	휴가	vacation
+trip	일정	schedule
+trip	목표	goal
+trip	기회	chance
+trip	재회	reunion
+trip	출발	departure
+trip	도착	arrival
+trip	이사하다	to move
+trip	유학	studying abroad
+trip	주소	address
+trip	지도	map
+trip	동네	neighborhood
+trip	시골	countryside
+trip	교통	traffic
+trip	사고	accident
+trip	늦다	to be late
+trip	일찍	early
+trip	미리	in advance
+food	맛	taste
+food	짜다	to be salty
+food	맵다	to be spicy
+food	맛있다	to be delicious
+food	요리하다	to cook
+food	식사	meal
+food	아침	breakfast, morning
+food	점심	lunch
+food	저녁	dinner, evening
+food	커피	coffee
+food	술	alcohol
+food	김치	kimchi
+food	밥	rice, meal
+food	국	soup
+food	치킨	fried chicken
+food	떡볶이	tteokbokki
+food	디저트	dessert
+food	감기	cold
+food	상처	wound
+food	체중	weight
+food	다이어트	diet
+food	수면	sleep
+food	피로	fatigue
+food	휴식	rest
+food	목	throat, neck
+food	머리카락	hair
+food	얼굴	face
+food	건강	health
+food	의사	doctor
+food	병원	hospital
+food	낫다	to recover
+life	직장	workplace
+life	상사	boss
+life	월급	salary
+life	회의	meeting
+life	마감	deadline
+life	면접	interview
+life	시험	exam
+life	합격하다	to pass
+life	숙제	homework
+life	수업	class
+life	성적	grades
+life	졸업하다	to graduate
+life	경제	economy
+life	습관	habit
+life	전통	tradition
+life	계절	season
+life	경치	scenery
+life	분위기	atmosphere
+life	환경	environment
+life	자유	freedom
+life	평화	peace
+life	경험	experience
+life	미래	future
+life	과거	past
+life	성격	personality
+life	취미	hobby
+life	고르다	to choose
+life	망설이다	to hesitate
+life	비교하다	to compare
+life	포기하다	to give up
+life	시도하다	to try
+life	자라다	to grow
+life	변하다	to change
+life	청소하다	to clean
+life	씻다	to wash
+life	할인	discount
+life	지갑	wallet
+life	열쇠	key
+life	우산	umbrella
+life	서두르다	to hurry
+life	진정하다	to calm down
+life	잊다	to forget
+life	잃어버리다	to lose
+life	빌려주다	to lend
+life	빌리다	to borrow
+life	돌려주다	to return
+life	지불하다	to pay
+life	저축하다	to save
+life	악기	instrument
+life	최근	recently
+life	아마	probably
+life	분명히	clearly
+life	갑자기	suddenly
+life	드디어	finally
+life	그런데	by the way
+life	꽤	quite
+life	겨우	barely
+life	보통	usually
+life	곧	soon
+life	오랫동안	for a long time
+life	다르다	to be different
+life	누군가	someone
+life	무언가	something

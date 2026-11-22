@@ -12,7 +12,7 @@ export function useMyEntries() {
 
 // 일기 번역에 쓴 내 단어·표현. live면 쓰는 동안 바뀔 때마다 보조 기술에 알린다.
 export function UsageLine({ sentence, live = false }) {
-  const { t } = useApp()
+  const { t, learningLang } = useApp()
   const used = usedEntries(sentence, useMyEntries())
   const text = used.length > 0 ? t('usageFound', { count: used.length }) : live && sentence?.trim() ? t('usageNone') : ''
 
@@ -23,7 +23,7 @@ export function UsageLine({ sentence, live = false }) {
       {used.map((entry, index) => (
         <span key={entry.id ?? entry.text}>
           {index > 0 && ', '}
-          <b lang="en">{entry.text}</b>
+          <b lang={learningLang}>{entry.text}</b>
         </span>
       ))}
     </p>
@@ -32,7 +32,7 @@ export function UsageLine({ sentence, live = false }) {
 
 // 오늘의 표현을 일기에 써 보는 작은 미션. 번역에 쓰면 바로 도장이 찍힌다.
 export function TodayMission({ sentence }) {
-  const { t } = useApp()
+  const { t, learningLang } = useApp()
   const { data } = usePackData('expressions')
   if (!data) return null
   const item = todayItem(data.items)
@@ -43,7 +43,7 @@ export function TodayMission({ sentence }) {
       <span className="mission-stamp" aria-hidden="true">
         {done ? '✓' : ''}
       </span>
-      {done ? t('missionDone') : t('missionTry')} <b lang="en">{item.text}</b>
+      {done ? t('missionDone') : t('missionTry')} <b lang={learningLang}>{item.text}</b>
     </p>
   )
 }

@@ -1,0 +1,5618 @@
+{
+ "source": {
+  "corpus": "Tatoeba (tatoeba.org) fra sentences, CC BY 2.0 FR",
+  "sentences": 731363,
+  "note": "표현과 예문, 풀이는 Daily English가 직접 썼고(AI 도움), 빈도만 말뭉치에서 셌습니다."
+ },
+ "packs": [
+  {
+   "id": "love",
+   "title": {
+    "ko": "애정 표현",
+    "en": "Love & affection"
+   },
+   "items": [
+    {
+     "id": "fr-love-01",
+     "text": "Je t'aime.",
+     "meaning": "사랑해",
+     "example": "Je t'aime plus que tout.",
+     "exampleKo": "세상 무엇보다 사랑해.",
+     "tip": "연인에게 쓰는 말이에요. 친구에게는 Je t'aime bien(좋아해)을 써요.",
+     "sentences": 283,
+     "perMillion": 386.9
+    },
+    {
+     "id": "fr-love-02",
+     "text": "Je t'adore.",
+     "meaning": "정말 좋아해",
+     "example": "Je t'adore, tu sais.",
+     "exampleKo": "너 정말 좋아해, 알지?",
+     "tip": "연인, 친구 모두에게 다정하게 써요.",
+     "sentences": 10,
+     "perMillion": 13.7
+    },
+    {
+     "id": "fr-love-03",
+     "text": "Je suis fou de toi.",
+     "meaning": "너한테 푹 빠졌어",
+     "example": "Je suis fou de toi.",
+     "exampleKo": "나 너한테 푹 빠졌어.",
+     "tip": "여자가 말하면 folle de toi예요.",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-love-04",
+     "text": "Tu comptes beaucoup pour moi.",
+     "meaning": "넌 나한테 정말 소중해",
+     "example": "Tu comptes beaucoup pour moi.",
+     "exampleKo": "넌 나한테 정말 소중해.",
+     "tip": "친구에게도 쓸 수 있어요."
+    },
+    {
+     "id": "fr-love-05",
+     "text": "Tu me plais.",
+     "meaning": "너 마음에 들어",
+     "example": "Je crois que tu me plais beaucoup.",
+     "exampleKo": "나 너 정말 마음에 드는 것 같아.",
+     "tip": "사귀기 전 마음을 고백할 때 써요.",
+     "sentences": 12,
+     "perMillion": 16.4
+    },
+    {
+     "id": "fr-love-06",
+     "text": "Coup de foudre",
+     "meaning": "첫눈에 반함",
+     "example": "C'était le coup de foudre.",
+     "exampleKo": "첫눈에 반했어.",
+     "tip": "'벼락을 맞다'라는 뜻이에요.",
+     "sentences": 28,
+     "perMillion": 38.3
+    },
+    {
+     "id": "fr-love-07",
+     "text": "Tu me rends heureux.",
+     "meaning": "너 덕분에 행복해",
+     "example": "Tu me rends toujours heureux.",
+     "exampleKo": "넌 항상 날 행복하게 해.",
+     "tip": "여자가 말하면 heureuse예요."
+    },
+    {
+     "id": "fr-love-08",
+     "text": "J'ai de la chance de t'avoir.",
+     "meaning": "네가 있어서 다행이야",
+     "example": "J'ai tellement de chance de t'avoir.",
+     "exampleKo": "네가 있어서 정말 다행이야.",
+     "tip": ""
+    },
+    {
+     "id": "fr-love-09",
+     "text": "mon cœur",
+     "meaning": "자기야",
+     "example": "Bonjour, mon cœur !",
+     "exampleKo": "좋은 아침, 자기야!",
+     "tip": "연인끼리 가장 흔한 애칭이에요. mon amour, chéri(e)도 써요.",
+     "sentences": 378,
+     "perMillion": 516.8
+    },
+    {
+     "id": "fr-love-10",
+     "text": "T'es le meilleur !",
+     "meaning": "네가 최고야!",
+     "example": "Merci pour le café, t'es le meilleur !",
+     "exampleKo": "커피 고마워, 네가 최고야!",
+     "tip": "여자에게는 la meilleure예요. 친구에게도 자주 써요.",
+     "sentences": 590,
+     "perMillion": 806.7
+    },
+    {
+     "id": "fr-love-11",
+     "text": "Je tombe amoureux de toi.",
+     "meaning": "너한테 빠지고 있어",
+     "example": "Je crois que je tombe amoureux de toi.",
+     "exampleKo": "나 너한테 빠지고 있는 것 같아.",
+     "tip": "여자가 말하면 amoureuse예요.",
+     "sentences": 11,
+     "perMillion": 15.0
+    },
+    {
+     "id": "fr-love-12",
+     "text": "Je pense à toi tout le temps.",
+     "meaning": "계속 네 생각만 해",
+     "example": "Aujourd'hui, je pense à toi tout le temps.",
+     "exampleKo": "오늘 계속 네 생각만 나.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 31.4
+    },
+    {
+     "id": "fr-love-13",
+     "text": "Tu es tout pour moi.",
+     "meaning": "넌 내 전부야",
+     "example": "Tu es tout pour moi.",
+     "exampleKo": "넌 내 전부야.",
+     "tip": "아주 달콤한 말이라 특별한 날에 아껴 써요.",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-love-14",
+     "text": "Bisous",
+     "meaning": "쪽 (끝인사)",
+     "example": "À demain, bisous !",
+     "exampleKo": "내일 봐, 쪽!",
+     "tip": "친구, 가족끼리도 메시지 끝에 흔히 붙여요.",
+     "sentences": 14,
+     "perMillion": 19.1
+    },
+    {
+     "id": "fr-love-15",
+     "text": "Fais de beaux rêves.",
+     "meaning": "좋은 꿈 꿔",
+     "example": "Bonne nuit, fais de beaux rêves.",
+     "exampleKo": "잘 자, 좋은 꿈 꿔.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 28.7
+    },
+    {
+     "id": "fr-love-16",
+     "text": "T'es trop mignon.",
+     "meaning": "너 너무 귀엽다",
+     "example": "T'es trop mignon quand tu dors.",
+     "exampleKo": "자는 모습 너무 귀엽다.",
+     "tip": "여자에게는 mignonne예요.",
+     "sentences": 10,
+     "perMillion": 13.7
+    },
+    {
+     "id": "fr-love-17",
+     "text": "Tu veux sortir avec moi ?",
+     "meaning": "나랑 사귈래?",
+     "example": "Tu veux sortir avec moi ?",
+     "exampleKo": "나랑 사귈래?",
+     "tip": "sortir avec는 '사귀다'라는 뜻이에요.",
+     "sentences": 20,
+     "perMillion": 27.3
+    }
+   ]
+  },
+  {
+   "id": "miss",
+   "title": {
+    "ko": "보고 싶을 때",
+    "en": "Missing you"
+   },
+   "items": [
+    {
+     "id": "fr-miss-01",
+     "text": "Tu me manques.",
+     "meaning": "보고 싶어",
+     "example": "Tu me manques tellement.",
+     "exampleKo": "너무 보고 싶어.",
+     "tip": "주어가 반대예요. '네가 나에게 빠져 있다'처럼 말해요.",
+     "sentences": 49,
+     "perMillion": 67.0
+    },
+    {
+     "id": "fr-miss-02",
+     "text": "Tu me manques déjà.",
+     "meaning": "벌써 보고 싶어",
+     "example": "Tu viens de partir et tu me manques déjà.",
+     "exampleKo": "방금 갔는데 벌써 보고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-miss-03",
+     "text": "J'ai trop hâte de te voir !",
+     "meaning": "빨리 보고 싶어!",
+     "example": "Plus que trois jours ! J'ai trop hâte de te voir !",
+     "exampleKo": "3일만 더! 빨리 보고 싶어!",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 15.0
+    },
+    {
+     "id": "fr-miss-04",
+     "text": "Je compte les jours.",
+     "meaning": "날짜 세는 중이야",
+     "example": "Je compte les jours avant ton arrivée.",
+     "exampleKo": "너 올 날만 세고 있어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-miss-05",
+     "text": "J'aimerais que tu sois là.",
+     "meaning": "네가 여기 있으면 좋을 텐데",
+     "example": "La vue est magnifique. J'aimerais que tu sois là.",
+     "exampleKo": "경치 너무 예뻐. 네가 여기 있으면 좋을 텐데.",
+     "tip": "",
+     "sentences": 43,
+     "perMillion": 58.8
+    },
+    {
+     "id": "fr-miss-06",
+     "text": "Je pense à toi.",
+     "meaning": "네 생각 하고 있어",
+     "example": "Je pense à toi. Ça va, ta journée ?",
+     "exampleKo": "네 생각 나서. 오늘 잘 보내고 있어?",
+     "tip": "힘든 일을 겪는 친구에게 위로로도 써요.",
+     "sentences": 19,
+     "perMillion": 26.0
+    },
+    {
+     "id": "fr-miss-07",
+     "text": "À bientôt !",
+     "meaning": "곧 보자!",
+     "example": "À bientôt ! Bon voyage.",
+     "exampleKo": "곧 보자! 조심히 와.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 26.0
+    },
+    {
+     "id": "fr-miss-08",
+     "text": "C'est pas pareil sans toi.",
+     "meaning": "너 없으니까 허전해",
+     "example": "Ce café, c'est pas pareil sans toi.",
+     "exampleKo": "너 없으니까 이 카페도 허전해.",
+     "tip": "말할 때는 ne를 빼고 c'est pas라고 해요."
+    },
+    {
+     "id": "fr-miss-09",
+     "text": "Ta voix me manque.",
+     "meaning": "네 목소리 듣고 싶어",
+     "example": "Tu m'appelles ? Ta voix me manque.",
+     "exampleKo": "전화해 줄래? 네 목소리 듣고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-miss-10",
+     "text": "Je t'envoie un gros câlin.",
+     "meaning": "꼭 안아 줄게",
+     "example": "Journée difficile ? Je t'envoie un gros câlin.",
+     "exampleKo": "힘든 하루였어? 멀리서 꼭 안아 줄게.",
+     "tip": "câlin은 포근한 포옹이에요.",
+     "sentences": 43,
+     "perMillion": 58.8
+    },
+    {
+     "id": "fr-miss-11",
+     "text": "Tu es toujours dans ma tête.",
+     "meaning": "늘 네 생각뿐이야",
+     "example": "Tu es toujours dans ma tête, même au travail.",
+     "exampleKo": "일할 때도 늘 네 생각뿐이야.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 26.0
+    },
+    {
+     "id": "fr-miss-12",
+     "text": "Reviens vite.",
+     "meaning": "빨리 돌아와",
+     "example": "Je t'attends. Reviens vite.",
+     "exampleKo": "기다릴게. 빨리 돌아와.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-miss-13",
+     "text": "Je t'attends.",
+     "meaning": "기다릴게",
+     "example": "Prends ton temps, je t'attends.",
+     "exampleKo": "천천히 해, 기다릴게.",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 46.5
+    },
+    {
+     "id": "fr-miss-14",
+     "text": "On se voit quand ?",
+     "meaning": "우리 언제 만나?",
+     "example": "On se voit quand, la prochaine fois ?",
+     "exampleKo": "다음엔 언제 만나?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "text",
+   "title": {
+    "ko": "메시지 줄임말",
+    "en": "Texting shortcuts"
+   },
+   "items": [
+    {
+     "id": "fr-text-01",
+     "text": "mdr",
+     "meaning": "ㅋㅋ",
+     "example": "C'est trop drôle mdr",
+     "exampleKo": "너무 웃기다 ㅋㅋ",
+     "tip": "mort de rire(웃겨 죽겠다)의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-02",
+     "text": "ptdr",
+     "meaning": "ㅋㅋㅋㅋ (빵 터짐)",
+     "example": "ptdr j'arrête pas de rire",
+     "exampleKo": "ㅋㅋㅋㅋ 웃음이 안 멈춰",
+     "tip": "pété de rire의 줄임말로 mdr보다 더 크게 웃을 때 써요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-03",
+     "text": "jsp",
+     "meaning": "몰라",
+     "example": "jsp, tu veux manger quoi ?",
+     "exampleKo": "몰라, 뭐 먹고 싶어?",
+     "tip": "je sais pas의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-04",
+     "text": "tkt",
+     "meaning": "걱정 마",
+     "example": "tkt, je m'en occupe",
+     "exampleKo": "걱정 마, 내가 할게",
+     "tip": "t'inquiète의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-05",
+     "text": "stp",
+     "meaning": "제발, 부탁해",
+     "example": "Tu m'appelles stp ?",
+     "exampleKo": "전화해 줘, 응?",
+     "tip": "s'il te plaît의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-06",
+     "text": "slt",
+     "meaning": "안녕",
+     "example": "slt, ça va ?",
+     "exampleKo": "안녕, 잘 지내?",
+     "tip": "salut의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-07",
+     "text": "cc",
+     "meaning": "안녕~",
+     "example": "cc, tu fais quoi ?",
+     "exampleKo": "안녕~ 뭐 해?",
+     "tip": "coucou의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-08",
+     "text": "bjr",
+     "meaning": "안녕 (아침 인사)",
+     "example": "bjr ! bien dormi ?",
+     "exampleKo": "좋은 아침! 잘 잤어?",
+     "tip": "bonjour의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-09",
+     "text": "tfq",
+     "meaning": "뭐 해?",
+     "example": "tfq là ?",
+     "exampleKo": "지금 뭐 해?",
+     "tip": "tu fais quoi의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-10",
+     "text": "jtm",
+     "meaning": "사랑해",
+     "example": "Bonne nuit, jtm",
+     "exampleKo": "잘 자, 사랑해",
+     "tip": "je t'aime의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-11",
+     "text": "dsl",
+     "meaning": "미안",
+     "example": "dsl, j'ai pas vu ton message",
+     "exampleKo": "미안, 메시지 못 봤어",
+     "tip": "désolé의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-12",
+     "text": "mrc",
+     "meaning": "고마워",
+     "example": "mrc pour ton aide !",
+     "exampleKo": "도와줘서 고마워!",
+     "tip": "merci의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-13",
+     "text": "pk",
+     "meaning": "왜",
+     "example": "pk tu m'as pas appelé ?",
+     "exampleKo": "왜 전화 안 했어?",
+     "tip": "pourquoi의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-14",
+     "text": "bcp",
+     "meaning": "많이",
+     "example": "Merci bcp !",
+     "exampleKo": "정말 고마워!",
+     "tip": "beaucoup의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-15",
+     "text": "ok",
+     "meaning": "알았어",
+     "example": "ok, à plus !",
+     "exampleKo": "알았어, 이따 봐!",
+     "tip": "",
+     "texting": true
+    },
+    {
+     "id": "fr-text-16",
+     "text": "a+",
+     "meaning": "이따 봐",
+     "example": "Je file, a+ !",
+     "exampleKo": "나 간다, 이따 봐!",
+     "tip": "à plus (tard)의 줄임말이에요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-17",
+     "text": "tg",
+     "meaning": "입 다물어",
+     "example": "tg mdr t'es trop nul",
+     "exampleKo": "ㅋㅋ 그만해, 너 진짜 별로야",
+     "tip": "ta gueule의 줄임말로 아주 거친 말이에요. 친한 친구끼리 장난으로만 보고, 쓰지는 않는 게 좋아요.",
+     "texting": true
+    },
+    {
+     "id": "fr-text-18",
+     "text": "grave",
+     "meaning": "완전, 진짜",
+     "example": "Ce film est grave bien.",
+     "exampleKo": "이 영화 완전 좋아.",
+     "tip": "'심각한'이 아니라 '완전'이라는 강조로 써요.",
+     "texting": true
+    }
+   ]
+  },
+  {
+   "id": "chat",
+   "title": {
+    "ko": "안부·수다",
+    "en": "Catching up"
+   },
+   "items": [
+    {
+     "id": "fr-chat-01",
+     "text": "Tu fais quoi ?",
+     "meaning": "뭐 하고 있어?",
+     "example": "Tu fais quoi ce week-end ?",
+     "exampleKo": "이번 주말에 뭐 해?",
+     "tip": "지금 하는 일과 계획을 물을 때 둘 다 써요.",
+     "sentences": 14,
+     "perMillion": 19.1
+    },
+    {
+     "id": "fr-chat-02",
+     "text": "Ça s'est passé comment aujourd'hui ?",
+     "meaning": "오늘 어땠어?",
+     "example": "Ça s'est passé comment aujourd'hui ? Raconte !",
+     "exampleKo": "오늘 어땠어? 얘기해 줘!",
+     "tip": ""
+    },
+    {
+     "id": "fr-chat-03",
+     "text": "Pas grand-chose.",
+     "meaning": "별거 없어",
+     "example": "Pas grand-chose, je me repose à la maison.",
+     "exampleKo": "별거 없어, 집에서 쉬는 중.",
+     "tip": "Tu fais quoi?에 대한 흔한 대답이에요.",
+     "sentences": 137,
+     "perMillion": 187.3
+    },
+    {
+     "id": "fr-chat-04",
+     "text": "Moi aussi.",
+     "meaning": "나도",
+     "example": "Moi aussi, j'ai presque pas dormi.",
+     "exampleKo": "나도, 거의 못 잤어.",
+     "tip": "",
+     "sentences": 305,
+     "perMillion": 417.0
+    },
+    {
+     "id": "fr-chat-05",
+     "text": "Je me détends.",
+     "meaning": "그냥 쉬는 중",
+     "example": "Je me détends avec mon chat.",
+     "exampleKo": "고양이랑 그냥 쉬는 중이야.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-chat-06",
+     "text": "Sérieux ?!",
+     "meaning": "진짜?!",
+     "example": "Sérieux ?! Tu l'as rencontré ?",
+     "exampleKo": "진짜?! 걔를 만났다고?",
+     "tip": "",
+     "sentences": 425,
+     "perMillion": 581.1
+    },
+    {
+     "id": "fr-chat-07",
+     "text": "C'est ouf !",
+     "meaning": "대박!",
+     "example": "T'as vu une star ? C'est ouf !",
+     "exampleKo": "연예인 봤어? 대박!",
+     "tip": "ouf는 fou(미친)를 뒤집은 요즘 말이에요."
+    },
+    {
+     "id": "fr-chat-08",
+     "text": "Clairement !",
+     "meaning": "완전 인정!",
+     "example": "Clairement, les lundis c'est le pire.",
+     "exampleKo": "완전 인정, 월요일이 최악이야.",
+     "tip": "강하게 맞장구칠 때 써요.",
+     "sentences": 234,
+     "perMillion": 320.0
+    },
+    {
+     "id": "fr-chat-09",
+     "text": "Devine quoi !",
+     "meaning": "있잖아, 맞혀 봐!",
+     "example": "Devine quoi ! J'ai eu le poste !",
+     "exampleKo": "있잖아! 나 합격했어!",
+     "tip": "좋은 소식을 꺼낼 때 써요.",
+     "sentences": 5,
+     "perMillion": 6.8
+    },
+    {
+     "id": "fr-chat-10",
+     "text": "Qu'est-ce qui se passe ?",
+     "meaning": "무슨 일이야?",
+     "example": "T'es silencieux, qu'est-ce qui se passe ?",
+     "exampleKo": "오늘 조용하네, 무슨 일이야?",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 43.8
+    },
+    {
+     "id": "fr-chat-11",
+     "text": "T'as mangé ?",
+     "meaning": "밥 먹었어?",
+     "example": "T'as mangé ? Saute pas le dîner.",
+     "exampleKo": "밥 먹었어? 저녁 거르지 마.",
+     "tip": "한국식 안부라 진짜 배고픈지 묻는 걸로 들릴 수 있어요.",
+     "sentences": 5,
+     "perMillion": 6.8
+    },
+    {
+     "id": "fr-chat-12",
+     "text": "Quoi de neuf ?",
+     "meaning": "별일 없어?",
+     "example": "Ça fait longtemps ! Quoi de neuf ?",
+     "exampleKo": "오랜만이야! 별일 없어?",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 35.6
+    },
+    {
+     "id": "fr-chat-13",
+     "text": "Longue journée ?",
+     "meaning": "오늘 힘들었지?",
+     "example": "Longue journée ? T'as l'air fatigué.",
+     "exampleKo": "오늘 길었지? 피곤해 보여.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 28.7
+    },
+    {
+     "id": "fr-chat-14",
+     "text": "C'est logique.",
+     "meaning": "그럴 만하네",
+     "example": "T'étais occupé, c'est logique.",
+     "exampleKo": "바빴구나, 그럴 만하네.",
+     "tip": ""
+    },
+    {
+     "id": "fr-chat-15",
+     "text": "Je te comprends.",
+     "meaning": "무슨 마음인지 알아",
+     "example": "Je te comprends, j'ai eu le même problème.",
+     "exampleKo": "무슨 마음인지 알아, 나도 똑같았어.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-chat-16",
+     "text": "C'est vrai ?",
+     "meaning": "진짜로?",
+     "example": "Tu déménages ici ? C'est vrai ?",
+     "exampleKo": "여기로 이사 온다고? 진짜로?",
+     "tip": "",
+     "sentences": 258,
+     "perMillion": 352.8
+    },
+    {
+     "id": "fr-chat-17",
+     "text": "Toujours pareil.",
+     "meaning": "늘 똑같지 뭐",
+     "example": "Le boulot, toujours pareil.",
+     "exampleKo": "일은 늘 똑같지 뭐.",
+     "tip": "boulot는 travail(일)의 일상 말이에요."
+    },
+    {
+     "id": "fr-chat-18",
+     "text": "T'écoutes quoi en ce moment ?",
+     "meaning": "요즘 뭐 들어?",
+     "example": "T'écoutes quoi en ce moment ?",
+     "exampleKo": "요즘 무슨 노래 들어?",
+     "tip": "",
+     "sentences": 488,
+     "perMillion": 667.2
+    }
+   ]
+  },
+  {
+   "id": "tease",
+   "title": {
+    "ko": "장난·놀리기",
+    "en": "Teasing & jokes"
+   },
+   "items": [
+    {
+     "id": "fr-tease-01",
+     "text": "T'es bête.",
+     "meaning": "바보야 (귀엽게)",
+     "example": "T'es bête, mais je t'aime.",
+     "exampleKo": "너 바보야, 근데 사랑해.",
+     "tip": "웃으며 말하면 다정한 놀림이에요."
+    },
+    {
+     "id": "fr-tease-02",
+     "text": "Je rigole.",
+     "meaning": "농담이야",
+     "example": "Te fâche pas, je rigole.",
+     "exampleKo": "화내지 마, 농담이야.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 10.9
+    },
+    {
+     "id": "fr-tease-03",
+     "text": "Arrête !",
+     "meaning": "그만해!",
+     "example": "Arrête ! Tu me fais rougir.",
+     "exampleKo": "그만해! 얼굴 빨개지잖아.",
+     "tip": "",
+     "sentences": 936,
+     "perMillion": 1279.8
+    },
+    {
+     "id": "fr-tease-04",
+     "text": "Tu rêves.",
+     "meaning": "꿈 깨",
+     "example": "Que je cuisine encore ? Tu rêves.",
+     "exampleKo": "또 요리하라고? 꿈 깨.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 26.0
+    },
+    {
+     "id": "fr-tease-05",
+     "text": "Bien essayé.",
+     "meaning": "어림없지",
+     "example": "Bien essayé, mais je tombe pas dans le piège.",
+     "exampleKo": "어림없지, 안 속아.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-tease-06",
+     "text": "Très drôle.",
+     "meaning": "하나도 안 웃기거든",
+     "example": "Très drôle. Rends-moi mon téléphone.",
+     "exampleKo": "하나도 안 웃겨. 폰 돌려줘.",
+     "tip": "말투에 따라 비꼬는 말이 돼요.",
+     "sentences": 26,
+     "perMillion": 35.6
+    },
+    {
+     "id": "fr-tease-07",
+     "text": "T'abuses.",
+     "meaning": "너 너무하다, 오버야",
+     "example": "Des ballons pour mon anniversaire ? T'abuses.",
+     "exampleKo": "생일에 풍선? 너무 오버야.",
+     "tip": ""
+    },
+    {
+     "id": "fr-tease-08",
+     "text": "Comme tu veux.",
+     "meaning": "맘대로 해",
+     "example": "Comme tu veux, t'as gagné.",
+     "exampleKo": "맘대로 해, 네가 이겼어.",
+     "tip": "차갑게 들릴 수 있으니 웃으며 써요.",
+     "sentences": 20,
+     "perMillion": 27.3
+    },
+    {
+     "id": "fr-tease-09",
+     "text": "T'es méchant !",
+     "meaning": "너 못됐어!",
+     "example": "T'es méchant ! J'ai fait de mon mieux.",
+     "exampleKo": "너 못됐어! 최선을 다했단 말이야.",
+     "tip": "여자에게는 méchante예요.",
+     "sentences": 140,
+     "perMillion": 191.4
+    },
+    {
+     "id": "fr-tease-10",
+     "text": "Je t'ai eu !",
+     "meaning": "속았지!",
+     "example": "Je t'ai eu ! C'était une blague.",
+     "exampleKo": "속았지! 농담이었어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-tease-11",
+     "text": "Pris sur le fait !",
+     "meaning": "딱 걸렸어!",
+     "example": "Pris sur le fait ! T'as mangé mes gâteaux.",
+     "exampleKo": "딱 걸렸어! 내 과자 먹었지.",
+     "tip": "",
+     "sentences": 38,
+     "perMillion": 52.0
+    },
+    {
+     "id": "fr-tease-12",
+     "text": "Qui a dit ça ?",
+     "meaning": "누가 그래?",
+     "example": "Je cuisine mal ? Qui a dit ça ?",
+     "exampleKo": "내가 요리 못한다고? 누가 그래?",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 21.9
+    },
+    {
+     "id": "fr-tease-13",
+     "text": "T'es impossible.",
+     "meaning": "너 진짜 못 말려",
+     "example": "T'es impossible, arrête de rire.",
+     "exampleKo": "진짜 못 말려, 그만 웃어.",
+     "tip": "",
+     "sentences": 543,
+     "perMillion": 742.4
+    },
+    {
+     "id": "fr-tease-14",
+     "text": "Te la pète pas.",
+     "meaning": "잘난 척하지 마",
+     "example": "T'as gagné une fois, te la pète pas.",
+     "exampleKo": "한 번 이겼다고 잘난 척하지 마.",
+     "tip": "아주 친한 사이의 말이에요."
+    },
+    {
+     "id": "fr-tease-15",
+     "text": "Mais non !",
+     "meaning": "아니야, 뻥이야!",
+     "example": "Mais non ! T'es super beau.",
+     "exampleKo": "아니야! 너 정말 멋있어.",
+     "tip": "",
+     "sentences": 69,
+     "perMillion": 94.3
+    },
+    {
+     "id": "fr-tease-16",
+     "text": "Carrément !",
+     "meaning": "완전 좋아, 콜!",
+     "example": "Des crêpes ? Carrément !",
+     "exampleKo": "크레프? 완전 콜!",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 42.4
+    },
+    {
+     "id": "fr-tease-17",
+     "text": "Andouille",
+     "meaning": "바보, 멍청이 (귀엽게)",
+     "example": "Viens là, andouille.",
+     "exampleKo": "이리 와, 바보야.",
+     "tip": "소시지 이름이지만 친한 사람을 장난스럽게 부를 때 써요.",
+     "sentences": 23,
+     "perMillion": 31.4
+    }
+   ]
+  },
+  {
+   "id": "date",
+   "title": {
+    "ko": "약속·데이트",
+    "en": "Plans & dates"
+   },
+   "items": [
+    {
+     "id": "fr-date-01",
+     "text": "T'es libre ce soir ?",
+     "meaning": "오늘 밤 시간 돼?",
+     "example": "T'es libre ce soir ? J'ai envie de te voir.",
+     "exampleKo": "오늘 밤 시간 돼? 보고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-date-02",
+     "text": "On va dîner ?",
+     "meaning": "저녁 먹으러 갈래?",
+     "example": "On va dîner après le boulot ?",
+     "exampleKo": "퇴근하고 저녁 먹으러 갈래?",
+     "tip": "on은 '우리'라는 뜻으로 일상에서 아주 자주 써요."
+    },
+    {
+     "id": "fr-date-03",
+     "text": "C'est noté !",
+     "meaning": "그럼 약속한 거다!",
+     "example": "Vendredi à sept heures ? C'est noté !",
+     "exampleKo": "금요일 7시? 약속한 거다!",
+     "tip": ""
+    },
+    {
+     "id": "fr-date-04",
+     "text": "Je passe te prendre ?",
+     "meaning": "데리러 갈까?",
+     "example": "Je passe te prendre à sept heures ?",
+     "exampleKo": "7시에 데리러 갈까?",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 6.8
+    },
+    {
+     "id": "fr-date-05",
+     "text": "Quelle heure t'arrange ?",
+     "meaning": "몇 시가 편해?",
+     "example": "Quelle heure t'arrange demain ?",
+     "exampleKo": "내일 몇 시가 편해?",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-date-06",
+     "text": "On peut décaler ?",
+     "meaning": "약속 미룰 수 있을까?",
+     "example": "J'ai un imprévu. On peut décaler ?",
+     "exampleKo": "일이 생겼어. 미룰 수 있을까?",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-date-07",
+     "text": "J'ai un imprévu.",
+     "meaning": "갑자기 일이 생겼어",
+     "example": "Désolé, j'ai un imprévu au travail.",
+     "exampleKo": "미안, 회사에 갑자기 일이 생겼어.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-date-08",
+     "text": "J'arrive dans dix minutes.",
+     "meaning": "10분 뒤 도착",
+     "example": "J'arrive dans dix minutes !",
+     "exampleKo": "10분 뒤 도착!",
+     "tip": "",
+     "sentences": 202,
+     "perMillion": 276.2
+    },
+    {
+     "id": "fr-date-09",
+     "text": "On se retrouve où ?",
+     "meaning": "어디서 만날까?",
+     "example": "On se retrouve où ? À la gare ?",
+     "exampleKo": "어디서 만날까? 역에서?",
+     "tip": "",
+     "sentences": 30,
+     "perMillion": 41.0
+    },
+    {
+     "id": "fr-date-10",
+     "text": "On partage l'addition.",
+     "meaning": "반반 내자",
+     "example": "Cette fois, on partage l'addition.",
+     "exampleKo": "이번엔 반반 내자.",
+     "tip": ""
+    },
+    {
+     "id": "fr-date-11",
+     "text": "C'est moi qui invite.",
+     "meaning": "내가 살게",
+     "example": "Ce soir, c'est moi qui invite.",
+     "exampleKo": "오늘 밤은 내가 살게.",
+     "tip": ""
+    },
+    {
+     "id": "fr-date-12",
+     "text": "Soirée film chez moi ?",
+     "meaning": "우리 집에서 영화 볼래?",
+     "example": "Soirée film chez moi samedi ?",
+     "exampleKo": "토요일에 우리 집에서 영화 볼래?",
+     "tip": ""
+    },
+    {
+     "id": "fr-date-13",
+     "text": "Envoie-moi un message quand t'es rentré.",
+     "meaning": "도착하면 문자해",
+     "example": "Envoie-moi un message quand t'es rentré.",
+     "exampleKo": "집에 도착하면 문자해.",
+     "tip": "여자에게는 rentrée예요. 한국의 '도착하면 연락해'와 같은 마음이에요."
+    },
+    {
+     "id": "fr-date-14",
+     "text": "Je te raccompagne.",
+     "meaning": "집까지 데려다줄게",
+     "example": "Il est tard, je te raccompagne.",
+     "exampleKo": "늦었어, 집까지 데려다줄게.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 15.0
+    },
+    {
+     "id": "fr-date-15",
+     "text": "J'ai passé une super soirée.",
+     "meaning": "정말 즐거운 밤이었어",
+     "example": "J'ai passé une super soirée, merci.",
+     "exampleKo": "정말 즐거운 밤이었어, 고마워.",
+     "tip": ""
+    },
+    {
+     "id": "fr-date-16",
+     "text": "On remet ça !",
+     "meaning": "또 하자!",
+     "example": "C'était trop bien, on remet ça !",
+     "exampleKo": "너무 좋았어, 또 하자!",
+     "tip": ""
+    },
+    {
+     "id": "fr-date-17",
+     "text": "Ça tient toujours pour ce soir ?",
+     "meaning": "오늘 밤 약속 그대로지?",
+     "example": "Ça tient toujours pour ce soir ?",
+     "exampleKo": "오늘 밤 약속 그대로지?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "call",
+   "title": {
+    "ko": "영상통화·장거리",
+    "en": "Calls & distance"
+   },
+   "items": [
+    {
+     "id": "fr-call-01",
+     "text": "Tu m'entends ?",
+     "meaning": "내 목소리 들려?",
+     "example": "Allô ? Tu m'entends ?",
+     "exampleKo": "여보세요? 들려?",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 15.0
+    },
+    {
+     "id": "fr-call-02",
+     "text": "Ça coupe.",
+     "meaning": "소리가 끊겨",
+     "example": "Désolé, ça coupe.",
+     "exampleKo": "미안, 소리가 끊겨.",
+     "tip": ""
+    },
+    {
+     "id": "fr-call-03",
+     "text": "T'as freezé.",
+     "meaning": "화면 멈췄어",
+     "example": "T'as freezé une seconde.",
+     "exampleKo": "화면이 잠깐 멈췄어.",
+     "tip": "영어 freeze를 프랑스어처럼 쓴 요즘 말이에요."
+    },
+    {
+     "id": "fr-call-04",
+     "text": "Je peux t'appeler ?",
+     "meaning": "전화해도 돼?",
+     "example": "Je peux t'appeler après le travail ?",
+     "exampleKo": "퇴근하고 전화해도 돼?",
+     "tip": "",
+     "sentences": 47,
+     "perMillion": 64.3
+    },
+    {
+     "id": "fr-call-05",
+     "text": "Je te rappelle.",
+     "meaning": "다시 전화할게",
+     "example": "Je suis dans le bus, je te rappelle.",
+     "exampleKo": "버스 안이야, 다시 전화할게.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-call-06",
+     "text": "On fait un appel vidéo ?",
+     "meaning": "영상통화할래?",
+     "example": "On fait un appel vidéo avant de dormir ?",
+     "exampleKo": "자기 전에 영상통화할래?",
+     "tip": ""
+    },
+    {
+     "id": "fr-call-07",
+     "text": "Il est quelle heure chez toi ?",
+     "meaning": "거기 지금 몇 시야?",
+     "example": "Il est quelle heure chez toi ? Je t'ai réveillé ?",
+     "exampleKo": "거기 지금 몇 시야? 나 때문에 깼어?",
+     "tip": "",
+     "sentences": 417,
+     "perMillion": 570.2
+    },
+    {
+     "id": "fr-call-08",
+     "text": "Il est tard ici.",
+     "meaning": "여기는 늦었어",
+     "example": "Il est tard ici, je vais dormir.",
+     "exampleKo": "여기 늦어서 잘게.",
+     "tip": ""
+    },
+    {
+     "id": "fr-call-09",
+     "text": "Le décalage horaire",
+     "meaning": "시차",
+     "example": "Le décalage horaire, c'est dur.",
+     "exampleKo": "시차 너무 힘들다.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 16.4
+    },
+    {
+     "id": "fr-call-10",
+     "text": "T'es en sourdine.",
+     "meaning": "음소거돼 있어",
+     "example": "Attends, t'es en sourdine !",
+     "exampleKo": "잠깐, 너 음소거야!",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-call-11",
+     "text": "Allume ta caméra.",
+     "meaning": "카메라 켜 줘",
+     "example": "Allume ta caméra, je veux te voir.",
+     "exampleKo": "카메라 켜 줘, 얼굴 보고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-call-12",
+     "text": "Je me suis endormi au téléphone.",
+     "meaning": "통화하다 잠들었어",
+     "example": "Désolé, je me suis endormi au téléphone hier.",
+     "exampleKo": "미안, 어제 통화하다 잠들었어.",
+     "tip": "여자가 말하면 endormie예요.",
+     "sentences": 259,
+     "perMillion": 354.1
+    },
+    {
+     "id": "fr-call-13",
+     "text": "Relation à distance",
+     "meaning": "장거리 연애",
+     "example": "Une relation à distance, c'est dur, mais tu en vaux la peine.",
+     "exampleKo": "장거리 연애는 힘들지만 너라면 괜찮아.",
+     "tip": "",
+     "sentences": 67,
+     "perMillion": 91.6
+    },
+    {
+     "id": "fr-call-14",
+     "text": "Je reste éveillé pour toi.",
+     "meaning": "안 자고 기다릴게",
+     "example": "Je reste éveillé jusqu'à ton appel.",
+     "exampleKo": "전화 올 때까지 안 자고 있을게.",
+     "tip": "",
+     "sentences": 111,
+     "perMillion": 151.8
+    },
+    {
+     "id": "fr-call-15",
+     "text": "Raccroche en premier.",
+     "meaning": "너 먼저 끊어",
+     "example": "Non, raccroche en premier !",
+     "exampleKo": "아니야, 너 먼저 끊어!",
+     "tip": "raccrocher는 '전화를 끊다'예요.",
+     "sentences": 10,
+     "perMillion": 13.7
+    },
+    {
+     "id": "fr-call-16",
+     "text": "On se parle demain.",
+     "meaning": "내일 얘기하자",
+     "example": "Bonne nuit, on se parle demain.",
+     "exampleKo": "잘 자, 내일 얘기하자.",
+     "tip": ""
+    },
+    {
+     "id": "fr-call-17",
+     "text": "Tu me vois ?",
+     "meaning": "나 보여?",
+     "example": "Tu me vois ? Il fait noir ici.",
+     "exampleKo": "나 보여? 여기 어둡다.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 9.6
+    }
+   ]
+  },
+  {
+   "id": "fight",
+   "title": {
+    "ko": "다툼·화해",
+    "en": "Fights & making up"
+   },
+   "items": [
+    {
+     "id": "fr-fight-01",
+     "text": "Je voulais pas dire ça.",
+     "meaning": "그럴 뜻이 아니었어",
+     "example": "Pardon, je voulais pas dire ça.",
+     "exampleKo": "미안, 그런 뜻으로 한 말 아니었어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 6.8
+    },
+    {
+     "id": "fr-fight-02",
+     "text": "On peut parler ?",
+     "meaning": "우리 얘기 좀 할까?",
+     "example": "On peut parler ce soir ? C'est important.",
+     "exampleKo": "오늘 밤 얘기 좀 할 수 있어? 중요한 거야.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-fight-03",
+     "text": "J'ai besoin d'un peu d'espace.",
+     "meaning": "잠깐 혼자 있고 싶어",
+     "example": "Je suis pas fâché, j'ai juste besoin d'un peu d'espace.",
+     "exampleKo": "화난 건 아니고 잠깐 혼자 있고 싶어.",
+     "tip": "헤어지자는 뜻이 아니라 시간이 필요하다는 말이에요.",
+     "sentences": 65,
+     "perMillion": 88.9
+    },
+    {
+     "id": "fr-fight-04",
+     "text": "Ça m'a blessé.",
+     "meaning": "상처받았어",
+     "example": "Honnêtement, ça m'a blessé.",
+     "exampleKo": "솔직히 그 말에 상처받았어.",
+     "tip": "여자가 말하면 blessée예요."
+    },
+    {
+     "id": "fr-fight-05",
+     "text": "On se dispute pas.",
+     "meaning": "우리 싸우지 말자",
+     "example": "On se dispute pas, tu me manques.",
+     "exampleKo": "싸우지 말자, 보고 싶어.",
+     "tip": "",
+     "sentences": 140,
+     "perMillion": 191.4
+    },
+    {
+     "id": "fr-fight-06",
+     "text": "J'ai exagéré.",
+     "meaning": "내가 너무 과했어",
+     "example": "Pardon, j'ai exagéré.",
+     "exampleKo": "미안, 내가 너무 과했어.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 47.9
+    },
+    {
+     "id": "fr-fight-07",
+     "text": "Ça va entre nous ?",
+     "meaning": "우리 괜찮은 거지?",
+     "example": "Ça va entre nous maintenant ?",
+     "exampleKo": "우리 이제 괜찮은 거지?",
+     "tip": "",
+     "sentences": 179,
+     "perMillion": 244.7
+    },
+    {
+     "id": "fr-fight-08",
+     "text": "On fait la paix ?",
+     "meaning": "화해할까?",
+     "example": "Je déteste me disputer. On fait la paix ?",
+     "exampleKo": "싸우는 거 싫어. 화해할까?",
+     "tip": "",
+     "sentences": 427,
+     "perMillion": 583.8
+    },
+    {
+     "id": "fr-fight-09",
+     "text": "Je te pardonne.",
+     "meaning": "용서할게",
+     "example": "C'est bon, je te pardonne.",
+     "exampleKo": "괜찮아, 용서할게.",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 21.9
+    },
+    {
+     "id": "fr-fight-10",
+     "text": "J'ai pas dit ça.",
+     "meaning": "나 그렇게 말 안 했어",
+     "example": "Attends, j'ai pas dit ça.",
+     "exampleKo": "잠깐, 나 그렇게 말 안 했어.",
+     "tip": "",
+     "sentences": 28,
+     "perMillion": 38.3
+    },
+    {
+     "id": "fr-fight-11",
+     "text": "J'ai eu tort.",
+     "meaning": "내가 잘못했어",
+     "example": "T'avais raison, j'ai eu tort.",
+     "exampleKo": "네 말이 맞았어, 내가 잘못했어.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 13.7
+    },
+    {
+     "id": "fr-fight-12",
+     "text": "Te fâche pas.",
+     "meaning": "화내지 마",
+     "example": "Te fâche pas, je t'explique.",
+     "exampleKo": "화내지 마, 설명할게.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 10.9
+    },
+    {
+     "id": "fr-fight-13",
+     "text": "Je suis pas fâché contre toi.",
+     "meaning": "너한테 화난 거 아니야",
+     "example": "Je suis pas fâché contre toi, juste fatigué.",
+     "exampleKo": "너한테 화난 거 아니야, 그냥 피곤해.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-fight-14",
+     "text": "On recommence à zéro ?",
+     "meaning": "처음부터 다시 할까?",
+     "example": "On recommence à zéro ?",
+     "exampleKo": "처음부터 다시 할까?",
+     "tip": "",
+     "sentences": 38,
+     "perMillion": 52.0
+    },
+    {
+     "id": "fr-fight-15",
+     "text": "Je comprends ton point de vue.",
+     "meaning": "네 입장 이해해",
+     "example": "Je comprends ton point de vue, mais je pense autrement.",
+     "exampleKo": "네 입장은 이해하지만 난 생각이 달라.",
+     "tip": "반대하기 전에 먼저 상대를 인정할 때 좋아요.",
+     "sentences": 195,
+     "perMillion": 266.6
+    },
+    {
+     "id": "fr-fight-16",
+     "text": "C'est oublié.",
+     "meaning": "다 잊었어",
+     "example": "T'inquiète, c'est oublié.",
+     "exampleKo": "걱정 마, 다 잊었어.",
+     "tip": "화해한 뒤 '앙금 없어'라는 뜻이에요."
+    },
+    {
+     "id": "fr-fight-17",
+     "text": "Désolé de t'avoir fait de la peine.",
+     "meaning": "속상하게 해서 미안해",
+     "example": "Désolé de t'avoir fait de la peine.",
+     "exampleKo": "속상하게 해서 미안해.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 28.7
+    }
+   ]
+  },
+  {
+   "id": "care",
+   "title": {
+    "ko": "위로·응원",
+    "en": "Comfort & cheering"
+   },
+   "items": [
+    {
+     "id": "fr-care-01",
+     "text": "Je suis là pour toi.",
+     "meaning": "내가 있잖아",
+     "example": "Quoi qu'il arrive, je suis là pour toi.",
+     "exampleKo": "무슨 일이 있어도 내가 있잖아.",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 45.1
+    },
+    {
+     "id": "fr-care-02",
+     "text": "Tu vas y arriver !",
+     "meaning": "넌 할 수 있어!",
+     "example": "Demain c'est le grand jour ? Tu vas y arriver !",
+     "exampleKo": "내일 중요한 날이지? 넌 할 수 있어!",
+     "tip": "",
+     "sentences": 99,
+     "perMillion": 135.4
+    },
+    {
+     "id": "fr-care-03",
+     "text": "C'est nul.",
+     "meaning": "아 진짜 속상하겠다",
+     "example": "T'as raté le bus ? C'est nul.",
+     "exampleKo": "버스 놓쳤어? 짜증 났겠다.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 24.6
+    },
+    {
+     "id": "fr-care-04",
+     "text": "Prends soin de toi.",
+     "meaning": "몸 잘 챙겨",
+     "example": "Prends soin de toi, d'accord ?",
+     "exampleKo": "몸 잘 챙겨, 알았지?",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-care-05",
+     "text": "Repose-toi.",
+     "meaning": "좀 쉬어",
+     "example": "T'as beaucoup travaillé. Repose-toi.",
+     "exampleKo": "고생 많았어. 좀 쉬어.",
+     "tip": "",
+     "sentences": 27,
+     "perMillion": 36.9
+    },
+    {
+     "id": "fr-care-06",
+     "text": "Guéris vite.",
+     "meaning": "빨리 나아",
+     "example": "Guéris vite ! Bois beaucoup d'eau.",
+     "exampleKo": "빨리 나아! 물 많이 마셔.",
+     "tip": ""
+    },
+    {
+     "id": "fr-care-07",
+     "text": "Ça va aller.",
+     "meaning": "다 괜찮아질 거야",
+     "example": "Pleure pas. Ça va aller.",
+     "exampleKo": "울지 마. 다 괜찮아질 거야.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 16.4
+    },
+    {
+     "id": "fr-care-08",
+     "text": "Je suis fier de toi.",
+     "meaning": "네가 자랑스러워",
+     "example": "T'as réussi ! Je suis fier de toi.",
+     "exampleKo": "해냈구나! 네가 자랑스러워.",
+     "tip": "여자가 말하면 fière예요.",
+     "sentences": 33,
+     "perMillion": 45.1
+    },
+    {
+     "id": "fr-care-09",
+     "text": "Courage !",
+     "meaning": "힘내!",
+     "example": "Les examens sont presque finis. Courage !",
+     "exampleKo": "시험 거의 끝났어. 힘내!",
+     "tip": "",
+     "sentences": 433,
+     "perMillion": 592.0
+    },
+    {
+     "id": "fr-care-10",
+     "text": "Tu veux en parler ?",
+     "meaning": "얘기하고 싶어?",
+     "example": "T'as l'air triste. Tu veux en parler ?",
+     "exampleKo": "슬퍼 보여. 얘기하고 싶어?",
+     "tip": "",
+     "sentences": 206,
+     "perMillion": 281.7
+    },
+    {
+     "id": "fr-care-11",
+     "text": "T'as fait de ton mieux.",
+     "meaning": "최선을 다했잖아",
+     "example": "C'est pas grave, t'as fait de ton mieux.",
+     "exampleKo": "괜찮아, 최선을 다했잖아.",
+     "tip": "",
+     "sentences": 30,
+     "perMillion": 41.0
+    },
+    {
+     "id": "fr-care-12",
+     "text": "Je suis de ton côté.",
+     "meaning": "난 네 편이야",
+     "example": "T'inquiète, je suis de ton côté.",
+     "exampleKo": "걱정 마, 난 네 편이야.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-care-13",
+     "text": "Te surmène pas.",
+     "meaning": "무리하지 마",
+     "example": "Même si t'es occupé, te surmène pas.",
+     "exampleKo": "바빠도 무리하지 마.",
+     "tip": ""
+    },
+    {
+     "id": "fr-care-14",
+     "text": "Rentre bien.",
+     "meaning": "조심히 들어가",
+     "example": "Il est tard, rentre bien.",
+     "exampleKo": "늦었으니까 조심히 들어가.",
+     "tip": ""
+    },
+    {
+     "id": "fr-care-15",
+     "text": "Je crois en toi.",
+     "meaning": "난 너 믿어",
+     "example": "Je crois en toi. Tu vas assurer.",
+     "exampleKo": "난 너 믿어. 잘할 거야.",
+     "tip": ""
+    },
+    {
+     "id": "fr-care-16",
+     "text": "Sois pas trop dur avec toi.",
+     "meaning": "너무 자책하지 마",
+     "example": "Sois pas trop dur avec toi.",
+     "exampleKo": "너무 자책하지 마.",
+     "tip": "여자에게는 dure예요.",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-care-17",
+     "text": "Si t'as besoin, je suis là.",
+     "meaning": "필요하면 말해",
+     "example": "Si t'as besoin de quoi que ce soit, je suis là.",
+     "exampleKo": "뭐든 필요하면 말해, 내가 있어.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "react",
+   "title": {
+    "ko": "칭찬·리액션",
+    "en": "Compliments & reactions"
+   },
+   "items": [
+    {
+     "id": "fr-react-01",
+     "text": "T'es magnifique !",
+     "meaning": "너 진짜 멋있다!",
+     "example": "T'es magnifique dans cette robe !",
+     "exampleKo": "그 원피스 입으니까 정말 예쁘다!",
+     "tip": "",
+     "sentences": 373,
+     "perMillion": 510.0
+    },
+    {
+     "id": "fr-react-02",
+     "text": "C'est trop gentil.",
+     "meaning": "너무 다정하다",
+     "example": "Tu m'as fait à manger ? C'est trop gentil.",
+     "exampleKo": "밥 만들어 줬어? 너무 다정하다.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-react-03",
+     "text": "Trop chou !",
+     "meaning": "너무 귀여워!",
+     "example": "Ton chiot est trop chou !",
+     "exampleKo": "너네 강아지 너무 귀여워!",
+     "tip": "chou는 양배추지만 '귀여운'이라는 뜻으로 써요."
+    },
+    {
+     "id": "fr-react-04",
+     "text": "J'adore !",
+     "meaning": "너무 좋아!",
+     "example": "Tu t'es mis à la peinture ? J'adore !",
+     "exampleKo": "그림 시작했어? 너무 좋다!",
+     "tip": "",
+     "sentences": 655,
+     "perMillion": 895.6
+    },
+    {
+     "id": "fr-react-05",
+     "text": "Trop bien !",
+     "meaning": "잘됐다! 좋다!",
+     "example": "T'as réussi ? Trop bien !",
+     "exampleKo": "합격했어? 잘됐다!",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 19.1
+    },
+    {
+     "id": "fr-react-06",
+     "text": "Je suis mort de rire.",
+     "meaning": "웃겨 죽겠어",
+     "example": "Ton histoire, je suis mort de rire.",
+     "exampleKo": "네 얘기 웃겨 죽겠어.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 16.4
+    },
+    {
+     "id": "fr-react-07",
+     "text": "Je suis trop contente pour toi.",
+     "meaning": "내 일처럼 기뻐",
+     "example": "Tu t'es fiancé ? Je suis trop contente pour toi !",
+     "exampleKo": "약혼했어? 내 일처럼 기뻐!",
+     "tip": "남자가 말하면 content예요."
+    },
+    {
+     "id": "fr-react-08",
+     "text": "Ça a l'air trop bon !",
+     "meaning": "맛있겠다!",
+     "example": "Ça a l'air trop bon ! C'est toi qui l'as fait ?",
+     "exampleKo": "맛있겠다! 네가 만들었어?",
+     "tip": ""
+    },
+    {
+     "id": "fr-react-09",
+     "text": "Bravo !",
+     "meaning": "잘했어! 대단해!",
+     "example": "T'as couru dix kilomètres ? Bravo !",
+     "exampleKo": "10킬로 뛰었어? 대단해!",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 47.9
+    },
+    {
+     "id": "fr-react-10",
+     "text": "T'es trop doué.",
+     "meaning": "너 정말 재능 있다",
+     "example": "C'est toi qui l'as dessiné ? T'es trop doué.",
+     "exampleKo": "이거 네가 그렸어? 정말 재능 있다.",
+     "tip": "여자에게는 douée예요.",
+     "sentences": 171,
+     "perMillion": 233.8
+    },
+    {
+     "id": "fr-react-11",
+     "text": "Tu as illuminé ma journée.",
+     "meaning": "덕분에 하루가 환해졌어",
+     "example": "Ton message a illuminé ma journée.",
+     "exampleKo": "네 메시지 덕분에 하루가 환해졌어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-react-12",
+     "text": "J'en suis fan.",
+     "meaning": "완전 빠졌어",
+     "example": "Cette chanson ? J'en suis fan.",
+     "exampleKo": "이 노래? 완전 빠졌어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-react-13",
+     "text": "C'est tellement toi.",
+     "meaning": "완전 너답다",
+     "example": "Une valise rose ? C'est tellement toi.",
+     "exampleKo": "분홍 캐리어? 완전 너답다.",
+     "tip": ""
+    },
+    {
+     "id": "fr-react-14",
+     "text": "T'es trop beau !",
+     "meaning": "멋있다!",
+     "example": "T'es trop beau aujourd'hui !",
+     "exampleKo": "오늘 진짜 멋있다!",
+     "tip": "여자에게는 belle예요.",
+     "sentences": 21,
+     "perMillion": 28.7
+    },
+    {
+     "id": "fr-react-15",
+     "text": "Trop la chance !",
+     "meaning": "부럽다!",
+     "example": "Un travail près de la mer ? Trop la chance !",
+     "exampleKo": "바닷가 근처 직장? 부럽다!",
+     "tip": "",
+     "sentences": 389,
+     "perMillion": 531.9
+    },
+    {
+     "id": "fr-react-16",
+     "text": "T'es un génie !",
+     "meaning": "너 천재야!",
+     "example": "Tu l'as déjà réparé ? T'es un génie !",
+     "exampleKo": "벌써 고쳤어? 너 천재야!",
+     "tip": "",
+     "sentences": 191,
+     "perMillion": 261.2
+    },
+    {
+     "id": "fr-react-17",
+     "text": "Trop stylé !",
+     "meaning": "완전 멋지다!",
+     "example": "Ta veste est trop stylée !",
+     "exampleKo": "네 재킷 완전 멋지다!",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "culture",
+   "title": {
+    "ko": "되묻기·문화 차이",
+    "en": "Asking & culture"
+   },
+   "items": [
+    {
+     "id": "fr-culture-01",
+     "text": "Ça veut dire quoi ?",
+     "meaning": "무슨 뜻이야?",
+     "example": "Ça veut dire quoi, ça ?",
+     "exampleKo": "그게 무슨 뜻이야?",
+     "tip": "따지는 말투가 되지 않게 부드럽게 말해요.",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-culture-02",
+     "text": "Comment on dit ça en français ?",
+     "meaning": "이거 프랑스어로 뭐라고 해?",
+     "example": "Comment on dit ça en français ?",
+     "exampleKo": "이거 프랑스어로 뭐라고 해?",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-culture-03",
+     "text": "Tu peux répéter ?",
+     "meaning": "다시 말해 줄래?",
+     "example": "Pardon, tu peux répéter ?",
+     "exampleKo": "미안, 다시 말해 줄래?",
+     "tip": "",
+     "sentences": 182,
+     "perMillion": 248.9
+    },
+    {
+     "id": "fr-culture-04",
+     "text": "Tu peux parler plus lentement ?",
+     "meaning": "조금 천천히 말해 줄래?",
+     "example": "Tu peux parler plus lentement ? Je veux tout comprendre.",
+     "exampleKo": "조금 천천히 말해 줄래? 다 알아듣고 싶어.",
+     "tip": "",
+     "sentences": 94,
+     "perMillion": 128.5
+    },
+    {
+     "id": "fr-culture-05",
+     "text": "C'est normal chez vous ?",
+     "meaning": "너네 나라에선 그게 보통이야?",
+     "example": "C'est normal chez vous ?",
+     "exampleKo": "너네 나라에선 그게 보통이야?",
+     "tip": "",
+     "sentences": 316,
+     "perMillion": 432.1
+    },
+    {
+     "id": "fr-culture-06",
+     "text": "J'apprends encore le français.",
+     "meaning": "아직 프랑스어 배우는 중이야",
+     "example": "Pardon, j'apprends encore le français.",
+     "exampleKo": "미안, 아직 프랑스어 배우는 중이야.",
+     "tip": ""
+    },
+    {
+     "id": "fr-culture-07",
+     "text": "Je l'ai bien dit ?",
+     "meaning": "내가 맞게 말했어?",
+     "example": "Je l'ai bien dit ? Sois honnête.",
+     "exampleKo": "내가 맞게 말했어? 솔직하게 말해 줘.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 47.9
+    },
+    {
+     "id": "fr-culture-08",
+     "text": "Corrige-moi si je me trompe.",
+     "meaning": "틀리면 고쳐 줘",
+     "example": "Corrige-moi si je me trompe, d'accord ?",
+     "exampleKo": "틀리면 고쳐 줘, 알았지?",
+     "tip": "배우는 중이라고 편하게 부탁할 때 좋아요.",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-culture-09",
+     "text": "C'est impoli ?",
+     "meaning": "그거 무례한 말이야?",
+     "example": "Attends, c'est impoli en français ?",
+     "exampleKo": "잠깐, 프랑스어로는 그게 무례한 말이야?",
+     "tip": "",
+     "sentences": 69,
+     "perMillion": 94.3
+    },
+    {
+     "id": "fr-culture-10",
+     "text": "En Corée, on…",
+     "meaning": "한국에서는 ~해",
+     "example": "En Corée, on mange de la soupe d'algues pour les anniversaires.",
+     "exampleKo": "한국에서는 생일에 미역국을 먹어.",
+     "tip": "",
+     "sentences": 36,
+     "perMillion": 49.2
+    },
+    {
+     "id": "fr-culture-11",
+     "text": "Je t'apprends un peu de coréen.",
+     "meaning": "한국어 좀 알려 줄게",
+     "example": "Je t'apprends un peu de coréen. Dis « saranghae » !",
+     "exampleKo": "한국어 좀 알려 줄게. '사랑해' 해 봐!",
+     "tip": "",
+     "sentences": 58,
+     "perMillion": 79.3
+    },
+    {
+     "id": "fr-culture-12",
+     "text": "C'est trop intéressant.",
+     "meaning": "진짜 신기하다",
+     "example": "Vous le fêtez en été ? C'est trop intéressant.",
+     "exampleKo": "여름에 축하한다고? 진짜 신기하다.",
+     "tip": "",
+     "sentences": 614,
+     "perMillion": 839.5
+    },
+    {
+     "id": "fr-culture-13",
+     "text": "Ça s'appelle comment ?",
+     "meaning": "이거 뭐라고 불러?",
+     "example": "Ça s'appelle comment en français ?",
+     "exampleKo": "이거 프랑스어로 뭐라고 불러?",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-culture-14",
+     "text": "Ça se perd à la traduction.",
+     "meaning": "번역하면 느낌이 안 살아",
+     "example": "Cette blague se perd à la traduction.",
+     "exampleKo": "그 농담은 번역하면 재미가 없어져.",
+     "tip": "",
+     "sentences": 451,
+     "perMillion": 616.7
+    },
+    {
+     "id": "fr-culture-15",
+     "text": "J'ai pas compris.",
+     "meaning": "잘 못 알아들었어",
+     "example": "Désolé, j'ai pas compris.",
+     "exampleKo": "미안, 잘 못 알아들었어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-culture-16",
+     "text": "Rencontrer tes parents me stresse.",
+     "meaning": "너희 부모님 뵙는 거 긴장돼",
+     "example": "Rencontrer tes parents me stresse un peu.",
+     "exampleKo": "너희 부모님 뵙는 게 좀 긴장돼.",
+     "tip": "",
+     "sentences": 266,
+     "perMillion": 363.7
+    },
+    {
+     "id": "fr-culture-17",
+     "text": "Je connaissais pas ce mot.",
+     "meaning": "그 말 처음 들어",
+     "example": "Je connaissais pas ce mot. Ça veut dire quoi ?",
+     "exampleKo": "그 말 처음 들어. 무슨 뜻이야?",
+     "tip": "",
+     "sentences": 326,
+     "perMillion": 445.7
+    }
+   ]
+  },
+  {
+   "id": "daily",
+   "title": {
+    "ko": "일상 대화",
+    "en": "Everyday talk"
+   },
+   "items": [
+    {
+     "id": "fr-daily-01",
+     "text": "Bonjour.",
+     "meaning": "안녕하세요 (낮)",
+     "example": "Bonjour, ça va ?",
+     "exampleKo": "안녕하세요, 잘 지내요?",
+     "tip": "낮 인사예요. 처음 만나는 사람, 가게 직원에게도 꼭 해요.",
+     "sentences": 526,
+     "perMillion": 719.2
+    },
+    {
+     "id": "fr-daily-02",
+     "text": "Bonsoir.",
+     "meaning": "안녕하세요 (저녁)",
+     "example": "Bonsoir, tu as bien mangé ?",
+     "exampleKo": "안녕, 저녁 잘 먹었어?",
+     "tip": "",
+     "sentences": 53,
+     "perMillion": 72.5
+    },
+    {
+     "id": "fr-daily-03",
+     "text": "Salut !",
+     "meaning": "안녕!",
+     "example": "Salut, quoi de neuf ?",
+     "exampleKo": "안녕, 별일 없어?",
+     "tip": "친구끼리 인사예요. 헤어질 때도 써요.",
+     "sentences": 256,
+     "perMillion": 350.0
+    },
+    {
+     "id": "fr-daily-04",
+     "text": "Ça va ?",
+     "meaning": "잘 지내?",
+     "example": "Salut, ça va ?",
+     "exampleKo": "안녕, 잘 지내?",
+     "tip": "",
+     "sentences": 567,
+     "perMillion": 775.3
+    },
+    {
+     "id": "fr-daily-05",
+     "text": "Ça va bien.",
+     "meaning": "잘 지내",
+     "example": "Ça va bien, merci. Et toi ?",
+     "exampleKo": "잘 지내, 고마워. 너는?",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 24.6
+    },
+    {
+     "id": "fr-daily-06",
+     "text": "Comme ci, comme ça.",
+     "meaning": "그저 그래",
+     "example": "Le boulot, comme ci, comme ça.",
+     "exampleKo": "일은 그저 그래.",
+     "tip": ""
+    },
+    {
+     "id": "fr-daily-07",
+     "text": "Merci.",
+     "meaning": "고마워",
+     "example": "Merci de m'avoir aidé.",
+     "exampleKo": "도와줘서 고마워.",
+     "tip": "",
+     "sentences": 1589,
+     "perMillion": 2172.7
+    },
+    {
+     "id": "fr-daily-08",
+     "text": "De rien.",
+     "meaning": "천만에",
+     "example": "De rien, c'est normal.",
+     "exampleKo": "천만에, 당연한 거야.",
+     "tip": "",
+     "sentences": 324,
+     "perMillion": 443.0
+    },
+    {
+     "id": "fr-daily-09",
+     "text": "Pas de souci.",
+     "meaning": "문제없어",
+     "example": "Pas de souci, je t'attends.",
+     "exampleKo": "문제없어, 기다릴게.",
+     "tip": "",
+     "sentences": 71,
+     "perMillion": 97.1
+    },
+    {
+     "id": "fr-daily-10",
+     "text": "Pardon.",
+     "meaning": "미안, 실례",
+     "example": "Pardon, j'étais en retard.",
+     "exampleKo": "미안, 늦었어.",
+     "tip": "",
+     "sentences": 284,
+     "perMillion": 388.3
+    },
+    {
+     "id": "fr-daily-11",
+     "text": "À plus tard.",
+     "meaning": "이따 봐",
+     "example": "À plus tard, je file.",
+     "exampleKo": "이따 봐, 나 갈게.",
+     "tip": "",
+     "sentences": 50,
+     "perMillion": 68.4
+    },
+    {
+     "id": "fr-daily-12",
+     "text": "À demain.",
+     "meaning": "내일 봐",
+     "example": "Bonne nuit, à demain.",
+     "exampleKo": "잘 자, 내일 봐.",
+     "tip": "",
+     "sentences": 60,
+     "perMillion": 82.0
+    },
+    {
+     "id": "fr-daily-13",
+     "text": "Au revoir.",
+     "meaning": "안녕히 가세요",
+     "example": "Au revoir, bonne journée.",
+     "exampleKo": "안녕히 가세요, 좋은 하루 보내세요.",
+     "tip": "",
+     "sentences": 217,
+     "perMillion": 296.7
+    },
+    {
+     "id": "fr-daily-14",
+     "text": "Je suis rentré.",
+     "meaning": "나 왔어",
+     "example": "Je suis rentré, j'ai faim.",
+     "exampleKo": "나 왔어, 배고파.",
+     "tip": "여자가 말하면 rentrée예요.",
+     "sentences": 89,
+     "perMillion": 121.7
+    },
+    {
+     "id": "fr-daily-15",
+     "text": "J'ai faim.",
+     "meaning": "배고파",
+     "example": "J'ai faim, on mange ?",
+     "exampleKo": "배고파, 밥 먹을까?",
+     "tip": "",
+     "sentences": 66,
+     "perMillion": 90.2
+    },
+    {
+     "id": "fr-daily-16",
+     "text": "J'ai sommeil.",
+     "meaning": "졸려",
+     "example": "J'ai sommeil, je vais dormir.",
+     "exampleKo": "졸려, 자러 갈게.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 16.4
+    },
+    {
+     "id": "fr-daily-17",
+     "text": "Je suis fatigué.",
+     "meaning": "피곤해",
+     "example": "Je suis très fatigué aujourd'hui.",
+     "exampleKo": "오늘 너무 피곤해.",
+     "tip": "여자가 말하면 fatiguée예요.",
+     "sentences": 160,
+     "perMillion": 218.8
+    },
+    {
+     "id": "fr-daily-18",
+     "text": "Il fait chaud.",
+     "meaning": "덥다",
+     "example": "Il fait super chaud aujourd'hui.",
+     "exampleKo": "오늘 엄청 더워.",
+     "tip": "",
+     "sentences": 68,
+     "perMillion": 93.0
+    },
+    {
+     "id": "fr-daily-19",
+     "text": "Il fait froid.",
+     "meaning": "춥다",
+     "example": "Il fait froid, mets ton manteau.",
+     "exampleKo": "추워, 코트 입어.",
+     "tip": "",
+     "sentences": 121,
+     "perMillion": 165.4
+    },
+    {
+     "id": "fr-daily-20",
+     "text": "Il fait beau.",
+     "meaning": "날씨 좋다",
+     "example": "Il fait beau, on sort se promener ?",
+     "exampleKo": "날씨 좋다, 산책 갈까?",
+     "tip": "",
+     "sentences": 43,
+     "perMillion": 58.8
+    },
+    {
+     "id": "fr-daily-21",
+     "text": "Il pleut.",
+     "meaning": "비 와",
+     "example": "Il pleut, prends un parapluie.",
+     "exampleKo": "비 와, 우산 챙겨.",
+     "tip": "",
+     "sentences": 240,
+     "perMillion": 328.2
+    },
+    {
+     "id": "fr-daily-22",
+     "text": "Un instant.",
+     "meaning": "잠깐만",
+     "example": "Un instant, j'arrive.",
+     "exampleKo": "잠깐만, 금방 가.",
+     "tip": "",
+     "sentences": 215,
+     "perMillion": 294.0
+    },
+    {
+     "id": "fr-daily-23",
+     "text": "Il est quelle heure ?",
+     "meaning": "몇 시야?",
+     "example": "Il est quelle heure maintenant ?",
+     "exampleKo": "지금 몇 시야?",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-daily-24",
+     "text": "T'es où ?",
+     "meaning": "어디야?",
+     "example": "T'es où là ?",
+     "exampleKo": "지금 어디야?",
+     "tip": ""
+    },
+    {
+     "id": "fr-daily-25",
+     "text": "Tu veux manger quoi ?",
+     "meaning": "뭐 먹고 싶어?",
+     "example": "Tu veux manger quoi ce soir ?",
+     "exampleKo": "오늘 저녁 뭐 먹고 싶어?",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 10.9
+    },
+    {
+     "id": "fr-daily-26",
+     "text": "Ça m'est égal.",
+     "meaning": "난 상관없어",
+     "example": "Ça m'est égal, choisis toi.",
+     "exampleKo": "난 상관없어, 네가 골라.",
+     "tip": "",
+     "sentences": 42,
+     "perMillion": 57.4
+    },
+    {
+     "id": "fr-daily-27",
+     "text": "C'est délicieux !",
+     "meaning": "너무 맛있다!",
+     "example": "Ce gratin est délicieux !",
+     "exampleKo": "이 그라탱 너무 맛있다!",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 30.1
+    },
+    {
+     "id": "fr-daily-28",
+     "text": "On s'amuse bien !",
+     "meaning": "재밌다!",
+     "example": "On s'amuse bien avec toi !",
+     "exampleKo": "너랑 있으니 재밌어!",
+     "tip": ""
+    },
+    {
+     "id": "fr-daily-29",
+     "text": "Génial !",
+     "meaning": "대박!",
+     "example": "Génial, on a réussi !",
+     "exampleKo": "대박, 우리 해냈어!",
+     "tip": "",
+     "sentences": 140,
+     "perMillion": 191.4
+    },
+    {
+     "id": "fr-daily-30",
+     "text": "Je vois.",
+     "meaning": "그렇구나",
+     "example": "Ah, je vois, ça a du sens.",
+     "exampleKo": "아, 그렇구나, 말이 되네.",
+     "tip": "",
+     "sentences": 455,
+     "perMillion": 622.1
+    },
+    {
+     "id": "fr-daily-31",
+     "text": "D'accord.",
+     "meaning": "알겠어, 좋아",
+     "example": "D'accord, je te dis ça plus tard.",
+     "exampleKo": "알겠어, 이따 말해 줄게.",
+     "tip": "",
+     "sentences": 1099,
+     "perMillion": 1502.7
+    },
+    {
+     "id": "fr-daily-32",
+     "text": "Enchanté.",
+     "meaning": "만나서 반가워요",
+     "example": "Enchanté de te rencontrer.",
+     "exampleKo": "만나서 반가워.",
+     "tip": "여자가 말하면 enchantée예요.",
+     "sentences": 45,
+     "perMillion": 61.5
+    },
+    {
+     "id": "fr-daily-33",
+     "text": "Je m'en vais.",
+     "meaning": "나 갈게",
+     "example": "Bon, je m'en vais.",
+     "exampleKo": "그럼 나 갈게.",
+     "tip": "",
+     "sentences": 46,
+     "perMillion": 62.9
+    },
+    {
+     "id": "fr-daily-34",
+     "text": "Fais attention.",
+     "meaning": "조심해",
+     "example": "Fais attention, il neige.",
+     "exampleKo": "조심해, 눈 와.",
+     "tip": "",
+     "sentences": 190,
+     "perMillion": 259.8
+    },
+    {
+     "id": "fr-daily-35",
+     "text": "Bonne nuit.",
+     "meaning": "잘 자",
+     "example": "Bonne nuit, dors bien.",
+     "exampleKo": "잘 자, 푹 자.",
+     "tip": "",
+     "sentences": 126,
+     "perMillion": 172.3
+    },
+    {
+     "id": "fr-daily-36",
+     "text": "Bon courage !",
+     "meaning": "힘내!",
+     "example": "Bon courage pour l'examen !",
+     "exampleKo": "시험 힘내!",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 19.1
+    },
+    {
+     "id": "fr-daily-37",
+     "text": "Et toi ?",
+     "meaning": "너는?",
+     "example": "Moi je prends un café, et toi ?",
+     "exampleKo": "난 커피 마셔, 너는?",
+     "tip": "",
+     "sentences": 200,
+     "perMillion": 273.5
+    },
+    {
+     "id": "fr-daily-38",
+     "text": "Bonne journée !",
+     "meaning": "좋은 하루!",
+     "example": "Bonne journée, à ce soir !",
+     "exampleKo": "좋은 하루 보내, 이따 저녁에 봐!",
+     "tip": "",
+     "sentences": 64,
+     "perMillion": 87.5
+    },
+    {
+     "id": "fr-daily-39",
+     "text": "Bon appétit !",
+     "meaning": "맛있게 먹어!",
+     "example": "Bon appétit, mon cœur !",
+     "exampleKo": "맛있게 먹어, 자기야!",
+     "tip": "식사 전에 하는 정해진 인사예요.",
+     "sentences": 29,
+     "perMillion": 39.7
+    },
+    {
+     "id": "fr-daily-40",
+     "text": "À tes souhaits !",
+     "meaning": "건강하길! (재채기할 때)",
+     "example": "Atchoum ! — À tes souhaits !",
+     "exampleKo": "에취! — 건강하길!",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "routine",
+   "title": {
+    "ko": "하루 일과",
+    "en": "Daily routine"
+   },
+   "items": [
+    {
+     "id": "fr-routine-01",
+     "text": "T'es réveillé ?",
+     "meaning": "일어났어?",
+     "example": "T'es déjà réveillé ?",
+     "exampleKo": "벌써 일어났어?",
+     "tip": "",
+     "sentences": 373,
+     "perMillion": 510.0
+    },
+    {
+     "id": "fr-routine-02",
+     "text": "Je me suis réveillé en retard.",
+     "meaning": "늦게 일어났어",
+     "example": "Je me suis réveillé en retard !",
+     "exampleKo": "늦게 일어났어!",
+     "tip": ""
+    },
+    {
+     "id": "fr-routine-03",
+     "text": "se laver le visage",
+     "meaning": "세수하다",
+     "example": "Je me lave le visage au réveil.",
+     "exampleKo": "일어나서 세수해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-routine-04",
+     "text": "se brosser les dents",
+     "meaning": "양치하다",
+     "example": "Brosse-toi les dents avant de dormir.",
+     "exampleKo": "자기 전에 양치해.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 16.4
+    },
+    {
+     "id": "fr-routine-05",
+     "text": "prendre une douche",
+     "meaning": "샤워하다",
+     "example": "Je vais prendre une douche.",
+     "exampleKo": "샤워할게.",
+     "tip": "",
+     "sentences": 62,
+     "perMillion": 84.8
+    },
+    {
+     "id": "fr-routine-06",
+     "text": "prendre le petit-déjeuner",
+     "meaning": "아침을 먹다",
+     "example": "T'as pris ton petit-déjeuner ?",
+     "exampleKo": "아침 먹었어?",
+     "tip": "",
+     "sentences": 619,
+     "perMillion": 846.4
+    },
+    {
+     "id": "fr-routine-07",
+     "text": "prendre le métro",
+     "meaning": "지하철 타다",
+     "example": "Je prends le métro pour aller au boulot.",
+     "exampleKo": "출근할 때 지하철 타.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-routine-08",
+     "text": "prendre le bus",
+     "meaning": "버스 타다",
+     "example": "Aujourd'hui, je prends le bus.",
+     "exampleKo": "오늘은 버스 타.",
+     "tip": "",
+     "sentences": 36,
+     "perMillion": 49.2
+    },
+    {
+     "id": "fr-routine-09",
+     "text": "aller au boulot",
+     "meaning": "출근하다",
+     "example": "Je dois aller au boulot.",
+     "exampleKo": "출근해야 해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-routine-10",
+     "text": "aller en cours",
+     "meaning": "수업에 가다",
+     "example": "Demain, j'ai cours à huit heures.",
+     "exampleKo": "내일 8시 수업이야.",
+     "tip": ""
+    },
+    {
+     "id": "fr-routine-11",
+     "text": "déjeuner",
+     "meaning": "점심을 먹다",
+     "example": "Tu as déjeuné où ?",
+     "exampleKo": "점심 어디서 먹었어?",
+     "tip": "",
+     "sentences": 1282,
+     "perMillion": 1752.9
+    },
+    {
+     "id": "fr-routine-12",
+     "text": "finir le travail",
+     "meaning": "퇴근하다",
+     "example": "Tu finis à quelle heure ?",
+     "exampleKo": "몇 시에 끝나?",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 24.6
+    },
+    {
+     "id": "fr-routine-13",
+     "text": "faire des heures sup",
+     "meaning": "야근하다",
+     "example": "Ce soir, je fais des heures sup.",
+     "exampleKo": "오늘 밤 야근해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-routine-14",
+     "text": "rentrer à la maison",
+     "meaning": "집에 가다",
+     "example": "Je rentre à la maison.",
+     "exampleKo": "집에 가는 중이야.",
+     "tip": "",
+     "sentences": 632,
+     "perMillion": 864.1
+    },
+    {
+     "id": "fr-routine-15",
+     "text": "préparer le dîner",
+     "meaning": "저녁을 준비하다",
+     "example": "Je prépare le dîner.",
+     "exampleKo": "저녁 준비하는 중이야.",
+     "tip": "",
+     "sentences": 60,
+     "perMillion": 82.0
+    },
+    {
+     "id": "fr-routine-16",
+     "text": "faire la lessive",
+     "meaning": "빨래하다",
+     "example": "Ce week-end, je fais la lessive.",
+     "exampleKo": "주말에 빨래해.",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 15.0
+    },
+    {
+     "id": "fr-routine-17",
+     "text": "faire le ménage",
+     "meaning": "청소하다",
+     "example": "J'ai fait le ménage dans ma chambre.",
+     "exampleKo": "방 청소했어.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 19.1
+    },
+    {
+     "id": "fr-routine-18",
+     "text": "faire les courses",
+     "meaning": "장 보다",
+     "example": "Je vais faire les courses.",
+     "exampleKo": "장 보러 갈게.",
+     "tip": "",
+     "sentences": 66,
+     "perMillion": 90.2
+    },
+    {
+     "id": "fr-routine-19",
+     "text": "rester à la maison",
+     "meaning": "집에 있다",
+     "example": "Le dimanche, je reste à la maison.",
+     "exampleKo": "일요일엔 집에 있어.",
+     "tip": "",
+     "sentences": 149,
+     "perMillion": 203.7
+    },
+    {
+     "id": "fr-routine-20",
+     "text": "regarder une série",
+     "meaning": "드라마를 보다",
+     "example": "Le soir, je regarde une série.",
+     "exampleKo": "밤엔 드라마 봐.",
+     "tip": ""
+    },
+    {
+     "id": "fr-routine-21",
+     "text": "écouter de la musique",
+     "meaning": "음악을 듣다",
+     "example": "J'écoute de la musique dans le métro.",
+     "exampleKo": "지하철에서 음악 들어.",
+     "tip": "",
+     "sentences": 52,
+     "perMillion": 71.1
+    },
+    {
+     "id": "fr-routine-22",
+     "text": "aller à la salle de sport",
+     "meaning": "헬스장에 가다",
+     "example": "Après le boulot, je vais à la salle de sport.",
+     "exampleKo": "퇴근하고 헬스장 가.",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 43.8
+    },
+    {
+     "id": "fr-routine-23",
+     "text": "se promener",
+     "meaning": "산책하다",
+     "example": "On se promène près de la Seine.",
+     "exampleKo": "센강 근처에서 산책해.",
+     "tip": "",
+     "sentences": 134,
+     "perMillion": 183.2
+    },
+    {
+     "id": "fr-routine-24",
+     "text": "prendre un bain",
+     "meaning": "목욕하다",
+     "example": "Je vais prendre un bain.",
+     "exampleKo": "목욕하고 올게.",
+     "tip": "",
+     "sentences": 43,
+     "perMillion": 58.8
+    },
+    {
+     "id": "fr-routine-25",
+     "text": "se coucher",
+     "meaning": "잠자리에 들다",
+     "example": "Je me couche vers minuit.",
+     "exampleKo": "자정쯤 잠자리에 들어.",
+     "tip": "",
+     "sentences": 117,
+     "perMillion": 160.0
+    },
+    {
+     "id": "fr-routine-26",
+     "text": "se lever tôt",
+     "meaning": "일찍 일어나다",
+     "example": "Demain, je dois me lever tôt.",
+     "exampleKo": "내일 일찍 일어나야 해.",
+     "tip": "",
+     "sentences": 44,
+     "perMillion": 60.2
+    },
+    {
+     "id": "fr-routine-27",
+     "text": "veiller tard",
+     "meaning": "밤늦게까지 깨어 있다",
+     "example": "J'ai encore veillé tard hier.",
+     "exampleKo": "어제도 늦게까지 안 잤어.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 13.7
+    },
+    {
+     "id": "fr-routine-28",
+     "text": "faire la grasse matinée",
+     "meaning": "늦잠 자다",
+     "example": "Le dimanche, je fais la grasse matinée.",
+     "exampleKo": "일요일엔 늦잠 자.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-routine-29",
+     "text": "apporter son déjeuner",
+     "meaning": "도시락을 싸 가다",
+     "example": "Aujourd'hui, j'ai apporté mon déjeuner.",
+     "exampleKo": "오늘은 도시락 싸 왔어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-routine-30",
+     "text": "la boulangerie",
+     "meaning": "빵집",
+     "example": "J'ai acheté une baguette à la boulangerie.",
+     "exampleKo": "빵집에서 바게트 샀어.",
+     "tip": "",
+     "sentences": 92,
+     "perMillion": 125.8
+    },
+    {
+     "id": "fr-routine-31",
+     "text": "un jour de congé",
+     "meaning": "쉬는 날",
+     "example": "Demain, c'est mon jour de congé.",
+     "exampleKo": "내일 쉬는 날이야.",
+     "tip": "",
+     "sentences": 69,
+     "perMillion": 94.3
+    },
+    {
+     "id": "fr-routine-32",
+     "text": "le week-end",
+     "meaning": "주말",
+     "example": "Qu'est-ce que tu fais ce week-end ?",
+     "exampleKo": "이번 주말에 뭐 해?",
+     "tip": "",
+     "sentences": 375,
+     "perMillion": 512.7
+    },
+    {
+     "id": "fr-routine-33",
+     "text": "en semaine",
+     "meaning": "평일에",
+     "example": "En semaine, je suis toujours occupé.",
+     "exampleKo": "평일엔 항상 바빠.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-routine-34",
+     "text": "tous les jours",
+     "meaning": "매일",
+     "example": "J'étudie le français tous les jours.",
+     "exampleKo": "매일 프랑스어 공부해.",
+     "tip": "",
+     "sentences": 805,
+     "perMillion": 1100.7
+    },
+    {
+     "id": "fr-routine-35",
+     "text": "toujours",
+     "meaning": "항상",
+     "example": "Je passe toujours par ici.",
+     "exampleKo": "난 항상 여기로 지나가.",
+     "tip": "",
+     "sentences": 7224,
+     "perMillion": 9877.4
+    },
+    {
+     "id": "fr-routine-36",
+     "text": "parfois",
+     "meaning": "가끔",
+     "example": "Parfois, je cuisine moi-même.",
+     "exampleKo": "가끔 직접 요리해.",
+     "tip": "",
+     "sentences": 1039,
+     "perMillion": 1420.6
+    },
+    {
+     "id": "fr-routine-37",
+     "text": "faire du télétravail",
+     "meaning": "재택근무하다",
+     "example": "Aujourd'hui, je fais du télétravail.",
+     "exampleKo": "오늘은 재택근무야.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 10.9
+    },
+    {
+     "id": "fr-routine-38",
+     "text": "faire une pause",
+     "meaning": "잠깐 쉬다",
+     "example": "On fait une pause ?",
+     "exampleKo": "우리 잠깐 쉴까?",
+     "tip": "",
+     "sentences": 48,
+     "perMillion": 65.6
+    },
+    {
+     "id": "fr-routine-39",
+     "text": "regarder son téléphone",
+     "meaning": "폰을 보다",
+     "example": "Avant de dormir, je regarde mon téléphone.",
+     "exampleKo": "자기 전에 폰을 봐.",
+     "tip": ""
+    },
+    {
+     "id": "fr-routine-40",
+     "text": "se préparer",
+     "meaning": "준비하다",
+     "example": "Je me prépare, attends-moi.",
+     "exampleKo": "준비 중이니까 기다려.",
+     "tip": "",
+     "sentences": 51,
+     "perMillion": 69.7
+    }
+   ]
+  },
+  {
+   "id": "out",
+   "title": {
+    "ko": "밖에서",
+    "en": "Out and about"
+   },
+   "items": [
+    {
+     "id": "fr-out-01",
+     "text": "C'est combien ?",
+     "meaning": "얼마예요?",
+     "example": "Ça, c'est combien ?",
+     "exampleKo": "이거 얼마예요?",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-out-02",
+     "text": "Je prends celui-ci.",
+     "meaning": "이걸로 할게요",
+     "example": "Je prends celui-ci, merci.",
+     "exampleKo": "이걸로 할게요, 감사합니다.",
+     "tip": "",
+     "sentences": 295,
+     "perMillion": 403.4
+    },
+    {
+     "id": "fr-out-03",
+     "text": "Vous prenez la carte ?",
+     "meaning": "카드 돼요?",
+     "example": "Vous prenez la carte ?",
+     "exampleKo": "카드 돼요?",
+     "tip": ""
+    },
+    {
+     "id": "fr-out-04",
+     "text": "Pas besoin de sac.",
+     "meaning": "봉투 필요 없어요",
+     "example": "Pas besoin de sac, merci.",
+     "exampleKo": "봉투 괜찮아요, 감사합니다.",
+     "tip": ""
+    },
+    {
+     "id": "fr-out-05",
+     "text": "Où sont les toilettes ?",
+     "meaning": "화장실 어디예요?",
+     "example": "Pardon, où sont les toilettes ?",
+     "exampleKo": "실례지만 화장실 어디예요?",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 24.6
+    },
+    {
+     "id": "fr-out-06",
+     "text": "Où est la gare ?",
+     "meaning": "역이 어디예요?",
+     "example": "Où est la gare d'ici ?",
+     "exampleKo": "여기서 역이 어디예요?",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 13.7
+    },
+    {
+     "id": "fr-out-07",
+     "text": "Je suis perdu.",
+     "meaning": "길을 잃었어요",
+     "example": "Désolé, je suis perdu.",
+     "exampleKo": "죄송해요, 길을 잃었어요.",
+     "tip": "여자가 말하면 perdue예요.",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-out-08",
+     "text": "Allez tout droit.",
+     "meaning": "쭉 가세요",
+     "example": "Allez tout droit puis tournez à droite.",
+     "exampleKo": "쭉 가서 오른쪽으로 도세요.",
+     "tip": "",
+     "sentences": 58,
+     "perMillion": 79.3
+    },
+    {
+     "id": "fr-out-09",
+     "text": "Tourne à droite.",
+     "meaning": "오른쪽으로 돌아",
+     "example": "Au coin, tourne à droite.",
+     "exampleKo": "모퉁이에서 오른쪽으로 돌아.",
+     "tip": "",
+     "sentences": 201,
+     "perMillion": 274.8
+    },
+    {
+     "id": "fr-out-10",
+     "text": "Tourne à gauche.",
+     "meaning": "왼쪽으로 돌아",
+     "example": "Au feu, tourne à gauche.",
+     "exampleKo": "신호등에서 왼쪽으로 돌아.",
+     "tip": "",
+     "sentences": 185,
+     "perMillion": 253.0
+    },
+    {
+     "id": "fr-out-11",
+     "text": "C'est tout près.",
+     "meaning": "아주 가까워요",
+     "example": "C'est tout près de la gare.",
+     "exampleKo": "역에서 아주 가까워요.",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 46.5
+    },
+    {
+     "id": "fr-out-12",
+     "text": "C'est loin.",
+     "meaning": "멀어요",
+     "example": "À pied, c'est un peu loin.",
+     "exampleKo": "걸어서 좀 멀어요.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-out-13",
+     "text": "Une table pour deux.",
+     "meaning": "두 명이에요",
+     "example": "Une table pour deux, s'il vous plaît.",
+     "exampleKo": "두 명 자리 부탁해요.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 10.9
+    },
+    {
+     "id": "fr-out-14",
+     "text": "J'ai réservé.",
+     "meaning": "예약했어요",
+     "example": "J'ai réservé pour dix-neuf heures.",
+     "exampleKo": "19시에 예약했어요.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 26.0
+    },
+    {
+     "id": "fr-out-15",
+     "text": "La carte, s'il vous plaît.",
+     "meaning": "메뉴판 주세요",
+     "example": "La carte, s'il vous plaît.",
+     "exampleKo": "메뉴판 주세요.",
+     "tip": "",
+     "sentences": 190,
+     "perMillion": 259.8
+    },
+    {
+     "id": "fr-out-16",
+     "text": "Qu'est-ce que vous me conseillez ?",
+     "meaning": "추천 메뉴가 뭐예요?",
+     "example": "Qu'est-ce que vous me conseillez ?",
+     "exampleKo": "추천하는 게 뭐예요?",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-out-17",
+     "text": "L'addition, s'il vous plaît.",
+     "meaning": "계산해 주세요",
+     "example": "L'addition, s'il vous plaît.",
+     "exampleKo": "계산해 주세요.",
+     "tip": "",
+     "sentences": 82,
+     "perMillion": 112.1
+    },
+    {
+     "id": "fr-out-18",
+     "text": "À emporter.",
+     "meaning": "포장이요",
+     "example": "Deux cafés à emporter, s'il vous plaît.",
+     "exampleKo": "커피 두 잔 포장해 주세요.",
+     "tip": "",
+     "sentences": 17,
+     "perMillion": 23.2
+    },
+    {
+     "id": "fr-out-19",
+     "text": "Sur place.",
+     "meaning": "여기서 먹을게요",
+     "example": "C'est pour manger sur place.",
+     "exampleKo": "여기서 먹을게요.",
+     "tip": "",
+     "sentences": 92,
+     "perMillion": 125.8
+    },
+    {
+     "id": "fr-out-20",
+     "text": "Excusez-moi.",
+     "meaning": "저기요, 실례합니다",
+     "example": "Excusez-moi, je peux commander ?",
+     "exampleKo": "저기요, 주문해도 돼요?",
+     "tip": "",
+     "sentences": 246,
+     "perMillion": 336.4
+    },
+    {
+     "id": "fr-out-21",
+     "text": "Il y a une table de libre ?",
+     "meaning": "빈 테이블 있어요?",
+     "example": "Il y a une table de libre ?",
+     "exampleKo": "빈 테이블 있어요?",
+     "tip": ""
+    },
+    {
+     "id": "fr-out-22",
+     "text": "Il y a beaucoup de monde.",
+     "meaning": "사람 많다",
+     "example": "Il y a beaucoup de monde aujourd'hui.",
+     "exampleKo": "오늘 사람 많네.",
+     "tip": "",
+     "sentences": 64,
+     "perMillion": 87.5
+    },
+    {
+     "id": "fr-out-23",
+     "text": "Le train a du retard.",
+     "meaning": "열차가 늦어",
+     "example": "Le train a du retard, je serai en retard.",
+     "exampleKo": "열차가 늦어서 늦을 거야.",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 45.1
+    },
+    {
+     "id": "fr-out-24",
+     "text": "changer de ligne",
+     "meaning": "환승하다",
+     "example": "On doit changer de ligne à la prochaine.",
+     "exampleKo": "다음 역에서 환승해야 해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-out-25",
+     "text": "le ticket",
+     "meaning": "표",
+     "example": "Je vais acheter un ticket.",
+     "exampleKo": "표 사러 갈게.",
+     "tip": "",
+     "sentences": 127,
+     "perMillion": 173.6
+    },
+    {
+     "id": "fr-out-26",
+     "text": "prendre un taxi",
+     "meaning": "택시 타다",
+     "example": "Il est tard, prenons un taxi.",
+     "exampleKo": "늦었으니 택시 타자.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 31.4
+    },
+    {
+     "id": "fr-out-27",
+     "text": "Vous pouvez nous prendre en photo ?",
+     "meaning": "사진 좀 찍어 주실래요?",
+     "example": "Excusez-moi, vous pouvez nous prendre en photo ?",
+     "exampleKo": "실례지만 사진 좀 찍어 주실래요?",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 35.6
+    },
+    {
+     "id": "fr-out-28",
+     "text": "On se prend en photo.",
+     "meaning": "같이 사진 찍자",
+     "example": "On se prend en photo ici !",
+     "exampleKo": "여기서 같이 사진 찍자!",
+     "tip": ""
+    },
+    {
+     "id": "fr-out-29",
+     "text": "Je peux l'essayer ?",
+     "meaning": "입어 봐도 돼요?",
+     "example": "Je peux l'essayer ?",
+     "exampleKo": "입어 봐도 돼요?",
+     "tip": "",
+     "sentences": 64,
+     "perMillion": 87.5
+    },
+    {
+     "id": "fr-out-30",
+     "text": "Vous l'avez en plus grand ?",
+     "meaning": "더 큰 사이즈 있어요?",
+     "example": "Vous l'avez en plus grand ?",
+     "exampleKo": "더 큰 사이즈 있어요?",
+     "tip": ""
+    },
+    {
+     "id": "fr-out-31",
+     "text": "C'est pas cher.",
+     "meaning": "싸다",
+     "example": "C'est pas cher du tout !",
+     "exampleKo": "하나도 안 비싸!",
+     "tip": "",
+     "sentences": 49,
+     "perMillion": 67.0
+    },
+    {
+     "id": "fr-out-32",
+     "text": "C'est cher.",
+     "meaning": "비싸다",
+     "example": "Je trouve ça un peu cher.",
+     "exampleKo": "좀 비싼 것 같아.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 6.8
+    },
+    {
+     "id": "fr-out-33",
+     "text": "les soldes",
+     "meaning": "세일",
+     "example": "Ce sont les soldes en ce moment.",
+     "exampleKo": "지금 세일 기간이야.",
+     "tip": "프랑스는 겨울·여름에 정해진 기간에만 세일해요.",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-out-34",
+     "text": "C'est ouvert ?",
+     "meaning": "열었어요?",
+     "example": "C'est encore ouvert ?",
+     "exampleKo": "아직 열었어요?",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-out-35",
+     "text": "C'est fermé.",
+     "meaning": "닫았어요",
+     "example": "C'est déjà fermé.",
+     "exampleKo": "벌써 닫았어요.",
+     "tip": ""
+    },
+    {
+     "id": "fr-out-36",
+     "text": "Il y a du wifi ?",
+     "meaning": "와이파이 있어요?",
+     "example": "Il y a du wifi ici ?",
+     "exampleKo": "여기 와이파이 있어요?",
+     "tip": ""
+    },
+    {
+     "id": "fr-out-37",
+     "text": "Je dois recharger mon téléphone.",
+     "meaning": "폰 충전해야 해요",
+     "example": "Je dois recharger mon téléphone.",
+     "exampleKo": "폰 충전해야 해요.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 10.9
+    },
+    {
+     "id": "fr-out-38",
+     "text": "Comment on y va ?",
+     "meaning": "어떻게 가요?",
+     "example": "Comment on y va, là-bas ?",
+     "exampleKo": "거기 어떻게 가요?",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "feelings",
+   "title": {
+    "ko": "감정·관계",
+    "en": "Feelings & people"
+   },
+   "items": [
+    {
+     "id": "fr-feelings-01",
+     "text": "Je suis heureux.",
+     "meaning": "행복해",
+     "example": "Je suis heureux de te voir.",
+     "exampleKo": "널 봐서 행복해.",
+     "tip": "",
+     "sentences": 1810,
+     "perMillion": 2474.8
+    },
+    {
+     "id": "fr-feelings-02",
+     "text": "Je suis triste.",
+     "meaning": "슬퍼",
+     "example": "Cette nouvelle me rend triste.",
+     "exampleKo": "그 소식에 슬퍼.",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 46.5
+    },
+    {
+     "id": "fr-feelings-03",
+     "text": "Je me sens seul.",
+     "meaning": "외로워",
+     "example": "Je me sens seul ici.",
+     "exampleKo": "여기선 외로워.",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 16.4
+    },
+    {
+     "id": "fr-feelings-04",
+     "text": "J'ai peur.",
+     "meaning": "무서워",
+     "example": "J'ai peur de ce film.",
+     "exampleKo": "그 영화가 무서워.",
+     "tip": "",
+     "sentences": 292,
+     "perMillion": 399.3
+    },
+    {
+     "id": "fr-feelings-05",
+     "text": "J'ai honte.",
+     "meaning": "부끄러워",
+     "example": "J'ai honte de chanter devant tout le monde.",
+     "exampleKo": "다들 앞에서 노래하기 부끄러워.",
+     "tip": "",
+     "sentences": 44,
+     "perMillion": 60.2
+    },
+    {
+     "id": "fr-feelings-06",
+     "text": "Ça m'énerve.",
+     "meaning": "짜증 나",
+     "example": "Les embouteillages m'énervent.",
+     "exampleKo": "교통 체증 짜증 나.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-feelings-07",
+     "text": "Je stresse.",
+     "meaning": "긴장돼",
+     "example": "Je stresse pour l'entretien.",
+     "exampleKo": "면접 때문에 긴장돼.",
+     "tip": ""
+    },
+    {
+     "id": "fr-feelings-08",
+     "text": "Ouf !",
+     "meaning": "휴, 다행이다!",
+     "example": "Ouf, tu vas bien !",
+     "exampleKo": "휴, 너 괜찮구나!",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 26.0
+    },
+    {
+     "id": "fr-feelings-09",
+     "text": "J'ai eu peur.",
+     "meaning": "깜짝 놀랐어",
+     "example": "J'ai eu peur quand t'es arrivé.",
+     "exampleKo": "네가 와서 깜짝 놀랐어.",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 26.0
+    },
+    {
+     "id": "fr-feelings-10",
+     "text": "Je suis furieux.",
+     "meaning": "화가 나",
+     "example": "Je suis furieux de son attitude.",
+     "exampleKo": "그 태도에 화가 나.",
+     "tip": "",
+     "sentences": 111,
+     "perMillion": 151.8
+    },
+    {
+     "id": "fr-feelings-11",
+     "text": "Ça m'a ému.",
+     "meaning": "감동받았어",
+     "example": "Ce film m'a vraiment ému.",
+     "exampleKo": "그 영화에 정말 감동받았어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-feelings-12",
+     "text": "Ça me rappelle des souvenirs.",
+     "meaning": "추억이 떠올라",
+     "example": "Cette chanson me rappelle des souvenirs.",
+     "exampleKo": "이 노래가 추억을 떠올리게 해.",
+     "tip": "",
+     "sentences": 45,
+     "perMillion": 61.5
+    },
+    {
+     "id": "fr-feelings-13",
+     "text": "J'ai la flemme.",
+     "meaning": "귀찮아",
+     "example": "J'ai la flemme de cuisiner aujourd'hui.",
+     "exampleKo": "오늘 요리하기 귀찮아.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 24.6
+    },
+    {
+     "id": "fr-feelings-14",
+     "text": "Je m'ennuie.",
+     "meaning": "지루해",
+     "example": "Je m'ennuie dans ce cours.",
+     "exampleKo": "이 수업 지루해.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 42.4
+    },
+    {
+     "id": "fr-feelings-15",
+     "text": "Je me sens bien avec toi.",
+     "meaning": "너랑 있으면 편해",
+     "example": "Je me sens bien avec toi.",
+     "exampleKo": "너랑 있으면 마음이 편해.",
+     "tip": "",
+     "sentences": 37,
+     "perMillion": 50.6
+    },
+    {
+     "id": "fr-feelings-16",
+     "text": "J'ai trop envie de voyager.",
+     "meaning": "여행 너무 가고 싶어",
+     "example": "J'ai trop envie de voyager.",
+     "exampleKo": "여행이 너무 가고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-feelings-17",
+     "text": "Je me sens bizarre.",
+     "meaning": "기분이 이상해",
+     "example": "Aujourd'hui, je me sens bizarre.",
+     "exampleKo": "오늘 기분이 이상해.",
+     "tip": "",
+     "sentences": 326,
+     "perMillion": 445.7
+    },
+    {
+     "id": "fr-feelings-18",
+     "text": "un ami",
+     "meaning": "친구",
+     "example": "J'ai croisé un ami du lycée.",
+     "exampleKo": "고등학교 친구를 마주쳤어.",
+     "tip": "",
+     "sentences": 433,
+     "perMillion": 592.0
+    },
+    {
+     "id": "fr-feelings-19",
+     "text": "mon meilleur ami",
+     "meaning": "절친",
+     "example": "C'est ma meilleure amie.",
+     "exampleKo": "그 애는 내 절친이야.",
+     "tip": "",
+     "sentences": 139,
+     "perMillion": 190.1
+    },
+    {
+     "id": "fr-feelings-20",
+     "text": "mon copain",
+     "meaning": "남자친구",
+     "example": "Tu as un copain ?",
+     "exampleKo": "남자친구 있어?",
+     "tip": "",
+     "sentences": 193,
+     "perMillion": 263.9
+    },
+    {
+     "id": "fr-feelings-21",
+     "text": "ma copine",
+     "meaning": "여자친구",
+     "example": "Ma copine est très gentille.",
+     "exampleKo": "내 여자친구는 정말 착해.",
+     "tip": "",
+     "sentences": 328,
+     "perMillion": 448.5
+    },
+    {
+     "id": "fr-feelings-22",
+     "text": "la famille",
+     "meaning": "가족",
+     "example": "Je voyage avec ma famille.",
+     "exampleKo": "가족이랑 여행 가.",
+     "tip": "",
+     "sentences": 351,
+     "perMillion": 479.9
+    },
+    {
+     "id": "fr-feelings-23",
+     "text": "mes parents",
+     "meaning": "부모님",
+     "example": "Je voudrais te présenter à mes parents.",
+     "exampleKo": "너를 부모님께 소개하고 싶어.",
+     "tip": "",
+     "sentences": 613,
+     "perMillion": 838.2
+    },
+    {
+     "id": "fr-feelings-24",
+     "text": "les frères et sœurs",
+     "meaning": "형제자매",
+     "example": "T'as des frères et sœurs ?",
+     "exampleKo": "형제자매 있어?",
+     "tip": "",
+     "sentences": 76,
+     "perMillion": 103.9
+    },
+    {
+     "id": "fr-feelings-25",
+     "text": "bien s'entendre",
+     "meaning": "사이가 좋다",
+     "example": "On s'entend très bien.",
+     "exampleKo": "우리 사이 정말 좋아.",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 46.5
+    },
+    {
+     "id": "fr-feelings-26",
+     "text": "une personne douce",
+     "meaning": "다정한 사람",
+     "example": "C'est une personne très douce.",
+     "exampleKo": "정말 다정한 사람이야.",
+     "tip": ""
+    },
+    {
+     "id": "fr-feelings-27",
+     "text": "une personne drôle",
+     "meaning": "재밌는 사람",
+     "example": "T'es une personne drôle.",
+     "exampleKo": "너 재밌는 사람이야.",
+     "tip": ""
+    },
+    {
+     "id": "fr-feelings-28",
+     "text": "faire confiance",
+     "meaning": "믿다",
+     "example": "Je te fais confiance.",
+     "exampleKo": "널 믿어.",
+     "tip": "",
+     "sentences": 264,
+     "perMillion": 361.0
+    },
+    {
+     "id": "fr-feelings-29",
+     "text": "s'inquiéter",
+     "meaning": "걱정하다",
+     "example": "Ma mère s'inquiète pour toi.",
+     "exampleKo": "엄마가 너를 걱정하셔.",
+     "tip": "",
+     "sentences": 66,
+     "perMillion": 90.2
+    },
+    {
+     "id": "fr-feelings-30",
+     "text": "se disputer",
+     "meaning": "다투다",
+     "example": "Hier, je me suis disputé avec un ami.",
+     "exampleKo": "어제 친구랑 다퉜어.",
+     "tip": "",
+     "sentences": 57,
+     "perMillion": 77.9
+    },
+    {
+     "id": "fr-feelings-31",
+     "text": "ne pas avoir le moral",
+     "meaning": "기운이 없다",
+     "example": "Aujourd'hui, t'as pas le moral.",
+     "exampleKo": "오늘 기운 없어 보여.",
+     "tip": "",
+     "sentences": 60,
+     "perMillion": 82.0
+    },
+    {
+     "id": "fr-feelings-32",
+     "text": "ne pas avoir la motivation",
+     "meaning": "의욕이 없다",
+     "example": "Le lundi, j'ai pas la motivation.",
+     "exampleKo": "월요일엔 의욕이 없어.",
+     "tip": "",
+     "sentences": 51,
+     "perMillion": 69.7
+    },
+    {
+     "id": "fr-feelings-33",
+     "text": "être de bonne humeur",
+     "meaning": "기분이 좋다",
+     "example": "Aujourd'hui, je suis de bonne humeur !",
+     "exampleKo": "오늘 기분 좋아!",
+     "tip": "",
+     "sentences": 101,
+     "perMillion": 138.1
+    },
+    {
+     "id": "fr-feelings-34",
+     "text": "être de mauvaise humeur",
+     "meaning": "기분이 나쁘다",
+     "example": "Aujourd'hui, je suis de mauvaise humeur.",
+     "exampleKo": "오늘 기분이 안 좋아.",
+     "tip": "",
+     "sentences": 78,
+     "perMillion": 106.7
+    },
+    {
+     "id": "fr-feelings-35",
+     "text": "pleurer",
+     "meaning": "울다",
+     "example": "J'ai pleuré en regardant ce film.",
+     "exampleKo": "영화 보다가 울었어.",
+     "tip": "",
+     "sentences": 690,
+     "perMillion": 943.4
+    }
+   ]
+  },
+  {
+   "id": "plans",
+   "title": {
+    "ko": "약속·계획",
+    "en": "Plans & time"
+   },
+   "items": [
+    {
+     "id": "fr-plans-01",
+     "text": "la prochaine fois",
+     "meaning": "다음에",
+     "example": "La prochaine fois, on y va ensemble.",
+     "exampleKo": "다음엔 같이 가자.",
+     "tip": "",
+     "sentences": 205,
+     "perMillion": 280.3
+    },
+    {
+     "id": "fr-plans-02",
+     "text": "demain",
+     "meaning": "내일",
+     "example": "On se voit demain ?",
+     "exampleKo": "내일 만날까?",
+     "tip": "",
+     "sentences": 3416,
+     "perMillion": 4670.7
+    },
+    {
+     "id": "fr-plans-03",
+     "text": "après-demain",
+     "meaning": "모레",
+     "example": "Et après-demain ?",
+     "exampleKo": "모레는 어때?",
+     "tip": "",
+     "sentences": 92,
+     "perMillion": 125.8
+    },
+    {
+     "id": "fr-plans-04",
+     "text": "la semaine prochaine",
+     "meaning": "다음 주",
+     "example": "T'es libre la semaine prochaine ?",
+     "exampleKo": "다음 주에 시간 돼?",
+     "tip": "",
+     "sentences": 358,
+     "perMillion": 489.5
+    },
+    {
+     "id": "fr-plans-05",
+     "text": "ce week-end",
+     "meaning": "이번 주말",
+     "example": "Tu fais quoi ce week-end ?",
+     "exampleKo": "이번 주말에 뭐 해?",
+     "tip": "",
+     "sentences": 119,
+     "perMillion": 162.7
+    },
+    {
+     "id": "fr-plans-06",
+     "text": "le mois prochain",
+     "meaning": "다음 달",
+     "example": "Le mois prochain, je vais en Corée.",
+     "exampleKo": "다음 달에 한국 가.",
+     "tip": "",
+     "sentences": 123,
+     "perMillion": 168.2
+    },
+    {
+     "id": "fr-plans-07",
+     "text": "T'as des projets ?",
+     "meaning": "약속 있어?",
+     "example": "T'as des projets vendredi ?",
+     "exampleKo": "금요일에 약속 있어?",
+     "tip": "",
+     "sentences": 69,
+     "perMillion": 94.3
+    },
+    {
+     "id": "fr-plans-08",
+     "text": "Je suis libre.",
+     "meaning": "시간 돼",
+     "example": "Ce jour-là, je suis libre.",
+     "exampleKo": "그날은 시간 돼.",
+     "tip": "",
+     "sentences": 53,
+     "perMillion": 72.5
+    },
+    {
+     "id": "fr-plans-09",
+     "text": "Je crois que je peux pas.",
+     "meaning": "못 할 것 같아",
+     "example": "Désolé, je crois que je peux pas ce jour-là.",
+     "exampleKo": "미안, 그날은 못 할 것 같아.",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-plans-10",
+     "text": "À quelle heure ?",
+     "meaning": "몇 시에?",
+     "example": "À quelle heure on se retrouve ?",
+     "exampleKo": "몇 시에 만날까?",
+     "tip": "",
+     "sentences": 624,
+     "perMillion": 853.2
+    },
+    {
+     "id": "fr-plans-11",
+     "text": "À la gare.",
+     "meaning": "역에서",
+     "example": "Je t'attends à la gare.",
+     "exampleKo": "역에서 기다릴게.",
+     "tip": "",
+     "sentences": 412,
+     "perMillion": 563.3
+    },
+    {
+     "id": "fr-plans-12",
+     "text": "Je vais être en retard.",
+     "meaning": "늦을 거야",
+     "example": "Désolé, je vais avoir cinq minutes de retard.",
+     "exampleKo": "미안, 5분 늦을 거야.",
+     "tip": "",
+     "sentences": 1069,
+     "perMillion": 1461.7
+    },
+    {
+     "id": "fr-plans-13",
+     "text": "J'y serai à l'heure.",
+     "meaning": "제시간에 갈게",
+     "example": "Si je me dépêche, j'y serai à l'heure.",
+     "exampleKo": "서두르면 제시간에 가.",
+     "tip": "",
+     "sentences": 782,
+     "perMillion": 1069.2
+    },
+    {
+     "id": "fr-plans-14",
+     "text": "annuler",
+     "meaning": "취소하다",
+     "example": "J'ai annulé la réservation.",
+     "exampleKo": "예약 취소했어.",
+     "tip": "",
+     "sentences": 72,
+     "perMillion": 98.4
+    },
+    {
+     "id": "fr-plans-15",
+     "text": "J'ai trop hâte.",
+     "meaning": "너무 기대돼",
+     "example": "J'ai trop hâte pour le voyage de la semaine prochaine.",
+     "exampleKo": "다음 주 여행이 너무 기대돼.",
+     "tip": ""
+    },
+    {
+     "id": "fr-plans-16",
+     "text": "partir en voyage",
+     "meaning": "여행 가다",
+     "example": "Partons en voyage pendant les vacances.",
+     "exampleKo": "방학에 여행 가자.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 34.2
+    },
+    {
+     "id": "fr-plans-17",
+     "text": "On y va ensemble.",
+     "meaning": "같이 가자",
+     "example": "On y va ensemble à la fête !",
+     "exampleKo": "같이 파티 가자!",
+     "tip": ""
+    },
+    {
+     "id": "fr-plans-18",
+     "text": "T'as décidé ?",
+     "meaning": "정했어?",
+     "example": "T'as décidé où aller ?",
+     "exampleKo": "어디 갈지 정했어?",
+     "tip": ""
+    },
+    {
+     "id": "fr-plans-19",
+     "text": "J'ai pas encore décidé.",
+     "meaning": "아직 안 정했어",
+     "example": "J'ai pas encore décidé.",
+     "exampleKo": "아직 안 정했어.",
+     "tip": "",
+     "sentences": 39,
+     "perMillion": 53.3
+    },
+    {
+     "id": "fr-plans-20",
+     "text": "Je vais y réfléchir.",
+     "meaning": "생각해 볼게",
+     "example": "Mmm, je vais y réfléchir.",
+     "exampleKo": "음, 생각해 볼게.",
+     "tip": "",
+     "sentences": 88,
+     "perMillion": 120.3
+    },
+    {
+     "id": "fr-plans-21",
+     "text": "Quand tu veux.",
+     "meaning": "언제든 좋아",
+     "example": "Quand tu veux, je m'adapte.",
+     "exampleKo": "언제든 좋아, 맞출게.",
+     "tip": "",
+     "sentences": 37,
+     "perMillion": 50.6
+    },
+    {
+     "id": "fr-plans-22",
+     "text": "Une autre fois.",
+     "meaning": "다음에 하자",
+     "example": "Pas aujourd'hui, une autre fois.",
+     "exampleKo": "오늘은 안 돼, 다음에 하자.",
+     "tip": "",
+     "sentences": 52,
+     "perMillion": 71.1
+    },
+    {
+     "id": "fr-plans-23",
+     "text": "Je te tiens au courant.",
+     "meaning": "알려 줄게",
+     "example": "Quand je sais l'heure, je te tiens au courant.",
+     "exampleKo": "시간 알면 알려 줄게.",
+     "tip": "",
+     "sentences": 337,
+     "perMillion": 460.8
+    },
+    {
+     "id": "fr-plans-24",
+     "text": "l'anniversaire",
+     "meaning": "생일, 기념일",
+     "example": "C'est quand, ton anniversaire ?",
+     "exampleKo": "생일이 언제야?",
+     "tip": "",
+     "sentences": 475,
+     "perMillion": 649.5
+    },
+    {
+     "id": "fr-plans-25",
+     "text": "fêter",
+     "meaning": "축하하다",
+     "example": "On va fêter ta réussite !",
+     "exampleKo": "합격 축하하자!",
+     "tip": "",
+     "sentences": 38,
+     "perMillion": 52.0
+    },
+    {
+     "id": "fr-plans-26",
+     "text": "le cadeau",
+     "meaning": "선물",
+     "example": "Tu veux quel cadeau pour ton anniversaire ?",
+     "exampleKo": "생일 선물 뭐 받고 싶어?",
+     "tip": "",
+     "sentences": 741,
+     "perMillion": 1013.2
+    },
+    {
+     "id": "fr-plans-27",
+     "text": "les vacances",
+     "meaning": "휴가",
+     "example": "Tu pars où en vacances ?",
+     "exampleKo": "휴가 때 어디 가?",
+     "tip": "",
+     "sentences": 884,
+     "perMillion": 1208.7
+    },
+    {
+     "id": "fr-plans-28",
+     "text": "Noël",
+     "meaning": "크리스마스",
+     "example": "À Noël, on est en famille.",
+     "exampleKo": "크리스마스엔 가족이랑 있어.",
+     "tip": "",
+     "sentences": 1435,
+     "perMillion": 1962.1
+    },
+    {
+     "id": "fr-plans-29",
+     "text": "le Nouvel An",
+     "meaning": "새해",
+     "example": "Pour le Nouvel An, on fait la fête.",
+     "exampleKo": "새해 전야에 파티를 해.",
+     "tip": "",
+     "sentences": 73,
+     "perMillion": 99.8
+    },
+    {
+     "id": "fr-plans-30",
+     "text": "Vers quelle heure ?",
+     "meaning": "몇 시쯤?",
+     "example": "Vers quelle heure tu arrives ?",
+     "exampleKo": "몇 시쯤 도착해?",
+     "tip": ""
+    },
+    {
+     "id": "fr-plans-31",
+     "text": "J'arrive bientôt.",
+     "meaning": "곧 도착해",
+     "example": "Je viens de partir, j'arrive bientôt.",
+     "exampleKo": "방금 출발했어, 곧 도착해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-plans-32",
+     "text": "Je vais un peu tarder.",
+     "meaning": "좀 늦을 거야",
+     "example": "Je vais un peu tarder à cause du boulot.",
+     "exampleKo": "일 때문에 좀 늦을 거야.",
+     "tip": "",
+     "sentences": 115,
+     "perMillion": 157.2
+    },
+    {
+     "id": "fr-plans-33",
+     "text": "Vas-y en premier.",
+     "meaning": "먼저 가 있어",
+     "example": "Vas-y en premier, j'arrive.",
+     "exampleKo": "먼저 가 있어, 곧 갈게.",
+     "tip": ""
+    },
+    {
+     "id": "fr-plans-34",
+     "text": "Viens me chercher.",
+     "meaning": "데리러 와",
+     "example": "Viens me chercher à la gare.",
+     "exampleKo": "역으로 데리러 와.",
+     "tip": ""
+    },
+    {
+     "id": "fr-plans-35",
+     "text": "rester dormir",
+     "meaning": "자고 가다",
+     "example": "Tu restes dormir ce soir ?",
+     "exampleKo": "오늘 자고 갈래?",
+     "tip": ""
+    },
+    {
+     "id": "fr-plans-36",
+     "text": "faire un programme",
+     "meaning": "계획을 세우다",
+     "example": "Faisons un programme pour le voyage.",
+     "exampleKo": "여행 계획 세우자.",
+     "tip": ""
+    },
+    {
+     "id": "fr-plans-37",
+     "text": "T'es prêt ?",
+     "meaning": "준비됐어?",
+     "example": "T'es prêt ? On y va.",
+     "exampleKo": "준비됐어? 나가자.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "connect",
+   "title": {
+    "ko": "말 잇기",
+    "en": "Linking words"
+   },
+   "items": [
+    {
+     "id": "fr-connect-01",
+     "text": "mais",
+     "meaning": "하지만",
+     "example": "Je veux y aller, mais j'ai pas le temps.",
+     "exampleKo": "가고 싶은데 시간이 없어.",
+     "tip": "",
+     "sentences": 10010,
+     "perMillion": 13686.8
+    },
+    {
+     "id": "fr-connect-02",
+     "text": "donc",
+     "meaning": "그래서",
+     "example": "Il pleut, donc je reste à la maison.",
+     "exampleKo": "비가 와서 집에 있어.",
+     "tip": "",
+     "sentences": 1727,
+     "perMillion": 2361.3
+    },
+    {
+     "id": "fr-connect-03",
+     "text": "alors",
+     "meaning": "그러면",
+     "example": "Alors, qu'est-ce qui s'est passé ?",
+     "exampleKo": "그래서 무슨 일이 있었어?",
+     "tip": "",
+     "sentences": 2437,
+     "perMillion": 3332.1
+    },
+    {
+     "id": "fr-connect-04",
+     "text": "au fait",
+     "meaning": "그런데, 참",
+     "example": "Au fait, t'es libre demain ?",
+     "exampleKo": "참, 내일 시간 돼?",
+     "tip": "",
+     "sentences": 137,
+     "perMillion": 187.3
+    },
+    {
+     "id": "fr-connect-05",
+     "text": "par exemple",
+     "meaning": "예를 들어",
+     "example": "Par exemple, quels films tu aimes ?",
+     "exampleKo": "예를 들어 어떤 영화 좋아해?",
+     "tip": "",
+     "sentences": 120,
+     "perMillion": 164.1
+    },
+    {
+     "id": "fr-connect-06",
+     "text": "c'est-à-dire",
+     "meaning": "그러니까",
+     "example": "C'est-à-dire que tu viens pas ?",
+     "exampleKo": "그러니까 안 온다는 거야?",
+     "tip": "",
+     "sentences": 103,
+     "perMillion": 140.8
+    },
+    {
+     "id": "fr-connect-07",
+     "text": "en fait",
+     "meaning": "사실은",
+     "example": "En fait, j'ai quelque chose à te dire.",
+     "exampleKo": "사실 할 말이 있어.",
+     "tip": "",
+     "sentences": 406,
+     "perMillion": 555.1
+    },
+    {
+     "id": "fr-connect-08",
+     "text": "finalement",
+     "meaning": "결국",
+     "example": "Finalement, je suis resté à la maison.",
+     "exampleKo": "결국 집에 있었어.",
+     "tip": "",
+     "sentences": 569,
+     "perMillion": 778.0
+    },
+    {
+     "id": "fr-connect-09",
+     "text": "d'abord",
+     "meaning": "먼저",
+     "example": "D'abord, mangeons quelque chose.",
+     "exampleKo": "먼저 뭐 좀 먹자.",
+     "tip": "",
+     "sentences": 480,
+     "perMillion": 656.3
+    },
+    {
+     "id": "fr-connect-10",
+     "text": "ensuite",
+     "meaning": "그다음에",
+     "example": "Ensuite, on a vu un film.",
+     "exampleKo": "그다음에 영화 봤어.",
+     "tip": "",
+     "sentences": 325,
+     "perMillion": 444.4
+    },
+    {
+     "id": "fr-connect-11",
+     "text": "en plus",
+     "meaning": "게다가",
+     "example": "C'est pas cher et en plus c'est bon.",
+     "exampleKo": "싸고 게다가 맛있어.",
+     "tip": "",
+     "sentences": 551,
+     "perMillion": 753.4
+    },
+    {
+     "id": "fr-connect-12",
+     "text": "pourtant",
+     "meaning": "그런데도",
+     "example": "Je suis fatigué, pourtant je viens.",
+     "exampleKo": "피곤한데도 갈게.",
+     "tip": "",
+     "sentences": 257,
+     "perMillion": 351.4
+    },
+    {
+     "id": "fr-connect-13",
+     "text": "de toute façon",
+     "meaning": "어쨌든",
+     "example": "De toute façon, on en parle demain.",
+     "exampleKo": "어쨌든 내일 얘기하자.",
+     "tip": "",
+     "sentences": 69,
+     "perMillion": 94.3
+    },
+    {
+     "id": "fr-connect-14",
+     "text": "franchement",
+     "meaning": "솔직히",
+     "example": "Franchement, je suis un peu fatigué.",
+     "exampleKo": "솔직히 좀 피곤해.",
+     "tip": "",
+     "sentences": 135,
+     "perMillion": 184.6
+    },
+    {
+     "id": "fr-connect-15",
+     "text": "peut-être",
+     "meaning": "아마도",
+     "example": "C'est peut-être rien.",
+     "exampleKo": "아마 별일 아닐 거야.",
+     "tip": "",
+     "sentences": 2409,
+     "perMillion": 3293.8
+    },
+    {
+     "id": "fr-connect-16",
+     "text": "sûrement",
+     "meaning": "분명히",
+     "example": "Ça va sûrement bien se passer.",
+     "exampleKo": "분명 잘될 거야.",
+     "tip": "",
+     "sentences": 224,
+     "perMillion": 306.3
+    },
+    {
+     "id": "fr-connect-17",
+     "text": "si",
+     "meaning": "만약",
+     "example": "Si t'as le temps, appelle-moi.",
+     "exampleKo": "시간 되면 전화해.",
+     "tip": "",
+     "sentences": 14572,
+     "perMillion": 19924.4
+    },
+    {
+     "id": "fr-connect-18",
+     "text": "même si",
+     "meaning": "비록 ~이라도",
+     "example": "Même si je suis fatigué, je me suis amusé.",
+     "exampleKo": "피곤했지만 즐거웠어.",
+     "tip": "",
+     "sentences": 383,
+     "perMillion": 523.7
+    },
+    {
+     "id": "fr-connect-19",
+     "text": "parce que",
+     "meaning": "왜냐하면",
+     "example": "J'ai dormi parce que j'étais fatigué.",
+     "exampleKo": "피곤해서 잤어.",
+     "tip": "",
+     "sentences": 895,
+     "perMillion": 1223.7
+    },
+    {
+     "id": "fr-connect-20",
+     "text": "quand",
+     "meaning": "~할 때",
+     "example": "Appelle-moi quand t'arrives.",
+     "exampleKo": "도착하면 전화해.",
+     "tip": "",
+     "sentences": 8101,
+     "perMillion": 11076.6
+    },
+    {
+     "id": "fr-connect-21",
+     "text": "pendant que",
+     "meaning": "~하는 동안",
+     "example": "J'écoute de la musique pendant que j'étudie.",
+     "exampleKo": "공부하는 동안 음악 들어.",
+     "tip": "",
+     "sentences": 317,
+     "perMillion": 433.4
+    },
+    {
+     "id": "fr-connect-22",
+     "text": "depuis",
+     "meaning": "~부터",
+     "example": "Je t'attends depuis six heures.",
+     "exampleKo": "6시부터 기다렸어.",
+     "tip": "",
+     "sentences": 3545,
+     "perMillion": 4847.1
+    },
+    {
+     "id": "fr-connect-23",
+     "text": "jusqu'à",
+     "meaning": "~까지",
+     "example": "J'étudie jusqu'à minuit.",
+     "exampleKo": "자정까지 공부해.",
+     "tip": "",
+     "sentences": 1994,
+     "perMillion": 2726.4
+    },
+    {
+     "id": "fr-connect-24",
+     "text": "tout à coup",
+     "meaning": "갑자기",
+     "example": "Tout à coup, il s'est mis à pleuvoir.",
+     "exampleKo": "갑자기 비가 오기 시작했어.",
+     "tip": "",
+     "sentences": 114,
+     "perMillion": 155.9
+    },
+    {
+     "id": "fr-connect-25",
+     "text": "tout de suite",
+     "meaning": "바로",
+     "example": "Je te réponds tout de suite.",
+     "exampleKo": "바로 답할게.",
+     "tip": "",
+     "sentences": 564,
+     "perMillion": 771.2
+    },
+    {
+     "id": "fr-connect-26",
+     "text": "petit à petit",
+     "meaning": "조금씩",
+     "example": "Petit à petit, mon français progresse.",
+     "exampleKo": "조금씩 프랑스어가 늘고 있어.",
+     "tip": "",
+     "sentences": 71,
+     "perMillion": 97.1
+    },
+    {
+     "id": "fr-connect-27",
+     "text": "enfin",
+     "meaning": "드디어",
+     "example": "Enfin, on se voit !",
+     "exampleKo": "드디어 만나네!",
+     "tip": "",
+     "sentences": 671,
+     "perMillion": 917.5
+    },
+    {
+     "id": "fr-connect-28",
+     "text": "encore",
+     "meaning": "아직, 또",
+     "example": "T'as encore pas dormi ?",
+     "exampleKo": "아직 안 잤어?",
+     "tip": "",
+     "sentences": 6862,
+     "perMillion": 9382.5
+    },
+    {
+     "id": "fr-connect-29",
+     "text": "déjà",
+     "meaning": "이미, 벌써",
+     "example": "Je suis déjà arrivé.",
+     "exampleKo": "이미 도착했어.",
+     "tip": "",
+     "sentences": 4684,
+     "perMillion": 6404.5
+    },
+    {
+     "id": "fr-connect-30",
+     "text": "à l'instant",
+     "meaning": "방금",
+     "example": "Je viens de rentrer à l'instant.",
+     "exampleKo": "방금 집에 왔어.",
+     "tip": "",
+     "sentences": 128,
+     "perMillion": 175.0
+    },
+    {
+     "id": "fr-connect-31",
+     "text": "presque toujours",
+     "meaning": "거의 항상",
+     "example": "J'y vais presque toujours à pied.",
+     "exampleKo": "거의 항상 걸어서 가.",
+     "tip": "",
+     "sentences": 56,
+     "perMillion": 76.6
+    },
+    {
+     "id": "fr-connect-32",
+     "text": "souvent",
+     "meaning": "자주",
+     "example": "Je vais souvent dans ce magasin.",
+     "exampleKo": "그 가게에 자주 가.",
+     "tip": "",
+     "sentences": 2631,
+     "perMillion": 3597.4
+    },
+    {
+     "id": "fr-connect-33",
+     "text": "jamais",
+     "meaning": "한 번도 ~ 않다",
+     "example": "Je bois jamais d'alcool.",
+     "exampleKo": "난 술을 전혀 안 마셔.",
+     "tip": "",
+     "sentences": 8558,
+     "perMillion": 11701.4
+    },
+    {
+     "id": "fr-connect-34",
+     "text": "presque",
+     "meaning": "거의",
+     "example": "On est presque arrivés.",
+     "exampleKo": "우리 거의 다 왔어.",
+     "tip": "",
+     "sentences": 1415,
+     "perMillion": 1934.7
+    },
+    {
+     "id": "fr-connect-35",
+     "text": "surtout",
+     "meaning": "특히",
+     "example": "J'aime surtout cet endroit.",
+     "exampleKo": "난 특히 이곳이 좋아.",
+     "tip": "",
+     "sentences": 300,
+     "perMillion": 410.2
+    },
+    {
+     "id": "fr-connect-36",
+     "text": "un peu",
+     "meaning": "조금",
+     "example": "Je suis un peu fatigué.",
+     "exampleKo": "조금 피곤해.",
+     "tip": "",
+     "sentences": 3822,
+     "perMillion": 5225.9
+    },
+    {
+     "id": "fr-connect-37",
+     "text": "très",
+     "meaning": "매우",
+     "example": "Je suis très content.",
+     "exampleKo": "나 정말 기뻐.",
+     "tip": "",
+     "sentences": 10876,
+     "perMillion": 14870.9
+    },
+    {
+     "id": "fr-connect-38",
+     "text": "tellement",
+     "meaning": "너무",
+     "example": "T'es tellement gentil.",
+     "exampleKo": "너 너무 착해.",
+     "tip": "",
+     "sentences": 1285,
+     "perMillion": 1757.0
+    },
+    {
+     "id": "fr-connect-39",
+     "text": "environ",
+     "meaning": "대략",
+     "example": "Il est environ cinq heures.",
+     "exampleKo": "대략 5시야.",
+     "tip": "",
+     "sentences": 385,
+     "perMillion": 526.4
+    },
+    {
+     "id": "fr-connect-40",
+     "text": "il y a un moment",
+     "meaning": "좀 전에",
+     "example": "Je suis arrivé il y a un moment.",
+     "exampleKo": "좀 전에 도착했어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 6.8
+    },
+    {
+     "id": "fr-connect-41",
+     "text": "du coup",
+     "meaning": "그래서, 결국",
+     "example": "Du coup, on fait quoi ?",
+     "exampleKo": "그래서 우리 뭐 해?",
+     "tip": "일상 대화에서 아주 자주 써요.",
+     "sentences": 37,
+     "perMillion": 50.6
+    },
+    {
+     "id": "fr-connect-42",
+     "text": "genre",
+     "meaning": "뭐랄까, ~같은",
+     "example": "C'est genre trop bien.",
+     "exampleKo": "뭐랄까 너무 좋아.",
+     "tip": "",
+     "sentences": 894,
+     "perMillion": 1222.4
+    }
+   ]
+  },
+  {
+   "id": "trouble",
+   "title": {
+    "ko": "문제 해결",
+    "en": "Problems & fixes"
+   },
+   "items": [
+    {
+     "id": "fr-trouble-01",
+     "text": "J'ai perdu mon téléphone.",
+     "meaning": "폰 잃어버렸어",
+     "example": "Oh non, j'ai perdu mon téléphone !",
+     "exampleKo": "아 안 돼, 폰 잃어버렸어!",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-trouble-02",
+     "text": "J'ai oublié mon portefeuille.",
+     "meaning": "지갑 두고 왔어",
+     "example": "J'ai oublié mon portefeuille chez moi.",
+     "exampleKo": "지갑을 집에 두고 왔어.",
+     "tip": "",
+     "sentences": 212,
+     "perMillion": 289.9
+    },
+    {
+     "id": "fr-trouble-03",
+     "text": "J'ai plus de batterie.",
+     "meaning": "배터리가 없어",
+     "example": "J'ai presque plus de batterie.",
+     "exampleKo": "배터리가 거의 없어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-trouble-04",
+     "text": "J'ai raté le dernier métro.",
+     "meaning": "막차 놓쳤어",
+     "example": "J'ai raté le dernier métro.",
+     "exampleKo": "막차 놓쳤어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-trouble-05",
+     "text": "Il y a des embouteillages.",
+     "meaning": "차가 막혀",
+     "example": "Il y a des embouteillages, je vais être en retard.",
+     "exampleKo": "차가 막혀서 늦을 거야.",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 43.8
+    },
+    {
+     "id": "fr-trouble-06",
+     "text": "Je suis enrhumé.",
+     "meaning": "감기 걸렸어",
+     "example": "Je suis enrhumé.",
+     "exampleKo": "감기 걸렸어.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 42.4
+    },
+    {
+     "id": "fr-trouble-07",
+     "text": "J'ai de la fièvre.",
+     "meaning": "열나",
+     "example": "J'ai un peu de fièvre.",
+     "exampleKo": "열이 좀 있어.",
+     "tip": "",
+     "sentences": 82,
+     "perMillion": 112.1
+    },
+    {
+     "id": "fr-trouble-08",
+     "text": "J'ai mal à la tête.",
+     "meaning": "머리 아파",
+     "example": "J'ai mal à la tête depuis ce matin.",
+     "exampleKo": "아침부터 머리 아파.",
+     "tip": "",
+     "sentences": 75,
+     "perMillion": 102.5
+    },
+    {
+     "id": "fr-trouble-09",
+     "text": "J'ai mal au ventre.",
+     "meaning": "배 아파",
+     "example": "J'ai mal au ventre, je peux pas bouger.",
+     "exampleKo": "배 아파서 못 움직이겠어.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 47.9
+    },
+    {
+     "id": "fr-trouble-10",
+     "text": "aller chez le médecin",
+     "meaning": "병원 가다",
+     "example": "Tu devrais aller chez le médecin.",
+     "exampleKo": "병원 가 보는 게 좋겠어.",
+     "tip": "",
+     "sentences": 97,
+     "perMillion": 132.6
+    },
+    {
+     "id": "fr-trouble-11",
+     "text": "prendre des médicaments",
+     "meaning": "약 먹다",
+     "example": "Prends tes médicaments et dors.",
+     "exampleKo": "약 먹고 자.",
+     "tip": "",
+     "sentences": 266,
+     "perMillion": 363.7
+    },
+    {
+     "id": "fr-trouble-12",
+     "text": "C'est cassé.",
+     "meaning": "고장 났어",
+     "example": "Mes écouteurs sont cassés.",
+     "exampleKo": "이어폰 고장 났어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-trouble-13",
+     "text": "Ça marche pas.",
+     "meaning": "작동 안 해",
+     "example": "L'ordinateur marche pas.",
+     "exampleKo": "컴퓨터가 안 돼.",
+     "tip": ""
+    },
+    {
+     "id": "fr-trouble-14",
+     "text": "J'ai plus d'internet.",
+     "meaning": "인터넷이 안 돼",
+     "example": "À la maison, j'ai plus d'internet.",
+     "exampleKo": "집에 인터넷이 안 돼.",
+     "tip": ""
+    },
+    {
+     "id": "fr-trouble-15",
+     "text": "J'ai oublié le mot de passe.",
+     "meaning": "비밀번호 잊어버렸어",
+     "example": "J'ai oublié le mot de passe.",
+     "exampleKo": "비밀번호 까먹었어.",
+     "tip": "",
+     "sentences": 127,
+     "perMillion": 173.6
+    },
+    {
+     "id": "fr-trouble-16",
+     "text": "Je me suis trompé.",
+     "meaning": "잘못했어, 틀렸어",
+     "example": "Pardon, je me suis trompé de lieu.",
+     "exampleKo": "미안, 장소를 잘못 알았어.",
+     "tip": "",
+     "sentences": 253,
+     "perMillion": 345.9
+    },
+    {
+     "id": "fr-trouble-17",
+     "text": "Je sais pas.",
+     "meaning": "몰라",
+     "example": "Je sais pas quoi faire.",
+     "exampleKo": "어떻게 해야 할지 모르겠어.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 28.7
+    },
+    {
+     "id": "fr-trouble-18",
+     "text": "Aide-moi.",
+     "meaning": "도와줘",
+     "example": "Tu m'aides deux minutes ?",
+     "exampleKo": "잠깐 도와줄래?",
+     "tip": "",
+     "sentences": 115,
+     "perMillion": 157.2
+    },
+    {
+     "id": "fr-trouble-19",
+     "text": "Au secours !",
+     "meaning": "도와주세요!",
+     "example": "Au secours, il y a un insecte !",
+     "exampleKo": "도와줘, 벌레 있어!",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 45.1
+    },
+    {
+     "id": "fr-trouble-20",
+     "text": "Je suis dans le pétrin.",
+     "meaning": "곤경에 처했어",
+     "example": "Je suis dans le pétrin, j'ai besoin d'aide.",
+     "exampleKo": "곤경에 처했어, 도움이 필요해.",
+     "tip": "",
+     "sentences": 31,
+     "perMillion": 42.4
+    },
+    {
+     "id": "fr-trouble-21",
+     "text": "Qu'est-ce que je fais ?",
+     "meaning": "어떡하지?",
+     "example": "Qu'est-ce que je fais ? Je suis en retard !",
+     "exampleKo": "어떡하지? 늦겠어!",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-trouble-22",
+     "text": "Oh non !",
+     "meaning": "아 안 돼!",
+     "example": "Oh non, ça fuit !",
+     "exampleKo": "아 안 돼, 물이 새!",
+     "tip": "",
+     "sentences": 39,
+     "perMillion": 53.3
+    },
+    {
+     "id": "fr-trouble-23",
+     "text": "Dépêche-toi !",
+     "meaning": "서둘러!",
+     "example": "Dépêche-toi, ça commence !",
+     "exampleKo": "서둘러, 시작해!",
+     "tip": "",
+     "sentences": 133,
+     "perMillion": 181.9
+    },
+    {
+     "id": "fr-trouble-24",
+     "text": "J'ai perdu mes clés.",
+     "meaning": "열쇠 잃어버렸어",
+     "example": "J'ai perdu mes clés de maison.",
+     "exampleKo": "집 열쇠 잃어버렸어.",
+     "tip": "",
+     "sentences": 99,
+     "perMillion": 135.4
+    },
+    {
+     "id": "fr-trouble-25",
+     "text": "T'as rien oublié ?",
+     "meaning": "두고 온 거 없어?",
+     "example": "T'as rien oublié ?",
+     "exampleKo": "두고 온 거 없어?",
+     "tip": "",
+     "sentences": 36,
+     "perMillion": 49.2
+    },
+    {
+     "id": "fr-trouble-26",
+     "text": "J'ai renversé mon café.",
+     "meaning": "커피 쏟았어",
+     "example": "J'ai renversé mon café.",
+     "exampleKo": "커피 쏟았어.",
+     "tip": "",
+     "sentences": 113,
+     "perMillion": 154.5
+    },
+    {
+     "id": "fr-trouble-27",
+     "text": "Je me suis fait mal.",
+     "meaning": "다쳤어",
+     "example": "Je suis tombé et je me suis fait mal.",
+     "exampleKo": "넘어져서 다쳤어.",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 21.9
+    },
+    {
+     "id": "fr-trouble-28",
+     "text": "Il y a eu un accident.",
+     "meaning": "사고가 났어",
+     "example": "Il y a eu un accident, le métro est arrêté.",
+     "exampleKo": "사고로 지하철이 멈췄어.",
+     "tip": "",
+     "sentences": 316,
+     "perMillion": 432.1
+    },
+    {
+     "id": "fr-trouble-29",
+     "text": "T'as un chargeur ?",
+     "meaning": "충전기 있어?",
+     "example": "T'as un chargeur ?",
+     "exampleKo": "충전기 있어?",
+     "tip": "",
+     "sentences": 27,
+     "perMillion": 36.9
+    },
+    {
+     "id": "fr-trouble-30",
+     "text": "Il répond pas.",
+     "meaning": "답이 없어",
+     "example": "Il répond pas à mes messages.",
+     "exampleKo": "그가 메시지에 답이 없어.",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 46.5
+    },
+    {
+     "id": "fr-trouble-31",
+     "text": "Il m'a laissé en vu.",
+     "meaning": "읽씹했어",
+     "example": "Il m'a laissé en vu encore une fois.",
+     "exampleKo": "또 읽씹했어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-trouble-32",
+     "text": "J'ai pas assez d'argent.",
+     "meaning": "돈이 모자라",
+     "example": "Je crois que j'ai pas assez d'argent.",
+     "exampleKo": "돈이 모자랄 것 같아.",
+     "tip": "",
+     "sentences": 89,
+     "perMillion": 121.7
+    },
+    {
+     "id": "fr-trouble-33",
+     "text": "J'arrive pas à dormir.",
+     "meaning": "잠이 안 와",
+     "example": "Hier soir, j'arrivais pas à dormir.",
+     "exampleKo": "어젯밤 잠이 안 왔어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-trouble-34",
+     "text": "On se comprend pas.",
+     "meaning": "말이 안 통해",
+     "example": "On se comprend pas à cause de la langue.",
+     "exampleKo": "언어 때문에 말이 안 통해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-trouble-35",
+     "text": "Calme-toi.",
+     "meaning": "진정해",
+     "example": "Calme-toi, tout va bien.",
+     "exampleKo": "진정해, 다 괜찮아.",
+     "tip": "",
+     "sentences": 45,
+     "perMillion": 61.5
+    },
+    {
+     "id": "fr-trouble-36",
+     "text": "Ça va s'arranger.",
+     "meaning": "다 잘될 거야",
+     "example": "Inquiète-toi pas, ça va s'arranger.",
+     "exampleKo": "걱정 마, 다 잘될 거야.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 34.2
+    },
+    {
+     "id": "fr-trouble-37",
+     "text": "Tant pis.",
+     "meaning": "어쩔 수 없지",
+     "example": "Il pleut, tant pis.",
+     "exampleKo": "비 오니까 어쩔 수 없지.",
+     "tip": "",
+     "sentences": 37,
+     "perMillion": 50.6
+    },
+    {
+     "id": "fr-trouble-38",
+     "text": "Zut !",
+     "meaning": "아차!",
+     "example": "Zut ! J'ai oublié les devoirs.",
+     "exampleKo": "아차, 숙제 깜빡했어!",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 32.8
+    }
+   ]
+  },
+  {
+   "id": "reply",
+   "title": {
+    "ko": "맞장구·대답",
+    "en": "Replies & reactions"
+   },
+   "items": [
+    {
+     "id": "fr-reply-01",
+     "text": "Oui.",
+     "meaning": "응, 네",
+     "example": "Oui, bien sûr.",
+     "exampleKo": "응, 물론이지.",
+     "tip": "",
+     "sentences": 1375,
+     "perMillion": 1880.1
+    },
+    {
+     "id": "fr-reply-02",
+     "text": "Non.",
+     "meaning": "아니",
+     "example": "Non, y'a pas de souci.",
+     "exampleKo": "아니, 괜찮아.",
+     "tip": "",
+     "sentences": 3635,
+     "perMillion": 4970.2
+    },
+    {
+     "id": "fr-reply-03",
+     "text": "Bien sûr.",
+     "meaning": "물론이지",
+     "example": "Bien sûr, je viens avec toi.",
+     "exampleKo": "물론이지, 같이 갈게.",
+     "tip": "",
+     "sentences": 372,
+     "perMillion": 508.6
+    },
+    {
+     "id": "fr-reply-04",
+     "text": "Exactement.",
+     "meaning": "맞아",
+     "example": "Exactement, c'est ça.",
+     "exampleKo": "맞아, 바로 그거야.",
+     "tip": "",
+     "sentences": 655,
+     "perMillion": 895.6
+    },
+    {
+     "id": "fr-reply-05",
+     "text": "Ah bon ?",
+     "meaning": "아, 그래?",
+     "example": "Ah bon ? Je savais pas.",
+     "exampleKo": "아, 그래? 몰랐어.",
+     "tip": "",
+     "sentences": 24,
+     "perMillion": 32.8
+    },
+    {
+     "id": "fr-reply-06",
+     "text": "T'as raison.",
+     "meaning": "네 말이 맞아",
+     "example": "T'as raison, c'est mieux comme ça.",
+     "exampleKo": "네 말이 맞아, 이게 낫다.",
+     "tip": ""
+    },
+    {
+     "id": "fr-reply-07",
+     "text": "C'est super.",
+     "meaning": "잘됐다",
+     "example": "T'as réussi ? C'est super.",
+     "exampleKo": "합격했어? 잘됐다.",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 45.1
+    },
+    {
+     "id": "fr-reply-08",
+     "text": "C'est dingue !",
+     "meaning": "미쳤다, 믿기지 않아!",
+     "example": "C'est dingue, on a réussi !",
+     "exampleKo": "믿기지 않아, 우리가 해냈어!",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 13.7
+    },
+    {
+     "id": "fr-reply-09",
+     "text": "Tu as de la chance.",
+     "meaning": "운이 좋네, 부럽다",
+     "example": "Tu pars à la plage ? Tu as de la chance.",
+     "exampleKo": "바닷가 가? 부럽다.",
+     "tip": "",
+     "sentences": 207,
+     "perMillion": 283.0
+    },
+    {
+     "id": "fr-reply-10",
+     "text": "Évidemment.",
+     "meaning": "당연하지",
+     "example": "Évidemment, j'irai.",
+     "exampleKo": "당연하지, 갈게.",
+     "tip": "",
+     "sentences": 114,
+     "perMillion": 155.9
+    },
+    {
+     "id": "fr-reply-11",
+     "text": "Euh...",
+     "meaning": "음…",
+     "example": "Euh... laisse-moi réfléchir.",
+     "exampleKo": "음… 생각 좀 해 볼게.",
+     "tip": "",
+     "sentences": 21,
+     "perMillion": 28.7
+    },
+    {
+     "id": "fr-reply-12",
+     "text": "Bof.",
+     "meaning": "그저 그래",
+     "example": "Le film ? Bof.",
+     "exampleKo": "그 영화? 그저 그래.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-reply-13",
+     "text": "Tu crois ?",
+     "meaning": "그렇게 생각해?",
+     "example": "Tu crois ? Moi je trouve ça normal.",
+     "exampleKo": "그렇게 생각해? 난 평범한 것 같은데.",
+     "tip": "",
+     "sentences": 184,
+     "perMillion": 251.6
+    },
+    {
+     "id": "fr-reply-14",
+     "text": "Pas vraiment.",
+     "meaning": "그다지",
+     "example": "Pas vraiment, il me reste du chemin.",
+     "exampleKo": "그다지, 아직 멀었어.",
+     "tip": "칭찬받았을 때 겸손하게 받는 말이에요.",
+     "sentences": 573,
+     "perMillion": 783.5
+    },
+    {
+     "id": "fr-reply-15",
+     "text": "Tu me sauves.",
+     "meaning": "살았어, 고마워",
+     "example": "Merci, tu me sauves la vie.",
+     "exampleKo": "고마워, 네가 날 살렸어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-reply-16",
+     "text": "S'il te plaît.",
+     "meaning": "제발",
+     "example": "S'il te plaît, juste une fois.",
+     "exampleKo": "제발, 한 번만.",
+     "tip": "",
+     "sentences": 1173,
+     "perMillion": 1603.9
+    },
+    {
+     "id": "fr-reply-17",
+     "text": "Je peux ?",
+     "meaning": "해도 돼?",
+     "example": "Je peux prendre ça ?",
+     "exampleKo": "이거 가져가도 돼?",
+     "tip": "",
+     "sentences": 1914,
+     "perMillion": 2617.0
+    },
+    {
+     "id": "fr-reply-18",
+     "text": "Vas-y.",
+     "meaning": "해, 그래",
+     "example": "Vas-y, assieds-toi.",
+     "exampleKo": "앉아.",
+     "tip": "",
+     "sentences": 168,
+     "perMillion": 229.7
+    },
+    {
+     "id": "fr-reply-19",
+     "text": "Ne t'inquiète pas.",
+     "meaning": "걱정 마",
+     "example": "T'inquiète pas, je vais bien.",
+     "exampleKo": "걱정 마, 난 괜찮아.",
+     "tip": "",
+     "sentences": 154,
+     "perMillion": 210.6
+    },
+    {
+     "id": "fr-reply-20",
+     "text": "Quel bonheur !",
+     "meaning": "기쁘다!",
+     "example": "T'es bien arrivé ? Quel bonheur !",
+     "exampleKo": "잘 도착했어? 기쁘다!",
+     "tip": "",
+     "sentences": 11,
+     "perMillion": 15.0
+    },
+    {
+     "id": "fr-reply-21",
+     "text": "Dommage.",
+     "meaning": "아쉽다",
+     "example": "Tu peux pas venir ? Dommage.",
+     "exampleKo": "못 와? 아쉽다.",
+     "tip": "",
+     "sentences": 217,
+     "perMillion": 296.7
+    },
+    {
+     "id": "fr-reply-22",
+     "text": "Bien joué !",
+     "meaning": "잘했어!",
+     "example": "Première place ? Bien joué !",
+     "exampleKo": "1등? 잘했어!",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-reply-23",
+     "text": "Ah, d'accord.",
+     "meaning": "아, 그렇구나",
+     "example": "Ah, d'accord, alors oui.",
+     "exampleKo": "아, 그렇구나, 그럼 좋아.",
+     "tip": ""
+    },
+    {
+     "id": "fr-reply-24",
+     "text": "Mmh.",
+     "meaning": "음~",
+     "example": "Mmh, ça se peut.",
+     "exampleKo": "음~ 그럴 수도 있겠네.",
+     "tip": ""
+    },
+    {
+     "id": "fr-reply-25",
+     "text": "Félicitations !",
+     "meaning": "축하해!",
+     "example": "Félicitations pour ton boulot !",
+     "exampleKo": "취직 축하해!",
+     "tip": "",
+     "sentences": 85,
+     "perMillion": 116.2
+    },
+    {
+     "id": "fr-reply-26",
+     "text": "Je sais !",
+     "meaning": "알아!",
+     "example": "Je sais ! Je connais ce magasin !",
+     "exampleKo": "알아! 그 가게 알아!",
+     "tip": "",
+     "sentences": 2808,
+     "perMillion": 3839.4
+    },
+    {
+     "id": "fr-reply-27",
+     "text": "Je le savais pas.",
+     "meaning": "몰랐어",
+     "example": "Ça, je le savais pas.",
+     "exampleKo": "그건 몰랐어.",
+     "tip": "",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-reply-28",
+     "text": "Ça marche.",
+     "meaning": "좋아, 그래",
+     "example": "Ça marche, à ce soir.",
+     "exampleKo": "좋아, 이따 저녁에 봐.",
+     "tip": "",
+     "sentences": 82,
+     "perMillion": 112.1
+    }
+   ]
+  },
+  {
+   "id": "polite",
+   "title": {
+    "ko": "예의 있게 말하기",
+    "en": "Polite speech"
+   },
+   "items": [
+    {
+     "id": "fr-polite-01",
+     "text": "Enchanté de faire votre connaissance.",
+     "meaning": "처음 뵙겠습니다",
+     "example": "Enchanté de faire votre connaissance, madame.",
+     "exampleKo": "처음 뵙겠습니다, 부인.",
+     "tip": "",
+     "sentences": 26,
+     "perMillion": 35.6
+    },
+    {
+     "id": "fr-polite-02",
+     "text": "Avec plaisir.",
+     "meaning": "기꺼이요",
+     "example": "Voulez-vous un café ? Avec plaisir.",
+     "exampleKo": "커피 드시겠어요? 기꺼이요.",
+     "tip": "",
+     "sentences": 140,
+     "perMillion": 191.4
+    },
+    {
+     "id": "fr-polite-03",
+     "text": "Excusez-moi de vous déranger.",
+     "meaning": "방해해서 죄송합니다",
+     "example": "Excusez-moi de vous déranger.",
+     "exampleKo": "방해해서 죄송합니다.",
+     "tip": "",
+     "sentences": 43,
+     "perMillion": 58.8
+    },
+    {
+     "id": "fr-polite-04",
+     "text": "Merci beaucoup.",
+     "meaning": "정말 감사합니다",
+     "example": "Merci beaucoup pour votre aide.",
+     "exampleKo": "도와주셔서 정말 감사합니다.",
+     "tip": "",
+     "sentences": 123,
+     "perMillion": 168.2
+    },
+    {
+     "id": "fr-polite-05",
+     "text": "Je suis désolé.",
+     "meaning": "죄송합니다",
+     "example": "Je suis désolé pour le retard.",
+     "exampleKo": "늦어서 죄송합니다.",
+     "tip": "",
+     "sentences": 555,
+     "perMillion": 758.9
+    },
+    {
+     "id": "fr-polite-06",
+     "text": "Pardonnez-moi.",
+     "meaning": "용서해 주세요",
+     "example": "Pardonnez-moi, vous pouvez m'aider ?",
+     "exampleKo": "죄송한데 도와주실 수 있나요?",
+     "tip": "",
+     "sentences": 48,
+     "perMillion": 65.6
+    },
+    {
+     "id": "fr-polite-07",
+     "text": "Ça fait longtemps.",
+     "meaning": "오랜만입니다",
+     "example": "Ça fait longtemps, comment allez-vous ?",
+     "exampleKo": "오랜만이에요, 어떻게 지내세요?",
+     "tip": "",
+     "sentences": 82,
+     "perMillion": 112.1
+    },
+    {
+     "id": "fr-polite-08",
+     "text": "Comment allez-vous ?",
+     "meaning": "어떻게 지내세요?",
+     "example": "Comment allez-vous, madame ?",
+     "exampleKo": "어떻게 지내세요, 부인?",
+     "tip": "vous는 존칭이에요. 친구끼리는 tu를 써요.",
+     "sentences": 79,
+     "perMillion": 108.0
+    },
+    {
+     "id": "fr-polite-09",
+     "text": "Très bien, merci.",
+     "meaning": "아주 잘 지내요, 고마워요",
+     "example": "Très bien, merci, et vous ?",
+     "exampleKo": "아주 잘 지내요, 당신은요?",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 16.4
+    },
+    {
+     "id": "fr-polite-10",
+     "text": "Bon appétit à tous.",
+     "meaning": "모두 맛있게 드세요",
+     "example": "Bon appétit à tous !",
+     "exampleKo": "모두 맛있게 드세요!",
+     "tip": "",
+     "sentences": 343,
+     "perMillion": 469.0
+    },
+    {
+     "id": "fr-polite-11",
+     "text": "Un petit cadeau pour vous.",
+     "meaning": "작은 선물이에요",
+     "example": "Un petit cadeau pour vous.",
+     "exampleKo": "작은 선물이에요.",
+     "tip": "선물을 건넬 때 하는 겸손한 말이에요.",
+     "sentences": 14,
+     "perMillion": 19.1
+    },
+    {
+     "id": "fr-polite-12",
+     "text": "Je vous remercie.",
+     "meaning": "감사드립니다",
+     "example": "Je vous remercie de tout cœur.",
+     "exampleKo": "진심으로 감사드립니다.",
+     "tip": "",
+     "sentences": 78,
+     "perMillion": 106.7
+    },
+    {
+     "id": "fr-polite-13",
+     "text": "Avec mes remerciements.",
+     "meaning": "감사의 마음으로",
+     "example": "Avec mes remerciements les plus sincères.",
+     "exampleKo": "진심 어린 감사를 담아.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 47.9
+    },
+    {
+     "id": "fr-polite-14",
+     "text": "C'était délicieux.",
+     "meaning": "정말 맛있었어요",
+     "example": "C'était délicieux, merci beaucoup.",
+     "exampleKo": "정말 맛있었어요, 감사합니다.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-polite-15",
+     "text": "Après vous.",
+     "meaning": "먼저 하세요",
+     "example": "Après vous, je vous en prie.",
+     "exampleKo": "먼저 하세요.",
+     "tip": "",
+     "sentences": 50,
+     "perMillion": 68.4
+    },
+    {
+     "id": "fr-polite-16",
+     "text": "Un instant, s'il vous plaît.",
+     "meaning": "잠시만 기다려 주세요",
+     "example": "Un instant, s'il vous plaît.",
+     "exampleKo": "잠시만 기다려 주세요.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 19.1
+    },
+    {
+     "id": "fr-polite-17",
+     "text": "Pouvez-vous répéter ?",
+     "meaning": "다시 말씀해 주시겠어요?",
+     "example": "Pardon, pouvez-vous répéter ?",
+     "exampleKo": "죄송하지만 다시 말씀해 주시겠어요?",
+     "tip": "",
+     "sentences": 19,
+     "perMillion": 26.0
+    },
+    {
+     "id": "fr-polite-18",
+     "text": "Pouvez-vous parler plus lentement ?",
+     "meaning": "천천히 말씀해 주시겠어요?",
+     "example": "Pouvez-vous parler plus lentement ?",
+     "exampleKo": "천천히 말씀해 주시겠어요?",
+     "tip": "",
+     "sentences": 94,
+     "perMillion": 128.5
+    },
+    {
+     "id": "fr-polite-19",
+     "text": "Non, merci.",
+     "meaning": "괜찮습니다",
+     "example": "Non, merci, ça va.",
+     "exampleKo": "괜찮아요, 감사합니다.",
+     "tip": "",
+     "sentences": 52,
+     "perMillion": 71.1
+    },
+    {
+     "id": "fr-polite-20",
+     "text": "Je vous en prie.",
+     "meaning": "천만에요, 먼저 하세요",
+     "example": "Merci. — Je vous en prie.",
+     "exampleKo": "고맙습니다. — 천만에요.",
+     "tip": "",
+     "sentences": 88,
+     "perMillion": 120.3
+    },
+    {
+     "id": "fr-polite-21",
+     "text": "Vous aussi.",
+     "meaning": "당신도요",
+     "example": "Bonne journée. — Vous aussi.",
+     "exampleKo": "좋은 하루 보내세요. — 당신도요.",
+     "tip": "",
+     "sentences": 93,
+     "perMillion": 127.2
+    },
+    {
+     "id": "fr-polite-22",
+     "text": "Désolé du retard.",
+     "meaning": "늦어서 죄송합니다",
+     "example": "Désolé du retard.",
+     "exampleKo": "늦어서 죄송합니다.",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 45.1
+    },
+    {
+     "id": "fr-polite-23",
+     "text": "Asseyez-vous, je vous prie.",
+     "meaning": "앉으세요",
+     "example": "Asseyez-vous, je vous prie.",
+     "exampleKo": "앉으세요.",
+     "tip": "",
+     "sentences": 86,
+     "perMillion": 117.6
+    },
+    {
+     "id": "fr-polite-24",
+     "text": "Comment vous appelez-vous ?",
+     "meaning": "성함이 어떻게 되세요?",
+     "example": "Comment vous appelez-vous ?",
+     "exampleKo": "성함이 어떻게 되세요?",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 13.7
+    },
+    {
+     "id": "fr-polite-25",
+     "text": "monsieur",
+     "meaning": "~씨, 선생님 (남성)",
+     "example": "Bonjour, monsieur Martin.",
+     "exampleKo": "마르탱 씨, 안녕하세요.",
+     "tip": "",
+     "sentences": 539,
+     "perMillion": 737.0
+    },
+    {
+     "id": "fr-polite-26",
+     "text": "madame",
+     "meaning": "~씨, 부인",
+     "example": "Bonsoir, madame Dupont.",
+     "exampleKo": "뒤퐁 부인, 안녕하세요.",
+     "tip": "",
+     "sentences": 211,
+     "perMillion": 288.5
+    },
+    {
+     "id": "fr-polite-27",
+     "text": "vous",
+     "meaning": "당신 (존칭)",
+     "example": "Vous avez besoin de quelque chose ?",
+     "exampleKo": "필요한 거 있으세요?",
+     "tip": "",
+     "sentences": 69418,
+     "perMillion": 94915.9
+    },
+    {
+     "id": "fr-polite-28",
+     "text": "tutoyer",
+     "meaning": "반말하다 (tu로 말하다)",
+     "example": "On peut se tutoyer ?",
+     "exampleKo": "우리 말 편하게 해도 될까요?",
+     "tip": "프랑스에서는 이 말을 먼저 꺼내는 게 자연스러워요.",
+     "sentences": 15,
+     "perMillion": 20.5
+    },
+    {
+     "id": "fr-polite-29",
+     "text": "Joyeux anniversaire !",
+     "meaning": "생일 축하해요!",
+     "example": "Joyeux anniversaire, mamie !",
+     "exampleKo": "할머니, 생신 축하드려요!",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 46.5
+    },
+    {
+     "id": "fr-polite-30",
+     "text": "Félicitations pour votre mariage !",
+     "meaning": "결혼 축하드립니다",
+     "example": "Félicitations pour votre mariage !",
+     "exampleKo": "결혼 축하드립니다!",
+     "tip": "",
+     "sentences": 12,
+     "perMillion": 16.4
+    },
+    {
+     "id": "fr-polite-31",
+     "text": "Bonne année !",
+     "meaning": "새해 복 많이 받으세요",
+     "example": "Bonne année à tous !",
+     "exampleKo": "모두 새해 복 많이 받으세요!",
+     "tip": "",
+     "sentences": 37,
+     "perMillion": 50.6
+    },
+    {
+     "id": "fr-polite-32",
+     "text": "Joyeux Noël !",
+     "meaning": "메리 크리스마스!",
+     "example": "Joyeux Noël, la famille !",
+     "exampleKo": "가족 여러분, 메리 크리스마스!",
+     "tip": "",
+     "sentences": 55,
+     "perMillion": 75.2
+    },
+    {
+     "id": "fr-polite-33",
+     "text": "Bon rétablissement.",
+     "meaning": "빨리 나으세요",
+     "example": "Je vous souhaite un bon rétablissement.",
+     "exampleKo": "빨리 쾌차하시길 바랍니다.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 47.9
+    },
+    {
+     "id": "fr-polite-34",
+     "text": "Prenez soin de vous.",
+     "meaning": "건강 조심하세요",
+     "example": "Prenez soin de vous, il fait froid.",
+     "exampleKo": "추우니 건강 조심하세요.",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-polite-35",
+     "text": "Bon voyage !",
+     "meaning": "즐거운 여행 되세요",
+     "example": "Bon voyage, prévenez-moi à l'arrivée.",
+     "exampleKo": "즐거운 여행 되세요, 도착하면 알려 주세요.",
+     "tip": "",
+     "sentences": 38,
+     "perMillion": 52.0
+    },
+    {
+     "id": "fr-polite-36",
+     "text": "Bonne continuation.",
+     "meaning": "앞으로도 잘 되길 바라요",
+     "example": "Bonne continuation pour la suite !",
+     "exampleKo": "앞으로도 잘 되길 바랍니다!",
+     "tip": "",
+     "sentences": 7,
+     "perMillion": 9.6
+    },
+    {
+     "id": "fr-polite-37",
+     "text": "Bienvenue.",
+     "meaning": "어서 오세요",
+     "example": "Bienvenue, vous êtes combien ?",
+     "exampleKo": "어서 오세요, 몇 분이세요?",
+     "tip": "",
+     "sentences": 225,
+     "perMillion": 307.6
+    },
+    {
+     "id": "fr-polite-38",
+     "text": "Entrez, je vous en prie.",
+     "meaning": "들어오세요",
+     "example": "Entrez, je vous en prie, faites comme chez vous.",
+     "exampleKo": "들어오세요, 편하게 계세요.",
+     "tip": "",
+     "sentences": 66,
+     "perMillion": 90.2
+    },
+    {
+     "id": "fr-polite-39",
+     "text": "C'est un honneur.",
+     "meaning": "영광입니다",
+     "example": "C'est un honneur de vous rencontrer.",
+     "exampleKo": "뵙게 되어 영광입니다.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 13.7
+    }
+   ]
+  },
+  {
+   "id": "idioms",
+   "title": {
+    "ko": "자주 쓰는 관용 표현",
+    "en": "Common idioms"
+   },
+   "items": [
+    {
+     "id": "fr-idioms-01",
+     "text": "faire d'une pierre deux coups",
+     "meaning": "일석이조",
+     "example": "Marcher et faire les courses : deux coups d'un seul.",
+     "exampleKo": "걸으면서 장보기, 일석이조야.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 34.2
+    },
+    {
+     "id": "fr-idioms-02",
+     "text": "avoir la tête dans les nuages",
+     "meaning": "멍하니 있다",
+     "example": "Aujourd'hui, t'as la tête dans les nuages.",
+     "exampleKo": "너 오늘 멍하네.",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 21.9
+    },
+    {
+     "id": "fr-idioms-03",
+     "text": "C'est du gâteau.",
+     "meaning": "식은 죽 먹기야",
+     "example": "Cet examen, c'était du gâteau.",
+     "exampleKo": "그 시험은 식은 죽 먹기였어.",
+     "tip": "",
+     "sentences": 102,
+     "perMillion": 139.5
+    },
+    {
+     "id": "fr-idioms-04",
+     "text": "coûter les yeux de la tête",
+     "meaning": "엄청 비싸다",
+     "example": "Ce sac coûte les yeux de la tête.",
+     "exampleKo": "그 가방 엄청 비싸.",
+     "tip": "",
+     "sentences": 10,
+     "perMillion": 13.7
+    },
+    {
+     "id": "fr-idioms-05",
+     "text": "jeter l'argent par les fenêtres",
+     "meaning": "돈을 낭비하다",
+     "example": "Il jette l'argent par les fenêtres.",
+     "exampleKo": "그는 돈을 낭비해.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 19.1
+    },
+    {
+     "id": "fr-idioms-06",
+     "text": "mettre dans le mille",
+     "meaning": "정확히 맞히다",
+     "example": "Tu as mis dans le mille !",
+     "exampleKo": "정확히 맞혔어!",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-idioms-07",
+     "text": "être crevé",
+     "meaning": "녹초다",
+     "example": "Je suis crevé après le boulot.",
+     "exampleKo": "일하고 나서 녹초야.",
+     "tip": "",
+     "sentences": 68,
+     "perMillion": 93.0
+    },
+    {
+     "id": "fr-idioms-08",
+     "text": "être comme un poisson dans l'eau",
+     "meaning": "물 만난 고기 같다",
+     "example": "Ici, je suis comme un poisson dans l'eau.",
+     "exampleKo": "여기선 물 만난 고기 같아.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 10.9
+    },
+    {
+     "id": "fr-idioms-09",
+     "text": "ne pas avoir la langue dans sa poche",
+     "meaning": "거침없이 말하다",
+     "example": "Elle a pas la langue dans sa poche.",
+     "exampleKo": "그 애는 말을 거침없이 해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-idioms-10",
+     "text": "être bavard comme une pie",
+     "meaning": "수다쟁이다",
+     "example": "Ma sœur est bavarde comme une pie.",
+     "exampleKo": "내 여동생은 수다쟁이야.",
+     "tip": ""
+    },
+    {
+     "id": "fr-idioms-11",
+     "text": "faire une gaffe",
+     "meaning": "실수하다",
+     "example": "J'ai fait une gaffe avec cette remarque.",
+     "exampleKo": "그 말로 실수했어.",
+     "tip": "",
+     "sentences": 53,
+     "perMillion": 72.5
+    },
+    {
+     "id": "fr-idioms-12",
+     "text": "se bouger",
+     "meaning": "서두르다, 움직이다",
+     "example": "Allez, bouge-toi un peu !",
+     "exampleKo": "자, 좀 서둘러!",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 12.3
+    },
+    {
+     "id": "fr-idioms-13",
+     "text": "être fauché",
+     "meaning": "돈이 없다",
+     "example": "Je suis fauché ce mois-ci.",
+     "exampleKo": "이번 달엔 돈이 없어.",
+     "tip": "",
+     "sentences": 39,
+     "perMillion": 53.3
+    },
+    {
+     "id": "fr-idioms-14",
+     "text": "être comme les deux doigts de la main",
+     "meaning": "아주 친하다",
+     "example": "On est comme les deux doigts de la main.",
+     "exampleKo": "우리는 아주 친해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-idioms-15",
+     "text": "se moquer de quelqu'un",
+     "meaning": "놀리다",
+     "example": "Arrête de te moquer de moi.",
+     "exampleKo": "날 놀리지 마.",
+     "tip": "",
+     "sentences": 57,
+     "perMillion": 77.9
+    },
+    {
+     "id": "fr-idioms-16",
+     "text": "donner un coup de main",
+     "meaning": "돕다",
+     "example": "Tu me donnes un coup de main ?",
+     "exampleKo": "나 좀 도와줄래?",
+     "tip": "",
+     "sentences": 138,
+     "perMillion": 188.7
+    },
+    {
+     "id": "fr-idioms-17",
+     "text": "dormir comme un bébé",
+     "meaning": "곤히 자다",
+     "example": "Hier, j'ai dormi comme un bébé.",
+     "exampleKo": "어제 푹 잤어.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 34.2
+    },
+    {
+     "id": "fr-idioms-18",
+     "text": "avoir l'eau à la bouche",
+     "meaning": "군침이 돌다",
+     "example": "Ça me met l'eau à la bouche.",
+     "exampleKo": "군침이 돌아.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 8.2
+    },
+    {
+     "id": "fr-idioms-19",
+     "text": "fermer les yeux sur",
+     "meaning": "눈감아 주다",
+     "example": "Il a fermé les yeux sur ça.",
+     "exampleKo": "그는 그걸 눈감아 줬어.",
+     "tip": "",
+     "sentences": 18,
+     "perMillion": 24.6
+    },
+    {
+     "id": "fr-idioms-20",
+     "text": "devenir rouge comme une tomate",
+     "meaning": "얼굴이 새빨개지다",
+     "example": "Je suis devenu rouge comme une tomate.",
+     "exampleKo": "얼굴이 새빨개졌어.",
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 10.9
+    },
+    {
+     "id": "fr-idioms-21",
+     "text": "être d'accord",
+     "meaning": "동의하다",
+     "example": "Je suis d'accord avec toi.",
+     "exampleKo": "네 말에 동의해.",
+     "tip": "",
+     "sentences": 1099,
+     "perMillion": 1502.7
+    },
+    {
+     "id": "fr-idioms-22",
+     "text": "avoir la pêche",
+     "meaning": "기운이 넘치다",
+     "example": "Aujourd'hui, j'ai la pêche !",
+     "exampleKo": "오늘 기운이 넘쳐!",
+     "tip": "",
+     "sentences": 123,
+     "perMillion": 168.2
+    },
+    {
+     "id": "fr-idioms-23",
+     "text": "avoir le cafard",
+     "meaning": "우울하다",
+     "example": "J'ai le cafard ce soir.",
+     "exampleKo": "오늘 밤 우울해.",
+     "tip": "",
+     "sentences": 23,
+     "perMillion": 31.4
+    },
+    {
+     "id": "fr-idioms-24",
+     "text": "se régaler",
+     "meaning": "맛있게 즐기다",
+     "example": "On s'est régalés au restaurant.",
+     "exampleKo": "식당에서 맛있게 먹었어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-idioms-25",
+     "text": "être surpris",
+     "meaning": "놀라다",
+     "example": "J'ai été surpris de te voir.",
+     "exampleKo": "널 보고 놀랐어.",
+     "tip": "",
+     "sentences": 557,
+     "perMillion": 761.6
+    },
+    {
+     "id": "fr-idioms-26",
+     "text": "avoir un coup de cœur",
+     "meaning": "한눈에 반하다",
+     "example": "J'ai eu un coup de cœur pour cette ville.",
+     "exampleKo": "이 도시에 한눈에 반했어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-idioms-27",
+     "text": "taper dans l'œil",
+     "meaning": "눈에 쏙 들어오다",
+     "example": "Cette robe m'a tapé dans l'œil.",
+     "exampleKo": "그 원피스가 눈에 쏙 들어왔어.",
+     "tip": ""
+    },
+    {
+     "id": "fr-idioms-28",
+     "text": "manquer à quelqu'un",
+     "meaning": "그리워지다",
+     "example": "Tu me manques beaucoup.",
+     "exampleKo": "네가 많이 보고 싶어.",
+     "tip": "",
+     "sentences": 184,
+     "perMillion": 251.6
+    },
+    {
+     "id": "fr-idioms-29",
+     "text": "avoir envie de",
+     "meaning": "~하고 싶다",
+     "example": "J'ai envie de manger une pizza.",
+     "exampleKo": "피자 먹고 싶어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 6.8
+    },
+    {
+     "id": "fr-idioms-30",
+     "text": "ça ne fait rien",
+     "meaning": "상관없다",
+     "example": "Ça ne fait rien, où qu'on aille.",
+     "exampleKo": "어디 가든 상관없어.",
+     "tip": "",
+     "sentences": 16,
+     "perMillion": 21.9
+    },
+    {
+     "id": "fr-idioms-31",
+     "text": "valoir le coup",
+     "meaning": "가치가 있다",
+     "example": "Ce film vaut le coup.",
+     "exampleKo": "이 영화 볼 만해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-idioms-32",
+     "text": "en avoir marre",
+     "meaning": "지겹다",
+     "example": "J'en ai marre de cette pluie.",
+     "exampleKo": "이 비에 지쳤어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 6.8
+    },
+    {
+     "id": "fr-idioms-33",
+     "text": "avoir de la chance",
+     "meaning": "운이 좋다",
+     "example": "J'ai eu de la chance aujourd'hui.",
+     "exampleKo": "오늘 운이 좋았어.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 6.8
+    },
+    {
+     "id": "fr-idioms-34",
+     "text": "aucune idée",
+     "meaning": "전혀 모르겠다",
+     "example": "Aucune idée de où c'est.",
+     "exampleKo": "어디인지 전혀 몰라.",
+     "tip": "",
+     "sentences": 249,
+     "perMillion": 340.5
+    },
+    {
+     "id": "fr-idioms-35",
+     "text": "quel bazar",
+     "meaning": "얼마나 엉망이야",
+     "example": "Quel bazar dans cette chambre !",
+     "exampleKo": "이 방 정말 엉망이야!",
+     "tip": ""
+    },
+    {
+     "id": "fr-idioms-36",
+     "text": "avoir honte",
+     "meaning": "부끄럽다",
+     "example": "J'ai honte de lui demander de l'aide.",
+     "exampleKo": "도움을 청하기가 부끄러워.",
+     "tip": "",
+     "sentences": 35,
+     "perMillion": 47.9
+    },
+    {
+     "id": "fr-idioms-37",
+     "text": "être à jour",
+     "meaning": "최신 상태다",
+     "example": "Je suis à jour dans mes études.",
+     "exampleKo": "공부는 밀리지 않았어.",
+     "tip": "",
+     "sentences": 105,
+     "perMillion": 143.6
+    },
+    {
+     "id": "fr-idioms-38",
+     "text": "sans raison",
+     "meaning": "아무 이유 없이",
+     "example": "Il s'est fâché sans raison.",
+     "exampleKo": "이유 없이 화를 냈어.",
+     "tip": "",
+     "sentences": 64,
+     "perMillion": 87.5
+    },
+    {
+     "id": "fr-idioms-39",
+     "text": "du fond du cœur",
+     "meaning": "진심으로",
+     "example": "Je te le dis du fond du cœur.",
+     "exampleKo": "진심으로 말하는 거야.",
+     "tip": "",
+     "sentences": 25,
+     "perMillion": 34.2
+    },
+    {
+     "id": "fr-idioms-40",
+     "text": "à la lettre",
+     "meaning": "글자 그대로",
+     "example": "Suis les instructions à la lettre.",
+     "exampleKo": "설명서를 그대로 따라 해.",
+     "tip": "",
+     "sentences": 33,
+     "perMillion": 45.1
+    },
+    {
+     "id": "fr-idioms-41",
+     "text": "l'amour fou",
+     "meaning": "열렬한 사랑",
+     "example": "C'est l'amour fou entre eux.",
+     "exampleKo": "둘은 열렬히 사랑해.",
+     "tip": ""
+    },
+    {
+     "id": "fr-idioms-42",
+     "text": "un petit coin de paradis",
+     "meaning": "천국 같은 곳",
+     "example": "Cet endroit, c'est un petit coin de paradis.",
+     "exampleKo": "여기는 천국 같은 곳이야.",
+     "tip": ""
+    }
+   ]
+  }
+ ]
+}

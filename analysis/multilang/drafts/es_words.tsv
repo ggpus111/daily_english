@@ -1,0 +1,271 @@
+# es 단어 원고(대화 주제별). 첫 칸이 주제 id: love bond feel talk trip food life. 기초 낱말(zipf 5.3 이상)은 뺐다. to_themes.py로 바꾼 뒤 직접 고쳐도 된다.
+# 주제	단어	뜻	[예문]	[예문 해석]
+bond	hermano (hermana)	형제, 자매
+talk	palabra	단어, 말
+feel	corazón	마음, 심장
+talk	voz	목소리
+talk	pregunta	질문
+talk	respuesta	대답
+trip	viaje	여행
+trip	vacaciones	휴가
+feel	escuchar	귀 기울여 듣다
+love	conocer	알다, 사귀다
+love	querer	원하다, 사랑하다
+love	amar	사랑하다
+love	gustar	좋아하다
+bond	ayudar	돕다
+feel	reír	웃다
+feel	llorar	울다
+love	besar	키스하다
+love	abrazar	안다
+feel	preocuparse	걱정하다
+feel	feliz	행복한
+feel	cansado (cansada)	피곤한
+love	dulce	달콤한, 다정한
+feel	invierno	겨울
+trip	aeropuerto	공항
+trip	hotel	호텔
+love	pareja	연인, 짝
+love	novio (novia)	남자친구, 여자친구
+love	boda	결혼식
+love	cita	데이트, 약속
+talk	mensaje	메시지
+talk	noticia	소식
+love	viento	바람
+bond	manzana	사과
+love	confesar	고백하다
+love	enamorarse	사랑에 빠지다
+love	romper	헤어지다
+life	relación	관계
+love	aniversario	기념일
+love	compromiso	약혼, 약속
+love	anillo	반지
+love	tomar la mano	손을 잡다
+life	sonrojarse	얼굴이 붉어지다
+love	celos	질투
+love	infidelidad	바람
+bond	confianza	신뢰
+bond	honesto (honesta)	정직한
+bond	sincero (sincera)	솔직한
+bond	paciencia	인내
+love	consentir	응석을 받아 주다
+bond	consolar	위로하다
+bond	animar	격려하다
+bond	apoyar	지지하다
+bond	agradecer	감사하다
+bond	disculparse	사과하다
+bond	perdonar	용서하다
+bond	discutir	다투다, 토론하다
+bond	reconciliarse	화해하다
+bond	malentendido	오해
+talk	explicar	설명하다
+life	significado	의미
+life	carácter	성격
+life	pasatiempo	취미
+life	experiencia	경험
+life	recuerdo	추억
+life	futuro	미래
+life	últimamente	요즘
+life	normalmente	보통
+life	especial	특별한
+life	común	흔한, 공통의
+life	necesario (necesaria)	필요한
+life	libertad	자유
+life	paz	평화
+feel	felicidad	행복
+feel	ansiedad	불안
+feel	nervios	긴장
+feel	emoción	감동, 설렘
+feel	arrepentirse	후회하다
+feel	dudar	망설이다
+life	decidir	결정하다
+life	elegir	고르다
+life	comparar	비교하다
+life	cambiar	바꾸다
+life	continuar	계속하다
+life	rendirse	포기하다
+life	esforzarse	노력하다
+bond	esperanza	희망
+life	imaginar	상상하다
+trip	preparar	준비하다
+trip	plan	계획
+trip	meta	목표
+trip	oportunidad	기회
+life	economía	경제
+life	cultura	문화
+life	costumbre	관습
+life	tradición	전통
+life	paisaje	경치
+life	ambiente	분위기, 환경
+trip	mapa	지도
+trip	dirección	주소
+bond	vecino (vecina)	이웃
+life	campo	시골
+trip	mudarse	이사하다
+trip	estudiar en el extranjero	유학하다
+life	graduarse	졸업하다
+life	sueldo	월급
+life	jefe (jefa)	상사
+bond	compañero (compañera)	동료
+life	reunión	회의
+life	plazo	기한
+life	entrevista	면접
+life	examen	시험
+life	aprobar	합격하다
+life	tarea	숙제
+life	nota	성적
+food	resfriado	감기
+food	fiebre	열
+food	medicina	약
+food	herida	상처
+food	ejercicio	운동
+food	peso	체중
+food	dieta	다이어트
+food	descanso	휴식
+food	estrés	스트레스
+life	limpiar	청소하다
+life	lavar	빨다, 씻다
+life	precio	가격
+life	descuento	할인
+life	cartera	지갑
+food	llave	열쇠
+trip	equipaje	짐
+trip	boleto	표
+trip	tráfico	교통
+trip	accidente	사고
+trip	diferencia horaria	시차
+trip	avión	비행기
+trip	pasaporte	여권
+trip	recuerdo de viaje	기념품
+trip	turismo	관광
+trip	playa	해변
+trip	fuegos artificiales	불꽃놀이
+trip	Navidad	크리스마스
+food	sabor	맛
+life	salado (salada)	짠
+life	picante	매운
+life	amargo (amarga)	쓴
+food	estómago	배, 위
+food	garganta	목
+food	espalda	등
+food	pelo	머리카락
+feel	sonrisa	미소
+feel	lágrima	눈물
+feel	expresión	표정
+talk	actitud	태도
+talk	rumor	소문
+talk	secreto	비밀
+talk	mentira	거짓말
+talk	broma	농담
+talk	en serio	진지하게
+feel	vergüenza	부끄러움
+life	molestia	불편, 폐
+talk	saludo	인사
+talk	acento	억양, 사투리
+talk	pronunciación	발음
+talk	traducir	번역하다
+talk	intérprete	통역사
+talk	conversación	대화
+talk	frase	문장
+talk	gramática	문법
+talk	opinión	의견
+talk	consultar	상담하다
+talk	confirmar	확인하다
+talk	contacto	연락처
+talk	notificación	알림
+talk	pantalla	화면
+talk	video	동영상
+talk	transmisión	방송
+talk	buscar en internet	검색하다
+talk	registrarse	등록하다
+trip	reservar	예약하다
+trip	cancelar	취소하다
+life	retraso	지연
+life	apurarse	서두르다
+feel	calmarse	진정하다
+feel	sorprenderse	놀라다
+feel	preocuparse	걱정하다
+life	cansarse	지치다
+life	descansar	쉬다
+life	despertarse	잠에서 깨다
+life	encontrar	발견하다
+life	perder	잃어버리다
+life	recoger	줍다
+life	prestar	빌려주다
+life	pedir prestado	빌리다
+life	devolver	돌려주다
+life	pagar	지불하다
+life	recibir	받다
+life	entregar	건네다
+bond	invitar	초대하다
+bond	rechazar	거절하다
+bond	pedir	부탁하다, 주문하다
+life	contar	말해 주다, 세다
+life	darse cuenta	알아차리다
+life	sentir	느끼다
+bond	creer	믿다
+bond	sospechar	의심하다
+bond	proteger	보호하다
+life	criar	키우다
+feel	quedar bien	잘 어울리다
+life	parecerse	닮다
+life	nostalgia	그리움
+life	envidiar	부러워하다
+life	miedoso (miedosa)	무서워하는
+life	ruidoso (ruidosa)	시끄러운
+life	tranquilo (tranquila)	조용한, 차분한
+life	animado (animada)	활기찬
+feel	cómodo (cómoda)	편안한
+life	incómodo (incómoda)	불편한
+talk	educado (educada)	예의 바른
+talk	serio (seria)	진지한
+life	guapo (guapa)	잘생긴
+life	brillante	밝은, 빛나는
+life	oscuro (oscura)	어두운
+life	claramente	분명히
+life	seguramente	아마도
+life	recién	방금
+life	justo	딱, 정확히
+life	inesperado (inesperada)	뜻밖의
+life	por supuesto	당연히
+life	casualidad	우연
+love	destino	운명
+love	milagro	기적
+trip	prometer	약속하다
+life	hecho a mano	수제의
+bond	cuidar	돌보다
+life	acompañar	함께하다
+life	recoger a alguien	마중하다
+love	cariño	애정, 자기
+love	dulzura	다정함
+love	romántico (romántica)	로맨틱한
+love	sorpresa	서프라이즈
+love	compañía	동반, 곁에 있음
+love	valorar	소중히 여기다
+life	suerte	행운
+life	valentía	용기
+life	confianza en sí mismo	자신감
+life	encanto	매력
+life	talento	재능
+life	crecer	자라다
+bond	responsabilidad	책임
+life	ahorrar	저축하다
+life	instrumento	악기
+life	quedarse	머무르다
+life	tareas del hogar	집안일
+love	recién casados	신혼부부
+life	lo peor	최악
+bond	mejor amigo (mejor amiga)	절친
+bond	mutuo (mutua)	서로의
+bond	a solas	단둘이
+life	cercano (cercana)	가까운
+bond	depender	의지하다
+life	extraño (extraña)	낯선
+feel	conocido (conocida)	익숙한
+love	abrazo	포옹
+love	beso	키스
+love	susurrar	속삭이다
+love	mirada	눈빛
+love	ternura	다정함
+life	nostálgico (nostálgica)	그리운
+feel	ilusión	설렘, 기대

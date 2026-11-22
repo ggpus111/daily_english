@@ -1,0 +1,2488 @@
+{
+ "source": {
+  "corpus": "Tatoeba (tatoeba.org) cmn sentences, CC BY 2.0 FR",
+  "sentences": 89325,
+  "note": "단어는 연인·친구와의 대화에서 쓰는 말을 사람이 골랐고(analyze_words.py로 점검), 뜻은 Daily English가 직접 썼습니다(AI 도움)."
+ },
+ "levels": [
+  {
+   "id": "love",
+   "title": {
+    "ko": "연애·애정",
+    "en": "Love & romance"
+   },
+   "items": [
+    {
+     "id": "zh-w-love001",
+     "word": "温柔",
+     "meaning": "다정하다",
+     "sentences": 5,
+     "example": "他的声音很温柔。",
+     "exampleKo": "그의 목소리는 다정해."
+    },
+    {
+     "id": "zh-w-love002",
+     "word": "恋人",
+     "meaning": "연인",
+     "sentences": 4,
+     "example": "两个恋人发誓永远相爱。",
+     "exampleKo": "두 연인은 영원히 사랑하자고 맹세했어.",
+     "tatoeba": 9953359
+    },
+    {
+     "id": "zh-w-love003",
+     "word": "男朋友",
+     "meaning": "남자친구",
+     "sentences": 52,
+     "example": "不，那不是我的新男朋友。",
+     "exampleKo": "아니야, 새 남자친구가 아니야.",
+     "tatoeba": 335066
+    },
+    {
+     "id": "zh-w-love004",
+     "word": "女朋友",
+     "meaning": "여자친구",
+     "sentences": 93,
+     "example": "我給女朋友打去了電話。",
+     "exampleKo": "저는 여자친구에게 전화를 했습니다.",
+     "tatoeba": 13611615
+    },
+    {
+     "id": "zh-w-love005",
+     "word": "结婚",
+     "meaning": "결혼하다",
+     "sentences": 113,
+     "example": "我姐姐结婚前是个秘书。",
+     "exampleKo": "우리 언니는 결혼 전에 비서였어."
+    },
+    {
+     "id": "zh-w-love006",
+     "word": "约会",
+     "meaning": "데이트",
+     "sentences": 27,
+     "example": "和我约会好吗？",
+     "exampleKo": "저랑 데이트하실래요?",
+     "tatoeba": 8696221
+    },
+    {
+     "id": "zh-w-love007",
+     "word": "拥抱",
+     "meaning": "안다",
+     "sentences": 12,
+     "example": "在你们远离家乡之前请给父母一个拥抱。",
+     "exampleKo": "고향을 떠나기 전에 부모님을 안아 주세요.",
+     "tatoeba": 4906527
+    },
+    {
+     "id": "zh-w-love008",
+     "word": "亲",
+     "meaning": "뽀뽀하다",
+     "sentences": 401,
+     "example": "我父亲至今从未去过国外。",
+     "exampleKo": "아버지는 지금까지 해외에 가본 적이 없다.",
+     "tatoeba": 845142
+    },
+    {
+     "id": "zh-w-love009",
+     "word": "告白",
+     "meaning": "고백하다",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-love010",
+     "word": "暗恋",
+     "meaning": "짝사랑하다",
+     "sentences": 4,
+     "example": "他一直暗恋着她。",
+     "exampleKo": "그는 계속 그녀를 짝사랑하고 있어.",
+     "tatoeba": 1490518
+    },
+    {
+     "id": "zh-w-love011",
+     "word": "表白",
+     "meaning": "마음을 고백하다",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-love012",
+     "word": "分手",
+     "meaning": "헤어지다",
+     "sentences": 21,
+     "example": "我觉得你应该跟男友分手。",
+     "exampleKo": "네가 남자친구랑 헤어져야 할 것 같아.",
+     "tatoeba": 1399764
+    },
+    {
+     "id": "zh-w-love013",
+     "word": "异地恋",
+     "meaning": "장거리 연애",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-love014",
+     "word": "纪念日",
+     "meaning": "기념일",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-love015",
+     "word": "订婚",
+     "meaning": "약혼하다",
+     "sentences": 6,
+     "example": "他和我的堂姊妹订婚了。",
+     "exampleKo": "그는 내 사촌과 약혼했다.",
+     "tatoeba": 1450523
+    },
+    {
+     "id": "zh-w-love016",
+     "word": "戒指",
+     "meaning": "반지",
+     "sentences": 12,
+     "example": "我会帮你把戒指找回来的。",
+     "exampleKo": "잃어버린 반지를 내가 찾아 줄게."
+    },
+    {
+     "id": "zh-w-love017",
+     "word": "牵手",
+     "meaning": "손잡다",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-love018",
+     "word": "吃醋",
+     "meaning": "질투하다",
+     "sentences": 1,
+     "example": "他跟其他女生说话我会吃醋。",
+     "exampleKo": "그가 다른 여자애랑 얘기하면 질투 나.",
+     "tatoeba": 14007080
+    },
+    {
+     "id": "zh-w-love019",
+     "word": "出轨",
+     "meaning": "바람피우다",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-love020",
+     "word": "撒娇",
+     "meaning": "애교 부리다",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-love021",
+     "word": "命运",
+     "meaning": "운명",
+     "sentences": 13,
+     "example": "你才是自己命运的主人。",
+     "exampleKo": "네가 네 운명의 주인이야.",
+     "tatoeba": 1992648
+    },
+    {
+     "id": "zh-w-love022",
+     "word": "奇迹",
+     "meaning": "기적",
+     "sentences": 10,
+     "example": "你相信奇迹吗？",
+     "exampleKo": "기적을 믿어?"
+    },
+    {
+     "id": "zh-w-love023",
+     "word": "想你",
+     "meaning": "네가 보고 싶다",
+     "sentences": 69,
+     "example": "我很想你。",
+     "exampleKo": "보고 싶어.",
+     "tatoeba": 29
+    },
+    {
+     "id": "zh-w-love024",
+     "word": "宝贝",
+     "meaning": "자기",
+     "sentences": 6,
+     "example": "这个球是那个男孩的宝贝。",
+     "exampleKo": "그 공은 그 아이의 보물이야.",
+     "tatoeba": 392260
+    },
+    {
+     "id": "zh-w-love025",
+     "word": "亲爱的",
+     "meaning": "사랑하는 사람",
+     "sentences": 9,
+     "example": "亲爱的，你把我迷住了。",
+     "exampleKo": "자기야, 너한테 푹 빠졌어.",
+     "tatoeba": 8794842
+    },
+    {
+     "id": "zh-w-love026",
+     "word": "甜蜜",
+     "meaning": "달콤하다",
+     "sentences": 2,
+     "example": "你们俩看起来很甜蜜。",
+     "exampleKo": "둘이 달콤해 보여."
+    },
+    {
+     "id": "zh-w-love027",
+     "word": "浪漫",
+     "meaning": "로맨틱하다",
+     "sentences": 15,
+     "example": "其实我还是觉得好浪漫哦。",
+     "exampleKo": "사실 난 아직도 너무 로맨틱하게 느껴져.",
+     "tatoeba": 1807194
+    },
+    {
+     "id": "zh-w-love028",
+     "word": "惊喜",
+     "meaning": "서프라이즈",
+     "sentences": 10,
+     "example": "为什么任何人应该感到惊喜？",
+     "exampleKo": "왜 누군가가 놀라야 하지?",
+     "tatoeba": 4844759
+    },
+    {
+     "id": "zh-w-love029",
+     "word": "陪伴",
+     "meaning": "동반, 곁에 있음",
+     "sentences": 8,
+     "example": "我真的很喜欢你的陪伴。",
+     "exampleKo": "네가 곁에 있어 주는 게 정말 좋아.",
+     "tatoeba": 835769
+    },
+    {
+     "id": "zh-w-love030",
+     "word": "珍惜",
+     "meaning": "소중히 여기다",
+     "sentences": 6,
+     "example": "我至今还珍惜你十年前给我的项链。",
+     "exampleKo": "10년 전에 준 목걸이를 지금도 소중히 간직해.",
+     "tatoeba": 9401695
+    },
+    {
+     "id": "zh-w-love031",
+     "word": "新婚",
+     "meaning": "신혼",
+     "sentences": 2,
+     "example": "他们是新婚夫妇。",
+     "exampleKo": "그들은 신혼부부야."
+    },
+    {
+     "id": "zh-w-love032",
+     "word": "一辈子",
+     "meaning": "평생",
+     "sentences": 9,
+     "example": "我一辈子都不会忘记你。",
+     "exampleKo": "평생 너를 못 잊을 거야."
+    },
+    {
+     "id": "zh-w-love033",
+     "word": "亲密",
+     "meaning": "친밀하다",
+     "sentences": 2,
+     "example": "他们看起来很亲密。",
+     "exampleKo": "그들은 꽤 가까워 보여.",
+     "tatoeba": 353633
+    },
+    {
+     "id": "zh-w-love034",
+     "word": "风",
+     "meaning": "바람",
+     "sentences": 181,
+     "example": "暴风雪使得我们难以返回营地。",
+     "exampleKo": "눈보라 때문에 우리는 야영지로 돌아가기 어려워졌다.",
+     "tatoeba": 1328127
+    },
+    {
+     "id": "zh-w-love035",
+     "word": "缘分",
+     "meaning": "인연",
+     "sentences": 1,
+     "example": "看缘分吧。",
+     "exampleKo": "인연에 맡겨 보자.",
+     "tatoeba": 2299583
+    },
+    {
+     "id": "zh-w-love036",
+     "word": "突然",
+     "meaning": "갑자기",
+     "sentences": 149,
+     "example": "這時，她突然笑了起來。",
+     "exampleKo": "그때 갑자기, 그녀가 웃기 시작했다.",
+     "tatoeba": 13532040
+    }
+   ]
+  },
+  {
+   "id": "feel",
+   "title": {
+    "ko": "기분·마음",
+    "en": "Feelings"
+   },
+   "items": [
+    {
+     "id": "zh-w-feel001",
+     "word": "心情",
+     "meaning": "기분",
+     "sentences": 63,
+     "example": "春風溫柔地吹來，讓人心情舒暢。",
+     "exampleKo": "봄바람이 온화하게 불어와 기분이 상쾌해졌어요.",
+     "tatoeba": 13515462
+    },
+    {
+     "id": "zh-w-feel002",
+     "word": "高兴",
+     "meaning": "기쁘다",
+     "sentences": 142,
+     "example": "我很高兴你能来参加派对。",
+     "exampleKo": "파티에 와 줘서 기뻐.",
+     "tatoeba": 336483
+    },
+    {
+     "id": "zh-w-feel003",
+     "word": "难过",
+     "meaning": "슬프다",
+     "sentences": 16,
+     "example": "我很惊讶，并且感到难过。",
+     "exampleKo": "놀랐고 또 슬펐어.",
+     "tatoeba": 9495803
+    },
+    {
+     "id": "zh-w-feel004",
+     "word": "孤单",
+     "meaning": "외롭다",
+     "sentences": 13,
+     "example": "我孤单的时候总会想起他。",
+     "exampleKo": "외로울 때면 늘 그가 떠올라.",
+     "tatoeba": 5574566
+    },
+    {
+     "id": "zh-w-feel005",
+     "word": "冬天",
+     "meaning": "겨울",
+     "sentences": 84,
+     "example": "冬天我总是需要多加条被子。",
+     "exampleKo": "겨울에는 나는 항상 이불을 하나 더 덮어야 한다.",
+     "tatoeba": 346078
+    },
+    {
+     "id": "zh-w-feel006",
+     "word": "笑",
+     "meaning": "웃다",
+     "sentences": 485,
+     "example": "這時，她突然笑了起來。",
+     "exampleKo": "그때 갑자기, 그녀가 웃기 시작했다.",
+     "tatoeba": 13532040
+    },
+    {
+     "id": "zh-w-feel007",
+     "word": "哭",
+     "meaning": "울다",
+     "sentences": 213,
+     "example": "我努力忍住哭。",
+     "exampleKo": "난 울지 않으려고 노력했어.",
+     "tatoeba": 8696271
+    },
+    {
+     "id": "zh-w-feel008",
+     "word": "生气",
+     "meaning": "화내다",
+     "sentences": 85,
+     "example": "你为什么生气？",
+     "exampleKo": "너 왜 화났어?",
+     "tatoeba": 794067
+    },
+    {
+     "id": "zh-w-feel009",
+     "word": "担心",
+     "meaning": "걱정하다",
+     "sentences": 102,
+     "example": "我们很担心。",
+     "exampleKo": "우리들은 걱정했다.",
+     "tatoeba": 7704613
+    },
+    {
+     "id": "zh-w-feel010",
+     "word": "放心",
+     "meaning": "안심하다",
+     "sentences": 15,
+     "example": "如果有其他意見，不要擔心，放心告訴我。",
+     "exampleKo": "다른 의견 있으시면 고민하지 마시고 저한테 알려주세요.",
+     "tatoeba": 13512239
+    },
+    {
+     "id": "zh-w-feel011",
+     "word": "微笑",
+     "meaning": "미소 짓다",
+     "sentences": 68,
+     "example": "她總是以溫和的微笑對待他人。",
+     "exampleKo": "그녀는 항상 온화한 미소로 사람들을 대합니다.",
+     "tatoeba": 13515464
+    },
+    {
+     "id": "zh-w-feel012",
+     "word": "害羞",
+     "meaning": "부끄러워하다",
+     "sentences": 30,
+     "example": "我害羞得不敢正面看她的脸。",
+     "exampleKo": "너무 부끄러워서 그녀 얼굴을 못 쳐다봤어.",
+     "tatoeba": 2031392
+    },
+    {
+     "id": "zh-w-feel013",
+     "word": "幸福",
+     "meaning": "행복하다",
+     "sentences": 125,
+     "example": "我們很幸福。",
+     "exampleKo": "저희 행복해요.",
+     "tatoeba": 13987340
+    },
+    {
+     "id": "zh-w-feel014",
+     "word": "不安",
+     "meaning": "불안하다",
+     "sentences": 26,
+     "example": "你度过了很不安宁的一夜。",
+     "exampleKo": "불안한 밤을 보냈구나."
+    },
+    {
+     "id": "zh-w-feel015",
+     "word": "紧张",
+     "meaning": "긴장하다",
+     "sentences": 30,
+     "example": "比赛前我一直都很紧张。",
+     "exampleKo": "경기 전에는 늘 긴장돼.",
+     "tatoeba": 2029470
+    },
+    {
+     "id": "zh-w-feel016",
+     "word": "兴奋",
+     "meaning": "흥분하다",
+     "sentences": 18,
+     "example": "我兴奋得睡不着。",
+     "exampleKo": "너무 설레서 잠이 안 와."
+    },
+    {
+     "id": "zh-w-feel017",
+     "word": "感动",
+     "meaning": "감동하다",
+     "sentences": 14,
+     "example": "这件事让我真的很感动。",
+     "exampleKo": "이 일에 정말 감동했어.",
+     "tatoeba": 403625
+    },
+    {
+     "id": "zh-w-feel018",
+     "word": "后悔",
+     "meaning": "후회하다",
+     "sentences": 31,
+     "example": "你会后悔的。",
+     "exampleKo": "너 후회할거야.",
+     "tatoeba": 9434981
+    },
+    {
+     "id": "zh-w-feel019",
+     "word": "犹豫",
+     "meaning": "망설이다",
+     "sentences": 11,
+     "example": "我会毫不犹豫嫁给你。",
+     "exampleKo": "망설임 없이 너랑 결혼할 거야.",
+     "tatoeba": 13751701
+    },
+    {
+     "id": "zh-w-feel020",
+     "word": "笑容",
+     "meaning": "웃는 얼굴",
+     "sentences": 17,
+     "example": "她给了我一个腼腆的笑容。",
+     "exampleKo": "그녀가 나에게 수줍게 웃어 줬어."
+    },
+    {
+     "id": "zh-w-feel021",
+     "word": "眼泪",
+     "meaning": "눈물",
+     "sentences": 13,
+     "example": "我没法忍住我的眼泪。",
+     "exampleKo": "눈물을 참을 수 없었어.",
+     "tatoeba": 785843
+    },
+    {
+     "id": "zh-w-feel022",
+     "word": "表情",
+     "meaning": "표정",
+     "sentences": 9,
+     "example": "我从你的表情猜到你有好消息。",
+     "exampleKo": "네 표정을 보니 좋은 소식이 있나 봐.",
+     "tatoeba": 392237
+    },
+    {
+     "id": "zh-w-feel023",
+     "word": "真心话",
+     "meaning": "속마음",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-feel024",
+     "word": "着急",
+     "meaning": "조급하다",
+     "sentences": 17,
+     "example": "别着急，我们马上就来。",
+     "exampleKo": "서두르지 마, 곧 갈게.",
+     "tatoeba": 2165608
+    },
+    {
+     "id": "zh-w-feel025",
+     "word": "慌张",
+     "meaning": "허둥대다",
+     "sentences": 1,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-feel026",
+     "word": "冷静",
+     "meaning": "침착하다",
+     "sentences": 13,
+     "example": "我父亲一直很冷静。",
+     "exampleKo": "아버지는 늘 침착하셔.",
+     "tatoeba": 333856
+    },
+    {
+     "id": "zh-w-feel027",
+     "word": "吃惊",
+     "meaning": "놀라다",
+     "sentences": 11,
+     "example": "你流利的英语让我很吃惊。",
+     "exampleKo": "네 유창한 영어에 놀랐어.",
+     "tatoeba": 2208990
+    },
+    {
+     "id": "zh-w-feel028",
+     "word": "烦恼",
+     "meaning": "고민하다",
+     "sentences": 7,
+     "example": "现在有什么烦恼的事情吗？",
+     "exampleKo": "지금 고민되는 일 있어?",
+     "tatoeba": 4147177
+    },
+    {
+     "id": "zh-w-feel029",
+     "word": "为难",
+     "meaning": "곤란하다",
+     "sentences": 2,
+     "example": "别为难他了。",
+     "exampleKo": "그를 곤란하게 하지 마."
+    },
+    {
+     "id": "zh-w-feel030",
+     "word": "累",
+     "meaning": "피곤하다",
+     "sentences": 208,
+     "example": "我累得走不動了。",
+     "exampleKo": "피곤해서 더 이상 걸을 수 없어.",
+     "tatoeba": 403770
+    },
+    {
+     "id": "zh-w-feel031",
+     "word": "适合",
+     "meaning": "어울리다",
+     "sentences": 46,
+     "example": "这条裙子很适合你的气氛",
+     "exampleKo": "이 치마는 네 스타일(분위기)에 딱 맞는다.",
+     "tatoeba": 2409683
+    },
+    {
+     "id": "zh-w-feel032",
+     "word": "可怕",
+     "meaning": "무섭다",
+     "sentences": 43,
+     "example": "昨晚我做了一个可怕的梦。",
+     "exampleKo": "어젯밤에 무서운 꿈을 꿨어."
+    },
+    {
+     "id": "zh-w-feel033",
+     "word": "困",
+     "meaning": "졸리다",
+     "sentences": 193,
+     "example": "對我們來說是非常困難的事。",
+     "exampleKo": "우리에게 몹시 힘든 일이에요.",
+     "tatoeba": 13582412
+    },
+    {
+     "id": "zh-w-feel034",
+     "word": "不方便",
+     "meaning": "불편하다",
+     "sentences": 5,
+     "example": "这地方交通不方便。",
+     "exampleKo": "여기는 교통이 불편해."
+    },
+    {
+     "id": "zh-w-feel035",
+     "word": "随便",
+     "meaning": "마음대로",
+     "sentences": 23,
+     "example": "随便说点什么。",
+     "exampleKo": "아무 말이나 해봐.",
+     "tatoeba": 8795142
+    },
+    {
+     "id": "zh-w-feel036",
+     "word": "陌生",
+     "meaning": "낯설다",
+     "sentences": 44,
+     "example": "她对我来说是一个完全陌生的人。",
+     "exampleKo": "그녀는 나에게 전혀 낯선 사람이었다.",
+     "tatoeba": 334120
+    },
+    {
+     "id": "zh-w-feel037",
+     "word": "熟悉",
+     "meaning": "익숙하다",
+     "sentences": 26,
+     "example": "我对这位作者的名字很熟悉。",
+     "exampleKo": "이 작가 이름은 낯이 익어."
+    },
+    {
+     "id": "zh-w-feel038",
+     "word": "失望",
+     "meaning": "실망하다",
+     "sentences": 62,
+     "example": "世界上的教育都讓我失望。",
+     "exampleKo": "이 세상의 교육이 나를 실망시켜요.",
+     "tatoeba": 20
+    },
+    {
+     "id": "zh-w-feel039",
+     "word": "骄傲",
+     "meaning": "자랑스럽다",
+     "sentences": 26,
+     "example": "骄傲使我无法向他借钱。",
+     "exampleKo": "자존심 때문에 그에게 돈을 못 빌렸어.",
+     "tatoeba": 733171
+    },
+    {
+     "id": "zh-w-feel040",
+     "word": "感情",
+     "meaning": "감정",
+     "sentences": 38,
+     "example": "体现了彼此间深厚的感情。",
+     "exampleKo": "그들사이의 두터운 정을 보여준다. (반영한다)",
+     "tatoeba": 4031803
+    },
+    {
+     "id": "zh-w-feel041",
+     "word": "遗憾",
+     "meaning": "아쉽다",
+     "sentences": 29,
+     "example": "很遗憾我无法接受您的邀请。",
+     "exampleKo": "유감스럽게도 저는 당신의 초대를 거절해야 합니다.",
+     "tatoeba": 2051380
+    },
+    {
+     "id": "zh-w-feel042",
+     "word": "满意",
+     "meaning": "만족하다",
+     "sentences": 43,
+     "example": "我对我今天的表演不满意。",
+     "exampleKo": "오늘 내 공연에 만족하지 못해.",
+     "tatoeba": 1020164
+    }
+   ]
+  },
+  {
+   "id": "bond",
+   "title": {
+    "ko": "관계·위로·부탁",
+    "en": "People & support"
+   },
+   "items": [
+    {
+     "id": "zh-w-bond001",
+     "word": "家人",
+     "meaning": "가족",
+     "sentences": 92,
+     "example": "我要去机场接我的家人。",
+     "exampleKo": "가족을 마중하러 공항에 가야 해."
+    },
+    {
+     "id": "zh-w-bond002",
+     "word": "信任",
+     "meaning": "신뢰",
+     "sentences": 55,
+     "example": "我再也无法相信任何人了。",
+     "exampleKo": "이젠 아무도 못 믿겠어요.",
+     "tatoeba": 4906345
+    },
+    {
+     "id": "zh-w-bond003",
+     "word": "诚实",
+     "meaning": "정직하다",
+     "sentences": 35,
+     "example": "你很诚实地承认了你的错误。",
+     "exampleKo": "너는 정직하게 잘못을 인정했어.",
+     "tatoeba": 336260
+    },
+    {
+     "id": "zh-w-bond004",
+     "word": "坦率",
+     "meaning": "솔직하다",
+     "sentences": 4,
+     "example": "坦率地说，我不喜欢你。",
+     "exampleKo": "솔직히 말하면 난 널 안 좋아해.",
+     "tatoeba": 2865886
+    },
+    {
+     "id": "zh-w-bond005",
+     "word": "忍耐",
+     "meaning": "참다",
+     "sentences": 11,
+     "example": "忍耐是有限度的。",
+     "exampleKo": "참는 데도 한계가 있어.",
+     "tatoeba": 334913
+    },
+    {
+     "id": "zh-w-bond006",
+     "word": "安慰",
+     "meaning": "위로하다",
+     "sentences": 19,
+     "example": "老師溫和的語氣給學生們很大的安慰。",
+     "exampleKo": "선생님의 온화한 말투가 학생들에게 큰 위로가 되었어요.",
+     "tatoeba": 13515466
+    },
+    {
+     "id": "zh-w-bond007",
+     "word": "鼓励",
+     "meaning": "격려하다",
+     "sentences": 25,
+     "example": "我正在鼓励我的弟弟。",
+     "exampleKo": "내 동생을 격려하던 참이야.",
+     "tatoeba": 10099063
+    },
+    {
+     "id": "zh-w-bond008",
+     "word": "感谢",
+     "meaning": "감사하다",
+     "sentences": 48,
+     "example": "非常感谢你所做的一切。",
+     "exampleKo": "네가 해 준 모든 것에 정말 감사해.",
+     "tatoeba": 993724
+    },
+    {
+     "id": "zh-w-bond009",
+     "word": "道歉",
+     "meaning": "사과하다",
+     "sentences": 57,
+     "example": "請接受我的道歉。",
+     "exampleKo": "제 사과를 받아 주세요.",
+     "tatoeba": 13620379
+    },
+    {
+     "id": "zh-w-bond010",
+     "word": "原谅",
+     "meaning": "용서하다",
+     "sentences": 34,
+     "example": "请原谅我吧。",
+     "exampleKo": "용서해 주십시오.",
+     "tatoeba": 11243419
+    },
+    {
+     "id": "zh-w-bond011",
+     "word": "吵架",
+     "meaning": "다투다",
+     "sentences": 20,
+     "example": "他们又在吵架。",
+     "exampleKo": "그들이 또 싸우고 있어."
+    },
+    {
+     "id": "zh-w-bond012",
+     "word": "和好",
+     "meaning": "화해하다",
+     "sentences": 10,
+     "example": "我们吵架后很快就和好了。",
+     "exampleKo": "우리는 싸운 뒤 금방 화해했어."
+    },
+    {
+     "id": "zh-w-bond013",
+     "word": "误会",
+     "meaning": "오해",
+     "sentences": 8,
+     "example": "我们之间肯定有误会。",
+     "exampleKo": "우리 사이에 분명 오해가 있어.",
+     "tatoeba": 1328039
+    },
+    {
+     "id": "zh-w-bond014",
+     "word": "邻居",
+     "meaning": "이웃",
+     "sentences": 36,
+     "example": "我和邻居关系很好。",
+     "exampleKo": "나는 이웃이랑 사이가 좋아."
+    },
+    {
+     "id": "zh-w-bond015",
+     "word": "同事",
+     "meaning": "동료",
+     "sentences": 31,
+     "example": "我认识小王，我们是同事。",
+     "exampleKo": "왕 씨 알아, 우린 동료야."
+    },
+    {
+     "id": "zh-w-bond016",
+     "word": "邀请",
+     "meaning": "초대하다",
+     "sentences": 47,
+     "example": "很遗憾我无法接受您的邀请。",
+     "exampleKo": "유감스럽게도 저는 당신의 초대를 거절해야 합니다.",
+     "tatoeba": 2051380
+    },
+    {
+     "id": "zh-w-bond017",
+     "word": "拒绝",
+     "meaning": "거절하다",
+     "sentences": 53,
+     "example": "我斩钉截铁地拒绝了。",
+     "exampleKo": "나는 단호하게 거절했다.",
+     "tatoeba": 414045
+    },
+    {
+     "id": "zh-w-bond018",
+     "word": "拜托",
+     "meaning": "부탁하다",
+     "sentences": 9,
+     "example": "拜托您，请给我一张签证。",
+     "exampleKo": "부탁이에요, 비자를 주세요.",
+     "tatoeba": 392293
+    },
+    {
+     "id": "zh-w-bond019",
+     "word": "怀疑",
+     "meaning": "의심하다",
+     "sentences": 56,
+     "example": "我不怀疑你。",
+     "exampleKo": "난 너를 의심하지 않아."
+    },
+    {
+     "id": "zh-w-bond020",
+     "word": "照顾",
+     "meaning": "돌보다",
+     "sentences": 46,
+     "example": "照顾他们是你自己的事儿。",
+     "exampleKo": "그들을 돌보는 건 네 몫이야.",
+     "tatoeba": 1990211
+    },
+    {
+     "id": "zh-w-bond021",
+     "word": "责任",
+     "meaning": "책임",
+     "sentences": 36,
+     "example": "那是你的责任。",
+     "exampleKo": "그건 네 책임이야.",
+     "tatoeba": 345972
+    },
+    {
+     "id": "zh-w-bond022",
+     "word": "好朋友",
+     "meaning": "절친",
+     "sentences": 38,
+     "example": "瑪莉和凱特自高中時期起就是好朋友。",
+     "exampleKo": "메리랑 케이트는 고등학교 때부터 친구야.",
+     "tatoeba": 13498373
+    },
+    {
+     "id": "zh-w-bond023",
+     "word": "彼此",
+     "meaning": "서로",
+     "sentences": 45,
+     "example": "体现了彼此间深厚的感情。",
+     "exampleKo": "그들사이의 두터운 정을 보여준다. (반영한다)",
+     "tatoeba": 4031803
+    },
+    {
+     "id": "zh-w-bond024",
+     "word": "单独",
+     "meaning": "단둘이",
+     "sentences": 9,
+     "example": "我想让他单独去做。",
+     "exampleKo": "그가 혼자 하게 하고 싶어.",
+     "tatoeba": 5613636
+    },
+    {
+     "id": "zh-w-bond025",
+     "word": "共同",
+     "meaning": "공동의",
+     "sentences": 48,
+     "example": "我们之间应该有共同话题。",
+     "exampleKo": "우리 사이에 공통 화제가 있어야 해.",
+     "tatoeba": 1875280
+    },
+    {
+     "id": "zh-w-bond026",
+     "word": "依赖",
+     "meaning": "의지하다",
+     "sentences": 10,
+     "example": "人们正在依赖着我们。",
+     "exampleKo": "사람들이 우리를 의지하고 있어.",
+     "tatoeba": 4846814
+    },
+    {
+     "id": "zh-w-bond027",
+     "word": "苹果",
+     "meaning": "사과",
+     "sentences": 94,
+     "example": "一天一苹果，医生远离我。",
+     "exampleKo": "하루에 한 개 사과면 의사가 필요 없어요.",
+     "tatoeba": 379584
+    },
+    {
+     "id": "zh-w-bond028",
+     "word": "耐心",
+     "meaning": "인내심",
+     "sentences": 57,
+     "example": "你必须对你的康复有耐心。",
+     "exampleKo": "회복에 인내심을 가져야 해."
+    }
+   ]
+  },
+  {
+   "id": "talk",
+   "title": {
+    "ko": "말·연락",
+    "en": "Talking & messages"
+   },
+   "items": [
+    {
+     "id": "zh-w-talk001",
+     "word": "声音",
+     "meaning": "소리, 목소리",
+     "sentences": 74,
+     "example": "我喜欢你的声音。",
+     "exampleKo": "네 목소리가 좋아."
+    },
+    {
+     "id": "zh-w-talk002",
+     "word": "消息",
+     "meaning": "소식, 메시지",
+     "sentences": 148,
+     "example": "我在新聞上聽到那個消息。",
+     "exampleKo": "오늘 그 소식을 뉴스로 들었다.",
+     "tatoeba": 13504475
+    },
+    {
+     "id": "zh-w-talk003",
+     "word": "回复",
+     "meaning": "답장",
+     "sentences": 10,
+     "example": "不好意思，我必须回复短信。",
+     "exampleKo": "미안, 문자에 답장해야 해.",
+     "tatoeba": 9432388
+    },
+    {
+     "id": "zh-w-talk004",
+     "word": "态度",
+     "meaning": "태도",
+     "sentences": 22,
+     "example": "我无法忍受她傲慢的态度。",
+     "exampleKo": "그녀의 거만한 태도를 참을 수 없어.",
+     "tatoeba": 466257
+    },
+    {
+     "id": "zh-w-talk005",
+     "word": "传闻",
+     "meaning": "소문",
+     "sentences": 6,
+     "example": "我听到一个传闻。",
+     "exampleKo": "소문을 하나 들었어."
+    },
+    {
+     "id": "zh-w-talk006",
+     "word": "秘密",
+     "meaning": "비밀",
+     "sentences": 84,
+     "example": "她又开始讲起了学校的秘密。",
+     "exampleKo": "그녀는 또 학교의 비밀에 대해 이야기하기 시작했다.",
+     "tatoeba": 4844648
+    },
+    {
+     "id": "zh-w-talk007",
+     "word": "谎言",
+     "meaning": "거짓말",
+     "sentences": 13,
+     "example": "我不喜欢谎言。",
+     "exampleKo": "나는 거짓말이 싫어."
+    },
+    {
+     "id": "zh-w-talk008",
+     "word": "玩笑",
+     "meaning": "농담",
+     "sentences": 71,
+     "example": "別開玩笑了。",
+     "exampleKo": "농담은 그만 둬.",
+     "tatoeba": 826002
+    },
+    {
+     "id": "zh-w-talk009",
+     "word": "认真",
+     "meaning": "진지하다",
+     "sentences": 88,
+     "example": "我说我爱你时是认真的。",
+     "exampleKo": "사랑한다고 했을 때 진심이었어.",
+     "tatoeba": 5551019
+    },
+    {
+     "id": "zh-w-talk010",
+     "word": "问候",
+     "meaning": "인사",
+     "sentences": 3,
+     "example": "代我问候你妈妈。",
+     "exampleKo": "어머님께 안부 전해 줘.",
+     "tatoeba": 337981
+    },
+    {
+     "id": "zh-w-talk011",
+     "word": "方言",
+     "meaning": "사투리",
+     "sentences": 28,
+     "example": "嚴格來說，中文由數百種方言組成。",
+     "exampleKo": "엄밀히 말하자면, 중국어는 수백 개의 방언들로 구성되어 있어.",
+     "tatoeba": 13155824
+    },
+    {
+     "id": "zh-w-talk012",
+     "word": "发音",
+     "meaning": "발음",
+     "sentences": 14,
+     "example": "这个词怎么发音？",
+     "exampleKo": "이 단어를 어떻게 발음합니까?",
+     "tatoeba": 333780
+    },
+    {
+     "id": "zh-w-talk013",
+     "word": "翻译",
+     "meaning": "번역하다",
+     "sentences": 94,
+     "example": "哎...没有人翻译我写的句子。",
+     "exampleKo": "이런... 아무도 내가 만든 문장을 번역 안 해.",
+     "tatoeba": 8696348
+    },
+    {
+     "id": "zh-w-talk014",
+     "word": "口译",
+     "meaning": "통역하다",
+     "sentences": 2,
+     "example": "她非常想当口译。",
+     "exampleKo": "그녀는 통역사가 정말 되고 싶어 해.",
+     "tatoeba": 2411918
+    },
+    {
+     "id": "zh-w-talk015",
+     "word": "对话",
+     "meaning": "대화",
+     "sentences": 10,
+     "example": "我们的对话总是以争吵收场。",
+     "exampleKo": "우리 대화는 늘 싸움으로 끝나.",
+     "tatoeba": 466084
+    },
+    {
+     "id": "zh-w-talk016",
+     "word": "句子",
+     "meaning": "문장",
+     "sentences": 149,
+     "example": "哎...没有人翻译我写的句子。",
+     "exampleKo": "이런... 아무도 내가 만든 문장을 번역 안 해.",
+     "tatoeba": 8696348
+    },
+    {
+     "id": "zh-w-talk017",
+     "word": "单词",
+     "meaning": "단어",
+     "sentences": 20,
+     "example": "我经常用那本词典找单词。",
+     "exampleKo": "나는 그 사전으로 단어를 자주 찾아.",
+     "tatoeba": 8756336
+    },
+    {
+     "id": "zh-w-talk018",
+     "word": "语法",
+     "meaning": "문법",
+     "sentences": 22,
+     "example": "语法非常复杂。",
+     "exampleKo": "문법은 매우 복잡하다.",
+     "tatoeba": 10952154
+    },
+    {
+     "id": "zh-w-talk019",
+     "word": "确认",
+     "meaning": "확인하다",
+     "sentences": 19,
+     "example": "我想再确认一下我的航班。",
+     "exampleKo": "내 항공편을 다시 한번 확인하고 싶어요."
+    },
+    {
+     "id": "zh-w-talk020",
+     "word": "联系方式",
+     "meaning": "연락처",
+     "sentences": 5,
+     "example": "这些是我的联系方式。",
+     "exampleKo": "이게 내 연락처야.",
+     "tatoeba": 5702366
+    },
+    {
+     "id": "zh-w-talk021",
+     "word": "已读",
+     "meaning": "읽음",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-talk022",
+     "word": "通知",
+     "meaning": "알림",
+     "sentences": 38,
+     "example": "我已經登出了，但通知還是一直來。",
+     "exampleKo": "로그오프했는데도 알림이 계속 와요.",
+     "tatoeba": 13514681
+    },
+    {
+     "id": "zh-w-talk023",
+     "word": "屏幕",
+     "meaning": "화면",
+     "sentences": 3,
+     "example": "这台电脑的屏幕很清晰。",
+     "exampleKo": "이 컴퓨터는 화면이 선명해.",
+     "tatoeba": 8746408
+    },
+    {
+     "id": "zh-w-talk024",
+     "word": "直播",
+     "meaning": "생방송",
+     "sentences": 11,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-talk025",
+     "word": "搜索",
+     "meaning": "검색하다",
+     "sentences": 8,
+     "example": "我们分散开来并在树林中展开搜索。",
+     "exampleKo": "우리는 흩어져서 숲속을 수색했어.",
+     "tatoeba": 1409364
+    },
+    {
+     "id": "zh-w-talk026",
+     "word": "注册",
+     "meaning": "등록하다",
+     "sentences": 6,
+     "example": "我注册了，现在该干什么呢？",
+     "exampleKo": "등록했는데 이제 뭘 해야 해?",
+     "tatoeba": 794259
+    },
+    {
+     "id": "zh-w-talk027",
+     "word": "礼貌",
+     "meaning": "예의",
+     "sentences": 30,
+     "example": "她拒绝我们的邀请很不礼貌。",
+     "exampleKo": "그녀가 우리 초대를 거절한 건 무례했어.",
+     "tatoeba": 5576788
+    }
+   ]
+  },
+  {
+   "id": "trip",
+   "title": {
+    "ko": "여행·약속",
+    "en": "Trips & plans"
+   },
+   "items": [
+    {
+     "id": "zh-w-trip001",
+     "word": "旅行",
+     "meaning": "여행",
+     "sentences": 181,
+     "example": "如果天氣允許，我們明天就要開始旅行了。",
+     "exampleKo": "날씨가 허락한다면, 우리는 내일 여행을 시작할 것이다.",
+     "tatoeba": 13515154
+    },
+    {
+     "id": "zh-w-trip002",
+     "word": "假期",
+     "meaning": "휴가",
+     "sentences": 35,
+     "example": "暑假期间，我在邮局工作。",
+     "exampleKo": "여름방학 동안 우체국에서 일했어.",
+     "tatoeba": 805002
+    },
+    {
+     "id": "zh-w-trip003",
+     "word": "机场",
+     "meaning": "공항",
+     "sentences": 41,
+     "example": "我父母去机场送我叔叔了。",
+     "exampleKo": "부모님이 삼촌을 배웅하러 공항에 가셨어.",
+     "tatoeba": 336651
+    },
+    {
+     "id": "zh-w-trip004",
+     "word": "酒店",
+     "meaning": "호텔",
+     "sentences": 51,
+     "example": "這個酒店的游泳池在樓頂。",
+     "exampleKo": "이 호텔의 수영장은 옥상에 있다.",
+     "tatoeba": 5997681
+    },
+    {
+     "id": "zh-w-trip005",
+     "word": "约定",
+     "meaning": "약속",
+     "sentences": 4,
+     "example": "我们的约定你还记得吗？",
+     "exampleKo": "우리 약속 기억해?"
+    },
+    {
+     "id": "zh-w-trip006",
+     "word": "旅游",
+     "meaning": "관광하다",
+     "sentences": 37,
+     "example": "你什么时候旅游回来的啊？",
+     "exampleKo": "여행은 언제 돌아왔어?",
+     "tatoeba": 336583
+    },
+    {
+     "id": "zh-w-trip007",
+     "word": "地图",
+     "meaning": "지도",
+     "sentences": 31,
+     "example": "请给我一张街道地图好吗？",
+     "exampleKo": "거리 지도 한 장 주실래요?",
+     "tatoeba": 461684
+    },
+    {
+     "id": "zh-w-trip008",
+     "word": "地址",
+     "meaning": "주소",
+     "sentences": 65,
+     "example": "她问我知不知道他的地址。",
+     "exampleKo": "그녀가 그의 주소를 아느냐고 물었어."
+    },
+    {
+     "id": "zh-w-trip009",
+     "word": "搬家",
+     "meaning": "이사하다",
+     "sentences": 14,
+     "example": "我下个月要搬家了。",
+     "exampleKo": "나 다음 달에 이사해.",
+     "tatoeba": 425566
+    },
+    {
+     "id": "zh-w-trip010",
+     "word": "留学",
+     "meaning": "유학",
+     "sentences": 16,
+     "example": "这间宿舍住着两个美国留学生。",
+     "exampleKo": "이 기숙사에는 미국인 유학생 두명이 살고 있어.",
+     "tatoeba": 1567770
+    },
+    {
+     "id": "zh-w-trip011",
+     "word": "行李",
+     "meaning": "짐",
+     "sentences": 58,
+     "example": "我的其中一个行李不见了。",
+     "exampleKo": "내 짐 하나가 안 보여."
+    },
+    {
+     "id": "zh-w-trip012",
+     "word": "车票",
+     "meaning": "표",
+     "sentences": 12,
+     "example": "今天夜晚去广州的火车票还有吗？",
+     "exampleKo": "오늘 밤 광저우 가는 기차표 아직 있나요?",
+     "tatoeba": 420496
+    },
+    {
+     "id": "zh-w-trip013",
+     "word": "换乘",
+     "meaning": "환승하다",
+     "sentences": 4,
+     "example": "你得在涉谷换乘火车。",
+     "exampleKo": "시부야에서 갈아타야 해.",
+     "tatoeba": 333349
+    },
+    {
+     "id": "zh-w-trip014",
+     "word": "堵车",
+     "meaning": "교통 체증",
+     "sentences": 3,
+     "example": "因为堵车，我开会迟到了。",
+     "exampleKo": "차가 막혀서 회의에 늦었어.",
+     "tatoeba": 8775992
+    },
+    {
+     "id": "zh-w-trip015",
+     "word": "事故",
+     "meaning": "사고",
+     "sentences": 125,
+     "example": "由于我的疏忽，事故发生了。",
+     "exampleKo": "나의 소홀함때문에, 사고가 발생하였다.",
+     "tatoeba": 400994
+    },
+    {
+     "id": "zh-w-trip016",
+     "word": "时差",
+     "meaning": "시차",
+     "sentences": 2,
+     "example": "我时差还没倒过来呢。",
+     "exampleKo": "아직 시차 적응이 안 됐어.",
+     "tatoeba": 766469
+    },
+    {
+     "id": "zh-w-trip017",
+     "word": "飞机",
+     "meaning": "비행기",
+     "sentences": 108,
+     "example": "我们是坐飞机去韩国的。",
+     "exampleKo": "우리는 비행기로 한국에 갔다.",
+     "tatoeba": 2737434
+    },
+    {
+     "id": "zh-w-trip018",
+     "word": "护照",
+     "meaning": "여권",
+     "sentences": 26,
+     "example": "请把您的护照给我看一下。",
+     "exampleKo": "여권 좀 보여 주세요.",
+     "tatoeba": 395562
+    },
+    {
+     "id": "zh-w-trip019",
+     "word": "纪念品",
+     "meaning": "기념품",
+     "sentences": 3,
+     "example": "我从部长那儿收到了纪念品。",
+     "exampleKo": "부장님께서 저에게 기념품을 주셨어요.",
+     "tatoeba": 12422339
+    },
+    {
+     "id": "zh-w-trip020",
+     "word": "观光",
+     "meaning": "관광",
+     "sentences": 3,
+     "example": "他的工作是驾驶观光巴士。",
+     "exampleKo": "그의 일은 관광버스를 운전하는 거야.",
+     "tatoeba": 5967303
+    },
+    {
+     "id": "zh-w-trip021",
+     "word": "温泉",
+     "meaning": "온천",
+     "sentences": 2,
+     "example": "日本有很多温泉。",
+     "exampleKo": "일본에는 온천이 많아.",
+     "tatoeba": 795782
+    },
+    {
+     "id": "zh-w-trip022",
+     "word": "庙会",
+     "meaning": "축제",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-trip023",
+     "word": "烟花",
+     "meaning": "불꽃놀이",
+     "sentences": 1,
+     "example": "明晚我们去看烟花吧。",
+     "exampleKo": "내일 밤 불꽃놀이 보러 가자."
+    },
+    {
+     "id": "zh-w-trip024",
+     "word": "中秋节",
+     "meaning": "추석",
+     "sentences": 4,
+     "example": "中秋节是中国的传统节日。",
+     "exampleKo": "추석은 중국의 전통 명절이야.",
+     "tatoeba": 1878419
+    },
+    {
+     "id": "zh-w-trip025",
+     "word": "预订",
+     "meaning": "예약하다",
+     "sentences": 2,
+     "example": "预订好了。",
+     "exampleKo": "예약 완료됐어.",
+     "tatoeba": 794090
+    },
+    {
+     "id": "zh-w-trip026",
+     "word": "取消",
+     "meaning": "취소하다",
+     "sentences": 42,
+     "example": "由于下雨，野餐取消了。",
+     "exampleKo": "비때문에, 피크닉이 취소되었다.",
+     "tatoeba": 430987
+    },
+    {
+     "id": "zh-w-trip027",
+     "word": "更改",
+     "meaning": "변경하다",
+     "sentences": 10,
+     "example": "你最近更改过头像吗？",
+     "exampleKo": "최근에 프로필 사진 바꿨어?"
+    },
+    {
+     "id": "zh-w-trip028",
+     "word": "迟到",
+     "meaning": "지각하다",
+     "sentences": 90,
+     "example": "由于火车延误，我迟到了。",
+     "exampleKo": "기차 연착 때문에, 내가 지각하였다.",
+     "tatoeba": 332552
+    },
+    {
+     "id": "zh-w-trip029",
+     "word": "约好",
+     "meaning": "약속하다",
+     "sentences": 2,
+     "example": "我们约好明天见面。",
+     "exampleKo": "우리 내일 만나기로 했어."
+    },
+    {
+     "id": "zh-w-trip030",
+     "word": "承诺",
+     "meaning": "약속, 서약",
+     "sentences": 20,
+     "example": "父母教育我要遵守承诺。",
+     "exampleKo": "부모님은 약속을 지키라고 가르치셨어.",
+     "tatoeba": 3031919
+    }
+   ]
+  },
+  {
+   "id": "food",
+   "title": {
+    "ko": "음식·건강",
+    "en": "Food & health"
+   },
+   "items": [
+    {
+     "id": "zh-w-food001",
+     "word": "感冒",
+     "meaning": "감기",
+     "sentences": 82,
+     "example": "你有治感冒的药吗？",
+     "exampleKo": "감기약 있어?"
+    },
+    {
+     "id": "zh-w-food002",
+     "word": "发烧",
+     "meaning": "열나다",
+     "sentences": 19,
+     "example": "你今天是不是有点发烧？",
+     "exampleKo": "너 오늘 열이 좀 있지?",
+     "tatoeba": 599137
+    },
+    {
+     "id": "zh-w-food003",
+     "word": "药",
+     "meaning": "약",
+     "sentences": 104,
+     "example": "这药会让你舒服些。",
+     "exampleKo": "이 약이 좀 편하게 해줄거에요.",
+     "tatoeba": 8686694
+    },
+    {
+     "id": "zh-w-food004",
+     "word": "受伤",
+     "meaning": "다치다",
+     "sentences": 41,
+     "example": "这只燕子的翅膀受伤了。",
+     "exampleKo": "이 제비의 날개가 다쳤다.",
+     "tatoeba": 8744936
+    },
+    {
+     "id": "zh-w-food005",
+     "word": "锻炼",
+     "meaning": "운동하다",
+     "sentences": 16,
+     "example": "我已经好久没有去锻炼了。",
+     "exampleKo": "나 운동한 지 정말 오래됐어.",
+     "tatoeba": 420114
+    },
+    {
+     "id": "zh-w-food006",
+     "word": "体重",
+     "meaning": "체중",
+     "sentences": 12,
+     "example": "我用浴室的体重计量了体重。",
+     "exampleKo": "욕실 체중계로 몸무게를 쟀어."
+    },
+    {
+     "id": "zh-w-food007",
+     "word": "减肥",
+     "meaning": "다이어트하다",
+     "sentences": 17,
+     "example": "我不吃晚饭因为我想减肥。",
+     "exampleKo": "다이어트하려고 저녁을 안 먹어.",
+     "tatoeba": 669046
+    },
+    {
+     "id": "zh-w-food008",
+     "word": "睡眠",
+     "meaning": "수면",
+     "sentences": 24,
+     "example": "睡眠不足會逐漸影響健康。",
+     "exampleKo": "수면 부족이 점차 건강에 영향을 미친다.",
+     "tatoeba": 13502319
+    },
+    {
+     "id": "zh-w-food009",
+     "word": "疲劳",
+     "meaning": "피로",
+     "sentences": 6,
+     "example": "我的眼睛很容易疲劳。",
+     "exampleKo": "내 눈은 쉽게 피로해져.",
+     "tatoeba": 774428
+    },
+    {
+     "id": "zh-w-food010",
+     "word": "压力",
+     "meaning": "스트레스",
+     "sentences": 22,
+     "example": "最近工作压力很大。",
+     "exampleKo": "요즘 일 스트레스가 커."
+    },
+    {
+     "id": "zh-w-food011",
+     "word": "钥匙",
+     "meaning": "열쇠",
+     "sentences": 63,
+     "example": "把钥匙带给你的兄弟。",
+     "exampleKo": "열쇠를 네 형제에게 가져다 줘.",
+     "tatoeba": 2336902
+    },
+    {
+     "id": "zh-w-food012",
+     "word": "味道",
+     "meaning": "맛",
+     "sentences": 83,
+     "example": "我喜欢西瓜的味道。",
+     "exampleKo": "나는 수박 맛을 좋아해요.",
+     "tatoeba": 392763
+    },
+    {
+     "id": "zh-w-food013",
+     "word": "甜",
+     "meaning": "달다",
+     "sentences": 105,
+     "example": "一看到甜点，我就无法自拔。",
+     "exampleKo": "디저트만 보면 참을 수가 없어요.",
+     "tatoeba": 1995044
+    },
+    {
+     "id": "zh-w-food014",
+     "word": "辣",
+     "meaning": "맵다",
+     "sentences": 43,
+     "example": "有时候我会想吃辣的东西。",
+     "exampleKo": "가끔은 매운 음식이 먹고 싶어.",
+     "tatoeba": 2410880
+    },
+    {
+     "id": "zh-w-food015",
+     "word": "咸",
+     "meaning": "짜다",
+     "sentences": 7,
+     "example": "你不能喝海水，因为它太咸了。",
+     "exampleKo": "바닷물은 너무 짜서 마시면 안 돼.",
+     "tatoeba": 334680
+    },
+    {
+     "id": "zh-w-food016",
+     "word": "苦",
+     "meaning": "쓰다",
+     "sentences": 175,
+     "example": "你完全是在埋頭苦幹地生活啊。",
+     "exampleKo": "너는 완전히 거기 일에 파묻혀 사는구나.",
+     "tatoeba": 13609787
+    },
+    {
+     "id": "zh-w-food017",
+     "word": "肚子",
+     "meaning": "배",
+     "sentences": 38,
+     "example": "她悄悄跟我說她肚子餓了。",
+     "exampleKo": "그녀는 나에게 귓속말로 배고프다고 했다.",
+     "tatoeba": 13507588
+    },
+    {
+     "id": "zh-w-food018",
+     "word": "喉咙",
+     "meaning": "목",
+     "sentences": 5,
+     "example": "我喉咙痛。",
+     "exampleKo": "목이 아파."
+    },
+    {
+     "id": "zh-w-food019",
+     "word": "背",
+     "meaning": "등",
+     "sentences": 157,
+     "example": "我們和同桌比賽看誰背書快，結果我輸了。",
+     "exampleKo": "우리는 같은 자리 친구와 누가 더 빨리 외울 수 있는지 겨뤘고, 결국 내가 졌다.",
+     "tatoeba": 13535350
+    },
+    {
+     "id": "zh-w-food020",
+     "word": "头发",
+     "meaning": "머리카락",
+     "sentences": 62,
+     "example": "你把我的头发剪得太短了。",
+     "exampleKo": "머리를 너무 짧게 잘랐어.",
+     "tatoeba": 1767731
+    },
+    {
+     "id": "zh-w-food021",
+     "word": "努力地",
+     "meaning": "열심히",
+     "sentences": 24,
+     "example": "我希望你更加努力地工作。",
+     "exampleKo": "네가 더 열심히 일하면 좋겠어.",
+     "tatoeba": 848262
+    },
+    {
+     "id": "zh-w-food022",
+     "word": "节约",
+     "meaning": "절약하다",
+     "sentences": 5,
+     "example": "这样做你能节约几个小时。",
+     "exampleKo": "이렇게 하면 몇 시간을 아낄 수 있어.",
+     "tatoeba": 9518505
+    }
+   ]
+  },
+  {
+   "id": "life",
+   "title": {
+    "ko": "생활·그 밖의 말",
+    "en": "Daily life & more"
+   },
+   "items": [
+    {
+     "id": "zh-w-life001",
+     "word": "理由",
+     "meaning": "이유",
+     "sentences": 56,
+     "example": "他们没有理由叫我们离开。",
+     "exampleKo": "그들이 우리에게 가라고 할 이유가 없어.",
+     "tatoeba": 9419135
+    },
+    {
+     "id": "zh-w-life002",
+     "word": "意思",
+     "meaning": "뜻",
+     "sentences": 327,
+     "example": "不好意思，你会说英语吗？",
+     "exampleKo": "실례지만 영어 할 줄 아세요?",
+     "tatoeba": 2479069
+    },
+    {
+     "id": "zh-w-life003",
+     "word": "性格",
+     "meaning": "성격",
+     "sentences": 26,
+     "example": "他溫和的性格對於減少衝突非常有幫助。",
+     "exampleKo": "그의 온화한 성품은 갈등을 줄이는 데 큰 도움이 되었어요.",
+     "tatoeba": 13515480
+    },
+    {
+     "id": "zh-w-life004",
+     "word": "爱好",
+     "meaning": "취미",
+     "sentences": 42,
+     "example": "我的爱好是开车和弹吉他。",
+     "exampleKo": "내 취미는 운전과 기타 치기야.",
+     "tatoeba": 7768337
+    },
+    {
+     "id": "zh-w-life005",
+     "word": "回忆",
+     "meaning": "추억",
+     "sentences": 5,
+     "example": "这些照片是我美好的回忆。",
+     "exampleKo": "이 사진들은 내 좋은 추억이야."
+    },
+    {
+     "id": "zh-w-life006",
+     "word": "将来",
+     "meaning": "장래",
+     "sentences": 23,
+     "example": "我希望将来成为一名牙医。",
+     "exampleKo": "나는 장래에 치과 의사가 되고 싶어.",
+     "tatoeba": 333542
+    },
+    {
+     "id": "zh-w-life007",
+     "word": "最近",
+     "meaning": "요즘",
+     "sentences": 209,
+     "example": "最近，娛樂產業發展得非常迅速。",
+     "exampleKo": "요즘 엔터테인먼트 산업이 정말 빠르게 성장하고 있어요.",
+     "tatoeba": 13518784
+    },
+    {
+     "id": "zh-w-life008",
+     "word": "平时",
+     "meaning": "평소",
+     "sentences": 17,
+     "example": "我平时每天练习一个小时汉字。",
+     "exampleKo": "나는 평소에 하루 한 시간 한자를 연습해."
+    },
+    {
+     "id": "zh-w-life009",
+     "word": "普通",
+     "meaning": "보통",
+     "sentences": 48,
+     "example": "我明年想学普通话。",
+     "exampleKo": "나는 내년에 중국어를 배우고 싶다.",
+     "tatoeba": 857224
+    },
+    {
+     "id": "zh-w-life010",
+     "word": "和平",
+     "meaning": "평화",
+     "sentences": 61,
+     "example": "我希望他们能和平地解决。",
+     "exampleKo": "그들이 평화롭게 해결하길 바라.",
+     "tatoeba": 8775779
+    },
+    {
+     "id": "zh-w-life011",
+     "word": "放弃",
+     "meaning": "포기하다",
+     "sentences": 47,
+     "example": "我不会放弃的。",
+     "exampleKo": "나는 포기하지 않을 것이다.",
+     "tatoeba": 8686679
+    },
+    {
+     "id": "zh-w-life012",
+     "word": "想象",
+     "meaning": "상상하다",
+     "sentences": 43,
+     "example": "那个没你想象的那么难。",
+     "exampleKo": "그건 네가 생각하는 만큼 어려운 건 아냐.",
+     "tatoeba": 8696247
+    },
+    {
+     "id": "zh-w-life013",
+     "word": "习惯",
+     "meaning": "습관",
+     "sentences": 82,
+     "example": "夏天我们习惯去河里游泳。",
+     "exampleKo": "여름에는 강에서 수영하는 게 습관이야.",
+     "tatoeba": 424524
+    },
+    {
+     "id": "zh-w-life014",
+     "word": "季节",
+     "meaning": "계절",
+     "sentences": 19,
+     "example": "我们日本有四个季节。",
+     "exampleKo": "일본에는 사계절이 있어."
+    },
+    {
+     "id": "zh-w-life015",
+     "word": "风景",
+     "meaning": "경치",
+     "sentences": 11,
+     "example": "这里的风景很美。",
+     "exampleKo": "여기 경치가 정말 아름다워."
+    },
+    {
+     "id": "zh-w-life016",
+     "word": "空气",
+     "meaning": "공기",
+     "sentences": 28,
+     "example": "工业废气污染了空气。",
+     "exampleKo": "공업 배기가스가 공기를 오염시킨다.",
+     "tatoeba": 2054070
+    },
+    {
+     "id": "zh-w-life017",
+     "word": "气氛",
+     "meaning": "분위기",
+     "sentences": 8,
+     "example": "这条裙子很适合你的气氛",
+     "exampleKo": "이 치마는 네 스타일(분위기)에 딱 맞는다.",
+     "tatoeba": 2409683
+    },
+    {
+     "id": "zh-w-life018",
+     "word": "农村",
+     "meaning": "시골",
+     "sentences": 17,
+     "example": "我也是从农村出来的。",
+     "exampleKo": "나도 시골 출신이야."
+    },
+    {
+     "id": "zh-w-life019",
+     "word": "老家",
+     "meaning": "고향 집",
+     "sentences": 6,
+     "example": "他住得离老家很远。",
+     "exampleKo": "그는 고향 집에서 멀리 살아.",
+     "tatoeba": 10048849
+    },
+    {
+     "id": "zh-w-life020",
+     "word": "独居",
+     "meaning": "혼자 살다",
+     "sentences": 0,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-life021",
+     "word": "毕业",
+     "meaning": "졸업하다",
+     "sentences": 40,
+     "example": "我爸爸是哈佛大学毕业的。",
+     "exampleKo": "우리 아빠는 하버드를 졸업하셨어.",
+     "tatoeba": 333403
+    },
+    {
+     "id": "zh-w-life022",
+     "word": "找工作",
+     "meaning": "취직하다",
+     "sentences": 24,
+     "example": "我找工作已经很久了。",
+     "exampleKo": "나 일자리 구한 지 꽤 됐어.",
+     "tatoeba": 7768188
+    },
+    {
+     "id": "zh-w-life023",
+     "word": "工资",
+     "meaning": "월급",
+     "sentences": 32,
+     "example": "一领到工资就把钱还给你。",
+     "exampleKo": "월급 받자마자 돈 갚을게.",
+     "tatoeba": 348888
+    },
+    {
+     "id": "zh-w-life024",
+     "word": "加班",
+     "meaning": "야근하다",
+     "sentences": 15,
+     "example": "我的老板要我加班。",
+     "exampleKo": "사장님이 나한테 야근하래."
+    },
+    {
+     "id": "zh-w-life025",
+     "word": "老板",
+     "meaning": "사장",
+     "sentences": 38,
+     "example": "他被工厂的老板解雇。",
+     "exampleKo": "그는 공장장에게 해고됐다.",
+     "tatoeba": 1577188
+    },
+    {
+     "id": "zh-w-life026",
+     "word": "截止日期",
+     "meaning": "마감일",
+     "sentences": 4,
+     "example": "交作业的截止日期是下周一。",
+     "exampleKo": "숙제 마감은 다음 주 월요일이야.",
+     "tatoeba": 843497
+    },
+    {
+     "id": "zh-w-life027",
+     "word": "面试",
+     "meaning": "면접",
+     "sentences": 6,
+     "example": "你的面试怎么样？",
+     "exampleKo": "면접은 어땠어?",
+     "tatoeba": 348119
+    },
+    {
+     "id": "zh-w-life028",
+     "word": "考试",
+     "meaning": "시험",
+     "sentences": 109,
+     "example": "今天我们有一场数学考试。",
+     "exampleKo": "오늘 수학 시험이 있었어.",
+     "tatoeba": 869142
+    },
+    {
+     "id": "zh-w-life029",
+     "word": "作业",
+     "meaning": "숙제",
+     "sentences": 65,
+     "example": "我弟弟和我在做俄语作业。",
+     "exampleKo": "동생이랑 나는 러시아어 숙제를 하고 있어."
+    },
+    {
+     "id": "zh-w-life030",
+     "word": "课",
+     "meaning": "수업",
+     "sentences": 155,
+     "example": "我妹妹每周上两次钢琴课。",
+     "exampleKo": "내 여동생은 매주 두 번 피아노 수업을 들어.",
+     "tatoeba": 333113
+    },
+    {
+     "id": "zh-w-life031",
+     "word": "成绩",
+     "meaning": "성적",
+     "sentences": 19,
+     "example": "你成绩比我好。",
+     "exampleKo": "네 성적이 나보다 좋아.",
+     "tatoeba": 9972927
+    },
+    {
+     "id": "zh-w-life032",
+     "word": "打扫",
+     "meaning": "청소하다",
+     "sentences": 36,
+     "example": "如果你弄乱了，你来打扫。",
+     "exampleKo": "어질렀으면 네가 치워.",
+     "tatoeba": 805610
+    },
+    {
+     "id": "zh-w-life033",
+     "word": "洗衣服",
+     "meaning": "빨래하다",
+     "sentences": 7,
+     "example": "天气好的时候我会去洗衣服。",
+     "exampleKo": "날씨 좋을 때 빨래해.",
+     "tatoeba": 14042766
+    },
+    {
+     "id": "zh-w-life034",
+     "word": "买东西",
+     "meaning": "쇼핑하다",
+     "sentences": 12,
+     "example": "你给她买东西了吗？",
+     "exampleKo": "그녀한테 뭐 사줬어?",
+     "tatoeba": 10184228
+    },
+    {
+     "id": "zh-w-life035",
+     "word": "折扣",
+     "meaning": "할인",
+     "sentences": 8,
+     "example": "行銷團隊打算向顧客推送折扣資訊。",
+     "exampleKo": "마케팅 팀은 할인 정보를 고객에게 푸시하려고 해요.",
+     "tatoeba": 13512834
+    },
+    {
+     "id": "zh-w-life036",
+     "word": "钱包",
+     "meaning": "지갑",
+     "sentences": 43,
+     "example": "我的钱包不是他偷走的。",
+     "exampleKo": "내 지갑은 그가 훔친 게 아니야."
+    },
+    {
+     "id": "zh-w-life037",
+     "word": "雨伞",
+     "meaning": "우산",
+     "sentences": 28,
+     "example": "我不知道你的雨伞在哪里。",
+     "exampleKo": "네 우산이 어디 있는지 몰라.",
+     "tatoeba": 9435176
+    },
+    {
+     "id": "zh-w-life038",
+     "word": "春节",
+     "meaning": "설",
+     "sentences": 11,
+     "example": "春节我们全家团聚。",
+     "exampleKo": "설에는 온 가족이 모여."
+    },
+    {
+     "id": "zh-w-life039",
+     "word": "旗袍",
+     "meaning": "치파오",
+     "sentences": 14,
+     "example": "最初的旗袍是宽松的。",
+     "exampleKo": "처음 치파오는 헐렁했어.",
+     "tatoeba": 727992
+    },
+    {
+     "id": "zh-w-life040",
+     "word": "客气",
+     "meaning": "사양하다",
+     "sentences": 13,
+     "example": "不用客气。",
+     "exampleKo": "천만에요.",
+     "tatoeba": 700676
+    },
+    {
+     "id": "zh-w-life041",
+     "word": "麻烦",
+     "meaning": "번거롭다",
+     "sentences": 57,
+     "example": "麻烦你叫我起床吃早餐。",
+     "exampleKo": "아침 먹게 깨워 줘."
+    },
+    {
+     "id": "zh-w-life042",
+     "word": "商量",
+     "meaning": "상의하다",
+     "sentences": 8,
+     "example": "有件事我一直想跟你商量。",
+     "exampleKo": "너랑 상의하고 싶은 게 있었어.",
+     "tatoeba": 6857070
+    },
+    {
+     "id": "zh-w-life043",
+     "word": "来得及",
+     "meaning": "시간에 맞다",
+     "sentences": 4,
+     "example": "很不幸，我没来得及听他的演讲。",
+     "exampleKo": "아쉽게도 그의 강연 시간에 맞추지 못했어.",
+     "tatoeba": 336251
+    },
+    {
+     "id": "zh-w-life044",
+     "word": "醒",
+     "meaning": "깨다",
+     "sentences": 166,
+     "example": "当我醒来时，天正下着雪。",
+     "exampleKo": "잠에서 깼을 때 눈이 오고 있었어."
+    },
+    {
+     "id": "zh-w-life045",
+     "word": "丢",
+     "meaning": "잃어버리다",
+     "sentences": 86,
+     "example": "我把爸爸给我的表弄丢了。",
+     "exampleKo": "아빠가 준 시계를 잃어버렸어.",
+     "tatoeba": 1186914
+    },
+    {
+     "id": "zh-w-life046",
+     "word": "捡",
+     "meaning": "줍다",
+     "sentences": 7,
+     "example": "我在海边捡了个漂亮贝壳。",
+     "exampleKo": "바닷가에서 예쁜 조개껍데기를 주웠어.",
+     "tatoeba": 5911660
+    },
+    {
+     "id": "zh-w-life047",
+     "word": "借给",
+     "meaning": "빌려주다",
+     "sentences": 29,
+     "example": "请你把你的车借给我。",
+     "exampleKo": "당신의 차를 빌려주세요.",
+     "tatoeba": 401124
+    },
+    {
+     "id": "zh-w-life048",
+     "word": "付钱",
+     "meaning": "돈을 내다",
+     "sentences": 10,
+     "example": "他要求我马上付钱。",
+     "exampleKo": "그가 나한테 당장 돈을 내라고 했어.",
+     "tatoeba": 2188432
+    },
+    {
+     "id": "zh-w-life049",
+     "word": "收到",
+     "meaning": "받다",
+     "sentences": 92,
+     "example": "我从部长那儿收到了纪念品。",
+     "exampleKo": "부장님께서 저에게 기념품을 주셨어요.",
+     "tatoeba": 12422339
+    },
+    {
+     "id": "zh-w-life050",
+     "word": "递给",
+     "meaning": "건네다",
+     "sentences": 19,
+     "example": "他悄悄地递给我一张纸条。",
+     "exampleKo": "그가 몰래 쪽지를 건넸어.",
+     "tatoeba": 2440659
+    },
+    {
+     "id": "zh-w-life051",
+     "word": "注意到",
+     "meaning": "알아차리다",
+     "sentences": 42,
+     "example": "我没有注意到灯变红了。",
+     "exampleKo": "신호가 빨간색으로 바뀐 걸 못 봤어."
+    },
+    {
+     "id": "zh-w-life052",
+     "word": "养",
+     "meaning": "키우다",
+     "sentences": 86,
+     "example": "我想养一只猫。",
+     "exampleKo": "고양이를 키우고 싶어."
+    },
+    {
+     "id": "zh-w-life053",
+     "word": "怀念",
+     "meaning": "그리워하다",
+     "sentences": 3,
+     "example": "我很怀念我的童年。",
+     "exampleKo": "어린 시절이 그리워.",
+     "tatoeba": 633985
+    },
+    {
+     "id": "zh-w-life054",
+     "word": "羡慕",
+     "meaning": "부러워하다",
+     "sentences": 8,
+     "example": "我一点也不羡慕你的生活。",
+     "exampleKo": "네 삶이 하나도 안 부러워.",
+     "tatoeba": 764167
+    },
+    {
+     "id": "zh-w-life055",
+     "word": "吵",
+     "meaning": "시끄럽다",
+     "sentences": 94,
+     "example": "外面太吵了。",
+     "exampleKo": "밖이 너무 시끄러워."
+    },
+    {
+     "id": "zh-w-life056",
+     "word": "安静",
+     "meaning": "조용하다",
+     "sentences": 42,
+     "example": "我外公想安静地度过晚年。",
+     "exampleKo": "외할아버지는 조용히 노후를 보내고 싶어 하셔."
+    },
+    {
+     "id": "zh-w-life057",
+     "word": "热闹",
+     "meaning": "북적이다",
+     "sentences": 10,
+     "example": "吃火锅的时候 ,气氛往往是非常热闹的.",
+     "exampleKo": "훠궈탕을 먹을 때면, 분위기가 자주 들뜨게 된다.",
+     "tatoeba": 4031880
+    },
+    {
+     "id": "zh-w-life058",
+     "word": "方便",
+     "meaning": "편리하다",
+     "sentences": 58,
+     "example": "这儿要换地铁和轻轨方便吗？",
+     "exampleKo": "여기서 지하철과 경전철로 갈아타기 편합니까?",
+     "tatoeba": 420380
+    },
+    {
+     "id": "zh-w-life059",
+     "word": "帅",
+     "meaning": "멋있다",
+     "sentences": 18,
+     "example": "那位帅哥是我们的老师。",
+     "exampleKo": "저 잘생긴 분이 우리 선생님이야.",
+     "tatoeba": 1891368
+    },
+    {
+     "id": "zh-w-life060",
+     "word": "明亮",
+     "meaning": "밝다",
+     "sentences": 7,
+     "example": "今晚的夜空星光非常明亮。",
+     "exampleKo": "오늘 밤 하늘에는 별들이 아주 밝게 빛나고 있어.",
+     "tatoeba": 781539
+    },
+    {
+     "id": "zh-w-life061",
+     "word": "黑暗",
+     "meaning": "어둡다",
+     "sentences": 37,
+     "example": "就连最黑暗的夜晚都会结束，太阳仍会照常升起。",
+     "exampleKo": "가장 어두운 밤조차도 끝나고, 태양은 여전히 평소처럼 떠오를 것이다.",
+     "tatoeba": 5068216
+    },
+    {
+     "id": "zh-w-life062",
+     "word": "果然",
+     "meaning": "역시",
+     "sentences": 6,
+     "example": "我对他的第一印象果然没有错。",
+     "exampleKo": "그에 대한 첫인상이 역시 틀리지 않았어."
+    },
+    {
+     "id": "zh-w-life063",
+     "word": "刚才",
+     "meaning": "아까",
+     "sentences": 33,
+     "example": "我刚才在喝牛奶。",
+     "exampleKo": "나 방금 우유 마시고 있었어.",
+     "tatoeba": 770709
+    },
+    {
+     "id": "zh-w-life064",
+     "word": "差不多",
+     "meaning": "거의",
+     "sentences": 67,
+     "example": "差不多是我们睡觉的时间了。",
+     "exampleKo": "슬슬 잘 시간이야."
+    },
+    {
+     "id": "zh-w-life065",
+     "word": "正好",
+     "meaning": "마침",
+     "sentences": 28,
+     "example": "這間屋子大得正正好好。",
+     "exampleKo": "이 방은 적당히 크다.",
+     "tatoeba": 13504567
+    },
+    {
+     "id": "zh-w-life066",
+     "word": "几乎",
+     "meaning": "거의",
+     "sentences": 92,
+     "example": "我几乎每天都见到那条狗。",
+     "exampleKo": "그 개를 거의 매일 봐.",
+     "tatoeba": 375346
+    },
+    {
+     "id": "zh-w-life067",
+     "word": "千万",
+     "meaning": "제발, 절대로",
+     "sentences": 11,
+     "example": "千万别误会我的意思。",
+     "exampleKo": "제발 내 뜻을 오해하지 마.",
+     "tatoeba": 4282947
+    },
+    {
+     "id": "zh-w-life068",
+     "word": "终于",
+     "meaning": "드디어",
+     "sentences": 54,
+     "example": "他终于出现了。",
+     "exampleKo": "그는 드디어 나타났다.",
+     "tatoeba": 2680388
+    },
+    {
+     "id": "zh-w-life069",
+     "word": "意外",
+     "meaning": "의외",
+     "sentences": 69,
+     "example": "发生意外的话按这个红按钮。",
+     "exampleKo": "사고가 발생하면 이 빨간 버튼을 누르세요.",
+     "tatoeba": 1300405
+    },
+    {
+     "id": "zh-w-life070",
+     "word": "偶然",
+     "meaning": "우연",
+     "sentences": 16,
+     "example": "我觉得这种事情偶然发生。",
+     "exampleKo": "이런 일은 우연히 일어난다고 생각해.",
+     "tatoeba": 955384
+    },
+    {
+     "id": "zh-w-life071",
+     "word": "手工",
+     "meaning": "수제",
+     "sentences": 12,
+     "example": "我在新竹買了一塊手工柿餅，味道甜而不膩。",
+     "exampleKo": "나는 신주에서 수제 곶감을 샀는데, 맛이 달콤하지만 느끼하지 않았다.",
+     "tatoeba": 13537654
+    },
+    {
+     "id": "zh-w-life072",
+     "word": "陪",
+     "meaning": "함께 있어 주다",
+     "sentences": 54,
+     "example": "明天有人陪我去唱歌吗？",
+     "exampleKo": "내일 나랑 노래방 갈 사람 있어?"
+    },
+    {
+     "id": "zh-w-life073",
+     "word": "接",
+     "meaning": "마중하다",
+     "sentences": 454,
+     "example": "很遗憾我无法接受您的邀请。",
+     "exampleKo": "유감스럽게도 저는 당신의 초대를 거절해야 합니다.",
+     "tatoeba": 2051380
+    },
+    {
+     "id": "zh-w-life074",
+     "word": "幸运",
+     "meaning": "행운",
+     "sentences": 25,
+     "example": "你们很幸运有这样的朋友们。",
+     "exampleKo": "너희는 이런 친구들이 있어서 행운이야.",
+     "tatoeba": 639992
+    },
+    {
+     "id": "zh-w-life075",
+     "word": "勇气",
+     "meaning": "용기",
+     "sentences": 21,
+     "example": "你一定要鼓起勇气。",
+     "exampleKo": "용기를 내야 해.",
+     "tatoeba": 1783777
+    },
+    {
+     "id": "zh-w-life076",
+     "word": "自信",
+     "meaning": "자신감",
+     "sentences": 26,
+     "example": "我現在自信感滿滿。",
+     "exampleKo": "난 지금 자신감에 넘치고 있어.",
+     "tatoeba": 13109230
+    },
+    {
+     "id": "zh-w-life077",
+     "word": "魅力",
+     "meaning": "매력",
+     "sentences": 18,
+     "example": "你低估了你的魅力。",
+     "exampleKo": "넌 네 매력을 과소평가해.",
+     "tatoeba": 8794699
+    },
+    {
+     "id": "zh-w-life078",
+     "word": "才华",
+     "meaning": "재능",
+     "sentences": 5,
+     "example": "我们需要有才华的人。",
+     "exampleKo": "우리에겐 재능 있는 사람이 필요해.",
+     "tatoeba": 2316507
+    },
+    {
+     "id": "zh-w-life079",
+     "word": "成长",
+     "meaning": "성장하다",
+     "sentences": 6,
+     "example": "孩子的成长快得令人吃惊。",
+     "exampleKo": "아이들은 놀랄 만큼 빨리 자라.",
+     "tatoeba": 348616
+    },
+    {
+     "id": "zh-w-life080",
+     "word": "存钱",
+     "meaning": "저축하다",
+     "sentences": 4,
+     "example": "我每个月都存钱。",
+     "exampleKo": "나는 매달 저금해."
+    },
+    {
+     "id": "zh-w-life081",
+     "word": "乐器",
+     "meaning": "악기",
+     "sentences": 6,
+     "example": "蛋黄酱是一种乐器吗？",
+     "exampleKo": "마요네즈가 악기인가요?",
+     "tatoeba": 10621715
+    },
+    {
+     "id": "zh-w-life082",
+     "word": "家务",
+     "meaning": "집안일",
+     "sentences": 4,
+     "example": "我每天都帮我妈做家务。",
+     "exampleKo": "나는 매일 엄마를 도와 집안일을 해.",
+     "tatoeba": 1235645
+    },
+    {
+     "id": "zh-w-life083",
+     "word": "最好",
+     "meaning": "가장 좋다",
+     "sentences": 312,
+     "example": "这是我所知道的最好的餐厅。",
+     "exampleKo": "이곳은 내가 아는 최고의 식당이다.",
+     "tatoeba": 2393398
+    },
+    {
+     "id": "zh-w-life084",
+     "word": "最糟",
+     "meaning": "최악",
+     "sentences": 4,
+     "example": "半途而废是你所能做的最糟糕的事情。",
+     "exampleKo": "중간에 포기하는 게 네가 할 수 있는 최악의 일이야.",
+     "tatoeba": 1394876
+    },
+    {
+     "id": "zh-w-life085",
+     "word": "温暖",
+     "meaning": "따뜻하다",
+     "sentences": 7,
+     "example": "",
+     "exampleKo": ""
+    },
+    {
+     "id": "zh-w-life086",
+     "word": "孤独",
+     "meaning": "고독하다",
+     "sentences": 17,
+     "example": "我在这座小镇感到很孤独。",
+     "exampleKo": "이 작은 도시에서 외로워.",
+     "tatoeba": 9965444
+    },
+    {
+     "id": "zh-w-life087",
+     "word": "思念",
+     "meaning": "그리움",
+     "sentences": 9,
+     "example": "文學作品中常用夜來香來象徵思念與柔情。",
+     "exampleKo": "문학 작품에서는 밤에 피는 자스민이 그리움과 부드러운 감정을 상징하는 데 자주 사용됩니다.",
+     "tatoeba": 13533995
+    },
+    {
+     "id": "zh-w-life088",
+     "word": "缺点",
+     "meaning": "단점",
+     "sentences": 16,
+     "example": "要变得完美，她就是少了一个缺点。",
+     "exampleKo": "한가지만 빼면 그녀는 완벽해요.",
+     "tatoeba": 65
+    },
+    {
+     "id": "zh-w-life089",
+     "word": "优点",
+     "meaning": "장점",
+     "sentences": 5,
+     "example": "你们的优点和缺点是什么？",
+     "exampleKo": "너희 장점과 단점이 뭐야?",
+     "tatoeba": 805525
+    },
+    {
+     "id": "zh-w-life090",
+     "word": "差别",
+     "meaning": "차이",
+     "sentences": 5,
+     "example": "我看不出有什么差别。",
+     "exampleKo": "무슨 차이가 있는지 모르겠어.",
+     "tatoeba": 6828268
+    },
+    {
+     "id": "zh-w-life091",
+     "word": "随时",
+     "meaning": "언제든지",
+     "sentences": 12,
+     "example": "我随时可以开始。",
+     "exampleKo": "난 언제든 시작할 수 있어.",
+     "tatoeba": 5945143
+    }
+   ]
+  }
+ ]
+}

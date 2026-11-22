@@ -96,13 +96,13 @@ test.describe('모든 화면', () => {
 
   test('화면 테마를 고르면 바로 바뀌고 다시 열어도 유지된다', async ({ page }) => {
     await open(page, 'profile')
-    await page.getByLabel('화면 테마').selectOption('dark')
+    await page.getByRole('radio', { name: '어둡게' }).check()
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
     const background = () => page.evaluate(() => getComputedStyle(document.body).backgroundColor)
     expect(await background()).toBe('rgb(58, 46, 41)')
     await page.reload()
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
-    await page.getByLabel('화면 테마').selectOption('system')
+    await page.getByRole('radio', { name: '기기 설정 따르기' }).check()
     await expect(page.locator('html')).not.toHaveAttribute('data-theme', /.+/)
   })
 
@@ -125,7 +125,7 @@ test('단어 추가, 입력 오류, 수정, 삭제, 새로고침 유지', async 
   await page.getByRole('button', { name: '저장하기' }).click()
   await expect(page.getByLabel('단어 / 표현')).toBeFocused()
   await expect(page.getByLabel('단어 / 표현')).toHaveAttribute('aria-invalid', 'true')
-  await expect(page.getByText('꼭 입력해 주세요.').first()).toBeVisible()
+  await expect(page.getByText('여기를 채워 주세요.').first()).toBeVisible()
 
   await page.getByLabel('단어 / 표현').fill('run into')
   await page.getByLabel('뜻', { exact: true }).fill('우연히 마주치다')
@@ -172,19 +172,19 @@ test('퀴즈를 끝까지 풀고 포커스가 결과로 간다', async ({ page }
     await page.keyboard.press('Enter')
   }
 
-  await expect(page.getByRole('heading', { name: '퀴즈 완료! 2 / 2개 정답' })).toBeFocused()
+  await expect(page.getByRole('heading', { name: '다 풀었어요! 2개 중 2개 맞혔어요' })).toBeFocused()
 
   // 맞힌 단어는 다음 복습 날짜가 뒤로 밀려 오늘의 복습에서 빠진다.
   const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('savedWords')))
   expect(saved.every((word) => word.box === 1 && Date.parse(word.dueAt) > Date.now())).toBe(true)
-  await page.getByRole('button', { name: '오늘의 복습' }).click()
-  await expect(page.getByRole('heading', { name: /오늘 복습할 게 없어요/ })).toBeVisible()
+  await page.getByRole('button', { name: '오늘 다시 보기' }).click()
+  await expect(page.getByRole('heading', { name: /오늘 볼 건 다 봤어요/ })).toBeVisible()
 
   await open(page, 'home')
   // 단어는 모두 맞혀서 빠지고, 아직 복습하지 않은 표현 1개만 남는다.
   await expect(page.locator('.review-count')).toHaveText('1개')
   await expect(page.getByText('단어 0개 · 표현 1개')).toBeVisible()
-  await expect(page.locator('.count').first()).toContainText('일 연속')
+  await expect(page.locator('.count').first()).toContainText('일째 이어 쓰는 중')
 })
 
 test('틀린 단어는 오늘 다시 묻는다', async ({ page }) => {
@@ -200,31 +200,27 @@ test('틀린 단어는 오늘 다시 묻는다', async ({ page }) => {
   expect(Date.parse(wrong.dueAt)).toBeLessThanOrEqual(Date.now())
 })
 
-// Windows 클립보드는 줄바꿈을 \r\n으로 바꿔 돌려주므로 \n으로 맞춘다.
-const readClipboard = async (page) =>
-  (await page.evaluate(() => navigator.clipboard.readText())).replace(/\r\n/g, '\n')
+// 앱 안 AI 교정용 가짜 서버 함수. 보낸 요청문을 기억하고, 정해 둔 답을 차례로 돌려준다.
+async function fakeAi(page, replies) {
+  const prompts = []
+  await page.route('https://example.supabase.co/functions/v1/correct-journal', async (route) => {
+    prompts.push(route.request().postDataJSON().prompt)
+    const feedback = replies[Math.min(prompts.length - 1, replies.length - 1)]
+    return route.fulfill({ json: { feedback, remaining: 5 - prompts.length } })
+  })
+  return prompts
+}
 
-test('AI 교정 요청을 복사하고 받은 교정을 저장한다', async ({ page, context }) => {
-  await context.grantPermissions(['clipboard-read', 'clipboard-write'])
-  await open(page, 'journal')
+// 로그인한 상태로 일기 화면을 열고, AI 교정 동의는 이미 한 것으로 둔다.
+async function openJournalSignedIn(page) {
+  await fakeSession(page)
+  await fakeReportServer(page)
+  await page.addInitScript(() => localStorage.setItem('aiConsent', '1'))
+  await page.goto(`${AUTH_URL}#journal`)
+}
 
-  await page.getByRole('button', { name: 'AI 교정 요청 복사' }).click()
-  await expect(page.getByRole('status').filter({ hasText: '모두 작성해' })).toBeVisible()
-
-  await page.getByLabel('모국어로 작성하기').fill('어제 공원을 걸었다.')
-  await page.getByLabel('영어로 직접 번역하기').fill('I walked at the park yesterday.')
-  await page.getByRole('button', { name: 'AI 교정 요청 복사' }).click()
-  await expect(page.getByRole('status').filter({ hasText: '복사했어요' })).toBeVisible()
-
-  const copied = await readClipboard(page)
-  expect(copied).toContain('다정한 영어 튜터')
-  expect(copied).toContain('## 고친 문장\n## 고칠 점\n## 잘한 점\n## 연습할 점')
-  expect(copied).toContain('[일기]\n어제 공원을 걸었다.')
-  expect(copied).toContain('[내 번역]\nI walked at the park yesterday.')
-
-  // AI가 정해진 형식으로 답하면 제목별로 나눠 보여 준다.
-  await page.getByLabel('AI 교정 결과 (선택)').fill(
-    [
+test('AI 교정은 앱 안에서 받고, 저장하면 지난 일기에서 나눠 보여 주며, 다음 요청에 연습할 점이 들어간다', async ({ page }) => {
+  const prompts = await fakeAi(page, [[
       '## 고친 문장',
       'I walked in the park yesterday.',
       '## 고칠 점',
@@ -233,12 +229,27 @@ test('AI 교정 요청을 복사하고 받은 교정을 저장한다', async ({ 
       '과거형을 잘 썼어요.',
       '## 연습할 점',
       '장소 전치사 in과 at을 구분해 보세요.',
-    ].join('\n'),
-  )
-  await page.getByRole('button', { name: '일기 저장하기' }).click()
-  await expect(page.getByLabel('모국어로 작성하기')).toHaveValue('')
+    ].join('\n'), '## 고친 문장\nI went to school today.\n## 잘한 점\n좋아요'])
+  await openJournalSignedIn(page)
 
-  await page.reload()
+  await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: '모두 작성해' })).toBeVisible()
+  expect(prompts).toHaveLength(0)
+
+  await page.getByLabel('우리말로 쓰기').fill('어제 공원을 걸었다.')
+  await page.getByLabel('영어로 옮겨 보기').fill('I walked at the park yesterday.')
+  await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: 'AI 교정이 도착했어요.' })).toBeVisible()
+  expect(prompts[0]).toContain('다정한 영어 튜터')
+  expect(prompts[0]).toContain('## 고친 문장\n## 고칠 점\n## 잘한 점\n## 연습할 점')
+  expect(prompts[0]).toContain('[일기]\n어제 공원을 걸었다.')
+  expect(prompts[0]).toContain('[내 번역]\nI walked at the park yesterday.')
+
+  // 다른 AI로 복사하거나 붙여 넣는 칸은 없다
+  await expect(page.getByRole('button', { name: /복사|붙여 넣기/ })).toHaveCount(0)
+
+  await page.getByRole('button', { name: '일기 저장하기' }).click()
+  await expect(page.getByLabel('우리말로 쓰기')).toHaveValue('')
   await page.getByRole('button', { name: '자세히 보기' }).click()
   const panel = page.locator('.journal-entry .correction-panel')
   await expect(panel.getByRole('heading', { name: '고친 문장' })).toBeVisible()
@@ -246,28 +257,15 @@ test('AI 교정 요청을 복사하고 받은 교정을 저장한다', async ({ 
   await expect(panel.locator('del')).toHaveText('at the park')
 
   // 다음 요청에는 지난번 연습할 점이 함께 들어간다.
-  await page.getByLabel('모국어로 작성하기').fill('오늘 학교에 갔다.')
-  await page.getByLabel('영어로 직접 번역하기').fill('I went to school today.')
-  await page.getByRole('button', { name: 'AI 교정 요청 복사' }).click()
-  await expect(page.getByRole('status').filter({ hasText: '복사했어요' })).toBeVisible()
-  const next = await readClipboard(page)
-  expect(next).toContain('[참고: 지난 교정에서 연습하기로 한 점]\n- 장소 전치사 in과 at을 구분해 보세요.')
+  await page.getByLabel('우리말로 쓰기').fill('오늘 학교에 갔다.')
+  await page.getByLabel('영어로 옮겨 보기').fill('I went to school today.')
+  await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
+  await expect(page.locator('form .correction-panel')).toContainText('I went to school today.')
+  expect(prompts[1]).toContain('[참고: 지난 교정에서 연습하기로 한 점]\n- 장소 전치사 in과 at을 구분해 보세요.')
 })
 
 test('일기: 오늘 기분을 영어로 고르고, 교정의 고칠 점을 표현 모음에 담아 복습한다', async ({ page }) => {
-  await open(page, 'journal')
-
-  // 기분을 고르면 그 낱말을 쓴 예문이 보이고, 단어장에 담을 수 있다.
-  const tired = page.locator('.mood-chips').getByRole('button', { name: /^tired/ })
-  await tired.click()
-  await expect(tired).toHaveAttribute('aria-pressed', 'true')
-  await expect(page.getByText('I was so tired today.')).toBeVisible()
-  await page.getByRole('button', { name: 'tired 단어장에 담기' }).click()
-  await expect(page.getByRole('status').filter({ hasText: '"tired"를 단어장에 담았어요.' })).toBeVisible()
-
-  await page.getByLabel('모국어로 작성하기').fill('오늘 친구랑 카페에 갔다.')
-  await page.getByLabel('영어로 직접 번역하기').fill('Today I go to cafe with friend.')
-  await page.getByLabel('AI 교정 결과 (선택)').fill(
+  await fakeAi(page, [
     [
       '## 고친 문장',
       'Today I went to a cafe with my friend.',
@@ -279,7 +277,21 @@ test('일기: 오늘 기분을 영어로 고르고, 교정의 고칠 점을 표�
       '## 연습할 점',
       '과거형 연습',
     ].join('\n'),
-  )
+  ])
+  await openJournalSignedIn(page)
+
+  // 기분을 고르면 그 낱말을 쓴 예문이 보이고, 단어장에 담을 수 있다.
+  const tired = page.locator('.mood-chips').getByRole('button', { name: /^tired/ })
+  await tired.click()
+  await expect(tired).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.getByText('I was so tired today.')).toBeVisible()
+  await page.getByRole('button', { name: 'tired 단어장에 담기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: '"tired"를 단어장에 담았어요.' })).toBeVisible()
+
+  await page.getByLabel('우리말로 쓰기').fill('오늘 친구랑 카페에 갔다.')
+  await page.getByLabel('영어로 옮겨 보기').fill('Today I go to cafe with friend.')
+  await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: 'AI 교정이 도착했어요.' })).toBeVisible()
   await page.getByRole('button', { name: '일기 저장하기' }).click()
   await expect(page.locator('.journal-entry .mood-tag')).toHaveText('tired · 피곤한')
 
@@ -289,13 +301,13 @@ test('일기: 오늘 기분을 영어로 고르고, 교정의 고칠 점을 표�
   await expect(page.getByRole('button', { name: 'with my friend 이미 담음' })).toBeDisabled()
 
   // 표현 모음에서는 원래 쓴 말과 이유를 보고 고친 말을 떠올린다.
-  await open(page, 'expressions')
+  await page.getByRole('navigation').getByRole('button', { name: '표현 모음' }).click()
   await expect(page.locator('.record-row')).toContainText('원래 쓴 말: with friend')
   await page.getByRole('button', { name: '표현 퀴즈' }).click()
   await expect(page.locator('.quiz-question')).toHaveText('원래 쓴 말: with friend · my를 붙이면 자연스러워요.')
-  await page.getByLabel('정답을 입력해 보세요').fill('with my friend')
+  await page.getByLabel('생각나는 대로 써 보세요').fill('with my friend')
   await page.keyboard.press('Enter')
-  await expect(page.getByText('정답이에요!')).toBeVisible()
+  await expect(page.getByText('맞았어요!')).toBeVisible()
 })
 
 test('일기에 쓴 내 표현과 오늘의 표현을 찾고, 홈의 도장과 이번 주 돌아보기에 모은다', async ({ page }) => {
@@ -304,12 +316,12 @@ test('일기에 쓴 내 표현과 오늘의 표현을 찾고, 홈의 도장과 �
 
   // 오늘의 표현은 날마다 바뀌므로 화면에 보이는 표현을 읽어 그대로 써 본다.
   const mission = page.locator('.today-mission')
-  await expect(mission).toContainText('오늘의 표현을 써 보세요:')
+  await expect(mission).toContainText('오늘의 표현, 일기에 한번 써 볼까요?')
   const phrase = (await mission.locator('b').textContent()).replace(/[.!?]+$/, '')
 
   await page.locator('.mood-chips').getByRole('button', { name: /^happy/ }).click()
-  await page.getByLabel('모국어로 작성하기').fill('친구들이랑 놀았다.')
-  await page.getByLabel('영어로 직접 번역하기').fill(`I hang out with my friends. ${phrase}.`)
+  await page.getByLabel('우리말로 쓰기').fill('친구들이랑 놀았다.')
+  await page.getByLabel('영어로 옮겨 보기').fill(`I hang out with my friends. ${phrase}.`)
   await expect(page.locator('.usage-box .usage-line')).toContainText('hang out')
   await expect(mission).toHaveClass(/done/)
   await expect(mission).toContainText('오늘의 표현을 썼어요!')
@@ -350,7 +362,7 @@ test('첫 실행 안내: 단계를 고르고, 표현을 담고, 기분과 한 �
   await expect(page.getByRole('heading', { name: '오늘 기분을 고르고 한 줄 써 볼까요?' })).toBeFocused()
   await page.locator('.mood-chips').getByRole('button', { name: /^happy/ }).click()
   await page.getByRole('button', { name: '첫 일기 저장하고 시작하기' }).click()
-  await expect(page.getByText('꼭 입력해 주세요.')).toBeVisible()
+  await expect(page.getByText('여기를 채워 주세요.')).toBeVisible()
   await page.getByLabel('오늘 한 줄 (우리말)').fill('친구들이랑 놀았다.')
   await page.getByLabel('영어로 한 줄 (선택)').fill('I hang out with my friends today.')
   await expect(page.locator('.onboarding .usage-line')).toContainText('hang out')
@@ -382,13 +394,13 @@ test('타이핑 문제는 괄호 설명을 무시하고, 틀려도 "제 답도 �
   await page.getByRole('button', { name: '단어 퀴즈' }).click()
   await page.getByRole('button', { name: '뜻 → 표현' }).click()
   const question = await page.locator('.quiz-question').textContent()
-  await page.getByLabel('정답을 입력해 보세요').fill('틀린 답')
+  await page.getByLabel('생각나는 대로 써 보세요').fill('틀린 답')
   await page.keyboard.press('Enter')
-  await expect(page.getByText(/아쉬워요/)).toBeVisible()
+  await expect(page.getByText(/아깝다/)).toBeVisible()
   await page.getByRole('button', { name: '제 답도 맞아요' }).click()
-  await expect(page.getByText('정답이에요!')).toBeVisible()
+  await expect(page.getByText('맞았어요!')).toBeVisible()
   await page.keyboard.press('Enter')
-  await expect(page.locator('.quiz-progress')).toContainText('현재 점수 1')
+  await expect(page.locator('.quiz-progress')).toContainText('맞힌 개수 1')
   expect(question).toBeTruthy()
 })
 
@@ -401,14 +413,12 @@ test('단어를 직접 넣을 때 꾸러미에 있는 말이면 뜻과 예문을
   await expect(page.getByRole('button', { name: '꾸러미 뜻 채우기' })).toHaveCount(0)
 })
 
-test('쓰던 일기는 기기 저장소에 남고, 받은 교정은 버튼 하나로 붙여 넣는다', async ({ page, context }) => {
-  await context.grantPermissions(['clipboard-read', 'clipboard-write'])
+test('쓰던 일기는 기기 저장소에 남는다', async ({ page }) => {
   await open(page, 'journal')
-  await page.getByLabel('모국어로 작성하기').fill('쓰다 만 일기')
+  await page.getByLabel('우리말로 쓰기').fill('쓰다 만 일기')
   await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('journalDraft'))?.native)).toBe('쓰다 만 일기')
-  await page.evaluate(() => navigator.clipboard.writeText('## 고친 문장\nI went home.\n## 잘한 점\n좋아요'))
-  await page.getByRole('button', { name: '받은 교정 붙여 넣기' }).click()
-  await expect(page.getByLabel('AI 교정 결과 (선택)')).toHaveValue(/I went home\./)
+  await page.reload()
+  await expect(page.getByLabel('우리말로 쓰기')).toHaveValue('쓰다 만 일기')
 })
 
 test('기록이 이 기기에만 쌓이면 백업을 한 번 권하고, 다음에를 누르면 조용해진다', async ({ page }) => {
@@ -447,9 +457,9 @@ test('앱에서 난 오류는 프로필의 앱 오류 기록에 남는다', asyn
 test('알림: 하루 목표를 정하고 알림을 켜면 다음 알림이 보이고, 홈에 목표 진행이 나온다', async ({ page, context }) => {
   await context.grantPermissions(['notifications'])
   await open(page, 'profile')
-  await page.getByLabel('하루 목표 (기록하거나 복습한 개수)').selectOption('3')
-  await page.getByLabel(/목표를 못 채운 날 알려 주기/).check()
-  await expect(page.getByLabel(/목표를 못 채운 날 알려 주기/)).toBeChecked()
+  await page.getByRole('radio', { name: '하루 3개' }).check()
+  await page.getByLabel(/목표를 못 채운 날/).check()
+  await expect(page.getByLabel(/목표를 못 채운 날/)).toBeChecked()
   await expect(page.getByText(/다음 알림: .*\(하루 목표\)/)).toBeVisible()
   await expect(page.getByText('웹에서는 이 탭이나 설치한 웹앱이 열려 있을 때만', { exact: false })).toBeVisible()
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('reminders')))).toMatchObject({ goal: 3, goalReminder: true })
@@ -475,38 +485,23 @@ test('빈칸 채우기: 예문이 있는 단어만 내고, 예문 속 형태로 
   // 예문이 있는 thoughtful만 나오고, 예문이 없는 hang out은 빠진다.
   await expect(page.locator('.quiz-question')).toHaveText('It was a ____(빈칸) gift.')
   await expect(page.getByText('뜻: 사려 깊은, 배려하는')).toBeVisible()
-  await page.getByLabel('정답을 입력해 보세요').fill('thoughtful')
+  await page.getByLabel('생각나는 대로 써 보세요').fill('thoughtful')
   await page.keyboard.press('Enter')
-  await expect(page.getByText('정답이에요!')).toBeVisible()
+  await expect(page.getByText('맞았어요!')).toBeVisible()
   await page.keyboard.press('Enter')
-  await expect(page.getByRole('heading', { name: '퀴즈 완료! 1 / 1개 정답' })).toBeFocused()
+  await expect(page.getByRole('heading', { name: '다 풀었어요! 1개 중 1개 맞혔어요' })).toBeFocused()
 })
 
-test('형식 없이 붙여 넣은 교정도 그대로 보여 준다', async ({ page }) => {
-  await open(page, 'journal')
-  await page.getByLabel('모국어로 작성하기').fill('어제 공원을 걸었다.')
-  await page.getByLabel('AI 교정 결과 (선택)').fill('at the park 대신 in the park가 자연스러워요.')
+test('AI 교정이 정해진 형식이 아니어도 지난 일기에서 그대로 보여 준다', async ({ page }) => {
+  await fakeAi(page, ['at the park 대신 in the park가 자연스러워요.'])
+  await openJournalSignedIn(page)
+  await page.getByLabel('우리말로 쓰기').fill('어제 공원을 걸었다.')
+  await page.getByLabel('영어로 옮겨 보기').fill('I walked at the park yesterday.')
+  await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
+  await expect(page.getByRole('status').filter({ hasText: 'AI 교정이 도착했어요.' })).toBeVisible()
   await page.getByRole('button', { name: '일기 저장하기' }).click()
   await page.getByRole('button', { name: '자세히 보기' }).click()
   await expect(page.locator('.journal-entry .feedback-raw')).toHaveText('at the park 대신 in the park가 자연스러워요.')
-})
-
-test('자동 복사가 막히면 직접 복사할 수 있게 보여 준다', async ({ page }) => {
-  await page.addInitScript(() => {
-    navigator.clipboard.writeText = () => Promise.reject(new Error('denied'))
-  })
-  await open(page, 'journal')
-  await page.getByLabel('모국어로 작성하기').fill('일기')
-  await page.getByLabel('영어로 직접 번역하기').fill('diary')
-  await page.getByRole('button', { name: 'AI 교정 요청 복사' }).click()
-  await expect(page.getByLabel('자동 복사가 안 됐어요', { exact: false })).toHaveValue(/diary/)
-})
-
-test('AI 채팅 링크는 새 탭에서 안전하게 열린다', async ({ page }) => {
-  await open(page, 'journal')
-  const link = page.getByRole('link', { name: 'Claude 열기 (새 탭)' })
-  await expect(link).toHaveAttribute('target', '_blank')
-  await expect(link).toHaveAttribute('rel', 'noopener noreferrer')
 })
 
 test('원본 앱 형식으로 남은 기록도 읽는다', async ({ page }) => {
@@ -523,9 +518,9 @@ test('원본 앱 형식으로 남은 기록도 읽는다', async ({ page }) => {
 
 test('작성 중인 일기는 새로고침해도 남는다', async ({ page }) => {
   await open(page, 'journal')
-  await page.getByLabel('모국어로 작성하기').fill('아직 다 못 쓴 일기')
+  await page.getByLabel('우리말로 쓰기').fill('아직 다 못 쓴 일기')
   await page.reload()
-  await expect(page.getByLabel('모국어로 작성하기')).toHaveValue('아직 다 못 쓴 일기')
+  await expect(page.getByLabel('우리말로 쓰기')).toHaveValue('아직 다 못 쓴 일기')
 })
 
 test('대화 펼치기 상태를 보조 기술에 알린다', async ({ page }) => {
@@ -554,7 +549,7 @@ test('키보드: 바로가기, 페이지 이동 포커스, 탭 제목', async ({
 
 test('언어를 바꾸면 화면과 html lang이 바뀐다', async ({ page }) => {
   await open(page, 'profile')
-  await page.getByLabel('설명 언어').selectOption('en')
+  await page.getByRole('group', { name: '내 언어' }).getByRole('radio', { name: '영어' }).check()
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
   await expect(page.getByRole('heading', { name: 'Profile' })).toBeVisible()
 })
@@ -638,7 +633,7 @@ test('표현 꾸러미에서 담은 표현이 내 표현 모음에 들어가고 
   await open(page, 'expressions')
   await expect(page.locator('.record-row')).toContainText('hang out')
   await expect(page.locator('.record-row')).toContainText('어울려 놀다')
-  await expect(page.getByText('오늘 복습할 것 1개')).toBeVisible()
+  await expect(page.getByText('오늘 다시 볼 말 1개')).toBeVisible()
 })
 
 test('단어 꾸러미: 단계와 범위를 골라 담은 단어가 단어장에 들어간다', async ({ page }) => {
@@ -663,7 +658,7 @@ test('단어 꾸러미: 단계와 범위를 골라 담은 단어가 단어장에
   await page.getByRole('button', { name: '중급' }).click()
   await expect(page.getByRole('button', { name: '1–50' })).toHaveAttribute('aria-pressed', 'true')
 
-  await page.getByRole('button', { name: '표현 400개' }).click()
+  await page.getByRole('button', { name: '표현 589개' }).click()
   await expect(page.getByRole('heading', { name: '표현 꾸러미', level: 1 })).toBeVisible()
 
   await open(page, 'words')
@@ -753,10 +748,22 @@ async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
   const reports = []
   const patches = []
   const fixes = []
+  const records = new Map()
   await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
     const request = route.request()
     const url = request.url()
     if (url.includes('/rpc/is_admin')) return route.fulfill({ json: admin })
+    if (url.includes('/study_records')) {
+      if (request.method() === 'POST') {
+        for (const row of [request.postDataJSON()].flat()) records.set(row.id, row)
+        return route.fulfill({ status: 201, json: [] })
+      }
+      if (request.method() === 'DELETE') {
+        records.delete(new URL(url).searchParams.get('id')?.replace('eq.', ''))
+        return route.fulfill({ status: 204, body: '' })
+      }
+      return route.fulfill({ json: [...records.values()] })
+    }
     if (url.includes('/pack_fixes')) {
       if (request.method() === 'POST') {
         const row = { ...request.postDataJSON(), updated_at: new Date().toISOString() }
@@ -797,12 +804,12 @@ test.describe('로그인 화면', () => {
     await fakeSession(page)
     const server = await fakeReportServer(page)
     await page.goto(`${AUTH_URL}#profile`)
-    await page.getByLabel('종류').selectOption('content')
+    await page.getByRole('radio', { name: '단어·예문이 틀렸어요' }).check()
     await page.getByRole('button', { name: '보내기' }).click()
-    await expect(page.getByText('꼭 입력해 주세요.')).toBeVisible()
-    await page.getByLabel('내용').fill('tired의 예문 번역이 어색해요.')
+    await expect(page.getByText('여기를 채워 주세요.')).toBeVisible()
+    await page.getByLabel('자세히 알려 주세요').fill('tired의 예문 번역이 어색해요.')
     await page.getByRole('button', { name: '보내기' }).click()
-    await expect(page.getByRole('status').filter({ hasText: '보냈어요.' })).toBeVisible()
+    await expect(page.getByRole('status').filter({ hasText: '잘 받았어요' })).toBeVisible()
     expect(server.reports[0]).toMatchObject({ kind: 'content', message: 'tired의 예문 번역이 어색해요.', platform: 'web' })
     await expect(page.locator('.report-list')).toContainText('tired의 예문 번역이 어색해요.')
     await expect(page.locator('.report-list .report-status')).toHaveText('접수')
@@ -877,6 +884,72 @@ test.describe('로그인 화면', () => {
     await expect(page.getByText('아직 고친 항목이 없어요.')).toBeVisible()
   })
 
+  test('일기에서 앱 안 AI 교정을 받는다: 처음엔 동의를 묻고, 결과를 나눠 보여 주고, 하루 한도를 알려 준다', async ({ page }) => {
+    await fakeSession(page)
+    await fakeReportServer(page)
+    const prompts = []
+    let left = 4
+    await page.route('https://example.supabase.co/functions/v1/correct-journal', async (route) => {
+      prompts.push(route.request().postDataJSON().prompt)
+      if (left < 0) return route.fulfill({ status: 429, json: { error: 'limit', remaining: 0 } })
+      const remaining = left
+      left -= 1
+      return route.fulfill({
+        json: {
+          remaining,
+          feedback: [
+            '## 고친 문장',
+            'I miss you so much today.',
+            '## 고칠 점',
+            '- 원래: I miss you very much today → 고침: I miss you so much today | 이유: 말할 때는 so much가 더 자연스러워요.',
+            '## 잘한 점',
+            '마음을 솔직하게 전했어요.',
+            '## 연습할 점',
+            'so와 very의 느낌 차이를 익혀 보세요.',
+          ].join('\n'),
+        },
+      })
+    })
+
+    await page.goto(`${AUTH_URL}#journal`)
+    await page.getByLabel('우리말로 쓰기').fill('오늘 연인이 너무 보고 싶었다.')
+    await page.getByLabel('영어로 옮겨 보기').fill('I miss you very much today.')
+    await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
+
+    // 처음에는 어디로 보내지는지 알리고 동의를 받는다(보내기 전이라 요청이 없다)
+    await expect(page.getByRole('heading', { name: '보내기 전에 알려 드릴게요' })).toBeVisible()
+    await expect(page.getByText('Google Gemini', { exact: false }).first()).toBeVisible()
+    expect(prompts).toHaveLength(0)
+    await page.getByRole('button', { name: '알겠어요, 다듬어 주세요' }).click()
+
+    await expect(page.getByRole('status').filter({ hasText: 'AI 교정이 도착했어요.' })).toBeVisible()
+    expect(prompts[0]).toContain('I miss you very much today.')
+    expect(prompts[0]).toContain('오늘 연인이 너무 보고 싶었다.')
+    await expect(page.locator('form .correction-panel')).toContainText('I miss you so much today.')
+    await expect(page.locator('form .correction-panel')).toContainText('so much가 더 자연스러워요')
+    await expect(page.getByText('오늘 4번 더 쓸 수 있어요.')).toBeVisible()
+
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+      .analyze()
+    expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
+
+    // 두 번째부터는 묻지 않고 바로 보낸다. 한도를 넘으면 알려 준다.
+    left = -1
+    await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '오늘 AI 교정을 다 썼어요.' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: '보내기 전에 알려 드릴게요' })).toHaveCount(0)
+  })
+
+  test('로그인하지 않으면 AI 교정 대신 로그인을 권하고, 다른 AI로 복사하는 길은 없다', async ({ page }) => {
+    await page.goto(AUTH_URL)
+    await page.getByRole('button', { name: '로그인 없이 먼저 써 보기' }).click()
+    await page.goto(`${AUTH_URL}#journal`)
+    await expect(page.getByText('AI 교정은 로그인하면 바로 쓸 수 있어요.')).toBeVisible()
+    await expect(page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' })).toHaveCount(0)
+    await expect(page.getByRole('button', { name: /복사|붙여 넣기/ })).toHaveCount(0)
+  })
+
   test('관리자가 아니면 관리자 페이지 내용을 볼 수 없다', async ({ page }) => {
     await fakeSession(page)
     await fakeReportServer(page, { admin: false })
@@ -887,7 +960,7 @@ test.describe('로그인 화면', () => {
 
   test('처음 온 사람은 앱 소개를 보고 로그인 없이 써 볼 수 있고, 나중에 로그인하러 갈 수 있다', async ({ page }) => {
     await page.goto(AUTH_URL)
-    await expect(page.getByRole('heading', { name: '오늘 내가 쓴 말이 내 단어장이 되는 영어 기록 앱' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: '외국인 연인·친구와 나눈 말이 내 단어장이 되는 곳' })).toBeVisible()
     await page.getByRole('button', { name: '로그인 없이 먼저 써 보기' }).click()
     await expect(page.locator('main h1')).toBeVisible()
     await page.goto(`${AUTH_URL}#words`)
@@ -952,14 +1025,14 @@ test.describe('로그인 화면', () => {
 
     await context.setOffline(true)
     await page.getByRole('button', { name: '로그인하기' }).click()
-    await expect(page.getByText('인터넷에 연결되어 있지 않아요.')).toBeVisible()
+    await expect(page.getByText('인터넷이 끊겨 있어요.')).toBeVisible()
     await context.setOffline(false)
 
     await page.route('https://example.supabase.co/**', (route) =>
       route.fulfill({ status: 503, contentType: 'application/json', body: '{"message":"upstream down"}' }),
     )
     await page.getByRole('button', { name: '로그인하기' }).click()
-    await expect(page.getByText('서버에 잠시 문제가 있어요.', { exact: false })).toBeVisible()
+    await expect(page.getByText('서버가 잠시 쉬는 중이에요.', { exact: false })).toBeVisible()
   })
 
   test('연결이 끊겨도 저장하고, 연결되면 서버에 올린다', async ({ page, context }) => {
