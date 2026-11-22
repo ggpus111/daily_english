@@ -211,20 +211,35 @@ npm run test:e2e
 
 Supabase가 연결된 웹에서도 처음 온 사람은 로그인 화면에서 앱 소개를 보고 "로그인 없이 먼저 써 보기"를 누를 수 있습니다. 이때 기록은 이 기기에만 저장되고(`useRecords`는 로그인했을 때만 서버를 씀), 나중에 로그인하면 `migrateLocal`이 이 기기 기록을 계정으로 옮깁니다. 프로필과 홈의 백업 안내에 "로그인하고 기록 지키기" 버튼이 있습니다.
 
+## 설정과 프로필
+
+웹과 안드로이드 앱이 같은 화면을 씁니다. 위쪽의 톱니바퀴가 설정(`#settings`), 동그란 이름 표시가 프로필(`#profile`)입니다.
+
+| 화면 | 내용 |
+| --- | --- |
+| 프로필 | 이름 바꾸기(로그인했으면 계정에, 아니면 이 기기에), 이메일, 로그인 방법, 가입한 날, 내가 모은 단어·표현·대화·일기와 기록한 날·연속 일수, 비밀번호 바꾸기(이메일 가입만), 로그아웃 |
+| 설정 > 알림 | 알림 허용 상태와 허용하기, 시험 알림 보내기, 목표 알림, 복습 알림과 시간, 연인 새 문장 알림 |
+| 설정 > 학습과 화면 | 배우는 언어, 내 언어, 하루 목표, 화면 테마 |
+| 설정 > 개인정보와 데이터 | 내려받기·가져오기, AI 교정 동의 취소, 개인정보 처리방침, 계정과 기록 삭제 |
+| 설정 > 도움말과 정보 | 불편한 점 알려 주기, 앱 오류 기록, 앱 버전, Pro 안내, 관리자 페이지(관리자만) |
+
+코드는 `src/pages/Profile.jsx`, `src/pages/Settings.jsx`, `src/components/settings/`입니다. 영어 화면 문구는 한국어가 아닌 사람만 필요해서 처음 화면 코드에 넣지 않고 필요할 때 받습니다(`src/lib/strings.en.js`).
+
 ## 알림
 
-프로필의 "알림"에서 하루 목표(기록하거나 복습한 개수)와 알림을 켭니다. 기본은 꺼져 있습니다.
+설정의 "알림"에서 알림 허용 상태를 보고(허용하기, 시험 알림 보내기), 알림 종류별 스위치를 켭니다. 하루 목표(기록하거나 복습한 개수)는 "학습과 화면"에서 정합니다. 기본은 꺼져 있습니다.
 
 - **목표 알림**: 목표를 못 채운 날 13시에 처음, 그 뒤에도 못 채웠으면 1.5~2.5시간마다 알립니다. 21시 이후에는 보내지 않고 하루 최대 5번이며, 목표를 채우면 그날 남은 알림은 취소합니다(`src/lib/reminders.js`).
 - **복습 알림**: 정한 시간에 복습할 단어·표현이 있을 때만 개수를 알립니다.
 - **안드로이드**: `@capacitor/local-notifications`로 앞으로 3일 치를 미리 예약하고, 기록이 바뀔 때마다 다시 예약합니다. 알림을 누르면 일기나 단어장으로 갑니다. 정확한 알람 권한(SCHEDULE_EXACT_ALARM)은 Play 정책 때문에 뺐습니다.
 - **웹(로그인)**: 앱이 계획한 알림을 서버 대기열(`push_queue`)에 올리고, 서버 함수 `supabase/functions/send-reminders`가 10분마다 보낼 때가 된 것을 웹 푸시로 보냅니다. 브라우저를 닫아도 옵니다. 로그아웃하면 남은 알림과 푸시 주소를 지웁니다.
+- **연인의 새 문장**: 연인이 오늘의 한 문장을 보내면 알립니다. 웹(로그인)은 서버 트리거(`couple_sentence_notify`)가 상대의 대기열에 넣어 브라우저를 닫아도 오고, 알림에는 문장 내용을 담지 않습니다. 웹과 안드로이드 앱 모두 앱을 열었거나 열어 둔 동안 3분마다 확인해 알림창과 홈의 "새 문장" 표시로 알립니다(`src/hooks/useCoupleInbox.js`). 앱을 닫은 안드로이드에는 서버 푸시(FCM)가 필요한데 Firebase 설정이 있어야 해서 아직 넣지 않았습니다.
 - **웹(로그인 안 함, 또는 푸시 설정 전)**: 탭이나 설치한 웹앱이 열려 있을 때만 옵니다.
 - 웹 푸시 설정(한 번만):
   1. VAPID 키는 `supabase/vapid-keys.local.txt`에 있습니다(저장소에 올리지 않음). 새로 만들려면 `node -e "const e=require('crypto').createECDH('prime256v1');e.generateKeys();const b=x=>x.toString('base64url');console.log(b(e.getPublicKey()),b(e.getPrivateKey()))"`.
   2. 공개 키를 `.env`와 Vercel의 `VITE_VAPID_PUBLIC_KEY`에 넣습니다.
   3. Supabase 대시보드 > Edge Functions에서 `send-reminders`를 만들고 `index.ts` 내용을 붙여 넣어 배포합니다. Secrets에 `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT`(`mailto:문의 이메일`)를 넣습니다.
-  4. `supabase/push-cron.sql`의 프로젝트 값과 anon key를 바꿔 SQL Editor에서 실행합니다(10분마다 호출, 한 달 약 4,300번으로 무료 한도 안).
+  4. `supabase/push-cron.sql`의 프로젝트 값, anon key, 그리고 `CRON_SECRET`(아무도 모르는 긴 글자를 정해 Edge Function 비밀 값 `CRON_SECRET`에도 똑같이 넣기)을 바꿔 SQL Editor에서 실행합니다(10분마다 호출, 한 달 약 4,300번으로 무료 한도 안).
 - 리뷰 분석에서 압박·죄책감이 불만 요인이라, 문구는 다그치지 않게 쓰고 홈에는 진행 막대만 보여 줍니다.
 
 ## 오류 추적
@@ -306,3 +321,14 @@ insert into public.admins (user_id) values ('<관리자 사용자 ID>');
 - `supabase/migrate-from-original.sql`: 원본 앱 기록 이전
 - `vercel.json`: 보안 헤더와 캐시 설정
 - `scripts/make-images.mjs`: 앱 아이콘과 공유 이미지 생성
+
+## 보안 점검과 보완
+
+- 웹 보안 헤더(`vercel.json`): 내용 보안 정책(CSP, 자기 사이트와 Supabase만 허용), HSTS, 프레임 삽입 금지, MIME 추측 금지 등.
+- 모든 표에 행 단위 보안(RLS)이 켜져 있어 남의 기록은 읽거나 쓸 수 없습니다.
+- 연인 초대 번호: 한 사람이 1시간에 5번 틀리면 잠시 막아 무작위 대입을 막습니다(`couple_join_failures`).
+- 알림 대기열: 눌렀을 때 열 주소는 앱 안의 경로만 허용합니다(DB 제약 + 서비스 워커 검사).
+- `send-reminders`는 `x-cron-secret`이 맞을 때만 동작합니다. 공개된 anon 키만으로는 부를 수 없습니다.
+- 운영 의존성 취약점 0건(`npm audit --omit=dev`). 개발 도구(eslint 등)의 중간 단계 경고 6건은 배포물에 들어가지 않습니다.
+- 비밀 값 점검: `npm run build && npm run check:secrets`가 배포물에 비밀 키, 서버 전용 이름, 소스맵이 섞였는지 검사합니다(안드로이드는 `node scripts/check-secrets.mjs android/app/src/main/assets/public`). 배포 전에 한 번 돌리세요.
+- 비밀 값은 서버에만 둡니다: Gemini 키, VAPID 비밀 키, `CRON_SECRET`, 서비스 롤 키는 Supabase 비밀 값에만 있고, 화면 코드에는 공개해도 되는 Supabase anon 키와 VAPID 공개 키만 들어갑니다. `.env`, `.env.*`는 git에서 제외됩니다(`.env.example`만 올림).

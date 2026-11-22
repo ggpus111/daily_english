@@ -12,11 +12,11 @@ const urlFor = (kind) => (kind === 'review' ? '/#words' : '/#journal')
 export function webPushAvailable() {
   return Boolean(
     supabase &&
-      VAPID_PUBLIC_KEY &&
-      typeof navigator !== 'undefined' &&
-      'serviceWorker' in navigator &&
-      typeof window !== 'undefined' &&
-      'PushManager' in window,
+    VAPID_PUBLIC_KEY &&
+    typeof navigator !== 'undefined' &&
+    'serviceWorker' in navigator &&
+    typeof window !== 'undefined' &&
+    'PushManager' in window,
   )
 }
 
@@ -30,7 +30,13 @@ export function keyToBytes(base64url) {
 export function toQueueRows(plan, t) {
   return plan.map((item) => {
     const { title, body } = reminderText(item, t)
-    return { send_at: item.at.toISOString(), kind: item.kind, title: title.slice(0, 80), body: body.slice(0, 200), url: urlFor(item.kind) }
+    return {
+      send_at: item.at.toISOString(),
+      kind: item.kind,
+      title: title.slice(0, 80),
+      body: body.slice(0, 200),
+      url: urlFor(item.kind),
+    }
   })
 }
 
@@ -38,10 +44,22 @@ async function ensureSubscription() {
   const registration = await navigator.serviceWorker.ready
   const subscription =
     (await registration.pushManager.getSubscription()) ??
-    (await registration.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: keyToBytes(VAPID_PUBLIC_KEY) }))
+    (await registration.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: keyToBytes(VAPID_PUBLIC_KEY),
+    }))
   const { endpoint, keys } = subscription.toJSON()
-  const { error } = await supabase.from('push_subscriptions').upsert({ endpoint, p256dh: keys.p256dh, auth: keys.auth }, { onConflict: 'endpoint' })
+  const { error } = await supabase
+    .from('push_subscriptions')
+    .upsert({ endpoint, p256dh: keys.p256dh, auth: keys.auth }, { onConflict: 'endpoint' })
   if (error) throw error
+}
+
+/** 이 브라우저의 푸시 주소를 서버에 등록한다(연인 새 문장 알림처럼 서버가 보내는 알림용). 지원하지 않으면 false. */
+export async function ensureWebPush() {
+  if (!webPushAvailable()) return false
+  await ensureSubscription()
+  return true
 }
 
 /** 로그아웃할 때: 이 계정의 안 보낸 알림과 이 브라우저의 푸시 주소를 지우고 구독을 끊는다. */
@@ -61,7 +79,12 @@ export async function stopWebPush() {
  */
 export async function syncWebPush(plan, t, now = new Date()) {
   if (plan.length) await ensureSubscription()
-  const { error: deleteError } = await supabase.from('push_queue').delete().gte('send_at', now.toISOString())
+  // 연인 새 문장 알림(kind couple)은 서버가 넣는 줄이라 지우지 않는다.
+  const { error: deleteError } = await supabase
+    .from('push_queue')
+    .delete()
+    .gte('send_at', now.toISOString())
+    .neq('kind', 'couple')
   if (deleteError) throw deleteError
   if (!plan.length) return
   const { error } = await supabase.from('push_queue').insert(toQueueRows(plan, t))

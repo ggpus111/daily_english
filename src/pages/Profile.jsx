@@ -1,134 +1,75 @@
-import { useEffect, useRef, useState } from 'react'
-import ChoiceChips from '../components/ChoiceChips'
-import DeleteButton from '../components/DeleteButton'
-import ErrorReport from '../components/ErrorReport'
-import ReminderSettings from '../components/ReminderSettings'
-import ReportForm from '../components/ReportForm'
-import { checkAdmin } from '../lib/reports'
+import { useState } from 'react'
+import Field from '../components/Field'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
-import { LAST_EXPORT_KEY, MAX_FILE_BYTES, parseBackup, planImport } from '../lib/backup'
+import { useAccountActions } from '../hooks/useAccountActions'
+import { activityDays, streak } from '../lib/activity'
 import { errorMessage } from '../lib/errors'
-import { LANGUAGES, languageName } from '../lib/i18n'
-import { shareJsonFile } from '../lib/native'
-import { isNative } from '../lib/platform'
-import { clearUserCache } from '../lib/records'
-import { local } from '../lib/storage'
-import { THEMES, getTheme, saveTheme } from '../lib/theme'
 import { supabase } from '../lib/supabase'
-import { stopWebPush } from '../lib/webPush'
 
+const NICKNAME_MAX = 30
+const MIN_PASSWORD_LENGTH = 6
+const STATS = [
+  ['word', 'profileWords'],
+  ['expression', 'profileExpressions'],
+  ['chat', 'profileChats'],
+  ['journal', 'profileJournals'],
+]
 
-// 웹은 파일로 내려받고, 앱은 공유 창을 띄워 저장할 곳을 고르게 한다.
-async function exportJson(records) {
-  const fileName = `daily-english-${new Date().toISOString().slice(0, 10)}.json`
-  const content = JSON.stringify(records, null, 2)
-  if (isNative) {
-    await shareJsonFile(fileName, content)
-    return
-  }
-  const url = URL.createObjectURL(new Blob([content], { type: 'application/json' }))
-  const link = document.createElement('a')
-  link.href = url
-  link.download = fileName
-  link.click()
-  URL.revokeObjectURL(url)
+// 로그인한 방법(이메일, 구글, 카카오)을 이름으로 보여 준다.
+const providerKey = (user) => {
+  const provider = user?.app_metadata?.provider ?? 'email'
+  return ['google', 'kakao'].includes(provider) ? `provider.${provider}` : 'provider.email'
 }
 
+/** 프로필: 내 이름과 계정, 내가 모은 기록 요약, 비밀번호 바꾸기. 알림·언어·데이터는 설정에 있다. */
 export default function Profile() {
-  const {
-    t,
-    notify,
-    user,
-    nickname,
-    records,
-    importRecords,
-    pendingCount,
-    removeAll,
-    nativeLang,
-    setNativeLang,
-    learningLang,
-    setLearningLang,
-    onLogin,
-  } = useApp()
+  const { t, notify, user, nickname, setNickname, records, go, onLogin, pendingCount, nativeLang } = useApp()
+  const { logOut } = useAccountActions()
+  const signedIn = Boolean(supabase && user)
+  const [editing, setEditing] = useState(false)
+  const [name, setName] = useState(nickname)
+  const [password, setPassword] = useState('')
+  const [passwordError, setPasswordError] = useState('')
+  const [busy, setBusy] = useState(false)
+  const locale = nativeLang === 'ko' ? 'ko-KR' : 'en-US'
+  const days = activityDays(records)
+  const joined = user?.created_at
+    ? new Intl.DateTimeFormat(locale, { dateStyle: 'long' }).format(new Date(user.created_at))
+    : null
+  const canChangePassword = signedIn && (user.app_metadata?.provider ?? 'email') === 'email'
 
-  async function deleteAccount() {
-    const { error } = await supabase.rpc('delete_my_account')
+  async function saveName(event) {
+    event.preventDefault()
+    const next = name.trim()
+    if (!next) return
+    setBusy(true)
+    const result = await setNickname(next)
+    setBusy(false)
+    if (result?.error) {
+      notify(t('profileNameError', { message: errorMessage(result.error, t) }))
+      return
+    }
+    setEditing(false)
+    notify(t('profileNameSaved'))
+  }
+
+  async function savePassword(event) {
+    event.preventDefault()
+    if (password.length < MIN_PASSWORD_LENGTH) {
+      setPasswordError(t('passwordTooShort'))
+      return
+    }
+    setPasswordError('')
+    setBusy(true)
+    const { error } = await supabase.auth.updateUser({ password })
+    setBusy(false)
     if (error) {
-      notify(t('deleteAccountError', { message: errorMessage(error, t) }))
+      notify(t('authError', { message: errorMessage(error, t) }))
       return
     }
-    clearUserCache(user?.id, { includePending: true })
-    await supabase.auth.signOut()
-  }
-
-  // 이 기기에 남긴 기록 사본은 지운다. 올리지 못한 변경은 다시 로그인하면 올라간다.
-  async function logOut() {
-    clearUserCache(user?.id)
-    // 로그아웃한 뒤에는 이 계정의 웹 알림이 오지 않게, 아직 안 보낸 알림과 이 브라우저의 푸시 주소를 지운다.
-    await stopWebPush().catch(() => {})
-    await supabase.auth.signOut()
-  }
-
-  const [theme, setTheme] = useState(getTheme)
-  const fileRef = useRef(null)
-  const [importPlan, setImportPlan] = useState(null)
-  const [importing, setImporting] = useState(false)
-
-  async function chooseFile(event) {
-    const file = event.target.files?.[0]
-    event.target.value = ''
-    if (!file) return
-    if (file.size > MAX_FILE_BYTES) {
-      notify(t('importError.tooBig'))
-      return
-    }
-    try {
-      const { records: incoming, invalid } = parseBackup(await file.text())
-      setImportPlan({ ...planImport(records, incoming), invalid })
-    } catch (error) {
-      notify(t(`importError.${error.code ?? 'notBackup'}`))
-    }
-  }
-
-  async function confirmImport() {
-    setImporting(true)
-    const result = await importRecords(importPlan.toAdd)
-    setImporting(false)
-    if (result.error) {
-      notify(t('saveError', { message: errorMessage(result.error, t) }))
-      return
-    }
-    notify(t(result.queued ? 'importDoneOffline' : 'importDone', { count: importPlan.added }))
-    setImportPlan(null)
-  }
-
-  const [lastExport, setLastExport] = useState(() => local.get(LAST_EXPORT_KEY))
-  // 관리자 계정이면 관리자 페이지로 가는 링크를 보여 준다(권한은 서버가 다시 확인한다).
-  const [isAdmin, setIsAdmin] = useState(false)
-  useEffect(() => {
-    if (supabase && user) checkAdmin().then(setIsAdmin)
-  }, [user])
-  const dateFormat = new Intl.DateTimeFormat(nativeLang === 'ko' ? 'ko-KR' : 'en-US', {
-    dateStyle: 'long',
-  })
-
-  async function exportRecords() {
-    try {
-      await exportJson(records)
-    } catch (error) {
-      // 공유 창을 그냥 닫아도 여기로 온다.
-      if (!/cancel/i.test(error?.message ?? '')) notify(t('exportError'))
-      return
-    }
-    const now = new Date().toISOString()
-    local.set(LAST_EXPORT_KEY, now)
-    setLastExport(now)
-  }
-
-  function deleteLocalRecords() {
-    removeAll()
-    notify(t('dataDeleted'))
+    setPassword('')
+    notify(t('profilePasswordSaved'))
   }
 
   return (
@@ -136,17 +77,64 @@ export default function Profile() {
       <PageHead title={t('profile')} intro={t('profileIntro')} />
 
       <div className="two-column even">
-        <section className="panel profile-card">
+        <section className="panel profile-card" aria-labelledby="profile-name">
           <span className="avatar-large" aria-hidden="true">
             {nickname.slice(0, 1).toUpperCase()}
           </span>
-          <h2>{t('account')}</h2>
+          <h2 id="profile-name">{nickname}</h2>
           <dl>
-            <dt>{t('nickname')}</dt>
-            <dd>{nickname}</dd>
             <dt>{t('email')}</dt>
             <dd>{user ? user.email || t('noEmail') : t('localMode')}</dd>
+            {signedIn && (
+              <>
+                <dt>{t('profileLoginWith')}</dt>
+                <dd>{t(providerKey(user))}</dd>
+              </>
+            )}
+            {joined && (
+              <>
+                <dt>{t('profileJoined')}</dt>
+                <dd>{joined}</dd>
+              </>
+            )}
           </dl>
+
+          {editing ? (
+            <form className="stack-form" onSubmit={saveName}>
+              <Field
+                label={t('nickname')}
+                value={name}
+                maxLength={NICKNAME_MAX}
+                onChange={(event) => setName(event.target.value)}
+              />
+              <div className="button-row">
+                <button className="primary-button" disabled={busy || !name.trim()}>
+                  {t('profileNameSave')}
+                </button>
+                <button
+                  type="button"
+                  className="soft-button"
+                  onClick={() => {
+                    setName(nickname)
+                    setEditing(false)
+                  }}
+                >
+                  {t('profileNameCancel')}
+                </button>
+              </div>
+            </form>
+          ) : (
+            <button
+              className="soft-button"
+              onClick={() => {
+                setName(nickname)
+                setEditing(true)
+              }}
+            >
+              {t('profileNameEdit')}
+            </button>
+          )}
+
           {supabase && !user && (
             <>
               <button className="primary-button" onClick={onLogin}>
@@ -155,133 +143,64 @@ export default function Profile() {
               <p className="tiny-note">{t('guestLoginNote')}</p>
             </>
           )}
-          {supabase && user ? (
+          {signedIn && (
             <>
               <button className="soft-button" onClick={logOut}>
                 {t('logout')}
               </button>
               {pendingCount > 0 && <p className="tiny-note">{t('pendingOnLogout', { count: pendingCount })}</p>}
             </>
-          ) : (
-            !supabase && <p className="tiny-note">{t('localModeNote')}</p>
           )}
+          {!supabase && <p className="tiny-note">{t('localModeNote')}</p>}
         </section>
 
-        <section className="panel stack-form">
-          <h2>{t('settings')}</h2>
-          <ChoiceChips
-            compact
-            label={t('learningLanguage')}
-            name="learning-language"
-            value={learningLang}
-            options={LANGUAGES.map((language) => ({ value: language.code, label: languageName(language.code, nativeLang) }))}
-            onChange={setLearningLang}
-          />
-          <ChoiceChips
-            compact
-            label={t('nativeLanguage')}
-            name="native-language"
-            value={nativeLang}
-            options={LANGUAGES.map((language) => ({ value: language.code, label: languageName(language.code, nativeLang) }))}
-            onChange={setNativeLang}
-            hint={t('languageNote')}
-          />
-          <ChoiceChips
-            compact
-            label={t('themeLabel')}
-            name="theme"
-            value={theme}
-            options={THEMES.map((option) => ({ value: option, label: t(`theme.${option}`) }))}
-            onChange={(value) => {
-              setTheme(value)
-              saveTheme(value)
-            }}
-          />
+        <section className="panel stack-form" aria-labelledby="profile-stats">
+          <h2 id="profile-stats">{t('profileStats')}</h2>
+          <ul className="stat-grid">
+            {STATS.map(([type, label]) => (
+              <li key={type}>
+                <strong>{records[type].length}</strong>
+                <span>{t(label)}</span>
+              </li>
+            ))}
+            <li>
+              <strong>{days.size}</strong>
+              <span>{t('profileDays')}</span>
+            </li>
+            <li>
+              <strong>{streak(days, new Date())}</strong>
+              <span>{t('profileStreak')}</span>
+            </li>
+          </ul>
         </section>
 
-        <section className="panel stack-form">
-          <h2>{t('myData')}</h2>
-          <p className="muted">{t('myDataBody')}</p>
-          <p className="backup-status" role="status">
-            {supabase && user && <span>{t('cloudSaved')} </span>}
-            {lastExport
-              ? t('lastExport', { date: dateFormat.format(new Date(lastExport)) })
-              : t('neverExported')}
-          </p>
-          <div className="data-actions">
-            <button className="soft-button" onClick={exportRecords}>
-              {t('exportData')}
-            </button>
-            <button className="soft-button" onClick={() => fileRef.current?.click()}>
-              {t('importData')}
-            </button>
-            {/* 안드로이드 파일 선택 창은 .json을 다른 형식으로 알아보기도 해서 앱에서는 거르지 않고, 읽을 때 검사한다. */}
-            <input
-              ref={fileRef}
-              type="file"
-              accept={isNative ? undefined : '.json,application/json'}
-              hidden
-              aria-label={t('importData')}
-              onChange={chooseFile}
-            />
-            <DeleteButton
-              className="danger-button"
-              label={t(supabase && user ? 'deleteAccount' : 'deleteAllLocal')}
-              confirmLabel={t('deleteDataConfirm')}
-              onConfirm={supabase && user ? deleteAccount : deleteLocalRecords}
-            />
-          </div>
-          {importPlan && (
-            <div className="import-plan" role="region" aria-label={t('importTitle')}>
-              <p className="import-title">{t('importTitle')}</p>
-              {importPlan.added > 0 ? (
-                <p>
-                  {t('importCounts', {
-                    word: importPlan.toAdd.word.length,
-                    expression: importPlan.toAdd.expression.length,
-                    chat: importPlan.toAdd.chat.length,
-                    journal: importPlan.toAdd.journal.length,
-                  })}
-                </p>
-              ) : (
-                <p>{t('importNothing')}</p>
-              )}
-              {importPlan.duplicates > 0 && (
-                <p className="tiny-note">{t('importDuplicates', { count: importPlan.duplicates })}</p>
-              )}
-              {importPlan.invalid > 0 && (
-                <p className="tiny-note">{t('importInvalid', { count: importPlan.invalid })}</p>
-              )}
-              <div className="data-actions">
-                {importPlan.added > 0 && (
-                  <button className="primary-button" disabled={importing} onClick={confirmImport}>
-                    {t('importConfirm', { count: importPlan.added })}
-                  </button>
-                )}
-                <button className="soft-button" onClick={() => setImportPlan(null)}>
-                  {t('cancel')}
-                </button>
-              </div>
-            </div>
-          )}
-          <a className="inline-link" href="#pro">
-            {t('proLink')}
-          </a>
-          <a className="inline-link" href="#privacy">
-            {t('privacy')}
-          </a>
+        <section className="panel stack-form" aria-labelledby="profile-links">
+          <h2 id="profile-links">{t('profileShortcuts')}</h2>
+          <button className="soft-button" onClick={() => go('settings')}>
+            {t('profileToSettings')}
+          </button>
+          <button className="soft-button" onClick={() => go('couple')}>
+            {t('homeCoupleTitle')}
+          </button>
         </section>
 
-        <ReminderSettings />
-
-        <ReportForm />
-
-        <ErrorReport />
-
-        {isAdmin && (
-          <a className="inline-link admin-link" href="#admin">
-            {t('adminLink')}
-          </a>
+        {canChangePassword && (
+          <section className="panel stack-form" aria-labelledby="profile-password">
+            <h2 id="profile-password">{t('profilePassword')}</h2>
+            <form className="stack-form" onSubmit={savePassword}>
+              <Field
+                type="password"
+                label={t('profilePasswordNew')}
+                autoComplete="new-password"
+                value={password}
+                error={passwordError}
+                onChange={(event) => setPassword(event.target.value)}
+              />
+              <button className="soft-button" disabled={busy || !password}>
+                {t('profilePasswordSave')}
+              </button>
+            </form>
+          </section>
         )}
       </div>
     </>

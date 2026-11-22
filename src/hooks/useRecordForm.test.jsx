@@ -15,10 +15,9 @@ function setup(overrides = {}) {
     ...overrides,
   }
   const wrapper = ({ children }) => <AppContext.Provider value={app}>{children}</AppContext.Provider>
-  const { result } = renderHook(
-    () => useRecordForm({ type: 'word', emptyForm: EMPTY_FORM, required: ['text'] }),
-    { wrapper },
-  )
+  const { result } = renderHook(() => useRecordForm({ type: 'word', emptyForm: EMPTY_FORM, required: ['text'] }), {
+    wrapper,
+  })
   return { app, result }
 }
 

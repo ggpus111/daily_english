@@ -1,8 +1,7 @@
 import { useEffect } from 'react'
-import { REMINDERS_CHANGED } from '../components/ReminderSettings'
 import { recordError } from '../lib/errorLog'
 import { onReminderTap, scheduleReminders } from '../lib/notifications'
-import { readSettings } from '../lib/reminders'
+import { REMINDERS_CHANGED, readSettings } from '../lib/reminders'
 
 const PLAN_DELAY_MS = 800
 
@@ -12,7 +11,8 @@ const PLAN_DELAY_MS = 800
 export function useReminders({ records, loading, t, go, signedIn }) {
   useEffect(() => {
     if (loading) return undefined
-    const plan = () => scheduleReminders(records, readSettings(), t, { signedIn }).catch((error) => recordError(error, 'app'))
+    const plan = () =>
+      scheduleReminders(records, readSettings(), t, { signedIn }).catch((error) => recordError(error, 'app'))
     const timer = setTimeout(plan, PLAN_DELAY_MS)
     window.addEventListener(REMINDERS_CHANGED, plan)
     return () => {

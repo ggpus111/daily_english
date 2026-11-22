@@ -19,6 +19,7 @@ describe('초대 번호', () => {
 
   it('서버 오류를 알아듣기 쉬운 문구 키로 바꾼다', () => {
     expect(coupleErrorKey({ message: 'invalid code' })).toBe('coupleErrCode')
+    expect(coupleErrorKey({ message: 'too many attempts' })).toBe('coupleErrTooMany')
     expect(coupleErrorKey({ message: 'couple full' })).toBe('coupleErrFull')
     expect(coupleErrorKey({ message: 'already paired' })).toBe('coupleErrPaired')
     expect(coupleErrorKey({ message: 'boom' })).toBeNull()

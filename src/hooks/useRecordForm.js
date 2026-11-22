@@ -5,10 +5,7 @@ import { local } from '../lib/storage'
 
 const trimStrings = (form) =>
   Object.fromEntries(
-    Object.entries(form).map(([key, value]) => [
-      key,
-      typeof value === 'string' ? value.trim() : value,
-    ]),
+    Object.entries(form).map(([key, value]) => [key, typeof value === 'string' ? value.trim() : value]),
   )
 
 // 세 기록 화면이 공유하는 입력 폼 동작을 한곳에 둔다.
@@ -69,11 +66,7 @@ export function useRecordForm({ type, emptyForm, required, draftKey }) {
   }
 
   function startEdit(item) {
-    setForm(
-      Object.fromEntries(
-        Object.entries(emptyForm).map(([key, value]) => [key, item[key] ?? value]),
-      ),
-    )
+    setForm(Object.fromEntries(Object.entries(emptyForm).map(([key, value]) => [key, item[key] ?? value])))
     setErrors({})
     setEditingId(item.id)
     formRef.current?.scrollIntoView({ block: 'start' })

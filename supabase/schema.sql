@@ -242,11 +242,15 @@ create table if not exists public.push_queue (
   id bigint generated always as identity primary key,
   user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
   send_at timestamptz not null,
-  kind text not null check (kind in ('goal', 'review')),
+  kind text not null check (kind in ('goal', 'review', 'couple')),
   title text not null check (char_length(title) <= 80),
   body text not null check (char_length(body) <= 200),
   url text not null default '/' check (char_length(url) <= 40)
 );
+
+-- 알림을 눌렀을 때 열 주소는 이 앱 안의 경로만 허용한다(바깥 주소로 보내는 알림을 막는다). 이미 만든 데이터베이스에도 더한다.
+alter table public.push_queue drop constraint if exists push_queue_url_check;
+alter table public.push_queue add constraint push_queue_url_check check (url ~ '^/([^/\\]|$)');
 
 create index if not exists push_queue_send_idx on public.push_queue (send_at);
 
@@ -272,6 +276,9 @@ create table if not exists public.couple_members (
   couple_id uuid not null references public.couples (id) on delete cascade,
   user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
   nickname text not null check (char_length(nickname) between 1 and 30),
+  -- 연인이 문장을 보내면 웹 알림을 받을지, 알림 문구의 언어
+  notify boolean not null default false,
+  notify_lang text not null default 'ko' check (notify_lang in ('ko', 'en')),
   joined_at timestamptz not null default now(),
   primary key (couple_id, user_id),
   unique (user_id)
@@ -364,9 +371,21 @@ begin
 end;
 $$;
 
+-- 초대 번호를 틀린 기록. 함수(security definer)만 쓰고, 앱에서는 직접 읽거나 쓸 수 없다.
+create table if not exists public.couple_join_failures (
+  id bigint generated always as identity primary key,
+  user_id uuid not null references auth.users (id) on delete cascade,
+  failed_at timestamptz not null default now()
+);
+create index if not exists couple_join_failures_user_idx on public.couple_join_failures (user_id, failed_at);
+alter table public.couple_join_failures enable row level security;
+revoke all on public.couple_join_failures from anon, authenticated;
+
 -- 짝 들어가기: 초대 번호가 맞고 자리가 남아 있을 때만.
+-- 틀린 번호를 기록하려면 오류로 끝내지 않고 결과 글자를 돌려줘야 해서(오류가 나면 기록도 취소된다) 돌려주는 값이 text다.
+drop function if exists public.join_couple(text, text);
 create or replace function public.join_couple(invite text, nick text)
-returns void
+returns text
 language plpgsql
 security definer
 set search_path = public
@@ -378,12 +397,21 @@ begin
   if exists (select 1 from couple_members where user_id = auth.uid()) then
     raise exception 'already paired';
   end if;
+  -- 초대 번호를 마구 넣어 보는 것을 막는다: 최근 1시간에 5번 틀리면 잠시 막는다.
+  if (select count(*) from couple_join_failures
+      where user_id = auth.uid() and failed_at > now() - interval '1 hour') >= 5 then
+    return 'too many attempts';
+  end if;
   select id into target from couples where code = upper(trim(invite));
-  if target is null then raise exception 'invalid code'; end if;
+  if target is null then
+    insert into couple_join_failures (user_id) values (auth.uid());
+    return 'invalid code';
+  end if;
   if (select count(*) from couple_members where couple_id = target) >= 2 then
     raise exception 'couple full';
   end if;
   insert into couple_members (couple_id, user_id, nickname) values (target, auth.uid(), left(trim(nick), 30));
+  return 'ok';
 end;
 $$;
 
@@ -409,3 +437,58 @@ $$;
 
 revoke all on function public.create_couple(text), public.join_couple(text, text), public.leave_couple() from public, anon;
 grant execute on function public.create_couple(text), public.join_couple(text, text), public.leave_couple() to authenticated;
+
+-- 이미 만든 데이터베이스를 위한 변경(처음 만드는 경우에는 위 표에 이미 들어 있어서 아무 일도 하지 않는다).
+alter table public.couple_members add column if not exists notify boolean not null default false;
+alter table public.couple_members add column if not exists notify_lang text not null default 'ko';
+alter table public.push_queue drop constraint if exists push_queue_kind_check;
+alter table public.push_queue add constraint push_queue_kind_check check (kind in ('goal', 'review', 'couple'));
+
+-- 연인 새 문장 알림 켜기·끄기(내 줄만 바꾼다).
+create or replace function public.set_couple_notify(enabled boolean, msg_lang text)
+returns void
+language sql
+security definer
+set search_path = public
+as $$
+  update couple_members
+  set notify = enabled, notify_lang = case when msg_lang = 'ko' then 'ko' else 'en' end
+  where user_id = auth.uid();
+$$;
+
+-- 새 문장이 올라오면, 알림을 켠 상대의 웹 알림 대기열에 넣는다(문장 내용은 알림에 담지 않는다).
+-- 보내는 일은 서버 함수 send-reminders가 10분마다 한다. 고쳐 쓴 문장(update)에는 다시 알리지 않는다.
+create or replace function public.notify_partner_of_sentence()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  member record;
+begin
+  for member in
+    select user_id, notify_lang from couple_members
+    where couple_id = new.couple_id and user_id <> new.user_id and notify
+  loop
+    insert into push_queue (user_id, send_at, kind, title, body, url)
+    values (
+      member.user_id,
+      now(),
+      'couple',
+      case when member.notify_lang = 'ko' then '연인의 한 문장이 도착했어요' else 'A sentence from your partner' end,
+      case when member.notify_lang = 'ko' then '열어서 읽어 보고 답을 보내 보세요.' else 'Open it, read it, and send one back.' end,
+      '/#couple'
+    );
+  end loop;
+  return new;
+end;
+$$;
+
+drop trigger if exists couple_sentence_notify on public.couple_sentences;
+create trigger couple_sentence_notify
+  after insert on public.couple_sentences
+  for each row execute function public.notify_partner_of_sentence();
+
+revoke all on function public.set_couple_notify(boolean, text) from public, anon;
+grant execute on function public.set_couple_notify(boolean, text) to authenticated;

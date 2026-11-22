@@ -13,6 +13,17 @@ export default defineConfig(({ mode }) => {
   return {
     // 오류 보고에 앱 버전을 남긴다(src/lib/errorLog.js).
     define: { __APP_VERSION__: JSON.stringify(version) },
+    build: {
+      rolldownOptions: {
+        output: {
+          // 잘 안 바뀌는 라이브러리를 따로 묶어, 앱을 고쳐 배포해도 사용자가 다시 받지 않게 한다.
+          manualChunks(id) {
+            if (id.includes('node_modules/@supabase')) return 'vendor-supabase'
+            if (/node_modules\/(react|react-dom|scheduler)\//.test(id)) return 'vendor-react'
+          },
+        },
+      },
+    },
     plugins: [
       react(),
       siteMeta(env.VITE_SITE_URL),

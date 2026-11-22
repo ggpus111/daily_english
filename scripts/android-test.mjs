@@ -214,6 +214,22 @@ const scenarios = [
     },
   ],
   [
+    '설정과 프로필: 화면 구성이 보이고, 테마와 이름을 바꿀 수 있다',
+    async (page) => {
+      await page.evaluate(() => (location.hash = 'settings'))
+      await expect(page.getByRole('heading', { name: '설정', level: 1 })).toBeVisible()
+      await expect(page.getByRole('switch', { name: /다시 볼 말이 있으면/ })).toBeVisible()
+      await page.getByRole('radio', { name: '어둡게' }).check()
+      await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+      await page.getByRole('radio', { name: '기기 설정 따르기' }).check()
+      await page.evaluate(() => (location.hash = 'profile'))
+      await page.getByRole('button', { name: '이름 바꾸기' }).click()
+      await page.getByLabel('닉네임').fill('Mina')
+      await page.getByRole('button', { name: '저장', exact: true }).click()
+      await expect(page.getByRole('heading', { name: 'Mina', level: 2 })).toBeVisible()
+    },
+  ],
+  [
     '휴대폰 뒤로 가기는 앞 화면으로 돌아간다',
     async (page) => {
       for (const hash of ['home', 'words', 'journal']) {
