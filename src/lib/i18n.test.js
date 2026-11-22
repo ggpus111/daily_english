@@ -1,7 +1,8 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs'
 import { join } from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { CATEGORIES, STRINGS, createTranslator, languageName } from './i18n'
+import { CATEGORIES, STRINGS_KO, createTranslator, languageName } from './i18n'
+import en from './strings.en'
 
 function sourceFiles(dir) {
   return readdirSync(dir).flatMap((name) => {
@@ -13,20 +14,20 @@ function sourceFiles(dir) {
 
 describe('번역 문구', () => {
   it('한국어와 영어의 키가 같다', () => {
-    expect(Object.keys(STRINGS.en).sort()).toEqual(Object.keys(STRINGS.ko).sort())
+    expect(Object.keys(en).sort()).toEqual(Object.keys(STRINGS_KO).sort())
   })
 
   it('코드에서 쓰는 키가 모두 있다', () => {
     const used = sourceFiles('src').flatMap((file) =>
       [...readFileSync(file, 'utf8').matchAll(/[^\w]t\('([\w.]+)'/g)].map((match) => match[1]),
     )
-    expect(used.filter((key) => !(key in STRINGS.ko))).toEqual([])
-    expect(CATEGORIES.filter((key) => !(`category.${key}` in STRINGS.ko))).toEqual([])
+    expect(used.filter((key) => !(key in STRINGS_KO))).toEqual([])
+    expect(CATEGORIES.filter((key) => !(`category.${key}` in STRINGS_KO))).toEqual([])
   })
 
   it('값을 끼워 넣고 한국어 외에는 영어를 쓴다', () => {
     expect(createTranslator('ko')('count', { count: 3 })).toBe('3개')
-    expect(createTranslator('ja')('home')).toBe('Home')
+    expect(createTranslator('ja', en)('home')).toBe('Home')
     expect(createTranslator('ko')('없는키')).toBe('없는키')
   })
 

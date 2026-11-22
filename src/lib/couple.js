@@ -116,3 +116,23 @@ export async function sendSentence({ coupleId, body, lang, day = dayKey(new Date
     return failure(error)
   }
 }
+
+/** 연인 새 문장 알림을 켜고 끈다. 서버가 보낼 알림 문구의 언어(lang)도 함께 저장한다. */
+export const setCoupleNotify = (enabled, lang) =>
+  rpc('set_couple_notify', { enabled, msg_lang: lang === 'ko' ? 'ko' : 'en' })
+
+/** 연인이 가장 최근에 보낸 문장(없으면 null). 내 짝이 아니면 서버가 아무것도 주지 않는다. */
+export async function latestPartnerSentence(userId) {
+  if (!supabase || !userId) return null
+  try {
+    const { data, error } = await supabase
+      .from('couple_sentences')
+      .select('id, user_id, day, created_at')
+      .neq('user_id', userId)
+      .order('created_at', { ascending: false })
+      .limit(1)
+    return error ? null : (data?.[0] ?? null)
+  } catch {
+    return null
+  }
+}

@@ -23,12 +23,35 @@ export async function requestNotificationPermission() {
   return result === 'default' ? 'prompt' : result
 }
 
-async function showWebNotification(item, t) {
-  const { title, body } = reminderText(item, t)
-  const options = { body, icon: '/icon-192.png', tag: `daily-english-${item.kind}` }
+async function showWeb(title, body, tag) {
+  const options = { body, icon: '/icon-192.png', tag }
   const registration = await navigator.serviceWorker?.getRegistration?.()
   if (registration) await registration.showNotification(title, options)
   else new Notification(title, options)
+}
+
+function showWebNotification(item, t) {
+  const { title, body } = reminderText(item, t)
+  return showWeb(title, body, `daily-english-${item.kind}`)
+}
+
+const TEST_ID = 9001
+
+/** 알림이 잘 오는지 바로 확인하는 시험 알림(설정 화면의 "시험 알림 보내기"). 권한이 없으면 false. */
+export async function sendTestNotification(t) {
+  if ((await notificationPermission()) !== 'granted') return false
+  const title = t('notifyTestTitle')
+  const body = t('notifyTestBody')
+  if (isNative) {
+    await LocalNotifications.schedule({
+      notifications: [
+        { id: TEST_ID, title, body, schedule: { at: new Date(Date.now() + 1500), allowWhileIdle: true } },
+      ],
+    })
+  } else {
+    await showWeb(title, body, 'daily-english-test')
+  }
+  return true
 }
 
 /**
@@ -40,7 +63,8 @@ export async function scheduleReminders(records, settings, t, { now = new Date()
 
   if (isNative) {
     const { notifications } = await LocalNotifications.getPending()
-    if (notifications.length) await LocalNotifications.cancel({ notifications: notifications.map(({ id }) => ({ id })) })
+    if (notifications.length)
+      await LocalNotifications.cancel({ notifications: notifications.map(({ id }) => ({ id })) })
     if (!plan.length || (await notificationPermission()) !== 'granted') return plan
     await LocalNotifications.schedule({
       notifications: plan.map((item) => ({

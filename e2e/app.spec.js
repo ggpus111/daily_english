@@ -2,7 +2,19 @@ import AxeBuilder from '@axe-core/playwright'
 import { expect, test } from '@playwright/test'
 
 const AUTH_URL = 'http://localhost:4174/'
-const PAGES = ['home', 'words', 'expressions', 'chats', 'journal', 'profile', 'privacy', 'pro', 'packs', 'packs-words']
+const PAGES = [
+  'home',
+  'words',
+  'expressions',
+  'chats',
+  'journal',
+  'profile',
+  'settings',
+  'privacy',
+  'pro',
+  'packs',
+  'packs-words',
+]
 
 const seed = {
   savedWords: [
@@ -112,7 +124,7 @@ test.describe('모든 화면', () => {
   })
 
   test('화면 테마를 고르면 바로 바뀌고 다시 열어도 유지된다', async ({ page }) => {
-    await open(page, 'profile')
+    await open(page, 'settings')
     await page.getByRole('radio', { name: '어둡게' }).check()
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
     const background = () => page.evaluate(() => getComputedStyle(document.body).backgroundColor)
@@ -471,8 +483,8 @@ test('기록이 이 기기에만 쌓이면 백업을 한 번 권하고, 다음�
   await expect(page.locator('.backup-nudge')).toHaveCount(0)
 })
 
-test('앱에서 난 오류는 프로필의 앱 오류 기록에 남는다', async ({ page }) => {
-  await open(page, 'profile')
+test('앱에서 난 오류는 설정의 앱 오류 기록에 남는다', async ({ page }) => {
+  await open(page, 'settings')
   await expect(page.getByText('지금까지 기록된 오류가 없어요.')).toBeVisible()
   await page.evaluate(() =>
     setTimeout(() => {
@@ -488,10 +500,10 @@ test('앱에서 난 오류는 프로필의 앱 오류 기록에 남는다', asyn
 
 test('알림: 하루 목표를 정하고 알림을 켜면 다음 알림이 보이고, 홈에 목표 진행이 나온다', async ({ page, context }) => {
   await context.grantPermissions(['notifications'])
-  await open(page, 'profile')
+  await open(page, 'settings')
   await page.getByRole('radio', { name: '하루 3개' }).check()
-  await page.getByLabel(/목표를 못 채운 날/).check()
-  await expect(page.getByLabel(/목표를 못 채운 날/)).toBeChecked()
+  await page.getByRole('switch', { name: /목표를 못 채운 날/ }).click()
+  await expect(page.getByRole('switch', { name: /목표를 못 채운 날/ })).toBeChecked()
   await expect(page.getByText(/다음 알림: .*\(하루 목표\)/)).toBeVisible()
   await expect(page.getByText('웹에서는 이 탭이나 설치한 웹앱이 열려 있을 때만', { exact: false })).toBeVisible()
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('reminders')))).toMatchObject({
@@ -589,15 +601,15 @@ test('키보드: 바로가기, 페이지 이동 포커스, 탭 제목', async ({
 })
 
 test('언어를 바꾸면 화면과 html lang이 바뀐다', async ({ page }) => {
-  await open(page, 'profile')
+  await open(page, 'settings')
   await page.getByRole('group', { name: '내 언어' }).getByRole('radio', { name: '영어' }).check()
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
-  await expect(page.getByRole('heading', { name: 'Profile' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'Settings', level: 1 })).toBeVisible()
 })
 
 test('내보내기와 전체 삭제', async ({ page }) => {
   await seedRecords(page)
-  await open(page, 'profile')
+  await open(page, 'settings')
 
   const download = page.waitForEvent('download')
   await page.getByRole('button', { name: '내 기록 내려받기' }).click()
@@ -612,7 +624,7 @@ test('내보내기와 전체 삭제', async ({ page }) => {
 
 test('내려받은 백업 파일로 지운 기록을 되살린다', async ({ page }) => {
   await seedRecords(page)
-  await open(page, 'profile')
+  await open(page, 'settings')
 
   const download = page.waitForEvent('download')
   await page.getByRole('button', { name: '내 기록 내려받기' }).click()
@@ -642,7 +654,7 @@ test('내려받은 백업 파일로 지운 기록을 되살린다', async ({ pag
 })
 
 test('백업 파일이 아니면 가져오지 않고 알려 준다', async ({ page }) => {
-  await open(page, 'profile')
+  await open(page, 'settings')
   await page.getByLabel('파일에서 가져오기').setInputFiles({
     name: 'notes.json',
     mimeType: 'application/json',
@@ -856,10 +868,10 @@ async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
 }
 
 test.describe('로그인 화면', () => {
-  test('로그인한 사용자는 문제를 신고하고, 보낸 신고와 상태를 프로필에서 본다', async ({ page }) => {
+  test('로그인한 사용자는 문제를 신고하고, 보낸 신고와 상태를 설정에서 본다', async ({ page }) => {
     await fakeSession(page)
     const server = await fakeReportServer(page)
-    await page.goto(`${AUTH_URL}#profile`)
+    await page.goto(`${AUTH_URL}#settings`)
     await page.getByRole('radio', { name: '단어·예문이 틀렸어요' }).check()
     await page.getByRole('button', { name: '보내기' }).click()
     await expect(page.getByText('여기를 채워 주세요.')).toBeVisible()
@@ -912,7 +924,7 @@ test.describe('로그인 화면', () => {
       admin_reply: '',
     })
 
-    await page.goto(`${AUTH_URL}#profile`)
+    await page.goto(`${AUTH_URL}#settings`)
     await page.getByRole('link', { name: '관리자 페이지' }).click()
     await expect(page.getByRole('heading', { name: '관리자', level: 1 })).toBeVisible()
     const item = page.locator('.admin-item').filter({ hasText: '복습 버튼이 안 눌려요' })
@@ -1114,6 +1126,74 @@ test.describe('로그인 화면', () => {
     await expect(page.getByRole('status').filter({ hasText: '표현 모음에 담았어요.' })).toBeVisible()
     await page.goto(`${AUTH_URL}#expressions`)
     await expect(page.getByText('I was thinking about you today.')).toBeVisible()
+  })
+
+  test('프로필에서 이름을 바꾸면 계정에 저장되고 화면 곳곳에 바로 보인다', async ({ page }) => {
+    await fakeSession(page)
+    await fakeReportServer(page)
+    const updates = []
+    await page.route('https://example.supabase.co/auth/v1/user', async (route) => {
+      if (route.request().method() === 'PUT') {
+        updates.push(route.request().postDataJSON())
+        return route.fulfill({
+          json: {
+            id: '11111111-1111-4111-8111-111111111111',
+            aud: 'authenticated',
+            email: 'learner@example.com',
+            user_metadata: { nickname: 'Mina' },
+          },
+        })
+      }
+      return route.fallback()
+    })
+    await page.goto(`${AUTH_URL}#profile`)
+    await expect(page.getByRole('heading', { name: 'Tester', level: 2 })).toBeVisible()
+    await expect(page.getByRole('main').getByText('learner@example.com')).toBeVisible()
+    await page.getByRole('button', { name: '이름 바꾸기' }).click()
+    await page.getByLabel('닉네임').fill('Mina')
+    await page.getByRole('button', { name: '저장', exact: true }).click()
+    await expect(page.getByRole('status').filter({ hasText: '이름을 바꿨어요.' })).toBeVisible()
+    expect(updates[0]).toMatchObject({ data: { nickname: 'Mina' } })
+    await expect(page.getByRole('heading', { name: 'Mina', level: 2 })).toBeVisible()
+
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+      .analyze()
+    expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
+  })
+
+  test('설정: 알림을 허용하고 연인 새 문장 알림을 켜면 서버에 알리고, 시험 알림을 보낸다', async ({
+    page,
+    context,
+  }) => {
+    await context.grantPermissions(['notifications'])
+    await fakeSession(page)
+    await fakeReportServer(page)
+    const calls = []
+    await page.route('https://example.supabase.co/rest/v1/rpc/set_couple_notify', async (route) => {
+      calls.push(route.request().postDataJSON())
+      return route.fulfill({ status: 204, body: '' })
+    })
+    await page.goto(`${AUTH_URL}#settings`)
+    await expect(page.getByRole('heading', { name: '설정', level: 1 })).toBeVisible()
+    await expect(page.getByText('알림 허용: 켜짐')).toBeVisible()
+    await page.getByRole('switch', { name: '연인의 새 문장이 오면 알려 주기' }).click()
+    await expect(page.getByRole('switch', { name: '연인의 새 문장이 오면 알려 주기' })).toBeChecked()
+    expect(calls[0]).toEqual({ enabled: true, msg_lang: 'ko' })
+    expect(await page.evaluate(() => JSON.parse(localStorage.getItem('reminders')))).toMatchObject({ couple: true })
+
+    await page.getByRole('button', { name: '시험 알림 보내기' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '시험 알림을 보냈어요' })).toBeVisible()
+
+    // 하루 목표와 화면 테마, 로그아웃까지 한 화면에 있다
+    await expect(page.getByRole('group', { name: '배우는 언어' })).toBeVisible()
+    await expect(page.getByRole('radio', { name: '어둡게' })).toBeVisible()
+    await expect(page.getByRole('button', { name: '로그아웃' })).toBeVisible()
+
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+      .analyze()
+    expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
   })
 
   test('로그인하지 않으면 AI 교정 대신 로그인을 권하고, 다른 AI로 복사하는 길은 없다', async ({ page }) => {

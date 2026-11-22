@@ -242,7 +242,7 @@ create table if not exists public.push_queue (
   id bigint generated always as identity primary key,
   user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
   send_at timestamptz not null,
-  kind text not null check (kind in ('goal', 'review')),
+  kind text not null check (kind in ('goal', 'review', 'couple')),
   title text not null check (char_length(title) <= 80),
   body text not null check (char_length(body) <= 200),
   url text not null default '/' check (char_length(url) <= 40)
@@ -272,6 +272,9 @@ create table if not exists public.couple_members (
   couple_id uuid not null references public.couples (id) on delete cascade,
   user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
   nickname text not null check (char_length(nickname) between 1 and 30),
+  -- 연인이 문장을 보내면 웹 알림을 받을지, 알림 문구의 언어
+  notify boolean not null default false,
+  notify_lang text not null default 'ko' check (notify_lang in ('ko', 'en')),
   joined_at timestamptz not null default now(),
   primary key (couple_id, user_id),
   unique (user_id)
@@ -409,3 +412,58 @@ $$;
 
 revoke all on function public.create_couple(text), public.join_couple(text, text), public.leave_couple() from public, anon;
 grant execute on function public.create_couple(text), public.join_couple(text, text), public.leave_couple() to authenticated;
+
+-- 이미 만든 데이터베이스를 위한 변경(처음 만드는 경우에는 위 표에 이미 들어 있어서 아무 일도 하지 않는다).
+alter table public.couple_members add column if not exists notify boolean not null default false;
+alter table public.couple_members add column if not exists notify_lang text not null default 'ko';
+alter table public.push_queue drop constraint if exists push_queue_kind_check;
+alter table public.push_queue add constraint push_queue_kind_check check (kind in ('goal', 'review', 'couple'));
+
+-- 연인 새 문장 알림 켜기·끄기(내 줄만 바꾼다).
+create or replace function public.set_couple_notify(enabled boolean, msg_lang text)
+returns void
+language sql
+security definer
+set search_path = public
+as $$
+  update couple_members
+  set notify = enabled, notify_lang = case when msg_lang = 'ko' then 'ko' else 'en' end
+  where user_id = auth.uid();
+$$;
+
+-- 새 문장이 올라오면, 알림을 켠 상대의 웹 알림 대기열에 넣는다(문장 내용은 알림에 담지 않는다).
+-- 보내는 일은 서버 함수 send-reminders가 10분마다 한다. 고쳐 쓴 문장(update)에는 다시 알리지 않는다.
+create or replace function public.notify_partner_of_sentence()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  member record;
+begin
+  for member in
+    select user_id, notify_lang from couple_members
+    where couple_id = new.couple_id and user_id <> new.user_id and notify
+  loop
+    insert into push_queue (user_id, send_at, kind, title, body, url)
+    values (
+      member.user_id,
+      now(),
+      'couple',
+      case when member.notify_lang = 'ko' then '연인의 한 문장이 도착했어요' else 'A sentence from your partner' end,
+      case when member.notify_lang = 'ko' then '열어서 읽어 보고 답을 보내 보세요.' else 'Open it, read it, and send one back.' end,
+      '/#couple'
+    );
+  end loop;
+  return new;
+end;
+$$;
+
+drop trigger if exists couple_sentence_notify on public.couple_sentences;
+create trigger couple_sentence_notify
+  after insert on public.couple_sentences
+  for each row execute function public.notify_partner_of_sentence();
+
+revoke all on function public.set_couple_notify(boolean, text) from public, anon;
+grant execute on function public.set_couple_notify(boolean, text) to authenticated;

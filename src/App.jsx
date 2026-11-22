@@ -5,11 +5,13 @@ import Logo from './components/Logo'
 import { AppContext } from './context'
 import { useErrorReporting } from './hooks/useErrorReporting'
 import { useOnline } from './hooks/useOnline'
+import { useCoupleInbox } from './hooks/useCoupleInbox'
 import { useReminders } from './hooks/useReminders'
 import { clearDraftBackup } from './lib/draftBackup'
 import { errorMessage } from './lib/errors'
 import { createTranslator } from './lib/i18n'
 import { initNativeAuth } from './lib/native'
+import { readSettings, REMINDERS_CHANGED } from './lib/reminders'
 import { JOURNAL_DRAFT_KEY, STORAGE_ERROR, useRecords } from './lib/records'
 import { local } from './lib/storage'
 import { supabase } from './lib/supabase'
@@ -24,6 +26,7 @@ import Profile from './pages/Profile'
 // 자주 열지 않는 화면은 처음 열 때 따로 불러와 첫 화면 코드를 줄인다.
 const Admin = lazy(() => import('./pages/Admin'))
 const Couple = lazy(() => import('./pages/Couple'))
+const Settings = lazy(() => import('./pages/Settings'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const Pro = lazy(() => import('./pages/Pro'))
 
@@ -33,7 +36,9 @@ const TOAST_ACTION_MS = 8000
 
 function readPage() {
   const page = window.location.hash.slice(1)
-  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin', 'couple'].includes(page) ? page : 'home'
+  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin', 'couple', 'settings'].includes(page)
+    ? page
+    : 'home'
 }
 
 function usePage() {
@@ -87,19 +92,8 @@ function useToast() {
 export const GUEST_KEY = 'guestMode'
 
 function Shell({ page, go, user, languages, t, notify, onLogin }) {
-  const {
-    records,
-    loading,
-    loadError,
-    pendingCount,
-    reload,
-    add,
-    update,
-    remove,
-    restore,
-    importRecords,
-    removeAll,
-  } = useRecords(user)
+  const { records, loading, loadError, pendingCount, reload, add, update, remove, restore, importRecords, removeAll } =
+    useRecords(user)
   const online = useOnline()
   const wasOnline = useRef(online)
 
@@ -111,6 +105,8 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     if (supabase && user && online && !wasOnline.current && loadError !== STORAGE_ERROR) reload()
     wasOnline.current = online
   }, [online, user, loadError, reload])
+  // 로그인하지 않은 사람의 이름은 이 기기에만 남긴다.
+  const [guestName, setGuestName] = useLanguageSetting('guestNickname', '')
   const meta = user?.user_metadata ?? {}
   // 이메일 가입은 nickname, 원본 앱은 display_name, 구글과 카카오는 name 계열에 이름이 담긴다.
   const nickname =
@@ -121,9 +117,39 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     meta.user_name ||
     meta.preferred_username ||
     user?.email?.split('@')[0] ||
+    guestName ||
     'Learner'
   const mainRef = useRef(null)
   const previousPage = useRef(page)
+
+  // 이름 바꾸기: 로그인했으면 계정에, 아니면 이 기기에 저장한다.
+  const setNickname = useCallback(
+    async (name) => {
+      if (supabase && user) {
+        const { error } = await supabase.auth.updateUser({ data: { nickname: name } })
+        return error ? { error } : {}
+      }
+      setGuestName(name)
+      return {}
+    },
+    [user, setGuestName],
+  )
+
+  // 연인의 새 문장이 오면 알려 준다(설정에서 켠 사람만). 연인과 한 문장 화면을 열면 읽은 것으로 한다.
+  const [coupleOn, setCoupleOn] = useState(() => readSettings().couple)
+  useEffect(() => {
+    const sync = () => setCoupleOn(readSettings().couple)
+    window.addEventListener(REMINDERS_CHANGED, sync)
+    return () => window.removeEventListener(REMINDERS_CHANGED, sync)
+  }, [])
+  const { unread: coupleUnread, markSeen: markCoupleSeen } = useCoupleInbox({
+    userId: supabase ? user?.id : null,
+    enabled: coupleOn,
+    onNew: () => notify(t('coupleNewToast'), { label: t('coupleNewOpen'), onClick: () => go('couple') }),
+  })
+  useEffect(() => {
+    if (page === 'couple') markCoupleSeen()
+  }, [page, markCoupleSeen])
 
   useEffect(() => {
     document.title = `${t(page)} · Daily English`
@@ -137,6 +163,8 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
       notify,
       user,
       nickname,
+      setNickname,
+      coupleUnread,
       records,
       add,
       update,
@@ -154,6 +182,8 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
       notify,
       user,
       nickname,
+      setNickname,
+      coupleUnread,
       records,
       add,
       update,
@@ -178,6 +208,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     pro: <Pro />,
     admin: <Admin />,
     couple: <Couple />,
+    settings: <Settings />,
     packs: <Packs key="expressions" mode="expressions" />,
     'packs-words': <Packs key="words" mode="words" />,
   }
@@ -192,9 +223,19 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
           <button className="brand" onClick={() => go('home')}>
             <Logo />
           </button>
-          <button className="avatar-button" onClick={() => go('profile')} aria-label={t('profile')}>
-            <span aria-hidden="true">{nickname.slice(0, 1).toUpperCase()}</span>
-          </button>
+          <div className="topbar-actions">
+            <button
+              className="icon-button"
+              onClick={() => go('settings')}
+              aria-label={t('settings')}
+              aria-current={page === 'settings' ? 'page' : undefined}
+            >
+              <Icon name="settings" />
+            </button>
+            <button className="avatar-button" onClick={() => go('profile')} aria-label={t('profile')}>
+              <span aria-hidden="true">{nickname.slice(0, 1).toUpperCase()}</span>
+            </button>
+          </div>
         </header>
         <div className="layout">
           <nav className="sidebar" aria-label={t('mainNav')}>
@@ -272,7 +313,23 @@ export default function App() {
   const [learningLang, setLearningLang] = useLanguageSetting('learningLang', 'en')
   const [page, go] = usePage()
   const [toast, notify, dismissToast] = useToast()
-  const t = useMemo(() => createTranslator(nativeLang), [nativeLang])
+  // 영어 문구는 한국어가 아닌 사람만 필요해서 처음 화면 코드에 넣지 않고, 필요할 때 받는다.
+  const [englishStrings, setEnglishStrings] = useState(null)
+  const needsEnglish = nativeLang !== 'ko' && !englishStrings
+  // 처음부터 영어로 연 사람만 문구가 올 때까지 기다린다. 쓰다가 영어로 바꾸면 화면을 그대로 두고 문구만 바꾼다.
+  const [startedInEnglish] = useState(() => nativeLang !== 'ko')
+  useEffect(() => {
+    if (!needsEnglish) return undefined
+    let alive = true
+    import('./lib/strings.en').then((module) => alive && setEnglishStrings(module.default))
+    return () => {
+      alive = false
+    }
+  }, [needsEnglish])
+  const t = useMemo(
+    () => createTranslator(needsEnglish ? 'ko' : nativeLang, englishStrings ?? {}),
+    [nativeLang, englishStrings, needsEnglish],
+  )
   const languages = useMemo(
     () => ({ nativeLang, setNativeLang, learningLang, setLearningLang }),
     [nativeLang, setNativeLang, learningLang, setLearningLang],
@@ -283,10 +340,7 @@ export default function App() {
   }, [nativeLang])
 
   // 안드로이드 앱에서 소셜 로그인·이메일 인증 후 딥링크로 돌아오는 것을 받는다.
-  useEffect(
-    () => initNativeAuth((error) => notify(t('authError', { message: errorMessage(error, t) }))),
-    [notify, t],
-  )
+  useEffect(() => initNativeAuth((error) => notify(t('authError', { message: errorMessage(error, t) }))), [notify, t])
 
   useEffect(() => {
     if (!supabase) return undefined
@@ -310,7 +364,13 @@ export default function App() {
   }, [])
 
   let content
-  if (page === 'privacy') {
+  if (needsEnglish && startedInEnglish) {
+    content = (
+      <p className="auth-loading" role="status">
+        Loading…
+      </p>
+    )
+  } else if (page === 'privacy') {
     content = (
       <Suspense fallback={null}>
         <Privacy t={t} />

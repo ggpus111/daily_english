@@ -17,15 +17,41 @@ import { moodsByDay } from '../lib/usage'
 
 // 친구 원본 홈(학습 노트)의 번호 카드 구성을 따른다.
 const CARDS = [
-  { page: 'words', type: 'word', eyebrow: '01 / VOCABULARY', count: 'cardWords', tone: 'peach', preview: 'text', learning: true },
-  { page: 'expressions', type: 'expression', eyebrow: '02 / EXPRESSIONS', count: 'cardExpressions', tone: 'lilac', preview: 'text', learning: true },
+  {
+    page: 'words',
+    type: 'word',
+    eyebrow: '01 / VOCABULARY',
+    count: 'cardWords',
+    tone: 'peach',
+    preview: 'text',
+    learning: true,
+  },
+  {
+    page: 'expressions',
+    type: 'expression',
+    eyebrow: '02 / EXPRESSIONS',
+    count: 'cardExpressions',
+    tone: 'lilac',
+    preview: 'text',
+    learning: true,
+  },
   { page: 'chats', type: 'chat', eyebrow: '03 / CHAT NOTES', count: 'cardChats', tone: 'sage', preview: 'situation' },
-  { page: 'journal', type: 'journal', eyebrow: '04 / DAILY JOURNAL', count: 'cardJournals', tone: 'butter', preview: 'native' },
+  {
+    page: 'journal',
+    type: 'journal',
+    eyebrow: '04 / DAILY JOURNAL',
+    count: 'cardJournals',
+    tone: 'butter',
+    preview: 'native',
+  },
 ]
 
 // 날마다 바뀌는 한마디. 영어 문장과 우리말 풀이를 함께 둔다.
 const NOTES = [
-  { en: 'You don’t have to be perfect. Just keep showing up.', ko: '완벽하지 않아도 괜찮아. 꾸준히 돌아오는 게 중요해.' },
+  {
+    en: 'You don’t have to be perfect. Just keep showing up.',
+    ko: '완벽하지 않아도 괜찮아. 꾸준히 돌아오는 게 중요해.',
+  },
   { en: 'Small steps every day add up.', ko: '매일의 작은 걸음이 쌓여요.' },
   { en: 'One new word is still progress.', ko: '새 단어 하나도 분명한 한 걸음이에요.' },
   { en: 'Mistakes are proof that you are trying.', ko: '틀렸다는 건 해 보고 있다는 뜻이에요.' },
@@ -39,7 +65,7 @@ const DAY_MS = 24 * 60 * 60 * 1000
 const isSameDay = (value, day) => new Date(value).toDateString() === day.toDateString()
 
 export default function Home() {
-  const { t, go, records, nickname, nativeLang, learningLang } = useApp()
+  const { t, go, records, nickname, nativeLang, learningLang, coupleUnread } = useApp()
   const locale = nativeLang === 'ko' ? 'ko-KR' : 'en-US'
   const today = new Date()
   // 날짜 블록은 친구 원본처럼 영어로 쓰고, 보조 기술에는 사용자 언어로 읽어 준다.
@@ -113,9 +139,7 @@ export default function Home() {
             </p>
             {goal > 0 && (
               <div className="goal-progress">
-                <p>
-                  {doneToday >= goal ? t('goalDone', { goal }) : t('goalLeft', { done: doneToday, goal })}
-                </p>
+                <p>{doneToday >= goal ? t('goalDone', { goal }) : t('goalLeft', { done: doneToday, goal })}</p>
                 <div
                   className="goal-bar"
                   role="progressbar"
@@ -226,7 +250,8 @@ export default function Home() {
       <section className="home-section" aria-labelledby="couple-card-title">
         <button className="paper-card couple-home" onClick={() => go('couple')}>
           <strong id="couple-card-title">{t('homeCoupleTitle')}</strong>
-          <span className="muted">{t('homeCoupleBody')}</span>
+          <span className="muted">{coupleUnread ? t('coupleNewBody') : t('homeCoupleBody')}</span>
+          {coupleUnread && <em className="couple-new-badge">{t('coupleNewBadge')}</em>}
         </button>
       </section>
 

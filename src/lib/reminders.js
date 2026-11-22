@@ -10,7 +10,9 @@ import { local } from './storage'
 export const REMINDER_KEY = 'reminders'
 export const GOALS = [0, 3, 5, 10, 20]
 export const REVIEW_TIMES = ['09:00', '12:00', '19:00', '21:00']
-export const DEFAULT_SETTINGS = { goal: 5, goalReminder: false, reviewReminder: false, reviewTime: '19:00' }
+export const DEFAULT_SETTINGS = { goal: 5, goalReminder: false, reviewReminder: false, reviewTime: '19:00', couple: false }
+/** 알림 설정이 바뀌었다는 신호(알림을 다시 예약하게 한다) */
+export const REMINDERS_CHANGED = 'reminders-changed'
 
 const FIRST_HOUR = 13
 const LAST_HOUR = 21
