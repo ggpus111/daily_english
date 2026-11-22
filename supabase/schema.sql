@@ -257,3 +257,155 @@ create policy "own push queue" on public.push_queue
   for all to authenticated
   using ((select auth.uid()) = user_id)
   with check ((select auth.uid()) = user_id);
+
+-- ---------- 연인과 오늘의 한 문장 주고받기 ----------
+-- 두 사람이 초대 번호로 짝이 되어, 하루에 한 문장씩 주고받는다. 로그인한 사용자만 쓴다.
+-- 짝(couples)은 두 명까지, 한 사람은 한 짝에만 들어간다. 짝이 아닌 사람은 아무것도 읽지 못한다.
+-- 짝 만들기·들어가기·나가기는 아래 함수로만 한다(초대 번호 목록을 앱이 읽지 못하게).
+create table if not exists public.couples (
+  id uuid primary key default gen_random_uuid(),
+  code text not null unique check (code ~ '^[A-HJ-NP-Z2-9]{6}$'),
+  created_at timestamptz not null default now()
+);
+
+create table if not exists public.couple_members (
+  couple_id uuid not null references public.couples (id) on delete cascade,
+  user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
+  nickname text not null check (char_length(nickname) between 1 and 30),
+  joined_at timestamptz not null default now(),
+  primary key (couple_id, user_id),
+  unique (user_id)
+);
+
+create table if not exists public.couple_sentences (
+  id bigint generated always as identity primary key,
+  couple_id uuid not null references public.couples (id) on delete cascade,
+  user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
+  day date not null,
+  body text not null check (char_length(body) between 1 and 300),
+  lang text not null check (char_length(lang) between 2 and 5),
+  created_at timestamptz not null default now(),
+  unique (couple_id, user_id, day)
+);
+
+create or replace function public.is_couple_member(target uuid)
+returns boolean
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select exists (
+    select 1 from public.couple_members where couple_id = target and user_id = (select auth.uid())
+  );
+$$;
+
+alter table public.couples enable row level security;
+alter table public.couple_members enable row level security;
+alter table public.couple_sentences enable row level security;
+
+drop policy if exists "members read couple" on public.couples;
+create policy "members read couple" on public.couples
+  for select to authenticated using (public.is_couple_member(id));
+
+drop policy if exists "members read members" on public.couple_members;
+create policy "members read members" on public.couple_members
+  for select to authenticated using (public.is_couple_member(couple_id));
+
+drop policy if exists "members read sentences" on public.couple_sentences;
+create policy "members read sentences" on public.couple_sentences
+  for select to authenticated using (public.is_couple_member(couple_id));
+
+drop policy if exists "members write own sentence" on public.couple_sentences;
+create policy "members write own sentence" on public.couple_sentences
+  for insert to authenticated
+  with check ((select auth.uid()) = user_id and public.is_couple_member(couple_id));
+
+drop policy if exists "members edit own sentence" on public.couple_sentences;
+create policy "members edit own sentence" on public.couple_sentences
+  for update to authenticated
+  using ((select auth.uid()) = user_id)
+  with check ((select auth.uid()) = user_id and public.is_couple_member(couple_id));
+
+drop policy if exists "members delete own sentence" on public.couple_sentences;
+create policy "members delete own sentence" on public.couple_sentences
+  for delete to authenticated using ((select auth.uid()) = user_id);
+
+-- 짝 만들기: 초대 번호(헷갈리는 글자 O, I, 0, 1 제외 6자리)를 새로 만든다.
+create or replace function public.create_couple(nick text)
+returns text
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  alphabet constant text := 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  new_code text;
+  new_id uuid;
+begin
+  if auth.uid() is null then raise exception 'not signed in'; end if;
+  if exists (select 1 from couple_members where user_id = auth.uid()) then
+    raise exception 'already paired';
+  end if;
+  loop
+    new_code := '';
+    for i in 1..6 loop
+      new_code := new_code || substr(alphabet, 1 + floor(random() * length(alphabet))::int, 1);
+    end loop;
+    begin
+      insert into couples (code) values (new_code) returning id into new_id;
+      exit;
+    exception when unique_violation then
+      -- 번호가 겹치면 다시 만든다.
+    end;
+  end loop;
+  insert into couple_members (couple_id, user_id, nickname) values (new_id, auth.uid(), left(trim(nick), 30));
+  return new_code;
+end;
+$$;
+
+-- 짝 들어가기: 초대 번호가 맞고 자리가 남아 있을 때만.
+create or replace function public.join_couple(invite text, nick text)
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  target uuid;
+begin
+  if auth.uid() is null then raise exception 'not signed in'; end if;
+  if exists (select 1 from couple_members where user_id = auth.uid()) then
+    raise exception 'already paired';
+  end if;
+  select id into target from couples where code = upper(trim(invite));
+  if target is null then raise exception 'invalid code'; end if;
+  if (select count(*) from couple_members where couple_id = target) >= 2 then
+    raise exception 'couple full';
+  end if;
+  insert into couple_members (couple_id, user_id, nickname) values (target, auth.uid(), left(trim(nick), 30));
+end;
+$$;
+
+-- 짝 나가기: 내가 보낸 문장과 내 자리를 지우고, 아무도 안 남으면 짝도 지운다.
+create or replace function public.leave_couple()
+returns void
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  target uuid;
+begin
+  select couple_id into target from couple_members where user_id = auth.uid();
+  if target is null then return; end if;
+  delete from couple_sentences where couple_id = target and user_id = auth.uid();
+  delete from couple_members where couple_id = target and user_id = auth.uid();
+  if not exists (select 1 from couple_members where couple_id = target) then
+    delete from couples where id = target;
+  end if;
+end;
+$$;
+
+revoke all on function public.create_couple(text), public.join_couple(text, text), public.leave_couple() from public, anon;
+grant execute on function public.create_couple(text), public.join_couple(text, text), public.leave_couple() to authenticated;

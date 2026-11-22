@@ -17,28 +17,39 @@ export default defineConfig(({ mode }) => {
       react(),
       siteMeta(env.VITE_SITE_URL),
       !isApp &&
-      VitePWA({
-        registerType: 'autoUpdate',
-        // 웹 푸시 알림 받기(public/push-sw.js)
-        workbox: { importScripts: ['push-sw.js'] },
-        manifest: {
-          id: '/',
-          name: 'Daily English',
-          short_name: 'Daily English',
-          description: '단어, 표현, 대화, 일기를 모으는 언어 학습 기록 앱',
-          lang: 'ko',
-          start_url: '/',
-          scope: '/',
-          theme_color: '#FFFDFA',
-          background_color: '#F4F0EB',
-          display: 'standalone',
-          icons: [
-            { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
-            { src: '/icon-512.png', sizes: '512x512', type: 'image/png' },
-            { src: '/icon-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
-          ],
-        },
-      }),
+        VitePWA({
+          registerType: 'autoUpdate',
+          // 웹 푸시 알림 받기(public/push-sw.js)
+          workbox: {
+            importScripts: ['push-sw.js'],
+            // 언어별 꾸러미 데이터는 처음 설치할 때 전부 받지 않고, 고른 언어만 처음 열 때 받아 보관한다.
+            globIgnores: ['**/assets/{packs,words}-*.js'],
+            runtimeCaching: [
+              {
+                urlPattern: /\/assets\/(packs|words)-[\w-]+\.js$/,
+                handler: 'CacheFirst',
+                options: { cacheName: 'pack-data', expiration: { maxEntries: 12 } },
+              },
+            ],
+          },
+          manifest: {
+            id: '/',
+            name: 'Daily English',
+            short_name: 'Daily English',
+            description: '단어, 표현, 대화, 일기를 모으는 언어 학습 기록 앱',
+            lang: 'ko',
+            start_url: '/',
+            scope: '/',
+            theme_color: '#FFFDFA',
+            background_color: '#F4F0EB',
+            display: 'standalone',
+            icons: [
+              { src: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+              { src: '/icon-512.png', sizes: '512x512', type: 'image/png' },
+              { src: '/icon-maskable.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
+            ],
+          },
+        }),
     ],
     preview: { headers: readDeployHeaders() },
     test: {

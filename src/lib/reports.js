@@ -3,14 +3,13 @@
 import { formatErrorLog, readErrorLog } from './errorLog'
 import { isNative } from './platform'
 import { supabase } from './supabase'
+import { failure } from './errors'
 
 export const REPORT_KINDS = ['bug', 'content', 'idea']
 export const REPORT_STATUSES = ['new', 'checking', 'fixed', 'wontfix']
 export const MAX_MESSAGE = 2000
 const MAX_ERROR_LOG = 6000
 const LIST_LIMIT = 100
-
-const fail = (error) => ({ error: { message: error?.message ?? String(error), status: error?.status } })
 
 /** 신고 보내기. includeErrors면 이 기기의 오류 기록(사용자 내용 없음)을 붙인다. */
 export async function submitReport({ kind, message, includeErrors }) {
@@ -23,7 +22,7 @@ export async function submitReport({ kind, message, includeErrors }) {
     error_log: includeErrors ? formatErrorLog(readErrorLog().slice(0, 10)).slice(0, MAX_ERROR_LOG) : '',
   }
   const { error } = await supabase.from('reports').insert(row)
-  return error ? fail(error) : {}
+  return error ? failure(error) : {}
 }
 
 /** 내가 보낸 신고(최근 것부터). 관리자 답변과 상태를 함께 본다. */
@@ -34,7 +33,7 @@ export async function listMyReports(userId) {
     .eq('user_id', userId)
     .order('created_at', { ascending: false })
     .limit(20)
-  return error ? fail(error) : { reports: data ?? [] }
+  return error ? failure(error) : { reports: data ?? [] }
 }
 
 export async function checkAdmin() {
@@ -47,13 +46,16 @@ export async function listReports(status) {
   let query = supabase.from('reports').select('*').order('created_at', { ascending: false }).limit(LIST_LIMIT)
   if (status) query = query.eq('status', status)
   const { data, error } = await query
-  return error ? fail(error) : { reports: data ?? [] }
+  return error ? failure(error) : { reports: data ?? [] }
 }
 
 /** 관리자: 상태와 답변 고치기 */
 export async function updateReport(id, { status, admin_reply }) {
-  const { error } = await supabase.from('reports').update({ status, admin_reply: admin_reply.slice(0, MAX_MESSAGE) }).eq('id', id)
-  return error ? fail(error) : {}
+  const { error } = await supabase
+    .from('reports')
+    .update({ status, admin_reply: admin_reply.slice(0, MAX_MESSAGE) })
+    .eq('id', id)
+  return error ? failure(error) : {}
 }
 
 /** 관리자: 최근 앱 오류. 같은 메시지끼리 묶어 많이 난 것부터 */
@@ -63,7 +65,7 @@ export async function listClientErrors() {
     .select('created_at, source, message, page, version, platform, count')
     .order('created_at', { ascending: false })
     .limit(300)
-  if (error) return fail(error)
+  if (error) return failure(error)
   return { groups: groupErrors(data ?? []) }
 }
 
@@ -71,7 +73,14 @@ export function groupErrors(rows) {
   const groups = new Map()
   for (const row of rows) {
     const key = `${row.message}|${row.page}`
-    const group = groups.get(key) ?? { message: row.message, page: row.page, total: 0, last: row.created_at, platforms: new Set(), versions: new Set() }
+    const group = groups.get(key) ?? {
+      message: row.message,
+      page: row.page,
+      total: 0,
+      last: row.created_at,
+      platforms: new Set(),
+      versions: new Set(),
+    }
     group.total += row.count ?? 1
     if (row.created_at > group.last) group.last = row.created_at
     group.platforms.add(row.platform)

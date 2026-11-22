@@ -23,6 +23,7 @@ import Profile from './pages/Profile'
 
 // 자주 열지 않는 화면은 처음 열 때 따로 불러와 첫 화면 코드를 줄인다.
 const Admin = lazy(() => import('./pages/Admin'))
+const Couple = lazy(() => import('./pages/Couple'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const Pro = lazy(() => import('./pages/Pro'))
 
@@ -32,7 +33,7 @@ const TOAST_ACTION_MS = 8000
 
 function readPage() {
   const page = window.location.hash.slice(1)
-  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin'].includes(page) ? page : 'home'
+  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin', 'couple'].includes(page) ? page : 'home'
 }
 
 function usePage() {
@@ -176,6 +177,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     profile: <Profile />,
     pro: <Pro />,
     admin: <Admin />,
+    couple: <Couple />,
     packs: <Packs key="expressions" mode="expressions" />,
     'packs-words': <Packs key="words" mode="words" />,
   }

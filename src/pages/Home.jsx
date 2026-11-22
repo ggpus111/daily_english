@@ -223,6 +223,13 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="home-section" aria-labelledby="couple-card-title">
+        <button className="paper-card couple-home" onClick={() => go('couple')}>
+          <strong id="couple-card-title">{t('homeCoupleTitle')}</strong>
+          <span className="muted">{t('homeCoupleBody')}</span>
+        </button>
+      </section>
+
       {hasPackData('expressions', learningLang) && (
         <section className="home-section" aria-labelledby="today-expression-title">
           <div className="section-heading">

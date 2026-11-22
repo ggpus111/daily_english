@@ -6,17 +6,36 @@ const PAGES = ['home', 'words', 'expressions', 'chats', 'journal', 'profile', 'p
 
 const seed = {
   savedWords: [
-    { id: 'w1', createdAt: '2026-11-06T01:00:00Z', text: 'thoughtful', meaning: '사려 깊은, 배려하는', example: 'It was a thoughtful gift.' },
+    {
+      id: 'w1',
+      createdAt: '2026-11-06T01:00:00Z',
+      text: 'thoughtful',
+      meaning: '사려 깊은, 배려하는',
+      example: 'It was a thoughtful gift.',
+    },
     { id: 'w2', createdAt: '2026-11-06T00:00:00Z', text: 'hang out', meaning: '어울려 놀다', example: '' },
   ],
-  savedExpressions: [
-    { id: 'e1', createdAt: '2026-11-06T00:00:00Z', text: 'Me too!', meaning: '나도!', example: '' },
-  ],
+  savedExpressions: [{ id: 'e1', createdAt: '2026-11-06T00:00:00Z', text: 'Me too!', meaning: '나도!', example: '' }],
   savedChats: [
-    { id: 'c1', createdAt: '2026-11-06T00:00:00Z', situation: '친구가 안부를 물었을 때', message: 'How have you been?', meaning: '잘 지냈어?', category: 'daily', note: '자주 쓰는 인사' },
+    {
+      id: 'c1',
+      createdAt: '2026-11-06T00:00:00Z',
+      situation: '친구가 안부를 물었을 때',
+      message: 'How have you been?',
+      meaning: '잘 지냈어?',
+      category: 'daily',
+      note: '자주 쓰는 인사',
+    },
   ],
   savedJournals: [
-    { id: 'j1', createdAt: '2026-11-05T00:00:00Z', native: '공원을 걸었다.', translation: 'I walked at the park.', memo: '', aiFeedback: 'in the park가 자연스러워요.' },
+    {
+      id: 'j1',
+      createdAt: '2026-11-05T00:00:00Z',
+      native: '공원을 걸었다.',
+      translation: 'I walked at the park.',
+      memo: '',
+      aiFeedback: 'in the park가 자연스러워요.',
+    },
   ],
 }
 
@@ -69,9 +88,7 @@ test.describe('모든 화면', () => {
         .analyze()
       expect(violations.map((item) => `${item.id}: ${item.nodes[0].html}`)).toEqual([])
 
-      const overflow = await page.evaluate(
-        () => document.documentElement.scrollWidth > window.innerWidth,
-      )
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)
       expect(overflow).toBe(false)
       expect(errors).toEqual([])
       await page.screenshot({
@@ -111,9 +128,7 @@ test.describe('모든 화면', () => {
     await page.setViewportSize({ width: 320, height: 640 })
     for (const name of PAGES) {
       await open(page, name)
-      const overflow = await page.evaluate(
-        () => document.documentElement.scrollWidth > window.innerWidth,
-      )
+      const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth)
       expect(overflow, name).toBe(false)
     }
   })
@@ -219,8 +234,11 @@ async function openJournalSignedIn(page) {
   await page.goto(`${AUTH_URL}#journal`)
 }
 
-test('AI 교정은 앱 안에서 받고, 저장하면 지난 일기에서 나눠 보여 주며, 다음 요청에 연습할 점이 들어간다', async ({ page }) => {
-  const prompts = await fakeAi(page, [[
+test('AI 교정은 앱 안에서 받고, 저장하면 지난 일기에서 나눠 보여 주며, 다음 요청에 연습할 점이 들어간다', async ({
+  page,
+}) => {
+  const prompts = await fakeAi(page, [
+    [
       '## 고친 문장',
       'I walked in the park yesterday.',
       '## 고칠 점',
@@ -229,7 +247,9 @@ test('AI 교정은 앱 안에서 받고, 저장하면 지난 일기에서 나눠
       '과거형을 잘 썼어요.',
       '## 연습할 점',
       '장소 전치사 in과 at을 구분해 보세요.',
-    ].join('\n'), '## 고친 문장\nI went to school today.\n## 잘한 점\n좋아요'])
+    ].join('\n'),
+    '## 고친 문장\nI went to school today.\n## 잘한 점\n좋아요',
+  ])
   await openJournalSignedIn(page)
 
   await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
@@ -297,7 +317,9 @@ test('일기: 오늘 기분을 영어로 고르고, 교정의 고칠 점을 표�
 
   await page.getByRole('button', { name: '자세히 보기' }).click()
   await page.getByRole('button', { name: 'with my friend 내 표현 모음에 담기' }).click()
-  await expect(page.getByRole('status').filter({ hasText: '"with my friend"를 내 표현 모음에 담았어요.' })).toBeVisible()
+  await expect(
+    page.getByRole('status').filter({ hasText: '"with my friend"를 내 표현 모음에 담았어요.' }),
+  ).toBeVisible()
   await expect(page.getByRole('button', { name: 'with my friend 이미 담음' })).toBeDisabled()
 
   // 표현 모음에서는 원래 쓴 말과 이유를 보고 고친 말을 떠올린다.
@@ -319,7 +341,10 @@ test('일기에 쓴 내 표현과 오늘의 표현을 찾고, 홈의 도장과 �
   await expect(mission).toContainText('오늘의 표현, 일기에 한번 써 볼까요?')
   const phrase = (await mission.locator('b').textContent()).replace(/[.!?]+$/, '')
 
-  await page.locator('.mood-chips').getByRole('button', { name: /^happy/ }).click()
+  await page
+    .locator('.mood-chips')
+    .getByRole('button', { name: /^happy/ })
+    .click()
   await page.getByLabel('우리말로 쓰기').fill('친구들이랑 놀았다.')
   await page.getByLabel('영어로 옮겨 보기').fill(`I hang out with my friends. ${phrase}.`)
   await expect(page.locator('.usage-box .usage-line')).toContainText('hang out')
@@ -360,7 +385,10 @@ test('첫 실행 안내: 단계를 고르고, 표현을 담고, 기분과 한 �
   await page.getByRole('button', { name: '다음' }).click()
 
   await expect(page.getByRole('heading', { name: '오늘 기분을 고르고 한 줄 써 볼까요?' })).toBeFocused()
-  await page.locator('.mood-chips').getByRole('button', { name: /^happy/ }).click()
+  await page
+    .locator('.mood-chips')
+    .getByRole('button', { name: /^happy/ })
+    .click()
   await page.getByRole('button', { name: '첫 일기 저장하고 시작하기' }).click()
   await expect(page.getByText('여기를 채워 주세요.')).toBeVisible()
   await page.getByLabel('오늘 한 줄 (우리말)').fill('친구들이랑 놀았다.')
@@ -416,7 +444,9 @@ test('단어를 직접 넣을 때 꾸러미에 있는 말이면 뜻과 예문을
 test('쓰던 일기는 기기 저장소에 남는다', async ({ page }) => {
   await open(page, 'journal')
   await page.getByLabel('우리말로 쓰기').fill('쓰다 만 일기')
-  await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('journalDraft'))?.native)).toBe('쓰다 만 일기')
+  await expect
+    .poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('journalDraft'))?.native))
+    .toBe('쓰다 만 일기')
   await page.reload()
   await expect(page.getByLabel('우리말로 쓰기')).toHaveValue('쓰다 만 일기')
 })
@@ -444,9 +474,11 @@ test('기록이 이 기기에만 쌓이면 백업을 한 번 권하고, 다음�
 test('앱에서 난 오류는 프로필의 앱 오류 기록에 남는다', async ({ page }) => {
   await open(page, 'profile')
   await expect(page.getByText('지금까지 기록된 오류가 없어요.')).toBeVisible()
-  await page.evaluate(() => setTimeout(() => {
-    throw new Error('시험용 오류')
-  }))
+  await page.evaluate(() =>
+    setTimeout(() => {
+      throw new Error('시험용 오류')
+    }),
+  )
   await expect.poll(() => page.evaluate(() => JSON.parse(localStorage.getItem('errorLog') ?? '[]').length)).toBe(1)
   await page.reload()
   await expect(page.locator('.error-log')).toContainText('시험용 오류')
@@ -462,7 +494,10 @@ test('알림: 하루 목표를 정하고 알림을 켜면 다음 알림이 보�
   await expect(page.getByLabel(/목표를 못 채운 날/)).toBeChecked()
   await expect(page.getByText(/다음 알림: .*\(하루 목표\)/)).toBeVisible()
   await expect(page.getByText('웹에서는 이 탭이나 설치한 웹앱이 열려 있을 때만', { exact: false })).toBeVisible()
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('reminders')))).toMatchObject({ goal: 3, goalReminder: true })
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('reminders')))).toMatchObject({
+    goal: 3,
+    goalReminder: true,
+  })
 
   await open(page, 'home')
   await expect(page.locator('.goal-progress')).toContainText('오늘 목표 0 / 3')
@@ -473,7 +508,10 @@ test('메뉴에서 꾸러미로 바로 간다', async ({ page }) => {
   await open(page, 'home')
   await page.getByRole('navigation').getByRole('button', { name: '꾸러미' }).click()
   await expect(page.getByRole('heading', { name: '표현 꾸러미', level: 1 })).toBeVisible()
-  await expect(page.getByRole('navigation').getByRole('button', { name: '꾸러미' })).toHaveAttribute('aria-current', 'page')
+  await expect(page.getByRole('navigation').getByRole('button', { name: '꾸러미' })).toHaveAttribute(
+    'aria-current',
+    'page',
+  )
 })
 
 test('빈칸 채우기: 예문이 있는 단어만 내고, 예문 속 형태로 답한다', async ({ page }) => {
@@ -508,7 +546,10 @@ test('원본 앱 형식으로 남은 기록도 읽는다', async ({ page }) => {
   await page.goto('/')
   await page.evaluate(() => {
     localStorage.setItem('savedWords', JSON.stringify([{ id: 1731400000000, word: 'legacy word', meaning: '옛 단어' }]))
-    localStorage.setItem('savedJournals', JSON.stringify([{ id: 1731400000001, nativeText: '옛 일기', translation: 'old', note: '' }]))
+    localStorage.setItem(
+      'savedJournals',
+      JSON.stringify([{ id: 1731400000001, nativeText: '옛 일기', translation: 'old', note: '' }]),
+    )
   })
   await open(page, 'words')
   await expect(page.locator('.record-row')).toContainText('legacy word')
@@ -624,7 +665,11 @@ test('표현 꾸러미에서 담은 표현이 내 표현 모음에 들어가고 
   const card = page.locator('.expression-card').filter({ hasText: 'hang out' })
   await expect(card).toHaveCount(0)
   await page.getByRole('button', { name: '일상 대화' }).click()
-  await page.locator('.expression-card').filter({ hasText: 'hang out' }).getByRole('button', { name: 'hang out 내 표현 모음에 담기' }).click()
+  await page
+    .locator('.expression-card')
+    .filter({ hasText: 'hang out' })
+    .getByRole('button', { name: 'hang out 내 표현 모음에 담기' })
+    .click()
   await expect(page.getByRole('status').filter({ hasText: '"hang out"를 내 표현 모음에 담았어요.' })).toBeVisible()
   await expect(page.getByRole('button', { name: 'hang out 이미 담음' })).toBeDisabled()
   await expect(page.locator('.pack-panel .count')).toHaveText('1 / 40 담음')
@@ -646,9 +691,13 @@ test('단어 꾸러미: 단계와 범위를 골라 담은 단어가 단어장에
 
   await page.getByRole('button', { name: '51–100' }).click()
   // Tatoeba 예문에는 문장 번호 링크가 있고, 직접 쓴 예문(money)에는 없다.
-  const card = page.locator('.expression-card').filter({ has: page.getByRole('heading', { name: 'school', exact: true }) })
+  const card = page
+    .locator('.expression-card')
+    .filter({ has: page.getByRole('heading', { name: 'school', exact: true }) })
   await expect(card.getByRole('link', { name: /Tatoeba #\d+ 예문 원문 보기/ })).toBeVisible()
-  const ownCard = page.locator('.expression-card').filter({ has: page.getByRole('heading', { name: 'money', exact: true }) })
+  const ownCard = page
+    .locator('.expression-card')
+    .filter({ has: page.getByRole('heading', { name: 'money', exact: true }) })
   await expect(ownCard.getByRole('link')).toHaveCount(0)
   await card.getByRole('button', { name: 'school 단어장에 담기' }).click()
   await expect(page.getByRole('status').filter({ hasText: '"school"를 단어장에 담았어요.' })).toBeVisible()
@@ -780,11 +829,18 @@ async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
       const kind = new URL(url).searchParams.get('kind')?.replace('eq.', '')
       return route.fulfill({ json: fixes.filter((fix) => !kind || fix.kind === kind) })
     }
-    if (url.includes('/client_errors')) return route.fulfill(request.method() === 'GET' ? { json: errors } : { status: 201, json: [] })
+    if (url.includes('/client_errors'))
+      return route.fulfill(request.method() === 'GET' ? { json: errors } : { status: 201, json: [] })
     if (url.includes('/reports')) {
       if (request.method() === 'POST') {
         const row = request.postDataJSON()
-        reports.unshift({ id: reports.length + 1, created_at: new Date().toISOString(), status: 'new', admin_reply: '', ...row })
+        reports.unshift({
+          id: reports.length + 1,
+          created_at: new Date().toISOString(),
+          status: 'new',
+          admin_reply: '',
+          ...row,
+        })
         return route.fulfill({ status: 201, json: [] })
       }
       if (request.method() === 'PATCH') {
@@ -810,7 +866,11 @@ test.describe('로그인 화면', () => {
     await page.getByLabel('자세히 알려 주세요').fill('tired의 예문 번역이 어색해요.')
     await page.getByRole('button', { name: '보내기' }).click()
     await expect(page.getByRole('status').filter({ hasText: '잘 받았어요' })).toBeVisible()
-    expect(server.reports[0]).toMatchObject({ kind: 'content', message: 'tired의 예문 번역이 어색해요.', platform: 'web' })
+    expect(server.reports[0]).toMatchObject({
+      kind: 'content',
+      message: 'tired의 예문 번역이 어색해요.',
+      platform: 'web',
+    })
     await expect(page.locator('.report-list')).toContainText('tired의 예문 번역이 어색해요.')
     await expect(page.locator('.report-list .report-status')).toHaveText('접수')
     await expect(page.getByRole('link', { name: '관리자 페이지' })).toHaveCount(0)
@@ -819,11 +879,38 @@ test.describe('로그인 화면', () => {
   test('관리자는 관리자 페이지에서 신고를 보고 상태와 답변을 바로 고치고, 앱 오류를 묶어 본다', async ({ page }) => {
     await fakeSession(page)
     const errors = [
-      { created_at: '2026-11-19T01:00:00Z', source: 'window', message: 'TypeError: x is undefined', page: 'journal', version: '0.0.0', platform: 'android', count: 2 },
-      { created_at: '2026-11-19T02:00:00Z', source: 'window', message: 'TypeError: x is undefined', page: 'journal', version: '0.0.0', platform: 'web', count: 1 },
+      {
+        created_at: '2026-11-19T01:00:00Z',
+        source: 'window',
+        message: 'TypeError: x is undefined',
+        page: 'journal',
+        version: '0.0.0',
+        platform: 'android',
+        count: 2,
+      },
+      {
+        created_at: '2026-11-19T02:00:00Z',
+        source: 'window',
+        message: 'TypeError: x is undefined',
+        page: 'journal',
+        version: '0.0.0',
+        platform: 'web',
+        count: 1,
+      },
     ]
     const server = await fakeReportServer(page, { admin: true, errors })
-    server.reports.push({ id: 7, created_at: '2026-11-19T03:00:00Z', kind: 'bug', message: '복습 버튼이 안 눌려요', page: 'home', version: '0.0.0', platform: 'android', error_log: '', status: 'new', admin_reply: '' })
+    server.reports.push({
+      id: 7,
+      created_at: '2026-11-19T03:00:00Z',
+      kind: 'bug',
+      message: '복습 버튼이 안 눌려요',
+      page: 'home',
+      version: '0.0.0',
+      platform: 'android',
+      error_log: '',
+      status: 'new',
+      admin_reply: '',
+    })
 
     await page.goto(`${AUTH_URL}#profile`)
     await page.getByRole('link', { name: '관리자 페이지' }).click()
@@ -850,10 +937,25 @@ test.describe('로그인 화면', () => {
   test('관리자는 꾸러미의 틀린 뜻을 바로 고치고, 사용자 화면에 반영되며, 원래대로 되돌릴 수 있다', async ({ page }) => {
     await fakeSession(page)
     const server = await fakeReportServer(page, { admin: true })
-    server.reports.push({ id: 9, created_at: '2026-11-19T03:00:00Z', kind: 'content', message: 'tired 뜻이 이상해요', page: 'words', version: '0.0.0', platform: 'web', error_log: '', status: 'new', admin_reply: '' })
+    server.reports.push({
+      id: 9,
+      created_at: '2026-11-19T03:00:00Z',
+      kind: 'content',
+      message: 'tired 뜻이 이상해요',
+      page: 'words',
+      version: '0.0.0',
+      platform: 'web',
+      error_log: '',
+      status: 'new',
+      admin_reply: '',
+    })
 
     await page.goto(`${AUTH_URL}#admin`)
-    await page.locator('.admin-item').filter({ hasText: 'tired 뜻이 이상해요' }).getByRole('button', { name: '꾸러미 고치기로' }).click()
+    await page
+      .locator('.admin-item')
+      .filter({ hasText: 'tired 뜻이 이상해요' })
+      .getByRole('button', { name: '꾸러미 고치기로' })
+      .click()
     await expect(page.getByRole('heading', { name: '꾸러미 고치기', level: 2 })).toBeVisible()
     await page.getByLabel('고칠 단어·표현 찾기').fill('tired')
     await page.getByRole('button', { name: 'tired 고치기', exact: true }).click()
@@ -861,7 +963,13 @@ test.describe('로그인 화면', () => {
     await page.getByLabel('메모(관리자만 봐요)').fill('신고 #9')
     await page.getByRole('button', { name: '저장' }).click()
     await expect(page.getByRole('status').filter({ hasText: '꾸러미를 고쳤어요.' })).toBeVisible()
-    expect(server.fixes[0]).toMatchObject({ kind: 'words', meaning: '피곤한, 지친 (고침)', example: null, hidden: false, note: '신고 #9' })
+    expect(server.fixes[0]).toMatchObject({
+      kind: 'words',
+      meaning: '피곤한, 지친 (고침)',
+      example: null,
+      hidden: false,
+      note: '신고 #9',
+    })
     await expect(page.getByRole('list', { name: '고친 항목' }).locator('.pack-fix-row')).toContainText(['tired'])
     await expect(page.getByRole('list', { name: '고친 항목' }).locator('.report-status')).toHaveText('고침')
 
@@ -884,7 +992,9 @@ test.describe('로그인 화면', () => {
     await expect(page.getByText('아직 고친 항목이 없어요.')).toBeVisible()
   })
 
-  test('일기에서 앱 안 AI 교정을 받는다: 처음엔 동의를 묻고, 결과를 나눠 보여 주고, 하루 한도를 알려 준다', async ({ page }) => {
+  test('일기에서 앱 안 AI 교정을 받는다: 처음엔 동의를 묻고, 결과를 나눠 보여 주고, 하루 한도를 알려 준다', async ({
+    page,
+  }) => {
     await fakeSession(page)
     await fakeReportServer(page)
     const prompts = []
@@ -939,6 +1049,71 @@ test.describe('로그인 화면', () => {
     await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
     await expect(page.getByRole('status').filter({ hasText: '오늘 AI 교정을 다 썼어요.' })).toBeVisible()
     await expect(page.getByRole('heading', { name: '보내기 전에 알려 드릴게요' })).toHaveCount(0)
+  })
+
+  test('연인과 한 문장: 초대 번호를 만들고, 짝이 들어오면 하루 한 문장을 주고받고, 받은 말을 표현 모음에 담는다', async ({
+    page,
+  }) => {
+    await fakeSession(page)
+    await fakeReportServer(page)
+    const ME = '11111111-1111-4111-8111-111111111111'
+    const PARTNER = '22222222-2222-4222-8222-222222222222'
+    const day = new Date()
+    const today = `${day.getFullYear()}-${String(day.getMonth() + 1).padStart(2, '0')}-${String(day.getDate()).padStart(2, '0')}`
+    const db = { members: [], sentences: [] }
+    await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
+      const request = route.request()
+      const url = request.url()
+      const one = (request.headers().accept ?? '').includes('vnd.pgrst.object')
+      if (url.includes('/rpc/create_couple')) {
+        db.members.push({ couple_id: 'c1', user_id: ME, nickname: request.postDataJSON().nick })
+        return route.fulfill({ json: 'ABC234' })
+      }
+      if (url.includes('/couple_members')) return route.fulfill({ json: db.members })
+      if (url.includes('/couples'))
+        return route.fulfill({ json: one ? { id: 'c1', code: 'ABC234' } : [{ id: 'c1', code: 'ABC234' }] })
+      if (url.includes('/couple_sentences')) {
+        if (request.method() === 'POST') {
+          const row = { ...request.postDataJSON(), id: db.sentences.length + 1, user_id: ME }
+          db.sentences = db.sentences.filter((item) => !(item.user_id === ME && item.day === row.day))
+          db.sentences.push(row)
+          return route.fulfill({ status: 201, json: [] })
+        }
+        return route.fulfill({ json: db.sentences })
+      }
+      return route.fallback()
+    })
+
+    await page.goto(`${AUTH_URL}#couple`)
+    await page.getByRole('button', { name: '초대 번호 만들기' }).click()
+    await expect(page.getByRole('heading', { name: '연인을 기다리고 있어요' })).toBeVisible()
+    await expect(page.getByLabel('초대 번호', { exact: true })).toHaveText('ABC234')
+
+    // 연인이 들어오고, 연인이 오늘 문장을 보냈다
+    db.members.push({ couple_id: 'c1', user_id: PARTNER, nickname: 'Sam' })
+    db.sentences.push({ id: 99, user_id: PARTNER, day: today, body: 'I was thinking about you today.', lang: 'en' })
+    await page.getByRole('button', { name: '새로 불러오기' }).click()
+    await expect(page.getByText('Sam님과 함께 쓰고 있어요.')).toBeVisible()
+    await expect(page.getByText('I was thinking about you today.')).toBeVisible()
+    await expect(page.getByText('고민되면 이 말은 어때요?')).toBeVisible()
+
+    await page.getByRole('button', { name: '이 문장으로 쓰기' }).click()
+    await expect(page.getByLabel('오늘 보낼 한 문장')).not.toHaveValue('')
+    await page.getByLabel('오늘 보낼 한 문장').fill('I missed you too.')
+    await page.getByRole('button', { name: '보내기', exact: true }).click()
+    await expect(page.getByRole('status').filter({ hasText: '보냈어요.' })).toBeVisible()
+    await expect(page.getByText('I missed you too.')).toBeVisible()
+    await expect(page.getByText('둘 다 보낸 날 1일 연속')).toBeVisible()
+
+    const { violations } = await new AxeBuilder({ page })
+      .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
+      .analyze()
+    expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
+
+    await page.getByRole('button', { name: '표현 모음에 담기' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '표현 모음에 담았어요.' })).toBeVisible()
+    await page.goto(`${AUTH_URL}#expressions`)
+    await expect(page.getByText('I was thinking about you today.')).toBeVisible()
   })
 
   test('로그인하지 않으면 AI 교정 대신 로그인을 권하고, 다른 AI로 복사하는 길은 없다', async ({ page }) => {
@@ -999,7 +1174,10 @@ test.describe('로그인 화면', () => {
   })
 
   test('구글과 카카오 버튼은 Supabase 로그인 주소로 보낸다', async ({ page }) => {
-    for (const [name, provider] of [['Google로 계속하기', 'google'], ['카카오 로그인', 'kakao']]) {
+    for (const [name, provider] of [
+      ['Google로 계속하기', 'google'],
+      ['카카오 로그인', 'kakao'],
+    ]) {
       await page.route('https://example.supabase.co/**', (route) =>
         route.fulfill({ contentType: 'text/html', body: '<p>provider</p>' }),
       )
@@ -1061,7 +1239,9 @@ test.describe('로그인 화면', () => {
     await expect.poll(() => posted.length).toBe(1)
     expect(JSON.stringify(posted[0])).toContain('offline word')
     await expect(page.locator('.offline-banner')).toHaveCount(0)
-    expect(await page.evaluate(() => localStorage.getItem('pendingOps:11111111-1111-4111-8111-111111111111'))).toBeNull()
+    expect(
+      await page.evaluate(() => localStorage.getItem('pendingOps:11111111-1111-4111-8111-111111111111')),
+    ).toBeNull()
 
     // 서버에 닿지 않을 때 앱을 다시 열면, 이 기기에 남긴 기록을 보여 준다.
     await page.unroute('https://example.supabase.co/rest/v1/**')

@@ -41,3 +41,6 @@ export function errorMessage(error, t) {
 
 /** 다시 시도하면 나아질 수 있는 오류인지. */
 export const isRetryable = (error) => errorKind(error) !== null
+
+/** 서버 호출이 실패했을 때 화면 쪽에 돌려주는 모양: { error: { message, status } } */
+export const failure = (error) => ({ error: { message: error?.message ?? String(error), status: error?.status } })
