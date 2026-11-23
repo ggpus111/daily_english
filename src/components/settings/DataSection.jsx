@@ -91,30 +91,42 @@ export default function DataSection() {
   }
 
   return (
-    <section className="panel settings-group" aria-labelledby="settings-data">
+    <section className="s-section" aria-labelledby="settings-data">
       <h2 id="settings-data">{t('settingsData')}</h2>
       <p className="muted">{t('myDataBody')}</p>
       <p className="backup-status" role="status">
         {signedIn && <span>{t('cloudSaved')} </span>}
         {lastExport ? t('lastExport', { date: dateFormat.format(new Date(lastExport)) }) : t('neverExported')}
       </p>
-      <div className="data-actions">
-        <button className="soft-button" onClick={exportRecords}>
-          {t('exportData')}
+      <div className="s-list">
+        <button className="s-row" onClick={exportRecords}>
+          <span className="s-row-label">{t('exportData')}</span>
+          <span className="s-row-chevron" aria-hidden="true" />
         </button>
-        <button className="soft-button" onClick={() => fileRef.current?.click()}>
-          {t('importData')}
+        <button className="s-row" onClick={() => fileRef.current?.click()}>
+          <span className="s-row-label">{t('importData')}</span>
+          <span className="s-row-chevron" aria-hidden="true" />
         </button>
-        {/* 안드로이드 파일 선택 창은 .json을 다른 형식으로 알아보기도 해서 앱에서는 거르지 않고, 읽을 때 검사한다. */}
-        <input
-          ref={fileRef}
-          type="file"
-          accept={isNative ? undefined : '.json,application/json'}
-          hidden
-          aria-label={t('importData')}
-          onChange={chooseFile}
-        />
+        {aiConsent && (
+          <button className="s-row" onClick={withdrawAiConsent}>
+            <span className="s-row-label">{t('aiConsentWithdraw')}</span>
+            <span className="s-row-chevron" aria-hidden="true" />
+          </button>
+        )}
+        <a className="s-row" href="#privacy">
+          <span className="s-row-label">{t('privacy')}</span>
+          <span className="s-row-chevron" aria-hidden="true" />
+        </a>
       </div>
+      {/* 안드로이드 파일 선택 창은 .json을 다른 형식으로 알아보기도 해서 앱에서는 거르지 않고, 읽을 때 검사한다. */}
+      <input
+        ref={fileRef}
+        type="file"
+        accept={isNative ? undefined : '.json,application/json'}
+        hidden
+        aria-label={t('importData')}
+        onChange={chooseFile}
+      />
 
       {importPlan && (
         <div className="import-plan" role="region" aria-label={t('importTitle')}>
@@ -148,17 +160,6 @@ export default function DataSection() {
           </div>
         </div>
       )}
-
-      <div className="settings-links">
-        {aiConsent && (
-          <button className="inline-link" onClick={withdrawAiConsent}>
-            {t('aiConsentWithdraw')}
-          </button>
-        )}
-        <a className="inline-link" href="#privacy">
-          {t('privacy')}
-        </a>
-      </div>
 
       <div className="danger-zone">
         <DeleteButton

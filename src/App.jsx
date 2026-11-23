@@ -12,6 +12,7 @@ import { errorMessage } from './lib/errors'
 import { createTranslator } from './lib/i18n'
 import { initNativeAuth } from './lib/native'
 import { readSettings, REMINDERS_CHANGED } from './lib/reminders'
+import { clearDrafts } from './lib/journalDrafts'
 import { JOURNAL_DRAFT_KEY, STORAGE_ERROR, useRecords } from './lib/records'
 import { local } from './lib/storage'
 import { supabase } from './lib/supabase'
@@ -410,6 +411,8 @@ export default function App() {
       }
       if (event === 'SIGNED_OUT') {
         local.remove(JOURNAL_DRAFT_KEY)
+        local.remove(`${JOURNAL_DRAFT_KEY}Edit`)
+        clearDrafts()
         clearDraftBackup()
       }
     })

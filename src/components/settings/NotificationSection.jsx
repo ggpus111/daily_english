@@ -7,7 +7,7 @@ import { isNative } from '../../lib/platform'
 import { REVIEW_TIMES, planReminders } from '../../lib/reminders'
 import { supabase } from '../../lib/supabase'
 import { ensureWebPush } from '../../lib/webPush'
-import ChoiceChips from '../ChoiceChips'
+import ChoiceRow from './ChoiceRow'
 import Switch from '../Switch'
 
 const MESSAGES = { granted: 'notifyOn', denied: 'notifyBlocked', prompt: 'notifyOff', unsupported: 'notifyUnsupported' }
@@ -75,7 +75,7 @@ export default function NotificationSection() {
   const anyOn = goalOn || settings.reviewReminder
 
   return (
-    <section className="panel settings-group" aria-labelledby="settings-notify">
+    <section className="s-section" aria-labelledby="settings-notify">
       <h2 id="settings-notify">{t('reminderTitle')}</h2>
       <p className="muted">{t('reminderBody')}</p>
 
@@ -96,6 +96,7 @@ export default function NotificationSection() {
       </div>
       {permission === 'denied' && <p className="tiny-note">{t('reminderDenied')}</p>}
 
+      <div className="s-list">
       <Switch
         label={t('reminderGoalToggle')}
         description={settings.goal === 0 ? t('notifyNeedGoal') : t('reminderGoalRule')}
@@ -110,8 +111,7 @@ export default function NotificationSection() {
         onChange={(on) => toggle({ reviewReminder: on })}
       />
       {settings.reviewReminder && (
-        <ChoiceChips
-          compact
+        <ChoiceRow
           label={t('reminderReviewTime')}
           name="review-time"
           value={settings.reviewTime}
@@ -126,6 +126,7 @@ export default function NotificationSection() {
         disabled={!signedIn}
         onChange={toggleCouple}
       />
+      </div>
 
       <p className="tiny-note" role="status">
         {anyOn && next

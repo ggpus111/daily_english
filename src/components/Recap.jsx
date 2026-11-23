@@ -1,16 +1,10 @@
-import { useState } from 'react'
 import { useApp } from '../context'
-import { recordError } from '../lib/errorLog'
-import { shareImageFile } from '../lib/native'
 import { moodMeaning, moodOf, moodTone, moodWord } from '../lib/moods'
-import { isNative } from '../lib/platform'
-import { RECAP_SIZE, drawRecap, saveCanvas } from '../lib/recapImage'
 import { weeklyRecap } from '../lib/usage'
 
-// 이번 주(오늘 포함 7일) 돌아보기: 모은 말, 일기에 쓴 내 표현, 기분. 이미지로 저장해 친구에게 보낼 수 있다.
+// 이번 주(오늘 포함 7일) 돌아보기: 모은 말, 일기에 쓴 내 표현, 기분.
 export default function RecapCard({ today }) {
-  const { t, notify, records, nativeLang, learningLang } = useApp()
-  const [saving, setSaving] = useState(false)
+  const { t, records, nativeLang, learningLang } = useApp()
   const recap = weeklyRecap(records, today)
   const locale = nativeLang === 'ko' ? 'ko-KR' : 'en-US'
   const weekday = new Intl.DateTimeFormat(locale, { weekday: 'short' })
@@ -24,41 +18,7 @@ export default function RecapCard({ today }) {
     { key: 'recapJournals', value: recap.journals },
     { key: 'recapReviewed', value: recap.reviewed },
   ]
-  const isEmpty = stats.every((stat) => stat.value === 0)
   const dayLabel = (day) => weekday.format(new Date(`${day}T12:00:00`))
-
-  async function saveImage() {
-    setSaving(true)
-    try {
-      const canvas = document.createElement('canvas')
-      canvas.width = RECAP_SIZE.width
-      canvas.height = RECAP_SIZE.height
-      await document.fonts?.ready
-      drawRecap(canvas.getContext('2d'), {
-        title: t('recapTitle'),
-        range,
-        stats: stats.map((stat) => ({ label: t(stat.key), value: stat.value })),
-        usedTitle: t('recapUsedTitle'),
-        used: recap.used,
-        usedEmpty: t('recapUsedEmpty'),
-        moodTitle: t('recapMoodTitle'),
-        moods: recap.moods.map((item) => ({ day: dayLabel(item.day), mood: moodWord(moodOf(item.mood), learningLang), tone: moodTone(item.mood) })),
-        moodEmpty: t('recapMoodEmpty'),
-        footer: `Daily English · ${t('subtitle')}`,
-      })
-      await saveCanvas(canvas, `daily-english-${today.toISOString().slice(0, 10)}.png`, {
-        isNative,
-        shareImage: shareImageFile,
-      })
-    } catch (error) {
-      // 공유 창에서 그냥 닫은 것은 오류가 아니다.
-      if (/cancel/i.test(String(error?.message ?? error))) return
-      recordError(error, 'app')
-      notify(t('recapSaveFailed'))
-    } finally {
-      setSaving(false)
-    }
-  }
 
   return (
     <section className="home-section" aria-labelledby="recap-title">
@@ -104,12 +64,6 @@ export default function RecapCard({ today }) {
           </ul>
         ) : (
           <p className="tiny-note">{t('recapMoodEmpty')}</p>
-        )}
-
-        {!isEmpty && (
-          <button className="soft-button recap-save" disabled={saving} onClick={saveImage}>
-            {t(isNative ? 'recapShare' : 'recapSave')}
-          </button>
         )}
       </div>
     </section>

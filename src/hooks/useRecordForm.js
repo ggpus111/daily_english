@@ -11,21 +11,28 @@ const trimStrings = (form) =>
 // 세 기록 화면이 공유하는 입력 폼 동작을 한곳에 둔다.
 export function useRecordForm({ type, emptyForm, required, draftKey }) {
   const { t, notify, add, update, remove, restore } = useApp()
-  const [form, setForm] = useState(() => {
-    // 쓰던 내용은 기기 저장소에 둔다. 안드로이드가 다른 앱에 간 사이 앱을 꺼도(메모리 부족) 남아 있게.
+  // 쓰던 내용은 기기 저장소에 둔다. 안드로이드가 다른 앱에 간 사이 앱을 꺼도(메모리 부족),
+  // 다른 탭에 갔다 와도 남아 있게. 새로 쓰던 것과 고치던 것은 따로 둔다.
+  const editKey = draftKey ? `${draftKey}Edit` : null
+  const [restored] = useState(() => {
+    const editDraft = editKey ? local.getJson(editKey) : null
+    if (editDraft?.id && editDraft.form) return { editingId: editDraft.id, form: { ...emptyForm, ...editDraft.form } }
     const draft = draftKey ? local.getJson(draftKey) : null
-    return draft ? { ...emptyForm, ...draft } : emptyForm
+    return { editingId: null, form: draft ? { ...emptyForm, ...draft } : emptyForm }
   })
+  const [form, setForm] = useState(restored.form)
   const [errors, setErrors] = useState({})
-  const [editingId, setEditingId] = useState(null)
+  const [editingId, setEditingId] = useState(restored.editingId)
   const [saving, setSaving] = useState(false)
   const savingRef = useRef(false)
   const formRef = useRef(null)
   const listRef = useRef(null)
 
   useEffect(() => {
-    if (draftKey && !editingId) local.set(draftKey, JSON.stringify(form))
-  }, [draftKey, editingId, form])
+    if (!draftKey) return
+    if (editingId) local.set(editKey, JSON.stringify({ id: editingId, form }))
+    else local.set(draftKey, JSON.stringify(form))
+  }, [draftKey, editKey, editingId, form])
 
   const setField = useCallback((field, value) => {
     setForm((prev) => ({ ...prev, [field]: value }))
@@ -36,8 +43,22 @@ export function useRecordForm({ type, emptyForm, required, draftKey }) {
     setForm(emptyForm)
     setErrors({})
     setEditingId(null)
-    if (draftKey) local.remove(draftKey)
-  }, [draftKey, emptyForm])
+    if (draftKey) {
+      local.remove(draftKey)
+      local.remove(editKey)
+    }
+  }, [draftKey, editKey, emptyForm])
+
+  // 임시저장함에서 꺼낸 내용처럼, 폼을 통째로 다른 내용으로 바꾼다(고치던 중이 아닌 새 글로).
+  const loadForm = useCallback(
+    (next) => {
+      setForm({ ...emptyForm, ...next })
+      setErrors({})
+      setEditingId(null)
+      if (editKey) local.remove(editKey)
+    },
+    [editKey, emptyForm],
+  )
 
   async function submit(event) {
     event.preventDefault()
@@ -100,6 +121,7 @@ export function useRecordForm({ type, emptyForm, required, draftKey }) {
     listRef,
     setField,
     reset,
+    loadForm,
     submit,
     startEdit,
     removeItem,

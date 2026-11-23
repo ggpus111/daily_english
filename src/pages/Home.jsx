@@ -11,6 +11,7 @@ import { languageName } from '../lib/i18n'
 import { usePackData } from '../hooks/usePackData'
 import { hasPackData, todayItem } from '../lib/packs'
 import { moodMeaning, moodOf, moodTone, moodWord } from '../lib/moods'
+import { pickNote } from '../lib/notes'
 import { readSettings, todayProgress } from '../lib/reminders'
 import { dueItems, weakItems } from '../lib/review'
 import { moodsByDay } from '../lib/usage'
@@ -46,22 +47,6 @@ const CARDS = [
   },
 ]
 
-// 날마다 바뀌는 한마디. 영어 문장과 우리말 풀이를 함께 둔다.
-const NOTES = [
-  {
-    en: 'You don’t have to be perfect. Just keep showing up.',
-    ko: '완벽하지 않아도 괜찮아. 꾸준히 돌아오는 게 중요해.',
-  },
-  { en: 'Small steps every day add up.', ko: '매일의 작은 걸음이 쌓여요.' },
-  { en: 'One new word is still progress.', ko: '새 단어 하나도 분명한 한 걸음이에요.' },
-  { en: 'Mistakes are proof that you are trying.', ko: '틀렸다는 건 해 보고 있다는 뜻이에요.' },
-  { en: 'Rest is part of learning, too.', ko: '쉬는 것도 배우는 과정이에요.' },
-  { en: 'The words you collect become your voice.', ko: '모은 말들이 결국 내 목소리가 돼요.' },
-  { en: 'Slow is fine. Stopping for good is the only miss.', ko: '느려도 괜찮아요. 아주 멈추지만 않으면 돼요.' },
-]
-
-const DAY_MS = 24 * 60 * 60 * 1000
-
 const isSameDay = (value, day) => new Date(value).toDateString() === day.toDateString()
 
 export default function Home() {
@@ -86,12 +71,13 @@ export default function Home() {
   const dueExpressions = dueItems(records.expression).length
   const dueTotal = dueWords + dueExpressions
   const weakTotal = weakItems(records.word).length + weakItems(records.expression).length
-  const note = NOTES[Math.floor(today.getTime() / DAY_MS) % NOTES.length]
   const totalRecords = Object.values(records).reduce((sum, items) => sum + items.length, 0)
   const { goal } = readSettings()
   const doneToday = todayProgress(records, today)
   // 기록이 하나도 없는 첫 실행이면 홈 대신 짧은 안내를 보여 준다.
   const [onboarding, setOnboarding] = useState(() => needsOnboarding(records, learningLang))
+  // 말새의 한마디는 홈을 열 때마다 바뀐다(화면이 다시 그려져도 그 사이엔 그대로).
+  const [note] = useState(pickNote)
 
   if (onboarding) return <Onboarding onDone={() => setOnboarding(false)} />
 

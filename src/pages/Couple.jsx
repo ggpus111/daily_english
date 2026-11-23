@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import AddPair from '../components/couple/AddPair'
 import CoupleLeave from '../components/couple/CoupleLeave'
 import CoupleToday from '../components/couple/CoupleToday'
@@ -12,7 +12,9 @@ import { errorMessage } from '../lib/errors'
 import { supabase } from '../lib/supabase'
 
 const EMPTY = { loading: false, error: null, pairs: [] }
-const LIVE_REFRESH_MS = 30 * 1000
+// 실시간 연결이 되어 있으면 가끔(안전망), 안 되어 있으면 자주 서버에서 다시 불러온다.
+const POLL_TICK_MS = 5 * 1000
+const CONNECTED_EVERY_TICKS = 6
 const toState = (result) => (result.error ? { ...EMPTY, error: result.error } : { ...EMPTY, pairs: result.pairs })
 
 /**
@@ -39,18 +41,31 @@ export default function Couple() {
     }
   }, [userId])
 
-  // 새로고침하지 않아도 상대가 보낸 문장이 바로 보이게: 실시간 알림을 받고,
-  // 실시간 연결이 끊겼을 때를 대비해 화면을 보고 있는 동안 30초마다, 앱으로 돌아올 때도 다시 불러온다.
+  // 새로고침하지 않아도 상대가 보낸 문장이 바로 보이게: 실시간 알림을 받는다.
+  // 실시간 연결이 안 되어 있으면 5초마다, 연결되어 있어도 안전망으로 30초마다 다시 불러오고,
+  // 앱 창으로 돌아오거나 인터넷이 다시 연결될 때도 바로 불러온다.
+  const liveRef = useRef(false)
   useEffect(() => {
     if (!supabase || !userId) return undefined
     const refreshIfVisible = () => document.visibilityState === 'visible' && refresh()
-    const stop = watchPairs(refresh)
-    const timer = setInterval(refreshIfVisible, LIVE_REFRESH_MS)
+    const stop = watchPairs(refresh, (status) => {
+      liveRef.current = status === 'SUBSCRIBED'
+    })
+    let ticks = 0
+    const timer = setInterval(() => {
+      ticks += 1
+      if (!liveRef.current || ticks % CONNECTED_EVERY_TICKS === 0) refreshIfVisible()
+    }, POLL_TICK_MS)
     document.addEventListener('visibilitychange', refreshIfVisible)
+    window.addEventListener('focus', refreshIfVisible)
+    window.addEventListener('online', refreshIfVisible)
     return () => {
       stop()
       clearInterval(timer)
+      liveRef.current = false
       document.removeEventListener('visibilitychange', refreshIfVisible)
+      window.removeEventListener('focus', refreshIfVisible)
+      window.removeEventListener('online', refreshIfVisible)
     }
   }, [userId, refresh])
 

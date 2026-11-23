@@ -134,12 +134,14 @@ test.describe('모든 화면', () => {
 
   test('화면 테마를 고르면 바로 바뀌고 다시 열어도 유지된다', async ({ page }) => {
     await open(page, 'settings')
+    await page.getByRole('button', { name: /화면 테마/ }).click()
     await page.getByRole('radio', { name: '어둡게' }).check()
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
     const background = () => page.evaluate(() => getComputedStyle(document.body).backgroundColor)
     expect(await background()).toBe('rgb(58, 46, 41)')
     await page.reload()
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+    await page.getByRole('button', { name: /화면 테마/ }).click()
     await page.getByRole('radio', { name: '기기 설정 따르기' }).check()
     await expect(page.locator('html')).not.toHaveAttribute('data-theme', /.+/)
   })
@@ -511,10 +513,8 @@ test('일기에 쓴 내 표현과 오늘의 표현을 찾고, 홈의 도장과 �
   const recap = page.locator('.recap-card')
   await expect(recap.locator('.recap-chips')).toContainText('hang out')
   await expect(recap.locator('.recap-moods')).toContainText('happy')
-  const downloadPromise = page.waitForEvent('download')
-  await recap.getByRole('button', { name: '이미지로 저장' }).click()
-  const download = await downloadPromise
-  expect(download.suggestedFilename()).toMatch(/^daily-english-\d{4}-\d{2}-\d{2}\.png$/)
+  // 이미지로 저장하는 버튼은 없앴다(이번 주 돌아보기는 보는 용도).
+  await expect(recap.getByRole('button', { name: /이미지로/ })).toHaveCount(0)
 })
 
 test('첫 실행 안내: 단계를 고르고, 표현을 담고, 기분과 한 줄 일기로 시작한다', async ({ page }) => {
@@ -741,6 +741,7 @@ test('앱에서 난 오류는 설정의 앱 오류 기록에 남는다', async (
 test('알림: 하루 목표를 정하고 알림을 켜면 다음 알림이 보이고, 홈에 목표 진행이 나온다', async ({ page, context }) => {
   await context.grantPermissions(['notifications'])
   await open(page, 'settings')
+  await page.getByRole('button', { name: /하루 목표/ }).click()
   await page.getByRole('radio', { name: '하루 3개' }).check()
   await page.getByRole('switch', { name: /목표를 못 채운 날/ }).click()
   await expect(page.getByRole('switch', { name: /목표를 못 채운 날/ })).toBeChecked()
@@ -851,7 +852,8 @@ test('키보드: 바로가기, 페이지 이동 포커스, 탭 제목', async ({
 
 test('언어를 바꾸면 화면과 html lang이 바뀐다', async ({ page }) => {
   await open(page, 'settings')
-  await page.getByRole('group', { name: '내 언어' }).getByRole('radio', { name: '영어' }).check()
+  await page.getByRole('button', { name: /내 언어/ }).click()
+  await page.getByRole('radio', { name: '영어' }).check()
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
   await expect(page.getByRole('heading', { name: 'Settings', level: 1 })).toBeVisible()
 })
@@ -1550,8 +1552,8 @@ test.describe('로그인 화면', () => {
     await expect(page.getByRole('status').filter({ hasText: '시험 알림을 보냈어요' })).toBeVisible()
 
     // 하루 목표와 화면 테마, 로그아웃까지 한 화면에 있다
-    await expect(page.getByRole('group', { name: '배우는 언어' })).toBeVisible()
-    await expect(page.getByRole('radio', { name: '어둡게' })).toBeVisible()
+    await expect(page.getByRole('button', { name: /배우는 언어/ })).toBeVisible()
+    await expect(page.getByRole('button', { name: /화면 테마/ })).toBeVisible()
     await expect(page.getByRole('button', { name: '로그아웃' })).toBeVisible()
 
     const { violations } = await new AxeBuilder({ page })

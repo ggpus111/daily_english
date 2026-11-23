@@ -422,6 +422,13 @@ textarea {
   gap: 16px;
 }
 
+.stack-column {
+  display: grid;
+  gap: 18px;
+  align-content: start;
+  min-width: 0;
+}
+
 .two-column.even {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -2315,10 +2322,6 @@ textarea {
   background: var(--sage);
 }
 
-.recap-save {
-  justify-self: start;
-}
-
 .error-log {
   display: grid;
   gap: 8px;
@@ -3642,7 +3645,10 @@ button.calendar-day[aria-pressed='true'] {
   gap: 16px;
   width: 100%;
   max-width: 720px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
+  padding: 8px 6px;
+  border: 0;
+  background: none;
   text-align: left;
   color: inherit;
   cursor: pointer;
@@ -3776,4 +3782,176 @@ button.calendar-day[aria-pressed='true'] {
   font-size: 0.8125rem;
   font-style: normal;
   font-weight: 700;
+}
+
+/* 설정: 카드 없이 구분선으로 나뉜 담백한 줄 목록(카카오톡·토스 설정처럼) */
+.settings-stack {
+  gap: 0;
+}
+
+.settings-stack > .panel,
+.s-section {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.settings-stack > * {
+  margin-top: 24px;
+}
+
+.settings-stack > :first-child {
+  margin-top: 4px;
+}
+
+.s-section {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.s-section > h2,
+.settings-stack > .panel > h2 {
+  margin: 0 6px;
+  color: var(--sub);
+  font-size: 0.8125rem;
+  font-weight: 700;
+}
+
+.s-section > p,
+.settings-stack > .panel > p {
+  margin: 0 6px;
+}
+
+.s-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.s-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 54px;
+  padding: 12px 6px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  background: none;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.s-list > :first-child,
+.s-list > .s-row:first-child {
+  border-top: 0;
+}
+
+.s-row:hover:not(.s-row-static) {
+  background: var(--hover);
+}
+
+.s-row:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.s-row-static {
+  cursor: default;
+}
+
+.s-row-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.s-row-value {
+  color: var(--sub);
+  font-size: 0.9375rem;
+}
+
+.s-row-chevron::after {
+  content: '\203A';
+  color: var(--sub);
+  font-size: 1.375rem;
+  line-height: 1;
+}
+
+.s-row-danger {
+  color: var(--danger);
+}
+
+.s-list > .switch-row {
+  padding: 10px 6px;
+  border-top: 1px solid var(--line);
+}
+
+.s-list > .switch-row:first-child {
+  border-top: 0;
+}
+
+.s-section .permission-row {
+  padding: 12px 6px;
+  border-radius: 0;
+  background: none;
+}
+
+.choice-sheet {
+  width: min(92vw, 380px);
+  max-height: 80vh;
+  padding: 20px;
+  border: 0;
+  border-radius: 20px;
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 20px 60px rgb(40 24 12 / 35%);
+}
+
+.choice-sheet::backdrop {
+  background: rgb(40 24 12 / 45%);
+}
+
+.choice-sheet-body {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.choice-sheet-body legend {
+  margin-bottom: 8px;
+  padding: 0;
+  font-size: 1.0625rem;
+  font-weight: 800;
+}
+
+.choice-sheet-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 6px;
+  border-top: 1px solid var(--line);
+  cursor: pointer;
+}
+
+.choice-sheet-item.checked {
+  font-weight: 700;
+}
+
+.choice-sheet-item input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent-ink);
+}
+
+.choice-sheet-close {
+  width: 100%;
+  margin-top: 12px;
 }

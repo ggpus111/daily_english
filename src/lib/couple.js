@@ -249,8 +249,9 @@ const WATCH_DEBOUNCE_MS = 400
 /**
  * 내 짝들의 문장·반응·짝 변화가 생기면 onChange를 부른다(Supabase Realtime, 행 단위 보안을 따라 내 짝 것만 온다).
  * 한꺼번에 여러 줄이 바뀌어도 한 번만 부르도록 잠깐 모았다가 부른다. 돌려준 함수를 부르면 구독을 끊는다.
+ * onStatus(status)는 실시간 연결 상태가 바뀔 때 불린다('SUBSCRIBED'면 연결된 것). 연결이 안 될 때 더 자주 새로 불러오는 데 쓴다.
  */
-export function watchPairs(onChange) {
+export function watchPairs(onChange, onStatus) {
   if (!supabase?.channel) return () => {}
   let timer = null
   const fire = () => {
@@ -259,7 +260,7 @@ export function watchPairs(onChange) {
   }
   const channel = supabase.channel(`pairs-${crypto.randomUUID()}`)
   for (const table of WATCHED_TABLES) channel.on('postgres_changes', { event: '*', schema: 'public', table }, fire)
-  channel.subscribe()
+  channel.subscribe((status) => onStatus?.(status))
   return () => {
     clearTimeout(timer)
     supabase.removeChannel(channel)

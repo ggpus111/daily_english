@@ -23,5 +23,7 @@ export async function requestCorrection(prompt) {
   if (status === 401 || code === 'login') return { error: 'login' }
   if (status === 429 || code === 'limit') return { error: 'limit' }
   if (code === 'busy' || status === 503) return { error: 'busy' }
+  // 개발자 확인용(브라우저 콘솔). 화면에는 일반 문구만 보여 준다.
+  console.warn('[AI 교정 실패]', { status, code, upstream: body?.upstream, message: error?.message })
   return { error: 'failed' }
 }

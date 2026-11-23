@@ -17,7 +17,7 @@ export default function Settings() {
     <>
       <PageHead title={t('settings')} intro={t('settingsIntro')} />
 
-      <button className="panel account-summary" onClick={() => go('profile')}>
+      <button className="account-summary" onClick={() => go('profile')}>
         <span className="avatar-large" aria-hidden="true">
           {nickname.slice(0, 1).toUpperCase()}
         </span>
@@ -34,13 +34,15 @@ export default function Settings() {
         <DataSection />
         <HelpSection />
 
-        <section className="panel settings-group" aria-labelledby="settings-session">
+        <section className="s-section" aria-labelledby="settings-session">
           <h2 id="settings-session">{t('account')}</h2>
           {signedIn ? (
             <>
-              <button className="soft-button" onClick={logOut}>
-                {t('logout')}
-              </button>
+              <div className="s-list">
+                <button className="s-row s-row-danger" onClick={logOut}>
+                  <span className="s-row-label">{t('logout')}</span>
+                </button>
+              </div>
               {pendingCount > 0 && <p className="tiny-note">{t('pendingOnLogout', { count: pendingCount })}</p>}
             </>
           ) : supabase ? (

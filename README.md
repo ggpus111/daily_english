@@ -105,7 +105,7 @@ Authentication > Providers > Email에서 Confirm email을 켭니다. 인증 메�
 
 설정(한 번만):
 1. Google AI Studio에서 무료 API 키를 받습니다.
-2. Supabase 대시보드 > Edge Functions에서 `correct-journal`을 만들고 `index.ts` 내용을 붙여 넣어 배포합니다. Secrets에 `GEMINI_API_KEY`를 넣습니다(선택: `GEMINI_MODEL`, 기본 `gemini-2.5-flash` / `AI_DAILY_LIMIT`, 기본 5).
+2. Supabase 대시보드 > Edge Functions에서 `correct-journal`을 만들고 `index.ts` 내용을 붙여 넣어 배포합니다. Secrets에 `GEMINI_API_KEY`를 넣습니다(선택: `GEMINI_MODEL`, 기본 `gemini-3.8-flash` / `AI_DAILY_LIMIT`, 기본 5).
 3. `supabase/schema.sql`을 다시 실행해 `ai_usage` 표를 만듭니다.
 
 요청문은 `src/lib/correction.js`가 만듭니다. 다른 AI 채팅에 붙여 넣어도 같은 결과가 나오도록 시스템 프롬프트 역할을 요청문 맨 위에 둡니다.

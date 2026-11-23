@@ -20,22 +20,25 @@ export default function HelpSection() {
     <>
       <ReportForm />
       <ErrorReport />
-      <section className="panel settings-group" aria-labelledby="settings-about">
+      <section className="s-section" aria-labelledby="settings-about">
         <h2 id="settings-about">{t('settingsAbout')}</h2>
-        <dl className="about-list">
-          <dt>{t('appVersion')}</dt>
-          <dd>{VERSION}</dd>
-        </dl>
-        <div className="settings-links">
-          <a className="inline-link" href="#pro">
-            {t('proLink')}
+        <div className="s-list">
+          <div className="s-row s-row-static">
+            <span className="s-row-label">{t('appVersion')}</span>
+            <span className="s-row-value">{VERSION}</span>
+          </div>
+          <a className="s-row" href="#pro">
+            <span className="s-row-label">{t('proLink')}</span>
+            <span className="s-row-chevron" aria-hidden="true" />
           </a>
-          <a className="inline-link" href="#privacy">
-            {t('privacy')}
+          <a className="s-row" href="#privacy">
+            <span className="s-row-label">{t('privacy')}</span>
+            <span className="s-row-chevron" aria-hidden="true" />
           </a>
           {isAdmin && (
-            <a className="inline-link admin-link" href="#admin">
-              {t('adminLink')}
+            <a className="s-row admin-link" href="#admin">
+              <span className="s-row-label">{t('adminLink')}</span>
+              <span className="s-row-chevron" aria-hidden="true" />
             </a>
           )}
         </div>

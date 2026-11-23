@@ -4,7 +4,7 @@ import { useReminderSettings } from '../../hooks/useReminderSettings'
 import { LANGUAGES, languageName } from '../../lib/i18n'
 import { GOALS } from '../../lib/reminders'
 import { THEMES, getTheme, saveTheme } from '../../lib/theme'
-import ChoiceChips from '../ChoiceChips'
+import ChoiceRow from './ChoiceRow'
 
 /** 설정의 "학습과 화면": 배우는 언어, 내 언어, 하루 목표, 화면 테마. */
 export default function StudySection() {
@@ -17,18 +17,17 @@ export default function StudySection() {
   }))
 
   return (
-    <section className="panel settings-group" aria-labelledby="settings-study">
+    <section className="s-section" aria-labelledby="settings-study">
       <h2 id="settings-study">{t('settingsStudy')}</h2>
-      <ChoiceChips
-        compact
+      <div className="s-list">
+      <ChoiceRow
         label={t('learningLanguage')}
         name="learning-language"
         value={learningLang}
         options={languages}
         onChange={setLearningLang}
       />
-      <ChoiceChips
-        compact
+      <ChoiceRow
         label={t('nativeLanguage')}
         name="native-language"
         value={nativeLang}
@@ -36,8 +35,7 @@ export default function StudySection() {
         onChange={setNativeLang}
         hint={t('languageNote')}
       />
-      <ChoiceChips
-        compact
+      <ChoiceRow
         label={t('reminderGoal')}
         name="daily-goal"
         value={settings.goal}
@@ -47,8 +45,7 @@ export default function StudySection() {
         }))}
         onChange={(goal) => update({ goal: Number(goal) })}
       />
-      <ChoiceChips
-        compact
+      <ChoiceRow
         label={t('themeLabel')}
         name="theme"
         value={theme}
@@ -58,6 +55,7 @@ export default function StudySection() {
           saveTheme(value)
         }}
       />
+      </div>
     </section>
   )
 }
