@@ -472,7 +472,7 @@ export default {
   'privacy.collect.title': 'What we collect',
   'privacy.collect.body': "Your email, nickname, password, and the words, expressions, chats and journal entries you enter. If you log in with Google or Kakao, we receive the name and email that service shares. Please don't record other people's personal information.",
   'privacy.storage.title': 'Where it is stored',
-  'privacy.storage.body': 'When you log in, records are stored in a Supabase database and only your account can read them. The service runs on Vercel.',
+  'privacy.storage.body': 'When you log in, records are stored in a Supabase database in Seoul, South Korea, and only your account can read them. The website runs on Vercel.',
   'privacy.transfer.title': 'Data sent to others',
   'privacy.transfer.body': 'When you tap "Ask AI to polish it", only that entry and translation are sent to the Google Gemini API (free tier) for correction. We ask for your consent the first time. On the free tier Google may use what you send to improve its services, so please leave out real names and contact details. We only count how many corrections you used each day; the correction itself is kept only if you save it with your entry.',
   'privacy.errors.title': 'Error reports',
