@@ -444,6 +444,69 @@ test('타이핑 문제는 괄호 설명을 무시하고, 틀려도 "제 답도 �
   expect(question).toBeTruthy()
 })
 
+async function seedWords(page, count) {
+  await page.goto('/')
+  await page.evaluate((n) => {
+    const words = Array.from({ length: n }, (_, i) => ({
+      id: `w${i}`,
+      text: `word${i}`,
+      meaning: `뜻${i}`,
+      example: '',
+      createdAt: '2026-01-01T00:00:00.000Z',
+    }))
+    localStorage.setItem('savedWords', JSON.stringify(words))
+  }, count)
+}
+
+test('객관식: 뜻이 4개 미만이면 안내하고, 충분하면 보기를 골라 풀 수 있다', async ({ page }) => {
+  await seedWords(page, 3)
+  await open(page, 'words')
+  await page.getByRole('button', { name: '단어 퀴즈' }).click()
+  await page.getByRole('button', { name: '객관식' }).click()
+  await expect(page.getByText(/뜻이 4개 이상/)).toBeVisible()
+
+  await seedWords(page, 5)
+  await open(page, 'words')
+  await page.getByRole('button', { name: '단어 퀴즈' }).click()
+  await page.getByRole('button', { name: '객관식' }).click()
+  await expect(page.locator('.quiz-choice')).toHaveCount(4)
+
+  // 문제마다 정답 뜻은 "뜻" + 단어 번호다.
+  const word = (await page.locator('.quiz-question').textContent()).trim()
+  const right = `뜻${word.replace('word', '')}`
+  await page.locator('.quiz-choice', { hasText: right }).click()
+  await expect(page.getByText('맞았어요!')).toBeVisible()
+  await expect(page.locator('.quiz-choice').first()).toBeDisabled()
+  await expect(page.getByRole('button', { name: '다음 문제' })).toBeFocused()
+  await page.keyboard.press('Enter')
+  await expect(page.locator('.quiz-progress')).toContainText('2 / 5')
+  await expect(page.locator('.quiz-progress')).toContainText('맞힌 개수 1')
+})
+
+test('듣고 쓰기: 읽어 주는 말을 쓰면 맞힌 것으로 센다', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.__spoken = []
+    window.SpeechSynthesisUtterance = function (text) {
+      this.text = text
+    }
+    Object.defineProperty(window, 'speechSynthesis', {
+      value: { cancel() {}, speak: (utterance) => window.__spoken.push(utterance.text) },
+      configurable: true,
+    })
+  })
+  await seedWords(page, 2)
+  await open(page, 'words')
+  await page.getByRole('button', { name: '단어 퀴즈' }).click()
+  await page.getByRole('button', { name: '듣고 쓰기' }).click()
+  await expect.poll(() => page.evaluate(() => window.__spoken.length)).toBeGreaterThan(0)
+  const heard = await page.evaluate(() => window.__spoken.at(-1))
+  await page.getByLabel('생각나는 대로 써 보세요').fill(heard)
+  await page.keyboard.press('Enter')
+  await expect(page.getByText('맞았어요!')).toBeVisible()
+  await page.getByRole('button', { name: '다시 듣기' }).click()
+  await expect.poll(() => page.evaluate(() => window.__spoken.length)).toBeGreaterThan(1)
+})
+
 test('단어를 직접 넣을 때 꾸러미에 있는 말이면 뜻과 예문을 한 번에 채운다', async ({ page }) => {
   await open(page, 'words')
   await page.getByLabel('단어 / 표현').fill('tired')

@@ -1687,6 +1687,54 @@ textarea {
   }
 }
 
+.auth-tabs.six {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  min-width: min(480px, 100%);
+}
+
+@media (width <= 480px) {
+  .auth-tabs.six {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 객관식 */
+.quiz-choices {
+  display: grid;
+  gap: 8px;
+}
+
+.quiz-choice {
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.quiz-choice:hover:enabled {
+  border-color: var(--ink);
+}
+
+.quiz-choice:disabled {
+  cursor: default;
+}
+
+.quiz-choice.right {
+  border-color: var(--ink);
+  background: var(--warm);
+  font-weight: 700;
+}
+
+.quiz-choice.wrong {
+  border-style: dashed;
+  text-decoration: line-through;
+}
+
 /* 빈칸 채우기 */
 .quiz-sentence {
   line-height: 1.5;
