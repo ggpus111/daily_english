@@ -126,6 +126,7 @@ export default function DataSection() {
                 expression: importPlan.toAdd.expression.length,
                 chat: importPlan.toAdd.chat.length,
                 journal: importPlan.toAdd.journal.length,
+                grammar: importPlan.toAdd.grammar.length,
               })}
             </p>
           ) : (

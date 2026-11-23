@@ -79,46 +79,46 @@ routine	재택근무	재택근무	work from home	오늘은 재택근무야.	I'm 
 routine	잠깐 쉬다	잠깐 쉬	take a short break	우리 잠깐 쉬자.	Let's take a short break.
 routine	폰을 보다	폰	look at your phone	자기 전에 폰을 봐.	I look at my phone before bed.
 routine	준비하다	준비	get ready	준비 중이니까 기다려.	I'm getting ready, so wait.
-out	얼마예요?	얼마예요	How much is it?	이거 얼마예요?	How much is this?	Polite form. Casual: 얼마야?
-out	이걸로 주세요.	이걸로	I'll take this one.	이걸로 주세요.	I'll take this one, please.
-out	카드 돼요?	카드	Do you take cards?	여기 카드 돼요?	Do you take cards here?
-out	봉투는 괜찮아요.	봉투	No bag needed.	봉투는 괜찮아요.	No bag, thanks.
-out	화장실이 어디예요?	화장실	Where's the restroom?	실례지만 화장실이 어디예요?	Excuse me, where's the restroom?
-out	지하철역이 어디예요?	지하철역	Where's the subway station?	지하철역이 어디예요?	Where's the subway station?
-out	길을 잃었어요.	길을 잃	I'm lost.	죄송해요, 길을 잃었어요.	Sorry, I'm lost.
-out	쭉 가세요.	쭉 가	Go straight.	쭉 가서 오른쪽으로 돌아요.	Go straight, then turn right.
-out	오른쪽	오른쪽	right side	다음 모퉁이에서 오른쪽이에요.	It's on the right at the next corner.
-out	왼쪽	왼쪽	left side	신호등에서 왼쪽으로 가세요.	Go left at the traffic light.
-out	가까워요.	가까워	It's close.	역에서 가까워요.	It's close to the station.
-out	멀어요.	멀어	It's far.	걸어가면 좀 멀어요.	It's a bit far on foot.
-out	두 명이에요.	두 명	Two people.	두 명이에요, 자리 있어요?	Two people, do you have a table?
-out	예약했어요.	예약	I have a reservation.	7시에 예약했어요.	I have a reservation at 7.
-out	메뉴판 주세요.	메뉴판	Menu, please.	저기요, 메뉴판 주세요.	Excuse me, the menu please.
-out	추천 메뉴가 뭐예요?	추천	What do you recommend?	추천 메뉴가 뭐예요?	What do you recommend?
-out	계산해 주세요.	계산	Check, please.	계산해 주세요.	Check, please.
-out	포장해 주세요.	포장	To go, please.	이거 포장해 주세요.	Please pack this to go.
-out	여기서 먹을게요.	여기서	I'll eat here.	여기서 먹을게요.	I'll eat here.
-out	저기요!	저기요	Excuse me! (calling someone)	저기요, 주문할게요!	Excuse me, I'd like to order!	Used to call a waiter or stranger.
-out	자리 있어요?	자리	Do you have a seat?	자리 있어요?	Is there a seat available?
-out	줄이 길어.	줄	The line is long.	그 가게 줄이 길어.	The line at that shop is long.
-out	지하철이 늦어.	늦어	The subway is late.	지하철이 늦어서 조금 늦어.	The subway is late, so I'll be a bit late.
-out	환승	환승	transfer	다음 역에서 환승이에요.	You transfer at the next station.
-out	표	표	ticket	표 사러 갈게.	I'll go buy tickets.
-out	택시를 타다	택시	take a taxi	늦었으니까 택시 타자.	It's late, let's take a taxi.
-out	사진 찍어 주세요.	사진	Could you take a photo?	실례지만 사진 좀 찍어 주세요.	Excuse me, could you take our photo?
-out	같이 사진 찍자.	같이 사진	Let's take a photo together.	여기서 같이 사진 찍자!	Let's take a photo here!
-out	입어 봐도 돼요?	입어 봐도	Can I try this on?	이거 입어 봐도 돼요?	Can I try this on?
-out	더 큰 사이즈 있어요?	더 큰	Do you have a bigger size?	더 큰 사이즈 있어요?	Do you have a bigger size?
-out	싸다!	싸다	It's cheap!	이거 싸다!	This is cheap!
-out	비싸다.	비싸다	It's expensive.	이거 좀 비싸다.	This is a bit expensive.
-out	세일	세일	sale	지금 세일 중이야.	It's on sale now.
-out	사람 많다.	사람 많	It's crowded.	오늘 사람 진짜 많다.	It's so crowded today.
-out	사람 없다.	사람 없	It's empty.	평일이라 사람 별로 없네.	It's a weekday, so not many people.
-out	열었어요?	열었	Is it open?	아직 열었어요?	Is it still open?
-out	닫았어요.	닫았	It's closed.	벌써 닫았어요.	It's already closed.
-out	와이파이 있어요?	와이파이	Is there Wi-Fi?	여기 와이파이 있어요?	Is there Wi-Fi here?
-out	충전하고 싶어요.	충전	I want to charge my phone.	폰 충전하고 싶어요.	I want to charge my phone.
-out	어떻게 가요?	어떻게 가	How do I get there?	거기 어떻게 가요?	How do I get there?
+out	어디 가고 싶어?	어디	Where do you want to go?	오늘은 어디 가고 싶어?	Where do you want to go today?	Casual. Polite: 어디 가고 싶으세요?
+out	아무 데나 좋아.	아무 데나	Anywhere is fine.	너랑 가면 아무 데나 좋아.	Anywhere is fine if I'm with you.
+out	뭐 먹고 싶어?	먹고 싶어	What do you feel like eating?	오늘 뭐 먹고 싶어?	What do you feel like eating today?	뭐 is the spoken form of 무엇.
+out	내가 쏠게.	쏠게	My treat.	오늘은 내가 쏠게.	It's my treat today.	쏘다 literally means 'to shoot'; slang for treating someone.
+out	각자 내자.	각자	Let's split the bill.	계산은 각자 내자.	Let's each pay for our own.	Also common: 반반 내자 (half and half).
+out	다음엔 네가 사.	다음엔	You get the next one.	오늘은 내가 샀으니까 다음엔 네가 사.	I paid today, so you get the next one.
+out	이거 같이 먹을래?	같이 먹을래	Want to share this?	이거 같이 먹을래? 양이 많아.	Want to share this? It's a big portion.	-ㄹ래? asks 'do you want to?' casually.
+out	한 입만 줘.	한 입	Give me just one bite.	맛있어 보인다. 한 입만 줘.	That looks good. Give me just one bite.
+out	나 배고파.	배고파	I'm hungry.	나 배고파. 뭐 먹으러 갈까?	I'm hungry. Shall we go eat?
+out	여기 분위기 좋다.	분위기	This place has a nice vibe.	여기 분위기 좋다. 자주 오자.	This place has a nice vibe. Let's come often.	분위기 = atmosphere, vibe.
+out	사진 찍어 줄까?	찍어 줄까	Want me to take your photo?	저기 서 봐. 사진 찍어 줄까?	Stand over there. Want me to take your photo?
+out	우리 같이 찍자.	같이 찍자	Let's take one together.	여기 예쁘다. 우리 같이 찍자.	It's pretty here. Let's take one together.
+out	지금 가는 중이야.	가는 중	I'm on my way.	지금 가는 중이야. 조금만 기다려.	I'm on my way. Wait a little.	-는 중 = in the middle of doing.
+out	조금만 기다려 줘.	기다려 줘	Please wait for me a bit.	늦어서 미안해. 조금만 기다려 줘.	Sorry I'm late. Please wait for me a bit.
+out	거의 다 왔어.	다 왔어	I'm almost there.	거의 다 왔어. 오 분만.	I'm almost there. Just five minutes.
+out	어디서 만날까?	만날까	Where should we meet?	내일 어디서 만날까?	Where should we meet tomorrow?	-ㄹ까? = shall we?
+out	역 앞에서 보자.	역 앞	Let's meet in front of the station.	일곱 시에 역 앞에서 보자.	Let's meet in front of the station at seven.
+out	데려다줄게.	데려다줄게	I'll walk you home.	늦었다. 내가 데려다줄게.	It's late. I'll walk you home.
+out	조심히 들어가.	조심히	Get home safe.	오늘 고마워. 조심히 들어가.	Thanks for today. Get home safe.	Said when parting.
+out	도착하면 연락해.	연락해	Text me when you get there.	집에 도착하면 연락해.	Text me when you get home.
+out	길 잃었어. 어디야?	길 잃었어	I'm lost. Where are you?	지도를 봤는데 길 잃었어. 어디야?	I checked the map but I'm lost. Where are you?
+out	이쪽으로 와.	이쪽	Come this way.	이쪽으로 와. 여기가 더 예뻐.	Come this way. It's prettier here.
+out	사람 너무 많다. 다른 데 가자.	다른 데	It's too crowded. Let's go somewhere else.	주말이라 사람 너무 많다. 다른 데 가자.	It's the weekend, so it's too crowded. Let's go somewhere else.
+out	다리 아파. 좀 쉬자.	쉬자	My legs hurt. Let's rest a bit.	많이 걸었더니 다리 아파. 좀 쉬자.	We walked a lot and my legs hurt. Let's rest a bit.
+out	화장실 좀 다녀올게.	다녀올게	I'll be right back, just going to the restroom.	잠깐만, 화장실 좀 다녀올게.	Hang on, I'm going to the restroom for a sec.	다녀오다 = go and come back; 좀 softens it.
+out	저 가게 들어가 보자.	들어가 보자	Let's check out that shop.	저 가게 예쁘다. 들어가 보자.	That shop looks nice. Let's check it out.	-아/어 보자 = let's try.
+out	이거 나한테 어울려?	어울려	Does this suit me?	이 모자 나한테 어울려?	Does this hat suit me?
+out	너한테 잘 어울려.	잘 어울려	It really suits you.	그 색 너한테 잘 어울려.	That color really suits you.
+out	커피 한잔할래?	한잔할래	Want to grab a coffee?	산책하고 커피 한잔할래?	Want to grab a coffee after the walk?	한잔하다 = have a drink (coffee or alcohol).
+out	영화 보러 갈래?	보러 갈래	Want to go see a movie?	이번 주말에 영화 보러 갈래?	Want to go see a movie this weekend?
+out	산책하자.	산책	Let's go for a walk.	날씨 좋다. 산책하자.	The weather's nice. Let's go for a walk.
+out	오늘 재밌었어.	재밌었어	I had fun today.	오늘 정말 재밌었어. 고마워.	I really had fun today. Thank you.	재밌다 is short for 재미있다.
+out	벌써 가야 돼? 아쉽다.	아쉽다	You have to go already? That's a shame.	시간 진짜 빠르다. 벌써 가야 돼? 아쉽다.	Time flies. You have to go already? That's a shame.
+out	다음에 또 오자.	또 오자	Let's come again next time.	여기 좋다. 다음에 또 오자.	This place is nice. Let's come again next time.
+out	우산 같이 쓰자.	우산	Let's share my umbrella.	비 온다. 우산 같이 쓰자.	It's raining. Let's share my umbrella.
+out	춥지? 이거 입어.	입어	Cold, right? Wear this.	밤이라 쌀쌀하다. 춥지? 이거 입어.	It's chilly at night. Cold, right? Wear this.
+out	여기 앉아.	앉아	Sit here.	자리 있다. 여기 앉아.	There's a seat. Sit here.
+out	데리러 갈게.	데리러	I'll come pick you up.	역까지 데리러 갈게.	I'll come pick you up at the station.
+out	오늘은 내가 안내할게.	안내할게	Let me show you around today.	오늘은 내가 안내할게. 따라와.	Let me show you around today. Follow me.	안내하다 = to guide.
+out	여기 기억나?	기억나	Do you remember this place?	여기 기억나? 우리 처음 만난 데야.	Do you remember this place? It's where we first met.
 feelings	기뻐.	기뻐	I'm happy.	만나서 기뻐.	I'm happy to meet you.
 feelings	슬퍼.	슬퍼	I'm sad.	그 소식 슬프다.	That news is sad.
 feelings	외로워.	외로워	I'm lonely.	혼자 있으면 외로워.	I get lonely when I'm alone.

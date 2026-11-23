@@ -12,12 +12,13 @@ const STORAGE_KEYS = {
   expression: 'savedExpressions',
   chat: 'savedChats',
   journal: 'savedJournals',
+  grammar: 'savedGrammar',
 }
 
 export const STORAGE_ERROR = 'storage'
 export const JOURNAL_DRAFT_KEY = 'journalDraft'
 
-const emptyRecords = () => ({ word: [], expression: [], chat: [], journal: [] })
+const emptyRecords = () => ({ word: [], expression: [], chat: [], journal: [], grammar: [] })
 const byNewest = (a, b) => b.createdAt.localeCompare(a.createdAt)
 
 // 원본 앱이 남긴 브라우저 기록은 지금 형식으로 바꿔 읽는다.

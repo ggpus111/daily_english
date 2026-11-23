@@ -4,7 +4,7 @@
 // 모범 답 하나를 보여 주고(Few-Shot), 정해진 제목으로만 답하게 해서(출력 고정)
 // 앱이 답을 다시 나눠 보여 줄 수 있게 한다.
 
-const SECTION_KEYS = ['corrected', 'fixes', 'natural', 'good', 'practice']
+const SECTION_KEYS = ['corrected', 'fixes', 'natural', 'grammar', 'good', 'practice']
 
 const COPY = {
   ko: {
@@ -12,19 +12,22 @@ const COPY = {
       corrected: '고친 문장',
       fixes: '고칠 점',
       natural: '더 자연스러운 표현',
+      grammar: '문법 포인트',
       good: '잘한 점',
       practice: '연습할 점',
     },
     fix: { original: '원래', fixed: '고침', reason: '이유', none: '없음' },
+    grammarLabels: { text: '문법', meaning: '설명', example: '예문', exampleNative: '해석' },
     role: ({ learning, explain }) => `[역할]\n당신은 ${explain}로 설명해 주는 다정한 ${learning} 튜터예요.`,
     rules: ({ learning, explain }) => [
       '[지켜 주세요]',
       '- 제 표현과 수준을 최대한 살리고, 꼭 필요한 곳만 고쳐 주세요.',
       '- 일기와 뜻이 달라진 부분이 있으면 고칠 점에 꼭 넣어 주세요.',
       `- 설명은 ${explain}로, 고친 문장은 ${learning}로 써 주세요.`,
-      '- 아래 [답 형식]의 제목 5개를 그대로, 이 순서대로만 써 주세요. 인사말이나 다른 제목은 붙이지 마세요.',
+      '- 아래 [답 형식]의 제목 6개를 그대로, 이 순서대로만 써 주세요. 인사말이나 다른 제목은 붙이지 마세요.',
       '- 고칠 점은 한 줄에 하나씩 "- 원래: … → 고침: … | 이유: …" 모양으로 써 주세요. 고칠 게 없으면 "- 없음"이라고 써 주세요.',
       `- 더 자연스러운 표현에는 같은 뜻을 원어민이 일상에서 더 자연스럽게 말하는 ${learning} 표현을 1~3개, 한 줄에 하나씩 "- 표현 | 언제 쓰는지" 모양으로 써 주세요. 슬랭은 욕이 아닌 것만 쓰고, 격식 있는 자리에서 쓰면 안 되는 표현이면 그렇게 적어 주세요.`,
+      '- 문법 포인트에는 제가 틀리거나 헷갈린 문법을 0~2개, 한 줄에 하나씩 "- 문법: … | 설명: … | 예문: … | 해석: …" 모양으로 써 주세요(예: 문법: used to + 동사원형). 예문은 새로 지은 짧은 문장, 해석은 그 예문의 우리말 뜻이에요. 없으면 "- 없음"이라고 써 주세요.',
     ],
     formatTitle: '[답 형식]',
     exampleTitle: '[답 예시] 형식만 참고하고 내용은 따라 하지 마세요.',
@@ -40,6 +43,14 @@ const COPY = {
       natural: [
         ['I hung out at a cafe with my friend.', "hang out은 '같이 시간을 보내다'라서 친구와 갈 때 더 일상적이에요."],
         ['My friend and I grabbed coffee.', '카페에서 커피 마신 일을 가볍게 말할 때 써요.'],
+      ],
+      grammar: [
+        [
+          '과거형(지난 일)',
+          '이미 한 일은 동사를 과거형으로 써요.',
+          'I watched a movie yesterday.',
+          '나는 어제 영화를 봤다.',
+        ],
       ],
       good: '하고 싶은 말을 짧고 분명하게 전했어요.',
       practice: '지난 일을 쓸 때 동사를 과거형으로 바꾸는 연습을 해 보세요.',
@@ -57,19 +68,22 @@ const COPY = {
       corrected: 'Corrected translation',
       fixes: 'Fixes',
       natural: 'More natural ways',
+      grammar: 'Grammar points',
       good: 'What went well',
       practice: 'Practice next',
     },
     fix: { original: 'Original', fixed: 'Fix', reason: 'Why', none: 'None' },
+    grammarLabels: { text: 'Grammar', meaning: 'Meaning', example: 'Example', exampleNative: 'Translation' },
     role: ({ learning, explain }) => `[Role]\nYou are a kind ${learning} tutor who explains in ${explain}.`,
     rules: ({ learning, explain }) => [
       '[Rules]',
       '- Keep my wording and level as much as you can, and change only what is needed.',
       '- If any part means something different from the diary, include it under Fixes.',
       `- Write explanations in ${explain} and the corrected translation in ${learning}.`,
-      '- Use exactly the five headings in [Answer format], in that order. Do not add greetings or other headings.',
+      '- Use exactly the six headings in [Answer format], in that order. Do not add greetings or other headings.',
       '- Put one fix per line as "- Original: … → Fix: … | Why: …". If there is nothing to fix, write "- None".',
       `- Under More natural ways, give 1 to 3 ${learning} expressions a native speaker would use in everyday speech for the same meaning, one per line as "- Expression | When to use it". Slang is fine but no profanity, and say so if an expression is not for formal situations.`,
+      '- Under Grammar points, list 0 to 2 grammar points I got wrong or mixed up, one per line as "- Grammar: … | Meaning: … | Example: … | Translation: …" (e.g. Grammar: used to + base verb). The example is a new short sentence and the translation is its meaning in my native language. If there are none, write "- None".',
     ],
     formatTitle: '[Answer format]',
     exampleTitle: '[Example answer] Follow the format only, not the content.',
@@ -89,6 +103,14 @@ const COPY = {
         ],
         ['My friend and I grabbed coffee.', 'A casual way to say you had coffee at a cafe.'],
       ],
+      grammar: [
+        [
+          'Past tense',
+          'Use the past tense for things that already happened.',
+          'I watched a movie yesterday.',
+          'I watched a movie yesterday. (in my native language)',
+        ],
+      ],
       good: 'You said what you wanted to say clearly and briefly.',
       practice: 'When writing about the past, practise changing verbs to the past tense.',
     },
@@ -103,6 +125,10 @@ const COPY = {
 }
 
 const copyFor = (uiLang) => (uiLang === 'ko' ? COPY.ko : COPY.en)
+
+const GRAMMAR_FIELDS = ['text', 'meaning', 'example', 'exampleNative']
+const grammarLine = (labels, values) =>
+  `- ${GRAMMAR_FIELDS.map((field, index) => `${labels[field]}: ${values[index]}`).join(' | ')}`
 
 const fixLine = (fix, [original, fixed, reason]) =>
   `- ${fix.original}: ${original} → ${fix.fixed}: ${fixed} | ${fix.reason}: ${reason}`
@@ -147,6 +173,9 @@ export function buildCorrectionPrompt({
       '',
       `## ${h.natural}`,
       ...ex.natural.map(([expression, note]) => `- ${expression} | ${note}`),
+      '',
+      `## ${h.grammar}`,
+      ...ex.grammar.map((values) => grammarLine(c.grammarLabels, values)),
       '',
       `## ${h.good}`,
       ex.good,
@@ -207,6 +236,22 @@ function parseNatural(line) {
   return { text: expression.trim(), note }
 }
 
+// "- 문법: … | 설명: … | 예문: … | 해석: …" 한 줄을 문법 노트 모양으로 나눈다. 문법과 설명이 있어야 담을 수 있다.
+const GRAMMAR_LABELS = new Map(
+  Object.values(COPY).flatMap((c) => GRAMMAR_FIELDS.map((field) => [c.grammarLabels[field].toLowerCase(), field])),
+)
+function parseGrammar(line) {
+  const text = clean(line.replace(/^\s*(?:[-*•]|\d+[.)])\s*/, ''))
+  if (!text || NONE_WORDS.has(text.toLowerCase())) return null
+  const note = {}
+  for (const part of text.split('|')) {
+    const match = part.match(/^\s*([^:：]+?)\s*[:：]\s*(.+?)\s*$/)
+    const field = match && GRAMMAR_LABELS.get(match[1].toLowerCase())
+    if (field) note[field] = match[2]
+  }
+  return note.text && note.meaning ? { example: '', exampleNative: '', ...note } : null
+}
+
 /**
  * 붙여 넣은 교정을 제목별로 나눈다. 정해진 형식이 아니면 null을 돌려준다.
  * @returns {{ corrected: string, fixes: Array<{original?: string, fixed?: string, reason?: string, text?: string}>, natural: Array<{text: string, note: string}>, good: string, practice: string } | null}
@@ -233,6 +278,7 @@ export function parseFeedback(text) {
     corrected: joined('corrected'),
     fixes: (sections.fixes ?? []).map(parseFix).filter(Boolean),
     natural: (sections.natural ?? []).map(parseNatural).filter(Boolean),
+    grammar: (sections.grammar ?? []).map(parseGrammar).filter(Boolean),
     good: joined('good'),
     practice: joined('practice'),
   }

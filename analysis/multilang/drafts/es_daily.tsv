@@ -79,46 +79,46 @@ routine	trabajar desde casa	desde casa	재택근무하다	Hoy trabajo desde casa
 routine	tomarse un descanso	descanso	잠깐 쉬다	Tomémonos un descanso.	우리 잠깐 쉬자.
 routine	ver el celular	ver el celular	폰을 보다	Antes de dormir veo el celular.	자기 전에 폰을 봐.
 routine	arreglarse	arreglarse	준비하다, 단장하다	Me estoy arreglando, espera.	준비 중이니까 기다려.
-out	¿Cuánto cuesta?	cuánto cuesta	얼마예요?	¿Cuánto cuesta esto?	이거 얼마예요?
-out	Me llevo este.	me llevo	이걸로 할게요	Me llevo este, gracias.	이걸로 할게요, 감사합니다.
-out	¿Aceptan tarjeta?	aceptan tarjeta	카드 돼요?	¿Aceptan tarjeta aquí?	여기 카드 돼요?
-out	No necesito bolsa.	no necesito bolsa	봉투 필요 없어요	No necesito bolsa, gracias.	봉투 괜찮아요, 감사합니다.
-out	¿Dónde está el baño?	dónde está el baño	화장실 어디예요?	Disculpe, ¿dónde está el baño?	실례지만 화장실 어디예요?
-out	¿Dónde está la estación?	dónde está la estación	역이 어디예요?	¿Dónde está la estación de metro?	지하철역이 어디예요?
-out	Estoy perdido.	estoy perdido	길을 잃었어요	Perdón, estoy perdido.	죄송해요, 길을 잃었어요.	여자가 말하면 perdida예요.
-out	Siga derecho.	siga derecho	쭉 가세요	Siga derecho y gire a la derecha.	쭉 가서 오른쪽으로 도세요.
-out	Gira a la derecha.	a la derecha	오른쪽으로 돌아	En la esquina gira a la derecha.	모퉁이에서 오른쪽으로 돌아.
-out	Gira a la izquierda.	a la izquierda	왼쪽으로 돌아	En el semáforo gira a la izquierda.	신호등에서 왼쪽으로 돌아.
-out	Está cerca.	está cerca	가까워요	Está cerca de la estación.	역에서 가까워요.
-out	Está lejos.	está lejos	멀어요	A pie queda un poco lejos.	걸어서 좀 멀어요.
-out	Mesa para dos.	mesa para dos	두 명이에요	Mesa para dos, por favor.	두 명 자리 부탁해요.
-out	Tengo una reserva.	tengo una reserva	예약했어요	Tengo una reserva a las siete.	7시에 예약했어요.
-out	La carta, por favor.	la carta	메뉴판 주세요	Disculpe, la carta, por favor.	저기요, 메뉴판 주세요.
-out	¿Qué me recomienda?	qué me recomienda	추천 메뉴가 뭐예요?	¿Qué me recomienda hoy?	오늘 뭐가 추천이에요?
-out	La cuenta, por favor.	la cuenta	계산해 주세요	La cuenta, por favor.	계산해 주세요.
-out	Para llevar.	para llevar	포장이요	Dos cafés para llevar.	커피 두 잔 포장해 주세요.
-out	Para comer aquí.	comer aquí	여기서 먹을게요	Es para comer aquí.	여기서 먹을게요.
-out	Disculpe.	disculpe	저기요, 실례합니다	Disculpe, ¿puedo pedir?	저기요, 주문해도 돼요?
-out	¿Hay mesa libre?	mesa libre	빈 테이블 있어요?	¿Hay alguna mesa libre?	빈 테이블 있나요?
-out	Hay mucha fila.	mucha fila	줄이 길어	Hay mucha fila en esa tienda.	그 가게 줄이 길어.
-out	El tren va con retraso.	con retraso	열차가 늦어	El tren va con retraso, llegaré tarde.	열차가 늦어서 늦을 거야.
-out	hacer transbordo	transbordo	환승하다	Hay que hacer transbordo en la próxima.	다음 역에서 환승해야 해.
-out	el boleto	boleto	표	Voy a comprar el boleto.	표 사러 갈게.
-out	tomar un taxi	tomar un taxi	택시 타다	Es tarde, tomemos un taxi.	늦었으니 택시 타자.
-out	¿Me puede tomar una foto?	tomar una foto	사진 좀 찍어 주실래요?	Disculpe, ¿me puede tomar una foto?	실례지만 사진 좀 찍어 주실래요?
-out	Tomémonos una foto.	tomémonos una foto	같이 사진 찍자	Tomémonos una foto aquí.	여기서 같이 사진 찍자.
-out	¿Puedo probármelo?	probármelo	입어 봐도 돼요?	¿Puedo probármelo?	입어 봐도 돼요?
-out	¿Tiene una talla más grande?	talla más grande	더 큰 사이즈 있어요?	¿Tiene una talla más grande?	더 큰 사이즈 있어요?
-out	Qué barato.	qué barato	싸다!	¡Qué barato está esto!	이거 싸다!
-out	Está caro.	está caro	비싸다	Me parece muy caro.	너무 비싼 것 같아.
-out	rebajas	rebajas	세일	Ahora hay rebajas.	지금 세일 중이야.
-out	Hay mucha gente.	mucha gente	사람 많다	Hoy hay mucha gente.	오늘 사람 많다.
-out	Hay poca gente.	poca gente	사람 별로 없다	Entre semana hay poca gente.	평일이라 사람이 적네.
-out	¿Está abierto?	está abierto	열었어요?	¿Está abierto todavía?	아직 열었어요?
-out	Está cerrado.	está cerrado	닫았어요	Ya está cerrado.	벌써 닫았어요.
-out	¿Hay wifi?	hay wifi	와이파이 있어요?	¿Hay wifi aquí?	여기 와이파이 있어요?
-out	Necesito cargar mi celular.	cargar mi celular	폰 충전해야 해요	Necesito cargar mi celular.	폰 충전해야 해요.
-out	¿Cómo llego?	cómo llego	어떻게 가요?	¿Cómo llego hasta allá?	거기 어떻게 가요?
+out	¿Adónde quieres ir?	adónde	어디 가고 싶어?	¿Adónde quieres ir hoy?	오늘 어디 가고 싶어?
+out	Me da igual el sitio.	igual	아무 데나 좋아	Contigo, me da igual el sitio.	너랑이면 어디든 상관없어.	me da igual = 상관없어.
+out	¿Qué te apetece comer?	apetece	뭐 먹고 싶어?	¿Qué te apetece comer hoy?	오늘 뭐 먹고 싶어?	apetecer = 당기다(스페인에서 흔해요).
+out	Invito yo.	invito	내가 쏠게	Hoy invito yo.	오늘은 내가 쏠게.
+out	Pagamos a medias.	medias	각자 내자(반반)	La cuenta la pagamos a medias.	계산은 반반 내자.
+out	La próxima invitas tú.	próxima	다음엔 네가 사	Hoy pagué yo, la próxima invitas tú.	오늘은 내가 냈으니 다음엔 네가 사.
+out	¿Lo compartimos?	compartimos	이거 같이 먹을래?	Es muy grande. ¿Lo compartimos?	양이 많아. 나눠 먹을까?
+out	Dame un bocado.	bocado	한 입만 줘	Qué buena pinta. Dame un bocado.	맛있어 보인다. 한 입만 줘.
+out	Tengo hambre.	hambre	배고파	Tengo hambre. ¿Vamos a comer algo?	배고파. 뭐 먹으러 갈까?
+out	Este sitio tiene buen ambiente.	ambiente	여기 분위기 좋다	Este sitio tiene buen ambiente. Volvamos pronto.	여기 분위기 좋다. 곧 또 오자.
+out	¿Te hago una foto?	foto	사진 찍어 줄까?	Ponte ahí. ¿Te hago una foto?	거기 서 봐. 사진 찍어 줄까?
+out	Hagámonos una foto juntos.	juntos	같이 찍자	Qué bonito. Hagámonos una foto juntos.	예쁘다. 같이 사진 찍자.	여자끼리면 juntas라고 해요.
+out	Voy de camino.	camino	지금 가는 중이야	Voy de camino. Espérame un poco.	가는 중이야. 조금만 기다려 줘.
+out	Espérame un momento.	espérame	조금만 기다려 줘	Perdona el retraso. Espérame un momento.	늦어서 미안. 조금만 기다려 줘.
+out	Ya casi llego.	casi	거의 다 왔어	Ya casi llego, cinco minutos.	거의 다 왔어. 5분만.
+out	¿Dónde quedamos?	quedamos	어디서 만날까?	¿Dónde quedamos mañana?	내일 어디서 만날까?	quedar = 만나기로 하다.
+out	Nos vemos en la estación.	estación	역에서 보자	Nos vemos en la estación a las siete.	7시에 역에서 보자.
+out	Te acompaño a casa.	acompaño	데려다줄게	Es tarde. Te acompaño a casa.	늦었다. 집까지 데려다줄게.
+out	Ve con cuidado.	cuidado	조심히 들어가	Gracias por hoy. Ve con cuidado.	오늘 고마워. 조심히 가.
+out	Escríbeme cuando llegues.	llegues	도착하면 연락해	Escríbeme cuando llegues a casa.	집에 도착하면 연락해.
+out	Me he perdido. ¿Dónde estás?	perdido	길 잃었어. 어디야?	Miré el mapa, pero me he perdido. ¿Dónde estás?	지도를 봤는데 길을 잃었어. 어디야?
+out	Ven por aquí.	aquí	이쪽으로 와	Ven por aquí, es más bonito.	이쪽으로 와. 더 예뻐.
+out	Hay demasiada gente. Vamos a otro sitio.	demasiada	사람 너무 많다. 다른 데 가자	Es fin de semana y hay demasiada gente. Vamos a otro sitio.	주말이라 사람이 너무 많아. 다른 데 가자.
+out	Me duelen los pies. Descansemos.	descansemos	다리 아파. 좀 쉬자	Hemos andado mucho. Me duelen los pies. Descansemos.	많이 걸었어. 발 아파. 좀 쉬자.
+out	Voy un momento al baño.	baño	화장실 좀 다녀올게	Espera, voy un momento al baño.	잠깐, 화장실 좀 다녀올게.
+out	Entremos en esa tienda.	tienda	저 가게 들어가 보자	Esa tienda es muy bonita. Entremos en esa tienda.	저 가게 정말 예쁘다. 들어가 보자.
+out	¿Me queda bien?	queda	이거 나한테 어울려?	Este sombrero, ¿me queda bien?	이 모자, 나한테 어울려?
+out	Te queda genial.	genial	너한테 잘 어울려	Ese color te queda genial.	그 색 너한테 정말 잘 어울려.
+out	¿Tomamos un café?	café	커피 한잔할래?	¿Tomamos un café después del paseo?	산책하고 커피 한잔할래?
+out	¿Vamos al cine?	cine	영화 보러 갈래?	¿Vamos al cine este fin de semana?	이번 주말에 영화 보러 갈래?
+out	Vamos a dar un paseo.	paseo	산책하자	Hace buen tiempo. Vamos a dar un paseo.	날씨 좋다. 산책하자.
+out	Me lo he pasado genial.	pasado	오늘 재밌었어	Hoy me lo he pasado genial. Gracias.	오늘 정말 즐거웠어. 고마워.
+out	¿Ya te vas? Qué pena.	pena	벌써 가? 아쉽다	El tiempo vuela. ¿Ya te vas? Qué pena.	시간 빠르다. 벌써 가? 아쉽다.
+out	Volvamos otro día.	volvamos	다음에 또 오자	Me ha gustado. Volvamos otro día.	좋았어. 다음에 또 오자.
+out	Compartamos el paraguas.	paraguas	우산 같이 쓰자	Está lloviendo. Compartamos el paraguas.	비 와. 우산 같이 쓰자.
+out	¿Tienes frío? Ponte esto.	frío	추워? 이거 입어	Por la noche refresca. ¿Tienes frío? Ponte esto.	밤엔 쌀쌀해. 추워? 이거 입어.
+out	Siéntate aquí.	siéntate	여기 앉아	Hay un sitio libre. Siéntate aquí.	빈자리 있어. 여기 앉아.
+out	Voy a buscarte.	buscarte	데리러 갈게	Voy a buscarte a la estación.	역까지 데리러 갈게.
+out	Hoy te enseño la ciudad.	ciudad	오늘은 내가 안내할게	Hoy te enseño la ciudad. Sígueme.	오늘은 내가 도시를 보여 줄게. 따라와.
+out	¿Te acuerdas de este sitio?	acuerdas	여기 기억나?	¿Te acuerdas de este sitio? Aquí nos conocimos.	여기 기억나? 우리 여기서 처음 만났잖아.
 feelings	Estoy feliz.	estoy feliz	행복해	Estoy feliz de verte.	너를 봐서 행복해.
 feelings	Estoy triste.	estoy triste	슬퍼	Esa noticia me pone triste.	그 소식에 슬퍼.
 feelings	Me siento solo.	me siento solo	외로워	Me siento solo aquí.	여기선 외로워.

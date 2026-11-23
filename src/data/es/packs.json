@@ -2581,385 +2581,379 @@
   {
    "id": "out",
    "title": {
-    "ko": "밖에서",
-    "en": "Out and about"
+    "ko": "같이 다닐 때",
+    "en": "Out together"
    },
    "items": [
     {
      "id": "es-out-01",
-     "text": "¿Cuánto cuesta?",
-     "meaning": "얼마예요?",
-     "example": "¿Cuánto cuesta esto?",
-     "exampleKo": "이거 얼마예요?",
+     "text": "¿Adónde quieres ir?",
+     "meaning": "어디 가고 싶어?",
+     "example": "¿Adónde quieres ir hoy?",
+     "exampleKo": "오늘 어디 가고 싶어?",
      "tip": "",
-     "sentences": 146,
-     "perMillion": 329.3
+     "sentences": 241,
+     "perMillion": 543.6
     },
     {
      "id": "es-out-02",
-     "text": "Me llevo este.",
-     "meaning": "이걸로 할게요",
-     "example": "Me llevo este, gracias.",
-     "exampleKo": "이걸로 할게요, 감사합니다.",
-     "tip": "",
-     "sentences": 36,
-     "perMillion": 81.2
+     "text": "Me da igual el sitio.",
+     "meaning": "아무 데나 좋아",
+     "example": "Contigo, me da igual el sitio.",
+     "exampleKo": "너랑이면 어디든 상관없어.",
+     "tip": "me da igual = 상관없어.",
+     "sentences": 541,
+     "perMillion": 1220.2
     },
     {
      "id": "es-out-03",
-     "text": "¿Aceptan tarjeta?",
-     "meaning": "카드 돼요?",
-     "example": "¿Aceptan tarjeta aquí?",
-     "exampleKo": "여기 카드 돼요?",
-     "tip": ""
+     "text": "¿Qué te apetece comer?",
+     "meaning": "뭐 먹고 싶어?",
+     "example": "¿Qué te apetece comer hoy?",
+     "exampleKo": "오늘 뭐 먹고 싶어?",
+     "tip": "apetecer = 당기다(스페인에서 흔해요).",
+     "sentences": 142,
+     "perMillion": 320.3
     },
     {
      "id": "es-out-04",
-     "text": "No necesito bolsa.",
-     "meaning": "봉투 필요 없어요",
-     "example": "No necesito bolsa, gracias.",
-     "exampleKo": "봉투 괜찮아요, 감사합니다.",
-     "tip": ""
+     "text": "Invito yo.",
+     "meaning": "내가 쏠게",
+     "example": "Hoy invito yo.",
+     "exampleKo": "오늘은 내가 쏠게.",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 72.2
     },
     {
      "id": "es-out-05",
-     "text": "¿Dónde está el baño?",
-     "meaning": "화장실 어디예요?",
-     "example": "Disculpe, ¿dónde está el baño?",
-     "exampleKo": "실례지만 화장실 어디예요?",
+     "text": "Pagamos a medias.",
+     "meaning": "각자 내자(반반)",
+     "example": "La cuenta la pagamos a medias.",
+     "exampleKo": "계산은 반반 내자.",
      "tip": "",
-     "sentences": 9,
-     "perMillion": 20.3
+     "sentences": 75,
+     "perMillion": 169.2
     },
     {
      "id": "es-out-06",
-     "text": "¿Dónde está la estación?",
-     "meaning": "역이 어디예요?",
-     "example": "¿Dónde está la estación de metro?",
-     "exampleKo": "지하철역이 어디예요?",
+     "text": "La próxima invitas tú.",
+     "meaning": "다음엔 네가 사",
+     "example": "Hoy pagué yo, la próxima invitas tú.",
+     "exampleKo": "오늘은 내가 냈으니 다음엔 네가 사.",
      "tip": "",
-     "sentences": 12,
-     "perMillion": 27.1
+     "sentences": 339,
+     "perMillion": 764.6
     },
     {
      "id": "es-out-07",
-     "text": "Estoy perdido.",
-     "meaning": "길을 잃었어요",
-     "example": "Perdón, estoy perdido.",
-     "exampleKo": "죄송해요, 길을 잃었어요.",
-     "tip": "여자가 말하면 perdida예요.",
-     "sentences": 8,
-     "perMillion": 18.0
+     "text": "¿Lo compartimos?",
+     "meaning": "이거 같이 먹을래?",
+     "example": "Es muy grande. ¿Lo compartimos?",
+     "exampleKo": "양이 많아. 나눠 먹을까?",
+     "tip": "",
+     "sentences": 32,
+     "perMillion": 72.2
     },
     {
      "id": "es-out-08",
-     "text": "Siga derecho.",
-     "meaning": "쭉 가세요",
-     "example": "Siga derecho y gire a la derecha.",
-     "exampleKo": "쭉 가서 오른쪽으로 도세요.",
-     "tip": ""
+     "text": "Dame un bocado.",
+     "meaning": "한 입만 줘",
+     "example": "Qué buena pinta. Dame un bocado.",
+     "exampleKo": "맛있어 보인다. 한 입만 줘.",
+     "tip": "",
+     "sentences": 22,
+     "perMillion": 49.6
     },
     {
      "id": "es-out-09",
-     "text": "Gira a la derecha.",
-     "meaning": "오른쪽으로 돌아",
-     "example": "En la esquina gira a la derecha.",
-     "exampleKo": "모퉁이에서 오른쪽으로 돌아.",
+     "text": "Este sitio tiene buen ambiente.",
+     "meaning": "여기 분위기 좋다",
+     "example": "Este sitio tiene buen ambiente. Volvamos pronto.",
+     "exampleKo": "여기 분위기 좋다. 곧 또 오자.",
      "tip": "",
-     "sentences": 136,
-     "perMillion": 306.7
+     "sentences": 124,
+     "perMillion": 279.7
     },
     {
      "id": "es-out-10",
-     "text": "Gira a la izquierda.",
-     "meaning": "왼쪽으로 돌아",
-     "example": "En el semáforo gira a la izquierda.",
-     "exampleKo": "신호등에서 왼쪽으로 돌아.",
+     "text": "¿Te hago una foto?",
+     "meaning": "사진 찍어 줄까?",
+     "example": "Ponte ahí. ¿Te hago una foto?",
+     "exampleKo": "거기 서 봐. 사진 찍어 줄까?",
      "tip": "",
-     "sentences": 110,
-     "perMillion": 248.1
+     "sentences": 455,
+     "perMillion": 1026.2
     },
     {
      "id": "es-out-11",
-     "text": "Está cerca.",
-     "meaning": "가까워요",
-     "example": "Está cerca de la estación.",
-     "exampleKo": "역에서 가까워요.",
-     "tip": "",
-     "sentences": 90,
-     "perMillion": 203.0
+     "text": "Hagámonos una foto juntos.",
+     "meaning": "같이 찍자",
+     "example": "Qué bonito. Hagámonos una foto juntos.",
+     "exampleKo": "예쁘다. 같이 사진 찍자.",
+     "tip": "여자끼리면 juntas라고 해요.",
+     "sentences": 698,
+     "perMillion": 1574.3
     },
     {
      "id": "es-out-12",
-     "text": "Está lejos.",
-     "meaning": "멀어요",
-     "example": "A pie queda un poco lejos.",
-     "exampleKo": "걸어서 좀 멀어요.",
+     "text": "Voy de camino.",
+     "meaning": "지금 가는 중이야",
+     "example": "Voy de camino. Espérame un poco.",
+     "exampleKo": "가는 중이야. 조금만 기다려 줘.",
      "tip": "",
-     "sentences": 72,
-     "perMillion": 162.4
+     "sentences": 1030,
+     "perMillion": 2323.1
     },
     {
      "id": "es-out-13",
-     "text": "Mesa para dos.",
-     "meaning": "두 명이에요",
-     "example": "Mesa para dos, por favor.",
-     "exampleKo": "두 명 자리 부탁해요.",
+     "text": "Espérame un momento.",
+     "meaning": "조금만 기다려 줘",
+     "example": "Perdona el retraso. Espérame un momento.",
+     "exampleKo": "늦어서 미안. 조금만 기다려 줘.",
      "tip": "",
-     "sentences": 5,
-     "perMillion": 11.3
+     "sentences": 30,
+     "perMillion": 67.7
     },
     {
      "id": "es-out-14",
-     "text": "Tengo una reserva.",
-     "meaning": "예약했어요",
-     "example": "Tengo una reserva a las siete.",
-     "exampleKo": "7시에 예약했어요.",
-     "tip": ""
+     "text": "Ya casi llego.",
+     "meaning": "거의 다 왔어",
+     "example": "Ya casi llego, cinco minutos.",
+     "exampleKo": "거의 다 왔어. 5분만.",
+     "tip": "",
+     "sentences": 1554,
+     "perMillion": 3505.0
     },
     {
      "id": "es-out-15",
-     "text": "La carta, por favor.",
-     "meaning": "메뉴판 주세요",
-     "example": "Disculpe, la carta, por favor.",
-     "exampleKo": "저기요, 메뉴판 주세요.",
-     "tip": "",
-     "sentences": 305,
-     "perMillion": 687.9
+     "text": "¿Dónde quedamos?",
+     "meaning": "어디서 만날까?",
+     "example": "¿Dónde quedamos mañana?",
+     "exampleKo": "내일 어디서 만날까?",
+     "tip": "quedar = 만나기로 하다.",
+     "sentences": 140,
+     "perMillion": 315.8
     },
     {
      "id": "es-out-16",
-     "text": "¿Qué me recomienda?",
-     "meaning": "추천 메뉴가 뭐예요?",
-     "example": "¿Qué me recomienda hoy?",
-     "exampleKo": "오늘 뭐가 추천이에요?",
-     "tip": ""
+     "text": "Nos vemos en la estación.",
+     "meaning": "역에서 보자",
+     "example": "Nos vemos en la estación a las siete.",
+     "exampleKo": "7시에 역에서 보자.",
+     "tip": "",
+     "sentences": 745,
+     "perMillion": 1680.3
     },
     {
      "id": "es-out-17",
-     "text": "La cuenta, por favor.",
-     "meaning": "계산해 주세요",
-     "example": "La cuenta, por favor.",
-     "exampleKo": "계산해 주세요.",
+     "text": "Escríbeme cuando llegues.",
+     "meaning": "도착하면 연락해",
+     "example": "Escríbeme cuando llegues a casa.",
+     "exampleKo": "집에 도착하면 연락해.",
      "tip": "",
-     "sentences": 180,
-     "perMillion": 406.0
+     "sentences": 73,
+     "perMillion": 164.6
     },
     {
      "id": "es-out-18",
-     "text": "Para llevar.",
-     "meaning": "포장이요",
-     "example": "Dos cafés para llevar.",
-     "exampleKo": "커피 두 잔 포장해 주세요.",
+     "text": "Me he perdido. ¿Dónde estás?",
+     "meaning": "길 잃었어. 어디야?",
+     "example": "Miré el mapa, pero me he perdido. ¿Dónde estás?",
+     "exampleKo": "지도를 봤는데 길을 잃었어. 어디야?",
      "tip": "",
-     "sentences": 36,
-     "perMillion": 81.2
+     "sentences": 627,
+     "perMillion": 1414.2
     },
     {
      "id": "es-out-19",
-     "text": "Para comer aquí.",
-     "meaning": "여기서 먹을게요",
-     "example": "Es para comer aquí.",
-     "exampleKo": "여기서 먹을게요.",
+     "text": "Ven por aquí.",
+     "meaning": "이쪽으로 와",
+     "example": "Ven por aquí, es más bonito.",
+     "exampleKo": "이쪽으로 와. 더 예뻐.",
      "tip": "",
-     "sentences": 19,
-     "perMillion": 42.9
+     "sentences": 5936,
+     "perMillion": 13388.4
     },
     {
      "id": "es-out-20",
-     "text": "Disculpe.",
-     "meaning": "저기요, 실례합니다",
-     "example": "Disculpe, ¿puedo pedir?",
-     "exampleKo": "저기요, 주문해도 돼요?",
+     "text": "Hay demasiada gente. Vamos a otro sitio.",
+     "meaning": "사람 너무 많다. 다른 데 가자",
+     "example": "Es fin de semana y hay demasiada gente. Vamos a otro sitio.",
+     "exampleKo": "주말이라 사람이 너무 많아. 다른 데 가자.",
      "tip": "",
-     "sentences": 159,
-     "perMillion": 358.6
+     "sentences": 124,
+     "perMillion": 279.7
     },
     {
      "id": "es-out-21",
-     "text": "¿Hay mesa libre?",
-     "meaning": "빈 테이블 있어요?",
-     "example": "¿Hay alguna mesa libre?",
-     "exampleKo": "빈 테이블 있나요?",
-     "tip": ""
-    },
-    {
-     "id": "es-out-22",
-     "text": "Hay mucha fila.",
-     "meaning": "줄이 길어",
-     "example": "Hay mucha fila en esa tienda.",
-     "exampleKo": "그 가게 줄이 길어.",
-     "tip": ""
-    },
-    {
-     "id": "es-out-23",
-     "text": "El tren va con retraso.",
-     "meaning": "열차가 늦어",
-     "example": "El tren va con retraso, llegaré tarde.",
-     "exampleKo": "열차가 늦어서 늦을 거야.",
-     "tip": "",
-     "sentences": 19,
-     "perMillion": 42.9
-    },
-    {
-     "id": "es-out-24",
-     "text": "hacer transbordo",
-     "meaning": "환승하다",
-     "example": "Hay que hacer transbordo en la próxima.",
-     "exampleKo": "다음 역에서 환승해야 해.",
-     "tip": "",
-     "sentences": 7,
-     "perMillion": 15.8
-    },
-    {
-     "id": "es-out-25",
-     "text": "el boleto",
-     "meaning": "표",
-     "example": "Voy a comprar el boleto.",
-     "exampleKo": "표 사러 갈게.",
-     "tip": "",
-     "sentences": 70,
-     "perMillion": 157.9
-    },
-    {
-     "id": "es-out-26",
-     "text": "tomar un taxi",
-     "meaning": "택시 타다",
-     "example": "Es tarde, tomemos un taxi.",
-     "exampleKo": "늦었으니 택시 타자.",
-     "tip": "",
-     "sentences": 17,
-     "perMillion": 38.3
-    },
-    {
-     "id": "es-out-27",
-     "text": "¿Me puede tomar una foto?",
-     "meaning": "사진 좀 찍어 주실래요?",
-     "example": "Disculpe, ¿me puede tomar una foto?",
-     "exampleKo": "실례지만 사진 좀 찍어 주실래요?",
-     "tip": "",
-     "sentences": 14,
-     "perMillion": 31.6
-    },
-    {
-     "id": "es-out-28",
-     "text": "Tomémonos una foto.",
-     "meaning": "같이 사진 찍자",
-     "example": "Tomémonos una foto aquí.",
-     "exampleKo": "여기서 같이 사진 찍자.",
-     "tip": ""
-    },
-    {
-     "id": "es-out-29",
-     "text": "¿Puedo probármelo?",
-     "meaning": "입어 봐도 돼요?",
-     "example": "¿Puedo probármelo?",
-     "exampleKo": "입어 봐도 돼요?",
-     "tip": "",
-     "sentences": 5,
-     "perMillion": 11.3
-    },
-    {
-     "id": "es-out-30",
-     "text": "¿Tiene una talla más grande?",
-     "meaning": "더 큰 사이즈 있어요?",
-     "example": "¿Tiene una talla más grande?",
-     "exampleKo": "더 큰 사이즈 있어요?",
+     "text": "Me duelen los pies. Descansemos.",
+     "meaning": "다리 아파. 좀 쉬자",
+     "example": "Hemos andado mucho. Me duelen los pies. Descansemos.",
+     "exampleKo": "많이 걸었어. 발 아파. 좀 쉬자.",
      "tip": "",
      "sentences": 8,
      "perMillion": 18.0
     },
     {
+     "id": "es-out-22",
+     "text": "Voy un momento al baño.",
+     "meaning": "화장실 좀 다녀올게",
+     "example": "Espera, voy un momento al baño.",
+     "exampleKo": "잠깐, 화장실 좀 다녀올게.",
+     "tip": "",
+     "sentences": 449,
+     "perMillion": 1012.7
+    },
+    {
+     "id": "es-out-23",
+     "text": "Entremos en esa tienda.",
+     "meaning": "저 가게 들어가 보자",
+     "example": "Esa tienda es muy bonita. Entremos en esa tienda.",
+     "exampleKo": "저 가게 정말 예쁘다. 들어가 보자.",
+     "tip": "",
+     "sentences": 647,
+     "perMillion": 1459.3
+    },
+    {
+     "id": "es-out-24",
+     "text": "¿Me queda bien?",
+     "meaning": "이거 나한테 어울려?",
+     "example": "Este sombrero, ¿me queda bien?",
+     "exampleKo": "이 모자, 나한테 어울려?",
+     "tip": "",
+     "sentences": 895,
+     "perMillion": 2018.6
+    },
+    {
+     "id": "es-out-25",
+     "text": "Te queda genial.",
+     "meaning": "너한테 잘 어울려",
+     "example": "Ese color te queda genial.",
+     "exampleKo": "그 색 너한테 정말 잘 어울려.",
+     "tip": "",
+     "sentences": 140,
+     "perMillion": 315.8
+    },
+    {
+     "id": "es-out-26",
+     "text": "¿Tomamos un café?",
+     "meaning": "커피 한잔할래?",
+     "example": "¿Tomamos un café después del paseo?",
+     "exampleKo": "산책하고 커피 한잔할래?",
+     "tip": "",
+     "sentences": 1257,
+     "perMillion": 2835.1
+    },
+    {
+     "id": "es-out-27",
+     "text": "¿Vamos al cine?",
+     "meaning": "영화 보러 갈래?",
+     "example": "¿Vamos al cine este fin de semana?",
+     "exampleKo": "이번 주말에 영화 보러 갈래?",
+     "tip": "",
+     "sentences": 387,
+     "perMillion": 872.9
+    },
+    {
+     "id": "es-out-28",
+     "text": "Vamos a dar un paseo.",
+     "meaning": "산책하자",
+     "example": "Hace buen tiempo. Vamos a dar un paseo.",
+     "exampleKo": "날씨 좋다. 산책하자.",
+     "tip": "",
+     "sentences": 307,
+     "perMillion": 692.4
+    },
+    {
+     "id": "es-out-29",
+     "text": "Me lo he pasado genial.",
+     "meaning": "오늘 재밌었어",
+     "example": "Hoy me lo he pasado genial. Gracias.",
+     "exampleKo": "오늘 정말 즐거웠어. 고마워.",
+     "tip": "",
+     "sentences": 1683,
+     "perMillion": 3795.9
+    },
+    {
+     "id": "es-out-30",
+     "text": "¿Ya te vas? Qué pena.",
+     "meaning": "벌써 가? 아쉽다",
+     "example": "El tiempo vuela. ¿Ya te vas? Qué pena.",
+     "exampleKo": "시간 빠르다. 벌써 가? 아쉽다.",
+     "tip": "",
+     "sentences": 507,
+     "perMillion": 1143.5
+    },
+    {
      "id": "es-out-31",
-     "text": "Qué barato.",
-     "meaning": "싸다!",
-     "example": "¡Qué barato está esto!",
-     "exampleKo": "이거 싸다!",
-     "tip": ""
+     "text": "Volvamos otro día.",
+     "meaning": "다음에 또 오자",
+     "example": "Me ha gustado. Volvamos otro día.",
+     "exampleKo": "좋았어. 다음에 또 오자.",
+     "tip": "",
+     "sentences": 48,
+     "perMillion": 108.3
     },
     {
      "id": "es-out-32",
-     "text": "Está caro.",
-     "meaning": "비싸다",
-     "example": "Me parece muy caro.",
-     "exampleKo": "너무 비싼 것 같아.",
-     "tip": ""
+     "text": "Compartamos el paraguas.",
+     "meaning": "우산 같이 쓰자",
+     "example": "Está lloviendo. Compartamos el paraguas.",
+     "exampleKo": "비 와. 우산 같이 쓰자.",
+     "tip": "",
+     "sentences": 348,
+     "perMillion": 784.9
     },
     {
      "id": "es-out-33",
-     "text": "rebajas",
-     "meaning": "세일",
-     "example": "Ahora hay rebajas.",
-     "exampleKo": "지금 세일 중이야.",
+     "text": "¿Tienes frío? Ponte esto.",
+     "meaning": "추워? 이거 입어",
+     "example": "Por la noche refresca. ¿Tienes frío? Ponte esto.",
+     "exampleKo": "밤엔 쌀쌀해. 추워? 이거 입어.",
      "tip": "",
-     "sentences": 7,
-     "perMillion": 15.8
+     "sentences": 884,
+     "perMillion": 1993.8
     },
     {
      "id": "es-out-34",
-     "text": "Hay mucha gente.",
-     "meaning": "사람 많다",
-     "example": "Hoy hay mucha gente.",
-     "exampleKo": "오늘 사람 많다.",
+     "text": "Siéntate aquí.",
+     "meaning": "여기 앉아",
+     "example": "Hay un sitio libre. Siéntate aquí.",
+     "exampleKo": "빈자리 있어. 여기 앉아.",
      "tip": "",
-     "sentences": 337,
-     "perMillion": 760.1
+     "sentences": 69,
+     "perMillion": 155.6
     },
     {
      "id": "es-out-35",
-     "text": "Hay poca gente.",
-     "meaning": "사람 별로 없다",
-     "example": "Entre semana hay poca gente.",
-     "exampleKo": "평일이라 사람이 적네.",
+     "text": "Voy a buscarte.",
+     "meaning": "데리러 갈게",
+     "example": "Voy a buscarte a la estación.",
+     "exampleKo": "역까지 데리러 갈게.",
      "tip": "",
-     "sentences": 39,
-     "perMillion": 88.0
+     "sentences": 10,
+     "perMillion": 22.6
     },
     {
      "id": "es-out-36",
-     "text": "¿Está abierto?",
-     "meaning": "열었어요?",
-     "example": "¿Está abierto todavía?",
-     "exampleKo": "아직 열었어요?",
+     "text": "Hoy te enseño la ciudad.",
+     "meaning": "오늘은 내가 안내할게",
+     "example": "Hoy te enseño la ciudad. Sígueme.",
+     "exampleKo": "오늘은 내가 도시를 보여 줄게. 따라와.",
      "tip": "",
-     "sentences": 49,
-     "perMillion": 110.5
+     "sentences": 1800,
+     "perMillion": 4059.8
     },
     {
      "id": "es-out-37",
-     "text": "Está cerrado.",
-     "meaning": "닫았어요",
-     "example": "Ya está cerrado.",
-     "exampleKo": "벌써 닫았어요.",
+     "text": "¿Te acuerdas de este sitio?",
+     "meaning": "여기 기억나?",
+     "example": "¿Te acuerdas de este sitio? Aquí nos conocimos.",
+     "exampleKo": "여기 기억나? 우리 여기서 처음 만났잖아.",
      "tip": "",
-     "sentences": 29,
-     "perMillion": 65.4
-    },
-    {
-     "id": "es-out-38",
-     "text": "¿Hay wifi?",
-     "meaning": "와이파이 있어요?",
-     "example": "¿Hay wifi aquí?",
-     "exampleKo": "여기 와이파이 있어요?",
-     "tip": ""
-    },
-    {
-     "id": "es-out-39",
-     "text": "Necesito cargar mi celular.",
-     "meaning": "폰 충전해야 해요",
-     "example": "Necesito cargar mi celular.",
-     "exampleKo": "폰 충전해야 해요.",
-     "tip": ""
-    },
-    {
-     "id": "es-out-40",
-     "text": "¿Cómo llego?",
-     "meaning": "어떻게 가요?",
-     "example": "¿Cómo llego hasta allá?",
-     "exampleKo": "거기 어떻게 가요?",
-     "tip": "",
-     "sentences": 30,
-     "perMillion": 67.7
+     "sentences": 85,
+     "perMillion": 191.7
     }
    ]
   },
@@ -3451,14 +3445,6 @@
     },
     {
      "id": "es-plans-11",
-     "text": "¿Dónde quedamos?",
-     "meaning": "어디서 만나?",
-     "example": "¿Dónde quedamos mañana?",
-     "exampleKo": "내일 어디서 만나?",
-     "tip": ""
-    },
-    {
-     "id": "es-plans-12",
      "text": "En la estación.",
      "meaning": "역에서",
      "example": "Te espero en la estación.",
@@ -3468,7 +3454,7 @@
      "perMillion": 295.5
     },
     {
-     "id": "es-plans-13",
+     "id": "es-plans-12",
      "text": "Voy a llegar tarde.",
      "meaning": "늦을 거야",
      "example": "Perdón, voy a llegar cinco minutos tarde.",
@@ -3478,7 +3464,7 @@
      "perMillion": 300.0
     },
     {
-     "id": "es-plans-14",
+     "id": "es-plans-13",
      "text": "Llego a tiempo.",
      "meaning": "제시간에 도착해",
      "example": "Si me apuro, llego a tiempo.",
@@ -3488,7 +3474,7 @@
      "perMillion": 960.8
     },
     {
-     "id": "es-plans-15",
+     "id": "es-plans-14",
      "text": "cancelar",
      "meaning": "취소하다",
      "example": "Cancelé la reserva.",
@@ -3498,7 +3484,7 @@
      "perMillion": 133.1
     },
     {
-     "id": "es-plans-16",
+     "id": "es-plans-15",
      "text": "Lo estoy esperando con ansias.",
      "meaning": "너무 기대돼",
      "example": "Espero con ansias el viaje de la próxima semana.",
@@ -3508,7 +3494,7 @@
      "perMillion": 11.3
     },
     {
-     "id": "es-plans-17",
+     "id": "es-plans-16",
      "text": "irse de viaje",
      "meaning": "여행 가다",
      "example": "Vámonos de viaje en vacaciones.",
@@ -3516,7 +3502,7 @@
      "tip": ""
     },
     {
-     "id": "es-plans-18",
+     "id": "es-plans-17",
      "text": "Vamos juntos.",
      "meaning": "같이 가자",
      "example": "¡Vamos juntos a la fiesta!",
@@ -3526,7 +3512,7 @@
      "perMillion": 27.1
     },
     {
-     "id": "es-plans-19",
+     "id": "es-plans-18",
      "text": "¿Ya decidiste?",
      "meaning": "정했어?",
      "example": "¿Ya decidiste adónde ir?",
@@ -3534,7 +3520,7 @@
      "tip": ""
     },
     {
-     "id": "es-plans-20",
+     "id": "es-plans-19",
      "text": "Todavía no decido.",
      "meaning": "아직 안 정했어",
      "example": "Todavía no decido.",
@@ -3542,7 +3528,7 @@
      "tip": ""
     },
     {
-     "id": "es-plans-21",
+     "id": "es-plans-20",
      "text": "Lo pienso.",
      "meaning": "생각해 볼게",
      "example": "Mmm, lo pienso.",
@@ -3552,7 +3538,7 @@
      "perMillion": 18.0
     },
     {
-     "id": "es-plans-22",
+     "id": "es-plans-21",
      "text": "Cuando quieras.",
      "meaning": "언제든 좋아",
      "example": "Cuando quieras, me adapto.",
@@ -3562,7 +3548,7 @@
      "perMillion": 92.5
     },
     {
-     "id": "es-plans-23",
+     "id": "es-plans-22",
      "text": "Otro día será.",
      "meaning": "다음에 하자",
      "example": "Hoy no puedo, otro día será.",
@@ -3572,7 +3558,7 @@
      "perMillion": 306.7
     },
     {
-     "id": "es-plans-24",
+     "id": "es-plans-23",
      "text": "Te aviso.",
      "meaning": "알려 줄게",
      "example": "Cuando sepa la hora, te aviso.",
@@ -3582,7 +3568,7 @@
      "perMillion": 24.8
     },
     {
-     "id": "es-plans-25",
+     "id": "es-plans-24",
      "text": "el cumpleaños",
      "meaning": "생일",
      "example": "¿Cuándo es tu cumpleaños?",
@@ -3592,7 +3578,7 @@
      "perMillion": 1145.8
     },
     {
-     "id": "es-plans-26",
+     "id": "es-plans-25",
      "text": "el aniversario",
      "meaning": "기념일",
      "example": "La próxima semana es nuestro aniversario.",
@@ -3602,7 +3588,7 @@
      "perMillion": 85.7
     },
     {
-     "id": "es-plans-27",
+     "id": "es-plans-26",
      "text": "celebrar",
      "meaning": "축하하다",
      "example": "¡Vamos a celebrar que aprobaste!",
@@ -3612,7 +3598,7 @@
      "perMillion": 124.0
     },
     {
-     "id": "es-plans-28",
+     "id": "es-plans-27",
      "text": "el regalo",
      "meaning": "선물",
      "example": "¿Qué regalo quieres de cumpleaños?",
@@ -3622,7 +3608,7 @@
      "perMillion": 994.7
     },
     {
-     "id": "es-plans-29",
+     "id": "es-plans-28",
      "text": "las vacaciones",
      "meaning": "휴가",
      "example": "¿Adónde vas de vacaciones?",
@@ -3632,7 +3618,7 @@
      "perMillion": 1296.9
     },
     {
-     "id": "es-plans-30",
+     "id": "es-plans-29",
      "text": "Navidad",
      "meaning": "크리스마스",
      "example": "En Navidad vamos con la familia.",
@@ -3642,7 +3628,7 @@
      "perMillion": 1019.5
     },
     {
-     "id": "es-plans-31",
+     "id": "es-plans-30",
      "text": "Año Nuevo",
      "meaning": "새해",
      "example": "En Año Nuevo comemos uvas.",
@@ -3652,7 +3638,7 @@
      "perMillion": 157.9
     },
     {
-     "id": "es-plans-32",
+     "id": "es-plans-31",
      "text": "Semana Santa",
      "meaning": "부활절 주간",
      "example": "En Semana Santa viajo a casa.",
@@ -3662,7 +3648,7 @@
      "perMillion": 45.1
     },
     {
-     "id": "es-plans-33",
+     "id": "es-plans-32",
      "text": "¿Como a qué hora?",
      "meaning": "몇 시쯤?",
      "example": "¿Como a qué hora llegas?",
@@ -3670,15 +3656,7 @@
      "tip": ""
     },
     {
-     "id": "es-plans-34",
-     "text": "Ya casi llego.",
-     "meaning": "거의 다 왔어",
-     "example": "Salí hace rato, ya casi llego.",
-     "exampleKo": "좀 전에 나왔어, 거의 다 왔어.",
-     "tip": ""
-    },
-    {
-     "id": "es-plans-35",
+     "id": "es-plans-33",
      "text": "Me voy a tardar un poco.",
      "meaning": "좀 늦을 거야",
      "example": "Me voy a tardar un poco por el trabajo.",
@@ -3686,7 +3664,7 @@
      "tip": ""
     },
     {
-     "id": "es-plans-36",
+     "id": "es-plans-34",
      "text": "Ve yendo tú.",
      "meaning": "먼저 가 있어",
      "example": "Ve yendo tú, yo llego luego.",
@@ -3694,7 +3672,7 @@
      "tip": ""
     },
     {
-     "id": "es-plans-37",
+     "id": "es-plans-35",
      "text": "Pásame a buscar.",
      "meaning": "데리러 와",
      "example": "Pásame a buscar a la estación.",
@@ -3704,7 +3682,7 @@
      "perMillion": 295.5
     },
     {
-     "id": "es-plans-38",
+     "id": "es-plans-36",
      "text": "quedarse a dormir",
      "meaning": "자고 가다",
      "example": "¿Te quedas a dormir hoy?",
@@ -3712,7 +3690,7 @@
      "tip": ""
     },
     {
-     "id": "es-plans-39",
+     "id": "es-plans-37",
      "text": "hacer un plan",
      "meaning": "계획을 세우다",
      "example": "Hagamos un plan para el viaje.",
@@ -3720,7 +3698,7 @@
      "tip": ""
     },
     {
-     "id": "es-plans-40",
+     "id": "es-plans-38",
      "text": "¿Estás listo?",
      "meaning": "준비됐어?",
      "example": "¿Estás listo? Ya salimos.",

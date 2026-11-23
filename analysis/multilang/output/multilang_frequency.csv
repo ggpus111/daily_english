@@ -1,570 +1,570 @@
 ﻿lang,pack,text,tatoeba,zipf
-ko,love,사랑해.,28,5.78
-ko,love,좋아해.,112,6.09
-ko,love,너한테 푹 빠졌어.,0,3.93
-ko,love,넌 나한테 정말 소중해.,0,4.66
-ko,love,마음에 들어.,11,5.56
-ko,love,첫눈에 반했어.,1,0.0
-ko,love,너랑 있으면 행복해.,15,5.29
-ko,love,만나서 다행이야.,0,4.73
-ko,love,자기야,3,5.51
-ko,love,네가 최고야!,5,5.41
-ko,love,설레.,0,3.88
-ko,love,계속 네 생각만 나.,1,5.85
-ko,love,넌 내 전부야.,0,4.97
-ko,love,뽀뽀,3,3.83
-ko,love,좋은 꿈 꿔.,2,5.26
-ko,love,너무 귀여워.,6,3.82
-ko,love,우리 사귈래?,1,0.0
-ko,miss,보고 싶어.,12,5.86
-ko,miss,벌써 보고 싶어.,0,4.9
-ko,miss,빨리 보고 싶어!,0,5.11
-ko,miss,손꼽아 기다리고 있어.,0,3.3
-ko,miss,네가 여기 있으면 좋겠다.,0,5.63
-ko,miss,네 생각 하고 있었어.,0,5.88
-ko,miss,또 보자!,0,5.61
-ko,miss,너 없으니까 허전해.,0,3.35
-ko,miss,목소리 듣고 싶어.,21,4.98
-ko,miss,꼭 안아 주고 싶어.,0,5.71
-ko,miss,머릿속에 온통 너야.,0,3.92
-ko,miss,빨리 와.,4,5.18
-ko,miss,기다릴게.,1,4.15
-ko,miss,우리 언제 만나?,0,5.1
-ko,text,ㅋㅋ,0,4.17
-ko,text,ㅎㅎ,0,4.31
-ko,text,ㅇㅇ,0,3.22
-ko,text,ㄱㄱ,0,0.0
-ko,text,ㅠㅠ,0,4.25
-ko,text,ㄴㄴ,0,0.0
-ko,text,ㄱㅅ,0,0.0
-ko,text,ㅈㅅ,0,0.0
-ko,text,ㅇㅋ,0,0.0
-ko,text,뭐 해?,5,5.82
-ko,text,굿밤,0,4.35
-ko,text,대박,0,4.31
-ko,text,헐,1,4.08
-ko,text,레알,0,4.23
-ko,text,ㄹㅇ,0,0.0
-ko,text,ㅊㅋ,0,0.0
-ko,text,꿀잼,0,3.74
-ko,text,오키,2,3.79
-ko,chat,뭐 하고 있어?,4,5.78
-ko,chat,오늘 하루 어땠어?,4,3.88
-ko,chat,그냥 있어.,0,5.6
-ko,chat,나도!,37,6.53
-ko,chat,쉬는 중이야.,0,5.18
-ko,chat,말도 안 돼!,1,5.36
-ko,chat,대박이다!,0,4.31
-ko,chat,내 말이.,2,6.08
-ko,chat,있잖아!,4,5.17
-ko,chat,무슨 일 있어?,25,5.38
-ko,chat,밥 먹었어?,2,4.9
-ko,chat,요즘 어때?,0,4.25
-ko,chat,수고했어.,2,4.56
-ko,chat,그렇구나.,2,5.11
-ko,chat,재밌다!,0,5.04
-ko,chat,진짜?,156,5.63
-ko,chat,늘 똑같지 뭐.,0,4.8
-ko,chat,요즘 뭐에 빠져 있어?,1,4.64
-ko,tease,바보야.,16,4.67
-ko,tease,장난이야.,0,4.85
-ko,tease,하지 마!,65,5.54
-ko,tease,꿈 깨.,0,4.88
-ko,tease,어림없지.,0,0.0
-ko,tease,하나도 안 웃겨.,0,3.77
-ko,tease,오버하지 마.,0,4.51
-ko,tease,맘대로 해.,1,0.0
-ko,tease,너무해!,0,5.74
-ko,tease,속았지!,0,5.54
-ko,tease,딱 걸렸어!,11,4.37
-ko,tease,누가 그래?,1,4.92
-ko,tease,진짜 못 말려.,0,3.95
-ko,tease,잘난 척하지 마.,0,3.72
-ko,tease,뻥이야!,1,3.78
-ko,tease,콜!,12,4.6
-ko,tease,귀요미,0,3.3
-ko,date,오늘 밤 시간 돼?,0,5.35
-ko,date,밥 먹으러 갈래?,0,4.08
-ko,date,그럼 약속한 거다.,0,4.95
-ko,date,데리러 갈까?,0,3.96
-ko,date,몇 시가 편해?,0,3.65
-ko,date,약속 미뤄도 돼?,0,0.0
-ko,date,갑자기 일이 생겼어.,1,4.97
-ko,date,10분 뒤에 도착해.,4,4.98
-ko,date,어디서 볼까?,1,4.47
-ko,date,더치페이하자.,1,0.0
-ko,date,오늘은 내가 살게.,0,5.75
-ko,date,우리 집에서 영화 볼래?,0,3.93
-ko,date,도착하면 연락해.,0,4.65
-ko,date,집까지 데려다줄게.,0,0.0
-ko,date,오늘 진짜 즐거웠어.,1,4.12
-ko,date,또 가자!,0,5.66
-ko,date,오늘 약속 그대로지?,0,5.02
-ko,call,들려?,9,4.46
-ko,call,소리가 끊겨.,0,3.04
-ko,call,화면 멈췄어.,4,3.61
-ko,call,전화해도 돼?,0,4.94
-ko,call,이따 다시 전화할게.,0,5.19
-ko,call,영상통화하자.,0,4.57
-ko,call,거기 지금 몇 시야?,2,4.12
-ko,call,여기는 늦었어.,4,5.14
-ko,call,시차,0,3.57
-ko,call,음소거돼 있어.,0,3.25
-ko,call,카메라 켜 줘.,0,4.46
-ko,call,통화하다 잠들었어.,1,0.0
-ko,call,장거리 연애,1,3.95
-ko,call,안 자고 기다릴게.,0,6.04
-ko,call,너 먼저 끊어.,0,4.62
-ko,call,내일 또 얘기하자.,0,5.17
-ko,call,나 보여?,55,5.4
-ko,fight,그런 뜻 아니었어.,0,5.19
-ko,fight,우리 얘기 좀 할래?,3,5.22
-ko,fight,잠깐 혼자 있고 싶어.,0,5.19
-ko,fight,상처받았어.,0,4.75
-ko,fight,우리 싸우지 말자.,0,4.69
-ko,fight,내가 말이 심했어.,0,3.66
-ko,fight,우리 괜찮은 거지?,0,5.3
-ko,fight,화해하자.,0,4.14
-ko,fight,용서할게.,0,4.41
-ko,fight,그렇게 말 안 했어.,0,5.97
-ko,fight,내가 잘못했어.,0,5.2
-ko,fight,화내지 마.,2,3.99
-ko,fight,너한테 화난 거 아니야.,0,3.71
-ko,fight,처음부터 다시 하자.,0,5.65
-ko,fight,무슨 말인지 알아.,3,5.09
-ko,fight,이제 다 풀렸어.,0,3.72
-ko,fight,속상하게 해서 미안해.,0,0.0
-ko,care,내가 있잖아.,1,5.14
-ko,care,넌 할 수 있어!,26,6.1
-ko,care,속상하겠다.,0,0.0
-ko,care,몸 잘 챙겨.,0,4.43
-ko,care,푹 쉬어.,0,4.15
-ko,care,빨리 나아.,1,5.17
-ko,care,다 잘될 거야.,0,5.51
-ko,care,네가 자랑스러워.,4,4.39
-ko,care,조금만 힘내.,6,4.12
-ko,care,얘기하고 싶어?,0,5.24
-ko,care,최선을 다했잖아.,0,3.78
-ko,care,난 네 편이야.,1,5.26
-ko,care,무리하지 마.,1,4.69
-ko,care,조심히 들어가.,0,3.79
-ko,care,난 너 믿어.,0,5.18
-ko,care,너무 자책하지 마.,0,3.57
-ko,care,필요한 거 있으면 말해.,0,5.65
-ko,react,오늘 진짜 예쁘다!,5,3.33
-ko,react,너무 다정하다.,1,3.94
-ko,react,귀여워!,6,3.82
-ko,react,좋다!,62,6.34
-ko,react,잘됐다!,0,5.57
-ko,react,웃겨 죽겠어.,0,3.76
-ko,react,내 일처럼 기뻐.,0,5.58
-ko,react,맛있겠다!,0,4.9
-ko,react,대단하다!,1,4.87
-ko,react,재능 있다.,5,4.49
-ko,react,덕분에 힘이 났어.,0,4.88
-ko,react,완전 빠졌어.,0,4.22
-ko,react,완전 너답다.,0,5.16
-ko,react,멋있다!,4,4.39
-ko,react,부럽다!,1,3.8
-ko,react,천재야!,2,4.43
-ko,react,짱이다!,1,4.43
-ko,culture,무슨 뜻이야?,10,5.09
-ko,culture,이거 한국어로 뭐라고 해?,1,5.67
-ko,culture,다시 말해 줄래?,1,5.64
-ko,culture,조금 천천히 말해 줄래?,2,4.54
-ko,culture,한국에서는 원래 그래?,1,5.8
-ko,culture,아직 한국어 배우는 중이야.,0,5.23
-ko,culture,내가 맞게 말했어?,0,5.63
-ko,culture,틀리면 고쳐 줘.,0,4.05
-ko,culture,이거 반말해도 돼?,0,3.18
-ko,culture,우리나라에서는 ~해.,1,5.42
-ko,culture,영어 좀 알려 줄게.,0,5.09
-ko,culture,진짜 신기하다.,0,4.37
-ko,culture,이거 뭐라고 불러?,1,4.79
-ko,culture,번역하면 느낌이 안 살아.,0,4.8
-ko,culture,잘 못 알아들었어.,0,0.0
-ko,culture,부모님 뵙는 거 긴장돼.,0,4.03
-ko,culture,그 말 처음 들어.,1,5.51
-ko,daily,안녕!,42,5.37
-ko,daily,좋은 아침.,5,5.25
-ko,daily,잘 지내?,18,4.86
-ko,daily,그럭저럭.,1,3.61
-ko,daily,고마워.,23,4.97
-ko,daily,천만에.,2,4.69
-ko,daily,괜찮아.,27,5.33
-ko,daily,미안해.,35,5.04
-ko,daily,또 봐.,1,5.35
-ko,daily,조심히 가.,0,3.8
-ko,daily,다녀왔어.,2,4.14
-ko,daily,어서 와.,1,5.82
-ko,daily,배고파.,4,3.96
-ko,daily,졸려.,8,3.22
-ko,daily,피곤해.,13,4.62
-ko,daily,더워.,10,3.54
-ko,daily,추워.,15,3.98
-ko,daily,날씨 좋다.,0,4.7
-ko,daily,비 와.,0,5.63
-ko,daily,잠깐만.,8,4.79
-ko,daily,지금 몇 시야?,2,4.12
-ko,daily,어디야?,3,5.42
-ko,daily,뭐 먹고 싶어?,3,5.42
-ko,daily,아무거나 좋아.,2,3.82
-ko,daily,진짜 맛있다!,2,4.92
-ko,daily,알았어.,27,5.82
-ko,daily,잘 부탁해.,1,5.18
-ko,daily,먼저 갈게.,0,3.58
-ko,daily,잘 자.,4,5.92
-ko,daily,힘내!,6,4.12
-ko,daily,오랜만이야.,1,4.46
-ko,daily,너는?,131,5.8
-ko,daily,맛있게 먹어.,1,4.86
-ko,daily,잘 먹겠습니다.,1,5.52
-ko,daily,잘 먹었습니다.,1,5.57
-ko,daily,건강해.,3,4.98
-ko,routine,일어났어?,11,4.62
-ko,routine,늦잠 잤어!,5,3.27
-ko,routine,세수하다,1,3.59
-ko,routine,이를 닦다,0,4.49
-ko,routine,샤워하다,10,4.42
-ko,routine,아침을 먹다,74,5.29
-ko,routine,지하철을 타다,23,4.64
-ko,routine,버스를 타다,66,5.07
-ko,routine,출근하다,4,4.31
-ko,routine,퇴근하다,2,4.22
-ko,routine,학교에 가다,126,5.66
-ko,routine,점심,23,4.74
-ko,routine,야근하다,1,3.62
-ko,routine,집에 가다,14,5.78
-ko,routine,저녁을 만들다,33,5.11
-ko,routine,빨래하다,1,3.88
-ko,routine,청소하다,9,4.55
-ko,routine,장 보다,401,5.6
-ko,routine,집에 있다,31,5.77
-ko,routine,드라마를 보다,12,5.07
-ko,routine,음악을 듣다,45,5.25
-ko,routine,운동하다,36,5.33
-ko,routine,산책하다,20,4.39
-ko,routine,목욕하다,7,4.08
-ko,routine,잘 준비하다,0,5.38
-ko,routine,일찍 일어나다,2,4.56
-ko,routine,밤새다,9,4.1
-ko,routine,다시 자다,0,5.66
-ko,routine,도시락,0,3.97
-ko,routine,편의점,2,4.18
-ko,routine,쉬는 날,0,5.13
-ko,routine,주말,34,4.81
-ko,routine,평일,0,4.13
-ko,routine,매일,58,5.1
-ko,routine,항상,68,5.3
-ko,routine,가끔,25,4.92
-ko,routine,재택근무,0,0.0
-ko,routine,잠깐 쉬다,0,4.66
-ko,routine,폰을 보다,24,4.88
-ko,routine,준비하다,26,5.46
-ko,out,얼마예요?,8,0.0
-ko,out,이걸로 주세요.,2,4.26
-ko,out,카드 돼요?,10,5.16
-ko,out,봉투는 괜찮아요.,6,4.05
-ko,out,화장실이 어디예요?,19,4.71
-ko,out,지하철역이 어디예요?,1,3.55
-ko,out,길을 잃었어요.,7,4.93
-ko,out,쭉 가세요.,1,4.27
-ko,out,오른쪽,8,4.73
-ko,out,왼쪽,4,4.76
-ko,out,가까워요.,1,3.92
-ko,out,멀어요.,4,4.76
-ko,out,두 명이에요.,7,5.7
-ko,out,예약했어요.,11,4.89
-ko,out,메뉴판 주세요.,0,3.12
-ko,out,추천 메뉴가 뭐예요?,4,5.28
-ko,out,계산해 주세요.,18,4.72
-ko,out,포장해 주세요.,1,4.41
-ko,out,여기서 먹을게요.,42,5.47
-ko,out,저기요!,3,4.74
-ko,out,자리 있어요?,35,5.34
-ko,out,줄이 길어.,227,5.81
-ko,out,지하철이 늦어.,8,5.15
-ko,out,환승,1,3.69
-ko,out,표,70,4.99
-ko,out,택시를 타다,24,4.58
-ko,out,사진 찍어 주세요.,29,5.52
-ko,out,같이 사진 찍자.,0,5.35
-ko,out,입어 봐도 돼요?,0,4.61
-ko,out,더 큰 사이즈 있어요?,2,5.5
-ko,out,싸다!,5,4.78
-ko,out,비싸다.,4,4.3
-ko,out,세일,7,3.9
-ko,out,사람 많다.,3,5.79
-ko,out,사람 없다.,0,6.06
-ko,out,열었어요?,8,5.5
-ko,out,닫았어요.,6,4.6
-ko,out,와이파이 있어요?,1,3.91
-ko,out,충전하고 싶어요.,3,4.51
-ko,out,어떻게 가요?,4,0.0
-ko,feelings,기뻐.,9,4.18
-ko,feelings,슬퍼.,7,3.73
-ko,feelings,외로워.,17,3.56
-ko,feelings,무서워.,23,4.43
-ko,feelings,부끄러워.,5,3.88
-ko,feelings,분해.,5,4.1
-ko,feelings,짜증 나.,5,4.53
-ko,feelings,긴장돼.,5,4.54
-ko,feelings,다행이다.,18,4.85
-ko,feelings,깜짝 놀랐어.,6,4.48
-ko,feelings,열받아.,0,5.44
-ko,feelings,행복해.,47,5.31
-ko,feelings,감동했어.,7,4.63
-ko,feelings,그립다.,1,4.1
-ko,feelings,귀찮아.,9,4.36
-ko,feelings,지루해.,12,4.19
-ko,feelings,편안해.,8,4.37
-ko,feelings,찜찜해.,0,3.64
-ko,feelings,친구,123,5.7
-ko,feelings,절친,0,4.01
-ko,feelings,남자친구,11,5.45
-ko,feelings,여자친구,15,5.48
-ko,feelings,가족,25,5.43
-ko,feelings,부모님,24,5.08
-ko,feelings,형제,25,4.8
-ko,feelings,사이가 좋다,1,5.35
-ko,feelings,잘 맞다,2,5.67
-ko,feelings,다정한 사람,1,3.94
-ko,feelings,재밌는 사람,4,5.04
-ko,feelings,신경 쓰이다,1,0.0
-ko,feelings,믿다,77,5.31
-ko,feelings,걱정하다,45,5.17
-ko,feelings,싸우다,7,4.0
-ko,feelings,기운이 없다,1,4.38
-ko,feelings,의욕이 없다,2,4.48
-ko,feelings,기분이 좋다,6,5.26
-ko,feelings,기분이 안 좋다,2,5.23
-ko,feelings,울다,13,4.91
-ko,plans,다음에,9,5.68
-ko,plans,내일,88,5.2
-ko,plans,모레,2,3.53
-ko,plans,다음 주,7,5.62
-ko,plans,이번 주말,5,4.74
-ko,plans,다음 달,3,5.39
-ko,plans,약속 있어?,21,4.97
-ko,plans,시간 돼.,0,5.35
-ko,plans,안 될 것 같아.,3,5.73
-ko,plans,몇 시가 좋아?,0,5.38
-ko,plans,어디서 만나?,0,5.13
-ko,plans,역에서 만나.,11,4.96
-ko,plans,늦을 것 같아.,5,5.16
-ko,plans,시간에 맞다,0,5.61
-ko,plans,취소하다,8,4.7
-ko,plans,기대돼.,13,5.21
-ko,plans,여행 가다,32,5.07
-ko,plans,같이 가자.,2,5.7
-ko,plans,정했어?,20,3.88
-ko,plans,아직 안 정했어.,0,3.88
-ko,plans,생각해 볼게.,0,5.48
-ko,plans,언제든 좋아.,3,5.09
-ko,plans,다음에 하자.,0,5.58
-ko,plans,또 연락할게.,0,4.92
-ko,plans,생일,54,4.75
-ko,plans,기념일,1,3.85
-ko,plans,축하하다,40,4.96
-ko,plans,선물,24,5.18
-ko,plans,여름방학,4,4.18
-ko,plans,설날,2,3.79
-ko,plans,추석,3,4.46
-ko,plans,크리스마스,19,4.44
-ko,plans,몇 시쯤?,0,4.97
-ko,plans,금방 갈게.,7,4.45
-ko,plans,좀 늦어.,2,5.08
-ko,plans,먼저 가 있어.,0,5.28
-ko,plans,데리러 와.,2,4.46
-ko,plans,자고 가다,0,0.0
-ko,plans,계획을 세우다,24,5.43
-ko,plans,준비됐어?,3,5.27
-ko,connect,근데,15,5.45
-ko,connect,그래서,12,5.47
-ko,connect,그리고,12,5.83
-ko,connect,그런데,3,5.2
-ko,connect,사실은,6,5.67
-ko,connect,예를 들면,1,5.53
-ko,connect,결국,17,5.25
-ko,connect,먼저,12,5.29
-ko,connect,그다음에,3,5.63
-ko,connect,게다가,2,4.62
-ko,connect,그래도,2,5.23
-ko,connect,어쨌든,2,4.25
-ko,connect,솔직히,1,4.77
-ko,connect,아마,43,4.88
-ko,connect,꼭,13,5.32
-ko,connect,만약,22,4.93
-ko,connect,~는데,131,6.28
-ko,connect,~니까,390,5.83
-ko,connect,~면,556,6.55
-ko,connect,~때,290,6.22
-ko,connect,갑자기,9,4.94
-ko,connect,바로,51,5.67
-ko,connect,점점,9,4.8
-ko,connect,드디어,12,4.65
-ko,connect,아직,132,5.51
-ko,connect,벌써,22,4.95
-ko,connect,방금,9,4.92
-ko,connect,계속,59,5.51
-ko,connect,자주,39,5.0
-ko,connect,한 번도,11,5.99
-ko,connect,거의,48,5.29
-ko,connect,특히,4,5.22
-ko,connect,조금,50,5.42
-ko,connect,너무,204,5.79
-ko,connect,많이,82,5.67
-ko,connect,아까,4,4.74
-ko,connect,이따,6,4.21
-ko,connect,나중에,23,5.05
-ko,trouble,폰을 잃어버렸어.,17,3.92
-ko,trouble,지갑을 두고 왔어.,0,5.42
-ko,trouble,배터리가 없어.,2,4.42
-ko,trouble,막차를 놓쳤어.,0,3.28
-ko,trouble,차가 막혀.,0,3.82
-ko,trouble,감기 걸렸어.,25,4.29
-ko,trouble,열이 나.,153,5.53
-ko,trouble,머리가 아파.,2,4.49
-ko,trouble,배가 아파.,1,4.5
-ko,trouble,병원에 가다,23,5.28
-ko,trouble,약을 먹다,123,5.43
-ko,trouble,고장 났어.,20,4.27
-ko,trouble,안 돼.,22,5.41
-ko,trouble,인터넷이 안 돼.,8,5.3
-ko,trouble,비밀번호를 까먹었어.,3,3.98
-ko,trouble,잘못했어.,31,5.22
-ko,trouble,모르겠어.,58,5.57
-ko,trouble,도와줘.,12,0.0
-ko,trouble,살려 줘!,2,4.51
-ko,trouble,곤란해.,4,4.35
-ko,trouble,어떡하지?,1,4.77
-ko,trouble,큰일 났다!,3,4.17
-ko,trouble,서둘러!,10,3.78
-ko,trouble,지각하겠어.,10,4.22
-ko,trouble,열쇠를 잃어버렸어.,25,4.09
-ko,trouble,두고 온 거 없어?,0,5.4
-ko,trouble,쏟았어.,0,4.5
-ko,trouble,다쳤어.,9,3.75
-ko,trouble,사고가 났어.,29,5.19
-ko,trouble,충전기 있어?,1,3.64
-ko,trouble,답장이 없어.,11,3.88
-ko,trouble,읽씹,0,4.2
-ko,trouble,돈이 모자라.,1,3.99
-ko,trouble,잠이 안 와.,1,5.08
-ko,trouble,말이 안 통해.,0,4.67
-ko,trouble,진정해.,13,4.93
-ko,trouble,어떻게든 될 거야.,1,0.0
-ko,trouble,어쩔 수 없지.,6,4.66
-ko,trouble,아차!,2,3.26
-ko,reply,응.,34,5.25
-ko,reply,아니.,210,6.25
-ko,reply,맞아.,11,5.77
-ko,reply,와!,399,6.53
-ko,reply,설마!,5,4.51
-ko,reply,좋아!,415,6.21
-ko,reply,당연하지!,6,4.82
-ko,reply,음…,334,5.67
-ko,reply,그냥 그래.,0,5.06
-ko,reply,상관없어.,8,4.44
-ko,reply,그래?,100,5.19
-ko,reply,"아니야, 아직 멀었어.",0,4.68
-ko,reply,덕분이야.,4,4.82
-ko,reply,부탁해!,48,5.24
-ko,reply,해도 돼?,8,5.14
-ko,reply,"그래, 해.",100,5.19
-ko,reply,신경 쓰지 마.,6,4.87
-ko,reply,아쉽다.,4,4.33
-ko,reply,아~,2658,6.67
-ko,reply,응? 뭐?,0,5.16
-ko,reply,앗싸!,0,3.21
-ko,reply,축하해!,40,4.96
-ko,reply,꼭 그렇진 않아.,0,5.04
-ko,reply,알아!,91,6.05
-ko,reply,몰랐어.,43,4.76
-ko,reply,문제없어.,1,5.66
-ko,reply,알겠어.,11,5.92
-ko,reply,네 말대로 해.,0,5.23
-ko,reply,그러니까.,3,4.74
-ko,reply,아이고.,1,5.71
-ko,polite,처음 뵙겠습니다.,1,4.05
-ko,polite,잘 부탁드립니다.,1,0.0
-ko,polite,안녕하세요.,14,5.29
-ko,polite,감사합니다.,20,5.43
-ko,polite,고맙습니다.,6,4.87
-ko,polite,죄송합니다.,19,4.98
-ko,polite,실례합니다.,10,4.0
-ko,polite,오랜만이에요.,2,0.0
-ko,polite,잘 지내셨어요?,0,0.0
-ko,polite,덕분에요.,0,4.81
-ko,polite,많이 드세요.,0,4.12
-ko,polite,별거 아니지만 받아 주세요.,0,4.03
-ko,polite,신세 많이 졌습니다.,3,4.0
-ko,polite,배려해 주셔서 감사합니다.,1,4.22
-ko,polite,수고하셨습니다.,1,4.52
-ko,polite,먼저 들어가겠습니다.,0,5.2
-ko,polite,잠시만 기다려 주세요.,2,4.93
-ko,polite,다시 한번 말씀해 주세요.,3,5.59
-ko,polite,천천히 말씀해 주세요.,17,4.55
-ko,polite,괜찮습니다.,1,5.32
-ko,polite,부탁드려요.,1,4.35
-ko,polite,저도요.,0,3.94
-ko,polite,기다리셨죠?,0,4.89
-ko,polite,앉으세요.,3,4.48
-ko,polite,성함이 어떻게 되세요?,2,3.61
-ko,polite,~씨,86,5.73
-ko,polite,~님,142,6.17
-ko,polite,존댓말,0,0.0
-ko,polite,반말,0,3.18
-ko,polite,생신 축하드려요.,5,3.45
-ko,polite,결혼 축하드려요.,71,5.23
-ko,polite,새해 복 많이 받으세요.,2,3.89
-ko,polite,쾌차하세요.,0,0.0
-ko,polite,건강 조심하세요.,0,4.64
-ko,polite,조심히 가세요.,0,3.8
-ko,polite,어서 오세요.,2,5.56
-ko,polite,들어오세요.,1,4.8
-ko,polite,영광입니다.,1,4.54
-ko,polite,어머님,6,4.08
-ko,polite,아버님,2,3.99
-ko,idioms,일석이조,3,0.0
-ko,idioms,눈치,6,4.37
-ko,idioms,정,526,5.09
-ko,idioms,한,1660,6.92
-ko,idioms,식은 죽 먹기,0,5.02
-ko,idioms,발이 넓다,0,4.6
-ko,idioms,입이 무겁다,0,3.95
-ko,idioms,입이 가볍다,0,4.33
-ko,idioms,손이 크다,0,5.29
-ko,idioms,눈이 높다,0,5.12
-ko,idioms,귀가 얇다,0,4.17
-ko,idioms,배가 아프다,0,4.75
-ko,idioms,목이 빠지게 기다리다,0,0.0
-ko,idioms,열받다,0,5.44
-ko,idioms,죽이 잘 맞다,0,5.39
-ko,idioms,배부르다,1,3.05
-ko,idioms,작심삼일,0,0.0
-ko,idioms,금강산도 식후경,0,3.12
-ko,idioms,칠전팔기,0,0.0
-ko,idioms,티끌 모아 태산,1,2.96
-ko,idioms,가는 말이 고와야 오는 말이 곱다,0,4.04
-ko,idioms,고생 끝에 낙이 온다,0,3.84
-ko,idioms,시작이 반이다,1,5.26
-ko,idioms,우물 안 개구리,0,3.64
-ko,idioms,호랑이도 제 말 하면 온다,0,5.92
-ko,idioms,눈에 넣어도 안 아프다,0,4.83
-ko,idioms,마음이 통하다,0,4.64
-ko,idioms,마음에 들다,23,5.58
-ko,idioms,마음이 아프다,0,4.78
-ko,idioms,마음먹다,2,3.51
-ko,idioms,기가 막히다,0,5.37
-ko,idioms,어이없다,1,3.6
-ko,idioms,황당하다,2,3.96
-ko,idioms,속상하다,0,0.0
-ko,idioms,서운하다,4,3.51
-ko,idioms,섭섭하다,2,3.53
-ko,idioms,뿌듯하다,0,3.82
-ko,idioms,아깝다,1,3.89
-ko,idioms,애틋하다,0,3.47
-ko,idioms,든든하다,1,3.95
-ko,idioms,뭉클하다,0,3.25
-ko,idioms,ㅋㅋㅋ,0,3.92
+zh,love,我爱你。,26,4.5
+zh,love,爱你,50,4.8
+zh,love,我好喜欢你。,50,4.69
+zh,love,你对我很重要。,1,2.58
+zh,love,我对你有感觉。,4,4.42
+zh,love,一见钟情,5,3.31
+zh,love,跟你在一起很开心。,0,1.86
+zh,love,遇见你真好。,0,1.36
+zh,love,宝贝,6,4.56
+zh,love,你最好了！,1,4.16
+zh,love,我心动了。,1,3.77
+zh,love,一直在想你。,5,3.92
+zh,love,你是我的全部。,0,3.27
+zh,love,么么哒,0,1.7
+zh,love,晚安，好梦。,4,3.98
+zh,love,你太可爱了。,1,2.73
+zh,love,做我女朋友好吗？,0,2.48
+zh,miss,我想你。,69,4.95
+zh,miss,已经开始想你了。,0,2.53
+zh,miss,好想早点见到你！,0,2.06
+zh,miss,我在数日子。,0,3.68
+zh,miss,要是你在这里就好了。,0,0.48
+zh,miss,在想你呢。,0,2.53
+zh,miss,下次见！,0,3.5
+zh,miss,没有你好无聊。,21,5.21
+zh,miss,想听你的声音。,0,2.1
+zh,miss,抱抱,2,3.42
+zh,miss,满脑子都是你。,0,0.21
+zh,miss,早点回来。,2,3.08
+zh,miss,我等你。,4,4.11
+zh,miss,什么时候能见面？,0,1.62
+zh,text,哈哈哈,12,4.32
+zh,text,233,0,3.73
+zh,text,666,0,3.31
+zh,text,88,8,4.59
+zh,text,520,1,3.38
+zh,text,好的,479,5.23
+zh,text,嗯嗯,0,3.56
+zh,text,在吗？,10,5.44
+zh,text,干嘛呢？,6,3.55
+zh,text,早安,9,4.18
+zh,text,晚安,20,4.46
+zh,text,真的假的？,1,2.56
+zh,text,绝了,23,3.66
+zh,text,我也是,16,4.42
+zh,text,稍等,12,3.39
+zh,text,谢啦,0,3.48
+zh,text,没事,25,4.52
+zh,text,真的,1082,5.84
+zh,chat,你在干什么？,4,3.41
+zh,chat,今天过得怎么样？,3,2.97
+zh,chat,没干什么。,0,3.4
+zh,chat,我懂你。,18,4.04
+zh,chat,在家休息呢。,139,4.73
+zh,chat,不会吧！,2,4.6
+zh,chat,太厉害了！,18,4.78
+zh,chat,就是说啊。,5,4.02
+zh,chat,跟你说个好消息！,12,4.23
+zh,chat,怎么了？,24,5.03
+zh,chat,吃饭了吗？,3,2.71
+zh,chat,最近怎么样？,1,4.0
+zh,chat,辛苦了！,12,3.41
+zh,chat,原来如此。,4,3.52
+zh,chat,好有意思！,60,4.38
+zh,chat,真的吗？,40,4.76
+zh,chat,老样子。,0,3.89
+zh,chat,最近在追什么剧？,0,3.41
+zh,tease,你好笨啊。,1,2.95
+zh,tease,开玩笑的啦。,22,4.39
+zh,tease,讨厌！,94,4.79
+zh,tease,想得美。,2,3.26
+zh,tease,没门儿。,2,2.65
+zh,tease,一点都不好笑。,4,3.0
+zh,tease,你太夸张了。,5,4.27
+zh,tease,随便你。,23,4.66
+zh,tease,你好坏！,3,3.86
+zh,tease,上当了吧！,6,3.74
+zh,tease,被我发现了！,31,4.75
+zh,tease,谁说的？,3,3.77
+zh,tease,真拿你没办法。,0,2.03
+zh,tease,别得意。,4,3.95
+zh,tease,骗你的！,0,2.89
+zh,tease,走起！,2,4.37
+zh,tease,你是戏精吧。,0,3.25
+zh,date,今晚有空吗？,13,2.81
+zh,date,一起吃饭吧？,3,3.67
+zh,date,那就说定了。,0,3.03
+zh,date,我去接你吧？,22,3.92
+zh,date,你几点方便？,0,3.08
+zh,date,可以改天吗？,3,3.18
+zh,date,突然有事。,1,2.99
+zh,date,十分钟到。,1,2.83
+zh,date,在哪儿见？,9,2.52
+zh,date,我们AA吧。,7,3.55
+zh,date,我请客。,12,3.6
+zh,date,来我家看电影吧？,44,4.58
+zh,date,到家了告诉我。,0,0.48
+zh,date,我送你回家。,12,2.87
+zh,date,今天玩得很开心。,5,1.49
+zh,date,下次再约！,0,2.49
+zh,date,今晚还见吗？,0,3.48
+zh,call,听得到吗？,0,3.29
+zh,call,信号不好。,0,3.61
+zh,call,画面卡住了。,4,2.28
+zh,call,可以给你打电话吗？,13,2.66
+zh,call,我等会儿打给你。,6,3.47
+zh,call,视频吧！,15,5.5
+zh,call,你那边几点？,0,2.0
+zh,call,我这边很晚了。,0,2.29
+zh,call,时差,2,3.32
+zh,call,你静音了。,0,3.16
+zh,call,开一下摄像头。,1,4.05
+zh,call,打着电话睡着了。,27,3.15
+zh,call,异地恋,0,2.57
+zh,call,我等你电话。,0,3.37
+zh,call,你先挂。,39,4.9
+zh,call,明天再聊。,0,2.18
+zh,call,看得到我吗？,0,2.41
+zh,fight,我不是那个意思。,0,3.05
+zh,fight,我们能谈谈吗？,32,4.11
+zh,fight,让我一个人静一静。,3,1.67
+zh,fight,我很受伤。,82,4.95
+zh,fight,别吵了。,0,2.11
+zh,fight,我说得太过分了。,5,3.61
+zh,fight,我们没事吧？,3,3.51
+zh,fight,和好吧。,10,5.15
+zh,fight,我原谅你。,5,3.28
+zh,fight,我没这么说。,0,3.5
+zh,fight,是我不对。,0,3.23
+zh,fight,别生气了。,1,3.57
+zh,fight,我不是生你的气。,1,1.64
+zh,fight,我们重新开始吧。,3,4.15
+zh,fight,我明白你的意思。,4,1.95
+zh,fight,已经不在意了。,8,3.68
+zh,fight,对不起，让你难过了。,0,2.6
+zh,care,有我在。,3,4.48
+zh,care,你可以的！,0,4.17
+zh,care,太惨了吧。,0,2.2
+zh,care,照顾好自己。,2,2.81
+zh,care,好好休息。,3,3.51
+zh,care,多喝热水。,0,1.81
+zh,care,一切都会好的。,2,2.93
+zh,care,我为你骄傲。,0,2.54
+zh,care,再坚持一下。,38,5.27
+zh,care,想聊聊吗？,0,2.81
+zh,care,你已经尽力了。,9,3.4
+zh,care,我永远站在你这边。,1,1.45
+zh,care,别太累了。,0,2.12
+zh,care,路上小心。,8,3.41
+zh,care,我相信你。,43,4.38
+zh,care,别太自责了。,1,3.41
+zh,care,有事随时找我。,0,2.69
+zh,react,你今天好好看！,2,3.9
+zh,react,你真贴心。,0,3.67
+zh,react,好可爱啊！,1,3.77
+zh,react,我喜欢！,206,4.71
+zh,react,太好了！,70,4.02
+zh,react,笑死我了。,8,4.05
+zh,react,真替你高兴。,0,2.58
+zh,react,看起来好好吃！,4,3.48
+zh,react,太棒了！,36,4.0
+zh,react,你好有才华。,5,3.93
+zh,react,你让我开心了一整天。,0,1.9
+zh,react,我超爱这首歌。,1,3.89
+zh,react,很像你的风格。,0,2.91
+zh,react,好帅！,1,3.18
+zh,react,羡慕！,16,4.08
+zh,react,你是天才吧！,26,4.31
+zh,react,厉害了我的…,2,3.78
+zh,culture,什么意思？,31,4.23
+zh,culture,这个用中文怎么说？,25,4.95
+zh,culture,可以再说一遍吗？,9,3.18
+zh,culture,可以说慢一点吗？,8,2.57
+zh,culture,你们那边也这样吗？,0,3.85
+zh,culture,我还在学中文。,1,2.82
+zh,culture,我说得对吗？,0,2.09
+zh,culture,说错了请纠正我。,0,3.28
+zh,culture,这样说不礼貌吗？,8,3.21
+zh,culture,在韩国，我们…,1,4.42
+zh,culture,我教你说韩语。,0,0.72
+zh,culture,好神奇啊。,6,4.42
+zh,culture,这个叫什么？,31,4.5
+zh,culture,翻译过来就不好笑了。,0,3.72
+zh,culture,我没听清楚。,0,3.01
+zh,culture,见你父母我好紧张。,0,2.95
+zh,culture,这个词我第一次听到。,2,3.78
+zh,daily,你好。,94,4.69
+zh,daily,早上好。,7,3.74
+zh,daily,晚上好。,4,4.11
+zh,daily,你好吗？,6,3.68
+zh,daily,我很好。,20,3.91
+zh,daily,还可以。,10,5.06
+zh,daily,谢谢。,123,5.16
+zh,daily,不客气。,3,3.32
+zh,daily,没关系。,28,4.41
+zh,daily,对不起。,60,4.66
+zh,daily,再见。,31,4.47
+zh,daily,慢走。,6,3.59
+zh,daily,我回来了。,5,3.22
+zh,daily,欢迎回来。,3,3.9
+zh,daily,我饿了。,1,2.58
+zh,daily,我困了。,1,2.25
+zh,daily,我累了。,6,2.38
+zh,daily,好热啊。,1,3.97
+zh,daily,好冷啊。,8,3.62
+zh,daily,天气真好。,3,2.71
+zh,daily,下雨了。,60,3.11
+zh,daily,等一下。,35,4.4
+zh,daily,现在几点？,62,4.16
+zh,daily,你在哪儿？,8,2.56
+zh,daily,想吃什么？,9,3.43
+zh,daily,都可以。,59,5.15
+zh,daily,真好吃！,5,3.45
+zh,daily,真开心！,0,3.85
+zh,daily,原来是这样。,1,3.15
+zh,daily,我知道了。,8,3.9
+zh,daily,请多关照。,1,1.62
+zh,daily,我先走了。,1,2.2
+zh,daily,注意安全。,2,3.01
+zh,daily,加油！,11,4.66
+zh,daily,好久不见。,20,3.57
+zh,daily,你呢？,31,4.71
+zh,routine,起床了吗？,143,4.23
+zh,routine,睡过头了！,10,2.74
+zh,routine,洗脸,5,3.36
+zh,routine,刷牙,18,3.33
+zh,routine,洗澡,58,4.21
+zh,routine,吃早饭,15,2.74
+zh,routine,坐地铁,4,3.54
+zh,routine,坐公交,9,3.19
+zh,routine,上班,94,4.61
+zh,routine,下班,27,4.15
+zh,routine,上学,84,4.47
+zh,routine,午饭,53,3.85
+zh,routine,加班,15,3.88
+zh,routine,回家,348,5.06
+zh,routine,做晚饭,4,3.0
+zh,routine,洗衣服,7,3.35
+zh,routine,打扫房间,6,2.74
+zh,routine,买菜,0,3.02
+zh,routine,宅在家,3,2.97
+zh,routine,追剧,0,3.41
+zh,routine,听音乐,15,4.18
+zh,routine,健身,18,4.18
+zh,routine,散步,206,3.93
+zh,routine,泡澡,4,3.01
+zh,routine,准备睡觉,0,3.68
+zh,routine,早起,64,3.54
+zh,routine,熬夜,25,3.53
+zh,routine,睡回笼觉,0,0.53
+zh,routine,带饭,0,3.66
+zh,routine,便利店,10,3.56
+zh,routine,放假,24,3.94
+zh,routine,周末,50,4.65
+zh,routine,工作日,6,3.71
+zh,routine,每天,410,5.19
+zh,routine,总是,183,5.2
+zh,routine,偶尔,27,4.42
+zh,routine,在家办公,1,3.17
+zh,routine,休息一下,54,3.66
+zh,routine,刷手机,1,3.47
+zh,routine,收拾东西,0,3.23
+zh,out,你想去哪儿？,194,4.79
+zh,out,哪儿都行。,0,2.65
+zh,out,你想吃什么？,127,4.5
+zh,out,各付各的吧。,1,1.41
+zh,out,下次你请。,102,4.54
+zh,out,这个一起吃吧？,30,4.35
+zh,out,让我尝一口。,1,2.76
+zh,out,这里氛围真好。,3,4.31
+zh,out,我帮你拍张照吧？,2,2.56
+zh,out,我们一起拍吧。,1,4.08
+zh,out,我在路上了。,6,3.72
+zh,out,等我一下。,1,3.39
+zh,out,马上就到了。,1,2.79
+zh,out,我们在哪儿见？,9,2.52
+zh,out,车站门口见。,0,3.2
+zh,out,到了跟我说一声。,1,3.39
+zh,out,我迷路了，你在哪儿？,42,3.77
+zh,out,来这边。,10,4.49
+zh,out,人太多了，我们去别处吧。,1,3.78
+zh,out,腿酸了，休息一下吧。,54,3.66
+zh,out,我去一下洗手间。,6,3.6
+zh,out,我们进去看看吧。,2,3.68
+zh,out,这个适合我吗？,9,4.01
+zh,out,这个很适合你。,5,2.99
+zh,out,去喝杯咖啡吗？,8,2.08
+zh,out,去看电影吗？,44,4.58
+zh,out,我们去散步吧。,206,3.93
+zh,out,这么快就要走了？真舍不得。,4,3.8
+zh,out,下次再来吧。,34,4.78
+zh,out,我们一起打伞吧。,0,2.99
+zh,out,冷吗？穿这个吧。,1,4.17
+zh,out,坐这儿吧。,1,3.39
+zh,out,我去接你。,22,3.92
+zh,out,今天我带你逛逛。,0,1.43
+zh,out,你还记得这里吗？,91,5.07
+zh,feelings,我很高兴。,75,3.98
+zh,feelings,我很难过。,7,3.6
+zh,feelings,好孤单。,13,4.01
+zh,feelings,好害怕。,124,4.97
+zh,feelings,好害羞。,30,3.95
+zh,feelings,好不甘心。,0,2.7
+zh,feelings,好烦。,1,3.4
+zh,feelings,好紧张。,0,3.92
+zh,feelings,放心了。,15,4.56
+zh,feelings,吓了一跳。,1,2.45
+zh,feelings,气死我了。,2,3.41
+zh,feelings,好幸福。,125,4.84
+zh,feelings,好感动。,14,4.48
+zh,feelings,好怀念。,3,4.18
+zh,feelings,好麻烦。,57,4.79
+zh,feelings,好无聊。,24,4.42
+zh,feelings,很放松。,19,4.41
+zh,feelings,好期待。,57,4.8
+zh,feelings,心里不舒服。,35,3.56
+zh,feelings,朋友,926,5.62
+zh,feelings,好朋友,38,4.53
+zh,feelings,男朋友,52,4.48
+zh,feelings,女朋友,93,4.49
+zh,feelings,家人,92,4.93
+zh,feelings,父母,233,5.07
+zh,feelings,兄弟姐妹,13,3.67
+zh,feelings,关系很好,4,3.5
+zh,feelings,合得来,1,2.87
+zh,feelings,温柔的人,0,2.32
+zh,feelings,有趣的人,4,2.82
+zh,feelings,在意,36,4.34
+zh,feelings,信任,55,4.73
+zh,feelings,担心,102,5.16
+zh,feelings,吵架了,20,4.03
+zh,feelings,没精神,2,4.19
+zh,feelings,提不起劲,0,1.75
+zh,feelings,心情很好,2,2.67
+zh,feelings,心情不好,8,3.51
+zh,feelings,哭了,68,3.84
+zh,plans,下次,102,4.54
+zh,plans,明天,647,5.08
+zh,plans,后天,13,3.78
+zh,plans,下周,49,3.92
+zh,plans,这个周末,4,3.64
+zh,plans,下个月,22,3.58
+zh,plans,有安排吗？,1,4.02
+zh,plans,有空。,97,3.81
+zh,plans,可能不行。,0,3.8
+zh,plans,几点好？,0,3.16
+zh,plans,在车站见。,0,2.44
+zh,plans,会晚到。,8,3.73
+zh,plans,来得及。,4,3.83
+zh,plans,取消,42,5.05
+zh,plans,很期待。,12,3.79
+zh,plans,去旅行,16,3.72
+zh,plans,一起去吧。,0,3.41
+zh,plans,决定了吗？,1,3.68
+zh,plans,还没决定。,2,3.52
+zh,plans,我想想。,1,3.58
+zh,plans,什么时候都行。,0,1.71
+zh,plans,改天吧。,0,2.18
+zh,plans,再联系你。,0,4.21
+zh,plans,生日,129,4.66
+zh,plans,纪念日,0,3.96
+zh,plans,庆祝一下,19,4.68
+zh,plans,礼物,64,4.67
+zh,plans,暑假,31,3.98
+zh,plans,春节,11,4.3
+zh,plans,中秋节,4,3.29
+zh,plans,国庆节,0,3.26
+zh,plans,大概几点？,1,3.08
+zh,plans,马上到。,2,3.8
+zh,plans,会晚一点。,2,3.67
+zh,plans,你先去吧。,1,3.31
+zh,plans,来接我。,7,2.91
+zh,plans,留宿,1,3.04
+zh,plans,做计划,2,4.7
+zh,plans,准备好了吗？,9,2.53
+zh,connect,但是,397,5.85
+zh,connect,所以,406,5.78
+zh,connect,然后,56,5.55
+zh,connect,对了,17,5.51
+zh,connect,顺便说一下,1,2.21
+zh,connect,比如,11,5.0
+zh,connect,也就是说,2,4.34
+zh,connect,其实,41,5.43
+zh,connect,还是,332,5.76
+zh,connect,先,507,5.4
+zh,connect,可能,756,6.01
+zh,connect,一定,303,5.71
+zh,connect,如果,813,5.97
+zh,connect,虽然,88,5.66
+zh,connect,因为,382,6.11
+zh,connect,可是,81,5.31
+zh,connect,只是,296,5.69
+zh,connect,而且,92,5.65
+zh,connect,反而,14,4.75
+zh,connect,总之,2,4.58
+zh,connect,说起来,4,4.67
+zh,connect,老实说,10,3.43
+zh,connect,简单来说,0,4.0
+zh,connect,可是呀,0,3.87
+zh,connect,那么,296,5.72
+zh,connect,另一方面,6,4.54
+zh,connect,结果,62,5.67
+zh,connect,突然,149,5.13
+zh,connect,马上,85,4.81
+zh,connect,渐渐,9,4.47
+zh,connect,终于,54,5.24
+zh,connect,还,1058,6.38
+zh,connect,已经,508,6.06
+zh,connect,刚刚,38,4.98
+zh,connect,一直,345,5.64
+zh,connect,经常,152,5.16
+zh,connect,有时候,50,4.62
+zh,connect,从来不,27,4.27
+zh,connect,差不多,67,4.61
+zh,connect,特别,59,5.63
+zh,connect,有点,134,5.13
+zh,trouble,手机丢了。,49,3.77
+zh,trouble,忘带钱包了。,1,3.77
+zh,trouble,手机快没电了。,7,4.0
+zh,trouble,错过末班车了。,5,2.34
+zh,trouble,堵车了。,3,3.19
+zh,trouble,感冒了。,82,4.06
+zh,trouble,发烧了。,19,3.9
+zh,trouble,头疼。,15,3.8
+zh,trouble,肚子疼。,3,3.06
+zh,trouble,去医院,15,4.26
+zh,trouble,吃药,8,3.71
+zh,trouble,坏了,61,3.93
+zh,trouble,用不了,3,4.08
+zh,trouble,连不上网。,1,2.45
+zh,trouble,忘记密码了。,0,3.45
+zh,trouble,弄错了。,4,3.17
+zh,trouble,我不知道。,698,4.9
+zh,trouble,帮帮我。,10,2.55
+zh,trouble,救命！,8,3.69
+zh,trouble,我很为难。,2,3.79
+zh,trouble,怎么办？,29,5.03
+zh,trouble,不好了！,3,3.97
+zh,trouble,快点！,45,4.31
+zh,trouble,要迟到了。,90,4.08
+zh,trouble,钥匙丢了。,63,4.22
+zh,trouble,落东西了。,0,3.49
+zh,trouble,洒了。,0,2.69
+zh,trouble,受伤了。,82,4.95
+zh,trouble,出事故了。,1,3.72
+zh,trouble,掉了。,125,3.93
+zh,trouble,有充电器吗？,3,3.28
+zh,trouble,没回复。,0,3.22
+zh,trouble,已读不回,0,1.84
+zh,trouble,钱不够。,3,3.93
+zh,trouble,睡不着。,12,3.69
+zh,trouble,语言不通。,0,2.91
+zh,trouble,冷静点。,1,3.34
+zh,trouble,会好起来的。,8,3.56
+zh,trouble,没办法。,31,4.28
+zh,trouble,糟糕！,51,4.47
+zh,reply,嗯。,50,4.86
+zh,reply,不。,13381,6.76
+zh,reply,是啊。,9,4.9
+zh,reply,哇！,27,4.62
+zh,reply,的确。,8,4.86
+zh,reply,果然。,6,4.48
+zh,reply,好呀！,2,4.04
+zh,reply,好羡慕。,16,4.08
+zh,reply,当然！,53,5.5
+zh,reply,那个…,445,5.55
+zh,reply,还行吧。,2,4.38
+zh,reply,无所谓。,8,4.17
+zh,reply,是吗？,100,5.44
+zh,reply,没有啦。,0,4.3
+zh,reply,多亏了你。,8,3.64
+zh,reply,拜托了！,9,4.27
+zh,reply,可以吗？,14,5.12
+zh,reply,请。,826,5.77
+zh,reply,别介意。,1,2.75
+zh,reply,真可惜。,40,4.71
+zh,reply,你真厉害！,1,2.7
+zh,reply,这样啊。,1,4.67
+zh,reply,哦～,68,5.23
+zh,reply,耶！,49,4.4
+zh,reply,恭喜！,10,4.36
+zh,reply,不一定。,19,4.67
+zh,reply,我知道！,314,4.93
+zh,reply,没问题。,11,4.82
+zh,reply,收到。,92,4.93
+zh,reply,好的呀。,0,3.04
+zh,reply,随你。,4,3.99
+zh,reply,就是。,636,6.06
+zh,polite,初次见面。,1,3.02
+zh,polite,请多指教。,0,1.44
+zh,polite,打扰了。,4,3.03
+zh,polite,谢谢您。,18,3.6
+zh,polite,不好意思。,81,4.21
+zh,polite,非常抱歉。,7,3.3
+zh,polite,失陪了。,1,3.23
+zh,polite,您身体好吗？,0,1.96
+zh,polite,托您的福。,0,1.25
+zh,polite,请用。,6,4.59
+zh,polite,不成敬意。,0,2.61
+zh,polite,麻烦您了。,1,2.71
+zh,polite,您太客气了。,0,1.27
+zh,polite,我吃饱了。,3,1.39
+zh,polite,您先请。,0,3.05
+zh,polite,请稍等。,3,2.37
+zh,polite,请再说一遍。,2,2.17
+zh,polite,请说慢一点。,8,2.57
+zh,polite,不用了，谢谢。,6,4.06
+zh,polite,麻烦您。,3,3.71
+zh,polite,彼此彼此。,5,3.4
+zh,polite,让您久等了。,7,3.96
+zh,polite,请坐。,6,3.94
+zh,polite,请问您贵姓？,6,3.23
+zh,polite,先生,214,5.29
+zh,polite,女士,44,4.69
+zh,polite,您,1149,5.5
+zh,polite,敬语,1,2.97
+zh,polite,生日快乐！,7,3.96
+zh,polite,新年快乐！,3,3.58
+zh,polite,恭喜发财！,1,2.86
+zh,polite,祝你幸福。,1,2.38
+zh,polite,早日康复。,2,2.69
+zh,polite,注意身体。,0,3.94
+zh,polite,有劳了。,0,2.13
+zh,polite,承蒙关照。,0,1.46
+zh,polite,欢迎光临。,3,3.0
+zh,polite,请进。,3,4.31
+zh,polite,久仰大名。,1,1.09
+zh,idioms,一石二鸟,1,1.24
+zh,idioms,入乡随俗,1,0.58
+zh,idioms,事半功倍,0,1.04
+zh,idioms,马马虎虎,2,1.13
+zh,idioms,三心二意,3,1.6
+zh,idioms,一见如故,0,1.46
+zh,idioms,心想事成,1,2.11
+zh,idioms,好事多磨,0,1.83
+zh,idioms,半途而废,2,3.05
+zh,idioms,对牛弹琴,0,1.26
+zh,idioms,画蛇添足,0,0.72
+zh,idioms,脚踏实地,1,3.39
+zh,idioms,一举两得,1,1.85
+zh,idioms,井底之蛙,3,0.42
+zh,idioms,亡羊补牢,1,0.5
+zh,idioms,守株待兔,0,0.47
+zh,idioms,熟能生巧,1,0.73
+zh,idioms,不见不散,0,2.15
+zh,idioms,天长地久,0,1.05
+zh,idioms,相亲相爱,1,2.47
+zh,idioms,千里迢迢,0,0.0
+zh,idioms,日久见人心,0,1.2
+zh,idioms,一言为定,1,3.02
+zh,idioms,说曹操，曹操到,0,0.73
+zh,idioms,吃醋,1,3.47
+zh,idioms,拍马屁,0,3.14
+zh,idioms,走后门,1,3.05
+zh,idioms,开夜车,2,2.45
+zh,idioms,吃闭门羹,0,1.08
+zh,idioms,唱反调,0,2.4
+zh,idioms,面子,5,4.01
+zh,idioms,关系,92,5.69
+zh,idioms,缘分,1,3.43
+zh,idioms,心有灵犀,1,0.0
+zh,idioms,来日方长,0,1.52
+zh,idioms,随遇而安,1,1.15
+zh,idioms,顺其自然,0,3.23
+zh,idioms,无话不谈,0,1.47
+zh,idioms,一言难尽,0,1.54
+zh,idioms,恰到好处,0,3.27
+zh,idioms,大吃一惊,4,3.49
+zh,idioms,开心果,1,3.33

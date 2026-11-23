@@ -1,5 +1,7 @@
 import { useMemo, useState } from 'react'
 import { hasPackData } from '../lib/packs'
+import CategoryPicker from '../components/CategoryPicker'
+import { categoryLabel, normalizeCategory, readCustomCategories, usedCategories } from '../lib/categories'
 import Field from '../components/Field'
 import PackMeaningHint from '../components/PackMeaningHint'
 import PageHead from '../components/PageHead'
@@ -11,6 +13,7 @@ import { errorMessage } from '../lib/errors'
 import { dueItems, schedule } from '../lib/review'
 import { matchesQuery } from '../lib/text'
 
+// 카테고리는 고를 때만 기록에 넣는다(안 고른 기록에 빈 칸을 더하지 않게).
 const EMPTY_FORM = { text: '', meaning: '', example: '' }
 const REQUIRED = ['text', 'meaning']
 
@@ -50,11 +53,19 @@ export default function Entries({ type }) {
   const { form, errors, editingId, saving, formRef, listRef, setField } = recordForm
   const [query, setQuery] = useState('')
   const [quizOpen, setQuizOpen] = useState(false)
+  // 목록 거르기: '' 전체, 그 밖은 카테고리 이름
+  const [category, setCategory] = useState('')
 
   const visible = useMemo(
-    () => items.filter((item) => matchesQuery(query, [item.text, item.meaning, item.example])),
-    [items, query],
+    () =>
+      items.filter(
+        (item) =>
+          matchesQuery(query, [item.text, item.meaning, item.example]) &&
+          (!category || normalizeCategory(item.category) === category),
+      ),
+    [items, query, category],
   )
+  const filters = usedCategories(type, items, readCustomCategories(type))
 
   const dueCount = dueItems(items).length
 
@@ -85,9 +96,7 @@ export default function Entries({ type }) {
           )}
         </div>
       )}
-      {quizOpen && (
-        <Quiz items={items} onClose={() => setQuizOpen(false)} onAnswer={saveAnswer} />
-      )}
+      {quizOpen && <Quiz items={items} onClose={() => setQuizOpen(false)} onAnswer={saveAnswer} />}
 
       <div className="two-column">
         <form className="panel stack-form" ref={formRef} onSubmit={recordForm.submit} noValidate>
@@ -123,6 +132,12 @@ export default function Entries({ type }) {
             value={form.example}
             onChange={(event) => setField('example', event.target.value)}
           />
+          <CategoryPicker
+            type={type}
+            items={items}
+            value={form.category ?? ''}
+            onChange={(value) => setField('category', value)}
+          />
           <button className="primary-button" disabled={saving}>
             {t(editingId ? 'editDone' : 'save')}
           </button>
@@ -141,6 +156,20 @@ export default function Entries({ type }) {
             <span className="count">{t('count', { count: items.length })}</span>
           </div>
           <SearchField label={t(config.search)} value={query} onChange={setQuery} />
+          {filters.length > 0 && (
+            <div className="filter-chips" role="group" aria-label={t('categoryFilter')}>
+              {['', ...filters].map((value) => (
+                <button
+                  key={value || 'all'}
+                  className="reaction-chip"
+                  aria-pressed={category === value}
+                  onClick={() => setCategory(value)}
+                >
+                  {value ? categoryLabel(value, t) : t('pairFilterAll')}
+                </button>
+              ))}
+            </div>
+          )}
           {visible.length === 0 ? (
             <p className="empty-state">{t(items.length === 0 ? 'empty' : 'searchEmpty')}</p>
           ) : (
@@ -149,6 +178,7 @@ export default function Entries({ type }) {
                 <li className="record-row" key={item.id}>
                   <div>
                     <strong lang={learningLang}>{item.text}</strong>
+                    {item.category && <span className="missed-kind">{categoryLabel(item.category, t)}</span>}
                     <p>{item.meaning}</p>
                     {item.example && (
                       <p className="muted" lang={learningLang}>
@@ -160,10 +190,7 @@ export default function Entries({ type }) {
                     <button className="text-button" onClick={() => recordForm.startEdit(item)}>
                       {t('edit')}
                     </button>
-                    <button
-                      className="text-button danger"
-                      onClick={() => recordForm.removeItem(item)}
-                    >
+                    <button className="text-button danger" onClick={() => recordForm.removeItem(item)}>
                       {t('delete')}
                     </button>
                   </div>

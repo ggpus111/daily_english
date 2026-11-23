@@ -2688,7 +2688,8 @@ textarea {
     background: none;
   }
 
-  .nav-item[data-page='profile'] {
+  .nav-item[data-page='profile'],
+  .nav-desktop-only {
     display: none;
   }
 
@@ -3223,6 +3224,203 @@ h2:focus {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+}
+
+/* 휴대폰 아래 탭의 더보기 (PC에서는 왼쪽 메뉴에 모두 있어 숨긴다) */
+.nav-more-button,
+.nav-more-sheet,
+.nav-more-backdrop {
+  display: none;
+}
+
+@media (width <= 820px) {
+  .nav-more-button {
+    display: flex;
+  }
+
+  .nav-more-backdrop {
+    position: fixed;
+    z-index: 6;
+    inset: 0;
+    display: block;
+    border: 0;
+    background: rgb(40 25 15 / 18%);
+  }
+
+  .nav-more-sheet {
+    position: fixed;
+    z-index: 7;
+    right: 12px;
+    bottom: calc(var(--tabbar-height) + var(--sab) + 8px);
+    left: 12px;
+    display: grid;
+    padding: 6px 8px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-more-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 52px;
+    padding: 0 12px;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    color: var(--ink);
+    font: inherit;
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .nav-more-item:last-child {
+    border-bottom: 0;
+  }
+
+  .nav-more-item[aria-current='page'] {
+    color: var(--accent-ink);
+    font-weight: 700;
+  }
+}
+
+/* 카테고리 */
+.category-picker {
+  display: grid;
+  gap: 6px;
+}
+
+.category-picker > .text-button {
+  justify-self: start;
+}
+
+.category-add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.category-add input {
+  flex: 1 1 160px;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--field-line);
+  border-radius: 12px;
+  background: var(--field-bg);
+  color: var(--ink);
+  font: inherit;
+}
+
+/* 문법 노트 연습 */
+.grammar-point {
+  display: grid;
+  gap: 2px;
+}
+
+.grammar-point p {
+  margin: 0;
+}
+
+.grammar-source {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--warm);
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
+/* 일기 달력 */
+.journal-calendar {
+  margin: 4px 0 16px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--warm);
+}
+
+.calendar-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.calendar-head h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.calendar-grid {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: center;
+}
+
+.calendar-grid th {
+  padding: 4px 0;
+  color: var(--sub);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.calendar-grid td {
+  padding: 2px 0;
+}
+
+.calendar-day {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  color: var(--sub);
+  font: inherit;
+  font-size: 0.875rem;
+}
+
+.calendar-day.today {
+  border-color: var(--field-line);
+  color: var(--ink);
+}
+
+button.calendar-day {
+  border-color: var(--card-ink);
+  background: var(--accent-soft);
+  color: var(--card-ink);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button.calendar-day.tone-good {
+  background: var(--butter);
+}
+
+button.calendar-day.tone-low {
+  background: var(--lilac);
+}
+
+button.calendar-day.tone-plain {
+  background: var(--sage);
+}
+
+button.calendar-day[aria-pressed='true'] {
+  box-shadow:
+    0 0 0 2px var(--surface),
+    0 0 0 4px var(--accent-ink);
+}
+
+.calendar-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
 }
 
 /* 친구·연인 동그라미 줄 */

@@ -63,6 +63,33 @@ export default function Feedback({ text, learningLang, t, canSave = false }) {
           </ul>
         </section>
       )}
+      {parsed.grammar.length > 0 && (
+        <section>
+          <h3>{t('feedbackGrammar')}</h3>
+          <ul className="feedback-fixes">
+            {parsed.grammar.map((item, index) => (
+              <li key={index}>
+                <strong lang={learningLang}>{item.text}</strong>
+                <span className="fix-reason">{item.meaning}</span>
+                {item.example && (
+                  <span className="fix-reason" lang={learningLang}>
+                    {item.example}
+                    {item.exampleNative && ` (${item.exampleNative})`}
+                  </span>
+                )}
+                {canSave && (
+                  <SaveEntryButton
+                    kind="grammar"
+                    entry={{ ...item, source: 'journal' }}
+                    label="grammarSave"
+                    className="text-button fix-save"
+                  />
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       {parsed.good && (
         <section>
           <h3>{t('feedbackGood')}</h3>

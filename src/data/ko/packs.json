@@ -1779,7 +1779,9 @@
      "meaning": "I'm hungry.",
      "example": "배고파, 밥 먹자.",
      "exampleKo": "I'm hungry, let's eat.",
-     "tip": ""
+     "tip": "",
+     "sentences": 8,
+     "perMillion": 501.1
     },
     {
      "id": "ko-daily-14",
@@ -2205,8 +2207,8 @@
      "example": "저녁 먹고 산책해.",
      "exampleKo": "I take a walk after dinner.",
      "tip": "",
-     "sentences": 20,
-     "perMillion": 1252.7
+     "sentences": 40,
+     "perMillion": 2505.3
     },
     {
      "id": "ko-routine-24",
@@ -2365,368 +2367,318 @@
   {
    "id": "out",
    "title": {
-    "ko": "밖에서",
-    "en": "Out and about"
+    "ko": "같이 다닐 때",
+    "en": "Out together"
    },
    "items": [
     {
      "id": "ko-out-01",
-     "text": "얼마예요?",
-     "meaning": "How much is it?",
-     "example": "이거 얼마예요?",
-     "exampleKo": "How much is this?",
-     "tip": "Polite form. Casual: 얼마야?",
-     "sentences": 8,
-     "perMillion": 501.1
+     "text": "어디 가고 싶어?",
+     "meaning": "Where do you want to go?",
+     "example": "오늘은 어디 가고 싶어?",
+     "exampleKo": "Where do you want to go today?",
+     "tip": "Casual. Polite: 어디 가고 싶으세요?",
+     "sentences": 187,
+     "perMillion": 11712.4
     },
     {
      "id": "ko-out-02",
-     "text": "이걸로 주세요.",
-     "meaning": "I'll take this one.",
-     "example": "이걸로 주세요.",
-     "exampleKo": "I'll take this one, please.",
+     "text": "아무 데나 좋아.",
+     "meaning": "Anywhere is fine.",
+     "example": "너랑 가면 아무 데나 좋아.",
+     "exampleKo": "Anywhere is fine if I'm with you.",
      "tip": ""
     },
     {
      "id": "ko-out-03",
-     "text": "카드 돼요?",
-     "meaning": "Do you take cards?",
-     "example": "여기 카드 돼요?",
-     "exampleKo": "Do you take cards here?",
-     "tip": "",
-     "sentences": 10,
-     "perMillion": 626.3
+     "text": "내가 쏠게.",
+     "meaning": "My treat.",
+     "example": "오늘은 내가 쏠게.",
+     "exampleKo": "It's my treat today.",
+     "tip": "쏘다 literally means 'to shoot'; slang for treating someone."
     },
     {
      "id": "ko-out-04",
-     "text": "봉투는 괜찮아요.",
-     "meaning": "No bag needed.",
-     "example": "봉투는 괜찮아요.",
-     "exampleKo": "No bag, thanks.",
-     "tip": "",
-     "sentences": 6,
-     "perMillion": 375.8
+     "text": "각자 내자.",
+     "meaning": "Let's split the bill.",
+     "example": "계산은 각자 내자.",
+     "exampleKo": "Let's each pay for our own.",
+     "tip": "Also common: 반반 내자 (half and half)."
     },
     {
      "id": "ko-out-05",
-     "text": "화장실이 어디예요?",
-     "meaning": "Where's the restroom?",
-     "example": "실례지만 화장실이 어디예요?",
-     "exampleKo": "Excuse me, where's the restroom?",
-     "tip": "",
-     "sentences": 19,
-     "perMillion": 1190.0
+     "text": "다음엔 네가 사.",
+     "meaning": "You get the next one.",
+     "example": "오늘은 내가 샀으니까 다음엔 네가 사.",
+     "exampleKo": "I paid today, so you get the next one.",
+     "tip": ""
     },
     {
      "id": "ko-out-06",
-     "text": "지하철역이 어디예요?",
-     "meaning": "Where's the subway station?",
-     "example": "지하철역이 어디예요?",
-     "exampleKo": "Where's the subway station?",
-     "tip": ""
+     "text": "이거 같이 먹을래?",
+     "meaning": "Want to share this?",
+     "example": "이거 같이 먹을래? 양이 많아.",
+     "exampleKo": "Want to share this? It's a big portion.",
+     "tip": "-ㄹ래? asks 'do you want to?' casually."
     },
     {
      "id": "ko-out-07",
-     "text": "길을 잃었어요.",
-     "meaning": "I'm lost.",
-     "example": "죄송해요, 길을 잃었어요.",
-     "exampleKo": "Sorry, I'm lost.",
-     "tip": "",
-     "sentences": 7,
-     "perMillion": 438.4
-    },
-    {
-     "id": "ko-out-08",
-     "text": "쭉 가세요.",
-     "meaning": "Go straight.",
-     "example": "쭉 가서 오른쪽으로 돌아요.",
-     "exampleKo": "Go straight, then turn right.",
+     "text": "한 입만 줘.",
+     "meaning": "Give me just one bite.",
+     "example": "맛있어 보인다. 한 입만 줘.",
+     "exampleKo": "That looks good. Give me just one bite.",
      "tip": ""
     },
     {
-     "id": "ko-out-09",
-     "text": "오른쪽",
-     "meaning": "right side",
-     "example": "다음 모퉁이에서 오른쪽이에요.",
-     "exampleKo": "It's on the right at the next corner.",
+     "id": "ko-out-08",
+     "text": "나 배고파.",
+     "meaning": "I'm hungry.",
+     "example": "나 배고파. 뭐 먹으러 갈까?",
+     "exampleKo": "I'm hungry. Shall we go eat?",
      "tip": "",
      "sentences": 8,
      "perMillion": 501.1
     },
     {
+     "id": "ko-out-09",
+     "text": "여기 분위기 좋다.",
+     "meaning": "This place has a nice vibe.",
+     "example": "여기 분위기 좋다. 자주 오자.",
+     "exampleKo": "This place has a nice vibe. Let's come often.",
+     "tip": "분위기 = atmosphere, vibe.",
+     "sentences": 12,
+     "perMillion": 751.6
+    },
+    {
      "id": "ko-out-10",
-     "text": "왼쪽",
-     "meaning": "left side",
-     "example": "신호등에서 왼쪽으로 가세요.",
-     "exampleKo": "Go left at the traffic light.",
+     "text": "사진 찍어 줄까?",
+     "meaning": "Want me to take your photo?",
+     "example": "저기 서 봐. 사진 찍어 줄까?",
+     "exampleKo": "Stand over there. Want me to take your photo?",
      "tip": ""
     },
     {
      "id": "ko-out-11",
-     "text": "가까워요.",
-     "meaning": "It's close.",
-     "example": "역에서 가까워요.",
-     "exampleKo": "It's close to the station.",
+     "text": "우리 같이 찍자.",
+     "meaning": "Let's take one together.",
+     "example": "여기 예쁘다. 우리 같이 찍자.",
+     "exampleKo": "It's pretty here. Let's take one together.",
      "tip": ""
     },
     {
      "id": "ko-out-12",
-     "text": "멀어요.",
-     "meaning": "It's far.",
-     "example": "걸어가면 좀 멀어요.",
-     "exampleKo": "It's a bit far on foot.",
-     "tip": ""
+     "text": "지금 가는 중이야.",
+     "meaning": "I'm on my way.",
+     "example": "지금 가는 중이야. 조금만 기다려.",
+     "exampleKo": "I'm on my way. Wait a little.",
+     "tip": "-는 중 = in the middle of doing."
     },
     {
      "id": "ko-out-13",
-     "text": "두 명이에요.",
-     "meaning": "Two people.",
-     "example": "두 명이에요, 자리 있어요?",
-     "exampleKo": "Two people, do you have a table?",
-     "tip": "",
-     "sentences": 7,
-     "perMillion": 438.4
-    },
-    {
-     "id": "ko-out-14",
-     "text": "예약했어요.",
-     "meaning": "I have a reservation.",
-     "example": "7시에 예약했어요.",
-     "exampleKo": "I have a reservation at 7.",
-     "tip": "",
-     "sentences": 11,
-     "perMillion": 689.0
-    },
-    {
-     "id": "ko-out-15",
-     "text": "메뉴판 주세요.",
-     "meaning": "Menu, please.",
-     "example": "저기요, 메뉴판 주세요.",
-     "exampleKo": "Excuse me, the menu please.",
+     "text": "조금만 기다려 줘.",
+     "meaning": "Please wait for me a bit.",
+     "example": "늦어서 미안해. 조금만 기다려 줘.",
+     "exampleKo": "Sorry I'm late. Please wait for me a bit.",
      "tip": ""
     },
     {
+     "id": "ko-out-14",
+     "text": "거의 다 왔어.",
+     "meaning": "I'm almost there.",
+     "example": "거의 다 왔어. 오 분만.",
+     "exampleKo": "I'm almost there. Just five minutes.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-15",
+     "text": "어디서 만날까?",
+     "meaning": "Where should we meet?",
+     "example": "내일 어디서 만날까?",
+     "exampleKo": "Where should we meet tomorrow?",
+     "tip": "-ㄹ까? = shall we?"
+    },
+    {
      "id": "ko-out-16",
-     "text": "추천 메뉴가 뭐예요?",
-     "meaning": "What do you recommend?",
-     "example": "추천 메뉴가 뭐예요?",
-     "exampleKo": "What do you recommend?",
+     "text": "역 앞에서 보자.",
+     "meaning": "Let's meet in front of the station.",
+     "example": "일곱 시에 역 앞에서 보자.",
+     "exampleKo": "Let's meet in front of the station at seven.",
      "tip": ""
     },
     {
      "id": "ko-out-17",
-     "text": "계산해 주세요.",
-     "meaning": "Check, please.",
-     "example": "계산해 주세요.",
-     "exampleKo": "Check, please.",
-     "tip": "",
-     "sentences": 18,
-     "perMillion": 1127.4
+     "text": "데려다줄게.",
+     "meaning": "I'll walk you home.",
+     "example": "늦었다. 내가 데려다줄게.",
+     "exampleKo": "It's late. I'll walk you home.",
+     "tip": ""
     },
     {
      "id": "ko-out-18",
-     "text": "포장해 주세요.",
-     "meaning": "To go, please.",
-     "example": "이거 포장해 주세요.",
-     "exampleKo": "Please pack this to go.",
+     "text": "길 잃었어. 어디야?",
+     "meaning": "I'm lost. Where are you?",
+     "example": "지도를 봤는데 길 잃었어. 어디야?",
+     "exampleKo": "I checked the map but I'm lost. Where are you?",
      "tip": ""
     },
     {
      "id": "ko-out-19",
-     "text": "여기서 먹을게요.",
-     "meaning": "I'll eat here.",
-     "example": "여기서 먹을게요.",
-     "exampleKo": "I'll eat here.",
-     "tip": "",
-     "sentences": 42,
-     "perMillion": 2630.6
+     "text": "이쪽으로 와.",
+     "meaning": "Come this way.",
+     "example": "이쪽으로 와. 여기가 더 예뻐.",
+     "exampleKo": "Come this way. It's prettier here.",
+     "tip": ""
     },
     {
      "id": "ko-out-20",
-     "text": "저기요!",
-     "meaning": "Excuse me! (calling someone)",
-     "example": "저기요, 주문할게요!",
-     "exampleKo": "Excuse me, I'd like to order!",
-     "tip": "Used to call a waiter or stranger."
+     "text": "사람 너무 많다. 다른 데 가자.",
+     "meaning": "It's too crowded. Let's go somewhere else.",
+     "example": "주말이라 사람 너무 많다. 다른 데 가자.",
+     "exampleKo": "It's the weekend, so it's too crowded. Let's go somewhere else.",
+     "tip": ""
     },
     {
      "id": "ko-out-21",
-     "text": "자리 있어요?",
-     "meaning": "Do you have a seat?",
-     "example": "자리 있어요?",
-     "exampleKo": "Is there a seat available?",
-     "tip": "",
-     "sentences": 35,
-     "perMillion": 2192.2
+     "text": "다리 아파. 좀 쉬자.",
+     "meaning": "My legs hurt. Let's rest a bit.",
+     "example": "많이 걸었더니 다리 아파. 좀 쉬자.",
+     "exampleKo": "We walked a lot and my legs hurt. Let's rest a bit.",
+     "tip": ""
     },
     {
      "id": "ko-out-22",
-     "text": "줄이 길어.",
-     "meaning": "The line is long.",
-     "example": "그 가게 줄이 길어.",
-     "exampleKo": "The line at that shop is long.",
-     "tip": "",
-     "sentences": 227,
-     "perMillion": 14217.7
+     "text": "화장실 좀 다녀올게.",
+     "meaning": "I'll be right back, just going to the restroom.",
+     "example": "잠깐만, 화장실 좀 다녀올게.",
+     "exampleKo": "Hang on, I'm going to the restroom for a sec.",
+     "tip": "다녀오다 = go and come back; 좀 softens it."
     },
     {
      "id": "ko-out-23",
-     "text": "지하철이 늦어.",
-     "meaning": "The subway is late.",
-     "example": "지하철이 늦어서 조금 늦어.",
-     "exampleKo": "The subway is late, so I'll be a bit late.",
-     "tip": "",
-     "sentences": 8,
-     "perMillion": 501.1
+     "text": "저 가게 들어가 보자.",
+     "meaning": "Let's check out that shop.",
+     "example": "저 가게 예쁘다. 들어가 보자.",
+     "exampleKo": "That shop looks nice. Let's check it out.",
+     "tip": "-아/어 보자 = let's try."
     },
     {
      "id": "ko-out-24",
-     "text": "환승",
-     "meaning": "transfer",
-     "example": "다음 역에서 환승이에요.",
-     "exampleKo": "You transfer at the next station.",
+     "text": "이거 나한테 어울려?",
+     "meaning": "Does this suit me?",
+     "example": "이 모자 나한테 어울려?",
+     "exampleKo": "Does this hat suit me?",
      "tip": ""
     },
     {
      "id": "ko-out-25",
-     "text": "표",
-     "meaning": "ticket",
-     "example": "표 사러 갈게.",
-     "exampleKo": "I'll go buy tickets.",
-     "tip": "",
-     "sentences": 70,
-     "perMillion": 4384.3
+     "text": "너한테 잘 어울려.",
+     "meaning": "It really suits you.",
+     "example": "그 색 너한테 잘 어울려.",
+     "exampleKo": "That color really suits you.",
+     "tip": ""
     },
     {
      "id": "ko-out-26",
-     "text": "택시를 타다",
-     "meaning": "take a taxi",
-     "example": "늦었으니까 택시 타자.",
-     "exampleKo": "It's late, let's take a taxi.",
-     "tip": "",
-     "sentences": 24,
-     "perMillion": 1503.2
+     "text": "커피 한잔할래?",
+     "meaning": "Want to grab a coffee?",
+     "example": "산책하고 커피 한잔할래?",
+     "exampleKo": "Want to grab a coffee after the walk?",
+     "tip": "한잔하다 = have a drink (coffee or alcohol)."
     },
     {
      "id": "ko-out-27",
-     "text": "사진 찍어 주세요.",
-     "meaning": "Could you take a photo?",
-     "example": "실례지만 사진 좀 찍어 주세요.",
-     "exampleKo": "Excuse me, could you take our photo?",
-     "tip": "",
-     "sentences": 29,
-     "perMillion": 1816.4
+     "text": "영화 보러 갈래?",
+     "meaning": "Want to go see a movie?",
+     "example": "이번 주말에 영화 보러 갈래?",
+     "exampleKo": "Want to go see a movie this weekend?",
+     "tip": ""
     },
     {
      "id": "ko-out-28",
-     "text": "같이 사진 찍자.",
-     "meaning": "Let's take a photo together.",
-     "example": "여기서 같이 사진 찍자!",
-     "exampleKo": "Let's take a photo here!",
-     "tip": ""
+     "text": "산책하자.",
+     "meaning": "Let's go for a walk.",
+     "example": "날씨 좋다. 산책하자.",
+     "exampleKo": "The weather's nice. Let's go for a walk.",
+     "tip": "",
+     "sentences": 40,
+     "perMillion": 2505.3
     },
     {
      "id": "ko-out-29",
-     "text": "입어 봐도 돼요?",
-     "meaning": "Can I try this on?",
-     "example": "이거 입어 봐도 돼요?",
-     "exampleKo": "Can I try this on?",
-     "tip": ""
+     "text": "오늘 재밌었어.",
+     "meaning": "I had fun today.",
+     "example": "오늘 정말 재밌었어. 고마워.",
+     "exampleKo": "I really had fun today. Thank you.",
+     "tip": "재밌다 is short for 재미있다."
     },
     {
      "id": "ko-out-30",
-     "text": "더 큰 사이즈 있어요?",
-     "meaning": "Do you have a bigger size?",
-     "example": "더 큰 사이즈 있어요?",
-     "exampleKo": "Do you have a bigger size?",
+     "text": "벌써 가야 돼? 아쉽다.",
+     "meaning": "You have to go already? That's a shame.",
+     "example": "시간 진짜 빠르다. 벌써 가야 돼? 아쉽다.",
+     "exampleKo": "Time flies. You have to go already? That's a shame.",
      "tip": ""
     },
     {
      "id": "ko-out-31",
-     "text": "싸다!",
-     "meaning": "It's cheap!",
-     "example": "이거 싸다!",
-     "exampleKo": "This is cheap!",
+     "text": "다음에 또 오자.",
+     "meaning": "Let's come again next time.",
+     "example": "여기 좋다. 다음에 또 오자.",
+     "exampleKo": "This place is nice. Let's come again next time.",
+     "tip": ""
+    },
+    {
+     "id": "ko-out-32",
+     "text": "우산 같이 쓰자.",
+     "meaning": "Let's share my umbrella.",
+     "example": "비 온다. 우산 같이 쓰자.",
+     "exampleKo": "It's raining. Let's share my umbrella.",
+     "tip": "",
+     "sentences": 14,
+     "perMillion": 876.9
+    },
+    {
+     "id": "ko-out-33",
+     "text": "춥지? 이거 입어.",
+     "meaning": "Cold, right? Wear this.",
+     "example": "밤이라 쌀쌀하다. 춥지? 이거 입어.",
+     "exampleKo": "It's chilly at night. Cold, right? Wear this.",
      "tip": "",
      "sentences": 5,
      "perMillion": 313.2
     },
     {
-     "id": "ko-out-32",
-     "text": "비싸다.",
-     "meaning": "It's expensive.",
-     "example": "이거 좀 비싸다.",
-     "exampleKo": "This is a bit expensive.",
-     "tip": ""
-    },
-    {
-     "id": "ko-out-33",
-     "text": "세일",
-     "meaning": "sale",
-     "example": "지금 세일 중이야.",
-     "exampleKo": "It's on sale now.",
-     "tip": "",
-     "sentences": 7,
-     "perMillion": 438.4
-    },
-    {
      "id": "ko-out-34",
-     "text": "사람 많다.",
-     "meaning": "It's crowded.",
-     "example": "오늘 사람 진짜 많다.",
-     "exampleKo": "It's so crowded today.",
-     "tip": ""
+     "text": "여기 앉아.",
+     "meaning": "Sit here.",
+     "example": "자리 있다. 여기 앉아.",
+     "exampleKo": "There's a seat. Sit here.",
+     "tip": "",
+     "sentences": 30,
+     "perMillion": 1879.0
     },
     {
      "id": "ko-out-35",
-     "text": "사람 없다.",
-     "meaning": "It's empty.",
-     "example": "평일이라 사람 별로 없네.",
-     "exampleKo": "It's a weekday, so not many people.",
+     "text": "데리러 갈게.",
+     "meaning": "I'll come pick you up.",
+     "example": "역까지 데리러 갈게.",
+     "exampleKo": "I'll come pick you up at the station.",
      "tip": ""
     },
     {
      "id": "ko-out-36",
-     "text": "열었어요?",
-     "meaning": "Is it open?",
-     "example": "아직 열었어요?",
-     "exampleKo": "Is it still open?",
-     "tip": "",
-     "sentences": 8,
-     "perMillion": 501.1
+     "text": "오늘은 내가 안내할게.",
+     "meaning": "Let me show you around today.",
+     "example": "오늘은 내가 안내할게. 따라와.",
+     "exampleKo": "Let me show you around today. Follow me.",
+     "tip": "안내하다 = to guide."
     },
     {
      "id": "ko-out-37",
-     "text": "닫았어요.",
-     "meaning": "It's closed.",
-     "example": "벌써 닫았어요.",
-     "exampleKo": "It's already closed.",
-     "tip": "",
-     "sentences": 6,
-     "perMillion": 375.8
-    },
-    {
-     "id": "ko-out-38",
-     "text": "와이파이 있어요?",
-     "meaning": "Is there Wi-Fi?",
-     "example": "여기 와이파이 있어요?",
-     "exampleKo": "Is there Wi-Fi here?",
-     "tip": ""
-    },
-    {
-     "id": "ko-out-39",
-     "text": "충전하고 싶어요.",
-     "meaning": "I want to charge my phone.",
-     "example": "폰 충전하고 싶어요.",
-     "exampleKo": "I want to charge my phone.",
-     "tip": ""
-    },
-    {
-     "id": "ko-out-40",
-     "text": "어떻게 가요?",
-     "meaning": "How do I get there?",
-     "example": "거기 어떻게 가요?",
-     "exampleKo": "How do I get there?",
+     "text": "여기 기억나?",
+     "meaning": "Do you remember this place?",
+     "example": "여기 기억나? 우리 처음 만난 데야.",
+     "exampleKo": "Do you remember this place? It's where we first met.",
      "tip": ""
     }
    ]
