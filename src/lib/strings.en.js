@@ -400,6 +400,7 @@ export default {
   'privacy.rights.body': 'Log in to the app or the website and open My data in your profile to download your records or delete your account and all records at any time. If you uninstalled the app, log in on the website and do the same. Deleting removes your records from the server right away.',
   'privacy.contact.title': 'Contact',
   'privacy.contact.fallback': 'Please contact the person who shared this app with you.',
+  subtitle: 'Small notes grow into your own language.',
   studying: 'Studying {lang}',
   greetingNamed: 'Hi {name}, what would you like to learn today?',
   spaceTitle: "Today's learning space",

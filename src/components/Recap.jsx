@@ -42,13 +42,9 @@ export default function RecapCard({ today }) {
         used: recap.used,
         usedEmpty: t('recapUsedEmpty'),
         moodTitle: t('recapMoodTitle'),
-        moods: recap.moods.map((item) => ({
-          day: dayLabel(item.day),
-          mood: moodWord(moodOf(item.mood), learningLang),
-          tone: moodTone(item.mood),
-        })),
+        moods: recap.moods.map((item) => ({ day: dayLabel(item.day), mood: moodWord(moodOf(item.mood), learningLang), tone: moodTone(item.mood) })),
         moodEmpty: t('recapMoodEmpty'),
-        footer: 'Daily English',
+        footer: `Daily English · ${t('subtitle')}`,
       })
       await saveCanvas(canvas, `daily-english-${today.toISOString().slice(0, 10)}.png`, {
         isNative,
@@ -68,6 +64,7 @@ export default function RecapCard({ today }) {
     <section className="home-section" aria-labelledby="recap-title">
       <div className="section-heading">
         <div>
+          <p className="eyebrow">WEEKLY RECAP</p>
           <h2 id="recap-title">{t('recapTitle')}</h2>
         </div>
         <span className="soft-pill">{range}</span>
@@ -100,8 +97,7 @@ export default function RecapCard({ today }) {
           <ul className="recap-moods">
             {recap.moods.map((item, index) => (
               <li key={`${item.day}-${index}`} className={`mood-${moodTone(item.mood)}`}>
-                <small>{dayLabel(item.day)}</small>{' '}
-                <b lang={learningLang}>{moodWord(moodOf(item.mood), learningLang)}</b>
+                <small>{dayLabel(item.day)}</small> <b lang={learningLang}>{moodWord(moodOf(item.mood), learningLang)}</b>
                 <small> {moodMeaning(moodOf(item.mood), learningLang)}</small>
               </li>
             ))}

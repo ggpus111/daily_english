@@ -709,7 +709,15 @@ textarea {
   box-shadow: 0 12px 28px rgb(105 81 59 / 7%);
 }
 
+.dash-eyebrow {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  color: var(--card-ink-soft);
+}
+
 .dash-card strong {
+  margin-top: 18px;
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -742,6 +750,13 @@ textarea {
   font-size: 0.8125rem;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.dash-arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+  font-size: 1.3125rem;
 }
 
 .routine-grid {
@@ -827,6 +842,23 @@ textarea {
     0 0 0 5px var(--accent);
 }
 
+.quote-panel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+}
+
+.quote-text {
+  margin: 4px 0;
+  font-size: 1.0625rem;
+  font-weight: 700;
+}
+
 @media (width <= 1100px) {
   .dash-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -882,9 +914,20 @@ textarea {
     font-size: 0.75rem;
   }
 
+  .dash-arrow {
+    right: 14px;
+    bottom: 12px;
+    font-size: 1.125rem;
+  }
 
-  .paper-card {
+  .paper-card,
+  .quote-panel {
     padding: 18px;
+  }
+
+  .quote-panel {
+    align-items: flex-start;
+    gap: 12px;
   }
 }
 
@@ -3043,13 +3086,13 @@ h2:focus {
   min-height: 48px;
   border: 0;
   border-radius: 14px;
-  background: var(--accent-soft);
+  background: linear-gradient(135deg, var(--accent-soft), var(--lilac));
   color: var(--ink);
   font-weight: 700;
 }
 
 .ai-button:hover:not(:disabled) {
-  background: var(--accent-soft-hover);
+  background: linear-gradient(135deg, var(--accent-soft-hover), var(--lilac));
 }
 
 .ai-button:disabled {

@@ -410,6 +410,7 @@ const ko = {
   'privacy.rights.body': '앱이나 웹사이트에 로그인한 뒤 프로필의 내 데이터에서 기록을 내려받고, 계정과 모든 기록을 언제든 삭제할 수 있어요. 앱을 지웠다면 웹사이트에 로그인해 같은 방법으로 삭제하면 돼요. 삭제하면 서버의 기록도 바로 지워져요.',
   'privacy.contact.title': '문의',
   'privacy.contact.fallback': '이 앱을 알려 준 운영자에게 직접 문의해 주세요.',
+  subtitle: '작은 기록이 모여 나만의 언어가 돼요.',
   studying: '{lang} 공부 중',
   greetingNamed: '{name}님, 오늘은 어떤 말을 모아 볼까요?',
   spaceTitle: '나의 영어 노트',

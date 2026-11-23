@@ -3,6 +3,7 @@ import ExpressionCard from '../components/ExpressionCard'
 import Onboarding, { needsOnboarding } from '../components/Onboarding'
 import BackupNudge from '../components/BackupNudge'
 import RecapCard from '../components/Recap'
+import Mascot from '../components/Mascot'
 import { useApp } from '../context'
 import { activityDays, dayKey, lastSevenDays, streak } from '../lib/activity'
 import { findPhrase } from '../lib/blank'
@@ -19,6 +20,7 @@ const CARDS = [
   {
     page: 'words',
     type: 'word',
+    eyebrow: '01 / VOCABULARY',
     count: 'cardWords',
     tone: 'peach',
     preview: 'text',
@@ -27,20 +29,38 @@ const CARDS = [
   {
     page: 'expressions',
     type: 'expression',
+    eyebrow: '02 / EXPRESSIONS',
     count: 'cardExpressions',
     tone: 'lilac',
     preview: 'text',
     learning: true,
   },
-  { page: 'chats', type: 'chat', count: 'cardChats', tone: 'sage', preview: 'situation' },
+  { page: 'chats', type: 'chat', eyebrow: '03 / CHAT NOTES', count: 'cardChats', tone: 'sage', preview: 'situation' },
   {
     page: 'journal',
     type: 'journal',
+    eyebrow: '04 / DAILY JOURNAL',
     count: 'cardJournals',
     tone: 'butter',
     preview: 'native',
   },
 ]
+
+// 날마다 바뀌는 한마디. 영어 문장과 우리말 풀이를 함께 둔다.
+const NOTES = [
+  {
+    en: 'You don’t have to be perfect. Just keep showing up.',
+    ko: '완벽하지 않아도 괜찮아. 꾸준히 돌아오는 게 중요해.',
+  },
+  { en: 'Small steps every day add up.', ko: '매일의 작은 걸음이 쌓여요.' },
+  { en: 'One new word is still progress.', ko: '새 단어 하나도 분명한 한 걸음이에요.' },
+  { en: 'Mistakes are proof that you are trying.', ko: '틀렸다는 건 해 보고 있다는 뜻이에요.' },
+  { en: 'Rest is part of learning, too.', ko: '쉬는 것도 배우는 과정이에요.' },
+  { en: 'The words you collect become your voice.', ko: '모은 말들이 결국 내 목소리가 돼요.' },
+  { en: 'Slow is fine. Stopping for good is the only miss.', ko: '느려도 괜찮아요. 아주 멈추지만 않으면 돼요.' },
+]
+
+const DAY_MS = 24 * 60 * 60 * 1000
 
 const isSameDay = (value, day) => new Date(value).toDateString() === day.toDateString()
 
@@ -66,6 +86,7 @@ export default function Home() {
   const dueExpressions = dueItems(records.expression).length
   const dueTotal = dueWords + dueExpressions
   const weakTotal = weakItems(records.word).length + weakItems(records.expression).length
+  const note = NOTES[Math.floor(today.getTime() / DAY_MS) % NOTES.length]
   const totalRecords = Object.values(records).reduce((sum, items) => sum + items.length, 0)
   const { goal } = readSettings()
   const doneToday = todayProgress(records, today)
@@ -78,7 +99,9 @@ export default function Home() {
     <>
       <section className="welcome-panel" aria-labelledby="welcome-title">
         <div className="welcome-text">
+          <p className="eyebrow">YOUR DAILY NOTE</p>
           <h1 id="welcome-title">{t('greetingNamed', { name: nickname })}</h1>
+          <p className="muted">{t('subtitle')}</p>
         </div>
         <p className="welcome-date">
           <span aria-hidden="true">{dateParts.month}</span>
@@ -93,12 +116,16 @@ export default function Home() {
       <section className="home-section" aria-labelledby="routine-title">
         <div className="section-heading">
           <div>
+            <p className="eyebrow">YOUR ROUTINE</p>
             <h2 id="routine-title">{t('routineTitle')}</h2>
           </div>
         </div>
 
         <div className="routine-grid">
           <section className="paper-card review-panel" aria-labelledby="review-title">
+            <p className="eyebrow" aria-hidden="true">
+              TODAY’S REVIEW
+            </p>
             <h3 id="review-title" className="sr-only">
               {t('reviewTitle')}
             </h3>
@@ -142,6 +169,9 @@ export default function Home() {
 
           <section className="paper-card week-panel" aria-labelledby="week-title">
             <div className="section-head">
+              <p className="eyebrow" aria-hidden="true">
+                THIS WEEK
+              </p>
               <h3 id="week-title" className="sr-only">
                 {t('weekTitle')}
               </h3>
@@ -184,6 +214,7 @@ export default function Home() {
       <section className="home-section" aria-labelledby="space-title">
         <div className="section-heading">
           <div>
+            <p className="eyebrow">YOUR LEARNING SPACE</p>
             <h2 id="space-title">{t('spaceTitle')}</h2>
           </div>
           <span className="soft-pill">{t('studying', { lang: languageName(learningLang, nativeLang) })}</span>
@@ -202,6 +233,9 @@ export default function Home() {
                   : null
             return (
               <button key={card.page} className={`dash-card ${card.tone}`} onClick={() => go(card.page)}>
+                <span className="dash-eyebrow" aria-hidden="true">
+                  {card.eyebrow}
+                </span>
                 <strong>{t(card.page)}</strong>
                 <span className="dash-count">
                   {t(card.count, { count: items.length })}
@@ -209,6 +243,9 @@ export default function Home() {
                 </span>
                 <span className="dash-recent" lang={latest && card.learning ? learningLang : undefined}>
                   {latest || t('cardEmpty')}
+                </span>
+                <span className="dash-arrow" aria-hidden="true">
+                  ↗
                 </span>
               </button>
             )
@@ -228,6 +265,7 @@ export default function Home() {
         <section className="home-section" aria-labelledby="today-expression-title">
           <div className="section-heading">
             <div>
+              <p className="eyebrow">TODAY’S EXPRESSION</p>
               <h2 id="today-expression-title">{t('todayExpression')}</h2>
             </div>
             <button className="soft-pill pill-button" onClick={() => go('packs')}>
@@ -240,6 +278,17 @@ export default function Home() {
       )}
 
       <RecapCard today={today} />
+
+      <section className="quote-panel" aria-label="A note to yourself">
+        <Mascot size={72} mood="joy" />
+        <div>
+          <p className="eyebrow">A NOTE TO YOURSELF</p>
+          <p className="quote-text" lang="en">
+            “{note.en}”
+          </p>
+          {nativeLang === 'ko' && <p className="tiny-note">{note.ko}</p>}
+        </div>
+      </section>
     </>
   )
 }
