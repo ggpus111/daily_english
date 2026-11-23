@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs'
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
-import { readDeployHeaders, siteMeta } from './build/plugins.js'
+import { cloudflareHeaders, readDeployHeaders, siteMeta } from './build/plugins.js'
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
@@ -27,6 +27,7 @@ export default defineConfig(({ mode }) => {
     plugins: [
       react(),
       siteMeta(env.VITE_SITE_URL),
+      !isApp && cloudflareHeaders(),
       !isApp &&
         VitePWA({
           registerType: 'autoUpdate',

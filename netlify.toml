@@ -1,0 +1,12 @@
+# Netlify 배포 설정. 보안·캐시 헤더는 빌드할 때 vercel.json을 바탕으로 dist/_headers가 만들어져 적용된다
+# (build/plugins.js의 cloudflareHeaders, Cloudflare Pages와 Netlify가 같은 형식을 읽는다).
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Supabase 주소와 공개용(publishable) 키는 원래 앱 화면 코드에 그대로 들어가는 공개 값이다.
+  # 비밀 키(service_role, sb_secret_)는 여기나 Netlify 환경 변수에 절대 넣지 않는다.
+  VITE_SUPABASE_URL = "https://fzqrbtolwcxxmqhfublb.supabase.co"
+  VITE_SUPABASE_ANON_KEY = "sb_publishable_AzL9ZYgKebUr6d200QCcmQ_5OKB1PQl"

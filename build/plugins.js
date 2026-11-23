@@ -53,3 +53,21 @@ export function readDeployHeaders() {
     ])
   return Object.fromEntries(entries)
 }
+
+// Cloudflare Pages와 Netlify는 vercel.json 대신 dist/_headers를 읽는다. 같은 보안·캐시 헤더를 그 형식으로 만들어 둔다.
+// 형식: 경로 한 줄, 그 아래 들여쓴 "이름: 값" 줄들. Vercel의 "/(.*)"는 "/*"로 바꾼다.
+export function cloudflareHeaders() {
+  return {
+    name: 'cloudflare-headers',
+    generateBundle() {
+      const { headers } = JSON.parse(readFileSync(new URL('../vercel.json', import.meta.url)))
+      const source = headers
+        .map((rule) => {
+          const path = rule.source.replace('(.*)', '*')
+          return [path, ...rule.headers.map((header) => `  ${header.key}: ${header.value}`)].join('\n')
+        })
+        .join('\n\n')
+      this.emitFile({ type: 'asset', fileName: '_headers', source: `${source}\n` })
+    },
+  }
+}

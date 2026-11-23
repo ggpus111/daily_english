@@ -339,3 +339,17 @@ insert into public.admins (user_id) values ('<관리자 사용자 ID>');
 - 운영 의존성 취약점 0건(`npm audit --omit=dev`). 개발 도구(eslint 등)의 중간 단계 경고 6건은 배포물에 들어가지 않습니다.
 - 비밀 값 점검: `npm run build && npm run check:secrets`가 배포물에 비밀 키, 서버 전용 이름, 소스맵이 섞였는지 검사합니다(안드로이드는 `node scripts/check-secrets.mjs android/app/src/main/assets/public`). 배포 전에 한 번 돌리세요.
 - 비밀 값은 서버에만 둡니다: Gemini 키, VAPID 비밀 키, `CRON_SECRET`, 서비스 롤 키는 Supabase 비밀 값에만 있고, 화면 코드에는 공개해도 되는 Supabase anon 키와 VAPID 공개 키만 들어갑니다. `.env`, `.env.*`는 git에서 제외됩니다(`.env.example`만 올림).
+
+## Cloudflare Pages로 배포
+
+Vercel 대신 Cloudflare Pages로도 같은 앱을 올릴 수 있습니다(무료).
+
+1. Cloudflare 대시보드 → Workers & Pages → Create → Pages → Import an existing Git repository에서 이 저장소를 고릅니다.
+2. Build command `npm run build`, Build output directory `dist`, Production branch `main`.
+3. Environment variables: `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY`(공개용 키), `NODE_VERSION=22`.
+4. 보안·캐시 헤더는 빌드할 때 `vercel.json`을 바탕으로 `dist/_headers`가 만들어져 그대로 적용됩니다(`build/plugins.js`의 `cloudflareHeaders`).
+5. 다른 브랜치를 올리면 `브랜치이름.프로젝트.pages.dev` 미리보기 주소가 따로 생깁니다. Supabase Authentication의 Redirect URLs에 쓰는 주소를 모두 넣으세요.
+
+## Netlify로 배포
+
+`netlify.toml`에 빌드 명령, 출력 폴더, Node 버전, 공개용 Supabase 값이 들어 있어서 Netlify에서 저장소를 가져오기만 하면 됩니다(Add new project → Import an existing project → GitHub → 이 저장소). 보안·캐시 헤더는 `dist/_headers`로 적용됩니다. 배포 주소를 Supabase Authentication의 Site URL과 Redirect URLs에 넣으세요.
