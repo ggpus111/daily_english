@@ -1,15 +1,23 @@
-import { useEffect, useId, useRef, useState } from 'react'
+import { useEffect, useId, useMemo, useRef, useState } from 'react'
 import { useApp } from '../context'
 import { makeBlank } from '../lib/blank'
+import { buildChoices, canMakeChoices, choicePool } from '../lib/choices'
 import { dueItems } from '../lib/review'
+import { canSpeak, speak } from '../lib/speech'
 import { isCorrectAnswer, shuffle } from '../lib/text'
 
-const MODES = ['review', 'toMeaning', 'toText', 'blank']
+// 듣기는 기기에 음성 읽기가 있을 때만 보인다.
+const MODES = ['review', 'toMeaning', 'toText', 'choice', 'blank', ...(canSpeak() ? ['listen'] : [])]
 
 function buildDeck(items, mode) {
   if (mode === 'review') return shuffle(dueItems(items))
   // 빈칸 채우기는 예문에 그 단어가 들어 있는 기록만 낸다.
   if (mode === 'blank') return shuffle(items.filter((item) => makeBlank(item)))
+  // 객관식은 서로 다른 뜻이 보기 개수만큼 있어야 한다. 모자라면 빈 덱으로 두고 안내한다.
+  if (mode === 'choice') {
+    const pool = choicePool(items)
+    return canMakeChoices(pool) ? shuffle(pool) : []
+  }
   return shuffle(items)
 }
 
@@ -27,6 +35,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
   const [input, setInput] = useState('')
   const [result, setResult] = useState(null)
   const [revealed, setRevealed] = useState(false)
+  const [picked, setPicked] = useState(null)
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
   const inputRef = useRef(null)
@@ -37,17 +46,31 @@ export default function Quiz({ items, onClose, onAnswer }) {
 
   const card = deck[index]
   const blank = mode === 'blank' && card ? makeBlank(card) : null
-  const flips = !blank && flipsFor(mode, card)
+  const choosing = mode === 'choice'
+  const listening = mode === 'listen'
+  const flips = !blank && !choosing && flipsFor(mode, card)
+  // 보기는 문제마다 한 번만 섞어 둔다(다시 그려도 순서가 바뀌지 않게).
+  const choices = useMemo(
+    () => (choosing && card ? buildChoices(card, choicePool(items)) : null),
+    [choosing, card, items],
+  )
   const answer = blank ? blank.answer : card?.text
   const isLast = index === deck.length - 1
   const empty = deck.length === 0
+  const emptyKey = { blank: 'quizBlankEmpty', choice: 'quizChoiceEmpty' }[mode] ?? 'reviewNothingDue'
 
   useEffect(() => {
     if (finished || empty) doneRef.current?.focus()
+    else if (choosing && picked !== null) nextRef.current?.focus()
     else if (flips && revealed) knewRef.current?.focus()
     else if (flips) revealRef.current?.focus()
     else inputRef.current?.focus()
-  }, [finished, empty, index, mode, flips, revealed])
+  }, [finished, empty, index, mode, flips, revealed, choosing, picked])
+
+  // 듣기 문제는 문제가 바뀔 때 한 번 읽어 준다.
+  useEffect(() => {
+    if (listening && card && !finished) speak(card.text, learningLang)
+  }, [listening, card, finished, learningLang])
 
   function restart(nextMode = mode) {
     if (items.length === 0) {
@@ -60,6 +83,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
     setInput('')
     setResult(null)
     setRevealed(false)
+    setPicked(null)
     setScore(0)
     setFinished(false)
   }
@@ -75,6 +99,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
       setInput('')
       setResult(null)
       setRevealed(false)
+      setPicked(null)
     }
   }
 
@@ -93,7 +118,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
   if (empty) {
     body = (
       <h2 className="quiz-question" ref={doneRef} tabIndex={-1}>
-        {t(mode === 'blank' ? 'quizBlankEmpty' : 'reviewNothingDue')}
+        {t(emptyKey)}
       </h2>
     )
   } else if (finished) {
@@ -106,6 +131,42 @@ export default function Quiz({ items, onClose, onAnswer }) {
           {t('quizRetry')}
         </button>
       </>
+    )
+  } else if (choosing && choices) {
+    body = (
+      <div className="stack-form">
+        <p className="quiz-progress">{t('quizScore', { current: index + 1, total: deck.length, score })}</p>
+        <h2 className="quiz-question" lang={learningLang}>
+          {card.text}
+        </h2>
+        <p className="quiz-hint">{t('quizChoiceHint')}</p>
+        <div className="quiz-choices" role="group" aria-label={t('quizChoiceHint')}>
+          {choices.map((choice) => {
+            const state = picked === null ? '' : choice === card.meaning ? 'right' : choice === picked ? 'wrong' : ''
+            return (
+              <button
+                key={choice}
+                className={`quiz-choice ${state}`}
+                disabled={picked !== null}
+                onClick={() => setPicked(choice)}
+              >
+                {choice}
+              </button>
+            )
+          })}
+        </div>
+        <div role="status">
+          {picked !== null && picked === card.meaning && <p className="correct-text">{t('quizCorrect')}</p>}
+          {picked !== null && picked !== card.meaning && (
+            <p className="wrong-text">{t('quizWrong', { answer: card.meaning })}</p>
+          )}
+        </div>
+        {picked !== null && (
+          <button className="primary-button" ref={nextRef} onClick={() => advance(picked === card.meaning)}>
+            {t(isLast ? 'quizResult' : 'quizNext')}
+          </button>
+        )}
+      </div>
     )
   } else if (flips) {
     body = (
@@ -160,6 +221,13 @@ export default function Quiz({ items, onClose, onAnswer }) {
             </h2>
             <p className="quiz-hint">{t('quizBlankHint', { meaning: card.meaning })}</p>
           </>
+        ) : listening ? (
+          <>
+            <button type="button" className="soft-button" onClick={() => speak(card.text, learningLang)}>
+              {t('quizListenPlay')}
+            </button>
+            <p className="quiz-hint">{t('quizListenHint')}</p>
+          </>
         ) : (
           <h2 className="quiz-question">{card.meaning}</h2>
         )}
@@ -206,7 +274,7 @@ export default function Quiz({ items, onClose, onAnswer }) {
   return (
     <section className="quiz-panel" aria-label={t('quiz')}>
       <div className="quiz-top">
-        <div className="auth-tabs compact four">
+        <div className="auth-tabs compact six">
           {MODES.map((name) => (
             <button key={name} aria-pressed={mode === name} onClick={() => restart(name)}>
               {t(`quizMode.${name}`)}
