@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest'
-import { buildCorrectionPrompt, fixToExpression, parseFeedback, recentPracticeNotes, recentWordTexts } from './correction'
+import {
+  buildCorrectionPrompt,
+  fixToExpression,
+  parseFeedback,
+  recentPracticeNotes,
+  recentWordTexts,
+} from './correction'
 
 const base = {
   uiLang: 'ko',
@@ -17,12 +23,16 @@ describe('buildCorrectionPrompt', () => {
     )
     expect(order.every((index) => index >= 0)).toBe(true)
     expect([...order].sort((a, b) => a - b)).toEqual(order)
-    expect(prompt).toContain('## 고친 문장\n## 고칠 점\n## 잘한 점\n## 연습할 점')
+    expect(prompt).toContain('## 고친 문장\n## 고칠 점\n## 더 자연스러운 표현\n## 잘한 점\n## 연습할 점')
     expect(prompt.endsWith('[내 번역]\nI walked at the park yesterday.')).toBe(true)
   })
 
   it('일기와 번역의 특수 문자를 그대로 넣는다', () => {
-    const prompt = buildCorrectionPrompt({ ...base, native: '오늘 {날씨}가 좋았다.', translation: 'It was nice $& today.' })
+    const prompt = buildCorrectionPrompt({
+      ...base,
+      native: '오늘 {날씨}가 좋았다.',
+      translation: 'It was nice $& today.',
+    })
     expect(prompt).toContain('[일기]\n오늘 {날씨}가 좋았다.')
     expect(prompt).toContain('[내 번역]\nIt was nice $& today.')
   })
@@ -40,11 +50,15 @@ describe('buildCorrectionPrompt', () => {
     const parsed = parseFeedback(example)
     expect(parsed.corrected).toBe('Today I went to a cafe with my friend.')
     expect(parsed.fixes).toHaveLength(3)
+    expect(parsed.natural).toHaveLength(2)
+    expect(parsed.natural[0].text).toBe('I hung out at a cafe with my friend.')
   })
 
   it('영어 화면에서는 영어 제목을 쓴다', () => {
     const prompt = buildCorrectionPrompt({ ...base, uiLang: 'en', learning: 'English', explain: 'English' })
-    expect(prompt).toContain('## Corrected translation\n## Fixes\n## What went well\n## Practice next')
+    expect(prompt).toContain(
+      '## Corrected translation\n## Fixes\n## More natural ways\n## What went well\n## Practice next',
+    )
   })
 })
 
@@ -70,6 +84,8 @@ I walked in the park yesterday.
         { original: 'at the park', fixed: 'in the park', reason: '공원 안을 걸었으니 in이 자연스러워요.' },
         { text: '시간 표현은 문장 끝에 두면 자연스러워요.' },
       ],
+      // 예전 교정(더 자연스러운 표현 칸이 없던 때)도 그대로 읽는다.
+      natural: [],
       good: '과거형을 잘 썼어요.',
       practice: '장소 전치사 in과 at을 구분해 보세요.',
     })

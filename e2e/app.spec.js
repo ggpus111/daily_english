@@ -256,6 +256,8 @@ test('AI 교정은 앱 안에서 받고, 저장하면 지난 일기에서 나눠
       'I walked in the park yesterday.',
       '## 고칠 점',
       '- 원래: at the park → 고침: in the park | 이유: 공원 안을 걸었으니 in이 자연스러워요.',
+      '## 더 자연스러운 표현',
+      '- I took a walk in the park yesterday. | take a walk는 산책을 말할 때 더 일상적이에요.',
       '## 잘한 점',
       '과거형을 잘 썼어요.',
       '## 연습할 점',
@@ -274,7 +276,7 @@ test('AI 교정은 앱 안에서 받고, 저장하면 지난 일기에서 나눠
   await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
   await expect(page.getByRole('status').filter({ hasText: 'AI 교정이 도착했어요.' })).toBeVisible()
   expect(prompts[0]).toContain('다정한 영어 튜터')
-  expect(prompts[0]).toContain('## 고친 문장\n## 고칠 점\n## 잘한 점\n## 연습할 점')
+  expect(prompts[0]).toContain('## 고친 문장\n## 고칠 점\n## 더 자연스러운 표현\n## 잘한 점\n## 연습할 점')
   expect(prompts[0]).toContain('[일기]\n어제 공원을 걸었다.')
   expect(prompts[0]).toContain('[내 번역]\nI walked at the park yesterday.')
 
@@ -288,6 +290,9 @@ test('AI 교정은 앱 안에서 받고, 저장하면 지난 일기에서 나눠
   await expect(panel.getByRole('heading', { name: '고친 문장' })).toBeVisible()
   await expect(panel.locator('ins')).toHaveText('in the park')
   await expect(panel.locator('del')).toHaveText('at the park')
+  // 더 자연스러운 표현도 따로 보여 준다
+  await expect(panel.getByRole('heading', { name: '더 자연스러운 표현' })).toBeVisible()
+  await expect(panel).toContainText('I took a walk in the park yesterday.')
 
   // 다음 요청에는 지난번 연습할 점이 함께 들어간다.
   await page.getByLabel('우리말로 쓰기').fill('오늘 학교에 갔다.')
@@ -1166,27 +1171,29 @@ test.describe('로그인 화면', () => {
     await expect(page.getByRole('heading', { name: '보내기 전에 알려 드릴게요' })).toHaveCount(0)
   })
 
-  test('연인과 한 문장: 초대 번호를 만들고, 짝이 들어오면 하루 한 문장을 주고받고, 받은 말을 표현 모음에 담는다', async ({
+  test('친구·연인과 한 문장: 연인 초대를 만들고, 오늘 받은 문장을 모아 보고 한 번에 답하고, 친구를 더해 걸러 본다', async ({
     page,
   }) => {
     await fakeSession(page)
     await fakeReportServer(page)
     const ME = '11111111-1111-4111-8111-111111111111'
     const PARTNER = '22222222-2222-4222-8222-222222222222'
+    const FRIEND = '33333333-3333-4333-8333-333333333333'
     const day = new Date()
     const today = `${day.getFullYear()}-${String(day.getMonth() + 1).padStart(2, '0')}-${String(day.getDate()).padStart(2, '0')}`
-    const db = { members: [], sentences: [], reactions: [] }
+    const db = { couples: [], members: [], sentences: [], reactions: [], created: [] }
     await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
       const request = route.request()
       const url = request.url()
-      const one = (request.headers().accept ?? '').includes('vnd.pgrst.object')
       if (url.includes('/rpc/create_couple')) {
-        db.members.push({ couple_id: 'c1', user_id: ME, nickname: request.postDataJSON().nick })
+        const body = request.postDataJSON()
+        db.created.push(body)
+        db.couples.push({ id: 'c1', code: 'ABC234', kind: body.pair_kind })
+        db.members.push({ couple_id: 'c1', user_id: ME, nickname: body.nick, joined_at: '2026-11-01T00:00:00Z' })
         return route.fulfill({ json: 'ABC234' })
       }
       if (url.includes('/couple_members')) return route.fulfill({ json: db.members })
-      if (url.includes('/couples'))
-        return route.fulfill({ json: one ? { id: 'c1', code: 'ABC234' } : [{ id: 'c1', code: 'ABC234' }] })
+      if (url.includes('/couples')) return route.fulfill({ json: db.couples })
       if (url.includes('/couple_reactions')) {
         if (request.method() === 'POST') {
           const row = { ...request.postDataJSON(), user_id: ME }
@@ -1202,8 +1209,10 @@ test.describe('로그인 화면', () => {
       }
       if (url.includes('/couple_sentences')) {
         if (request.method() === 'POST') {
-          const row = { ...request.postDataJSON(), id: db.sentences.length + 1, user_id: ME }
-          db.sentences = db.sentences.filter((item) => !(item.user_id === ME && item.day === row.day))
+          const row = { ...request.postDataJSON(), id: db.sentences.length + 100, user_id: ME }
+          db.sentences = db.sentences.filter(
+            (item) => !(item.user_id === ME && item.day === row.day && item.couple_id === row.couple_id),
+          )
           db.sentences.push(row)
           return route.fulfill({ status: 201, json: [] })
         }
@@ -1212,47 +1221,82 @@ test.describe('로그인 화면', () => {
       return route.fallback()
     })
 
+    // 상대가 아무도 없으면 바로 추가 화면이 나온다. 연인을 고르고 초대 번호를 만든다.
     await page.goto(`${AUTH_URL}#couple`)
+    await expect(page.getByRole('heading', { name: '친구·연인과 한 문장' })).toBeVisible()
     await page.getByRole('button', { name: '초대 번호 만들기' }).click()
-    await expect(page.getByRole('heading', { name: '연인을 기다리고 있어요' })).toBeVisible()
+    expect(db.created[0].pair_kind).toBe('partner')
+    await expect(page.getByRole('heading', { name: '기다리는 초대' })).toBeVisible()
     await expect(page.getByLabel('초대 번호', { exact: true })).toHaveText('ABC234')
 
-    // 연인이 들어오고, 연인이 오늘 문장을 보냈다
-    db.members.push({ couple_id: 'c1', user_id: PARTNER, nickname: 'Sam' })
-    db.sentences.push({ id: 99, user_id: PARTNER, day: today, body: 'I was thinking about you today.', lang: 'en' })
+    // 연인이 들어오고 오늘 문장을 보냈다: 오늘 받은 문장에 모이고, 동그라미에 점이 붙는다.
+    db.members.push({ couple_id: 'c1', user_id: PARTNER, nickname: 'Sam', joined_at: '2026-11-01T00:00:00Z' })
+    db.sentences.push({
+      id: 1,
+      couple_id: 'c1',
+      user_id: PARTNER,
+      day: today,
+      body: 'I was thinking about you today.',
+      lang: 'en',
+    })
     await page.getByRole('button', { name: '새로 불러오기' }).click()
-    await expect(page.getByText('Sam님과 함께 쓰고 있어요.')).toBeVisible()
-    await expect(page.getByText('I was thinking about you today.')).toBeVisible()
-    await expect(page.getByText('고민되면 이 말은 어때요?')).toBeVisible()
+    const feed = page.getByRole('region', { name: '오늘 받은 문장' })
+    await expect(feed).toContainText('I was thinking about you today.')
+    await expect(feed).toContainText('Sam · 연인')
+    await expect(page.getByRole('button', { name: 'Sam 연인 · 오늘 받은 문장이 있어요' })).toBeVisible()
 
-    await page.getByRole('button', { name: '이 문장으로 쓰기' }).click()
-    await expect(page.getByLabel('오늘 보낼 한 문장')).not.toHaveValue('')
-    await page.getByLabel('오늘 보낼 한 문장').fill('I missed you too.')
-    await page.getByRole('button', { name: '보내기', exact: true }).click()
-    await expect(page.getByRole('status').filter({ hasText: '보냈어요.' })).toBeVisible()
-    await expect(page.getByText('I missed you too.')).toBeVisible()
-    await expect(page.getByText('둘 다 보낸 날 1일 연속')).toBeVisible()
-
-    // 연인 문장에 반응을 남기고(다시 누르면 지운다), 연인이 내 문장에 남긴 반응을 본다
-    const heart = page.getByRole('button', { name: '좋아요', exact: true })
-    await expect(heart).toHaveAttribute('aria-pressed', 'false')
+    // 반응을 남기고(다시 누르면 지운다), 아직 안 보낸 상대에게 한 번에 답한다.
+    const heart = feed.getByRole('button', { name: '좋아요', exact: true })
     await heart.click()
     await expect(heart).toHaveAttribute('aria-pressed', 'true')
-    expect(db.reactions).toEqual([{ sentence_id: 99, kind: 'heart', user_id: ME }])
+    expect(db.reactions).toEqual([{ sentence_id: 1, kind: 'heart', user_id: ME }])
     await heart.click()
     await expect(heart).toHaveAttribute('aria-pressed', 'false')
-    expect(db.reactions).toHaveLength(0)
-    const mineId = db.sentences.find((item) => item.user_id === ME).id
-    db.reactions.push({ sentence_id: mineId, user_id: PARTNER, kind: 'funny' })
+    await expect(page.getByText('아직 안 보낸 상대: Sam')).toBeVisible()
+    await page.getByLabel('오늘 보낼 한 문장').fill('I missed you too.')
+    await page.getByRole('button', { name: '1명에게 보내기' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '1명에게 보냈어요.' })).toBeVisible()
+    await expect(page.getByText('오늘은 모두에게 보냈어요.')).toBeVisible()
+
+    // 친구를 더한다: 연인은 이미 있어서 친구만 고를 수 있다.
+    await page.getByRole('button', { name: '추가', exact: true }).click()
+    await expect(page.getByText('연인은 한 명만 맺을 수 있어요.')).toBeVisible()
+    db.couples.push({ id: 'c2', code: 'XYZ789', kind: 'friend' })
+    db.members.push(
+      { couple_id: 'c2', user_id: ME, nickname: '나', joined_at: '2026-11-03T00:00:00Z' },
+      { couple_id: 'c2', user_id: FRIEND, nickname: 'Yuki', joined_at: '2026-11-03T00:00:00Z' },
+    )
+    db.sentences.push({
+      id: 2,
+      couple_id: 'c2',
+      user_id: FRIEND,
+      day: today,
+      body: 'Lowkey tired today lol',
+      lang: 'en',
+    })
+    await page.getByRole('button', { name: '추가', exact: true }).click()
     await page.getByRole('button', { name: '새로 불러오기' }).click()
-    await expect(page.getByText('Sam님이 "웃겨요"로 반응했어요.')).toBeVisible()
+    await expect(feed).toContainText('Lowkey tired today lol')
+    await page.getByRole('button', { name: '친구', exact: true }).click()
+    await expect(feed).toContainText('Lowkey tired today lol')
+    await expect(feed).not.toContainText('I was thinking about you today.')
+    await page.getByRole('button', { name: '전체', exact: true }).click()
 
     const { violations } = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
       .analyze()
     expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
 
-    await page.getByRole('button', { name: '표현 모음에 담기' }).click()
+    // 연인 동그라미를 누르면 그 사람과 주고받는 화면이 열리고, 연인의 반응을 본다.
+    const mineId = db.sentences.find((item) => item.user_id === ME).id
+    db.reactions.push({ sentence_id: mineId, user_id: PARTNER, kind: 'funny' })
+    await page.getByRole('button', { name: /^Sam 연인/ }).click()
+    await page.getByRole('button', { name: '새로 불러오기' }).click()
+    await expect(page.getByText('Sam님과 함께 쓰고 있어요.')).toBeVisible()
+    await expect(page.getByText('둘 다 보낸 날 1일 연속')).toBeVisible()
+    await expect(page.getByText('Sam님이 "웃겨요"로 반응했어요.')).toBeVisible()
+
+    await page.getByRole('button', { name: '표현 모음에 담기' }).first().click()
     await expect(page.getByRole('status').filter({ hasText: '표현 모음에 담았어요.' })).toBeVisible()
     await page.goto(`${AUTH_URL}#expressions`)
     await expect(page.getByText('I was thinking about you today.')).toBeVisible()
@@ -1345,7 +1389,7 @@ test.describe('로그인 화면', () => {
 
   test('처음 온 사람은 앱 소개를 보고 로그인 없이 써 볼 수 있고, 나중에 로그인하러 갈 수 있다', async ({ page }) => {
     await page.goto(AUTH_URL)
-    await expect(page.getByRole('heading', { name: '외국인 연인·친구와 나눈 말이 내 단어장이 되는 곳' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: '외국인 친구·연인과 나눈 말이 내 단어장이 되는 곳' })).toBeVisible()
     await page.getByRole('button', { name: '로그인 없이 먼저 써 보기' }).click()
     await expect(page.locator('main h1')).toBeVisible()
     await page.goto(`${AUTH_URL}#words`)

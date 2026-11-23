@@ -15,7 +15,7 @@ export const PACK_KINDS = Object.keys(FILE_NAME)
 /** 이 언어의 꾸러미가 있는지(아직 만들지 않은 언어는 "준비 중"을 보여 준다). */
 export const hasPackData = (kind, lang = 'en') => Boolean(loaderFor(kind, lang))
 /** 외국인 연인·친구와의 대화 꾸러미(analysis/native/talk_draft.json). 꾸러미 화면에서 앞에 따로 묶는다. */
-export const TALK_PACKS = ['love', 'miss', 'text', 'chat', 'tease', 'date', 'call', 'fight', 'care', 'react', 'culture']
+export const TALK_PACKS = ['love', 'miss', 'text', 'slang', 'chat', 'tease', 'date', 'call', 'fight', 'care', 'react', 'culture']
 export const WORD_CHUNK = 50
 
 const loaded = {}

@@ -65,6 +65,8 @@ export default defineConfig(({ mode }) => {
     preview: { headers: readDeployHeaders() },
     test: {
       environment: 'jsdom',
+      // .env에 실제 서버 값이 있어도 단위 테스트는 로컬 모드로 돌린다.
+      env: { VITE_SUPABASE_URL: '', VITE_SUPABASE_ANON_KEY: '', VITE_AUTH_PROVIDERS: '', VITE_VAPID_PUBLIC_KEY: '' },
       include: ['src/**/*.test.{js,jsx}'],
       restoreMocks: true,
     },

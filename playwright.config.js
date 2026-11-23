@@ -21,6 +21,8 @@ export default defineConfig({
     {
       command: 'npm run build && npx vite preview --port 4173 --strictPort',
       url: 'http://localhost:4173',
+      // .env에 실제 Supabase 값이 있어도 이 서버는 로그인 없는 로컬 모드로 빌드한다.
+      env: { VITE_SUPABASE_URL: '', VITE_SUPABASE_ANON_KEY: '', VITE_AUTH_PROVIDERS: '', VITE_VAPID_PUBLIC_KEY: '' },
       timeout: 240_000,
     },
     {

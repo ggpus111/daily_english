@@ -12,9 +12,8 @@ import {
 import { errorMessage } from '../../lib/errors'
 import Field from '../Field'
 
-/** 짝이 된 뒤의 주 화면: 오늘 주고받기와 지난 문장. onSend(문장)은 보냈으면 true를 돌려준다. */
-/** 상대 문장 아래의 반응 버튼들. 누른 걸 다시 누르면 지운다. */
-function ReactionBar({ sentence, mine, onReact, t }) {
+/** 상대 문장 아래의 반응 버튼들. 누른 걸 다시 누르면 지운다. 오늘 모아보기(TodayFeed)도 함께 쓴다. */
+export function ReactionBar({ sentence, mine, onReact, t }) {
   return (
     <div className="reaction-bar" role="group" aria-label={t('reactLabel')}>
       {REACTIONS.map((kind) => (
@@ -31,6 +30,7 @@ function ReactionBar({ sentence, mine, onReact, t }) {
   )
 }
 
+/** 상대 한 사람과 주고받는 화면: 오늘의 한 문장과 지난 문장. onSend(문장)은 보냈으면 true를 돌려준다. */
 export default function CoupleToday({ userId, partner, sentences, reactions = [], onSend, onReact, onRefresh }) {
   const { t, learningLang, add, notify } = useApp()
   const talk = usePackData('expressions')

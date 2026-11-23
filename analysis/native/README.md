@@ -71,6 +71,7 @@ Zipf는 10억 낱말당 빈도의 로그(높을수록 흔함)입니다. yeah는 
 
 | 꾸러미 | 개수 | 예 |
 | --- | ---: | --- |
+| 요즘 쓰는 말(슬랭, 욕 제외) | 66 | Say less., no cap, Legit., Dang., Ragebait, touch grass |
 | 일상 대화 | 40 | How's it going?, pretty good, hang out, Sounds good. |
 | 하루 일과 | 40 | fall asleep, doze off, take out the trash, Sweet dreams. |
 | 밖에서 | 40 | go straight, around the corner, pull over, rain or shine |

@@ -262,13 +262,15 @@ create policy "own push queue" on public.push_queue
   using ((select auth.uid()) = user_id)
   with check ((select auth.uid()) = user_id);
 
--- ---------- 연인과 오늘의 한 문장 주고받기 ----------
+-- ---------- 상대(연인·친구)와 오늘의 한 문장 주고받기 ----------
 -- 두 사람이 초대 번호로 짝이 되어, 하루에 한 문장씩 주고받는다. 로그인한 사용자만 쓴다.
--- 짝(couples)은 두 명까지, 한 사람은 한 짝에만 들어간다. 짝이 아닌 사람은 아무것도 읽지 못한다.
--- 짝 만들기·들어가기·나가기는 아래 함수로만 한다(초대 번호 목록을 앱이 읽지 못하게).
+-- 짝(couples)은 두 명이고 종류(kind)가 연인(partner)이나 친구(friend)다. 한 사람은 연인 짝 하나와 친구 짝 여러 개
+-- (MAX_FRIENDS, 아래 함수)에 들어갈 수 있다. 표 이름은 처음 만든 대로 couple을 그대로 쓴다.
+-- 짝이 아닌 사람은 아무것도 읽지 못한다. 짝 만들기·들어가기·나가기는 아래 함수로만 한다(초대 번호 목록을 앱이 읽지 못하게).
 create table if not exists public.couples (
   id uuid primary key default gen_random_uuid(),
   code text not null unique check (code ~ '^[A-HJ-NP-Z2-9]{6}$'),
+  kind text not null default 'partner' check (kind in ('partner', 'friend')),
   created_at timestamptz not null default now()
 );
 
@@ -280,9 +282,15 @@ create table if not exists public.couple_members (
   notify boolean not null default false,
   notify_lang text not null default 'ko' check (notify_lang in ('ko', 'en')),
   joined_at timestamptz not null default now(),
-  primary key (couple_id, user_id),
-  unique (user_id)
+  primary key (couple_id, user_id)
 );
+
+-- 이미 만든 데이터베이스: 짝 종류를 더하고, 한 사람이 짝 하나에만 들어가던 제약을 푼다(친구를 여럿 두려고).
+alter table public.couples add column if not exists kind text not null default 'partner';
+alter table public.couples drop constraint if exists couples_kind_check;
+alter table public.couples add constraint couples_kind_check check (kind in ('partner', 'friend'));
+alter table public.couple_members drop constraint if exists couple_members_user_id_key;
+create index if not exists couple_members_user_idx on public.couple_members (user_id);
 
 create table if not exists public.couple_sentences (
   id bigint generated always as identity primary key,
@@ -338,8 +346,10 @@ drop policy if exists "members delete own sentence" on public.couple_sentences;
 create policy "members delete own sentence" on public.couple_sentences
   for delete to authenticated using ((select auth.uid()) = user_id);
 
--- 짝 만들기: 초대 번호(헷갈리는 글자 O, I, 0, 1 제외 6자리)를 새로 만든다.
-create or replace function public.create_couple(nick text)
+-- 짝 만들기: 초대 번호(헷갈리는 글자 O, I, 0, 1 제외 6자리)를 새로 만든다. 연인 짝은 한 사람당 하나, 친구 짝은 10개까지.
+-- 알림 설정은 내가 이미 들어 있는 짝의 설정을 따른다(설정 화면의 스위치 하나로 모든 상대에게 같게).
+drop function if exists public.create_couple(text);
+create or replace function public.create_couple(nick text, pair_kind text default 'partner')
 returns text
 language plpgsql
 security definer
@@ -347,12 +357,25 @@ set search_path = public
 as $$
 declare
   alphabet constant text := 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  max_friends constant int := 10;
   new_code text;
   new_id uuid;
+  wants_notify boolean;
+  lang text;
 begin
   if auth.uid() is null then raise exception 'not signed in'; end if;
-  if exists (select 1 from couple_members where user_id = auth.uid()) then
+  if pair_kind not in ('partner', 'friend') then raise exception 'invalid kind'; end if;
+  if pair_kind = 'partner' and exists (
+    select 1 from couple_members m join couples c on c.id = m.couple_id
+    where m.user_id = auth.uid() and c.kind = 'partner'
+  ) then
     raise exception 'already paired';
+  end if;
+  if pair_kind = 'friend' and (
+    select count(*) from couple_members m join couples c on c.id = m.couple_id
+    where m.user_id = auth.uid() and c.kind = 'friend'
+  ) >= max_friends then
+    raise exception 'too many friends';
   end if;
   loop
     new_code := '';
@@ -360,13 +383,16 @@ begin
       new_code := new_code || substr(alphabet, 1 + floor(random() * length(alphabet))::int, 1);
     end loop;
     begin
-      insert into couples (code) values (new_code) returning id into new_id;
+      insert into couples (code, kind) values (new_code, pair_kind) returning id into new_id;
       exit;
     exception when unique_violation then
       -- 번호가 겹치면 다시 만든다.
     end;
   end loop;
-  insert into couple_members (couple_id, user_id, nickname) values (new_id, auth.uid(), left(trim(nick), 30));
+  select coalesce(bool_or(notify), false), coalesce(max(notify_lang), 'ko') into wants_notify, lang
+  from couple_members where user_id = auth.uid();
+  insert into couple_members (couple_id, user_id, nickname, notify, notify_lang)
+  values (new_id, auth.uid(), left(trim(nick), 30), wants_notify, lang);
   return new_code;
 end;
 $$;
@@ -391,42 +417,61 @@ security definer
 set search_path = public
 as $$
 declare
+  max_friends constant int := 10;
   target uuid;
+  target_kind text;
+  wants_notify boolean;
+  lang text;
 begin
   if auth.uid() is null then raise exception 'not signed in'; end if;
-  if exists (select 1 from couple_members where user_id = auth.uid()) then
-    raise exception 'already paired';
-  end if;
   -- 초대 번호를 마구 넣어 보는 것을 막는다: 최근 1시간에 5번 틀리면 잠시 막는다.
   if (select count(*) from couple_join_failures
       where user_id = auth.uid() and failed_at > now() - interval '1 hour') >= 5 then
     return 'too many attempts';
   end if;
-  select id into target from couples where code = upper(trim(invite));
+  select id, kind into target, target_kind from couples where code = upper(trim(invite));
   if target is null then
     insert into couple_join_failures (user_id) values (auth.uid());
     return 'invalid code';
   end if;
+  if exists (select 1 from couple_members where couple_id = target and user_id = auth.uid()) then
+    raise exception 'own code';
+  end if;
   if (select count(*) from couple_members where couple_id = target) >= 2 then
     raise exception 'couple full';
   end if;
-  insert into couple_members (couple_id, user_id, nickname) values (target, auth.uid(), left(trim(nick), 30));
+  if target_kind = 'partner' and exists (
+    select 1 from couple_members m join couples c on c.id = m.couple_id
+    where m.user_id = auth.uid() and c.kind = 'partner'
+  ) then
+    raise exception 'already paired';
+  end if;
+  if target_kind = 'friend' and (
+    select count(*) from couple_members m join couples c on c.id = m.couple_id
+    where m.user_id = auth.uid() and c.kind = 'friend'
+  ) >= max_friends then
+    raise exception 'too many friends';
+  end if;
+  select coalesce(bool_or(notify), false), coalesce(max(notify_lang), 'ko') into wants_notify, lang
+  from couple_members where user_id = auth.uid();
+  insert into couple_members (couple_id, user_id, nickname, notify, notify_lang)
+  values (target, auth.uid(), left(trim(nick), 30), wants_notify, lang);
   return 'ok';
 end;
 $$;
 
--- 짝 나가기: 내가 보낸 문장과 내 자리를 지우고, 아무도 안 남으면 짝도 지운다.
-create or replace function public.leave_couple()
+-- 짝 나가기: 고른 짝에서 내가 보낸 문장과 내 자리를 지우고, 아무도 안 남으면 짝도 지운다.
+drop function if exists public.leave_couple();
+create or replace function public.leave_couple(target uuid)
 returns void
 language plpgsql
 security definer
 set search_path = public
 as $$
-declare
-  target uuid;
 begin
-  select couple_id into target from couple_members where user_id = auth.uid();
-  if target is null then return; end if;
+  if not exists (select 1 from couple_members where couple_id = target and user_id = auth.uid()) then
+    return;
+  end if;
   delete from couple_sentences where couple_id = target and user_id = auth.uid();
   delete from couple_members where couple_id = target and user_id = auth.uid();
   if not exists (select 1 from couple_members where couple_id = target) then
@@ -435,8 +480,8 @@ begin
 end;
 $$;
 
-revoke all on function public.create_couple(text), public.join_couple(text, text), public.leave_couple() from public, anon;
-grant execute on function public.create_couple(text), public.join_couple(text, text), public.leave_couple() to authenticated;
+revoke all on function public.create_couple(text, text), public.join_couple(text, text), public.leave_couple(uuid) from public, anon;
+grant execute on function public.create_couple(text, text), public.join_couple(text, text), public.leave_couple(uuid) to authenticated;
 
 -- 이미 만든 데이터베이스를 위한 변경(처음 만드는 경우에는 위 표에 이미 들어 있어서 아무 일도 하지 않는다).
 alter table public.couple_members add column if not exists notify boolean not null default false;
@@ -444,7 +489,7 @@ alter table public.couple_members add column if not exists notify_lang text not 
 alter table public.push_queue drop constraint if exists push_queue_kind_check;
 alter table public.push_queue add constraint push_queue_kind_check check (kind in ('goal', 'review', 'couple'));
 
--- 연인 새 문장 알림 켜기·끄기(내 줄만 바꾼다).
+-- 상대 새 문장 알림 켜기·끄기(내 줄만, 내가 들어 있는 모든 짝에서 같게 바꾼다).
 create or replace function public.set_couple_notify(enabled boolean, msg_lang text)
 returns void
 language sql
@@ -456,7 +501,7 @@ as $$
   where user_id = auth.uid();
 $$;
 
--- 새 문장이 올라오면, 알림을 켠 상대의 웹 알림 대기열에 넣는다(문장 내용은 알림에 담지 않는다).
+-- 새 문장이 올라오면, 알림을 켠 상대의 웹 알림 대기열에 넣는다. 보낸 사람 이름만 넣고 문장 내용은 담지 않는다.
 -- 보내는 일은 서버 함수 send-reminders가 10분마다 한다. 고쳐 쓴 문장(update)에는 다시 알리지 않는다.
 create or replace function public.notify_partner_of_sentence()
 returns trigger
@@ -466,7 +511,9 @@ set search_path = public
 as $$
 declare
   member record;
+  sender text;
 begin
+  select nickname into sender from couple_members where couple_id = new.couple_id and user_id = new.user_id;
   for member in
     select user_id, notify_lang from couple_members
     where couple_id = new.couple_id and user_id <> new.user_id and notify
@@ -476,8 +523,9 @@ begin
       member.user_id,
       now(),
       'couple',
-      case when member.notify_lang = 'ko' then '연인의 한 문장이 도착했어요' else 'A sentence from your partner' end,
-      case when member.notify_lang = 'ko' then '열어서 읽어 보고 답을 보내 보세요.' else 'Open it, read it, and send one back.' end,
+      case when member.notify_lang = 'ko' then '새 문장이 도착했어요' else 'A new sentence for you' end,
+      case when member.notify_lang = 'ko' then coalesce(sender, '상대') || '님이 오늘의 한 문장을 보냈어요.'
+           else coalesce(sender, 'Someone') || ' sent you today''s sentence.' end,
       '/#couple'
     );
   end loop;
@@ -554,7 +602,7 @@ begin
   join couple_members m on m.couple_id = s.couple_id and m.user_id = s.user_id
   where s.id = new.sentence_id and m.notify;
   if author.user_id is null then return new; end if;
-  msg_title := case when author.notify_lang = 'ko' then '연인이 내 문장에 반응했어요' else 'Your partner reacted to your sentence' end;
+  msg_title := case when author.notify_lang = 'ko' then '상대가 내 문장에 반응했어요' else 'Someone reacted to your sentence' end;
   if exists (
     select 1 from push_queue
     where user_id = author.user_id and kind = 'couple' and title = msg_title and send_at > now() - interval '1 hour'

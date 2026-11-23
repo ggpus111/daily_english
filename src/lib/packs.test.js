@@ -6,9 +6,9 @@ const expressions = await loadPackData('expressions')
 const words = await loadPackData('words')
 
 describe('표현 꾸러미 데이터', () => {
-  const TALK = ['love', 'miss', 'text', 'chat', 'tease', 'date', 'call', 'fight', 'care', 'react', 'culture']
+  const TALK = ['love', 'miss', 'text', 'slang', 'chat', 'tease', 'date', 'call', 'fight', 'care', 'react', 'culture']
 
-  it('연인·친구 대화 꾸러미 11개가 앞에 오고, 처음 만든 일상 꾸러미 10개(400개)가 뒤에 있다', () => {
+  it('연인·친구 대화 꾸러미 12개가 앞에 오고, 처음 만든 일상 꾸러미 10개(400개)가 뒤에 있다', () => {
     expect(expressions.groups.map((group) => group.id).slice(0, TALK.length)).toEqual(TALK)
     const base = expressions.groups.slice(TALK.length)
     expect(base).toHaveLength(10)
