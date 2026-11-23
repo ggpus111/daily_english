@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import Feedback from '../components/Feedback'
 import JournalCalendar from '../components/JournalCalendar'
 import Field from '../components/Field'
@@ -39,6 +39,7 @@ export default function Journal() {
   // 달력에서 고른 날짜("2026-11-23"). 고르면 그날 일기만 보여 준다.
   const [day, setDay] = useState(null)
   const [aiBusy, setAiBusy] = useState(false)
+  const aiBusyRef = useRef(false)
   const [askingConsent, setAskingConsent] = useState(false)
   const [aiRemaining, setAiRemaining] = useState(null)
   // "임시저장" 버튼으로 따로 치워 둔 일기들(이 기기에만 남는다).
@@ -101,6 +102,8 @@ export default function Journal() {
   // 교정은 앱 안에서만 받는다(다른 AI로 복사해 나가지 않음). 처음에는 어디로 보내지는지 알리고 동의를 받는다.
   // 받은 교정은 아래에 나눠 보여 주고, 일기를 저장하면 함께 남는다. 다시 누르면 고친 번역으로 다시 받는다.
   async function askAi({ consented = false } = {}) {
+    // 빠르게 두 번 눌러도 요청은 한 번만 나간다(화면 상태는 늦게 바뀌어서 ref로 바로 막는다).
+    if (aiBusyRef.current) return
     if (!form.native.trim() || !form.translation.trim()) {
       notify(t('correctionNeedText'))
       return
@@ -110,9 +113,15 @@ export default function Journal() {
       return
     }
     setAskingConsent(false)
+    aiBusyRef.current = true
     setAiBusy(true)
-    const result = await requestCorrection(makePrompt())
-    setAiBusy(false)
+    let result
+    try {
+      result = await requestCorrection(makePrompt())
+    } finally {
+      aiBusyRef.current = false
+      setAiBusy(false)
+    }
     if (result.error) {
       notify(t(`aiError.${result.error}`) + (result.detail ? ` (${result.detail})` : ''))
       return

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useApp } from '../context'
 import { aiConfigured, giveAiConsent, hasAiConsent, requestCorrection } from '../lib/aiCorrection'
 import { buildGrammarCheckPrompt, modesFor, parseGrammarCheck } from '../lib/grammar'
@@ -17,6 +17,7 @@ export default function GrammarPractice({ notes, onClose, onAnswer }) {
   const [revealed, setRevealed] = useState(false)
   const [check, setCheck] = useState(null)
   const [busy, setBusy] = useState(false)
+  const busyRef = useRef(false)
   const [askingConsent, setAskingConsent] = useState(false)
   const [score, setScore] = useState(0)
   const [finished, setFinished] = useState(false)
@@ -45,6 +46,8 @@ export default function GrammarPractice({ notes, onClose, onAnswer }) {
   }
 
   async function askAi() {
+    // 빠르게 두 번 눌러도 요청은 한 번만 나간다(화면 상태는 늦게 바뀌어서 ref로 바로 막는다).
+    if (busyRef.current) return
     if (!answer.trim()) {
       notify(t('grammarNeedAnswer'))
       return
@@ -53,19 +56,25 @@ export default function GrammarPractice({ notes, onClose, onAnswer }) {
       setAskingConsent(true)
       return
     }
+    busyRef.current = true
     setBusy(true)
-    const result = await requestCorrection(
-      buildGrammarCheckPrompt({
-        uiLang: nativeLang,
-        learning,
-        explain: languageName(nativeLang, nativeLang),
-        note,
-        mode,
-        source: note.exampleNative,
-        answer: answer.trim(),
-      }),
-    )
-    setBusy(false)
+    let result
+    try {
+      result = await requestCorrection(
+        buildGrammarCheckPrompt({
+          uiLang: nativeLang,
+          learning,
+          explain: languageName(nativeLang, nativeLang),
+          note,
+          mode,
+          source: note.exampleNative,
+          answer: answer.trim(),
+        }),
+      )
+    } finally {
+      busyRef.current = false
+      setBusy(false)
+    }
     if (result.error) {
       notify(t(`aiError.${result.error}`) + (result.detail ? ` (${result.detail})` : ''))
       return

@@ -9,10 +9,24 @@ export const aiConfigured = () => Boolean(supabase)
 export const hasAiConsent = () => local.get(AI_CONSENT_KEY) === '1'
 export const giveAiConsent = () => local.set(AI_CONSENT_KEY, '1')
 
+// 교정 요청이 가고 있는 동안에는 다른 요청을 보내지 않는다. 연타해도, 화면 두 곳에서 눌러도 한 번에 하나만 가서
+// 하루 횟수가 두 번 닳지 않는다. (화면의 버튼도 잠그지만, 화면 상태는 늦게 바뀌어서 여기서도 한 번 더 막는다.)
+let inFlight = false
+
 /**
- * @returns {Promise<{ feedback: string, remaining: number } | { error: 'login'|'limit'|'busy'|'failed' }>}
+ * @returns {Promise<{ feedback: string, remaining: number } | { error: 'login'|'limit'|'busy'|'pending'|'failed', detail?: string }>}
  */
 export async function requestCorrection(prompt) {
+  if (inFlight) return { error: 'pending' }
+  inFlight = true
+  try {
+    return await send(prompt)
+  } finally {
+    inFlight = false
+  }
+}
+
+async function send(prompt) {
   if (!supabase) return { error: 'failed' }
   const { data, error } = await supabase.functions.invoke('correct-journal', { body: { prompt } })
   if (!error && data?.feedback) return { feedback: data.feedback, remaining: data.remaining ?? 0 }

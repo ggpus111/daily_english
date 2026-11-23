@@ -359,6 +359,7 @@ const ko = {
   'aiError.login': '로그인이 풀렸어요. 다시 로그인해 주세요.',
   'aiError.limit': '오늘 AI 교정을 다 썼어요. 내일 또 다듬어 드릴게요.',
   'aiError.busy': 'AI가 지금 바빠요. 잠시 뒤 다시 해 볼까요?',
+  'aiError.pending': '교정을 받는 중이에요. 잠깐만 기다려 주세요.',
   'aiError.failed': 'AI 교정을 받지 못했어요. 잠시 뒤 다시 해 볼까요?',
   feedbackCorrected: '고친 문장',
   feedbackFixes: '고칠 점',

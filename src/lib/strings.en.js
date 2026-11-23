@@ -349,6 +349,7 @@ export default {
   'aiError.login': 'You were logged out. Please log in again.',
   'aiError.limit': 'You\'ve used today\'s AI corrections. Come back tomorrow for more.',
   'aiError.busy': 'The AI is busy right now. Try again in a moment?',
+  'aiError.pending': 'Your correction is on its way. Please wait a moment.',
   'aiError.failed': "Couldn't get an AI correction. Try again in a moment?",
   feedbackCorrected: 'Corrected translation',
   feedbackFixes: 'Fixes',
