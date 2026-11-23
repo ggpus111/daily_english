@@ -66,44 +66,62 @@ Deno.serve(async (request) => {
     return json({ error: 'config' }, 500)
   }
   // 모델이 몰려서 바쁠 때(503)나 한도(429), 사라진 모델(404)이면 같은 모델을 한 번 더, 그래도 안 되면 다음 모델로 넘어간다.
-  const askGemini = (model: string) =>
-    fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
-      body: JSON.stringify({
-        contents: [{ role: 'user', parts: [{ text: prompt }] }],
-        generationConfig: {
-          temperature: 0.4,
-          // "생각"에 쓰는 토큰도 출력 한도에 들어가서, 한도가 작으면 답이 비어 올 수 있어 넉넉히 잡는다.
-          maxOutputTokens: 8192,
-          // 2.5 모델만 생각을 끌 수 있다. 3.x 모델은 끌 수 없어서(설정하면 오류 가능) 건드리지 않는다.
-          ...(model.startsWith('gemini-2.5') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
-        },
-      }),
-    })
+  // 구글이 느리게 답하면 여러 모델을 거치는 동안 Supabase 쪽 제한 시간을 넘길 수 있어서, 한 번에 25초, 전체 90초로 끊는다.
+  const deadline = Date.now() + 90_000
+  const askGemini = async (model: string): Promise<Response> => {
+    const left = deadline - Date.now()
+    if (left < 3000) return new Response(null, { status: 504 })
+    try {
+      return await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
+        signal: AbortSignal.timeout(Math.min(25_000, left)),
+        body: JSON.stringify({
+          contents: [{ role: 'user', parts: [{ text: prompt }] }],
+          generationConfig: {
+            temperature: 0.4,
+            // "생각"에 쓰는 토큰도 출력 한도에 들어가서, 한도가 작으면 답이 비어 올 수 있어 넉넉히 잡는다.
+            maxOutputTokens: 8192,
+            // 2.5 모델만 생각을 끌 수 있다. 3.x 모델은 끌 수 없어서(설정하면 오류 가능) 건드리지 않는다.
+            ...(model.startsWith('gemini-2.5') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+          },
+        }),
+      })
+    } catch {
+      return new Response(null, { status: 504 }) // 시간 초과나 연결 실패는 바쁨처럼 다룬다.
+    }
+  }
+  const RETRYABLE = [429, 503, 504, 404]
   const models = [...new Set([MODEL, ...FALLBACK_MODELS])]
   let response: Response | null = null
   let lastStatus = 0
-  let sawBusy = false // 한 번이라도 바쁨(429/503)이 있었으면, 마지막에 다른 오류가 나도 사용자에게는 "바빠요"로 알린다.
+  let lastReason = '' // 구글이 알려 준 오류 종류(예: RESOURCE_EXHAUSTED). 키 값은 들어 있지 않다.
+  let sawBusy = false // 한 번이라도 바쁨(429/503/시간 초과)이 있었으면, 마지막에 다른 오류가 나도 사용자에게는 "바빠요"로 알린다.
   for (const model of models) {
     for (let attempt = 0; attempt < 2; attempt++) {
       response = await askGemini(model)
       if (response.ok) break
       lastStatus = response.status
-      if (response.status === 429 || response.status === 503) sawBusy = true
+      if ([429, 503, 504].includes(response.status)) sawBusy = true
+      const text = (await response.text().catch(() => '')).slice(0, 600)
+      try {
+        lastReason = String(JSON.parse(text)?.error?.status ?? '').slice(0, 40)
+      } catch {
+        lastReason = ''
+      }
       // 원인 확인용: Supabase 대시보드 > Edge Functions > correct-journal > Logs에서 볼 수 있다.
-      console.error('Gemini 오류', response.status, model, (await response.text()).slice(0, 600))
+      console.error('Gemini 오류', response.status, model, text)
       // 키·요청 문제(400/401/403)는 다른 모델로 바꿔도 같으니 바로 멈춘다.
-      if (![429, 503, 404].includes(response.status)) break
+      if (!RETRYABLE.includes(response.status)) break
       if (response.status === 503 && attempt === 0) await new Promise((r) => setTimeout(r, 1200))
       else break
     }
     if (response?.ok) break
-    if (![429, 503, 404].includes(lastStatus)) break
+    if (!RETRYABLE.includes(lastStatus)) break
   }
   if (!response?.ok) {
     const busy = sawBusy
-    return json({ error: busy ? 'busy' : 'ai', upstream: lastStatus }, busy ? 503 : 502)
+    return json({ error: busy ? 'busy' : 'ai', upstream: lastStatus, reason: lastReason }, busy ? 503 : 502)
   }
   const result = await response.json()
   const feedback = (result.candidates?.[0]?.content?.parts ?? [])

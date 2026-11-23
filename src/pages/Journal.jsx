@@ -114,7 +114,7 @@ export default function Journal() {
     const result = await requestCorrection(makePrompt())
     setAiBusy(false)
     if (result.error) {
-      notify(t(`aiError.${result.error}`))
+      notify(t(`aiError.${result.error}`) + (result.detail ? ` (${result.detail})` : ''))
       return
     }
     setField('aiFeedback', result.feedback)

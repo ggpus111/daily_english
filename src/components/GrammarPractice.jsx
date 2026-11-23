@@ -67,7 +67,7 @@ export default function GrammarPractice({ notes, onClose, onAnswer }) {
     )
     setBusy(false)
     if (result.error) {
-      notify(t(`aiError.${result.error}`))
+      notify(t(`aiError.${result.error}`) + (result.detail ? ` (${result.detail})` : ''))
       return
     }
     setCheck({ text: result.feedback, parsed: parseGrammarCheck(result.feedback) })
