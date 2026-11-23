@@ -1,13 +1,15 @@
-// 앱 안 AI 일기 교정: 교정 요청문을 서버 함수(supabase/functions/correct-journal)로 보내 Google Gemini의 답을 받는다.
+// 앱 안 AI 일기 교정: 교정 요청문을 서버 함수(supabase/functions/correct-journal)로 보내 AI(Anthropic Claude, 바쁘면 Google Gemini)의 답을 받는다.
 // 로그인해야 쓸 수 있고(하루 횟수 제한), 처음 쓸 때 어디로 보내지는지 알리고 동의를 받는다.
 import { local } from './storage'
 import { supabase } from './supabase'
 
 export const AI_CONSENT_KEY = 'aiConsent'
+// 동의 내용(어디로 보내지는지)이 바뀌면 이 숫자를 올린다. 예전 동의('1', 구글 Gemini만)는 다시 받는다.
+export const AI_CONSENT_VERSION = '2'
 
 export const aiConfigured = () => Boolean(supabase)
-export const hasAiConsent = () => local.get(AI_CONSENT_KEY) === '1'
-export const giveAiConsent = () => local.set(AI_CONSENT_KEY, '1')
+export const hasAiConsent = () => local.get(AI_CONSENT_KEY) === AI_CONSENT_VERSION
+export const giveAiConsent = () => local.set(AI_CONSENT_KEY, AI_CONSENT_VERSION)
 
 // 교정 요청이 가고 있는 동안에는 다른 요청을 보내지 않는다. 연타해도, 화면 두 곳에서 눌러도 한 번에 하나만 가서
 // 하루 횟수가 두 번 닳지 않는다. (화면의 버튼도 잠그지만, 화면 상태는 늦게 바뀌어서 여기서도 한 번 더 막는다.)
@@ -15,7 +17,7 @@ let inFlight = false
 const REQUEST_TIMEOUT_MS = 60_000
 
 /**
- * @returns {Promise<{ feedback: string, remaining: number } | { error: 'login'|'limit'|'busy'|'pending'|'failed', detail?: string }>}
+ * @returns {Promise<{ feedback: string, remaining: number } | { error: 'login'|'limit'|'full'|'busy'|'pending'|'network'|'failed', detail?: string }>}
  */
 export async function requestCorrection(prompt) {
   if (inFlight) return { error: 'pending' }
@@ -41,6 +43,7 @@ async function send(prompt) {
   const status = error?.context?.status
   const body = await error?.context?.json?.().catch(() => null)
   const code = body?.error ?? data?.error
+  if (code === 'full') return { error: 'full' } // 오늘 전체 이용 한도(비용 보호)가 찼다. 상태 번호는 503이라 바쁨보다 먼저 본다.
   if (status === 401 || code === 'login') return { error: 'login' }
   if (status === 429 || code === 'limit') return { error: 'limit' }
   if (code === 'busy' || status === 503) return { error: 'busy' }

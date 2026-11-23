@@ -96,17 +96,18 @@ Authentication > Providers > Email에서 Confirm email을 켭니다. 인증 메�
 
 ## AI 일기 교정
 
-일기 화면의 "AI에게 자연스럽게 다듬어 달라고 하기"를 누르면 앱 안에서 바로 교정을 받습니다. 운영비 0원 원칙에 맞춰 Google Gemini API의 무료 요금제를 씁니다.
+일기 화면의 "AI에게 자연스럽게 다듬어 달라고 하기"를 누르면 앱 안에서 바로 교정을 받습니다. 기본은 Anthropic의 Claude API(유료, 충전식)이고, Claude가 바쁘거나 막히면 Google Gemini API(무료 요금제)가 대신 받습니다.
 
-- 앱(`src/lib/aiCorrection.js`)이 교정 요청문을 서버 함수 `supabase/functions/correct-journal`로 보내고, 함수가 Gemini에 묻습니다. API 키는 서버에만 둡니다.
-- 로그인한 사용자만, 하루 5번까지 쓸 수 있습니다(`ai_usage` 표로 셉니다). 교정 내용은 서버에 남기지 않고, 사용자가 일기를 저장할 때만 일기와 함께 남습니다.
-- 무료 요금제는 보낸 내용이 구글의 서비스 개선에 쓰일 수 있습니다. 그래서 처음 쓸 때 어디로 보내지는지 알리고 동의를 받으며, 연인·친구의 실명이나 연락처는 빼고 보내 달라고 안내합니다. 개인정보 처리방침에도 적었습니다.
+- 앱(`src/lib/aiCorrection.js`)이 교정 요청문을 서버 함수 `supabase/functions/correct-journal`로 보내고, 함수가 Claude에 묻습니다. API 키는 서버에만 둡니다.
+- 로그인한 사용자만, 한 사람이 하루 5번까지 쓸 수 있습니다(`ai_usage` 표로 셉니다). 모든 사용자를 합친 하루 한도(`AI_GLOBAL_DAILY_LIMIT`, 기본 300)도 있어 비용이 한없이 늘지 않습니다. 교정 내용은 서버에 남기지 않고, 사용자가 일기를 저장할 때만 일기와 함께 남습니다.
+- Anthropic은 상용 약관에서 입력과 답을 모델 학습에 쓰지 않는다고 밝힙니다. 반면 Gemini 무료 요금제는 보낸 내용이 구글의 서비스 개선에 쓰일 수 있습니다. 그래서 처음 쓸 때 어디로 보내지는지 알리고 동의를 받으며(보내는 곳이 바뀌면 `AI_CONSENT_VERSION`을 올려 다시 받습니다), 연인·친구의 실명이나 연락처는 빼고 보내 달라고 안내합니다. 개인정보 처리방침에도 적었습니다.
 - 로그인하지 않았거나 하루 한도를 다 쓰면 "다른 AI에서 받기"에서 요청문을 복사해 다른 AI 채팅에 붙여 넣고, 받은 교정을 붙여 넣을 수 있습니다.
 
 설정(한 번만):
-1. Google AI Studio에서 무료 API 키를 받습니다.
-2. Supabase 대시보드 > Edge Functions에서 `correct-journal`을 만들고 `index.ts` 내용을 붙여 넣어 배포합니다. Secrets에 `GEMINI_API_KEY`를 넣습니다(선택: `GEMINI_MODEL`, 기본 `gemini-3.8-flash` / `AI_DAILY_LIMIT`, 기본 5).
-3. `supabase/schema.sql`을 다시 실행해 `ai_usage` 표를 만듭니다.
+1. Anthropic 콘솔에서 가입하고 크레딧을 충전한 뒤(자동 충전은 꺼 두면 충전한 금액만큼만 쓰입니다) API 키를 만듭니다.
+2. Supabase 대시보드 > Edge Functions에서 `correct-journal`을 만들고 `index.ts` 내용을 붙여 넣어 배포합니다. Secrets에 `ANTHROPIC_API_KEY`를 넣습니다(선택: `CLAUDE_MODEL`, 기본 `claude-sonnet-5-5`, 더 싸고 빠르게 하려면 `claude-haiku-5-5`).
+3. 대체용으로 Google AI Studio의 무료 키를 `GEMINI_API_KEY`에 넣습니다(선택: `GEMINI_MODEL`, 기본 `gemini-3.8-flash` / `AI_DAILY_LIMIT`, 기본 5 / `AI_GLOBAL_DAILY_LIMIT`, 기본 300).
+4. `supabase/schema.sql`을 다시 실행해 `ai_usage` 표를 만듭니다.
 
 요청문은 `src/lib/correction.js`가 만듭니다. 다른 AI 채팅에 붙여 넣어도 같은 결과가 나오도록 시스템 프롬프트 역할을 요청문 맨 위에 둡니다.
 

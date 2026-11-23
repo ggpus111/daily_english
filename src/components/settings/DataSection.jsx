@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { useApp } from '../../context'
 import { useAccountActions } from '../../hooks/useAccountActions'
-import { AI_CONSENT_KEY } from '../../lib/aiCorrection'
+import { AI_CONSENT_KEY, hasAiConsent } from '../../lib/aiCorrection'
 import { LAST_EXPORT_KEY, MAX_FILE_BYTES, parseBackup, planImport } from '../../lib/backup'
 import { errorMessage } from '../../lib/errors'
 import { shareJsonFile } from '../../lib/native'
@@ -34,7 +34,7 @@ export default function DataSection() {
   const [importPlan, setImportPlan] = useState(null)
   const [importing, setImporting] = useState(false)
   const [lastExport, setLastExport] = useState(() => local.get(LAST_EXPORT_KEY))
-  const [aiConsent, setAiConsent] = useState(() => local.get(AI_CONSENT_KEY) === '1')
+  const [aiConsent, setAiConsent] = useState(hasAiConsent)
   const signedIn = Boolean(supabase && user)
   const dateFormat = new Intl.DateTimeFormat(nativeLang === 'ko' ? 'ko-KR' : 'en-US', { dateStyle: 'long' })
 

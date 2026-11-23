@@ -3,12 +3,13 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 const invoke = vi.fn()
 vi.mock('./supabase', () => ({ supabase: { functions: { invoke: (...args) => invoke(...args) } } }))
 
-const { requestCorrection } = await import('./aiCorrection')
+const { AI_CONSENT_KEY, giveAiConsent, hasAiConsent, requestCorrection } = await import('./aiCorrection')
 
 const later = (value, ms = 20) => new Promise((resolve) => setTimeout(() => resolve(value), ms))
 
 beforeEach(() => {
   invoke.mockReset()
+  window.localStorage.clear()
 })
 
 describe('requestCorrection', () => {
@@ -51,5 +52,22 @@ describe('requestCorrection', () => {
     expect((await requestCorrection('p')).error).toBe('busy')
     fail(502, { error: 'ai', upstream: 404, reason: 'NOT_FOUND' })
     expect(await requestCorrection('p')).toEqual({ error: 'failed', detail: '502 ai 404 NOT_FOUND' })
+  })
+})
+
+describe('동의', () => {
+  it('보내는 곳이 바뀌기 전의 동의(1)는 다시 받는다', () => {
+    window.localStorage.setItem(AI_CONSENT_KEY, '1')
+    expect(hasAiConsent()).toBe(false)
+    giveAiConsent()
+    expect(hasAiConsent()).toBe(true)
+    expect(window.localStorage.getItem(AI_CONSENT_KEY)).toBe('2')
+  })
+})
+
+describe('오늘 전체 한도', () => {
+  it('서버가 503이어도 full이면 바쁨이 아니라 마감으로 알린다', async () => {
+    invoke.mockResolvedValueOnce({ data: null, error: { context: { status: 503, json: async () => ({ error: 'full' }) } } })
+    expect(await requestCorrection('p')).toEqual({ error: 'full' })
   })
 })

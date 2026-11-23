@@ -253,7 +253,7 @@ async function fakeAi(page, replies) {
 async function openJournalSignedIn(page) {
   await fakeSession(page)
   await fakeReportServer(page)
-  await page.addInitScript(() => localStorage.setItem('aiConsent', '1'))
+  await page.addInitScript(() => localStorage.setItem('aiConsent', '2'))
   await page.goto(`${AUTH_URL}#journal`)
 }
 
