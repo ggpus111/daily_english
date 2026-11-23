@@ -17,7 +17,7 @@ const REQUIRED = ['text', 'meaning']
  * 번역·작문으로 연습한다. 복습 일정(상자)은 단어·표현과 같은 간격 반복을 쓴다.
  */
 export default function Grammar() {
-  const { t, notify, records, update, learningLang } = useApp()
+  const { t, notify, records, update, learningLang, go } = useApp()
   const items = records.grammar
   const recordForm = useRecordForm({ type: 'grammar', emptyForm: EMPTY_FORM, required: REQUIRED })
   const { form, errors, editingId, saving, formRef, listRef, setField } = recordForm
@@ -52,6 +52,9 @@ export default function Grammar() {
             {t('grammarPracticeAll')}
           </button>
           <span className="muted">{t('reviewDueHere', { count: due.length })}</span>
+          <button className="text-button" onClick={() => go('packs-grammar')}>
+            {t('packsGrammarBrowse')}
+          </button>
         </div>
       )}
 
@@ -123,6 +126,7 @@ export default function Grammar() {
                   <div>
                     <strong lang={learningLang}>{item.text}</strong>
                     {item.source === 'journal' && <span className="missed-kind">{t('grammarFromJournal')}</span>}
+                    {item.source === 'pack' && <span className="missed-kind">{t('grammarFromPack')}</span>}
                     <p>{item.meaning}</p>
                     {item.example && (
                       <p className="muted" lang={learningLang}>

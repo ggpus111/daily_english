@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ExpressionCard from '../components/ExpressionCard'
+import SaveEntryButton from '../components/SaveEntryButton'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { usePackData } from '../hooks/usePackData'
@@ -12,9 +13,32 @@ import { local } from '../lib/storage'
 
 // 미리 준비한 꾸러미. 표현은 주제별, 단어는 단계별로 보고 고른다. 담은 뒤에는 내 기록처럼 복습한다.
 const MODES = {
-  expressions: { page: 'packs', kind: 'expression', title: 'packs', intro: 'packsIntro', tab: 'packKindExpressions', count: 589 },
-  words: { page: 'packs-words', kind: 'word', title: 'packsWordsTitle', intro: 'packsWordsIntro', tab: 'packKindWords', count: 600 },
+  expressions: {
+    page: 'packs',
+    kind: 'expression',
+    title: 'packs',
+    intro: 'packsIntro',
+    tab: 'packKindExpressions',
+    count: 589,
+  },
+  words: {
+    page: 'packs-words',
+    kind: 'word',
+    title: 'packsWordsTitle',
+    intro: 'packsWordsIntro',
+    tab: 'packKindWords',
+    count: 600,
+  },
+  grammar: {
+    page: 'packs-grammar',
+    kind: 'grammar',
+    title: 'packsGrammarTitle',
+    intro: 'packsGrammarIntro',
+    tab: 'packKindGrammar',
+    count: 48,
+  },
 }
+const PLAIN = { expressions: 'packKindExpressionsPlain', words: 'packKindWordsPlain', grammar: 'packKindGrammarPlain' }
 
 export default function Packs({ mode = 'expressions' }) {
   const { t, go, learningLang, nativeLang } = useApp()
@@ -25,7 +49,7 @@ export default function Packs({ mode = 'expressions' }) {
 
   // 탭 이름: 지금 보는 꾸러미는 실제 개수, 영어의 다른 꾸러미는 알려진 개수, 아직 없는 언어 꾸러미는 "준비 중"
   function modeLabel(id, item) {
-    const plain = t(id === 'words' ? 'packKindWordsPlain' : 'packKindExpressionsPlain')
+    const plain = t(PLAIN[id])
     if (!hasPackData(id, learningLang)) return t('packKindSoon', { kind: plain })
     if (id === mode && data) return t(item.tab, { count: data.items.length })
     return learningLang === 'en' ? t(item.tab, { count: item.count }) : plain
@@ -70,14 +94,23 @@ export default function Packs({ mode = 'expressions' }) {
         </p>
       ) : mode === 'words' ? (
         <WordPacks data={data} />
+      ) : mode === 'grammar' ? (
+        <GrammarPacks data={data} />
       ) : (
         <ExpressionPacks data={data} />
       )}
 
-      {data && (
+      {data && mode === 'grammar' && <p className="tiny-note pack-source">{t('grammarSource')}</p>}
+      {data && mode !== 'grammar' && (
         <SourceNote
           text={t(
-            learningLang === 'en' ? (mode === 'words' ? 'wordSource' : 'packSource') : mode === 'words' ? 'wordSourceOther' : 'packSourceOther',
+            learningLang === 'en'
+              ? mode === 'words'
+                ? 'wordSource'
+                : 'packSource'
+              : mode === 'words'
+                ? 'wordSourceOther'
+                : 'packSourceOther',
             { count: data.source.sentences.toLocaleString(), lang: languageName(learningLang, nativeLang) },
           )}
         />
@@ -193,6 +226,53 @@ function WordPacks({ data }) {
             <ExpressionCard key={item.id} item={item} kind="word" />
           ))}
         </div>
+      </section>
+    </>
+  )
+}
+
+/** 문법 꾸러미: 주제별로 보고 "문법 노트에 담기"로 저장한다. 담은 문법은 문법 탭에서 번역·작문으로 연습한다. */
+function GrammarPacks({ data }) {
+  const { t, nativeLang, records, learningLang, go } = useApp()
+  const [groupId, setGroupId] = useState(data.groups[0].id)
+  const group = data.groups.find((item) => item.id === groupId)
+  const savedCount = group.items.filter((item) => isSaved(item, records.grammar)).length
+
+  return (
+    <>
+      <GroupTabs groups={data.groups} current={groupId} onPick={setGroupId} label={t('packsGrammarTopic')} />
+      <section className="panel pack-panel" aria-labelledby="pack-title">
+        <div className="section-head">
+          <h2 id="pack-title">{group.title[nativeLang === 'ko' ? 'ko' : 'en']}</h2>
+          <span className="count">{t('packProgress', { saved: savedCount, total: group.items.length })}</span>
+        </div>
+        <ul className="grammar-pack-list">
+          {group.items.map((item) => (
+            <li key={item.id} className="grammar-pack-card">
+              <strong lang={learningLang}>{item.text}</strong>
+              <p>{item.meaning}</p>
+              <p className="grammar-pack-example" lang={learningLang}>
+                {item.example}
+              </p>
+              <p className="muted">{item.exampleNative}</p>
+              {item.tip && <p className="tiny-note">{item.tip}</p>}
+              <SaveEntryButton
+                kind="grammar"
+                entry={{
+                  text: item.text,
+                  meaning: item.meaning,
+                  example: item.example,
+                  exampleNative: item.exampleNative,
+                  source: 'pack',
+                }}
+                label="grammarSave"
+              />
+            </li>
+          ))}
+        </ul>
+        <button className="text-button" onClick={() => go('grammar')}>
+          {t('packsGrammarToNotes')}
+        </button>
       </section>
     </>
   )

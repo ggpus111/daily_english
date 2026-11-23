@@ -632,5 +632,25 @@ create trigger couple_reaction_notify
   after insert or update on public.couple_reactions
   for each row execute function public.notify_author_of_reaction();
 
+-- 실시간: 새 문장·반응·짝 변화가 생기면 앱이 새로고침 없이 바로 받는다(Supabase Realtime).
+-- 받는 쪽도 행 단위 보안을 그대로 따라서, 내 짝의 줄만 받는다.
+do $$
+declare
+  name text;
+begin
+  if not exists (select 1 from pg_publication where pubname = 'supabase_realtime') then
+    return;
+  end if;
+  foreach name in array array['couple_sentences', 'couple_reactions', 'couple_members'] loop
+    if not exists (
+      select 1 from pg_publication_tables
+      where pubname = 'supabase_realtime' and schemaname = 'public' and tablename = name
+    ) then
+      execute format('alter publication supabase_realtime add table public.%I', name);
+    end if;
+  end loop;
+end;
+$$;
+
 revoke all on function public.set_couple_notify(boolean, text) from public, anon;
 grant execute on function public.set_couple_notify(boolean, text) to authenticated;

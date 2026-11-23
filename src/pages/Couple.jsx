@@ -7,11 +7,12 @@ import PairAvatars from '../components/couple/PairAvatars'
 import TodayFeed from '../components/couple/TodayFeed'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
-import { coupleErrorKey, leaveCouple, loadPairs, sendSentence, setReaction } from '../lib/couple'
+import { coupleErrorKey, leaveCouple, loadPairs, sendSentence, setReaction, watchPairs } from '../lib/couple'
 import { errorMessage } from '../lib/errors'
 import { supabase } from '../lib/supabase'
 
 const EMPTY = { loading: false, error: null, pairs: [] }
+const LIVE_REFRESH_MS = 30 * 1000
 const toState = (result) => (result.error ? { ...EMPTY, error: result.error } : { ...EMPTY, pairs: result.pairs })
 
 /**
@@ -37,6 +38,21 @@ export default function Couple() {
       alive = false
     }
   }, [userId])
+
+  // 새로고침하지 않아도 상대가 보낸 문장이 바로 보이게: 실시간 알림을 받고,
+  // 실시간 연결이 끊겼을 때를 대비해 화면을 보고 있는 동안 30초마다, 앱으로 돌아올 때도 다시 불러온다.
+  useEffect(() => {
+    if (!supabase || !userId) return undefined
+    const refreshIfVisible = () => document.visibilityState === 'visible' && refresh()
+    const stop = watchPairs(refresh)
+    const timer = setInterval(refreshIfVisible, LIVE_REFRESH_MS)
+    document.addEventListener('visibilitychange', refreshIfVisible)
+    return () => {
+      stop()
+      clearInterval(timer)
+      document.removeEventListener('visibilitychange', refreshIfVisible)
+    }
+  }, [userId, refresh])
 
   const fail = (error) => notify(t(coupleErrorKey(error) ?? 'coupleError', { message: errorMessage(error, t) }))
 

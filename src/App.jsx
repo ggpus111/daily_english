@@ -37,13 +37,14 @@ const NAV_LABEL = { packs: 'navPacks', couple: 'navCouple' }
 // 휴대폰 아래 탭에는 자주 쓰는 넷만 두고, 나머지는 "더보기"를 누르면 목록으로 연다(PC 왼쪽 메뉴는 모두 보인다).
 const MOBILE_TABS = new Set(['home', 'words', 'journal', 'couple'])
 const MORE = ['expressions', 'packs', 'chats', 'grammar']
-const isCurrent = (page, id) => page === id || (id === 'packs' && page === 'packs-words')
+const isCurrent = (page, id) => page === id || (id === 'packs' && page.startsWith('packs-'))
 const TOAST_MS = 5000
 const TOAST_ACTION_MS = 8000
 
 function readPage() {
   const page = window.location.hash.slice(1)
-  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin', 'settings', 'missed'].includes(page)
+  return NAV.includes(page) ||
+    ['privacy', 'pro', 'packs', 'packs-words', 'packs-grammar', 'admin', 'settings', 'missed'].includes(page)
     ? page
     : 'home'
 }
@@ -228,6 +229,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     grammar: <Grammar />,
     packs: <Packs key="expressions" mode="expressions" />,
     'packs-words': <Packs key="words" mode="words" />,
+    'packs-grammar': <Packs key="grammar" mode="grammar" />,
   }
 
   return (
