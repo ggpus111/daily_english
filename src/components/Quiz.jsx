@@ -26,11 +26,11 @@ function buildDeck(items, mode) {
 // 일기 교정에서 담은 표현은 뜻 칸에 "원래 쓴 말 · 이유"가 있어서, 복습 때는 그걸 보고 고친 말을 쓴다.
 const flipsFor = (mode, card) => mode === 'toMeaning' || (mode === 'review' && card?.source !== 'journal')
 
-export default function Quiz({ items, onClose, onAnswer }) {
+export default function Quiz({ items, onClose, onAnswer, initialMode = 'review' }) {
   const { t, learningLang } = useApp()
   const inputId = useId()
-  const [mode, setMode] = useState('review')
-  const [deck, setDeck] = useState(() => buildDeck(items, 'review'))
+  const [mode, setMode] = useState(initialMode)
+  const [deck, setDeck] = useState(() => buildDeck(items, initialMode))
   const [index, setIndex] = useState(0)
   const [input, setInput] = useState('')
   const [result, setResult] = useState(null)

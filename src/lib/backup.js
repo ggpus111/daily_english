@@ -76,6 +76,13 @@ function sanitize(type, raw) {
       clean.dueAt = dueAt
       const last = isoOrNull(item.lastReviewedAt)
       if (last) clean.lastReviewedAt = last
+      // 복습·틀린 횟수는 자연수일 때만 이어 간다(틀린 횟수가 복습 횟수보다 클 수는 없다).
+      const reviews = Number.isInteger(item.reviews) && item.reviews >= 0 ? item.reviews : null
+      const misses = Number.isInteger(item.misses) && item.misses >= 0 ? item.misses : null
+      if (reviews !== null && misses !== null && misses <= reviews) {
+        clean.reviews = reviews
+        clean.misses = misses
+      }
     }
     // 일기 교정에서 담은 표현 표시(복습 방향이 다름)
     if (item.source === 'journal') clean.source = 'journal'

@@ -73,6 +73,25 @@ describe('parseBackup', () => {
     expect(item).not.toHaveProperty('dueAt')
   })
 
+  const ID2 = '22222222-2222-4222-8222-222222222222'
+  const ID3 = '33333333-3333-4333-8333-333333333333'
+
+  it('복습·틀린 횟수는 올바른 자연수일 때만 이어 가고, 틀린 횟수가 더 크면 버린다', () => {
+    const base = { createdAt: '2026-11-01T00:00:00.000Z', box: 1, dueAt: '2026-11-05T00:00:00.000Z' }
+    const file = {
+      word: [
+        { id: ID, text: 'a', meaning: 'b', ...base, reviews: 4, misses: 2 },
+        { id: ID2, text: 'c', meaning: 'd', ...base, reviews: 1, misses: 3 },
+        { id: ID3, text: 'e', meaning: 'f', ...base, reviews: -1, misses: 'x' },
+      ],
+    }
+    const { word } = parseBackup(JSON.stringify(file)).records
+    const [ok, tooMany, bad] = ['a', 'c', 'e'].map((text) => word.find((item) => item.text === text))
+    expect(ok).toMatchObject({ reviews: 4, misses: 2 })
+    expect(tooMany).not.toHaveProperty('misses')
+    expect(bad).not.toHaveProperty('reviews')
+  })
+
   it('JSON이 아니거나 백업 형식이 아니면 알려 준다', () => {
     expect(errorCode(() => parseBackup('not json'))).toBe('notJson')
     expect(errorCode(() => parseBackup('[1,2]'))).toBe('notBackup')
@@ -117,7 +136,13 @@ describe('새 칸: 오늘의 기분, 일기에서 담은 표현', () => {
     const { records } = parseBackup(
       file({
         expression: [
-          { id: 'e1', createdAt: '2026-11-01T00:00:00Z', text: 'with my friend', meaning: '원래 쓴 말: with friend', source: 'journal' },
+          {
+            id: 'e1',
+            createdAt: '2026-11-01T00:00:00Z',
+            text: 'with my friend',
+            meaning: '원래 쓴 말: with friend',
+            source: 'journal',
+          },
           { id: 'e2', createdAt: '2026-11-01T00:00:00Z', text: 'hang out', meaning: '어울려 놀다', source: 'hacker' },
         ],
       }),

@@ -1,12 +1,37 @@
 import { useMemo, useState } from 'react'
 import { useApp } from '../../context'
 import { usePackData } from '../../hooks/usePackData'
-import { SENTENCE_MAX, exchangeStreak, groupByDay, suggestionFor } from '../../lib/couple'
+import {
+  REACTIONS,
+  SENTENCE_MAX,
+  exchangeStreak,
+  groupByDay,
+  reactionsBySentence,
+  suggestionFor,
+} from '../../lib/couple'
 import { errorMessage } from '../../lib/errors'
 import Field from '../Field'
 
 /** 짝이 된 뒤의 주 화면: 오늘 주고받기와 지난 문장. onSend(문장)은 보냈으면 true를 돌려준다. */
-export default function CoupleToday({ userId, partner, sentences, onSend, onRefresh }) {
+/** 상대 문장 아래의 반응 버튼들. 누른 걸 다시 누르면 지운다. */
+function ReactionBar({ sentence, mine, onReact, t }) {
+  return (
+    <div className="reaction-bar" role="group" aria-label={t('reactLabel')}>
+      {REACTIONS.map((kind) => (
+        <button
+          key={kind}
+          className="reaction-chip"
+          aria-pressed={mine === kind}
+          onClick={() => onReact(sentence.id, mine === kind ? null : kind)}
+        >
+          {t(`reaction.${kind}`)}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+export default function CoupleToday({ userId, partner, sentences, reactions = [], onSend, onReact, onRefresh }) {
   const { t, learningLang, add, notify } = useApp()
   const talk = usePackData('expressions')
   const [draft, setDraft] = useState('')
@@ -14,6 +39,8 @@ export default function CoupleToday({ userId, partner, sentences, onSend, onRefr
   const [busy, setBusy] = useState(false)
 
   const days = useMemo(() => groupByDay(sentences, userId), [sentences, userId])
+  const reactionMap = useMemo(() => reactionsBySentence(reactions, userId), [reactions, userId])
+  const reactionOf = (sentence) => reactionMap.get(sentence.id) ?? { mine: null, theirs: null }
   const streak = useMemo(() => exchangeStreak(days), [days])
   const suggestion = useMemo(() => suggestionFor(talk.data), [talk.data])
   const today = days[0]
@@ -49,6 +76,7 @@ export default function CoupleToday({ userId, partner, sentences, onSend, onRefr
           <blockquote className="couple-bubble partner">
             <small>{partner.nickname}</small>
             <p lang={today.partner.lang}>{today.partner.body}</p>
+            <ReactionBar sentence={today.partner} mine={reactionOf(today.partner).mine} onReact={onReact} t={t} />
             <button className="soft-button" onClick={() => save(today.partner)}>
               {t('coupleSave')}
             </button>
@@ -61,6 +89,11 @@ export default function CoupleToday({ userId, partner, sentences, onSend, onRefr
           <blockquote className="couple-bubble mine">
             <small>{t('coupleMine')}</small>
             <p lang={today.mine.lang}>{today.mine.body}</p>
+            {reactionOf(today.mine).theirs && (
+              <p className="reaction-got" role="status">
+                {t('reactGot', { name: partner.nickname, reaction: t(`reaction.${reactionOf(today.mine).theirs}`) })}
+              </p>
+            )}
             <button
               className="soft-button"
               onClick={() => {
@@ -127,9 +160,15 @@ export default function CoupleToday({ userId, partner, sentences, onSend, onRefr
                     </button>
                   </p>
                 )}
+                {group.partner && (
+                  <ReactionBar sentence={group.partner} mine={reactionOf(group.partner).mine} onReact={onReact} t={t} />
+                )}
                 {group.mine && (
                   <p lang={group.mine.lang}>
                     <b>{t('coupleMine')}</b> {group.mine.body}
+                    {reactionOf(group.mine).theirs && (
+                      <span className="reaction-got"> · {t(`reaction.${reactionOf(group.mine).theirs}`)}</span>
+                    )}
                   </p>
                 )}
               </li>

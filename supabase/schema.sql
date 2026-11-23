@@ -490,5 +490,94 @@ create trigger couple_sentence_notify
   after insert on public.couple_sentences
   for each row execute function public.notify_partner_of_sentence();
 
+-- ---------- 연인 문장에 반응 남기기 ----------
+-- 상대 문장에 가볍게 반응한다(문장마다 한 사람이 하나, 다시 누르면 지운다). 내 문장에는 달 수 없다.
+create table if not exists public.couple_reactions (
+  sentence_id bigint not null references public.couple_sentences (id) on delete cascade,
+  user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
+  kind text not null check (kind in ('heart', 'thanks', 'funny', 'learned')),
+  created_at timestamptz not null default now(),
+  primary key (sentence_id, user_id)
+);
+
+alter table public.couple_reactions enable row level security;
+
+drop policy if exists "members read reactions" on public.couple_reactions;
+create policy "members read reactions" on public.couple_reactions
+  for select to authenticated
+  using (exists (
+    select 1 from public.couple_sentences s
+    where s.id = sentence_id and public.is_couple_member(s.couple_id)
+  ));
+
+drop policy if exists "members react to partner" on public.couple_reactions;
+create policy "members react to partner" on public.couple_reactions
+  for insert to authenticated
+  with check (
+    (select auth.uid()) = user_id
+    and exists (
+      select 1 from public.couple_sentences s
+      where s.id = sentence_id and s.user_id <> (select auth.uid()) and public.is_couple_member(s.couple_id)
+    )
+  );
+
+drop policy if exists "members change own reaction" on public.couple_reactions;
+create policy "members change own reaction" on public.couple_reactions
+  for update to authenticated
+  using ((select auth.uid()) = user_id)
+  with check (
+    (select auth.uid()) = user_id
+    and exists (
+      select 1 from public.couple_sentences s
+      where s.id = sentence_id and s.user_id <> (select auth.uid()) and public.is_couple_member(s.couple_id)
+    )
+  );
+
+drop policy if exists "members remove own reaction" on public.couple_reactions;
+create policy "members remove own reaction" on public.couple_reactions
+  for delete to authenticated using ((select auth.uid()) = user_id);
+
+-- 반응이 달리면 문장을 쓴 사람의 알림 대기열에 넣는다(알림을 켠 사람만, 내용은 담지 않는다).
+-- 같은 알림이 1시간 안에 이미 있으면 다시 넣지 않아, 눌렀다 취소했다 해도 알림이 쏟아지지 않는다.
+create or replace function public.notify_author_of_reaction()
+returns trigger
+language plpgsql
+security definer
+set search_path = public
+as $$
+declare
+  author record;
+  msg_title text;
+begin
+  select m.user_id, m.notify_lang into author
+  from couple_sentences s
+  join couple_members m on m.couple_id = s.couple_id and m.user_id = s.user_id
+  where s.id = new.sentence_id and m.notify;
+  if author.user_id is null then return new; end if;
+  msg_title := case when author.notify_lang = 'ko' then '연인이 내 문장에 반응했어요' else 'Your partner reacted to your sentence' end;
+  if exists (
+    select 1 from push_queue
+    where user_id = author.user_id and kind = 'couple' and title = msg_title and send_at > now() - interval '1 hour'
+  ) then
+    return new;
+  end if;
+  insert into push_queue (user_id, send_at, kind, title, body, url)
+  values (
+    author.user_id,
+    now(),
+    'couple',
+    msg_title,
+    case when author.notify_lang = 'ko' then '열어서 확인해 보세요.' else 'Open the app to see it.' end,
+    '/#couple'
+  );
+  return new;
+end;
+$$;
+
+drop trigger if exists couple_reaction_notify on public.couple_reactions;
+create trigger couple_reaction_notify
+  after insert or update on public.couple_reactions
+  for each row execute function public.notify_author_of_reaction();
+
 revoke all on function public.set_couple_notify(boolean, text) from public, anon;
 grant execute on function public.set_couple_notify(boolean, text) to authenticated;

@@ -4,6 +4,7 @@ import { expect, test } from '@playwright/test'
 const AUTH_URL = 'http://localhost:4174/'
 const PAGES = [
   'home',
+  'missed',
   'words',
   'expressions',
   'chats',
@@ -505,6 +506,45 @@ test('듣고 쓰기: 읽어 주는 말을 쓰면 맞힌 것으로 센다', async
   await expect(page.getByText('맞았어요!')).toBeVisible()
   await page.getByRole('button', { name: '다시 듣기' }).click()
   await expect.poll(() => page.evaluate(() => window.__spoken.length)).toBeGreaterThan(1)
+})
+
+test('헷갈리는 말: 홈에서 들어가 많이 틀린 순으로 보고, 그 말들만 다시 풀면 틀린 횟수가 쌓인다', async ({ page }) => {
+  await page.goto('/')
+  await page.evaluate(() => {
+    const base = { example: '', createdAt: '2026-01-01T00:00:00.000Z', dueAt: '2026-01-02T00:00:00.000Z' }
+    const words = [
+      { ...base, id: 'a', text: 'often', meaning: '자주 틀림', box: 0, reviews: 4, misses: 3 },
+      { ...base, id: 'b', text: 'once', meaning: '한 번 틀림', box: 1, reviews: 2, misses: 1 },
+      { ...base, id: 'c', text: 'fine', meaning: '안 틀림', box: 2, reviews: 2, misses: 0 },
+      { ...base, id: 'd', text: 'settled', meaning: '익숙해짐', box: 4, reviews: 9, misses: 5 },
+    ]
+    localStorage.setItem('savedWords', JSON.stringify(words))
+  })
+  await open(page, 'home')
+  await page.getByRole('button', { name: '헷갈리는 말 2개 보기' }).click()
+  await expect(page.getByRole('heading', { name: '헷갈리는 말', exact: true })).toBeVisible()
+  const rows = page.locator('.missed-list li')
+  await expect(rows).toHaveCount(2)
+  await expect(rows.first()).toContainText('often')
+  await expect(rows.first()).toContainText('복습 4번 중 3번 틀렸어요')
+  await expect(page.locator('.missed-list')).not.toContainText('settled')
+
+  await page.getByRole('button', { name: '이 말들만 퀴즈 풀기' }).click()
+  await page.getByRole('button', { name: '뜻 보기' }).click()
+  await page.getByRole('button', { name: '헷갈렸어요' }).click()
+  const saved = await page.evaluate(() => JSON.parse(localStorage.getItem('savedWords')))
+  const touched = saved.filter((word) => word.misses > 0 && word.lastReviewedAt)
+  expect(touched).toHaveLength(1)
+  expect(touched[0].reviews).toBe(touched[0].id === 'a' ? 5 : 3)
+  expect(touched[0].misses).toBe(touched[0].id === 'a' ? 4 : 2)
+})
+
+test('헷갈리는 말이 없으면 안내하고, 홈에는 링크가 없다', async ({ page }) => {
+  await seedWords(page, 2)
+  await open(page, 'home')
+  await expect(page.getByRole('button', { name: /헷갈리는 말/ })).toHaveCount(0)
+  await page.goto('/#missed')
+  await expect(page.getByText('지금 헷갈리는 말이 없어요')).toBeVisible()
 })
 
 test('단어를 직접 넣을 때 꾸러미에 있는 말이면 뜻과 예문을 한 번에 채운다', async ({ page }) => {
@@ -1135,7 +1175,7 @@ test.describe('로그인 화면', () => {
     const PARTNER = '22222222-2222-4222-8222-222222222222'
     const day = new Date()
     const today = `${day.getFullYear()}-${String(day.getMonth() + 1).padStart(2, '0')}-${String(day.getDate()).padStart(2, '0')}`
-    const db = { members: [], sentences: [] }
+    const db = { members: [], sentences: [], reactions: [] }
     await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
       const request = route.request()
       const url = request.url()
@@ -1147,6 +1187,19 @@ test.describe('로그인 화면', () => {
       if (url.includes('/couple_members')) return route.fulfill({ json: db.members })
       if (url.includes('/couples'))
         return route.fulfill({ json: one ? { id: 'c1', code: 'ABC234' } : [{ id: 'c1', code: 'ABC234' }] })
+      if (url.includes('/couple_reactions')) {
+        if (request.method() === 'POST') {
+          const row = { ...request.postDataJSON(), user_id: ME }
+          db.reactions = db.reactions.filter((item) => !(item.sentence_id === row.sentence_id && item.user_id === ME))
+          db.reactions.push(row)
+          return route.fulfill({ status: 201, json: [] })
+        }
+        if (request.method() === 'DELETE') {
+          db.reactions = db.reactions.filter((item) => item.user_id !== ME)
+          return route.fulfill({ status: 204, body: '' })
+        }
+        return route.fulfill({ json: db.reactions })
+      }
       if (url.includes('/couple_sentences')) {
         if (request.method() === 'POST') {
           const row = { ...request.postDataJSON(), id: db.sentences.length + 1, user_id: ME }
@@ -1179,6 +1232,20 @@ test.describe('로그인 화면', () => {
     await expect(page.getByRole('status').filter({ hasText: '보냈어요.' })).toBeVisible()
     await expect(page.getByText('I missed you too.')).toBeVisible()
     await expect(page.getByText('둘 다 보낸 날 1일 연속')).toBeVisible()
+
+    // 연인 문장에 반응을 남기고(다시 누르면 지운다), 연인이 내 문장에 남긴 반응을 본다
+    const heart = page.getByRole('button', { name: '좋아요', exact: true })
+    await expect(heart).toHaveAttribute('aria-pressed', 'false')
+    await heart.click()
+    await expect(heart).toHaveAttribute('aria-pressed', 'true')
+    expect(db.reactions).toEqual([{ sentence_id: 99, kind: 'heart', user_id: ME }])
+    await heart.click()
+    await expect(heart).toHaveAttribute('aria-pressed', 'false')
+    expect(db.reactions).toHaveLength(0)
+    const mineId = db.sentences.find((item) => item.user_id === ME).id
+    db.reactions.push({ sentence_id: mineId, user_id: PARTNER, kind: 'funny' })
+    await page.getByRole('button', { name: '새로 불러오기' }).click()
+    await expect(page.getByText('Sam님이 "웃겨요"로 반응했어요.')).toBeVisible()
 
     const { violations } = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])

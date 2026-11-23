@@ -29,6 +29,7 @@ const Couple = lazy(() => import('./pages/Couple'))
 const Settings = lazy(() => import('./pages/Settings'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const Pro = lazy(() => import('./pages/Pro'))
+const Missed = lazy(() => import('./pages/Missed'))
 
 const NAV = ['home', 'words', 'expressions', 'packs', 'chats', 'journal', 'profile']
 const TOAST_MS = 5000
@@ -36,7 +37,7 @@ const TOAST_ACTION_MS = 8000
 
 function readPage() {
   const page = window.location.hash.slice(1)
-  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin', 'couple', 'settings'].includes(page)
+  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin', 'couple', 'settings', 'missed'].includes(page)
     ? page
     : 'home'
 }
@@ -209,6 +210,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     admin: <Admin />,
     couple: <Couple />,
     settings: <Settings />,
+    missed: <Missed />,
     packs: <Packs key="expressions" mode="expressions" />,
     'packs-words': <Packs key="words" mode="words" />,
   }

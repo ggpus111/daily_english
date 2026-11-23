@@ -61,14 +61,28 @@ export function exchangeStreak(groups, now = new Date()) {
   return count
 }
 
+// 반응 종류. 화면에는 글자로만 보인다(이모지 없음). 서버 표의 kind 값과 같아야 한다.
+export const REACTIONS = ['heart', 'thanks', 'funny', 'learned']
+
+/** 문장 번호별로 { mine, theirs }(각각 반응 종류 또는 null)를 만든다. */
+export function reactionsBySentence(reactions, myId) {
+  const bySentence = new Map()
+  for (const row of reactions) {
+    const entry = bySentence.get(row.sentence_id) ?? { mine: null, theirs: null }
+    entry[row.user_id === myId ? 'mine' : 'theirs'] = row.kind
+    bySentence.set(row.sentence_id, entry)
+  }
+  return bySentence
+}
+
 /** 내 짝, 짝 이름들, 최근 문장을 불러온다. 짝이 없으면 couple은 null. */
 export async function loadCouple(userId) {
-  if (!supabase || !userId) return { couple: null, members: [], sentences: [] }
+  if (!supabase || !userId) return { couple: null, members: [], sentences: [], reactions: [] }
   try {
     const { data: members, error } = await supabase.from('couple_members').select('couple_id, user_id, nickname')
     if (error) return failure(error)
     const mine = (members ?? []).find((member) => member.user_id === userId)
-    if (!mine) return { couple: null, members: [], sentences: [] }
+    if (!mine) return { couple: null, members: [], sentences: [], reactions: [] }
     const since = new Date()
     since.setDate(since.getDate() - HISTORY_DAYS)
     const [coupleResult, sentenceResult] = await Promise.all([
@@ -82,7 +96,18 @@ export async function loadCouple(userId) {
     ])
     if (coupleResult.error) return failure(coupleResult.error)
     if (sentenceResult.error) return failure(sentenceResult.error)
-    return { couple: coupleResult.data, members: members ?? [], sentences: sentenceResult.data ?? [] }
+    const sentences = sentenceResult.data ?? []
+    const ids = sentences.map((sentence) => sentence.id)
+    let reactions = []
+    if (ids.length) {
+      const { data, error: reactionError } = await supabase
+        .from('couple_reactions')
+        .select('sentence_id, user_id, kind')
+        .in('sentence_id', ids)
+      if (reactionError) return failure(reactionError)
+      reactions = data ?? []
+    }
+    return { couple: coupleResult.data, members: members ?? [], sentences, reactions }
   } catch (error) {
     return failure(error)
   }
@@ -105,6 +130,23 @@ export async function joinCouple(code, nickname) {
   return result.data && result.data !== 'ok' ? failure(new Error(result.data)) : result
 }
 export const leaveCouple = () => rpc('leave_couple')
+
+/** 상대 문장에 반응을 남긴다. kind가 null이면 내 반응을 지운다. 같은 문장에는 하나만 남는다. */
+export async function setReaction({ sentenceId, userId, kind }) {
+  if (!supabase) return failure(new Error('no server'))
+  if (kind !== null && !REACTIONS.includes(kind)) return failure(new Error('invalid reaction'))
+  try {
+    const { error } =
+      kind === null
+        ? await supabase.from('couple_reactions').delete().eq('sentence_id', sentenceId).eq('user_id', userId)
+        : await supabase
+            .from('couple_reactions')
+            .upsert({ sentence_id: sentenceId, kind }, { onConflict: 'sentence_id,user_id' })
+    return error ? failure(error) : {}
+  } catch (error) {
+    return failure(error)
+  }
+}
 
 /** 오늘 문장을 보낸다. 오늘 이미 보냈다면 고쳐 쓴다. */
 export async function sendSentence({ coupleId, body, lang, day = dayKey(new Date()) }) {

@@ -89,9 +89,7 @@ export default function Auth({ t, notify, recovering, onRecovered, onGuest }) {
       redirectTo: passwordResetUrl(),
     })
     setMessage(
-      error
-        ? { error: true, text: t('resetError', { message: errorMessage(error, t) }) }
-        : { text: t('resetSent') },
+      error ? { error: true, text: t('resetError', { message: errorMessage(error, t) }) } : { text: t('resetSent') },
     )
   }
 
@@ -101,15 +99,12 @@ export default function Auth({ t, notify, recovering, onRecovered, onGuest }) {
     setMessage(null)
   }
 
-  const submitLabel = recovering
-    ? t('newPasswordSubmit')
-    : t(mode === 'login' ? 'loginSubmit' : 'signupSubmit')
+  const submitLabel = recovering ? t('newPasswordSubmit') : t(mode === 'login' ? 'loginSubmit' : 'signupSubmit')
 
   return (
     <main className="auth-shell">
       {!recovering && (
         <section className="auth-intro" aria-labelledby="auth-intro-title">
-          <p className="eyebrow">DAILY ENGLISH</p>
           <h2 id="auth-intro-title">{t('introTitle')}</h2>
           <ul>
             <li>{t('introPoint1')}</li>
@@ -143,9 +138,7 @@ export default function Auth({ t, notify, recovering, onRecovered, onGuest }) {
           </div>
         )}
 
-        {!recovering && (
-          <SocialLogin t={t} onError={(text) => setMessage({ error: true, text })} />
-        )}
+        {!recovering && <SocialLogin t={t} onError={(text) => setMessage({ error: true, text })} />}
 
         <form className="stack-form" onSubmit={submit} noValidate>
           {!recovering && mode === 'signup' && (
@@ -193,9 +186,7 @@ export default function Auth({ t, notify, recovering, onRecovered, onGuest }) {
           </button>
         </form>
 
-        <div role="status">
-          {message && <p className={message.error ? 'field-error' : 'muted'}>{message.text}</p>}
-        </div>
+        <div role="status">{message && <p className={message.error ? 'field-error' : 'muted'}>{message.text}</p>}</div>
 
         {!recovering && mode === 'login' && (
           <button className="text-button" type="button" onClick={resetPassword}>

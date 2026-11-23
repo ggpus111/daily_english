@@ -5,11 +5,11 @@ import CoupleToday from '../components/couple/CoupleToday'
 import CoupleWaiting from '../components/couple/CoupleWaiting'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
-import { coupleErrorKey, leaveCouple, loadCouple, sendSentence } from '../lib/couple'
+import { coupleErrorKey, leaveCouple, loadCouple, sendSentence, setReaction } from '../lib/couple'
 import { errorMessage } from '../lib/errors'
 import { supabase } from '../lib/supabase'
 
-const EMPTY = { loading: false, error: null, couple: null, members: [], sentences: [] }
+const EMPTY = { loading: false, error: null, couple: null, members: [], sentences: [], reactions: [] }
 const toState = (result) => (result.error ? { ...EMPTY, error: result.error } : { ...EMPTY, ...result })
 
 /** 연인과 오늘의 한 문장. 짝이 있는지에 따라 시작 / 기다림 / 주고받기 화면을 고른다. */
@@ -52,6 +52,8 @@ export default function Couple() {
       () => sendSentence({ coupleId: state.couple.id, body, lang: learningLang }),
       () => notify(t('coupleSent')),
     )
+
+  const react = (sentenceId, kind) => run(() => setReaction({ sentenceId, userId, kind }))
 
   const leave = <CoupleLeave busy={busy} onLeave={() => run(leaveCouple, () => notify(t('coupleLeft')))} />
 
@@ -121,6 +123,8 @@ export default function Couple() {
         userId={userId}
         partner={partner}
         sentences={state.sentences}
+        reactions={state.reactions}
+        onReact={react}
         onSend={sendToday}
         onRefresh={refresh}
       />
