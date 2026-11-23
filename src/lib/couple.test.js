@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest'
-import { coupleErrorKey, exchangeStreak, groupByDay, isValidCode, normalizeCode, suggestionFor } from './couple'
+import {
+  REACTIONS,
+  coupleErrorKey,
+  exchangeStreak,
+  groupByDay,
+  isValidCode,
+  normalizeCode,
+  reactionsBySentence,
+  suggestionFor,
+} from './couple'
 
 const ME = 'me'
 const NOW = new Date(2026, 10, 22, 12)
@@ -63,5 +72,25 @@ describe('날짜별로 묶기', () => {
     const todayDone = groupByDay([...both('2026-11-22'), ...both('2026-11-21')], ME, NOW)
     expect(exchangeStreak(todayDone, NOW)).toBe(2)
     expect(exchangeStreak(groupByDay([row(ME, '2026-11-22')], ME, NOW), NOW)).toBe(0)
+  })
+})
+
+describe('reactionsBySentence', () => {
+  it('문장마다 내 반응과 상대 반응을 나눠 담는다', () => {
+    const map = reactionsBySentence(
+      [
+        { sentence_id: 1, user_id: 'me', kind: 'heart' },
+        { sentence_id: 1, user_id: 'you', kind: 'funny' },
+        { sentence_id: 2, user_id: 'you', kind: 'learned' },
+      ],
+      'me',
+    )
+    expect(map.get(1)).toEqual({ mine: 'heart', theirs: 'funny' })
+    expect(map.get(2)).toEqual({ mine: null, theirs: 'learned' })
+    expect(map.get(3)).toBeUndefined()
+  })
+
+  it('반응 종류는 서버 표와 같은 네 가지다', () => {
+    expect(REACTIONS).toEqual(['heart', 'thanks', 'funny', 'learned'])
   })
 })

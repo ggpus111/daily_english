@@ -12,7 +12,7 @@ import { usePackData } from '../hooks/usePackData'
 import { hasPackData, todayItem } from '../lib/packs'
 import { moodMeaning, moodOf, moodTone, moodWord } from '../lib/moods'
 import { readSettings, todayProgress } from '../lib/reminders'
-import { dueItems } from '../lib/review'
+import { dueItems, weakItems } from '../lib/review'
 import { moodsByDay } from '../lib/usage'
 
 // 친구 원본 홈(학습 노트)의 번호 카드 구성을 따른다.
@@ -85,6 +85,7 @@ export default function Home() {
   const dueWords = dueItems(records.word).length
   const dueExpressions = dueItems(records.expression).length
   const dueTotal = dueWords + dueExpressions
+  const weakTotal = weakItems(records.word).length + weakItems(records.expression).length
   const note = NOTES[Math.floor(today.getTime() / DAY_MS) % NOTES.length]
   const totalRecords = Object.values(records).reduce((sum, items) => sum + items.length, 0)
   const { goal } = readSettings()
@@ -159,6 +160,11 @@ export default function Home() {
             >
               {t('reviewStart')}
             </button>
+            {weakTotal > 0 && (
+              <button className="text-button" onClick={() => go('missed')}>
+                {t('missedHomeLink', { count: weakTotal })}
+              </button>
+            )}
           </section>
 
           <section className="paper-card week-panel" aria-labelledby="week-title">
