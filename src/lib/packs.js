@@ -7,7 +7,7 @@ import { normalizeText } from './text'
 
 // 언어 폴더마다 파일을 따로 묶어, 고른 언어의 꾸러미만 받는다.
 const FILES = import.meta.glob('../data/*/*.json')
-const FILE_NAME = { expressions: 'packs', words: 'words' }
+const FILE_NAME = { expressions: 'packs', words: 'words', grammar: 'grammar' }
 const loaderFor = (kind, lang) => FILES[`../data/${lang}/${FILE_NAME[kind]}.json`]
 
 export const PACK_KINDS = Object.keys(FILE_NAME)
@@ -15,7 +15,20 @@ export const PACK_KINDS = Object.keys(FILE_NAME)
 /** 이 언어의 꾸러미가 있는지(아직 만들지 않은 언어는 "준비 중"을 보여 준다). */
 export const hasPackData = (kind, lang = 'en') => Boolean(loaderFor(kind, lang))
 /** 외국인 연인·친구와의 대화 꾸러미(analysis/native/talk_draft.json). 꾸러미 화면에서 앞에 따로 묶는다. */
-export const TALK_PACKS = ['love', 'miss', 'text', 'slang', 'chat', 'tease', 'date', 'call', 'fight', 'care', 'react', 'culture']
+export const TALK_PACKS = [
+  'love',
+  'miss',
+  'text',
+  'slang',
+  'chat',
+  'tease',
+  'date',
+  'call',
+  'fight',
+  'care',
+  'react',
+  'culture',
+]
 export const WORD_CHUNK = 50
 
 const loaded = {}
@@ -72,7 +85,6 @@ export function todayItem(items, now = new Date()) {
   return items[localDay % items.length]
 }
 
-
 /** 이미 내 기록(단어장·표현 모음)에 담은 항목인지. */
 export function isSaved(item, entries) {
   const key = normalizeText(item.text)
@@ -93,7 +105,12 @@ export const toEntry = (item) => ({ text: item.text, meaning: item.meaning, exam
 export function chunks(items, size = WORD_CHUNK) {
   const result = []
   for (let start = 0; start < items.length; start += size) {
-    result.push({ index: result.length, from: start + 1, to: Math.min(start + size, items.length), items: items.slice(start, start + size) })
+    result.push({
+      index: result.length,
+      from: start + 1,
+      to: Math.min(start + size, items.length),
+      items: items.slice(start, start + size),
+    })
   }
   return result
 }

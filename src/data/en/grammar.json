@@ -1,0 +1,445 @@
+{
+ "source": {
+  "note": "문법 설명과 예문은 Daily English가 직접 썼습니다(AI 도움, 원어민 검수 전)."
+ },
+ "packs": [
+  {
+   "id": "time",
+   "title": {
+    "ko": "시간 표현",
+    "en": "Time & tense"
+   },
+   "items": [
+    {
+     "id": "grammar-time-01",
+     "text": "used to + 동사원형",
+     "meaning": "예전에는 ~하곤 했다(지금은 아님)",
+     "example": "I used to play soccer every weekend.",
+     "exampleNative": "나 예전엔 주말마다 축구 했었어.",
+     "tip": "used to 뒤에는 꼭 동사원형. I used to playing(X)."
+    },
+    {
+     "id": "grammar-time-02",
+     "text": "have been + -ing",
+     "meaning": "(예전부터 지금까지) 계속 ~하고 있다",
+     "example": "I've been thinking about you all day.",
+     "exampleNative": "하루 종일 네 생각 하고 있었어.",
+     "tip": "지금도 이어지는 일에 써요."
+    },
+    {
+     "id": "grammar-time-03",
+     "text": "Have you ever + 과거분사?",
+     "meaning": "~해 본 적 있어?",
+     "example": "Have you ever tried Korean barbecue?",
+     "exampleNative": "한국식 고기 구이 먹어 본 적 있어?",
+     "tip": "대답은 Yes, I have. / No, never."
+    },
+    {
+     "id": "grammar-time-04",
+     "text": "was going to + 동사원형",
+     "meaning": "~하려고 했는데(못 했다)",
+     "example": "I was going to call you, but I fell asleep.",
+     "exampleNative": "전화하려고 했는데 잠들어 버렸어.",
+     "tip": "계획이 틀어졌을 때 변명처럼 자주 써요."
+    },
+    {
+     "id": "grammar-time-05",
+     "text": "be about to + 동사원형",
+     "meaning": "막 ~하려던 참이다",
+     "example": "I was about to text you!",
+     "exampleNative": "막 너한테 문자하려던 참이었어!",
+     "tip": ""
+    },
+    {
+     "id": "grammar-time-06",
+     "text": "be going to + 동사원형",
+     "meaning": "~할 거야(이미 정한 계획)",
+     "example": "I'm going to visit Seoul next month.",
+     "exampleNative": "다음 달에 서울 갈 거야.",
+     "tip": "말할 때는 gonna로 줄이기도 해요."
+    },
+    {
+     "id": "grammar-time-07",
+     "text": "was/were + -ing (when ...)",
+     "meaning": "~하고 있었는데 (그때 ...)",
+     "example": "I was cooking when you called.",
+     "exampleNative": "네가 전화했을 때 나 요리하고 있었어.",
+     "tip": "길게 이어진 일 중간에 짧은 일이 끼어들 때 써요."
+    },
+    {
+     "id": "grammar-time-08",
+     "text": "since / for + 기간",
+     "meaning": "~부터 / ~동안",
+     "example": "We've been friends for three years.",
+     "exampleNative": "우리 친구 된 지 3년 됐어.",
+     "tip": "since는 시작 시점(since 2023), for는 기간(for three years)."
+    }
+   ]
+  },
+  {
+   "id": "ask",
+   "title": {
+    "ko": "부탁·제안",
+    "en": "Asking & suggesting"
+   },
+   "items": [
+    {
+     "id": "grammar-ask-01",
+     "text": "Can you / Could you + 동사원형?",
+     "meaning": "~해 줄래? / ~해 줄 수 있어?",
+     "example": "Could you send me the photo?",
+     "exampleNative": "그 사진 보내 줄 수 있어?",
+     "tip": "Could가 조금 더 부드러워요."
+    },
+    {
+     "id": "grammar-ask-02",
+     "text": "Would you mind + -ing?",
+     "meaning": "~해도 괜찮을까? (정중한 부탁)",
+     "example": "Would you mind waiting a few minutes?",
+     "exampleNative": "몇 분만 기다려 줄 수 있을까?",
+     "tip": "괜찮다는 대답은 No, not at all.(전혀 안 싫어)이에요."
+    },
+    {
+     "id": "grammar-ask-03",
+     "text": "Why don't we + 동사원형?",
+     "meaning": "우리 ~하는 게 어때?",
+     "example": "Why don't we watch a movie tonight?",
+     "exampleNative": "오늘 밤에 영화 보는 거 어때?",
+     "tip": "제안이지 이유를 묻는 말이 아니에요."
+    },
+    {
+     "id": "grammar-ask-04",
+     "text": "How about + -ing / 명사?",
+     "meaning": "~하는 건 어때?",
+     "example": "How about getting coffee tomorrow?",
+     "exampleNative": "내일 커피 마시는 거 어때?",
+     "tip": "How about 뒤에는 -ing나 명사."
+    },
+    {
+     "id": "grammar-ask-05",
+     "text": "Do you want to + 동사원형? (wanna)",
+     "meaning": "~할래?",
+     "example": "Do you want to come with me?",
+     "exampleNative": "나랑 같이 갈래?",
+     "tip": "말할 때는 Wanna come with me?로 줄여요."
+    },
+    {
+     "id": "grammar-ask-06",
+     "text": "I'd like to + 동사원형",
+     "meaning": "~하고 싶어요 (want보다 부드럽게)",
+     "example": "I'd like to meet your friends someday.",
+     "exampleNative": "언젠가 네 친구들 만나 보고 싶어.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-ask-07",
+     "text": "Is it okay if I + 동사?",
+     "meaning": "내가 ~해도 괜찮아?",
+     "example": "Is it okay if I call you later?",
+     "exampleNative": "이따가 전화해도 괜찮아?",
+     "tip": ""
+    },
+    {
+     "id": "grammar-ask-08",
+     "text": "Let me + 동사원형",
+     "meaning": "내가 ~할게 / ~하게 해 줘",
+     "example": "Let me know when you get home.",
+     "exampleNative": "집에 도착하면 알려 줘.",
+     "tip": "Let me know는 메시지에서 아주 자주 써요."
+    }
+   ]
+  },
+  {
+   "id": "feel",
+   "title": {
+    "ko": "기분·생각 말하기",
+    "en": "Feelings & opinions"
+   },
+   "items": [
+    {
+     "id": "grammar-feel-01",
+     "text": "I feel like + -ing",
+     "meaning": "~하고 싶은 기분이야",
+     "example": "I feel like eating something sweet.",
+     "exampleNative": "단 거 먹고 싶은 기분이야.",
+     "tip": "I feel like + 문장은 '~인 것 같아'라는 뜻이 돼요."
+    },
+    {
+     "id": "grammar-feel-02",
+     "text": "I can't wait to + 동사원형",
+     "meaning": "빨리 ~하고 싶어, ~가 너무 기대돼",
+     "example": "I can't wait to see you!",
+     "exampleNative": "빨리 보고 싶어!",
+     "tip": ""
+    },
+    {
+     "id": "grammar-feel-03",
+     "text": "look forward to + -ing",
+     "meaning": "~을 기대하고 있어",
+     "example": "I'm looking forward to our trip.",
+     "exampleNative": "우리 여행 기대하고 있어.",
+     "tip": "to 뒤에 -ing나 명사가 와요. to see(X), to seeing(O)."
+    },
+    {
+     "id": "grammar-feel-04",
+     "text": "I wish + 과거형",
+     "meaning": "~라면 좋을 텐데 (지금은 아니라서 아쉬움)",
+     "example": "I wish you were here.",
+     "exampleNative": "네가 여기 있으면 좋을 텐데.",
+     "tip": "be동사는 주어와 상관없이 were를 많이 써요."
+    },
+    {
+     "id": "grammar-feel-05",
+     "text": "I'm glad (that) + 문장",
+     "meaning": "~해서 다행이야, ~해서 기뻐",
+     "example": "I'm glad you got home safe.",
+     "exampleNative": "무사히 집에 들어가서 다행이야.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-feel-06",
+     "text": "make + 사람 + 형용사",
+     "meaning": "(누구를) ~하게 만들어",
+     "example": "Your message made me so happy.",
+     "exampleNative": "네 메시지 덕분에 너무 행복했어.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-feel-07",
+     "text": "I'm into + 명사 / -ing",
+     "meaning": "~에 빠져 있어, ~를 좋아해",
+     "example": "I'm really into K-dramas these days.",
+     "exampleNative": "요즘 K-드라마에 완전 빠졌어.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-feel-08",
+     "text": "It seems like + 문장",
+     "meaning": "~인 것 같아",
+     "example": "It seems like you had a long day.",
+     "exampleNative": "오늘 힘든 하루였던 것 같네.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "compare",
+   "title": {
+    "ko": "비교·정도",
+    "en": "Comparing & degree"
+   },
+   "items": [
+    {
+     "id": "grammar-compare-01",
+     "text": "비교급 + than",
+     "meaning": "~보다 더 ...",
+     "example": "Your English is better than my Korean.",
+     "exampleNative": "네 영어가 내 한국어보다 낫다.",
+     "tip": "짧은 형용사는 -er, 긴 형용사는 more ~."
+    },
+    {
+     "id": "grammar-compare-02",
+     "text": "as + 형용사 + as",
+     "meaning": "~만큼 ...한",
+     "example": "This place is as good as the one in Seoul.",
+     "exampleNative": "여기 서울에 있는 데만큼 괜찮아.",
+     "tip": "부정은 not as ~ as(~만큼은 아닌)."
+    },
+    {
+     "id": "grammar-compare-03",
+     "text": "too + 형용사 + to 동사",
+     "meaning": "너무 ~해서 ...할 수 없다",
+     "example": "I'm too tired to go out tonight.",
+     "exampleNative": "오늘 밤은 너무 피곤해서 못 나가겠어.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-compare-04",
+     "text": "so + 형용사 + that",
+     "meaning": "너무 ~해서 ...하다",
+     "example": "It was so funny that I cried.",
+     "exampleNative": "너무 웃겨서 울었어.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-compare-05",
+     "text": "형용사 + enough to",
+     "meaning": "~할 만큼 충분히 ...한",
+     "example": "Are you old enough to drink there?",
+     "exampleNative": "거기서는 술 마실 수 있는 나이야?",
+     "tip": "enough는 형용사 뒤에 와요."
+    },
+    {
+     "id": "grammar-compare-06",
+     "text": "The 비교급, the 비교급",
+     "meaning": "~할수록 더 ...하다",
+     "example": "The more I talk to you, the more I like you.",
+     "exampleNative": "너랑 얘기할수록 네가 더 좋아져.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-compare-07",
+     "text": "way + 비교급",
+     "meaning": "훨씬 더 ~한 (말할 때)",
+     "example": "This is way better than I expected.",
+     "exampleNative": "생각보다 훨씬 좋다.",
+     "tip": "much보다 편한 말투예요."
+    },
+    {
+     "id": "grammar-compare-08",
+     "text": "kind of / sort of",
+     "meaning": "좀, 약간, 어느 정도",
+     "example": "I'm kind of nervous about the interview.",
+     "exampleNative": "면접 때문에 좀 긴장돼.",
+     "tip": "말할 때는 kinda, sorta로 줄여요."
+    }
+   ]
+  },
+  {
+   "id": "link",
+   "title": {
+    "ko": "이유·연결",
+    "en": "Reasons & linking"
+   },
+   "items": [
+    {
+     "id": "grammar-link-01",
+     "text": "because / so",
+     "meaning": "~때문에 / 그래서",
+     "example": "I was late because the bus didn't come.",
+     "exampleNative": "버스가 안 와서 늦었어.",
+     "tip": "because 뒤에는 이유, so 뒤에는 결과."
+    },
+    {
+     "id": "grammar-link-02",
+     "text": "even though + 문장",
+     "meaning": "~인데도",
+     "example": "Even though it was raining, we had fun.",
+     "exampleNative": "비가 왔는데도 재밌었어.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-link-03",
+     "text": "unless + 문장",
+     "meaning": "~하지 않으면",
+     "example": "I'll be there at seven unless something comes up.",
+     "exampleNative": "별일 없으면 7시에 갈게.",
+     "tip": "unless 안에는 not을 또 넣지 않아요."
+    },
+    {
+     "id": "grammar-link-04",
+     "text": "as soon as + 문장",
+     "meaning": "~하자마자",
+     "example": "Text me as soon as you land.",
+     "exampleNative": "도착하자마자 문자해.",
+     "tip": "미래 일이어도 as soon as 안은 현재형."
+    },
+    {
+     "id": "grammar-link-05",
+     "text": "while + 문장",
+     "meaning": "~하는 동안",
+     "example": "I listened to music while I was cooking.",
+     "exampleNative": "요리하는 동안 음악 들었어.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-link-06",
+     "text": "in case + 문장",
+     "meaning": "~할 경우에 대비해서",
+     "example": "Take an umbrella in case it rains.",
+     "exampleNative": "비 올지도 모르니까 우산 챙겨.",
+     "tip": ""
+    },
+    {
+     "id": "grammar-link-07",
+     "text": "If + 현재형, will + 동사원형",
+     "meaning": "~하면 ...할게",
+     "example": "If you come to Korea, I'll show you around.",
+     "exampleNative": "한국에 오면 내가 구경시켜 줄게.",
+     "tip": "If 안은 미래라도 현재형."
+    },
+    {
+     "id": "grammar-link-08",
+     "text": "If + 과거형, would + 동사원형",
+     "meaning": "(실제로는 아니지만) ~라면 ...할 텐데",
+     "example": "If I lived closer, I would see you every day.",
+     "exampleNative": "내가 더 가까이 살면 매일 볼 텐데.",
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "id": "question",
+   "title": {
+    "ko": "질문·되묻기",
+    "en": "Questions & checking"
+   },
+   "items": [
+    {
+     "id": "grammar-question-01",
+     "text": "..., right? / 부가 의문문",
+     "meaning": "~지?, ~잖아? (확인)",
+     "example": "You're coming tomorrow, right?",
+     "exampleNative": "너 내일 오는 거 맞지?",
+     "tip": "isn't it?, don't you? 같은 꼬리 질문도 같은 역할이에요."
+    },
+    {
+     "id": "grammar-question-02",
+     "text": "Do you know + 의문사 + 주어 + 동사?",
+     "meaning": "~인지 알아? (간접 의문문)",
+     "example": "Do you know where he lives?",
+     "exampleNative": "걔 어디 사는지 알아?",
+     "tip": "where does he live(X) → where he lives(O)."
+    },
+    {
+     "id": "grammar-question-03",
+     "text": "What do you mean by ...?",
+     "meaning": "~가 무슨 뜻이야?",
+     "example": "What do you mean by 'lowkey'?",
+     "exampleNative": "'lowkey'가 무슨 뜻이야?",
+     "tip": ""
+    },
+    {
+     "id": "grammar-question-04",
+     "text": "How come + 문장?",
+     "meaning": "어째서 ~해? (왜를 편하게)",
+     "example": "How come you didn't tell me?",
+     "exampleNative": "왜 나한테 말 안 했어?",
+     "tip": "How come 뒤는 평서문 순서예요."
+    },
+    {
+     "id": "grammar-question-05",
+     "text": "Did you use to + 동사원형?",
+     "meaning": "예전에 ~하곤 했어?",
+     "example": "Did you use to live in London?",
+     "exampleNative": "예전에 런던에 살았었어?",
+     "tip": "의문문·부정문에서는 use to(d 없음)."
+    },
+    {
+     "id": "grammar-question-06",
+     "text": "What if + 문장?",
+     "meaning": "~하면 어떡해? / ~하면 어때?",
+     "example": "What if we get lost?",
+     "exampleNative": "우리 길 잃으면 어떡해?",
+     "tip": ""
+    },
+    {
+     "id": "grammar-question-07",
+     "text": "How long have you + 과거분사?",
+     "meaning": "~한 지 얼마나 됐어?",
+     "example": "How long have you lived there?",
+     "exampleNative": "거기 산 지 얼마나 됐어?",
+     "tip": ""
+    },
+    {
+     "id": "grammar-question-08",
+     "text": "Have you + 과거분사 + yet?",
+     "meaning": "벌써 ~했어? / 아직 안 했어?",
+     "example": "Have you eaten yet?",
+     "exampleNative": "밥 먹었어?",
+     "tip": "부정문은 I haven't eaten yet.(아직 안 먹었어)."
+    }
+   ]
+  }
+ ]
+}

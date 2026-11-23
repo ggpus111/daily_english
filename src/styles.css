@@ -3314,6 +3314,37 @@ h2:focus {
   font: inherit;
 }
 
+/* 문법 꾸러미 */
+.grammar-pack-list {
+  display: grid;
+  gap: 12px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+}
+
+.grammar-pack-card {
+  display: grid;
+  gap: 4px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--warm);
+}
+
+.grammar-pack-card p {
+  margin: 0;
+}
+
+.grammar-pack-card .soft-button {
+  justify-self: start;
+  margin-top: 6px;
+}
+
+.grammar-pack-example {
+  font-weight: 700;
+}
+
 /* 문법 노트 연습 */
 .grammar-point {
   display: grid;

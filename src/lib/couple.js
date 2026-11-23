@@ -242,3 +242,26 @@ export async function latestPartnerSentence(userId) {
     return null
   }
 }
+
+const WATCHED_TABLES = ['couple_sentences', 'couple_reactions', 'couple_members']
+const WATCH_DEBOUNCE_MS = 400
+
+/**
+ * 내 짝들의 문장·반응·짝 변화가 생기면 onChange를 부른다(Supabase Realtime, 행 단위 보안을 따라 내 짝 것만 온다).
+ * 한꺼번에 여러 줄이 바뀌어도 한 번만 부르도록 잠깐 모았다가 부른다. 돌려준 함수를 부르면 구독을 끊는다.
+ */
+export function watchPairs(onChange) {
+  if (!supabase?.channel) return () => {}
+  let timer = null
+  const fire = () => {
+    clearTimeout(timer)
+    timer = setTimeout(onChange, WATCH_DEBOUNCE_MS)
+  }
+  const channel = supabase.channel(`pairs-${crypto.randomUUID()}`)
+  for (const table of WATCHED_TABLES) channel.on('postgres_changes', { event: '*', schema: 'public', table }, fire)
+  channel.subscribe()
+  return () => {
+    clearTimeout(timer)
+    supabase.removeChannel(channel)
+  }
+}

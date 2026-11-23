@@ -351,6 +351,19 @@ test('단어 카테고리: 기본 카테고리를 고르거나 직접 만들고,
   expect(saved.map((word) => word.category).sort()).toEqual(['K-드라마', 'love'])
 })
 
+test('문법 꾸러미: 주제별로 보고 담으면 문법 노트에서 연습할 수 있다', async ({ page }) => {
+  await open(page, 'grammar')
+  await page.getByRole('button', { name: '문법 꾸러미 둘러보기' }).click()
+  await expect(page.getByRole('heading', { name: '문법 꾸러미', level: 1 })).toBeVisible()
+  await expect(page.locator('.grammar-pack-card')).toHaveCount(8)
+  await page.getByRole('group', { name: '문법 주제' }).getByRole('button', { name: '부탁·제안' }).click()
+  await page.getByRole('button', { name: "Why don't we + 동사원형? 문법 노트에 담기" }).click()
+  await expect(page.getByRole('status').filter({ hasText: '문법 노트에 담았어요.' })).toBeVisible()
+  await page.getByRole('button', { name: '내 문법 노트로 가기' }).click()
+  await expect(page.locator('.record-row')).toContainText("Why don't we + 동사원형?")
+  await expect(page.locator('.record-row')).toContainText('꾸러미에서')
+})
+
 test('문법 노트: 문법을 적고, 번역으로 연습하고 채점하면 복습 일정에 남는다', async ({ page }) => {
   await open(page, 'grammar')
   await expect(page.getByRole('heading', { name: '문법 노트', exact: true })).toBeVisible()
@@ -1297,6 +1310,55 @@ test.describe('로그인 화면', () => {
     await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
     await expect(page.getByRole('status').filter({ hasText: '오늘 AI 교정을 다 썼어요.' })).toBeVisible()
     await expect(page.getByRole('heading', { name: '보내기 전에 알려 드릴게요' })).toHaveCount(0)
+  })
+
+  test('친구·연인과 한 문장: 새로고침을 누르지 않아도 화면으로 돌아오거나 30초가 지나면 새 문장이 보인다', async ({
+    page,
+  }) => {
+    await page.clock.install()
+    await fakeSession(page)
+    await fakeReportServer(page)
+    const ME = '11111111-1111-4111-8111-111111111111'
+    const FRIEND = '33333333-3333-4333-8333-333333333333'
+    const day = new Date()
+    const today = `${day.getFullYear()}-${String(day.getMonth() + 1).padStart(2, '0')}-${String(day.getDate()).padStart(2, '0')}`
+    const db = {
+      couples: [{ id: 'c1', code: 'XYZ789', kind: 'friend' }],
+      members: [
+        { couple_id: 'c1', user_id: ME, nickname: '나', joined_at: '2026-11-01T00:00:00Z' },
+        { couple_id: 'c1', user_id: FRIEND, nickname: 'Yuki', joined_at: '2026-11-01T00:00:00Z' },
+      ],
+      sentences: [],
+    }
+    await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
+      const url = route.request().url()
+      if (url.includes('/couple_members')) return route.fulfill({ json: db.members })
+      if (url.includes('/couples')) return route.fulfill({ json: db.couples })
+      if (url.includes('/couple_reactions')) return route.fulfill({ json: [] })
+      if (url.includes('/couple_sentences')) return route.fulfill({ json: db.sentences })
+      return route.fallback()
+    })
+
+    await page.goto(`${AUTH_URL}#couple`)
+    const feed = page.getByRole('region', { name: '오늘 받은 문장' })
+    await expect(feed).toContainText('오늘은 아직 받은 문장이 없어요.')
+
+    // 다른 앱에 갔다가 돌아오면 다시 불러온다
+    db.sentences.push({
+      id: 1,
+      couple_id: 'c1',
+      user_id: FRIEND,
+      day: today,
+      body: 'Lowkey tired today lol',
+      lang: 'en',
+    })
+    await page.evaluate(() => document.dispatchEvent(new Event('visibilitychange')))
+    await expect(feed).toContainText('Lowkey tired today lol')
+
+    // 화면을 켜 둔 채로 30초가 지나도 다시 불러온다
+    db.sentences.push({ id: 2, couple_id: 'c1', user_id: FRIEND, day: today, body: 'You up?', lang: 'en' })
+    await page.clock.fastForward(31_000)
+    await expect(feed).toContainText('You up?')
   })
 
   test('친구·연인과 한 문장: 연인 초대를 만들고, 오늘 받은 문장을 모아 보고 한 번에 답하고, 친구를 더해 걸러 본다', async ({

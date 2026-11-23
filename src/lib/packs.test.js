@@ -1,6 +1,16 @@
 import { describe, expect, it } from 'vitest'
 import { MOOD_LANGS, MOODS, moodExample, moodWord } from './moods'
-import { chunks, frequencyLevel, hasPackData, isSaved, loadPackData, peekPackData, tatoebaUrl, toEntry, todayItem } from './packs'
+import {
+  chunks,
+  frequencyLevel,
+  hasPackData,
+  isSaved,
+  loadPackData,
+  peekPackData,
+  tatoebaUrl,
+  toEntry,
+  todayItem,
+} from './packs'
 
 const expressions = await loadPackData('expressions')
 const words = await loadPackData('words')
@@ -30,7 +40,9 @@ describe('표현 꾸러미 데이터', () => {
 
   it('대화 꾸러미 예문은 나나 너의 말이고, 메시지 줄임말은 메시지 말로 표시된다', () => {
     const talk = expressions.items.filter((item) => TALK.includes(item.group))
-    const personal = talk.filter((item) => /\b(i|i'm|i've|i'll|me|my|we|our|us|you|your|you're|let's)\b/i.test(item.example))
+    const personal = talk.filter((item) =>
+      /\b(i|i'm|i've|i'll|me|my|we|our|us|you|your|you're|let's)\b/i.test(item.example),
+    )
     expect(personal.length / talk.length).toBeGreaterThan(0.75)
     expect(expressions.items.filter((item) => item.group === 'text').every((item) => item.texting)).toBe(true)
   })
@@ -57,7 +69,11 @@ describe('다른 언어 꾸러미(일본어, 중국어, 스페인어, 프랑스�
         expect(item.text && item.meaning && item.example && item.exampleKo, item.id).toBeTruthy()
       }
       // 첫 실행 안내에서 고르는 번호(영어와 같은 뜻)가 다 있다
-      for (const id of STARTERS) expect(data.items.some((item) => item.id === `${lang}-${id}`), id).toBe(true)
+      for (const id of STARTERS)
+        expect(
+          data.items.some((item) => item.id === `${lang}-${id}`),
+          id,
+        ).toBe(true)
     })
   }
 
@@ -79,8 +95,16 @@ describe('단어 꾸러미 데이터', () => {
   it('모든 단어에 뜻과 한영 예문이 있고, 예문에 그 단어가 들어 있다', () => {
     // 불규칙 활용형으로 들어 있는 예문
     const irregular = {
-      tell: 'told', get: 'got', make: 'made', give: 'gave', find: 'found', write: 'wrote',
-      win: 'won', catch: 'caught', cry: 'cried', sell: 'sold',
+      tell: 'told',
+      get: 'got',
+      make: 'made',
+      give: 'gave',
+      find: 'found',
+      write: 'wrote',
+      win: 'won',
+      catch: 'caught',
+      cry: 'cried',
+      sell: 'sold',
     }
     for (const item of words.items) {
       expect(item.text && item.meaning && item.example && item.exampleKo).toBeTruthy()
@@ -134,7 +158,8 @@ describe('도우미', () => {
 
 describe('앱 성격에 맞는 콘텐츠', () => {
   // analysis/native/content_fit.py와 같은 기준의 최소한의 지킴이
-  const dark = /\b(kill\w*|murder\w*|dead|death|gun\w*|war|prison\w*|crime\w*|drug\w*|attack\w*|enem\w+|arrest\w*|blood\w*|bomb\w*)\b/i
+  const dark =
+    /\b(kill\w*|murder\w*|dead|death|gun\w*|war|prison\w*|crime\w*|drug\w*|attack\w*|enem\w+|arrest\w*|blood\w*|bomb\w*)\b/i
 
   it('단어와 예문에 죽음·폭력·범죄 낱말이 없다', () => {
     // 관용구 속에서는 어두운 뜻이 아니다(scared to death = 무서워 죽겠다, dying to = 몹시 ~하고 싶다).
@@ -147,7 +172,19 @@ describe('앱 성격에 맞는 콘텐츠', () => {
 
   it('일기에 쓰는 기분 낱말이 단어 꾸러미에 들어 있다', () => {
     const texts = new Set(words.items.map((item) => item.text))
-    for (const word of ['happy', 'sad', 'angry', 'tired', 'bored', 'excited', 'nervous', 'hungry', 'upset', 'proud', 'comfortable']) {
+    for (const word of [
+      'happy',
+      'sad',
+      'angry',
+      'tired',
+      'bored',
+      'excited',
+      'nervous',
+      'hungry',
+      'upset',
+      'proud',
+      'comfortable',
+    ]) {
       expect(texts.has(word), word).toBe(true)
     }
   })
@@ -172,7 +209,38 @@ describe('오늘의 기분', () => {
   })
 
   it('예전에 고른 기분(처음 12개)도 그대로 읽힌다', () => {
-    const before = ['happy', 'excited', 'proud', 'calm', 'comfortable', 'busy', 'tired', 'bored', 'nervous', 'sad', 'upset', 'angry']
-    for (const id of before) expect(MOODS.some((mood) => mood.id === id), id).toBe(true)
+    const before = [
+      'happy',
+      'excited',
+      'proud',
+      'calm',
+      'comfortable',
+      'busy',
+      'tired',
+      'bored',
+      'nervous',
+      'sad',
+      'upset',
+      'angry',
+    ]
+    for (const id of before)
+      expect(
+        MOODS.some((mood) => mood.id === id),
+        id,
+      ).toBe(true)
+  })
+})
+
+describe('문법 꾸러미(영어)', () => {
+  it('주제 6개, 48개이고 모든 항목에 문법·설명·예문·해석이 있으며 번호가 겹치지 않는다', async () => {
+    const { default: data } = await import('../data/en/grammar.json')
+    expect(data.packs).toHaveLength(6)
+    const items = data.packs.flatMap((pack) => pack.items)
+    expect(items).toHaveLength(48)
+    expect(new Set(items.map((item) => item.id)).size).toBe(items.length)
+    for (const item of items) {
+      for (const field of ['text', 'meaning', 'example', 'exampleNative'])
+        expect(item[field]?.trim(), `${item.id} ${field}`).toBeTruthy()
+    }
   })
 })
