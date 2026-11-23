@@ -482,7 +482,7 @@ const ko = {
   'privacy.collect.title': '수집하는 정보',
   'privacy.collect.body': '이메일, 닉네임, 비밀번호와 직접 입력한 단어, 표현, 대화, 일기를 저장해요. 구글이나 카카오로 로그인하면 그 서비스가 알려 주는 이름과 이메일을 받아요. 대화 기록에 다른 사람의 개인정보는 적지 말아 주세요.',
   'privacy.storage.title': '저장 위치',
-  'privacy.storage.body': '로그인하면 기록이 Supabase 데이터베이스에 저장되고, 본인 계정으로만 볼 수 있어요. 서비스는 Vercel에서 운영돼요.',
+  'privacy.storage.body': '로그인하면 기록이 Supabase 데이터베이스(대한민국 서울 지역)에 저장되고, 본인 계정으로만 볼 수 있어요. 웹사이트는 Vercel에서 운영돼요.',
   'privacy.transfer.title': '외부 전송',
   'privacy.transfer.body': '일기에서 "AI에게 자연스럽게 다듬어 달라고 하기"를 누르면, 그 일기와 번역만 Google Gemini API(무료 요금제)로 보내 교정을 받아요. 처음 쓸 때 다시 알려 드리고 동의를 받아요. 무료 요금제라 보낸 내용이 구글의 서비스 개선에 쓰일 수 있으니 실명·연락처 같은 개인정보는 빼고 보내 주세요. 교정을 몇 번 썼는지만 하루 단위로 세고, 교정 내용은 일기를 저장할 때만 남아요.',
   'privacy.errors.title': '오류 기록',
