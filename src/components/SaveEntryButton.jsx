@@ -6,6 +6,7 @@ import { isSaved } from '../lib/packs'
 const MESSAGES = {
   word: { label: 'wordSaveLabel', saved: 'wordSaved' },
   expression: { label: 'packSaveLabel', saved: 'packSaved' },
+  grammar: { label: 'grammarSaveLabel', saved: 'grammarSaved' },
 }
 
 // "단어장·표현 모음에 담기" 버튼 하나. 꾸러미 카드, 일기 교정, 오늘의 기분이 함께 쓴다.

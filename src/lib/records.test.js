@@ -15,7 +15,7 @@ describe('readLocal', () => {
     localStorage.setItem('savedChats', '{not json')
     localStorage.setItem('savedWords', JSON.stringify([null, 3, 'text']))
     localStorage.setItem('savedJournals', JSON.stringify({ not: 'array' }))
-    expect(readLocal()).toEqual({ word: [], expression: [], chat: [], journal: [] })
+    expect(readLocal()).toEqual({ word: [], expression: [], chat: [], journal: [], grammar: [] })
   })
 
   it('원본 앱 형식은 바꿔 읽고, 로그인 모드에서는 빼고 읽는다', () => {

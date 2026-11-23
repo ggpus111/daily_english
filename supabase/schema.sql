@@ -4,11 +4,16 @@
 create table if not exists public.study_records (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
-  type text not null check (type in ('word', 'expression', 'chat', 'journal')),
+  type text not null check (type in ('word', 'expression', 'chat', 'journal', 'grammar')),
   data jsonb not null default '{}'::jsonb,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
+
+-- 이미 만든 데이터베이스: 문법 노트(grammar)를 기록 종류에 더한다.
+alter table public.study_records drop constraint if exists study_records_type_check;
+alter table public.study_records add constraint study_records_type_check
+  check (type in ('word', 'expression', 'chat', 'journal', 'grammar'));
 
 alter table public.study_records
   drop constraint if exists study_records_data_size;

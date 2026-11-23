@@ -826,8 +826,8 @@
      "example": "七点我去接你吧？",
      "exampleKo": "7시에 데리러 갈까?",
      "tip": "",
-     "sentences": 11,
-     "perMillion": 123.1
+     "sentences": 22,
+     "perMillion": 246.3
     },
     {
      "id": "zh-date-05",
@@ -868,8 +868,8 @@
      "example": "我们在哪儿见？地铁站？",
      "exampleKo": "어디서 만날까? 지하철역?",
      "tip": "",
-     "sentences": 6,
-     "perMillion": 67.2
+     "sentences": 9,
+     "perMillion": 100.8
     },
     {
      "id": "zh-date-10",
@@ -888,8 +888,8 @@
      "example": "今天我请客。",
      "exampleKo": "오늘은 내가 살게.",
      "tip": "중국에서는 서로 내겠다고 다투는 모습도 흔해요.",
-     "sentences": 6,
-     "perMillion": 67.2
+     "sentences": 12,
+     "perMillion": 134.3
     },
     {
      "id": "zh-date-12",
@@ -898,8 +898,8 @@
      "example": "周末来我家看电影吧？",
      "exampleKo": "주말에 우리 집에서 영화 볼래?",
      "tip": "",
-     "sentences": 22,
-     "perMillion": 246.3
+     "sentences": 44,
+     "perMillion": 492.6
     },
     {
      "id": "zh-date-13",
@@ -916,8 +916,8 @@
      "example": "太晚了，我送你回家。",
      "exampleKo": "너무 늦었어, 집까지 데려다줄게.",
      "tip": "",
-     "sentences": 6,
-     "perMillion": 67.2
+     "sentences": 12,
+     "perMillion": 134.3
     },
     {
      "id": "zh-date-15",
@@ -2299,8 +2299,8 @@
      "example": "晚饭后去散步。",
      "exampleKo": "저녁 먹고 산책해.",
      "tip": "",
-     "sentences": 103,
-     "perMillion": 1153.1
+     "sentences": 206,
+     "perMillion": 2306.2
     },
     {
      "id": "zh-routine-24",
@@ -2439,8 +2439,8 @@
      "example": "我们休息一下吧。",
      "exampleKo": "우리 잠깐 쉬자.",
      "tip": "",
-     "sentences": 27,
-     "perMillion": 302.3
+     "sentences": 54,
+     "perMillion": 604.5
     },
     {
      "id": "zh-routine-39",
@@ -2463,375 +2463,325 @@
   {
    "id": "out",
    "title": {
-    "ko": "밖에서",
-    "en": "Out and about"
+    "ko": "같이 다닐 때",
+    "en": "Out together"
    },
    "items": [
     {
      "id": "zh-out-01",
-     "text": "多少钱？",
-     "meaning": "얼마예요?",
-     "example": "这个多少钱？",
-     "exampleKo": "이거 얼마예요?",
+     "text": "你想去哪儿？",
+     "meaning": "어디 가고 싶어?",
+     "example": "今天你想去哪儿？",
+     "exampleKo": "오늘 어디 가고 싶어?",
      "tip": "",
-     "sentences": 53,
-     "perMillion": 593.3
+     "sentences": 194,
+     "perMillion": 2171.8
     },
     {
      "id": "zh-out-02",
-     "text": "我要这个。",
-     "meaning": "이걸로 할게요",
-     "example": "我要这个，谢谢。",
-     "exampleKo": "이걸로 할게요, 감사합니다.",
+     "text": "哪儿都行。",
+     "meaning": "아무 데나 좋아",
+     "example": "跟你一起，哪儿都行。",
+     "exampleKo": "너랑 같이면 어디든 좋아.",
      "tip": ""
     },
     {
      "id": "zh-out-03",
-     "text": "可以刷卡吗？",
-     "meaning": "카드 돼요?",
-     "example": "这里可以刷卡吗？",
-     "exampleKo": "여기 카드 돼요?",
+     "text": "你想吃什么？",
+     "meaning": "뭐 먹고 싶어?",
+     "example": "今晚你想吃什么？",
+     "exampleKo": "오늘 저녁 뭐 먹고 싶어?",
      "tip": "",
-     "sentences": 7,
-     "perMillion": 78.4
+     "sentences": 127,
+     "perMillion": 1421.8
     },
     {
      "id": "zh-out-04",
-     "text": "不要袋子。",
-     "meaning": "봉투는 필요 없어요",
-     "example": "不用袋子，谢谢。",
-     "exampleKo": "봉투 괜찮아요, 감사합니다.",
-     "tip": ""
+     "text": "各付各的吧。",
+     "meaning": "각자 내자",
+     "example": "这顿饭各付各的吧。",
+     "exampleKo": "이번 밥은 각자 내자.",
+     "tip": "AA制라고도 해요."
     },
     {
      "id": "zh-out-05",
-     "text": "洗手间在哪儿？",
-     "meaning": "화장실 어디예요?",
-     "example": "请问洗手间在哪儿？",
-     "exampleKo": "실례지만 화장실 어디예요?",
+     "text": "下次你请。",
+     "meaning": "다음엔 네가 사",
+     "example": "今天我请了，下次你请。",
+     "exampleKo": "오늘은 내가 샀으니 다음엔 네가 사.",
+     "tip": "",
+     "sentences": 102,
+     "perMillion": 1141.9
+    },
+    {
+     "id": "zh-out-06",
+     "text": "这个一起吃吧？",
+     "meaning": "이거 같이 먹을래?",
+     "example": "这个一起吃吧？分量很大。",
+     "exampleKo": "이거 같이 먹을래? 양이 많아.",
+     "tip": "",
+     "sentences": 30,
+     "perMillion": 335.9
+    },
+    {
+     "id": "zh-out-07",
+     "text": "让我尝一口。",
+     "meaning": "한 입만 줘",
+     "example": "看起来好好吃。让我尝一口。",
+     "exampleKo": "맛있어 보인다. 한 입만 줘.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-08",
+     "text": "这里氛围真好。",
+     "meaning": "여기 분위기 좋다",
+     "example": "这里氛围真好。我们以后常来。",
+     "exampleKo": "여기 분위기 좋다. 앞으로 자주 오자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-09",
+     "text": "我帮你拍张照吧？",
+     "meaning": "사진 찍어 줄까?",
+     "example": "你站那儿。我帮你拍张照吧？",
+     "exampleKo": "거기 서 봐. 사진 찍어 줄까?",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-10",
+     "text": "我们一起拍吧。",
+     "meaning": "같이 찍자",
+     "example": "这里好美，我们一起拍吧。",
+     "exampleKo": "여기 예쁘다, 같이 찍자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-11",
+     "text": "我在路上了。",
+     "meaning": "지금 가는 중이야",
+     "example": "我在路上了，再等我一下。",
+     "exampleKo": "가는 중이야. 조금만 더 기다려 줘.",
      "tip": "",
      "sentences": 6,
      "perMillion": 67.2
     },
     {
-     "id": "zh-out-06",
-     "text": "地铁站在哪儿？",
-     "meaning": "지하철역 어디예요?",
-     "example": "请问地铁站在哪儿？",
-     "exampleKo": "실례지만 지하철역 어디예요?",
-     "tip": "",
-     "sentences": 7,
-     "perMillion": 78.4
+     "id": "zh-out-12",
+     "text": "等我一下。",
+     "meaning": "조금만 기다려 줘",
+     "example": "不好意思来晚了。等我一下。",
+     "exampleKo": "늦어서 미안. 조금만 기다려 줘.",
+     "tip": ""
     },
     {
-     "id": "zh-out-07",
-     "text": "我迷路了。",
-     "meaning": "길을 잃었어",
-     "example": "对不起，我迷路了。",
-     "exampleKo": "미안, 길을 잃었어.",
+     "id": "zh-out-13",
+     "text": "马上就到了。",
+     "meaning": "거의 다 왔어",
+     "example": "马上就到了，还有五分钟。",
+     "exampleKo": "거의 다 왔어. 5분 남았어.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-14",
+     "text": "我们在哪儿见？",
+     "meaning": "어디서 만날까?",
+     "example": "明天我们在哪儿见？",
+     "exampleKo": "내일 어디서 만날까?",
+     "tip": "",
+     "sentences": 9,
+     "perMillion": 100.8
+    },
+    {
+     "id": "zh-out-15",
+     "text": "车站门口见。",
+     "meaning": "역 앞에서 보자",
+     "example": "七点车站门口见。",
+     "exampleKo": "7시에 역 앞에서 보자.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-16",
+     "text": "到了跟我说一声。",
+     "meaning": "도착하면 연락해",
+     "example": "到家了跟我说一声。",
+     "exampleKo": "집에 도착하면 말해 줘.",
+     "tip": ""
+    },
+    {
+     "id": "zh-out-17",
+     "text": "我迷路了，你在哪儿？",
+     "meaning": "길 잃었어. 어디야?",
+     "example": "我看了地图，可是迷路了，你在哪儿？",
+     "exampleKo": "지도를 봤는데 길을 잃었어. 어디야?",
      "tip": "",
      "sentences": 42,
      "perMillion": 470.2
     },
     {
-     "id": "zh-out-08",
-     "text": "一直走",
-     "meaning": "쭉 가세요",
-     "example": "一直走，然后右转。",
-     "exampleKo": "쭉 가서 오른쪽으로 도세요.",
-     "tip": ""
-    },
-    {
-     "id": "zh-out-09",
-     "text": "右转",
-     "meaning": "우회전",
-     "example": "到路口右转。",
-     "exampleKo": "사거리에서 우회전하세요.",
+     "id": "zh-out-18",
+     "text": "来这边。",
+     "meaning": "이쪽으로 와",
+     "example": "来这边，这边更好看。",
+     "exampleKo": "이쪽으로 와. 이쪽이 더 예뻐.",
      "tip": "",
      "sentences": 10,
      "perMillion": 112.0
     },
     {
-     "id": "zh-out-10",
-     "text": "左转",
-     "meaning": "좌회전",
-     "example": "红绿灯左转。",
-     "exampleKo": "신호등에서 좌회전하세요.",
-     "tip": "",
-     "sentences": 6,
-     "perMillion": 67.2
-    },
-    {
-     "id": "zh-out-11",
-     "text": "很近。",
-     "meaning": "가까워요",
-     "example": "离地铁站很近。",
-     "exampleKo": "지하철역에서 가까워요.",
-     "tip": "",
-     "sentences": 17,
-     "perMillion": 190.3
-    },
-    {
-     "id": "zh-out-12",
-     "text": "有点远。",
-     "meaning": "좀 멀어요",
-     "example": "走过去有点远。",
-     "exampleKo": "걸어가면 좀 멀어요.",
-     "tip": ""
-    },
-    {
-     "id": "zh-out-13",
-     "text": "两位。",
-     "meaning": "두 명이요",
-     "example": "两位，有座位吗？",
-     "exampleKo": "두 명이에요, 자리 있어요?",
-     "tip": ""
-    },
-    {
-     "id": "zh-out-14",
-     "text": "我订了位。",
-     "meaning": "예약했어요",
-     "example": "我订了七点的位子。",
-     "exampleKo": "7시로 예약했어요.",
-     "tip": ""
-    },
-    {
-     "id": "zh-out-15",
-     "text": "请给我菜单。",
-     "meaning": "메뉴판 주세요",
-     "example": "服务员，请给我菜单。",
-     "exampleKo": "저기요, 메뉴판 주세요.",
-     "tip": ""
-    },
-    {
-     "id": "zh-out-16",
-     "text": "有什么推荐的？",
-     "meaning": "추천 메뉴 있어요?",
-     "example": "有什么推荐的吗？",
-     "exampleKo": "추천하는 거 있어요?",
-     "tip": "",
-     "sentences": 18,
-     "perMillion": 201.5
-    },
-    {
-     "id": "zh-out-17",
-     "text": "买单。",
-     "meaning": "계산해 주세요",
-     "example": "服务员，买单。",
-     "exampleKo": "저기요, 계산해 주세요.",
-     "tip": ""
-    },
-    {
-     "id": "zh-out-18",
-     "text": "打包。",
-     "meaning": "포장해 주세요",
-     "example": "这些打包，谢谢。",
-     "exampleKo": "이거 포장해 주세요.",
-     "tip": "",
-     "sentences": 7,
-     "perMillion": 78.4
-    },
-    {
      "id": "zh-out-19",
-     "text": "在这里吃。",
-     "meaning": "여기서 먹을게요",
-     "example": "我在这里吃。",
-     "exampleKo": "여기서 먹을게요.",
-     "tip": "",
-     "sentences": 6,
-     "perMillion": 67.2
+     "text": "人太多了，我们去别处吧。",
+     "meaning": "사람 너무 많다. 다른 데 가자",
+     "example": "周末人太多了，我们去别处吧。",
+     "exampleKo": "주말이라 사람이 너무 많아. 다른 데 가자.",
+     "tip": ""
     },
     {
      "id": "zh-out-20",
-     "text": "服务员！",
-     "meaning": "저기요!",
-     "example": "服务员，点菜！",
-     "exampleKo": "저기요, 주문할게요!",
+     "text": "腿酸了，休息一下吧。",
+     "meaning": "다리 아파. 좀 쉬자",
+     "example": "走了很久，腿酸了，休息一下吧。",
+     "exampleKo": "오래 걸어서 다리 아파. 좀 쉬자.",
      "tip": "",
-     "sentences": 14,
-     "perMillion": 156.7
+     "sentences": 54,
+     "perMillion": 604.5
     },
     {
      "id": "zh-out-21",
-     "text": "有空位吗？",
-     "meaning": "빈자리 있어요?",
-     "example": "请问有空位吗？",
-     "exampleKo": "빈자리 있나요?",
-     "tip": ""
+     "text": "我去一下洗手间。",
+     "meaning": "화장실 좀 다녀올게",
+     "example": "等我一下，我去一下洗手间。",
+     "exampleKo": "기다려 줘, 화장실 좀 다녀올게.",
+     "tip": "",
+     "sentences": 6,
+     "perMillion": 67.2
     },
     {
      "id": "zh-out-22",
-     "text": "要排队。",
-     "meaning": "줄 서야 해",
-     "example": "这家店要排很久的队。",
-     "exampleKo": "이 가게는 오래 줄 서야 해.",
-     "tip": "",
-     "sentences": 11,
-     "perMillion": 123.1
+     "text": "我们进去看看吧。",
+     "meaning": "저 가게 들어가 보자",
+     "example": "那家店好可爱，我们进去看看吧。",
+     "exampleKo": "저 가게 귀엽다. 들어가 보자.",
+     "tip": ""
     },
     {
      "id": "zh-out-23",
-     "text": "地铁晚点了。",
-     "meaning": "지하철이 늦어요",
-     "example": "地铁晚点了，我会晚到。",
-     "exampleKo": "지하철이 늦어서 조금 늦을 거야.",
+     "text": "这个适合我吗？",
+     "meaning": "이거 나한테 어울려?",
+     "example": "这顶帽子适合我吗？",
+     "exampleKo": "이 모자 나한테 어울려?",
      "tip": "",
-     "sentences": 19,
-     "perMillion": 212.7
+     "sentences": 9,
+     "perMillion": 100.8
     },
     {
      "id": "zh-out-24",
-     "text": "换乘",
-     "meaning": "환승",
-     "example": "下一站换乘。",
-     "exampleKo": "다음 역에서 환승해요.",
-     "tip": ""
+     "text": "这个很适合你。",
+     "meaning": "너한테 잘 어울려",
+     "example": "这个颜色很适合你。",
+     "exampleKo": "이 색이 너한테 잘 어울려.",
+     "tip": "",
+     "sentences": 5,
+     "perMillion": 56.0
     },
     {
      "id": "zh-out-25",
-     "text": "车票",
-     "meaning": "표",
-     "example": "我去买车票。",
-     "exampleKo": "표 사러 갈게.",
+     "text": "去喝杯咖啡吗？",
+     "meaning": "커피 한잔할래?",
+     "example": "散步以后去喝杯咖啡吗？",
+     "exampleKo": "산책하고 커피 한잔할래?",
      "tip": "",
-     "sentences": 12,
-     "perMillion": 134.3
+     "sentences": 8,
+     "perMillion": 89.6
     },
     {
      "id": "zh-out-26",
-     "text": "打车",
-     "meaning": "택시 타다",
-     "example": "太晚了，我们打车吧。",
-     "exampleKo": "늦었으니 택시 타자.",
+     "text": "去看电影吗？",
+     "meaning": "영화 보러 갈래?",
+     "example": "这个周末去看电影吗？",
+     "exampleKo": "이번 주말에 영화 보러 갈래?",
      "tip": "",
-     "sentences": 5,
-     "perMillion": 56.0
+     "sentences": 44,
+     "perMillion": 492.6
     },
     {
      "id": "zh-out-27",
-     "text": "能帮我拍张照吗？",
-     "meaning": "사진 좀 찍어 주실래요?",
-     "example": "不好意思，能帮我拍张照吗？",
-     "exampleKo": "실례지만 사진 좀 찍어 주실래요?",
-     "tip": ""
+     "text": "我们去散步吧。",
+     "meaning": "산책하자",
+     "example": "天气真好，我们去散步吧。",
+     "exampleKo": "날씨 좋다. 산책하자.",
+     "tip": "",
+     "sentences": 206,
+     "perMillion": 2306.2
     },
     {
      "id": "zh-out-28",
-     "text": "一起拍照吧。",
-     "meaning": "같이 사진 찍자",
-     "example": "我们在这里一起拍照吧！",
-     "exampleKo": "여기서 같이 사진 찍자!",
-     "tip": ""
+     "text": "这么快就要走了？真舍不得。",
+     "meaning": "벌써 가? 아쉽다",
+     "example": "时间过得真快。这么快就要走了？真舍不得。",
+     "exampleKo": "시간 진짜 빠르다. 벌써 가? 아쉽다.",
+     "tip": "舍不得 = 아쉬워서 놓기 싫다."
     },
     {
      "id": "zh-out-29",
-     "text": "可以试穿吗？",
-     "meaning": "입어 봐도 돼요?",
-     "example": "这件可以试穿吗？",
-     "exampleKo": "이거 입어 봐도 돼요?",
-     "tip": ""
+     "text": "下次再来吧。",
+     "meaning": "다음에 또 오자",
+     "example": "这里真不错，下次再来吧。",
+     "exampleKo": "여기 괜찮다. 다음에 또 오자.",
+     "tip": "",
+     "sentences": 34,
+     "perMillion": 380.6
     },
     {
      "id": "zh-out-30",
-     "text": "有大一点的吗？",
-     "meaning": "더 큰 거 있어요?",
-     "example": "有大一点的吗？",
-     "exampleKo": "더 큰 사이즈 있어요?",
-     "tip": "",
-     "sentences": 5,
-     "perMillion": 56.0
+     "text": "我们一起打伞吧。",
+     "meaning": "우산 같이 쓰자",
+     "example": "下雨了，我们一起打伞吧。",
+     "exampleKo": "비 온다. 우산 같이 쓰자.",
+     "tip": ""
     },
     {
      "id": "zh-out-31",
-     "text": "好便宜！",
-     "meaning": "너무 싸다!",
-     "example": "这个好便宜！",
-     "exampleKo": "이거 너무 싸다!",
+     "text": "冷吗？穿这个吧。",
+     "meaning": "추워? 이거 입어",
+     "example": "晚上有点凉。冷吗？穿这个吧。",
+     "exampleKo": "밤에 좀 쌀쌀하다. 추워? 이거 입어.",
      "tip": ""
     },
     {
      "id": "zh-out-32",
-     "text": "太贵了。",
-     "meaning": "너무 비싸다",
-     "example": "这个太贵了。",
-     "exampleKo": "이거 너무 비싸.",
-     "tip": "",
-     "sentences": 20,
-     "perMillion": 223.9
+     "text": "坐这儿吧。",
+     "meaning": "여기 앉아",
+     "example": "这儿有位子，坐这儿吧。",
+     "exampleKo": "여기 자리 있어, 여기 앉아.",
+     "tip": ""
     },
     {
      "id": "zh-out-33",
-     "text": "打折",
-     "meaning": "할인하다",
-     "example": "现在在打折。",
-     "exampleKo": "지금 할인 중이야.",
+     "text": "我去接你。",
+     "meaning": "데리러 갈게",
+     "example": "我去地铁站接你。",
+     "exampleKo": "지하철역까지 데리러 갈게.",
      "tip": "",
-     "sentences": 5,
-     "perMillion": 56.0
+     "sentences": 22,
+     "perMillion": 246.3
     },
     {
      "id": "zh-out-34",
-     "text": "人好多。",
-     "meaning": "사람 많다",
-     "example": "今天人好多。",
-     "exampleKo": "오늘 사람 진짜 많다.",
+     "text": "今天我带你逛逛。",
+     "meaning": "오늘은 내가 안내할게",
+     "example": "今天我带你逛逛，跟我来。",
+     "exampleKo": "오늘은 내가 구경시켜 줄게. 따라와.",
      "tip": ""
     },
     {
      "id": "zh-out-35",
-     "text": "人不多。",
-     "meaning": "사람 별로 없다",
-     "example": "工作日人不多。",
-     "exampleKo": "평일이라 사람 별로 없네.",
-     "tip": ""
-    },
-    {
-     "id": "zh-out-36",
-     "text": "开门了吗？",
-     "meaning": "문 열었어요?",
-     "example": "这家店开门了吗？",
-     "exampleKo": "이 가게 문 열었어요?",
+     "text": "你还记得这里吗？",
+     "meaning": "여기 기억나?",
+     "example": "你还记得这里吗？我们第一次见面就在这儿。",
+     "exampleKo": "여기 기억나? 우리 처음 만난 곳이 여기야.",
      "tip": "",
-     "sentences": 35,
-     "perMillion": 391.8
-    },
-    {
-     "id": "zh-out-37",
-     "text": "关门了。",
-     "meaning": "문 닫았어요",
-     "example": "已经关门了。",
-     "exampleKo": "벌써 문 닫았어요.",
-     "tip": "",
-     "sentences": 20,
-     "perMillion": 223.9
-    },
-    {
-     "id": "zh-out-38",
-     "text": "有无线网吗？",
-     "meaning": "와이파이 있어요?",
-     "example": "这里有无线网吗？",
-     "exampleKo": "여기 와이파이 있어요?",
-     "tip": ""
-    },
-    {
-     "id": "zh-out-39",
-     "text": "想充电。",
-     "meaning": "충전하고 싶어요",
-     "example": "我想给手机充电。",
-     "exampleKo": "폰 충전하고 싶어요.",
-     "tip": "",
-     "sentences": 5,
-     "perMillion": 56.0
-    },
-    {
-     "id": "zh-out-40",
-     "text": "怎么去？",
-     "meaning": "어떻게 가요?",
-     "example": "去那儿怎么去？",
-     "exampleKo": "거기 어떻게 가요?",
-     "tip": "",
-     "sentences": 11,
-     "perMillion": 123.1
+     "sentences": 91,
+     "perMillion": 1018.8
     }
    ]
   },
@@ -3222,8 +3172,8 @@
      "example": "下次一起去吧。",
      "exampleKo": "다음에 같이 가자.",
      "tip": "",
-     "sentences": 51,
-     "perMillion": 570.9
+     "sentences": 102,
+     "perMillion": 1141.9
     },
     {
      "id": "zh-plans-02",

@@ -23,7 +23,9 @@ describe('buildCorrectionPrompt', () => {
     )
     expect(order.every((index) => index >= 0)).toBe(true)
     expect([...order].sort((a, b) => a - b)).toEqual(order)
-    expect(prompt).toContain('## 고친 문장\n## 고칠 점\n## 더 자연스러운 표현\n## 잘한 점\n## 연습할 점')
+    expect(prompt).toContain(
+      '## 고친 문장\n## 고칠 점\n## 더 자연스러운 표현\n## 문법 포인트\n## 잘한 점\n## 연습할 점',
+    )
     expect(prompt.endsWith('[내 번역]\nI walked at the park yesterday.')).toBe(true)
   })
 
@@ -52,12 +54,20 @@ describe('buildCorrectionPrompt', () => {
     expect(parsed.fixes).toHaveLength(3)
     expect(parsed.natural).toHaveLength(2)
     expect(parsed.natural[0].text).toBe('I hung out at a cafe with my friend.')
+    expect(parsed.grammar).toEqual([
+      {
+        text: '과거형(지난 일)',
+        meaning: '이미 한 일은 동사를 과거형으로 써요.',
+        example: 'I watched a movie yesterday.',
+        exampleNative: '나는 어제 영화를 봤다.',
+      },
+    ])
   })
 
   it('영어 화면에서는 영어 제목을 쓴다', () => {
     const prompt = buildCorrectionPrompt({ ...base, uiLang: 'en', learning: 'English', explain: 'English' })
     expect(prompt).toContain(
-      '## Corrected translation\n## Fixes\n## More natural ways\n## What went well\n## Practice next',
+      '## Corrected translation\n## Fixes\n## More natural ways\n## Grammar points\n## What went well\n## Practice next',
     )
   })
 })
@@ -86,6 +96,7 @@ I walked in the park yesterday.
       ],
       // 예전 교정(더 자연스러운 표현 칸이 없던 때)도 그대로 읽는다.
       natural: [],
+      grammar: [],
       good: '과거형을 잘 썼어요.',
       practice: '장소 전치사 in과 at을 구분해 보세요.',
     })

@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import Feedback from '../components/Feedback'
+import JournalCalendar from '../components/JournalCalendar'
 import Field from '../components/Field'
 import MoodPicker from '../components/MoodPicker'
 import { TodayMission, UsageLine } from '../components/Usage'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { useRecordForm } from '../hooks/useRecordForm'
+import { dayKey } from '../lib/activity'
 import { aiConfigured, giveAiConsent, hasAiConsent, requestCorrection } from '../lib/aiCorrection'
 import { buildCorrectionPrompt, parseFeedback, recentPracticeNotes, recentWordTexts } from '../lib/correction'
 import { languageName } from '../lib/i18n'
@@ -33,6 +35,8 @@ export default function Journal() {
   })
   const { form, errors, editingId, saving, formRef, listRef, setField } = recordForm
   const [openId, setOpenId] = useState(null)
+  // 달력에서 고른 날짜("2026-11-23"). 고르면 그날 일기만 보여 준다.
+  const [day, setDay] = useState(null)
   const [aiBusy, setAiBusy] = useState(false)
   const [askingConsent, setAskingConsent] = useState(false)
   const [aiRemaining, setAiRemaining] = useState(null)
@@ -42,6 +46,8 @@ export default function Journal() {
   const dateFormat = new Intl.DateTimeFormat(nativeLang === 'ko' ? 'ko-KR' : 'en-US', {
     dateStyle: 'long',
   })
+  const dateOnly = new Intl.DateTimeFormat(nativeLang === 'ko' ? 'ko-KR' : 'en-US', { month: 'long', day: 'numeric' })
+  const shown = day ? items.filter((item) => dayKey(item.createdAt) === day) : items
 
   function makePrompt() {
     return buildCorrectionPrompt({
@@ -112,12 +118,12 @@ export default function Journal() {
             value={form.translation}
             onChange={(event) => setField('translation', event.target.value)}
           />
-          {(
+          {
             <div className="usage-box">
               <TodayMission sentence={form.translation} />
               <UsageLine sentence={form.translation} live />
             </div>
-          )}
+          }
           <div className="correction-action">
             {canAskAi ? (
               <>
@@ -200,11 +206,22 @@ export default function Journal() {
             </h2>
             <span className="count">{t('count', { count: items.length })}</span>
           </div>
+          {items.length > 0 && <JournalCalendar items={items} selected={day} onSelect={setDay} />}
+          {day && (
+            <p className="calendar-filter" role="status">
+              <span>
+                {t('calendarSelected', { date: dateOnly.format(new Date(`${day}T00:00:00`)), count: shown.length })}
+              </span>
+              <button className="text-button" onClick={() => setDay(null)}>
+                {t('calendarShowAll')}
+              </button>
+            </p>
+          )}
           {items.length === 0 ? (
             <p className="empty-state">{t('empty')}</p>
           ) : (
             <ul className="record-list">
-              {items.map((item) => {
+              {shown.map((item) => {
                 const open = openId === item.id
                 const detailId = `journal-detail-${item.id}`
                 return (

@@ -30,14 +30,20 @@ const Settings = lazy(() => import('./pages/Settings'))
 const Privacy = lazy(() => import('./pages/Privacy'))
 const Pro = lazy(() => import('./pages/Pro'))
 const Missed = lazy(() => import('./pages/Missed'))
+const Grammar = lazy(() => import('./pages/Grammar'))
 
-const NAV = ['home', 'words', 'expressions', 'packs', 'chats', 'journal', 'profile']
+const NAV = ['home', 'words', 'expressions', 'packs', 'chats', 'journal', 'grammar', 'couple', 'profile']
+const NAV_LABEL = { packs: 'navPacks', couple: 'navCouple' }
+// 휴대폰 아래 탭에는 자주 쓰는 넷만 두고, 나머지는 "더보기"를 누르면 목록으로 연다(PC 왼쪽 메뉴는 모두 보인다).
+const MOBILE_TABS = new Set(['home', 'words', 'journal', 'couple'])
+const MORE = ['expressions', 'packs', 'chats', 'grammar']
+const isCurrent = (page, id) => page === id || (id === 'packs' && page === 'packs-words')
 const TOAST_MS = 5000
 const TOAST_ACTION_MS = 8000
 
 function readPage() {
   const page = window.location.hash.slice(1)
-  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin', 'couple', 'settings', 'missed'].includes(page)
+  return NAV.includes(page) || ['privacy', 'pro', 'packs', 'packs-words', 'admin', 'settings', 'missed'].includes(page)
     ? page
     : 'home'
 }
@@ -137,6 +143,14 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
   )
 
   // 연인의 새 문장이 오면 알려 준다(설정에서 켠 사람만). 연인과 한 문장 화면을 열면 읽은 것으로 한다.
+  const [moreOpen, setMoreOpen] = useState(false)
+  // 더보기 목록은 Esc로도 닫는다.
+  useEffect(() => {
+    if (!moreOpen) return undefined
+    const onKey = (event) => event.key === 'Escape' && setMoreOpen(false)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [moreOpen])
   const [coupleOn, setCoupleOn] = useState(() => readSettings().couple)
   useEffect(() => {
     const sync = () => setCoupleOn(readSettings().couple)
@@ -211,6 +225,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     couple: <Couple />,
     settings: <Settings />,
     missed: <Missed />,
+    grammar: <Grammar />,
     packs: <Packs key="expressions" mode="expressions" />,
     'packs-words': <Packs key="words" mode="words" />,
   }
@@ -244,15 +259,28 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
             {NAV.map((id) => (
               <button
                 key={id}
-                className="nav-item"
+                className={MOBILE_TABS.has(id) ? 'nav-item' : 'nav-item nav-desktop-only'}
                 data-page={id}
-                aria-current={page === id || (id === 'packs' && page === 'packs-words') ? 'page' : undefined}
-                onClick={() => go(id)}
+                aria-current={isCurrent(page, id) ? 'page' : undefined}
+                onClick={() => {
+                  setMoreOpen(false)
+                  go(id)
+                }}
               >
                 <Icon name={id} />
-                <span>{t(id === 'packs' ? 'navPacks' : id)}</span>
+                <span>{t(NAV_LABEL[id] ?? id)}</span>
               </button>
             ))}
+            <button
+              className="nav-item nav-more-button"
+              aria-expanded={moreOpen}
+              aria-controls="nav-more-sheet"
+              aria-current={MORE.some((id) => isCurrent(page, id)) ? 'page' : undefined}
+              onClick={() => setMoreOpen((open) => !open)}
+            >
+              <Icon name="more" />
+              <span>{t('navMore')}</span>
+            </button>
             <div className="sidebar-user">
               <span className="avatar-button" aria-hidden="true">
                 {nickname.slice(0, 1).toUpperCase()}
@@ -263,6 +291,27 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
               </span>
             </div>
           </nav>
+          {moreOpen && (
+            <>
+              <button className="nav-more-backdrop" aria-label={t('navMoreClose')} onClick={() => setMoreOpen(false)} />
+              <div id="nav-more-sheet" className="nav-more-sheet">
+                {MORE.map((id) => (
+                  <button
+                    key={id}
+                    className="nav-more-item"
+                    aria-current={isCurrent(page, id) ? 'page' : undefined}
+                    onClick={() => {
+                      setMoreOpen(false)
+                      go(id)
+                    }}
+                  >
+                    <Icon name={id} />
+                    <span>{t(NAV_LABEL[id] ?? id)}</span>
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
           <main className="main-content" ref={mainRef} tabIndex={-1}>
             {supabase && !online && (
               <p className="offline-banner" role="status">

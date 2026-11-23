@@ -8,7 +8,7 @@ import { CATEGORIES } from './i18n'
 import { fromLegacy } from './legacy'
 import { MOOD_IDS } from './moods'
 
-export const TYPES = ['word', 'expression', 'chat', 'journal']
+export const TYPES = ['word', 'expression', 'chat', 'journal', 'grammar']
 /** 마지막으로 백업 파일을 받은 때(프로필, 홈의 백업 안내) */
 export const LAST_EXPORT_KEY = 'lastExportAt'
 
@@ -20,20 +20,23 @@ const TYPE_KEYS = {
   expression: ['expression', 'expressions', 'savedExpressions'],
   chat: ['chat', 'chats', 'savedChats'],
   journal: ['journal', 'journals', 'savedJournals'],
+  grammar: ['grammar', 'savedGrammar'],
 }
 
 // 칸마다 최대 길이. 입력 화면의 maxLength와 맞춘다.
 const FIELDS = {
-  word: { text: 500, meaning: 1000, example: 2000 },
-  expression: { text: 500, meaning: 1000, example: 2000 },
+  word: { text: 500, meaning: 1000, example: 2000, category: 30 },
+  expression: { text: 500, meaning: 1000, example: 2000, category: 30 },
   chat: { situation: 1000, message: 2000, meaning: 2000, category: 20, note: 2000 },
   journal: { mood: 20, native: 4000, translation: 4000, aiFeedback: 8000, memo: 2000 },
+  grammar: { text: 300, meaning: 1000, example: 1000, exampleNative: 1000, source: 20 },
 }
 const REQUIRED = {
   word: ['text', 'meaning'],
   expression: ['text', 'meaning'],
   chat: ['situation', 'message', 'meaning'],
   journal: ['native'],
+  grammar: ['text', 'meaning'],
 }
 const REVIEW_BOX_MAX = 6
 
@@ -68,7 +71,7 @@ function sanitize(type, raw) {
   if (type === 'journal' && !MOOD_IDS.includes(clean.mood)) clean.mood = ''
 
   // 복습 일정은 단어와 표현에만 있고, 형식이 맞을 때만 이어 간다.
-  if (type === 'word' || type === 'expression') {
+  if (type === 'word' || type === 'expression' || type === 'grammar') {
     const box = item.box
     const dueAt = isoOrNull(item.dueAt)
     if (Number.isInteger(box) && box >= 0 && box <= REVIEW_BOX_MAX && dueAt) {
@@ -107,7 +110,7 @@ export function parseBackup(text) {
   }
   if (!data || typeof data !== 'object' || Array.isArray(data)) throw new BackupError('notBackup')
 
-  const records = { word: [], expression: [], chat: [], journal: [] }
+  const records = { word: [], expression: [], chat: [], journal: [], grammar: [] }
   let invalid = 0
   let total = 0
   let found = false
@@ -133,6 +136,7 @@ const contentKey = {
   expression: (item) => `${item.text.toLowerCase()}\u0000${item.meaning}`,
   chat: (item) => `${item.situation}\u0000${item.message}`,
   journal: (item) => `${item.native}\u0000${item.createdAt.slice(0, 10)}`,
+  grammar: (item) => `${item.text.toLowerCase()}\u0000${item.meaning}`,
 }
 
 /**
@@ -144,10 +148,10 @@ export function planImport(existing, incoming) {
   let added = 0
   let duplicates = 0
   for (const type of TYPES) {
-    const ids = new Set(existing[type].map((item) => String(item.id).toLowerCase()))
-    const keys = new Set(existing[type].map(contentKey[type]))
+    const ids = new Set((existing[type] ?? []).map((item) => String(item.id).toLowerCase()))
+    const keys = new Set((existing[type] ?? []).map(contentKey[type]))
     toAdd[type] = []
-    for (const item of incoming[type]) {
+    for (const item of incoming[type] ?? []) {
       const key = contentKey[type](item)
       if (ids.has(item.id) || keys.has(key)) {
         duplicates += 1

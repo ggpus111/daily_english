@@ -49,7 +49,7 @@ TALK_PACKS = [
 DAILY_PACKS = [
     ("daily", "일상 대화", "Everyday talk"),
     ("routine", "하루 일과", "Daily routine"),
-    ("out", "밖에서", "Out and about"),
+    ("out", "같이 다닐 때", "Out together"),
     ("feelings", "감정·관계", "Feelings & people"),
     ("plans", "약속·계획", "Plans & time"),
     ("connect", "말 잇기", "Linking words"),
