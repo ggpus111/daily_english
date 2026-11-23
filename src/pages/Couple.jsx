@@ -1,31 +1,38 @@
 import { useCallback, useEffect, useState } from 'react'
+import AddPair from '../components/couple/AddPair'
 import CoupleLeave from '../components/couple/CoupleLeave'
-import CoupleStart from '../components/couple/CoupleStart'
 import CoupleToday from '../components/couple/CoupleToday'
 import CoupleWaiting from '../components/couple/CoupleWaiting'
+import PairAvatars from '../components/couple/PairAvatars'
+import TodayFeed from '../components/couple/TodayFeed'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
-import { coupleErrorKey, leaveCouple, loadCouple, sendSentence, setReaction } from '../lib/couple'
+import { coupleErrorKey, leaveCouple, loadPairs, sendSentence, setReaction } from '../lib/couple'
 import { errorMessage } from '../lib/errors'
 import { supabase } from '../lib/supabase'
 
-const EMPTY = { loading: false, error: null, couple: null, members: [], sentences: [], reactions: [] }
-const toState = (result) => (result.error ? { ...EMPTY, error: result.error } : { ...EMPTY, ...result })
+const EMPTY = { loading: false, error: null, pairs: [] }
+const toState = (result) => (result.error ? { ...EMPTY, error: result.error } : { ...EMPTY, pairs: result.pairs })
 
-/** 연인과 오늘의 한 문장. 짝이 있는지에 따라 시작 / 기다림 / 주고받기 화면을 고른다. */
+/**
+ * 친구·연인과 한 문장. 위에는 상대 동그라미 줄, 아래는 고른 것에 따라
+ * 오늘 모아보기(아무도 안 골랐을 때) / 그 상대와 주고받기 / 상대 추가를 보여 준다.
+ */
 export default function Couple() {
   const { t, user, learningLang, notify, onLogin } = useApp()
   const userId = user?.id
   const [state, setState] = useState({ ...EMPTY, loading: Boolean(supabase && userId) })
   const [busy, setBusy] = useState(false)
+  // null: 오늘 모아보기, 'add': 상대 추가, 그 밖: 고른 짝의 id
+  const [selected, setSelected] = useState(null)
 
-  const refresh = useCallback(async () => setState(toState(await loadCouple(userId))), [userId])
+  const refresh = useCallback(async () => setState(toState(await loadPairs(userId))), [userId])
 
   useEffect(() => {
     if (!supabase || !userId) return undefined
-    // 화면이 열릴 때 짝 정보를 서버에서 가져온다. 결과를 받은 뒤에만 상태를 바꾼다.
+    // 화면이 열릴 때 상대 목록을 서버에서 가져온다. 결과를 받은 뒤에만 상태를 바꾼다.
     let alive = true
-    loadCouple(userId).then((result) => alive && setState(toState(result)))
+    loadPairs(userId).then((result) => alive && setState(toState(result)))
     return () => {
       alive = false
     }
@@ -47,15 +54,32 @@ export default function Couple() {
     return true
   }
 
-  const sendToday = (body) =>
-    run(
-      () => sendSentence({ coupleId: state.couple.id, body, lang: learningLang }),
-      () => notify(t('coupleSent')),
-    )
+  const copyCode = (code) =>
+    navigator.clipboard
+      .writeText(code)
+      .then(() => notify(t('coupleCopied')))
+      .catch(() => notify(t('coupleCopyFail')))
 
   const react = (sentenceId, kind) => run(() => setReaction({ sentenceId, userId, kind }))
 
-  const leave = <CoupleLeave busy={busy} onLeave={() => run(leaveCouple, () => notify(t('coupleLeft')))} />
+  const sendTo = (pairId) => (body) =>
+    run(
+      () => sendSentence({ coupleId: pairId, body, lang: learningLang }),
+      () => notify(t('coupleSent')),
+    )
+
+  // 아직 안 보낸 상대 모두에게 같은 문장을 보낸다. 하나라도 실패하면 거기서 멈추고 알린다.
+  const sendAll = (body, pairIds) =>
+    run(
+      async () => {
+        for (const coupleId of pairIds) {
+          const result = await sendSentence({ coupleId, body, lang: learningLang })
+          if (result.error) return result
+        }
+        return {}
+      },
+      () => notify(t('feedSentAll', { count: pairIds.length })),
+    )
 
   if (!supabase || !userId) {
     return (
@@ -95,40 +119,73 @@ export default function Couple() {
     )
   }
 
-  if (!state.couple) {
-    return (
-      <>
-        <PageHead title={t('couple')} intro={t('coupleIntro')} />
-        <CoupleStart busy={busy} run={run} />
-      </>
+  const { pairs } = state
+  const pair = pairs.find((item) => item.id === selected)
+  const adding = selected === 'add' || pairs.length === 0
+
+  let body
+  if (adding) {
+    body = <AddPair pairs={pairs} busy={busy} run={run} onDone={() => setSelected(null)} />
+  } else if (pair) {
+    const leave = (
+      <CoupleLeave
+        busy={busy}
+        onLeave={() =>
+          run(
+            () => leaveCouple(pair.id),
+            () => {
+              setSelected(null)
+              notify(t('coupleLeft'))
+            },
+          )
+        }
+      />
     )
-  }
-
-  const partner = state.members.find((member) => member.user_id !== userId)
-
-  if (!partner) {
-    return (
+    body = (
       <>
-        <PageHead title={t('couple')} intro={t('coupleIntro')} />
-        <CoupleWaiting code={state.couple.code} onRefresh={refresh} />
+        <button className="text-button pair-back" onClick={() => setSelected(null)}>
+          {t('pairBack')}
+        </button>
+        {pair.partner ? (
+          <CoupleToday
+            key={pair.id}
+            userId={userId}
+            partner={pair.partner}
+            sentences={pair.sentences}
+            reactions={pair.reactions}
+            onReact={react}
+            onSend={sendTo(pair.id)}
+            onRefresh={refresh}
+          />
+        ) : (
+          <CoupleWaiting code={pair.code} onRefresh={refresh} />
+        )}
         {leave}
       </>
+    )
+  } else {
+    body = (
+      <TodayFeed
+        pairs={pairs}
+        userId={userId}
+        busy={busy}
+        onOpen={setSelected}
+        onReact={react}
+        onSendAll={sendAll}
+        onCopy={copyCode}
+        onRefresh={refresh}
+      />
     )
   }
 
   return (
     <>
-      <PageHead title={t('couple')} intro={t('couplePaired', { name: partner.nickname })} />
-      <CoupleToday
-        userId={userId}
-        partner={partner}
-        sentences={state.sentences}
-        reactions={state.reactions}
-        onReact={react}
-        onSend={sendToday}
-        onRefresh={refresh}
+      <PageHead
+        title={t('couple')}
+        intro={pair?.partner ? t('couplePaired', { name: pair.partner.nickname }) : t('coupleIntro')}
       />
-      {leave}
+      {pairs.length > 0 && <PairAvatars pairs={pairs} userId={userId} selectedId={selected} onSelect={setSelected} />}
+      {body}
     </>
   )
 }

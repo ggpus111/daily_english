@@ -146,7 +146,7 @@ Authentication > Providers > Email에서 Confirm email을 켭니다. 인증 메�
 
 | 언어 | 연인·친구 대화 | 일상 표현 | 단어 | 만드는 곳 |
 | --- | ---: | ---: | ---: | --- |
-| 영어(en) | 189 | 400 | 600 | `analysis/native` |
+| 영어(en) | 255 | 400 | 600 | `analysis/native` |
 | 일본어(ja) | 186 | 400 | 316 | `analysis/multilang` |
 | 중국어(zh) | 186 | 388 | 276 | `analysis/multilang` |
 | 스페인어(es) | 186 | 388 | 268 | `analysis/multilang` |

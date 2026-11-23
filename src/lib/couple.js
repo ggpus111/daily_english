@@ -1,4 +1,5 @@
-// 연인과 오늘의 한 문장 주고받기(supabase/schema.sql의 couples, couple_members, couple_sentences).
+// 상대(연인·친구)와 오늘의 한 문장 주고받기(supabase/schema.sql의 couples, couple_members, couple_sentences).
+// 짝 하나는 두 사람이고 종류가 연인(partner)이나 친구(friend)다. 연인은 한 명, 친구는 MAX_FRIENDS명까지.
 import { dayKey } from './activity'
 import { TALK_PACKS, todayItem } from './packs'
 import { supabase } from './supabase'
@@ -8,6 +9,8 @@ export const SENTENCE_MAX = 300
 export const NICKNAME_MAX = 30
 const CODE_LENGTH = 6
 const HISTORY_DAYS = 14
+export const PAIR_KINDS = ['partner', 'friend']
+export const MAX_FRIENDS = 10
 // 헷갈리는 글자(O, I, 0, 1)는 초대 번호에 쓰지 않는다.
 const CODE_CHARS = /[^A-HJ-NP-Z2-9]/g
 
@@ -27,6 +30,8 @@ export function coupleErrorKey(error) {
   if (message.includes('too many attempts')) return 'coupleErrTooMany'
   if (message.includes('couple full')) return 'coupleErrFull'
   if (message.includes('already paired')) return 'coupleErrPaired'
+  if (message.includes('too many friends')) return 'pairErrTooManyFriends'
+  if (message.includes('own code')) return 'pairErrOwnCode'
   return null
 }
 
@@ -75,39 +80,90 @@ export function reactionsBySentence(reactions, myId) {
   return bySentence
 }
 
-/** 내 짝, 짝 이름들, 최근 문장을 불러온다. 짝이 없으면 couple은 null. */
-export async function loadCouple(userId) {
-  if (!supabase || !userId) return { couple: null, members: [], sentences: [], reactions: [] }
+/**
+ * 서버에서 읽은 줄들을 상대별 짝으로 묶는다. 연인 짝을 먼저, 친구 짝은 먼저 맺은 순서로 둔다.
+ * partner는 상대(아직 안 들어왔으면 null). sentences와 reactions는 그 짝의 것만.
+ */
+export function buildPairs({ members = [], couples = [], sentences = [], reactions = [] }, myId) {
+  const mine = members.filter((member) => member.user_id === myId)
+  const order = (pair) => (pair.kind === 'partner' ? 0 : 1)
+  return mine
+    .map((me) => {
+      const couple = couples.find((item) => item.id === me.couple_id)
+      if (!couple) return null
+      const pairSentences = sentences.filter((row) => row.couple_id === couple.id)
+      const ids = new Set(pairSentences.map((row) => row.id))
+      return {
+        id: couple.id,
+        code: couple.code,
+        kind: couple.kind ?? 'partner',
+        joinedAt: me.joined_at ?? '',
+        partner: members.find((member) => member.couple_id === couple.id && member.user_id !== myId) ?? null,
+        sentences: pairSentences,
+        reactions: reactions.filter((row) => ids.has(row.sentence_id)),
+      }
+    })
+    .filter(Boolean)
+    .sort((a, b) => order(a) - order(b) || a.joinedAt.localeCompare(b.joinedAt))
+}
+
+/** 짝 하나의 오늘 상태: 내가 보냈는지, 상대가 보냈는지. 목록에 짧게 보여 줄 때 쓴다. */
+export function todayStatus(pair, myId, now = new Date()) {
+  const today = dayKey(now)
+  const rows = pair.sentences.filter((row) => row.day === today)
+  return {
+    sent: rows.some((row) => row.user_id === myId),
+    received: rows.some((row) => row.user_id !== myId),
+  }
+}
+
+/** 연인 짝이 이미 있는지, 친구를 더 맺을 수 있는지(초대 화면에서 고를 수 있는 종류). */
+export function canAddKind(pairs, kind) {
+  const count = pairs.filter((pair) => pair.kind === kind).length
+  return kind === 'partner' ? count === 0 : count < MAX_FRIENDS
+}
+
+/** 내가 들어 있는 모든 짝과 이름, 최근 문장, 반응을 불러온다. */
+export async function loadPairs(userId) {
+  if (!supabase || !userId) return { pairs: [] }
   try {
-    const { data: members, error } = await supabase.from('couple_members').select('couple_id, user_id, nickname')
+    const { data: members, error } = await supabase
+      .from('couple_members')
+      .select('couple_id, user_id, nickname, joined_at')
     if (error) return failure(error)
-    const mine = (members ?? []).find((member) => member.user_id === userId)
-    if (!mine) return { couple: null, members: [], sentences: [], reactions: [] }
+    const ids = [
+      ...new Set((members ?? []).filter((member) => member.user_id === userId).map((member) => member.couple_id)),
+    ]
+    if (ids.length === 0) return { pairs: [] }
     const since = new Date()
     since.setDate(since.getDate() - HISTORY_DAYS)
     const [coupleResult, sentenceResult] = await Promise.all([
-      supabase.from('couples').select('id, code').eq('id', mine.couple_id).maybeSingle(),
+      supabase.from('couples').select('id, code, kind').in('id', ids),
       supabase
         .from('couple_sentences')
-        .select('id, user_id, day, body, lang, created_at')
-        .eq('couple_id', mine.couple_id)
+        .select('id, couple_id, user_id, day, body, lang, created_at')
+        .in('couple_id', ids)
         .gte('day', dayKey(since))
         .order('day', { ascending: false }),
     ])
     if (coupleResult.error) return failure(coupleResult.error)
     if (sentenceResult.error) return failure(sentenceResult.error)
     const sentences = sentenceResult.data ?? []
-    const ids = sentences.map((sentence) => sentence.id)
     let reactions = []
-    if (ids.length) {
+    if (sentences.length) {
       const { data, error: reactionError } = await supabase
         .from('couple_reactions')
         .select('sentence_id, user_id, kind')
-        .in('sentence_id', ids)
+        .in(
+          'sentence_id',
+          sentences.map((row) => row.id),
+        )
       if (reactionError) return failure(reactionError)
       reactions = data ?? []
     }
-    return { couple: coupleResult.data, members: members ?? [], sentences, reactions }
+    return {
+      pairs: buildPairs({ members: members ?? [], couples: coupleResult.data ?? [], sentences, reactions }, userId),
+    }
   } catch (error) {
     return failure(error)
   }
@@ -123,13 +179,17 @@ async function rpc(name, args) {
   }
 }
 
-export const createCouple = (nickname) => rpc('create_couple', { nick: nickname.trim().slice(0, NICKNAME_MAX) })
+export const createCouple = (nickname, kind = 'partner') =>
+  rpc('create_couple', {
+    nick: nickname.trim().slice(0, NICKNAME_MAX),
+    pair_kind: PAIR_KINDS.includes(kind) ? kind : 'partner',
+  })
 export async function joinCouple(code, nickname) {
   const result = await rpc('join_couple', { invite: normalizeCode(code), nick: nickname.trim().slice(0, NICKNAME_MAX) })
   // 서버는 틀린 번호를 기록하려고 오류 대신 결과 글자를 돌려준다. 앱에서는 오류로 바꿔 다룬다.
   return result.data && result.data !== 'ok' ? failure(new Error(result.data)) : result
 }
-export const leaveCouple = () => rpc('leave_couple')
+export const leaveCouple = (coupleId) => rpc('leave_couple', { target: coupleId })
 
 /** 상대 문장에 반응을 남긴다. kind가 null이면 내 반응을 지운다. 같은 문장에는 하나만 남는다. */
 export async function setReaction({ sentenceId, userId, kind }) {
@@ -163,11 +223,11 @@ export async function sendSentence({ coupleId, body, lang, day = dayKey(new Date
   }
 }
 
-/** 연인 새 문장 알림을 켜고 끈다. 서버가 보낼 알림 문구의 언어(lang)도 함께 저장한다. */
+/** 상대 새 문장 알림을 켜고 끈다(모든 상대에게 같게). 서버가 보낼 알림 문구의 언어(lang)도 함께 저장한다. */
 export const setCoupleNotify = (enabled, lang) =>
   rpc('set_couple_notify', { enabled, msg_lang: lang === 'ko' ? 'ko' : 'en' })
 
-/** 연인이 가장 최근에 보낸 문장(없으면 null). 내 짝이 아니면 서버가 아무것도 주지 않는다. */
+/** 상대 중 누군가가 가장 최근에 보낸 문장(없으면 null). 내 짝이 아니면 서버가 아무것도 주지 않는다. */
 export async function latestPartnerSentence(userId) {
   if (!supabase || !userId) return null
   try {

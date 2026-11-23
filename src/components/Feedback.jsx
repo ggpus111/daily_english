@@ -42,6 +42,27 @@ export default function Feedback({ text, learningLang, t, canSave = false }) {
           {canSave && <p className="tiny-note">{t('fixSaveHelp')}</p>}
         </section>
       )}
+      {parsed.natural.length > 0 && (
+        <section>
+          <h3>{t('feedbackNatural')}</h3>
+          <ul className="feedback-fixes">
+            {parsed.natural.map((item, index) => (
+              <li key={index}>
+                <span lang={learningLang}>{item.text}</span>
+                {item.note && <span className="fix-reason">{item.note}</span>}
+                {canSave && (
+                  <SaveEntryButton
+                    kind="expression"
+                    entry={{ text: item.text, meaning: item.note, example: '' }}
+                    label="fixSave"
+                    className="text-button fix-save"
+                  />
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
       {parsed.good && (
         <section>
           <h3>{t('feedbackGood')}</h3>
@@ -60,5 +81,12 @@ export default function Feedback({ text, learningLang, t, canSave = false }) {
 
 function SaveFixButton({ fix, corrected }) {
   const { t } = useApp()
-  return <SaveEntryButton kind="expression" entry={fixToExpression(fix, corrected, t('fixOriginalLabel'))} label="fixSave" className="text-button fix-save" />
+  return (
+    <SaveEntryButton
+      kind="expression"
+      entry={fixToExpression(fix, corrected, t('fixOriginalLabel'))}
+      label="fixSave"
+      className="text-button fix-save"
+    />
+  )
 }

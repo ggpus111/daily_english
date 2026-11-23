@@ -3225,6 +3225,111 @@ h2:focus {
   gap: 8px;
 }
 
+/* 친구·연인 동그라미 줄 */
+.pair-avatars ul {
+  display: flex;
+  gap: 14px;
+  margin: 0 0 16px;
+  padding: 2px 2px 6px;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.pair-avatar {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  min-width: 64px;
+  padding: 4px;
+  border: 0;
+  border-radius: 14px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.pair-circle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: var(--sage);
+  font-weight: 800;
+}
+
+.pair-circle.partner {
+  background: var(--peach);
+}
+
+.pair-circle.waiting,
+.pair-circle.add {
+  border: 1px dashed var(--field-line);
+  background: transparent;
+}
+
+.pair-avatar[aria-pressed='true'] .pair-circle {
+  border-color: var(--accent-ink);
+}
+
+.pair-dot {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  background: var(--accent-ink);
+}
+
+.pair-name {
+  max-width: 72px;
+  overflow: hidden;
+  font-size: 0.8125rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pair-kind {
+  color: var(--sub);
+  font-size: 0.75rem;
+}
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.pair-back {
+  margin-bottom: 8px;
+}
+
+.pair-waiting-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pair-waiting-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.couple-code.small {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
 .couple-home {
   width: 100%;
   text-align: left;
