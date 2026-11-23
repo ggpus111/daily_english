@@ -12,6 +12,7 @@ export const giveAiConsent = () => local.set(AI_CONSENT_KEY, '1')
 // 교정 요청이 가고 있는 동안에는 다른 요청을 보내지 않는다. 연타해도, 화면 두 곳에서 눌러도 한 번에 하나만 가서
 // 하루 횟수가 두 번 닳지 않는다. (화면의 버튼도 잠그지만, 화면 상태는 늦게 바뀌어서 여기서도 한 번 더 막는다.)
 let inFlight = false
+const REQUEST_TIMEOUT_MS = 60_000
 
 /**
  * @returns {Promise<{ feedback: string, remaining: number } | { error: 'login'|'limit'|'busy'|'pending'|'failed', detail?: string }>}
@@ -28,8 +29,14 @@ export async function requestCorrection(prompt) {
 
 async function send(prompt) {
   if (!supabase) return { error: 'failed' }
-  const { data, error } = await supabase.functions.invoke('correct-journal', { body: { prompt } })
+  // 서버는 길어야 45초 안에 답한다. 그보다 오래 걸리면 기다리지 말고 끊어서 다시 누를 수 있게 한다.
+  const { data, error } = await supabase.functions.invoke('correct-journal', { body: { prompt }, timeout: REQUEST_TIMEOUT_MS })
   if (!error && data?.feedback) return { feedback: data.feedback, remaining: data.remaining ?? 0 }
+  // 서버까지 가지 못했거나 응답을 받지 못한 경우(인터넷 끊김, 서버 쪽 제한으로 연결이 끊김, 시간 초과).
+  if (error?.name === 'FunctionsFetchError') {
+    console.warn('[AI 교정 실패]', { name: error.name, message: error.message })
+    return { error: 'network', detail: error.name }
+  }
   // 함수가 4xx·5xx로 답하면 supabase-js는 error.context에 응답을 넣어 준다.
   const status = error?.context?.status
   const body = await error?.context?.json?.().catch(() => null)

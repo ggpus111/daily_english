@@ -66,24 +66,31 @@ Deno.serve(async (request) => {
     return json({ error: 'config' }, 500)
   }
   // 모델이 몰려서 바쁠 때(503)나 한도(429), 사라진 모델(404)이면 같은 모델을 한 번 더, 그래도 안 되면 다음 모델로 넘어간다.
-  // 구글이 느리게 답하면 여러 모델을 거치는 동안 Supabase 쪽 제한 시간을 넘길 수 있어서, 한 번에 25초, 전체 90초로 끊는다.
-  const deadline = Date.now() + 90_000
+  // 구글이 느리거나 바쁘면 오래 붙잡지 않고 빨리 포기하고 다음 모델로 넘어간다. 오래 끌면 사용자가 다시 눌러 요청이 쌓이고,
+  // Supabase 쪽 제한(동시 요청·시간)에 걸려 응답이 브라우저에 닿기 전에 끊긴다. 한 번에 20초, 전체 45초로 끊는다.
+  const deadline = Date.now() + 45_000
+  const noThinking = new Set<string>() // "생각" 설정을 거부한(400) 모델은 설정 없이 보낸다.
   const askGemini = async (model: string): Promise<Response> => {
     const left = deadline - Date.now()
     if (left < 3000) return new Response(null, { status: 504 })
+    // 2.5 모델은 "생각"을 끌 수 있고, 3.x 모델은 끌 수 없어 가장 낮은 단계(low)로 낮춰 빨리 답하게 한다.
+    const thinking = noThinking.has(model)
+      ? {}
+      : model.startsWith('gemini-2.5')
+        ? { thinkingConfig: { thinkingBudget: 0 } }
+        : { thinkingConfig: { thinkingLevel: 'low' } }
     try {
       return await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey },
-        signal: AbortSignal.timeout(Math.min(25_000, left)),
+        signal: AbortSignal.timeout(Math.min(20_000, left)),
         body: JSON.stringify({
           contents: [{ role: 'user', parts: [{ text: prompt }] }],
           generationConfig: {
             temperature: 0.4,
             // "생각"에 쓰는 토큰도 출력 한도에 들어가서, 한도가 작으면 답이 비어 올 수 있어 넉넉히 잡는다.
             maxOutputTokens: 8192,
-            // 2.5 모델만 생각을 끌 수 있다. 3.x 모델은 끌 수 없어서(설정하면 오류 가능) 건드리지 않는다.
-            ...(model.startsWith('gemini-2.5') ? { thinkingConfig: { thinkingBudget: 0 } } : {}),
+            ...thinking,
           },
         }),
       })
@@ -111,6 +118,12 @@ Deno.serve(async (request) => {
       }
       // 원인 확인용: Supabase 대시보드 > Edge Functions > correct-journal > Logs에서 볼 수 있다.
       console.error('Gemini 오류', response.status, model, text)
+      // "생각" 설정을 모델이 거부하면 설정 없이 같은 모델로 한 번 더(시도 횟수는 쓰지 않는다).
+      if (response.status === 400 && !noThinking.has(model)) {
+        noThinking.add(model)
+        attempt -= 1
+        continue
+      }
       // 키·요청 문제(400/401/403)는 다른 모델로 바꿔도 같으니 바로 멈춘다.
       if (!RETRYABLE.includes(response.status)) break
       if (response.status === 503 && attempt === 0) await new Promise((r) => setTimeout(r, 1200))

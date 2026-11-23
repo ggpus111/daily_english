@@ -28,11 +28,16 @@ describe('requestCorrection', () => {
   it('끝나면(실패해도) 다시 보낼 수 있다', async () => {
     invoke.mockResolvedValueOnce({ data: null, error: { name: 'FunctionsFetchError', message: 'x' } })
     const first = await requestCorrection('again')
-    expect(first.error).toBe('failed')
-    expect(first.detail).toContain('FunctionsFetchError')
+    expect(first).toEqual({ error: 'network', detail: 'FunctionsFetchError' })
     invoke.mockResolvedValueOnce({ data: { feedback: '두 번째', remaining: 1 }, error: null })
     expect(await requestCorrection('again')).toMatchObject({ feedback: '두 번째' })
     expect(invoke).toHaveBeenCalledTimes(2)
+  })
+
+  it('요청을 보낼 때 시간 제한을 함께 건다', async () => {
+    invoke.mockResolvedValue({ data: { feedback: 'ok', remaining: 1 }, error: null })
+    await requestCorrection('timeout check')
+    expect(invoke).toHaveBeenCalledWith('correct-journal', expect.objectContaining({ timeout: 60_000 }))
   })
 
   it('서버가 보낸 오류 번호를 알맞은 종류로 바꾼다', async () => {

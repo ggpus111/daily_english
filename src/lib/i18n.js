@@ -360,6 +360,7 @@ const ko = {
   'aiError.limit': '오늘 AI 교정을 다 썼어요. 내일 또 다듬어 드릴게요.',
   'aiError.busy': 'AI가 지금 바빠요. 잠시 뒤 다시 해 볼까요?',
   'aiError.pending': '교정을 받는 중이에요. 잠깐만 기다려 주세요.',
+  'aiError.network': '서버에 연결하지 못했어요. 인터넷을 확인하고 잠시 뒤 다시 해 볼까요?',
   'aiError.failed': 'AI 교정을 받지 못했어요. 잠시 뒤 다시 해 볼까요?',
   feedbackCorrected: '고친 문장',
   feedbackFixes: '고칠 점',
