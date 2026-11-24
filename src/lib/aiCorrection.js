@@ -17,22 +17,23 @@ let inFlight = false
 const REQUEST_TIMEOUT_MS = 60_000
 
 /**
- * @returns {Promise<{ feedback: string, remaining: number } | { error: 'login'|'limit'|'full'|'busy'|'pending'|'network'|'failed', detail?: string }>}
+ * @returns {Promise<{ feedback: string, remaining: number } | { error: 'login'|'limit'|'full'|'pro'|'busy'|'pending'|'network'|'failed', detail?: string }>}
  */
-export async function requestCorrection(prompt) {
+export async function requestCorrection(prompt, kind = 'journal') {
   if (inFlight) return { error: 'pending' }
   inFlight = true
   try {
-    return await send(prompt)
+    return await send(prompt, kind)
   } finally {
     inFlight = false
   }
 }
 
-async function send(prompt) {
+// kind: journal(일기 교정), grammar(문법 확인), 그리고 Pro만 쓰는 polish·explain·report(대화 도우미).
+async function send(prompt, kind) {
   if (!supabase) return { error: 'failed' }
   // 서버는 길어야 45초 안에 답한다. 그보다 오래 걸리면 기다리지 말고 끊어서 다시 누를 수 있게 한다.
-  const { data, error } = await supabase.functions.invoke('correct-journal', { body: { prompt }, timeout: REQUEST_TIMEOUT_MS })
+  const { data, error } = await supabase.functions.invoke('correct-journal', { body: { prompt, kind }, timeout: REQUEST_TIMEOUT_MS })
   if (!error && data?.feedback) return { feedback: data.feedback, remaining: data.remaining ?? 0 }
   // 서버까지 가지 못했거나 응답을 받지 못한 경우(인터넷 끊김, 서버 쪽 제한으로 연결이 끊김, 시간 초과).
   if (error?.name === 'FunctionsFetchError') {
@@ -43,6 +44,7 @@ async function send(prompt) {
   const status = error?.context?.status
   const body = await error?.context?.json?.().catch(() => null)
   const code = body?.error ?? data?.error
+  if (code === 'pro') return { error: 'pro' } // Pro 회원만 쓰는 기능인데 Pro가 아니다.
   if (code === 'full') return { error: 'full' } // 오늘 전체 이용 한도(비용 보호)가 찼다. 상태 번호는 503이라 바쁨보다 먼저 본다.
   if (status === 401 || code === 'login') return { error: 'login' }
   if (status === 429 || code === 'limit') return { error: 'limit' }

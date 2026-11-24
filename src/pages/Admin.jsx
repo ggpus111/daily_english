@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import PackFixAdmin from '../components/PackFixAdmin'
+import ProAdmin from '../components/ProAdmin'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { errorMessage } from '../lib/errors'
@@ -9,7 +10,7 @@ import { supabase } from '../lib/supabase'
 // 관리자 페이지(#admin): 들어온 신고를 보고 상태와 답변을 바로 고친다. 앱 오류 보고를 묶어서 보고,
 // 꾸러미의 틀린 뜻·예문은 앱 업데이트 없이 바로 고친다.
 // 관리자인지는 서버(is_admin)가 정하고, 서버 정책(RLS)이 관리자가 아니면 읽기·고치기를 막는다.
-const TABS = { reports: 'adminReports', packs: 'adminPacks', errors: 'adminErrors' }
+const TABS = { reports: 'adminReports', packs: 'adminPacks', errors: 'adminErrors', pro: 'adminPro' }
 
 export default function Admin() {
   const { t, user } = useApp()
@@ -54,6 +55,7 @@ export default function Admin() {
       {tab === 'reports' && <ReportsAdmin onFixContent={() => setTab('packs')} />}
       {tab === 'errors' && <ErrorsAdmin />}
       {tab === 'packs' && <PackFixAdmin />}
+      {tab === 'pro' && <ProAdmin />}
     </>
   )
 }

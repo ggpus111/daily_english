@@ -12,7 +12,9 @@
 //   ANTHROPIC_API_KEY (Anthropic 콘솔에서 발급, 충전한 금액만큼만 쓰이게 자동 충전은 끈다)
 //   선택: CLAUDE_MODEL(기본 claude-sonnet-5-5, 빠르고 싸게 하려면 claude-haiku-5-5)
 //   GEMINI_API_KEY (Google AI Studio, 대체용), 선택: GEMINI_MODEL(기본 gemini-3.8-flash), GEMINI_FALLBACK_MODELS
-//   선택: AI_DAILY_LIMIT(한 사람 하루, 기본 5), AI_GLOBAL_DAILY_LIMIT(전체 하루, 기본 300)
+//   선택: AI_DAILY_LIMIT(한 사람 하루, 기본 5), AI_PRO_DAILY_LIMIT(Pro 하루, 기본 20), AI_GLOBAL_DAILY_LIMIT(전체 하루, 기본 300)
+//   선택: FREE_AI_PROVIDER(무료 사용자의 AI, 기본 claude. 학술제가 끝나면 gemini로 바꿔 무료로 돌린다)
+// Pro 회원은 pro_members 표(관리자가 지정)로 확인한다. Pro는 항상 Claude만 쓰고, 대화 도우미(polish/explain/report)는 Pro만 쓴다.
 // SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY는 Supabase가 자동으로 넣어 준다.
 import { createClient } from 'npm:@supabase/supabase-js@2'
 
@@ -25,6 +27,12 @@ const GEMINI_FALLBACKS = (Deno.env.get('GEMINI_FALLBACK_MODELS') ?? 'gemini-3.6-
   .map((name) => name.trim())
   .filter(Boolean)
 const DAILY_LIMIT = Number(Deno.env.get('AI_DAILY_LIMIT') ?? 5)
+const PRO_DAILY_LIMIT = Number(Deno.env.get('AI_PRO_DAILY_LIMIT') ?? 20)
+// 무료 사용자의 AI: 'claude'(학술제 기간, 실패하면 Gemini로) 또는 'gemini'(무료 운영). Pro는 항상 Claude만 쓴다.
+const FREE_PROVIDER = (Deno.env.get('FREE_AI_PROVIDER') ?? 'claude').trim().toLowerCase()
+// 요청 종류: 일기 교정, 문법 확인, 그리고 Pro만 쓰는 대화 도우미(보내기 전 다듬기, 받은 메시지 풀이, 주간 리포트).
+const KINDS = ['journal', 'grammar', 'polish', 'explain', 'report']
+const PRO_KINDS = ['polish', 'explain', 'report']
 const GLOBAL_DAILY_LIMIT = Number(Deno.env.get('AI_GLOBAL_DAILY_LIMIT') ?? 300)
 const MAX_PROMPT = 12000
 const CORS = {
@@ -190,22 +198,31 @@ Deno.serve(async (request) => {
   if (!user) return json({ error: 'login' }, 401)
 
   // 2. 요청문 확인
-  const { prompt } = await request.json().catch(() => ({ prompt: '' }))
+  const body = await request.json().catch(() => ({}))
+  const prompt = body?.prompt
   if (typeof prompt !== 'string' || prompt.trim().length < 10 || prompt.length > MAX_PROMPT) {
     return json({ error: 'prompt' }, 400)
   }
+  const kind = KINDS.includes(body?.kind) ? body.kind : 'journal'
 
-  // 3. 오늘 몇 번 썼는지(한국 시간 기준 날짜): 이 사람 몫과 모두를 합친 몫
+  // 3. Pro 회원인지(관리자가 지정한 계정). Pro 기능은 Pro만 쓴다.
+  const { data: proRow } = await admin.from('pro_members').select('user_id').eq('user_id', user.id).maybeSingle()
+  const isPro = Boolean(proRow)
+  if (PRO_KINDS.includes(kind) && !isPro) return json({ error: 'pro' }, 403)
+  const limit = isPro ? PRO_DAILY_LIMIT : DAILY_LIMIT
+
+  // 4. 오늘 몇 번 썼는지(한국 시간 기준 날짜): 이 사람 몫과 모두를 합친 몫
   const day = new Date(Date.now() + 9 * 60 * 60 * 1000).toISOString().slice(0, 10)
   const { data: rows } = await admin.from('ai_usage').select('user_id, count').eq('day', day)
   const used = rows?.find((row) => row.user_id === user.id)?.count ?? 0
-  if (used >= DAILY_LIMIT) return json({ error: 'limit', limit: DAILY_LIMIT, remaining: 0 }, 429)
+  if (used >= limit) return json({ error: 'limit', limit, remaining: 0 }, 429)
   const total = (rows ?? []).reduce((sum, row) => sum + (row.count ?? 0), 0)
   if (total >= GLOBAL_DAILY_LIMIT) return json({ error: 'full' }, 503)
 
-  // 4. AI에게 묻기
-  const claudeKey = Deno.env.get('ANTHROPIC_API_KEY')
-  const geminiKey = Deno.env.get('GEMINI_API_KEY')
+  // 5. AI에게 묻기: Pro는 Claude만(보낸 내용을 학습에 쓰지 않는 유료 AI라고 약속했으니 무료 Gemini로 넘기지 않는다).
+  //    무료 사용자는 FREE_AI_PROVIDER가 claude면 Claude 다음 Gemini, gemini면 Gemini만.
+  const claudeKey = isPro || FREE_PROVIDER === 'claude' ? Deno.env.get('ANTHROPIC_API_KEY') : undefined
+  const geminiKey = isPro ? undefined : Deno.env.get('GEMINI_API_KEY')
   if (!claudeKey && !geminiKey) {
     console.error('AI 키가 없어요. Supabase > Edge Functions > Secrets에 ANTHROPIC_API_KEY(또는 GEMINI_API_KEY)를 넣어 주세요.')
     return json({ error: 'config' }, 500)
@@ -218,12 +235,13 @@ Deno.serve(async (request) => {
     )
   }
 
-  // 5. 쓴 횟수 하나 늘리기(실패해도 교정은 돌려준다)
+  // 6. 쓴 횟수 하나 늘리기(실패해도 교정은 돌려준다)
   await admin.from('ai_usage').upsert({ user_id: user.id, day, count: used + 1 }, { onConflict: 'user_id,day' })
   return json({
     feedback: outcome.feedback,
-    remaining: Math.max(0, DAILY_LIMIT - used - 1),
-    limit: DAILY_LIMIT,
+    remaining: Math.max(0, limit - used - 1),
+    limit,
+    pro: isPro,
     by: outcome.by,
   })
 })

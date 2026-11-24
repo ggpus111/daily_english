@@ -977,26 +977,19 @@ test('단어 꾸러미: 단계와 범위를 골라 담은 단어가 단어장에
   await expect(page.locator('.record-row')).toContainText('school')
 })
 
-test('Pro 시연판: 미리 보기를 켜면 내 기록으로 만든 통계가 보인다', async ({ page }) => {
+test('Pro 소개: 월 3,900원이고, 회원이 아니면 통계가 잠겨 있다', async ({ page }) => {
   await seedRecords(page)
   await open(page, 'pro')
   await expect(page.getByText('발표용 시연판 · 결제 기능 없음')).toBeVisible()
-  await expect(page.getByText('Pro 미리 보기를 켜면')).toBeVisible()
-
-  await page.getByRole('button', { name: 'Pro 미리 보기 켜기' }).click()
-  const tile = (label) => page.locator('.stat-tile').filter({ hasText: label }).locator('.stat-value')
-  await expect(tile('모은 기록')).toHaveText('5')
-  await page.locator('.chart').first().getByText('표로 보기').click()
-  await expect(page.locator('.chart').first().locator('tbody tr')).toHaveCount(28)
+  await expect(page.getByText('월 3,900원')).toBeVisible()
+  await expect(page.getByText('보내기 전 메시지 다듬기', { exact: false })).toBeVisible()
+  await expect(page.getByText('Pro 회원이면 내 기록으로 만든 학습 통계를 볼 수 있어요.')).toBeVisible()
+  await expect(page.getByRole('button', { name: /미리 보기/ })).toHaveCount(0)
 
   const { violations } = await new AxeBuilder({ page })
     .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'])
     .analyze()
   expect(violations.map((item) => `${item.id}: ${item.nodes[0].html}`)).toEqual([])
-
-  // 다시 열어도 미리 보기 상태가 유지된다.
-  await page.reload()
-  await expect(page.getByRole('button', { name: 'Pro 미리 보기 끄기' })).toHaveAttribute('aria-pressed', 'true')
 })
 
 test('브라우저 저장소가 막혀도 앱이 멈추지 않는다', async ({ page }) => {
@@ -1056,7 +1049,7 @@ async function fakeSession(page) {
 }
 
 // 신고·관리자 기능용 가짜 Supabase. 받은 요청을 기억해 두고, 표마다 돌려줄 행을 정한다.
-async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
+async function fakeReportServer(page, { admin = false, errors = [], pro = false } = {}) {
   const reports = []
   const patches = []
   const fixes = []
@@ -1065,6 +1058,8 @@ async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
     const request = route.request()
     const url = request.url()
     if (url.includes('/rpc/is_admin')) return route.fulfill({ json: admin })
+    if (url.includes('/pro_members'))
+      return route.fulfill({ json: pro ? [{ user_id: '11111111-1111-4111-8111-111111111111' }] : [] })
     if (url.includes('/study_records')) {
       if (request.method() === 'POST') {
         for (const row of [request.postDataJSON()].flat()) records.set(row.id, row)
@@ -1119,6 +1114,40 @@ async function fakeReportServer(page, { admin = false, errors = [] } = {}) {
 }
 
 test.describe('로그인 화면', () => {
+  test('Pro 회원은 통계를 보고, AI 대화 도우미로 보낼 말을 다듬는다', async ({ page }) => {
+    await fakeSession(page)
+    await fakeReportServer(page, { pro: true })
+    await page.addInitScript(() => localStorage.setItem('aiConsent', '2'))
+    const bodies = []
+    await page.route('https://example.supabase.co/functions/v1/correct-journal', async (route) => {
+      bodies.push(route.request().postDataJSON())
+      return route.fulfill({ json: { feedback: '1) I missed you all day\n다정한 말투예요.', remaining: 19 } })
+    })
+    await page.goto(`${AUTH_URL}#pro`)
+    await expect(page.getByText('Pro 회원이에요.', { exact: false })).toBeVisible()
+    await expect(page.locator('.stat-tile').first()).toBeVisible()
+    await page.getByRole('button', { name: 'AI 대화 도우미 열기' }).click()
+    await expect(page.getByRole('heading', { name: 'AI 대화 도우미', level: 1 })).toBeVisible()
+    await page.getByLabel('보내고 싶은 말').fill('오늘 하루 종일 네 생각만 했어')
+    await page.getByRole('button', { name: '자연스럽게 다듬어 줘' }).click()
+    await expect(page.locator('.ai-result')).toContainText('I missed you all day')
+    expect(bodies[0].kind).toBe('polish')
+    expect(bodies[0].prompt).toContain('오늘 하루 종일 네 생각만 했어')
+
+    await page.getByRole('button', { name: '받은 메시지 풀이' }).click()
+    await expect(page.getByLabel('받은 메시지')).toBeVisible()
+    await page.getByRole('button', { name: '주간 AI 리포트' }).click()
+    await expect(page.getByText('이번 주 번역을 쓴 일기 0개')).toBeVisible()
+  })
+
+  test('Pro가 아니면 AI 대화 도우미가 잠겨 있다', async ({ page }) => {
+    await fakeSession(page)
+    await fakeReportServer(page)
+    await page.goto(`${AUTH_URL}#helper`)
+    await expect(page.getByText('AI 대화 도우미는 Pro 기능이에요.', { exact: false })).toBeVisible()
+    await expect(page.getByLabel('보내고 싶은 말')).toHaveCount(0)
+  })
+
   test('로그인한 사용자는 문제를 신고하고, 보낸 신고와 상태를 설정에서 본다', async ({ page }) => {
     await fakeSession(page)
     const server = await fakeReportServer(page)

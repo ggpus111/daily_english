@@ -13,6 +13,7 @@ import { createTranslator } from './lib/i18n'
 import { initNativeAuth } from './lib/native'
 import { readSettings, REMINDERS_CHANGED } from './lib/reminders'
 import { clearDrafts } from './lib/journalDrafts'
+import { fetchIsPro } from './lib/pro'
 import { JOURNAL_DRAFT_KEY, STORAGE_ERROR, useRecords } from './lib/records'
 import { local } from './lib/storage'
 import { supabase } from './lib/supabase'
@@ -32,12 +33,13 @@ const Privacy = lazy(() => import('./pages/Privacy'))
 const Pro = lazy(() => import('./pages/Pro'))
 const Missed = lazy(() => import('./pages/Missed'))
 const Grammar = lazy(() => import('./pages/Grammar'))
+const AiHelper = lazy(() => import('./pages/AiHelper'))
 
-const NAV = ['home', 'words', 'expressions', 'packs', 'chats', 'journal', 'grammar', 'couple', 'profile']
-const NAV_LABEL = { packs: 'navPacks', couple: 'navCouple' }
+const NAV = ['home', 'words', 'expressions', 'packs', 'chats', 'journal', 'grammar', 'couple', 'helper', 'profile']
+const NAV_LABEL = { packs: 'navPacks', couple: 'navCouple', helper: 'navHelper' }
 // 휴대폰 아래 탭에는 자주 쓰는 넷만 두고, 나머지는 "더보기"를 누르면 목록으로 연다(PC 왼쪽 메뉴는 모두 보인다).
 const MOBILE_TABS = new Set(['home', 'words', 'journal', 'couple'])
-const MORE = ['expressions', 'packs', 'chats', 'grammar']
+const MORE = ['expressions', 'packs', 'chats', 'grammar', 'helper']
 const isCurrent = (page, id) => page === id || (id === 'packs' && page.startsWith('packs-'))
 const TOAST_MS = 5000
 const TOAST_ACTION_MS = 8000
@@ -159,6 +161,17 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     window.addEventListener(REMINDERS_CHANGED, sync)
     return () => window.removeEventListener(REMINDERS_CHANGED, sync)
   }, [])
+  // Pro 회원인지(관리자가 지정한 계정). 로그인한 사람이 바뀌면 다시 확인하고, 받은 뒤에만 상태를 바꾼다.
+  const [pro, setPro] = useState({ userId: null, isPro: false })
+  useEffect(() => {
+    if (!supabase || !user?.id) return undefined
+    let alive = true
+    fetchIsPro(user.id).then((value) => alive && setPro({ userId: user.id, isPro: value }))
+    return () => {
+      alive = false
+    }
+  }, [user?.id])
+  const isPro = Boolean(user?.id) && pro.userId === user?.id && pro.isPro
   const { unread: coupleUnread, markSeen: markCoupleSeen } = useCoupleInbox({
     userId: supabase ? user?.id : null,
     enabled: coupleOn,
@@ -182,6 +195,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
       nickname,
       setNickname,
       coupleUnread,
+      isPro,
       records,
       add,
       update,
@@ -201,6 +215,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
       nickname,
       setNickname,
       coupleUnread,
+      isPro,
       records,
       add,
       update,
@@ -228,6 +243,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     settings: <Settings />,
     missed: <Missed />,
     grammar: <Grammar />,
+    helper: <AiHelper />,
     packs: <Packs key="expressions" mode="expressions" />,
     'packs-words': <Packs key="words" mode="words" />,
     'packs-grammar': <Packs key="grammar" mode="grammar" />,

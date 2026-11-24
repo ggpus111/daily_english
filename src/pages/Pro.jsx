@@ -1,19 +1,15 @@
-import { useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import BarChart from '../components/BarChart'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { INTERVAL_DAYS } from '../lib/review'
 import { computeStats } from '../lib/stats'
-import { local } from '../lib/storage'
 
-// 발표용 시연판. 결제는 없고, "미리 보기"를 켜면 Pro 기능을 써 볼 수 있다.
-const PREVIEW_KEY = 'proPreview'
+// 발표용 시연판. 결제는 없고, 관리자가 지정한 계정만 Pro다(관리자 페이지 > Pro 회원).
+// Pro는 "더 많이"가 아니라 "더 좋은 AI"가 핵심이다: Claude 교정과 대화 도우미, 학습 통계.
 
 const FREE_FEATURES = ['proFree.record', 'proFree.review', 'proFree.backup', 'proFree.sync', 'proFree.copyAi']
-const PRO_FEATURES = [
-  { key: 'proPlus.stats', status: 'proStatus.now' },
-  { key: 'proPlus.ai', status: 'proStatus.launch' },
-]
+const PRO_FEATURES = ['proPlus.ai', 'proPlus.polish', 'proPlus.explain', 'proPlus.report', 'proPlus.stats']
 const PROMISES = ['proPromise.free', 'proPromise.notice', 'proPromise.cancel']
 
 function StatTile({ label, value }) {
@@ -26,17 +22,9 @@ function StatTile({ label, value }) {
 }
 
 export default function Pro() {
-  const { t, records, nativeLang } = useApp()
-  const [preview, setPreview] = useState(() => local.get(PREVIEW_KEY) === '1')
+  const { t, records, nativeLang, isPro, go } = useApp()
   const locale = nativeLang === 'ko' ? 'ko-KR' : 'en-US'
   const stats = useMemo(() => computeStats(records), [records])
-
-  function togglePreview() {
-    const next = !preview
-    setPreview(next)
-    if (next) local.set(PREVIEW_KEY, '1')
-    else local.remove(PREVIEW_KEY)
-  }
 
   const day = new Intl.DateTimeFormat(locale, { month: 'numeric', day: 'numeric' })
   const fullDay = new Intl.DateTimeFormat(locale, { month: 'long', day: 'numeric' })
@@ -78,15 +66,20 @@ export default function Pro() {
           <p className="plan-price">{t('planProPrice')}</p>
           <p className="tiny-note">{t('planPriceNote')}</p>
           <ul className="plan-list">
-            {PRO_FEATURES.map((feature) => (
-              <li key={feature.key}>
-                {t(feature.key)} <span className="plan-status">{t(feature.status)}</span>
-              </li>
+            {PRO_FEATURES.map((key) => (
+              <li key={key}>{t(key)}</li>
             ))}
           </ul>
-          <button className="primary-button" aria-pressed={preview} onClick={togglePreview}>
-            {t(preview ? 'proPreviewOff' : 'proPreviewOn')}
-          </button>
+          {isPro ? (
+            <>
+              <p className="plan-member">{t('proMember')}</p>
+              <button className="primary-button" onClick={() => go('helper')}>
+                {t('proOpenHelper')}
+              </button>
+            </>
+          ) : (
+            <p className="tiny-note">{t('proHowToJoin')}</p>
+          )}
         </section>
       </div>
 
@@ -105,7 +98,7 @@ export default function Pro() {
           <h2 id="stats-title">{t('statsTitle')}</h2>
           <span className="count">{t('proBadge')}</span>
         </div>
-        {preview ? (
+        {isPro ? (
           <>
             <div className="stat-tiles">
               <StatTile label={t('statTotal')} value={stats.total} />

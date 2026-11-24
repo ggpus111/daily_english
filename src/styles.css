@@ -3955,3 +3955,16 @@ button.calendar-day[aria-pressed='true'] {
   width: 100%;
   margin-top: 12px;
 }
+
+/* AI 대화 도우미의 답: 줄바꿈을 그대로 보여 준다 */
+.ai-result {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.7;
+}
+
+.plan-member {
+  margin: 0;
+  color: var(--accent-ink);
+  font-weight: 700;
+}

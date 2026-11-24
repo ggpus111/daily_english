@@ -70,6 +70,7 @@ export default function GrammarPractice({ notes, onClose, onAnswer }) {
           source: note.exampleNative,
           answer: answer.trim(),
         }),
+        'grammar',
       )
     } finally {
       busyRef.current = false
