@@ -257,6 +257,40 @@ async function openJournalSignedIn(page) {
   await page.goto(`${AUTH_URL}#journal`)
 }
 
+test('이미 교정을 받은 일기에서 다시 누르면, 다시 받을지 먼저 묻는다', async ({ page }) => {
+  let calls = 0
+  await page.route('https://example.supabase.co/functions/v1/correct-journal', (route) => {
+    calls += 1
+    const feedback = [
+      '## 고친 문장',
+      `I miss you so much. (${calls})`,
+      '## 고칠 점',
+      '- 원래: very much → 고침: so much | 이유: 말할 때는 so much가 더 자연스러워요.',
+    ].join('\n')
+    return route.fulfill({ json: { remaining: 4, feedback } })
+  })
+  await openJournalSignedIn(page)
+  await page.getByLabel('우리말로 쓰기').fill('보고 싶다.')
+  await page.getByLabel('영어로 옮겨 보기').fill('I miss you very much.')
+  const ask = page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' })
+  await ask.click()
+  await expect(page.getByRole('status').filter({ hasText: 'AI 교정이 도착했어요.' })).toBeVisible()
+  expect(calls).toBe(1)
+
+  // 다시 누르면 보내기 전에 묻고, "그대로 둘게요"를 누르면 보내지 않는다.
+  await ask.click()
+  await expect(page.getByRole('heading', { name: '이미 교정을 받은 일기예요' })).toBeVisible()
+  await page.getByRole('button', { name: '그대로 둘게요' }).click()
+  await expect(page.getByRole('heading', { name: '이미 교정을 받은 일기예요' })).toHaveCount(0)
+  expect(calls).toBe(1)
+
+  // "다시 교정받기"를 누르면 새 교정을 받는다.
+  await ask.click()
+  await page.getByRole('button', { name: '다시 교정받기' }).click()
+  await expect(page.locator('form .correction-panel')).toContainText('(2)')
+  expect(calls).toBe(2)
+})
+
 test('AI 교정은 앱 안에서 받고, 저장하면 지난 일기에서 나눠 보여 주며, 다음 요청에 연습할 점이 들어간다', async ({
   page,
 }) => {
@@ -1336,9 +1370,10 @@ test.describe('로그인 화면', () => {
       .analyze()
     expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
 
-    // 두 번째부터는 묻지 않고 바로 보낸다. 한도를 넘으면 알려 준다.
+    // 두 번째부터는 동의를 다시 묻지 않는다. 이미 교정받은 일기라 다시 받을지만 묻고, 한도를 넘으면 알려 준다.
     left = -1
     await page.getByRole('button', { name: 'AI에게 자연스럽게 다듬어 달라고 하기' }).click()
+    await page.getByRole('button', { name: '다시 교정받기' }).click()
     await expect(page.getByRole('status').filter({ hasText: '오늘 AI 교정을 다 썼어요.' })).toBeVisible()
     await expect(page.getByRole('heading', { name: '보내기 전에 알려 드릴게요' })).toHaveCount(0)
   })
