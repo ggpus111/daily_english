@@ -7,7 +7,15 @@ import PairAvatars from '../components/couple/PairAvatars'
 import TodayFeed from '../components/couple/TodayFeed'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
-import { coupleErrorKey, leaveCouple, loadPairs, sendSentence, setReaction, watchPairs } from '../lib/couple'
+import {
+  coupleErrorKey,
+  editSentence,
+  leaveCouple,
+  loadPairs,
+  sendSentence,
+  setReaction,
+  watchPairs,
+} from '../lib/couple'
 import { errorMessage } from '../lib/errors'
 import { readPendingInvite } from '../lib/invite'
 import { supabase } from '../lib/supabase'
@@ -100,7 +108,9 @@ export default function Couple() {
       () => notify(t('coupleSent')),
     )
 
-  // 아직 안 보낸 상대 모두에게 같은 문장을 보낸다. 하나라도 실패하면 거기서 멈추고 알린다.
+  const editOne = (id, body) => run(() => editSentence({ id, body }), () => notify(t('coupleEdited')))
+
+  // 고른 상대 모두에게 같은 문장을 보낸다. 하나라도 실패하면 거기서 멈추고 알린다.
   const sendAll = (body, pairIds) =>
     run(
       async () => {
@@ -187,6 +197,7 @@ export default function Couple() {
             reactions={pair.reactions}
             onReact={react}
             onSend={sendTo(pair.id)}
+            onEdit={editOne}
             onRefresh={refresh}
           />
         ) : (

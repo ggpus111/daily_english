@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react'
 import { useApp } from '../../context'
-import { SENTENCE_MAX, reactionsBySentence, todayStatus } from '../../lib/couple'
+import { SENTENCE_MAX, reactionsBySentence } from '../../lib/couple'
 import { dayKey } from '../../lib/activity'
 import { errorMessage } from '../../lib/errors'
 import Field from '../Field'
@@ -10,7 +10,7 @@ const FILTERS = ['all', 'partner', 'friend']
 
 /**
  * 오늘 모아보기: 모든 상대(또는 연인·친구만)에게서 오늘 받은 문장을 한곳에 보여 주고,
- * 아직 안 보낸 상대에게 내 오늘 문장을 한 번에 보낸다. 기다리는 초대 번호도 여기서 다시 볼 수 있다.
+ * 보이는 상대 모두에게 같은 문장을 한 번에 보낸다(하루에 몇 번이든). 기다리는 초대 번호도 여기서 다시 볼 수 있다.
  */
 export default function TodayFeed({ pairs, userId, busy, onOpen, onReact, onSendAll, onCopy, onShare, onRefresh }) {
   const { t, add, notify } = useApp()
@@ -25,7 +25,6 @@ export default function TodayFeed({ pairs, userId, busy, onOpen, onReact, onSend
   const received = joined.flatMap((pair) =>
     pair.sentences.filter((row) => row.day === today && row.user_id !== userId).map((row) => ({ pair, row })),
   )
-  const pending = joined.filter((pair) => !todayStatus(pair, userId).sent)
   const reactionMap = useMemo(
     () =>
       reactionsBySentence(
@@ -47,7 +46,7 @@ export default function TodayFeed({ pairs, userId, busy, onOpen, onReact, onSend
   async function sendAll() {
     const ok = await onSendAll(
       draft,
-      pending.map((pair) => pair.id),
+      joined.map((pair) => pair.id),
     )
     if (ok) setDraft('')
   }
@@ -102,27 +101,21 @@ export default function TodayFeed({ pairs, userId, busy, onOpen, onReact, onSend
       {joined.length > 0 && (
         <section className="paper-card couple-card" aria-labelledby="feed-compose">
           <h2 id="feed-compose">{t('feedComposeTitle')}</h2>
-          {pending.length === 0 ? (
-            <p className="muted">{t('feedAllSent')}</p>
-          ) : (
-            <>
-              <p className="muted">
-                {t('feedComposeHelp', { names: pending.map((pair) => pair.partner.nickname).join(', ') })}
-              </p>
-              <Field
-                as="textarea"
-                label={t('coupleWrite')}
-                rows={3}
-                maxLength={SENTENCE_MAX}
-                value={draft}
-                onChange={(event) => setDraft(event.target.value)}
-              />
-              <button className="primary-button" disabled={busy || !draft.trim()} onClick={sendAll}>
-                {t('feedSendAll', { count: pending.length })}
-              </button>
-              <p className="tiny-note">{t('feedSendAllNote')}</p>
-            </>
-          )}
+          <p className="muted">
+            {t('feedComposeHelp', { names: joined.map((pair) => pair.partner.nickname).join(', ') })}
+          </p>
+          <Field
+            as="textarea"
+            label={t('coupleWrite')}
+            rows={3}
+            maxLength={SENTENCE_MAX}
+            value={draft}
+            onChange={(event) => setDraft(event.target.value)}
+          />
+          <button className="primary-button" disabled={busy || !draft.trim()} onClick={sendAll}>
+            {t('feedSendAll', { count: joined.length })}
+          </button>
+          <p className="tiny-note">{t('feedSendAllNote')}</p>
         </section>
       )}
 

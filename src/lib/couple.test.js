@@ -64,9 +64,17 @@ describe('날짜별로 묶기', () => {
   it('오늘은 비어 있어도 맨 위에 두고, 내 문장과 연인 문장을 나눈다', () => {
     const groups = groupByDay([row('her', '2026-11-20'), row(ME, '2026-11-20'), row(ME, '2026-11-21')], ME, NOW)
     expect(groups.map((group) => group.day)).toEqual(['2026-11-22', '2026-11-21', '2026-11-20'])
-    expect(groups[0].mine).toBeNull()
-    expect(groups[2].mine.user_id).toBe(ME)
-    expect(groups[2].partner.user_id).toBe('her')
+    expect(groups[0].rows).toEqual([])
+    expect(groups[2].mine.map((item) => item.user_id)).toEqual([ME])
+    expect(groups[2].partner.map((item) => item.user_id)).toEqual(['her'])
+  })
+
+  it('하루에 여러 문장을 보낸 순서대로 모두 남긴다', () => {
+    const at = (who, time, id) => ({ ...row(who, '2026-11-22'), id, created_at: `2026-11-22T${time}:00Z` })
+    const groups = groupByDay([at(ME, '09:30', 3), at('her', '09:00', 1), at(ME, '08:00', 2)], ME, NOW)
+    expect(groups[0].rows.map((item) => item.id)).toEqual([2, 1, 3])
+    expect(groups[0].mine.map((item) => item.id)).toEqual([2, 3])
+    expect(groups[0].partner.map((item) => item.id)).toEqual([1])
   })
 
   it('둘 다 보낸 날이 이어진 횟수를 센다(오늘 아직이면 어제부터)', () => {

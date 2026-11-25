@@ -1405,7 +1405,7 @@ test.describe('로그인 화면', () => {
     await expect(page.getByRole('heading', { name: '보내기 전에 알려 드릴게요' })).toHaveCount(0)
   })
 
-  test('친구·연인과 한 문장: 새로고침을 누르지 않아도 화면으로 돌아오거나 30초가 지나면 새 문장이 보인다', async ({
+  test('친구·연인과 주고받기: 새로고침을 누르지 않아도 화면으로 돌아오거나 30초가 지나면 새 문장이 보인다', async ({
     page,
   }) => {
     await page.clock.install()
@@ -1454,7 +1454,7 @@ test.describe('로그인 화면', () => {
     await expect(feed).toContainText('You up?')
   })
 
-  test('친구·연인과 한 문장: 연인 초대를 만들고, 오늘 받은 문장을 모아 보고 한 번에 답하고, 친구를 더해 걸러 본다', async ({
+  test('친구·연인과 주고받기: 연인 초대를 만들고, 오늘 받은 문장을 모아 보고 한 번에 답하고, 친구를 더해 걸러 보고, 하루에 여러 문장을 보내고 고친다', async ({
     page,
   }) => {
     await fakeSession(page)
@@ -1464,7 +1464,7 @@ test.describe('로그인 화면', () => {
     const FRIEND = '33333333-3333-4333-8333-333333333333'
     const day = new Date()
     const today = `${day.getFullYear()}-${String(day.getMonth() + 1).padStart(2, '0')}-${String(day.getDate()).padStart(2, '0')}`
-    const db = { couples: [], members: [], sentences: [], reactions: [], created: [] }
+    const db = { couples: [], members: [], sentences: [], reactions: [], created: [], edits: [] }
     await page.route('https://example.supabase.co/rest/v1/**', async (route) => {
       const request = route.request()
       const url = request.url()
@@ -1492,12 +1492,21 @@ test.describe('로그인 화면', () => {
       }
       if (url.includes('/couple_sentences')) {
         if (request.method() === 'POST') {
-          const row = { ...request.postDataJSON(), id: db.sentences.length + 100, user_id: ME }
-          db.sentences = db.sentences.filter(
-            (item) => !(item.user_id === ME && item.day === row.day && item.couple_id === row.couple_id),
-          )
+          const row = {
+            ...request.postDataJSON(),
+            id: db.sentences.length + 100,
+            user_id: ME,
+            created_at: new Date(Date.now() + db.sentences.length).toISOString(),
+          }
           db.sentences.push(row)
           return route.fulfill({ status: 201, json: [] })
+        }
+        if (request.method() === 'PATCH') {
+          const id = Number(new URL(url).searchParams.get('id')?.replace('eq.', ''))
+          const target = db.sentences.find((item) => item.id === id && item.user_id === ME)
+          if (target) Object.assign(target, request.postDataJSON())
+          db.edits.push({ id, ...request.postDataJSON() })
+          return route.fulfill({ status: 204, body: '' })
         }
         return route.fulfill({ json: db.sentences })
       }
@@ -1506,7 +1515,7 @@ test.describe('로그인 화면', () => {
 
     // 상대가 아무도 없으면 바로 추가 화면이 나온다. 연인을 고르고 초대 번호를 만든다.
     await page.goto(`${AUTH_URL}#couple`)
-    await expect(page.getByRole('heading', { name: '친구·연인과 한 문장' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: '친구·연인과 주고받기' })).toBeVisible()
     await page.getByRole('button', { name: '초대 번호 만들기' }).click()
     expect(db.created[0].pair_kind).toBe('partner')
     await expect(page.getByRole('heading', { name: '기다리는 초대' })).toBeVisible()
@@ -1528,7 +1537,7 @@ test.describe('로그인 화면', () => {
     await expect(feed).toContainText('Sam · 연인')
     await expect(page.getByRole('button', { name: 'Sam 연인 · 오늘 받은 문장이 있어요' })).toBeVisible()
 
-    // 반응을 남기고(다시 누르면 지운다), 아직 안 보낸 상대에게 한 번에 답한다.
+    // 반응을 남기고(다시 누르면 지운다), 상대 모두에게 한 번에 답한다.
     // 반응은 다니 이모티콘: 보이는 글자(love it)와 화면 읽기용 뜻(좋아요)이 함께 이름이 된다
     const heart = feed.getByRole('button', { name: 'love it 좋아요', exact: true })
     await heart.click()
@@ -1536,11 +1545,12 @@ test.describe('로그인 화면', () => {
     expect(db.reactions).toEqual([{ sentence_id: 1, kind: 'heart', user_id: ME }])
     await heart.click()
     await expect(heart).toHaveAttribute('aria-pressed', 'false')
-    await expect(page.getByText('아직 안 보낸 상대: Sam')).toBeVisible()
-    await page.getByLabel('오늘 보낼 한 문장').fill('I missed you too.')
+    await expect(page.getByText('받는 사람: Sam')).toBeVisible()
+    await page.getByLabel('보낼 문장').fill('I missed you too.')
     await page.getByRole('button', { name: '1명에게 보내기' }).click()
     await expect(page.getByRole('status').filter({ hasText: '1명에게 보냈어요.' })).toBeVisible()
-    await expect(page.getByText('오늘은 모두에게 보냈어요.')).toBeVisible()
+    // 하루에 여러 번 보낼 수 있어서 보낸 뒤에도 쓰는 칸이 그대로 있다.
+    await expect(page.getByLabel('보낼 문장')).toHaveValue('')
 
     // 친구를 더한다: 연인은 이미 있어서 친구만 고를 수 있다.
     await page.getByRole('button', { name: '추가', exact: true }).click()
@@ -1579,6 +1589,22 @@ test.describe('로그인 화면', () => {
     await expect(page.getByText('Sam님과 함께 쓰고 있어요.')).toBeVisible()
     await expect(page.getByText('둘 다 보낸 날 1일 연속')).toBeVisible()
     await expect(page.getByText('Sam님이 "웃겨요"로 반응했어요.')).toBeVisible()
+
+    // 오늘 두 번째 문장을 보내면 첫 문장 아래에 이어서 보이고, 내 문장은 하나씩 고칠 수 있다.
+    await page.getByLabel('보낼 문장').fill('See you tonight!')
+    await page.getByRole('button', { name: '보내기', exact: true }).click()
+    await expect(page.getByRole('status').filter({ hasText: '보냈어요.' })).toBeVisible()
+    const thread = page.locator('.couple-thread')
+    await expect(thread).toContainText('I missed you too.')
+    await expect(thread).toContainText('See you tonight!')
+    expect(db.sentences.filter((item) => item.user_id === ME && item.couple_id === 'c1')).toHaveLength(2)
+    await thread.getByRole('button', { name: '고쳐 쓰기' }).last().click()
+    await page.getByLabel('고쳐 쓸 문장').fill('See you tomorrow!')
+    await page.getByRole('button', { name: '고쳐서 보내기' }).click()
+    await expect(page.getByRole('status').filter({ hasText: '고쳤어요.' })).toBeVisible()
+    await expect(thread).toContainText('See you tomorrow!')
+    expect(db.edits).toHaveLength(1)
+    expect(db.edits[0].body).toBe('See you tomorrow!')
 
     await page.getByRole('button', { name: '표현 모음에 담기' }).first().click()
     await expect(page.getByRole('status').filter({ hasText: '표현 모음에 담았어요.' })).toBeVisible()
