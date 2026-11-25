@@ -1,0 +1,266 @@
+{
+ "scope": {
+  "users": 12,
+  "admins_excluded": 1,
+  "demo_excluded": 0,
+  "since": null,
+  "first_signup": "2026-11-25 02:00:00+00:00",
+  "last_activity": "2026-12-15 10:20:00+00:00"
+ },
+ "activation": {
+  "signups": 12,
+  "email_confirmed": 11,
+  "made_a_record": 7,
+  "made_a_record_pct": 58.3,
+  "made_a_record_within_1_day": 7,
+  "median_hours_to_first_record": 4.6
+ },
+ "retention": {
+  "day1_eligible": 12,
+  "day1_returned": 4,
+  "week1_eligible": 12,
+  "week1_returned": 7,
+  "median_active_days": 7.0,
+  "day1_pct": 33.3,
+  "week1_pct": 58.3
+ },
+ "daily_active": {
+  "2026-11-25": 3,
+  "2026-11-26": 2,
+  "2026-11-27": 4,
+  "2026-11-28": 4,
+  "2026-11-29": 5,
+  "2026-11-30": 5,
+  "2026-12-01": 5,
+  "2026-12-02": 4,
+  "2026-12-03": 5,
+  "2026-12-04": 6,
+  "2026-12-05": 2,
+  "2026-12-06": 4,
+  "2026-12-07": 2,
+  "2026-12-08": 3,
+  "2026-12-09": 5,
+  "2026-12-10": 2,
+  "2026-12-11": 5,
+  "2026-12-12": 2,
+  "2026-12-13": 1,
+  "2026-12-14": 2,
+  "2026-12-15": 1
+ },
+ "records": {
+  "total": 92,
+  "by_type": {
+   "word": 36,
+   "expression": 21,
+   "chat": 13,
+   "journal": 13,
+   "grammar": 9
+  },
+  "median_per_user": {
+   "word": 2.5,
+   "expression": 1.5,
+   "chat": 0.0,
+   "journal": 0.5,
+   "grammar": 0.5
+  },
+  "users_using_type": {
+   "word": 7,
+   "expression": 7,
+   "chat": 4,
+   "journal": 6,
+   "grammar": 6
+  },
+  "origin": {
+   "pack": 44,
+   "self": 22
+  },
+  "word_categories": {
+   "feelings": 15,
+   "love": 11,
+   "friends": 10,
+   "(없음)": 9,
+   "food": 6,
+   "daily": 6
+  },
+  "top_pack_saves": [
+   {
+    "text": "Catch you later.",
+    "users": 1
+   },
+   {
+    "text": "Fingers crossed!",
+    "users": 1
+   },
+   {
+    "text": "I'm in.",
+    "users": 1
+   },
+   {
+    "text": "Let's split the bill.",
+    "users": 1
+   },
+   {
+    "text": "You wish.",
+    "users": 1
+   },
+   {
+    "text": "a pair of shoes",
+    "users": 1
+   },
+   {
+    "text": "accident",
+    "users": 1
+   },
+   {
+    "text": "appear",
+    "users": 1
+   },
+   {
+    "text": "as a rule",
+    "users": 1
+   },
+   {
+    "text": "big",
+    "users": 1
+   }
+  ]
+ },
+ "review": {
+  "users_who_reviewed": 7,
+  "items_reviewed": 52,
+  "items_reviewed_pct": 78.8,
+  "answers": 193,
+  "correct_pct": 69.4,
+  "by_type": {
+   "expression": {
+    "items": 16,
+    "answers": 57,
+    "correct_pct": 70.2
+   },
+   "grammar": {
+    "items": 7,
+    "answers": 23,
+    "correct_pct": 47.8
+   },
+   "word": {
+    "items": 29,
+    "answers": 113,
+    "correct_pct": 73.5
+   }
+  },
+  "box": {
+   "0": 30,
+   "1": 12,
+   "2": 7,
+   "3": 8,
+   "4": 6,
+   "5": 3
+  },
+  "settled_pct": 25.8,
+  "top_missed_pack": [
+   {
+    "text": "slow down",
+    "users": 1,
+    "misses": 4,
+    "miss_pct": 80.0
+   },
+   {
+    "text": "I'm in.",
+    "users": 1,
+    "misses": 3,
+    "miss_pct": 50.0
+   },
+   {
+    "text": "kind of / sort of",
+    "users": 1,
+    "misses": 3,
+    "miss_pct": 60.0
+   },
+   {
+    "text": "town",
+    "users": 1,
+    "misses": 3,
+    "miss_pct": 75.0
+   },
+   {
+    "text": "형용사 + enough to",
+    "users": 1,
+    "misses": 3,
+    "miss_pct": 75.0
+   },
+   {
+    "text": "a pair of shoes",
+    "users": 1,
+    "misses": 2,
+    "miss_pct": 33.3
+   },
+   {
+    "text": "ignore",
+    "users": 1,
+    "misses": 2,
+    "miss_pct": 66.7
+   },
+   {
+    "text": "mess up",
+    "users": 1,
+    "misses": 2,
+    "miss_pct": 66.7
+   },
+   {
+    "text": "part",
+    "users": 1,
+    "misses": 2,
+    "miss_pct": 33.3
+   },
+   {
+    "text": "search",
+    "users": 1,
+    "misses": 2,
+    "miss_pct": 66.7
+   }
+  ],
+  "missed_by_origin": {
+   "pack": 23,
+   "self": 11
+  }
+ },
+ "journal": {
+  "journals": 13,
+  "writers": 6,
+  "with_ai_pct": 69.2,
+  "median_learning_len": 216.0,
+  "moods": {
+   "happy": 5,
+   "tired": 3,
+   "calm": 2
+  },
+  "ai_requests": 25,
+  "ai_users": 5,
+  "ai_days_at_limit": 1,
+  "grammar_from_journal": 0
+ },
+ "friends": {
+  "users_in_a_pair": 3,
+  "pairs_started": 2,
+  "pairs_joined": 1,
+  "pairs_by_kind": {
+   "friend": 1
+  },
+  "sentences": 5,
+  "senders": 2,
+  "sentences_with_reaction_pct": 60.0,
+  "reactions": {
+   "funny": 1,
+   "thanks": 1,
+   "learned": 1
+  }
+ },
+ "quality": {
+  "error_events": 0,
+  "users_with_errors": 0,
+  "errors_by_platform": {},
+  "reports": {
+   "content": 1
+  }
+ }
+}
