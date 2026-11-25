@@ -1,11 +1,11 @@
 import { useMemo, useState } from 'react'
-import ChoiceChips from '../components/ChoiceChips'
+import CategoryPicker from '../components/CategoryPicker'
 import Field from '../components/Field'
 import PageHead from '../components/PageHead'
 import SearchField from '../components/SearchField'
 import { useApp } from '../context'
 import { useRecordForm } from '../hooks/useRecordForm'
-import { CATEGORIES } from '../lib/i18n'
+import { categoryLabel } from '../lib/categories'
 import { matchesQuery } from '../lib/text'
 
 const EMPTY_FORM = { situation: '', message: '', meaning: '', category: 'daily', note: '' }
@@ -26,7 +26,7 @@ export default function Chats() {
           item.situation,
           item.message,
           item.meaning,
-          t(`category.${item.category}`),
+          categoryLabel(item.category, t, 'chat'),
         ]),
       ),
     [items, query, t],
@@ -72,11 +72,12 @@ export default function Chats() {
             error={errors.meaning}
             onChange={(event) => setField('meaning', event.target.value)}
           />
-          <ChoiceChips
+          <CategoryPicker
+            type="chat"
+            items={items}
             label={t('category')}
-            name="category"
+            optional={false}
             value={form.category}
-            options={CATEGORIES.map((category) => ({ value: category, label: t(`category.${category}`) }))}
             onChange={(value) => setField('category', value)}
           />
           <Field
@@ -124,7 +125,7 @@ export default function Chats() {
                     >
                       <span className="chat-summary-text">
                         <strong>{item.situation}</strong>
-                        <small>{t(`category.${item.category}`)}</small>
+                        <small>{categoryLabel(item.category, t, 'chat')}</small>
                       </span>
                       <span className="chevron" aria-hidden="true">
                         {open ? '⌃' : '⌄'}

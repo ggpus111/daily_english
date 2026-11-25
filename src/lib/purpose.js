@@ -1,6 +1,18 @@
 import { todayItem } from './packs'
 import { local } from './storage'
 
+/** 오늘의 표현을 "다른 표현"으로 몇 번 넘겼는지(그날·그 기분 기준). 일기와 홈이 같은 표현을 보여 주게 이 기기에 남긴다. */
+const MISSION_KEY = 'todayMissionTurn'
+const dayKeyOf = (now) => `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`
+
+export function readMissionTurn(mood = '', now = new Date()) {
+  const saved = local.getJson(MISSION_KEY)
+  return saved && saved.day === dayKeyOf(now) && saved.mood === mood ? saved.turn : 0
+}
+
+export const saveMissionTurn = (mood, turn, now = new Date()) =>
+  local.set(MISSION_KEY, JSON.stringify({ day: dayKeyOf(now), mood, turn }))
+
 /**
  * 공부 목적(일상·비즈니스·학업). 첫 실행 안내와 설정에서 고르고, 이 기기에 남긴다.
  * 고른 목적에 맞춰 처음 담아 볼 말, 단어 꾸러미의 첫 단계, 오늘의 표현을 고른다.
@@ -69,15 +81,17 @@ function hash(text) {
  * 오늘의 표현. 기분을 고르지 않았으면 목적에 맞는 표현 중 날마다 하나,
  * 골랐으면 그 기분 묶음이 붙은 표현 중 무작위로 하나(그날 그 기분에서는 같은 것). 맞는 표현이 없으면 목적 안에서 고른다.
  */
-export function pickTodayExpression(items, { purpose = 'daily', mood = '', now = new Date() } = {}) {
+export function pickTodayExpression(items, { purpose = 'daily', mood = '', now = new Date(), turn = 0 } = {}) {
   if (!items?.length) return null
   const pool = purposeItems(items, purpose)
   const family = moodFamily(mood)
-  // 기분 묶음이 붙은 꾸러미가 없는 언어는 전처럼 날마다 하나를 보여 준다.
-  if (!family || !pool.some((item) => item.moods)) return todayItem(pool, now)
+  const seed = hash(`${localDay(now)}|${purpose}|${mood}|${turn}`)
+  // 기분을 안 골랐거나 기분 묶음이 없는 언어: 첫 표현은 날마다 하나, "다른 표현"을 누르면 목적 안에서 섞어 고른다.
+  if (!family || !pool.some((item) => item.moods)) return turn === 0 ? todayItem(pool, now) : pool[seed % pool.length]
+  // 기분에 맞는 표현을 자주(세 번에 두 번), 가끔은 목적 안의 다른 표현도 보여 줘서 늘 같은 몇 개만 나오지 않게 한다.
   const matching = pool.filter((item) => item.moods?.includes(family))
-  const choices = matching.length > 0 ? matching : pool
-  return choices[hash(`${localDay(now)}|${purpose}|${mood}`) % choices.length]
+  const choices = matching.length > 0 && seed % 3 !== 2 ? matching : pool
+  return choices[Math.floor(seed / 3) % choices.length]
 }
 
 /** 첫 실행에서 담아 볼 추천: 목적 꾸러미 표현 앞쪽 몇 개와 목적 단어 몇 개. 일상이면 null(기존 추천을 쓴다). */

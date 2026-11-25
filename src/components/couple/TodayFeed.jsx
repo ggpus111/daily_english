@@ -12,7 +12,7 @@ const FILTERS = ['all', 'partner', 'friend']
  * 오늘 모아보기: 모든 상대(또는 연인·친구만)에게서 오늘 받은 문장을 한곳에 보여 주고,
  * 아직 안 보낸 상대에게 내 오늘 문장을 한 번에 보낸다. 기다리는 초대 번호도 여기서 다시 볼 수 있다.
  */
-export default function TodayFeed({ pairs, userId, busy, onOpen, onReact, onSendAll, onCopy, onRefresh }) {
+export default function TodayFeed({ pairs, userId, busy, onOpen, onReact, onSendAll, onCopy, onShare, onRefresh }) {
   const { t, add, notify } = useApp()
   const [filter, setFilter] = useState('all')
   const [draft, setDraft] = useState('')
@@ -137,7 +137,10 @@ export default function TodayFeed({ pairs, userId, busy, onOpen, onReact, onSend
                 <span className="couple-code small" aria-label={t('coupleCode')}>
                   {pair.code}
                 </span>
-                <button className="soft-button" onClick={() => onCopy(pair.code)}>
+                <button className="soft-button" onClick={() => onShare(pair.code)}>
+                  {t('inviteShare')}
+                </button>
+                <button className="text-button" onClick={() => onCopy(pair.code)}>
                   {t('coupleCopy')}
                 </button>
               </li>

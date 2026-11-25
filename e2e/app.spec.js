@@ -1261,6 +1261,32 @@ test.describe('로그인 화면', () => {
     expect(violations.map((v) => `${v.id}: ${v.nodes[0].html}`)).toEqual([])
   })
 
+  test('꾸러미 항목을 신고하면 이유와 함께 보내지고, 그 항목은 바로 꾸러미에서 빠진다', async ({ page }) => {
+    await fakeSession(page)
+    await fakeReportServer(page)
+    let sent = null
+    await page.route('https://example.supabase.co/rest/v1/rpc/report_pack_item', async (route) => {
+      sent = route.request().postDataJSON()
+      await route.fulfill({ status: 204, body: '' })
+    })
+    await page.route('https://example.supabase.co/rest/v1/pack_fixes*', (route) =>
+      route.fulfill({ json: sent ? [{ item_id: sent.target_item, kind: sent.target_kind, hidden: true }] : [] }),
+    )
+    await page.goto(`${AUTH_URL}#packs`)
+    const first = page.locator('.expression-card').first()
+    const text = await first.locator('.expression-text').textContent()
+    await first.getByRole('button', { name: `신고 ${text}` }).click()
+    const dialog = page.getByRole('dialog')
+    await expect(dialog).toBeVisible()
+    await expect(dialog.getByRole('button', { name: '신고 보내기' })).toBeDisabled()
+    await dialog.getByRole('radio', { name: '원어민은 이렇게 안 써요' }).check()
+    await dialog.getByLabel('더 알려 줄 내용 (선택)').fill('too formal')
+    await dialog.getByRole('button', { name: '신고 보내기' }).click()
+    await expect(page.getByText('신고했어요. 이 항목은 꾸러미에서 뺐어요.')).toBeVisible()
+    expect(sent).toMatchObject({ target_kind: 'expressions', why: 'unnatural', memo: 'too formal', label: text })
+    await expect(page.locator('.expression-text').first()).not.toHaveText(text)
+  })
+
   test('관리자는 꾸러미의 틀린 뜻을 바로 고치고, 사용자 화면에 반영되며, 원래대로 되돌릴 수 있다', async ({ page }) => {
     await fakeSession(page)
     const server = await fakeReportServer(page, { admin: true })

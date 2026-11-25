@@ -526,27 +526,92 @@
   line-height: 0;
 }
 
-/* 홈 "나의 영어 노트" 카드 네 장: 같은 굵은 외곽선과 그림자, 색은 로고 노랑과 어울리는 네 가지 */
+/* 홈 "나의 영어 노트" 카드 네 장: 같은 연노랑 바탕, 굵은 외곽선과 그림자, 오른쪽 위에 노란 칸 안의 다니(성장 카드와 같은 모양) */
 .dash-card {
   border: 2.5px solid var(--outline);
+  background: #fdf0c4;
   box-shadow: 4px 4px 0 var(--pop);
   color: #1b1b1b;
 }
 
-.dash-card.peach {
-  background: #fbe7a6;
+.dash-dani {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 2.5px solid #1b1b1b;
+  border-radius: 16px;
+  background: #f6c945;
+  line-height: 0;
 }
 
-.dash-card.lilac {
-  background: #e6e1f6;
+.dash-card .dash-eyebrow {
+  padding-right: 70px;
 }
 
-.dash-card.sage {
-  background: #d8efe4;
+/* 좁은 화면(카드 두 장씩)에서는 다니 칸을 제목 위에 작게 둔다(제목과 겹치지 않게) */
+@media (max-width: 767px) {
+  .dash-dani {
+    position: static;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+  }
+
+  .dash-dani svg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .dash-card .dash-eyebrow {
+    padding-right: 0;
+  }
 }
 
-.dash-card.butter {
-  background: #fde1d6;
+/* 이번 주 돌아보기 숫자 칸: 성장 카드의 숫자 칸(dani-stats)과 같은 모양 */
+.recap-stats div,
+.recap-stats div:nth-child(n) {
+  border: 1.5px solid var(--line);
+  background: var(--sunken);
+  color: var(--ink);
+}
+
+/* 메뉴에서 지금 보는 화면: 연노랑 칸 + 왼쪽 굵은 선(휴대폰 아래 탭은 위쪽 굵은 선) */
+.nav-item[aria-current='page'] {
+  background: #fdf0c4;
+  box-shadow: inset 5px 0 0 #1b1b1b;
+  color: #1b1b1b;
+  font-weight: 800;
+}
+
+:root[data-theme='dark'] .nav-item[aria-current='page'] {
+  background: var(--accent-soft);
+  box-shadow: inset 5px 0 0 var(--accent);
+  color: var(--ink);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .nav-item[aria-current='page'] {
+    background: var(--accent-soft);
+    box-shadow: inset 5px 0 0 var(--accent);
+    color: var(--ink);
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-item[aria-current='page'],
+  :root[data-theme='dark'] .nav-item[aria-current='page'] {
+    border-radius: 0 0 12px 12px;
+    box-shadow: inset 0 4px 0 #1b1b1b;
+  }
+
+  :root[data-theme='dark'] .nav-item[aria-current='page'] {
+    box-shadow: inset 0 4px 0 var(--accent);
+  }
 }
 
 .dash-card * {

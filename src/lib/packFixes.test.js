@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { applyFixes } from './packFixes'
+import { applyFixes, hideInCache } from './packFixes'
 
 const items = [
   { id: 'b001', text: 'know', meaning: '알다', example: 'I know.', exampleKo: '알아.', tatoeba: 1288 },
@@ -26,5 +26,17 @@ describe('꾸러미 고침 덮어쓰기', () => {
     const [fixed] = applyFixes([items[1]], [{ item_id: 'b002', example: "I'm so tired today.", example_ko: '오늘 너무 피곤해.', hidden: false }])
     expect(fixed).toMatchObject({ example: "I'm so tired today.", exampleKo: '오늘 너무 피곤해.' })
     expect(fixed).not.toHaveProperty('tatoeba')
+  })
+})
+
+describe('신고한 항목 바로 숨기기', () => {
+  it('신고하면 이 기기의 고침 목록에 숨김으로 남아, 서버를 못 받아도 꾸러미에서 빠진다', () => {
+    localStorage.clear()
+    hideInCache('expressions', 'love-01')
+    hideInCache('expressions', 'love-01')
+    const cache = JSON.parse(localStorage.getItem('packFixes'))
+    expect(cache.expressions).toEqual([{ item_id: 'love-01', kind: 'expressions', hidden: true }])
+    const items = [{ id: 'love-01', text: 'I love you.' }, { id: 'love-02', text: 'Love you' }]
+    expect(applyFixes(items, cache.expressions).map((item) => item.id)).toEqual(['love-02'])
   })
 })

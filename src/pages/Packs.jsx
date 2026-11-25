@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ExpressionCard from '../components/ExpressionCard'
 import PackSearch from '../components/PackSearch'
+import ReportPackItem from '../components/ReportPackItem'
 import SaveEntryButton from '../components/SaveEntryButton'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
@@ -267,7 +268,10 @@ function GrammarPacks({ data }) {
         <ul className="grammar-pack-list">
           {group.items.map((item) => (
             <li key={item.id} className="grammar-pack-card">
-              <strong lang={learningLang}>{item.text}</strong>
+              <div className="grammar-pack-head">
+                <strong lang={learningLang}>{item.text}</strong>
+                <ReportPackItem item={item} kind="grammar" />
+              </div>
               <p>{item.meaning}</p>
               <p className="grammar-pack-example" lang={learningLang}>
                 {item.example}

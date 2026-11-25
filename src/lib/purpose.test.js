@@ -9,7 +9,9 @@ import {
   purposePack,
   purposeStarters,
   purposeWordLevel,
+  readMissionTurn,
   readPurpose,
+  saveMissionTurn,
   savePurpose,
 } from './purpose'
 
@@ -52,19 +54,33 @@ describe('목적·기분에 맞춘 오늘의 표현(영어 꾸러미)', async ()
     expect(daily.length).toBeGreaterThan(600)
   })
 
-  it('기분을 고르면 그 기분 묶음이 붙은 표현이 나오고, 같은 날 같은 기분이면 같은 표현이다', () => {
+  it('기분을 고르면 대부분 그 기분 묶음의 표현이 나오고, 같은 날·기분·넘긴 횟수면 같은 표현이다', () => {
     for (const purpose of ['daily', 'business', 'study']) {
       for (const mood of ['happy', 'tired', 'worried', 'sad', 'calm']) {
-        const item = pickTodayExpression(expressions.items, { purpose, mood, now: NOON })
-        expect(item.moods, `${purpose} ${mood}`).toContain(moodFamily(mood))
-        expect(pickTodayExpression(expressions.items, { purpose, mood, now: NOON })).toBe(item)
+        const picks = Array.from({ length: 30 }, (_, turn) =>
+          pickTodayExpression(expressions.items, { purpose, mood, now: NOON, turn }),
+        )
+        const matching = picks.filter((item) => item.moods?.includes(moodFamily(mood)))
+        expect(matching.length, `${purpose} ${mood}`).toBeGreaterThan(picks.length / 2)
+        expect(new Set(picks.map((item) => item.id)).size, `${purpose} ${mood} 다양함`).toBeGreaterThan(4)
+        expect(pickTodayExpression(expressions.items, { purpose, mood, now: NOON, turn: 3 })).toBe(picks[3])
       }
     }
   })
 
+  it('"다른 표현"으로 넘긴 횟수를 그날·그 기분에만 기억한다', () => {
+    localStorage.clear()
+    saveMissionTurn('happy', 2, NOON)
+    expect(readMissionTurn('happy', NOON)).toBe(2)
+    expect(readMissionTurn('sad', NOON)).toBe(0)
+    expect(readMissionTurn('happy', new Date(2026, 10, 25, 12))).toBe(0)
+  })
+
   it('목적 안에 맞는 기분 표현이 없으면 그 목적의 표현 중에서 고른다', () => {
-    const item = pickTodayExpression(expressions.items, { purpose: 'business', mood: 'loved', now: NOON })
-    expect(item.group).toBe('work')
+    for (let turn = 0; turn < 10; turn += 1) {
+      const item = pickTodayExpression(expressions.items, { purpose: 'business', mood: 'loved', now: NOON, turn })
+      expect(item.group).toBe('work')
+    }
   })
 
   it('기분이 없으면 목적 안에서 날마다 하나를 고른다', () => {

@@ -16,6 +16,10 @@ export const giveAiConsent = () => local.set(AI_CONSENT_KEY, AI_CONSENT_VERSION)
 let inFlight = false
 const REQUEST_TIMEOUT_MS = 60_000
 
+// 하루 AI 교정 횟수(서버 supabase/functions/correct-journal의 AI_DAILY_LIMIT·AI_PRO_DAILY_LIMIT 기본값과 같게)
+export const AI_DAILY_LIMIT = 5
+export const AI_PRO_DAILY_LIMIT = 20
+
 /**
  * @returns {Promise<{ feedback: string, remaining: number } | { error: 'login'|'limit'|'full'|'pro'|'busy'|'pending'|'network'|'failed', detail?: string }>}
  */

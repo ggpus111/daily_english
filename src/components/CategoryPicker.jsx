@@ -5,9 +5,9 @@ import ChoiceChips from './ChoiceChips'
 
 /**
  * 기록의 카테고리 고르기. 기본 카테고리와 직접 만든 카테고리를 칩으로 보여 주고, "직접 추가"로 새 이름을 만들 수 있다.
- * 고르지 않아도 된다(value가 '').
+ * optional이면 고르지 않아도 된다(value가 ''). 대화 기록처럼 꼭 하나를 고르는 곳은 optional={false}.
  */
-export default function CategoryPicker({ type, items, value, onChange }) {
+export default function CategoryPicker({ type, items, value, onChange, optional = true, label }) {
   const { t } = useApp()
   const [adding, setAdding] = useState(false)
   const [name, setName] = useState('')
@@ -26,10 +26,10 @@ export default function CategoryPicker({ type, items, value, onChange }) {
   return (
     <div className="category-picker">
       <ChoiceChips
-        label={t('categoryLabel')}
+        label={label ?? t('categoryLabel')}
         options={[
-          { value: '', label: t('categoryNone') },
-          ...options.map((id) => ({ value: id, label: categoryLabel(id, t) })),
+          ...(optional ? [{ value: '', label: t('categoryNone') }] : []),
+          ...options.map((id) => ({ value: id, label: categoryLabel(id, t, type) })),
         ]}
         value={value ?? ''}
         onChange={onChange}

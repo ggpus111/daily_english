@@ -2,13 +2,14 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import AddPair from '../components/couple/AddPair'
 import CoupleLeave from '../components/couple/CoupleLeave'
 import CoupleToday from '../components/couple/CoupleToday'
-import CoupleWaiting from '../components/couple/CoupleWaiting'
+import CoupleWaiting, { sendInvite } from '../components/couple/CoupleWaiting'
 import PairAvatars from '../components/couple/PairAvatars'
 import TodayFeed from '../components/couple/TodayFeed'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { coupleErrorKey, leaveCouple, loadPairs, sendSentence, setReaction, watchPairs } from '../lib/couple'
 import { errorMessage } from '../lib/errors'
+import { readPendingInvite } from '../lib/invite'
 import { supabase } from '../lib/supabase'
 
 const EMPTY = { loading: false, error: null, pairs: [] }
@@ -22,12 +23,12 @@ const toState = (result) => (result.error ? { ...EMPTY, error: result.error } : 
  * 오늘 모아보기(아무도 안 골랐을 때) / 그 상대와 주고받기 / 상대 추가를 보여 준다.
  */
 export default function Couple() {
-  const { t, user, learningLang, notify, onLogin } = useApp()
+  const { t, user, learningLang, notify, onLogin, nickname } = useApp()
   const userId = user?.id
   const [state, setState] = useState({ ...EMPTY, loading: Boolean(supabase && userId) })
   const [busy, setBusy] = useState(false)
-  // null: 오늘 모아보기, 'add': 상대 추가, 그 밖: 고른 짝의 id
-  const [selected, setSelected] = useState(null)
+  // null: 오늘 모아보기, 'add': 상대 추가, 그 밖: 고른 짝의 id. 초대 링크로 들어왔으면 상대 추가부터 연다.
+  const [selected, setSelected] = useState(() => (readPendingInvite() ? 'add' : null))
 
   const refresh = useCallback(async () => setState(toState(await loadPairs(userId))), [userId])
 
@@ -204,6 +205,7 @@ export default function Couple() {
         onReact={react}
         onSendAll={sendAll}
         onCopy={copyCode}
+        onShare={(code) => sendInvite({ code, t, notify, nickname })}
         onRefresh={refresh}
       />
     )
