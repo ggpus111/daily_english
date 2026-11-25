@@ -219,6 +219,14 @@
      "example": "It seems like you had a long day.",
      "exampleNative": "오늘 힘든 하루였던 것 같네.",
      "tip": ""
+    },
+    {
+     "id": "grammar-feel-09",
+     "text": "-ing 형용사 / -ed 형용사",
+     "meaning": "-ing: (무엇이) ~하게 만드는 / -ed: (내가) ~하게 된",
+     "example": "You're fascinating. I'm fascinated by you.",
+     "exampleNative": "넌 정말 흥미로운 사람이야. 나 너한테 빠졌어.",
+     "tip": "I'm boring(나는 지루한 사람이야)과 I'm bored(나 심심해)처럼 뜻이 완전히 달라져요."
     }
    ]
   },
@@ -365,6 +373,30 @@
      "example": "If I lived closer, I would see you every day.",
      "exampleNative": "내가 더 가까이 살면 매일 볼 텐데.",
      "tip": ""
+    },
+    {
+     "id": "grammar-link-09",
+     "text": "If + 주어 + were to + 동사원형",
+     "meaning": "가령 ~한다고 치면",
+     "example": "If I were to pick one movie, I'd choose Titanic.",
+     "exampleNative": "영화 하나만 고른다고 치면, 난 타이타닉 고를래.",
+     "tip": "If I picked보다 '가령 ~라고 치면' 느낌이 더 강해요. 주어가 I나 he여도 were를 써요."
+    },
+    {
+     "id": "grammar-link-10",
+     "text": "a place to + 동사원형",
+     "meaning": "~하기 좋은 곳",
+     "example": "It's a nice place to live.",
+     "exampleNative": "살기 좋은 곳이야.",
+     "tip": "for living보다 to live가 자연스러워요. a nice place to be at은 '머물기 좋은 곳'이라 분위기에 더 초점이 있어요."
+    },
+    {
+     "id": "grammar-link-11",
+     "text": "what + 동사 (~하는 것)",
+     "meaning": "~하는 것, ~인 일",
+     "example": "I think that's what's happening to me.",
+     "exampleNative": "나도 지금 딱 그런 것 같아.",
+     "tip": "what's happening to me는 '나한테 일어나는 일', what's going on with me는 '요즘 내 상태'에 가까워요."
     }
    ]
   },
@@ -438,6 +470,87 @@
      "example": "Have you eaten yet?",
      "exampleNative": "밥 먹었어?",
      "tip": "부정문은 I haven't eaten yet.(아직 안 먹었어)."
+    },
+    {
+     "id": "grammar-question-09",
+     "text": "Do you see yourself + -ing?",
+     "meaning": "너 ~할 것 같아? (앞으로 그런 모습이 그려져?)",
+     "example": "Do you see yourself living abroad someday?",
+     "exampleNative": "너 언젠가 외국에서 살 것 같아?",
+     "tip": "see를 '보다'로 옮기지 말고 '~할 것 같다고 생각하다'로 이해해요. 대답은 Yeah, I can see that.(그럴 것 같아)."
+    }
+   ]
+  },
+  {
+   "id": "pairs",
+   "title": {
+    "ko": "헷갈리는 짝",
+    "en": "Easily mixed up"
+   },
+   "items": [
+    {
+     "id": "grammar-pairs-01",
+     "text": "switch / change",
+     "meaning": "switch: A를 B로 맞바꾸다 / change: 변하다, 마음·모습이 바뀌다",
+     "example": "Can we switch seats? I changed my mind.",
+     "exampleNative": "우리 자리 바꿀래? 나 생각 바뀌었어.",
+     "tip": "자리나 물건을 맞바꿀 때는 switch, 마음이나 사람이 달라질 때는 change."
+    },
+    {
+     "id": "grammar-pairs-02",
+     "text": "point at / point out",
+     "meaning": "point at: 손가락으로 가리키다 / point out: 지적하다, 짚어 주다",
+     "example": "Thanks for pointing it out.",
+     "exampleNative": "그거 짚어 줘서 고마워.",
+     "tip": "it은 point와 out 사이에 와요. point out it(X)."
+    },
+    {
+     "id": "grammar-pairs-03",
+     "text": "reach / reach out",
+     "meaning": "reach: 닿다, 도착하다 / reach out: (먼저) 연락하다, 손을 내밀다",
+     "example": "Feel free to reach out if you need anything.",
+     "exampleNative": "필요한 거 있으면 언제든 연락해.",
+     "tip": "reach out to + 사람. 그냥 contact보다 '먼저 다가가는' 느낌이에요."
+    },
+    {
+     "id": "grammar-pairs-04",
+     "text": "from afar / far from",
+     "meaning": "from afar: 멀리서 / far from: ~와 거리가 멀다, 전혀 ~아니다",
+     "example": "It's far from perfect, but I love it.",
+     "exampleNative": "완벽하진 않지만 난 좋아.",
+     "tip": "I've liked you from afar.(멀리서 좋아해 왔어)처럼 from afar는 고백할 때도 써요."
+    },
+    {
+     "id": "grammar-pairs-05",
+     "text": "turn around / turn back / turn over",
+     "meaning": "뒤돌아보다 / 왔던 길로 돌아가다 / 뒤집다",
+     "example": "We should turn back. It's getting dark.",
+     "exampleNative": "돌아가자. 어두워지고 있어.",
+     "tip": "turn around는 몸을 돌리는 것, turn back은 가던 길을 되돌아가는 것이에요."
+    },
+    {
+     "id": "grammar-pairs-06",
+     "text": "taste / tastes",
+     "meaning": "맛 / 취향(취향은 보통 복수)",
+     "example": "I think we have similar tastes in movies.",
+     "exampleNative": "우리 영화 취향 비슷한 것 같아.",
+     "tip": "a similar taste보다 similar tastes가 자연스러워요."
+    },
+    {
+     "id": "grammar-pairs-07",
+     "text": "interesting / fascinating",
+     "meaning": "흥미로운 / 너무 흥미로워서 빠져드는",
+     "example": "That's fascinating. Tell me more.",
+     "exampleNative": "와, 진짜 신기하다. 더 얘기해 줘.",
+     "tip": "fascinating이 훨씬 강해요. 사람에게 쓰면 '계속 알고 싶은 사람'이라는 칭찬이에요."
+    },
+    {
+     "id": "grammar-pairs-08",
+     "text": "It works out / It worked out",
+     "meaning": "잘 될 거야 / 결국 잘 됐어",
+     "example": "I was worried, but it worked out.",
+     "exampleNative": "걱정했는데 결국 잘 됐어.",
+     "tip": "여기서 work out은 '운동하다'가 아니라 '일이 잘 풀리다'예요."
     }
    ]
   }

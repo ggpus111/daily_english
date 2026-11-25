@@ -1,7 +1,14 @@
-const SECTIONS = ['collect', 'storage', 'transfer', 'errors', 'reports', 'push', 'couple', 'cookies', 'rights']
+import { useEffect } from 'react'
+
+const SECTIONS = ['collect', 'storage', 'transfer', 'errors', 'reports', 'push', 'couple', 'stats', 'cookies', 'rights']
 const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL
 
 export default function Privacy({ t }) {
+  // 앱 틀 밖에서 그려지는 화면이라 탭 제목을 여기서 바꾼다.
+  useEffect(() => {
+    document.title = `${t('privacy')} · Daily English`
+  }, [t])
+
   return (
     <main className="legal-page">
       <a className="inline-link" href="#home">

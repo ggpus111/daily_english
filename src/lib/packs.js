@@ -21,6 +21,7 @@ export const TALK_PACKS = [
   'text',
   'slang',
   'chat',
+  'know',
   'tease',
   'date',
   'call',

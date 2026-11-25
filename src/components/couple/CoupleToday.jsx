@@ -10,20 +10,22 @@ import {
   suggestionFor,
 } from '../../lib/couple'
 import { errorMessage } from '../../lib/errors'
+import Sticker from '../dani/Sticker'
 import Field from '../Field'
 
-/** 상대 문장 아래의 반응 버튼들. 누른 걸 다시 누르면 지운다. 오늘 모아보기(TodayFeed)도 함께 쓴다. */
+/** 상대 문장 아래의 다니 이모티콘 버튼들. 누른 걸 다시 누르면 지운다. 오늘 모아보기(TodayFeed)도 함께 쓴다. */
 export function ReactionBar({ sentence, mine, onReact, t }) {
   return (
-    <div className="reaction-bar" role="group" aria-label={t('reactLabel')}>
+    <div className="reaction-bar sticker-bar" role="group" aria-label={t('reactLabel')}>
       {REACTIONS.map((kind) => (
         <button
           key={kind}
-          className="reaction-chip"
+          className="sticker-chip"
           aria-pressed={mine === kind}
           onClick={() => onReact(sentence.id, mine === kind ? null : kind)}
         >
-          {t(`reaction.${kind}`)}
+          <Sticker kind={kind} size={44} />
+          <span className="sr-only">{t(`reaction.${kind}`)}</span>
         </button>
       ))}
     </div>
@@ -90,7 +92,8 @@ export default function CoupleToday({ userId, partner, sentences, reactions = []
             <small>{t('coupleMine')}</small>
             <p lang={today.mine.lang}>{today.mine.body}</p>
             {reactionOf(today.mine).theirs && (
-              <p className="reaction-got" role="status">
+              <p className="reaction-got sticker-got" role="status">
+                <Sticker kind={reactionOf(today.mine).theirs} size={64} />
                 {t('reactGot', { name: partner.nickname, reaction: t(`reaction.${reactionOf(today.mine).theirs}`) })}
               </p>
             )}

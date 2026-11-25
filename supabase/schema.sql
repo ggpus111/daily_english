@@ -607,13 +607,19 @@ create trigger couple_sentence_notify
 
 -- ---------- 연인 문장에 반응 남기기 ----------
 -- 상대 문장에 가볍게 반응한다(문장마다 한 사람이 하나, 다시 누르면 지운다). 내 문장에는 달 수 없다.
+-- 반응은 다니 이모티콘으로 보인다(src/components/dani/Sticker.jsx). 종류는 src/lib/couple.js REACTIONS와 같게 둔다.
 create table if not exists public.couple_reactions (
   sentence_id bigint not null references public.couple_sentences (id) on delete cascade,
   user_id uuid not null default auth.uid() references auth.users (id) on delete cascade,
-  kind text not null check (kind in ('heart', 'thanks', 'funny', 'learned')),
+  kind text not null,
   created_at timestamptz not null default now(),
   primary key (sentence_id, user_id)
 );
+
+-- 이모티콘 종류를 늘릴 때 이미 있는 표도 바뀌도록 제약을 다시 건다.
+alter table public.couple_reactions drop constraint if exists couple_reactions_kind_check;
+alter table public.couple_reactions add constraint couple_reactions_kind_check
+  check (kind in ('heart', 'thanks', 'funny', 'learned', 'bet', 'wdym', 'night', 'talk'));
 
 alter table public.couple_reactions enable row level security;
 

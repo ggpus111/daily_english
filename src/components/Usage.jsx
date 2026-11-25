@@ -1,7 +1,7 @@
 import { useApp } from '../context'
 import { usePackData } from '../hooks/usePackData'
 import { findPhrase } from '../lib/blank'
-import { todayItem } from '../lib/packs'
+import { pickTodayExpression, readPurpose } from '../lib/purpose'
 import { usedEntries } from '../lib/usage'
 
 /** 내가 모은 단어·표현 (표현 먼저) */
@@ -31,11 +31,12 @@ export function UsageLine({ sentence, live = false }) {
 }
 
 // 오늘의 표현을 일기에 써 보는 작은 미션. 번역에 쓰면 바로 도장이 찍힌다.
-export function TodayMission({ sentence }) {
+// 공부 목적(일상·비즈니스·학업)에 맞는 표현 중에서, 기분을 고르면 그 기분에 어울리는 표현으로 바꿔 준다.
+export function TodayMission({ sentence, mood = '' }) {
   const { t, learningLang } = useApp()
   const { data } = usePackData('expressions')
   if (!data) return null
-  const item = todayItem(data.items)
+  const item = pickTodayExpression(data.items, { purpose: readPurpose(), mood })
   const done = Boolean(findPhrase(item.text, sentence))
 
   return (

@@ -94,8 +94,13 @@ describe('reactionsBySentence', () => {
     expect(map.get(3)).toBeUndefined()
   })
 
-  it('반응 종류는 서버 표와 같은 네 가지다', () => {
-    expect(REACTIONS).toEqual(['heart', 'thanks', 'funny', 'learned'])
+  it('반응(다니 이모티콘) 종류는 서버 표와 같은 여덟 가지다', () => {
+    expect(REACTIONS).toEqual(['heart', 'thanks', 'funny', 'learned', 'bet', 'wdym', 'night', 'talk'])
+  })
+
+  it('모든 반응 종류에 이모티콘 그림이 있다', async () => {
+    const { STICKERS } = await import('../components/dani/Sticker')
+    expect(REACTIONS.every((kind) => STICKERS[kind])).toBe(true)
   })
 })
 

@@ -4,6 +4,7 @@ import { useApp } from '../context'
 import { usePackData } from '../hooks/usePackData'
 import { errorMessage } from '../lib/errors'
 import { toEntry } from '../lib/packs'
+import { PURPOSES, purposeStarters, savePurpose } from '../lib/purpose'
 import { local } from '../lib/storage'
 import Field from './Field'
 import Mascot from './Mascot'
@@ -26,12 +27,13 @@ export function needsOnboarding(records, learningLang) {
   return local.set(`${ONBOARDED_KEY}-check`, '1') && (local.remove(`${ONBOARDED_KEY}-check`), true)
 }
 
-// 첫 실행 안내: 수준 고르기 → 표현 담기 → 기분 고르고 한 줄 일기. 어느 단계에서든 건너뛸 수 있다.
+// 첫 실행 안내: 목적·수준 고르기 → 추천 표현·단어 담기 → 기분 고르고 한 줄 일기. 어느 단계에서든 건너뛸 수 있다.
 export default function Onboarding({ onDone }) {
   const { t, notify, add, learningLang } = useApp()
   // 영어만 단어 꾸러미를 초급·중급으로 나눈다. 다른 언어는 대화 주제별이라 수준 고르기를 건너뛴다.
   const first = learningLang === 'en' ? 1 : 2
   const [step, setStep] = useState(first)
+  const [purpose, setPurpose] = useState('daily')
   const [level, setLevel] = useState('beginner')
   const [picked, setPicked] = useState([])
   const [journal, setJournal] = useState({ mood: '', native: '', translation: '' })
@@ -39,8 +41,13 @@ export default function Onboarding({ onDone }) {
   const [saving, setSaving] = useState(false)
   const headingRef = useRef(null)
   const { data } = usePackData('expressions')
+  const { data: words } = usePackData('words')
+  // 비즈니스·학업을 고르면 그 목적의 표현과 단어를, 일상이면 연인·친구와 바로 주고받는 말을 추천한다.
   const starters = data
-    ? STARTER_IDS.map((id) => data.items.find((item) => item.id === id || item.id === `${learningLang}-${id}`)).filter(Boolean)
+    ? (purposeStarters(data.items, words?.items, purpose) ??
+      STARTER_IDS.map((id) => data.items.find((item) => item.id === id || item.id === `${learningLang}-${id}`))
+        .filter(Boolean)
+        .map((item) => ({ ...item, kind: 'expression' })))
     : []
 
   useEffect(() => {
@@ -56,13 +63,14 @@ export default function Onboarding({ onDone }) {
   async function next() {
     if (step === 1) {
       local.set(START_LEVEL_KEY, level)
+      savePurpose(purpose)
       setStep(2)
       return
     }
     if (step === 2) {
       setSaving(true)
       for (const item of starters.filter((entry) => picked.includes(entry.id))) {
-        const result = await add('expression', toEntry(item))
+        const result = await add(item.kind, toEntry(item))
         if (result.error) {
           setSaving(false)
           notify(t('saveError', { message: errorMessage(result.error, t) }))
@@ -104,14 +112,30 @@ export default function Onboarding({ onDone }) {
       <p className="muted">{t(`onboardIntro${step}`)}</p>
 
       {step === 1 && (
-        <div className="onboard-choices" role="group" aria-label={t('onboardTitle1')}>
-          {['beginner', 'intermediate'].map((id) => (
-            <button key={id} type="button" className="onboard-choice" aria-pressed={level === id} onClick={() => setLevel(id)}>
-              <strong>{t(`onboardLevel.${id}`)}</strong>
-              <span>{t(`onboardLevelHint.${id}`)}</span>
-            </button>
-          ))}
-        </div>
+        <>
+          <h2 className="onboard-question" id="onboard-purpose">
+            {t('onboardPurposeTitle')}
+          </h2>
+          <div className="onboard-choices three" role="group" aria-labelledby="onboard-purpose">
+            {PURPOSES.map((id) => (
+              <button key={id} type="button" className="onboard-choice" aria-pressed={purpose === id} onClick={() => setPurpose(id)}>
+                <strong>{t(`purpose.${id}`)}</strong>
+                <span>{t(`purposeHint.${id}`)}</span>
+              </button>
+            ))}
+          </div>
+          <h2 className="onboard-question" id="onboard-level">
+            {t('onboardLevelTitle')}
+          </h2>
+          <div className="onboard-choices three" role="group" aria-labelledby="onboard-level">
+            {['beginner', 'intermediate', 'advanced'].map((id) => (
+              <button key={id} type="button" className="onboard-choice" aria-pressed={level === id} onClick={() => setLevel(id)}>
+                <strong>{t(`onboardLevel.${id}`)}</strong>
+                <span>{t(`onboardLevelHint.${id}`)}</span>
+              </button>
+            ))}
+          </div>
+        </>
       )}
 
       {step === 2 && (
@@ -127,6 +151,7 @@ export default function Onboarding({ onDone }) {
               >
                 <strong lang={learningLang}>{item.text}</strong>
                 <span>{item.meaning}</span>
+                {item.kind === 'word' && <small className="onboard-pick-kind">{t('onboardPickWord')}</small>}
               </button>
             ))}
           </div>

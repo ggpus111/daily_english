@@ -1,0 +1,232 @@
+// 우리 앱의 캐릭터 "다니". 로고처럼 굵은 검정 외곽선, 하얀 얼굴, 올림머리.
+// pose: 성장 단계('peek' | 'book' | 'chat' | 'cheer' | 'doctor') 또는 얼굴만('face')
+// mood: 'dot' | 'joy' | 'sleepy' | 'cool' | 'curious'
+// colors: { hair, top, item } (src/lib/growth.js의 DANI_COLORS 안에서만 고른다)
+import { useId } from 'react'
+import { DEFAULT_DANI } from '../lib/growth'
+
+const K = '#1b1b1b'
+const STROKE = { stroke: K, strokeWidth: 3, strokeLinejoin: 'round', strokeLinecap: 'round' }
+const YELLOW = '#f6c945'
+const darkColor = (color) => color === K || color === '#6b4430'
+
+function starPath(x, y, r) {
+  const a = r * 0.14
+  const b = r * 0.3
+  return `M${x} ${y - r} C${x + a} ${y - b} ${x + b} ${y - a} ${x + r} ${y} C${x + b} ${y + a} ${x + a} ${y + b} ${x} ${y + r} C${x - a} ${y + b} ${x - b} ${y + a} ${x - r} ${y} C${x - b} ${y - a} ${x - a} ${y - b} ${x} ${y - r} Z`
+}
+const Sparkle = ({ x, y, r = 5 }) => <path d={starPath(x, y, r)} fill={YELLOW} {...STROKE} strokeWidth={1.8} />
+const Pop = ({ x, y, s = 1 }) => (
+  <g stroke={K} strokeWidth={3.6 * s} strokeLinecap="round">
+    <path d={`M${x + 8 * s} ${y - 3 * s} L${x + 11 * s} ${y - 11 * s}`} />
+    <path d={`M${x} ${y + s} L${x + 6 * s} ${y - 5 * s}`} />
+    <path d={`M${x - 3 * s} ${y + 9 * s} L${x + 5 * s} ${y + 8 * s}`} />
+  </g>
+)
+const Hand = ({ x, y, r = 6 }) => <circle cx={x} cy={y} r={r} fill="#fff" {...STROKE} />
+const Arm = ({ d, top, width = 9 }) => (
+  <>
+    <path d={d} fill="none" stroke={K} strokeWidth={width + 6} strokeLinecap="round" />
+    <path d={d} fill="none" stroke={top} strokeWidth={width} strokeLinecap="round" />
+  </>
+)
+const Mark = ({ x, y, children, size = 22 }) => (
+  <text x={x} y={y} fontSize={size} fontWeight="900" fill={K} fontFamily="system-ui, sans-serif">
+    {children}
+  </text>
+)
+
+function Eyes({ mood }) {
+  if (mood === 'joy')
+    return (
+      <g fill="none" stroke={K} strokeWidth="3.2" strokeLinecap="round">
+        <path d="M40.5 52 Q45 46 49.5 52" />
+        <path d="M53 52 Q57.5 46 62 52" />
+      </g>
+    )
+  if (mood === 'sleepy')
+    return (
+      <g fill="none" stroke={K} strokeWidth="3" strokeLinecap="round">
+        <path d="M41 51 H49" />
+        <path d="M53.5 51 H61.5" />
+      </g>
+    )
+  if (mood === 'cool')
+    return (
+      <>
+        <path d="M38 45 H65 L64 52 C63 57 56 57 55 52 L54 48.5 H49 L48 52 C47 57 40 57 39 52 Z" fill={K} />
+        <path d="M42 47 L45 47" stroke="#fff" strokeWidth="1.6" strokeLinecap="round" />
+      </>
+    )
+  return (
+    <>
+      <rect x="42.5" y="45" width="5.2" height="10.5" rx="2.6" fill={K} />
+      <rect x="55" y="45" width="5.2" height="10.5" rx="2.6" fill={K} />
+    </>
+  )
+}
+
+function Head({ colors, cy = 44, mood = 'dot', phones = false, cap = false }) {
+  const { hair, item } = colors
+  return (
+    <g transform={`translate(0 ${cy - 44})`}>
+      {!cap && <circle cx="71" cy="16" r="11.5" fill={hair} {...STROKE} />}
+      <path d="M26 48 C26 32 37 23 51 23 C65 23 76 32 76 48 C76 61 65 68 51 68 C37 68 26 61 26 48 Z" fill="#fff" {...STROKE} />
+      <path
+        d="M26 57 C20 32 34 15 52 15 C71 15 84 30 79 55 C78 62 74 66 70 67 C71 55 66 45 57 40 C50.5 36.5 47 32 47 26 C41.5 31 36 37 33 45 C31 50 30.5 54 30.5 58 C29 58.5 27 58 26 57 Z"
+        fill={hair}
+        {...STROKE}
+      />
+      <Eyes mood={mood} />
+      {phones && (
+        <>
+          <path d="M25 53 C19 13 83 11 77 51" fill="none" stroke={K} strokeWidth="7" strokeLinecap="round" />
+          {item !== K && <path d="M25 53 C19 13 83 11 77 51" fill="none" stroke={item} strokeWidth="3.2" strokeLinecap="round" />}
+          <circle cx="77.5" cy="54" r="7.5" fill={item} {...STROKE} />
+          <circle cx="24.5" cy="54" r="10" fill={item} {...STROKE} />
+          <path d={starPath(24.5, 54, 5.6)} fill={darkColor(item) ? '#fff' : K} />
+        </>
+      )}
+      {cap && (
+        <>
+          <path d="M33 21 H69 V30 C60 27 42 27 33 30 Z" fill={K} {...STROKE} />
+          <path d="M51 3 L90 15 L51 27 L12 15 Z" fill={K} {...STROKE} />
+          <path d="M51 15 L81 19 L81 33" fill="none" stroke={YELLOW} strokeWidth="2.8" strokeLinecap="round" />
+          <path d={starPath(81, 37, 5)} fill={YELLOW} {...STROKE} strokeWidth={1.4} />
+        </>
+      )}
+    </g>
+  )
+}
+
+const Shadow = () => <ellipse cx="50" cy="97.5" rx="24" ry="2.6" fill="rgb(0 0 0 / 13%)" />
+const Legs = () => (
+  <g {...STROKE}>
+    <rect x="40" y="86" width="8" height="7" rx="2" fill={K} />
+    <rect x="53" y="86" width="8" height="7" rx="2" fill={K} />
+    <path d="M35 96.5 C35 91 39 90.5 44.5 91.5 C48.5 92.5 48 96.5 44 96.5 Z" fill="#fff" />
+    <path d="M66 96.5 C66 91 62 90.5 56.5 91.5 C52.5 92.5 53 96.5 57 96.5 Z" fill="#fff" />
+  </g>
+)
+const Torso = ({ top }) => (
+  <>
+    <path d="M31 89 C29 74 38 64 50.5 64 C63 64 72 74 70 89 Z" fill={top} {...STROKE} />
+    <path d="M42.5 66 Q50.5 72 58.5 66" fill="none" stroke={darkColor(top) ? '#fff' : K} strokeWidth="2.4" strokeLinecap="round" />
+  </>
+)
+const Book = () => (
+  <>
+    <path d="M22 73 C32 67.5 44 69 50.5 76.5 C57 69 69 67.5 79 73 L79 93 C69 89 57 90 50.5 97 C44 90 32 89 22 93 Z" fill={K} {...STROKE} />
+    <path
+      d="M25 71.5 C34 67 45 68.5 50.5 75 C56 68.5 67 67 76 71.5 L76 74 C67 70 57 71.5 50.5 78.5 C44 71.5 34 70 25 74 Z"
+      fill="#fff"
+      stroke={K}
+      strokeWidth="1.6"
+      strokeLinejoin="round"
+    />
+    <path d={starPath(64, 85, 5.5)} fill={YELLOW} />
+    <Hand x={20} y={88} r={7} />
+    <Hand x={81} y={88} r={7} />
+  </>
+)
+
+function Pose({ pose, mood, colors, clipId }) {
+  switch (pose) {
+    case 'peek':
+      return (
+        <>
+          <defs>
+            <clipPath id={clipId}>
+              <rect x="0" y="0" width="100" height="82" />
+            </clipPath>
+          </defs>
+          <g clipPath={`url(#${clipId})`}>
+            <Head colors={colors} cy={66} mood={mood} />
+          </g>
+          <path d="M8 82 H92" stroke={K} strokeWidth="3.4" strokeLinecap="round" />
+          <Mark x={80} y={42}>?</Mark>
+        </>
+      )
+    case 'book':
+      return (
+        <>
+          <Head colors={colors} cy={42} mood={mood} />
+          <Book />
+          <Pop x={10} y={22} />
+        </>
+      )
+    case 'chat':
+      return (
+        <>
+          <Head colors={colors} cy={41} mood={mood} phones />
+          <rect x="25" y="68" width="51" height="25" rx="4" fill="#e3e3e3" {...STROKE} />
+          <path d={starPath(50.5, 80.5, 6)} fill={YELLOW} {...STROKE} strokeWidth={1.4} />
+          <path d="M17 93 H84 L80 98 H21 Z" fill="#cfcfcf" {...STROKE} />
+          <Hand x={23} y={90} r={6.5} />
+          <Hand x={78} y={90} r={6.5} />
+        </>
+      )
+    case 'cheer':
+      return (
+        <>
+          <Shadow />
+          <Legs />
+          <Arm d="M65 72 C71 65 75 57 77 49" top={colors.top} />
+          <Torso top={colors.top} />
+          <Arm d="M36 72 C30 75 29 81 31 84" top={colors.top} />
+          <Hand x={31} y={85} r={5.5} />
+          <Hand x={78} y={46} />
+          <Head colors={colors} cy={36} mood={mood === 'dot' ? 'joy' : mood} phones />
+          <Sparkle x={90} y={30} r={5.5} />
+          <Sparkle x={11} y={64} r={4} />
+          <Pop x={4} y={20} s={0.9} />
+        </>
+      )
+    case 'doctor':
+      return (
+        <>
+          <Shadow />
+          <Legs />
+          <Torso top={colors.top} />
+          <Head colors={colors} cy={36} mood={mood === 'dot' ? 'joy' : mood} cap />
+          <rect x="26" y="74" width="49" height="10" rx="5" fill="#fff6dc" {...STROKE} />
+          <path d="M50.5 74 V84" stroke="#e2574c" strokeWidth="3.6" />
+          <Hand x={27} y={79} />
+          <Hand x={74} y={79} />
+          <Sparkle x={90} y={56} r={5.5} />
+          <Sparkle x={10} y={46} r={4.5} />
+        </>
+      )
+    default:
+      return (
+        <>
+          <Head colors={colors} cy={48} mood={mood === 'curious' ? 'dot' : mood} />
+          {mood === 'joy' && (
+            <>
+              <Sparkle x={88} y={34} r={5.5} />
+              <Sparkle x={12} y={74} r={4} />
+            </>
+          )}
+          {mood === 'curious' && <Mark x={84} y={38}>?</Mark>}
+          {mood === 'sleepy' && (
+            <>
+              <Mark x={83} y={34} size={14}>Z</Mark>
+              <Mark x={91} y={23} size={10}>z</Mark>
+            </>
+          )}
+          {mood === 'cool' && <Pop x={6} y={26} />}
+        </>
+      )
+  }
+}
+
+export const DANI_POSES = ['peek', 'book', 'chat', 'cheer', 'doctor']
+
+export default function Dani({ pose = 'face', mood = 'dot', colors = DEFAULT_DANI, size = 96, className = 'dani' }) {
+  const clipId = useId().replace(/:/g, '')
+  return (
+    <svg className={className} aria-hidden="true" width={size} height={size} viewBox="0 0 100 100">
+      <Pose pose={pose} mood={mood} colors={{ ...DEFAULT_DANI, ...colors }} clipId={clipId} />
+    </svg>
+  )
+}

@@ -138,7 +138,8 @@ test.describe('모든 화면', () => {
     await page.getByRole('radio', { name: '어둡게' }).check()
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
     const background = () => page.evaluate(() => getComputedStyle(document.body).backgroundColor)
-    expect(await background()).toBe('rgb(58, 46, 41)')
+    // 다니 테마의 어두운 바탕(#1a1814)
+    expect(await background()).toBe('rgb(26, 24, 20)')
     await page.reload()
     await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
     await page.getByRole('button', { name: /화면 테마/ }).click()
@@ -522,15 +523,15 @@ test('일기에 쓴 내 표현과 오늘의 표현을 찾고, 홈의 도장과 �
   await seedRecords(page)
   await open(page, 'journal')
 
-  // 오늘의 표현은 날마다 바뀌므로 화면에 보이는 표현을 읽어 그대로 써 본다.
+  // 오늘의 표현은 날마다, 그리고 고른 기분에 따라 바뀐다(공부 목적을 고르지 않았으면 일상 표현 중에서).
+  // 기분을 먼저 고른 뒤 보이는 표현을 그대로 써 본다.
   const mission = page.locator('.today-mission')
   await expect(mission).toContainText('오늘의 표현, 일기에 한번 써 볼까요?')
-  const phrase = (await mission.locator('b').textContent()).replace(/[.!?]+$/, '')
-
   await page
     .locator('.mood-chips')
     .getByRole('button', { name: /^happy/ })
     .click()
+  const phrase = (await mission.locator('b').textContent()).replace(/[.!?]+$/, '')
   await page.getByLabel('우리말로 쓰기').fill('친구들이랑 놀았다.')
   await page.getByLabel('영어로 옮겨 보기').fill(`I hang out with my friends. ${phrase}.`)
   await expect(page.locator('.usage-box .usage-line')).toContainText('hang out')
@@ -562,7 +563,7 @@ test('첫 실행 안내: 단계를 고르고, 표현을 담고, 기분과 한 �
   await page.getByRole('button', { name: /^중급/ }).click()
   await page.getByRole('button', { name: '다음' }).click()
 
-  await expect(page.getByRole('heading', { name: '마음에 드는 표현을 담아 보세요' })).toBeFocused()
+  await expect(page.getByRole('heading', { name: '마음에 드는 말을 담아 보세요' })).toBeFocused()
   await page.getByRole('button', { name: /^hang out/ }).click()
   await page.getByRole('button', { name: /^Pretty good/ }).click()
   await expect(page.getByText('2개 골랐어요')).toBeVisible()
@@ -982,7 +983,7 @@ test('단어 꾸러미: 단계와 범위를 골라 담은 단어가 단어장에
   await open(page, 'words')
   await page.getByRole('button', { name: '단어 꾸러미에서 고르기' }).click()
   await expect(page.getByRole('heading', { name: '단어 꾸러미', level: 1 })).toBeVisible()
-  await expect(page.getByRole('button', { name: '단어 600개' })).toHaveAttribute('aria-pressed', 'true')
+  await expect(page.getByRole('button', { name: '단어 967개' })).toHaveAttribute('aria-pressed', 'true')
   await expect(page.getByRole('button', { name: '초급' })).toHaveAttribute('aria-pressed', 'true')
   await expect(page.locator('.pack-panel .expression-card')).toHaveCount(50)
 
@@ -1004,7 +1005,7 @@ test('단어 꾸러미: 단계와 범위를 골라 담은 단어가 단어장에
   await page.getByRole('button', { name: '중급' }).click()
   await expect(page.getByRole('button', { name: '1–50' })).toHaveAttribute('aria-pressed', 'true')
 
-  await page.getByRole('button', { name: '표현 589개' }).click()
+  await page.getByRole('button', { name: '표현 727개' }).click()
   await expect(page.getByRole('heading', { name: '표현 꾸러미', level: 1 })).toBeVisible()
 
   await open(page, 'words')
@@ -1502,7 +1503,8 @@ test.describe('로그인 화면', () => {
     await expect(page.getByRole('button', { name: 'Sam 연인 · 오늘 받은 문장이 있어요' })).toBeVisible()
 
     // 반응을 남기고(다시 누르면 지운다), 아직 안 보낸 상대에게 한 번에 답한다.
-    const heart = feed.getByRole('button', { name: '좋아요', exact: true })
+    // 반응은 다니 이모티콘: 보이는 글자(love it)와 화면 읽기용 뜻(좋아요)이 함께 이름이 된다
+    const heart = feed.getByRole('button', { name: 'love it 좋아요', exact: true })
     await heart.click()
     await expect(heart).toHaveAttribute('aria-pressed', 'true')
     expect(db.reactions).toEqual([{ sentence_id: 1, kind: 'heart', user_id: ME }])
@@ -1645,7 +1647,7 @@ test.describe('로그인 화면', () => {
 
   test('처음 온 사람은 앱 소개를 보고 로그인 없이 써 볼 수 있고, 나중에 로그인하러 갈 수 있다', async ({ page }) => {
     await page.goto(AUTH_URL)
-    await expect(page.getByRole('heading', { name: '외국인 친구·연인과 나눈 말이 내 단어장이 되는 곳' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Your world. Your words.' })).toBeVisible()
     await page.getByRole('button', { name: '로그인 없이 먼저 써 보기' }).click()
     await expect(page.locator('main h1')).toBeVisible()
     await page.goto(`${AUTH_URL}#words`)

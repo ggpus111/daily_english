@@ -11,11 +11,18 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from analyze import DATA  # noqa: E402
+from analyze import DATA, TOKEN, inflections  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "src" / "data" / "en" / "words.json"
-LEVELS = [("beginner", "초급", "Beginner"), ("intermediate", "중급", "Intermediate")]
+LEVELS = [("beginner", "초급", "Beginner"), ("intermediate", "중급", "Intermediate"), ("advanced", "고급", "Advanced")]
+# 교육과정 어휘 말고 따로 쓴 단계(words_draft.json의 키, id 앞 글자). 예문은 직접 썼다.
+# talk: 실제 대화에서 받아 적은 단어, business·study: 첫 실행에서 고른 목적(비즈니스·학업)에 맞춰 추천하는 단어
+EXTRA_LEVELS = [
+    ("talk", "t", "talk_words", "대화에서 배운 단어", "Words from real talk"),
+    ("business", "w", "business_words", "비즈니스 단어", "Work words"),
+    ("study", "s", "study_words", "학업 단어", "Study words"),
+]
 
 
 def main():
@@ -48,15 +55,40 @@ def main():
             }
         )
 
+    extra = [(level, prefix, ko, en, draft.get(key, [])) for level, prefix, key, ko, en in EXTRA_LEVELS]
+    extra = [entry for entry in extra if entry[4]]
+    if extra:
+        # 말뭉치(Tatoeba 영어 문장)에 몇 문장 나오는지 센다. 하이픈 말(self-esteem)은 낱말 두 개가 이어 나오는지 본다.
+        words = [word for *_, items in extra for word, *_ in items]
+        targets = [[form.split("-") for form in sorted(inflections(word.lower()))] if "-" not in word else [word.lower().split("-")]
+                   for word in words]
+        counts = [0] * len(words)
+        with open(DATA / "eng_sentences.txt", encoding="utf-8") as file:
+            for line in file:
+                joined = " " + " ".join(TOKEN.findall(line.lower())) + " "
+                for number, forms in enumerate(targets):
+                    if any(" " + " ".join(parts) + " " in joined for parts in forms):
+                        counts[number] += 1
+        offset = 0
+        for level, prefix, _, _, items in extra:
+            levels[level] = [
+                {"id": f"{prefix}{index + 1:03d}", "word": word, "meaning": meaning, "example": example,
+                 "exampleKo": example_ko, "tatoeba": None, "sentences": counts[offset + index]}
+                for index, (word, meaning, example, example_ko) in enumerate(items)
+            ]
+            offset += len(items)
+            own += len(items)
+
     data = {
         "source": {
-            "words": "2022 개정 영어과 교육과정 기본 어휘(초등 권장 300, 공통 권장 300)",
+            "words": "2022 개정 영어과 교육과정 기본 어휘(초등 권장 300, 공통 권장 300, 고등 선택 300), 실제 대화에서 받아 적은 단어, 일·공부에서 자주 쓰는 단어",
             "order": "Tatoeba 영어 문장에 나온 횟수가 많은 순",
             "examples": "Tatoeba (tatoeba.org) 영어-한국어 문장, CC BY 2.0 FR",
             "sentences": sentences_total,
             "note": "뜻은 Daily English가 직접 썼고, 예문은 Tatoeba 문장(번호 표시)이거나 직접 쓴 문장입니다.",
         },
-        "levels": [{"id": level, "title": {"ko": ko, "en": en}, "items": levels[level]} for level, ko, en in LEVELS],
+        "levels": [{"id": level, "title": {"ko": ko, "en": en}, "items": levels[level]}
+                   for level, ko, en in LEVELS + [(level, ko, en) for level, _, ko, en, _ in extra]],
     }
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     sizes = {level: len(items) for level, items in levels.items()}
