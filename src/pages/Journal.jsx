@@ -173,7 +173,7 @@ export default function Journal() {
           />
           {
             <div className="usage-box">
-              <TodayMission sentence={form.translation} />
+              <TodayMission sentence={form.translation} mood={form.mood} />
               <UsageLine sentence={form.translation} live />
             </div>
           }

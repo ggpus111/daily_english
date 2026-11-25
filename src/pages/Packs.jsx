@@ -9,6 +9,7 @@ import { openExternal } from '../lib/native'
 import { START_LEVEL_KEY } from '../components/Onboarding'
 import { languageName } from '../lib/i18n'
 import { TALK_PACKS, chunks, hasPackData, isSaved } from '../lib/packs'
+import { PURPOSE_PACKS, purposePack, purposeWordLevel, readPurpose } from '../lib/purpose'
 import { isNative } from '../lib/platform'
 import { local } from '../lib/storage'
 
@@ -20,7 +21,7 @@ const MODES = {
     title: 'packs',
     intro: 'packsIntro',
     tab: 'packKindExpressions',
-    count: 589,
+    count: 727,
   },
   words: {
     page: 'packs-words',
@@ -28,7 +29,7 @@ const MODES = {
     title: 'packsWordsTitle',
     intro: 'packsWordsIntro',
     tab: 'packKindWords',
-    count: 600,
+    count: 967,
   },
   grammar: {
     page: 'packs-grammar',
@@ -36,7 +37,7 @@ const MODES = {
     title: 'packsGrammarTitle',
     intro: 'packsGrammarIntro',
     tab: 'packKindGrammar',
-    count: 48,
+    count: 61,
   },
 }
 const PLAIN = { expressions: 'packKindExpressionsPlain', words: 'packKindWordsPlain', grammar: 'packKindGrammarPlain' }
@@ -146,9 +147,15 @@ function GroupTabs({ groups, current, onPick, label, heading }) {
   )
 }
 
+const WORK_STUDY_PACKS = Object.values(PURPOSE_PACKS)
+
 function ExpressionPacks({ data }) {
   const { t, nativeLang, records } = useApp()
-  const [packId, setPackId] = useState(data.groups[0].id)
+  // 공부 목적이 비즈니스·학업이면 그 꾸러미부터 연다.
+  const [packId, setPackId] = useState(() => {
+    const preferred = purposePack(readPurpose())
+    return data.groups.some((group) => group.id === preferred) ? preferred : data.groups[0].id
+  })
   const pack = data.groups.find((item) => item.id === packId)
   const savedCount = pack.items.filter((item) => isSaved(item, records.expression)).length
 
@@ -162,8 +169,17 @@ function ExpressionPacks({ data }) {
         label={t('packsTalkGroup')}
         heading={t('packsTalkGroup')}
       />
+      {data.groups.some((group) => WORK_STUDY_PACKS.includes(group.id)) && (
+        <GroupTabs
+          groups={data.groups.filter((group) => WORK_STUDY_PACKS.includes(group.id))}
+          current={packId}
+          onPick={setPackId}
+          label={t('packsPurposeGroup')}
+          heading={t('packsPurposeGroup')}
+        />
+      )}
       <GroupTabs
-        groups={data.groups.filter((group) => !TALK_PACKS.includes(group.id))}
+        groups={data.groups.filter((group) => !TALK_PACKS.includes(group.id) && !WORK_STUDY_PACKS.includes(group.id))}
         current={packId}
         onPick={setPackId}
         label={t('packsDailyGroup')}
@@ -186,9 +202,9 @@ function ExpressionPacks({ data }) {
 
 function WordPacks({ data }) {
   const { t, nativeLang, records } = useApp()
-  // 첫 실행 안내에서 고른 단계부터 보여 준다.
+  // 공부 목적이 비즈니스·학업이면 그 단어 단계부터, 아니면 첫 실행 안내에서 고른 수준부터 보여 준다.
   const [levelId, setLevelId] = useState(() => {
-    const saved = local.get(START_LEVEL_KEY)
+    const saved = purposeWordLevel(readPurpose()) ?? local.get(START_LEVEL_KEY)
     return data.groups.some((group) => group.id === saved) ? saved : data.groups[0].id
   })
   const [chunkIndex, setChunkIndex] = useState(0)

@@ -16,9 +16,10 @@ const expressions = await loadPackData('expressions')
 const words = await loadPackData('words')
 
 describe('표현 꾸러미 데이터', () => {
-  const TALK = ['love', 'miss', 'text', 'slang', 'chat', 'tease', 'date', 'call', 'fight', 'care', 'react', 'culture']
+  // 대화 원고(talk_draft.json)의 꾸러미: 연인·친구 대화 13개와 일·공부 2개
+  const TALK = ['love', 'miss', 'text', 'slang', 'chat', 'know', 'tease', 'date', 'call', 'fight', 'care', 'react', 'culture', 'work', 'study']
 
-  it('연인·친구 대화 꾸러미 12개가 앞에 오고, 처음 만든 일상 꾸러미 10개(400개)가 뒤에 있다', () => {
+  it('연인·친구 대화 13개와 일·공부 꾸러미 2개가 앞에 오고, 처음 만든 일상 꾸러미 10개(400개)가 뒤에 있다', () => {
     expect(expressions.groups.map((group) => group.id).slice(0, TALK.length)).toEqual(TALK)
     const base = expressions.groups.slice(TALK.length)
     expect(base).toHaveLength(10)
@@ -83,13 +84,17 @@ describe('다른 언어 꾸러미(일본어, 중국어, 스페인어, 프랑스�
 })
 
 describe('단어 꾸러미 데이터', () => {
-  it('초급 300개, 중급 300개이고 단어와 id가 겹치지 않는다', () => {
+  it('초급·중급·고급 300개씩, 대화에서 배운 단어 23개, 비즈니스·학업 단어 22개씩이고 단어와 id가 겹치지 않는다', () => {
     expect(words.groups.map((group) => [group.id, group.items.length])).toEqual([
       ['beginner', 300],
       ['intermediate', 300],
+      ['advanced', 300],
+      ['talk', 23],
+      ['business', 22],
+      ['study', 22],
     ])
-    expect(new Set(words.items.map((item) => item.id)).size).toBe(600)
-    expect(new Set(words.items.map((item) => item.text)).size).toBe(600)
+    expect(new Set(words.items.map((item) => item.id)).size).toBe(967)
+    expect(new Set(words.items.map((item) => item.text)).size).toBe(967)
   })
 
   it('모든 단어에 뜻과 한영 예문이 있고, 예문에 그 단어가 들어 있다', () => {
@@ -232,11 +237,11 @@ describe('오늘의 기분', () => {
 })
 
 describe('문법 꾸러미(영어)', () => {
-  it('주제 6개, 48개이고 모든 항목에 문법·설명·예문·해석이 있으며 번호가 겹치지 않는다', async () => {
+  it('주제 7개, 61개이고 모든 항목에 문법·설명·예문·해석이 있으며 번호가 겹치지 않는다', async () => {
     const { default: data } = await import('../data/en/grammar.json')
-    expect(data.packs).toHaveLength(6)
+    expect(data.packs).toHaveLength(7)
     const items = data.packs.flatMap((pack) => pack.items)
-    expect(items).toHaveLength(48)
+    expect(items).toHaveLength(61)
     expect(new Set(items.map((item) => item.id)).size).toBe(items.length)
     for (const item of items) {
       for (const field of ['text', 'meaning', 'example', 'exampleNative'])

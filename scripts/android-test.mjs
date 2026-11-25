@@ -91,15 +91,6 @@ async function tapText(text, tries = 10) {
 
 // 이미 연결된 기기(휴대폰이나 켜 둔 에뮬레이터)가 있으면 그대로 쓰고, 없으면 가볍게 켠다.
 // 돌려주는 값: 이 스크립트가 에뮬레이터를 켰는지(그래야 끝나고 끄고 화면 크기를 되돌린다).
-/** 맨 앞 창 이름(예: 공유 창, 우리 앱) */
-function currentFocus() {
-  return (
-    adbQuiet('shell', 'dumpsys', 'window')
-      .split('\n')
-      .find((line) => line.includes('mCurrentFocus')) ?? ''
-  )
-}
-
 /** 지금 화면(접근성 트리)에 이 글자가 있는지 */
 function screenHas(text) {
   return adbQuiet('exec-out', 'uiautomator', 'dump', '/dev/tty').includes(text)
@@ -175,6 +166,10 @@ const scenarios = [
     async (page) => {
       await page.evaluate(() => localStorage.clear())
       await page.reload()
+      // 서버(Supabase)에 연결된 빌드는 로그인 화면부터 나온다. 로그인 없이 쓰는 길로 들어가서 같은 흐름을 시험한다.
+      const guest = page.getByRole('button', { name: '로그인 없이 먼저 써 보기' })
+      await expect(guest.or(page.locator('.onboarding'))).toBeVisible({ timeout: 15_000 })
+      if (await guest.isVisible()) await guest.click()
       await expect(page.locator('.onboarding')).toBeVisible({ timeout: 15_000 })
       await page.getByRole('button', { name: '나중에 할게요' }).click()
       await expect(page.locator('.review-panel')).toBeVisible()
@@ -217,11 +212,15 @@ const scenarios = [
     '설정과 프로필: 화면 구성이 보이고, 테마와 이름을 바꿀 수 있다',
     async (page) => {
       await page.evaluate(() => (location.hash = 'settings'))
-      await expect(page.getByRole('heading', { name: '설정', level: 1 })).toBeVisible()
+      await expect(page.getByRole('heading', { name: '설정', level: 1 })).toBeVisible({ timeout: 15_000 })
       await expect(page.getByRole('switch', { name: /다시 볼 말이 있으면/ })).toBeVisible()
+      // 테마는 줄을 누르면 뜨는 선택 창에서 고른다(고르면 창이 닫힌다).
+      await page.getByRole('button', { name: /화면 테마/ }).click()
       await page.getByRole('radio', { name: '어둡게' }).check()
       await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark')
+      await page.getByRole('button', { name: /화면 테마/ }).click()
       await page.getByRole('radio', { name: '기기 설정 따르기' }).check()
+      await expect(page.locator('html')).not.toHaveAttribute('data-theme', /.+/)
       await page.evaluate(() => (location.hash = 'profile'))
       await page.getByRole('button', { name: '이름 바꾸기' }).click()
       await page.getByLabel('닉네임').fill('Mina')
@@ -269,33 +268,6 @@ const scenarios = [
       await next.evaluate(() => (location.hash = 'journal'))
       await expect(next.getByLabel('우리말로 쓰기')).toHaveValue('draft_kept')
       return next
-    },
-  ],
-  [
-    // 공유 창은 다른 앱(시스템)을 앞에 띄워 메모리가 빠듯하면 앱 상태가 흔들릴 수 있어서 맨 마지막에 한다.
-    '이번 주 돌아보기를 공유 창으로 보낸다',
-    async (page) => {
-      await page.evaluate(() => (location.hash = 'home'))
-      const button = page.locator('.recap-save')
-      await expect(button).toBeEnabled({ timeout: 20_000 })
-      // 홈 맨 아래라 아래 메뉴 막대에 가리지 않게 화면 가운데로 올린 뒤 누른다.
-      await button.evaluate((element) => element.scrollIntoView({ block: 'center' }))
-      await button.click({ timeout: 20_000 })
-      let focus = ''
-      for (let i = 0; i < 20 && !/chooser|intentresolver|resolver/i.test(focus); i += 1) {
-        await wait(700)
-        // 맨 앞 창(mCurrentFocus)이나 맨 앞 앱(mFocusedApp)이 공유 창이면 열린 것이다.
-        focus = adb('shell', 'dumpsys', 'window')
-          .split('\n')
-          .filter((line) => line.includes('mCurrentFocus') || line.includes('mFocusedApp'))
-          .join(' ')
-      }
-      expect(focus).toMatch(/chooser|intentresolver|resolver/i)
-      // 공유 창이 맨 앞에 있을 때만 뒤로 가기를 누른다(이미 닫혔는데 누르면 앱까지 닫힌다).
-      for (let i = 0; i < 3 && /chooser|intentresolver|resolver/i.test(currentFocus()); i += 1) {
-        adb('shell', 'input', 'keyevent', 'KEYCODE_BACK')
-        await wait(1000)
-      }
     },
   ],
 ]

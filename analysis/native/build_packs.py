@@ -1,6 +1,7 @@
 """표현 꾸러미 원고에 말뭉치 빈도를 붙여 앱 데이터(src/data/en/packs.json)를 만든다.
 
-- 원고 두 개: talk_draft.json(외국인 연인·친구와의 대화, 앞에 둠)과 packs_draft.json(처음 만든 일상 표현 400개).
+- 원고 두 개: talk_draft.json(외국인 연인·친구와의 대화와 일·공부 표현, 앞에 둠)과 packs_draft.json(처음 만든 일상 표현 400개).
+- talk_draft.json 항목의 8번째 칸(있으면)은 기분 묶음(good, love, calm, tired, worried, down)이다.
 - 두 원고에 같은 표현이 있으면 처음 원고 쪽만 남긴다(대화 원고 쪽을 빼고 목록으로 알려 줌).
 - 메시지 줄임말(text 꾸러미)은 Tatoeba에 거의 없어 빈도를 붙이지 않는다(talk_check.py가 wordfreq로 따로 확인).
 
@@ -84,7 +85,10 @@ def main():
 
     packs = {pack: [] for pack, _, _ in packs_meta}
     rare = []
-    for number, (pack, text, match, meaning, example, example_ko, tip) in enumerate(draft):
+    for number, row in enumerate(draft):
+        pack, text, match, meaning, example, example_ko, tip = row[:7]
+        # 8번째 칸(있으면): 기분 묶음. 일기에서 고른 기분에 맞춰 오늘의 표현을 고를 때 쓴다(src/lib/purpose.js).
+        moods = row[7] if len(row) > 7 else None
         words = TOKEN.findall(match.lower())
         count = counts[number]
         item = {
@@ -96,6 +100,8 @@ def main():
             "tip": tip,
             "easyWords": all(is_basic(word, basic) for word in words),
         }
+        if moods:
+            item["moods"] = moods
         if pack in NO_FREQUENCY:
             item["texting"] = True
         elif pack in talk_ids and count < MIN_COUNT:

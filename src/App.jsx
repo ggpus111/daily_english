@@ -1,6 +1,7 @@
 import { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import ErrorBoundary from './components/ErrorBoundary'
 import Icon from './components/Icon'
+import { DaniProvider } from './components/dani/DaniProvider'
 import Logo from './components/Logo'
 import { AppContext } from './context'
 import { useErrorReporting } from './hooks/useErrorReporting'
@@ -34,6 +35,7 @@ const Pro = lazy(() => import('./pages/Pro'))
 const Missed = lazy(() => import('./pages/Missed'))
 const Grammar = lazy(() => import('./pages/Grammar'))
 const AiHelper = lazy(() => import('./pages/AiHelper'))
+const DaniPage = lazy(() => import('./pages/DaniPage'))
 
 const NAV = ['home', 'words', 'expressions', 'packs', 'chats', 'journal', 'grammar', 'couple', 'helper', 'profile']
 const NAV_LABEL = { packs: 'navPacks', couple: 'navCouple', helper: 'navHelper' }
@@ -41,13 +43,15 @@ const NAV_LABEL = { packs: 'navPacks', couple: 'navCouple', helper: 'navHelper' 
 const MOBILE_TABS = new Set(['home', 'words', 'journal', 'couple'])
 const MORE = ['expressions', 'packs', 'chats', 'grammar', 'helper']
 const isCurrent = (page, id) => page === id || (id === 'packs' && page.startsWith('packs-'))
+// 브라우저 탭 제목: 화면 이름과 번역 키가 다른 화면만 적는다.
+const PAGE_TITLE_KEYS = { missed: 'missedTitle', 'packs-words': 'packsWordsTitle', 'packs-grammar': 'packsGrammarTitle', dani: 'daniPageTitle' }
 const TOAST_MS = 5000
 const TOAST_ACTION_MS = 8000
 
 function readPage() {
   const page = window.location.hash.slice(1)
   return NAV.includes(page) ||
-    ['privacy', 'pro', 'packs', 'packs-words', 'packs-grammar', 'admin', 'settings', 'missed'].includes(page)
+    ['privacy', 'pro', 'packs', 'packs-words', 'packs-grammar', 'admin', 'settings', 'missed', 'dani'].includes(page)
     ? page
     : 'home'
 }
@@ -182,7 +186,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
   }, [page, markCoupleSeen])
 
   useEffect(() => {
-    document.title = `${t(page)} · Daily English`
+    document.title = `${t(PAGE_TITLE_KEYS[page] ?? page)} · Daily English`
     if (previousPage.current !== page) mainRef.current?.focus({ preventScroll: true })
     previousPage.current = page
   }, [page, t])
@@ -244,6 +248,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
     missed: <Missed />,
     grammar: <Grammar />,
     helper: <AiHelper />,
+    dani: <DaniPage />,
     packs: <Packs key="expressions" mode="expressions" />,
     'packs-words': <Packs key="words" mode="words" />,
     'packs-grammar': <Packs key="grammar" mode="grammar" />,
@@ -251,6 +256,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
 
   return (
     <AppContext.Provider value={value}>
+      <DaniProvider>
       <button className="skip-link" onClick={() => mainRef.current?.focus()}>
         {t('skipToContent')}
       </button>
@@ -370,6 +376,7 @@ function Shell({ page, go, user, languages, t, notify, onLogin }) {
           </main>
         </div>
       </div>
+      </DaniProvider>
     </AppContext.Provider>
   )
 }

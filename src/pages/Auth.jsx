@@ -110,12 +110,27 @@ export default function Auth({ t, notify, recovering, onRecovered, onGuest }) {
       {!recovering && (
         <section className="auth-intro" aria-labelledby="auth-intro-title">
           <p className="eyebrow">DAILY ENGLISH</p>
-          <h2 id="auth-intro-title">{t('introTitle')}</h2>
-          <ul>
-            <li>{t('introPoint1')}</li>
-            <li>{t('introPoint2')}</li>
-            <li>{t('introPoint3')}</li>
-          </ul>
+          <h2 id="auth-intro-title" lang="en">
+            {/* 'Your world. Your words.'처럼 문장마다 한 줄로(읽는 이름은 그대로 한 문장) */}
+            {t('introTitle')
+              .split(/(?<=\.) /)
+              .map((line, index) => (
+                <span className="auth-intro-line" key={line}>
+                  {index > 0 && ' '}
+                  {line}
+                </span>
+              ))}
+          </h2>
+          <p className="auth-intro-sub">{t('introSub')}</p>
+          <p className="auth-intro-body">
+            {t('introBody')
+              .split('\n')
+              .map((line) => (
+                <span className="auth-intro-line" key={line}>
+                  {line}
+                </span>
+              ))}
+          </p>
           <button className="soft-button" onClick={onGuest}>
             {t('tryWithoutLogin')}
           </button>

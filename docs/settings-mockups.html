@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>설정 화면 시안</title>
+<style>
+  :root {
+    --bg: #f4f0eb; --surface: #fcfaf7; --white: #fff; --line: #ebe2d9; --ink: #3a2b22; --sub: #6d5a4d;
+    --accent: #d39a85; --accent-soft: #efe2da; --accent-ink: #a8492c; --danger: #b3402b;
+    --peach: #e8cfc2; --lilac: #dcd9e2; --sage: #d8ded4; --butter: #ebe3cf;
+    --font: 'Pretendard Variable', Pretendard, 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 24px 16px 48px; background: #e9e3dc; color: var(--ink); font-family: var(--font); }
+  h1 { font-size: 20px; margin: 0 0 4px; text-align: center; }
+  .lead { text-align: center; color: var(--sub); font-size: 14px; margin: 0 0 24px; }
+  .row { display: flex; flex-wrap: wrap; gap: 28px; justify-content: center; }
+  .option { width: 320px; }
+  .option > h2 { font-size: 15px; margin: 0 0 4px; }
+  .option > p { font-size: 12.5px; color: var(--sub); margin: 0 0 10px; min-height: 36px; }
+  .phone { background: var(--bg); border-radius: 26px; padding: 18px 14px 22px; box-shadow: 0 10px 30px rgb(80 50 30 / 18%); min-height: 640px; }
+  .title { font-size: 22px; font-weight: 800; margin: 4px 4px 12px; }
+  .sec { font-size: 12px; color: var(--sub); font-weight: 700; margin: 16px 6px 6px; }
+  .card { background: var(--white); border-radius: 16px; overflow: hidden; }
+  .item { display: flex; align-items: center; gap: 12px; padding: 12px 14px; font-size: 14.5px; border-top: 1px solid var(--line); }
+  .item:first-child { border-top: 0; }
+  .chip { width: 30px; height: 30px; border-radius: 9px; flex: none; }
+  .grow { flex: 1; min-width: 0; }
+  .val { color: var(--sub); font-size: 13px; }
+  .go::after { content: '›'; color: #a89a8f; font-size: 20px; margin-left: 4px; }
+  .switch { width: 42px; height: 24px; border-radius: 12px; background: #d6ccc3; position: relative; flex: none; }
+  .switch::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgb(0 0 0 / 25%); }
+  .switch.on { background: var(--accent); }
+  .switch.on::after { left: 21px; }
+  .profile { display: flex; align-items: center; gap: 12px; background: var(--white); border-radius: 16px; padding: 14px; }
+  .avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-ink); display: grid; place-items: center; font-weight: 800; font-size: 18px; }
+  .danger { color: var(--danger); }
+  .flat .item { border-radius: 0; background: transparent; }
+  .flat .card { background: transparent; border-radius: 0; border-top: 1px solid var(--line); }
+  .flat .item { padding: 14px 6px; }
+  .search { background: var(--white); border-radius: 14px; padding: 11px 14px; color: #9b8c80; font-size: 14px; margin-bottom: 14px; }
+  .tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .tile { background: var(--white); border-radius: 18px; padding: 14px; min-height: 104px; display: flex; flex-direction: column; justify-content: space-between; }
+  .tile b { font-size: 14.5px; display: block; }
+  .tile small { color: var(--sub); font-size: 12px; }
+  .note { max-width: 720px; margin: 28px auto 0; text-align: center; color: var(--sub); font-size: 13px; }
+</style>
+</head>
+<body>
+<h1>설정 화면 시안 3가지</h1>
+<p class="lead">지금 설정은 한 화면에 설명 글과 선택 칸이 길게 늘어선 형태예요. 아래 중 마음에 드는 방향을 골라 주세요.</p>
+
+<div class="row">
+  <!-- A -->
+  <section class="option">
+    <h2>A. 묶음 목록 (아이폰·갤럭시 설정 느낌)</h2>
+    <p>항목마다 색 칩과 현재 값을 한 줄로 보여 주고, 누르면 그 항목의 화면이 열려요.</p>
+    <div class="phone">
+      <div class="title">설정</div>
+      <div class="profile"><div class="avatar">M</div><div class="grow"><b>minji</b><div class="val">계정과 내 기록</div></div><span class="go"></span></div>
+      <div class="sec">알림</div>
+      <div class="card">
+        <div class="item"><span class="chip" style="background:var(--peach)"></span><span class="grow">복습 알림</span><span class="switch on"></span></div>
+        <div class="item"><span class="chip" style="background:var(--lilac)"></span><span class="grow">친구 새 문장 알림</span><span class="switch on"></span></div>
+        <div class="item"><span class="chip" style="background:var(--sage)"></span><span class="grow">알림 시간</span><span class="val">오후 9:00</span><span class="go"></span></div>
+      </div>
+      <div class="sec">학습</div>
+      <div class="card">
+        <div class="item"><span class="chip" style="background:var(--butter)"></span><span class="grow">배우는 언어</span><span class="val">영어</span><span class="go"></span></div>
+        <div class="item"><span class="chip" style="background:var(--peach)"></span><span class="grow">하루 목표</span><span class="val">5개</span><span class="go"></span></div>
+        <div class="item"><span class="chip" style="background:var(--lilac)"></span><span class="grow">화면 테마</span><span class="val">시스템</span><span class="go"></span></div>
+      </div>
+      <div class="sec">데이터</div>
+      <div class="card">
+        <div class="item"><span class="chip" style="background:var(--sage)"></span><span class="grow">백업·내보내기</span><span class="go"></span></div>
+        <div class="item"><span class="chip" style="background:var(--butter)"></span><span class="grow">도움말·문의</span><span class="go"></span></div>
+        <div class="item danger"><span class="chip" style="background:#f3d6cf"></span><span class="grow">로그아웃</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- B -->
+  <section class="option">
+    <h2>B. 담백한 줄 목록 (카카오톡·토스 느낌)</h2>
+    <p>카드 없이 구분선만 쓰는 깔끔한 목록. 색 칩이 없고 글자가 중심이에요.</p>
+    <div class="phone flat">
+      <div class="title">설정</div>
+      <div class="profile" style="background:transparent;padding:6px"><div class="avatar">M</div><div class="grow"><b>minji</b><div class="val">프로필 보기</div></div><span class="go"></span></div>
+      <div class="sec">알림</div>
+      <div class="card">
+        <div class="item"><span class="grow">복습 알림<div class="val">매일 오후 9:00</div></span><span class="switch on"></span></div>
+        <div class="item"><span class="grow">친구 새 문장 알림</span><span class="switch on"></span></div>
+      </div>
+      <div class="sec">학습</div>
+      <div class="card">
+        <div class="item"><span class="grow">배우는 언어</span><span class="val">영어</span><span class="go"></span></div>
+        <div class="item"><span class="grow">하루 목표</span><span class="val">5개</span><span class="go"></span></div>
+        <div class="item"><span class="grow">화면 테마</span><span class="val">시스템</span><span class="go"></span></div>
+      </div>
+      <div class="sec">기타</div>
+      <div class="card">
+        <div class="item"><span class="grow">백업·내보내기</span><span class="go"></span></div>
+        <div class="item"><span class="grow">도움말·문의</span><span class="go"></span></div>
+        <div class="item"><span class="grow danger">로그아웃</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- C -->
+  <section class="option">
+    <h2>C. 타일 + 검색 (앱 홈 느낌)</h2>
+    <p>큰 타일로 분류만 먼저 보여 주고, 누르면 그 분류의 목록이 열려요. 위쪽 검색으로 바로 찾기도 가능해요.</p>
+    <div class="phone">
+      <div class="title">설정</div>
+      <div class="search">설정 검색</div>
+      <div class="profile" style="margin-bottom:12px"><div class="avatar">M</div><div class="grow"><b>minji</b><div class="val">계정과 내 기록</div></div><span class="go"></span></div>
+      <div class="tiles">
+        <div class="tile" style="background:var(--peach)"><span class="chip" style="background:#fff8"></span><div><b>알림</b><small>복습, 친구 문장</small></div></div>
+        <div class="tile" style="background:var(--butter)"><span class="chip" style="background:#fff8"></span><div><b>학습</b><small>언어, 하루 목표</small></div></div>
+        <div class="tile" style="background:var(--lilac)"><span class="chip" style="background:#fff8"></span><div><b>화면</b><small>테마, 글자 크기</small></div></div>
+        <div class="tile" style="background:var(--sage)"><span class="chip" style="background:#fff8"></span><div><b>데이터</b><small>백업, 내보내기</small></div></div>
+        <div class="tile"><span class="chip" style="background:var(--accent-soft)"></span><div><b>도움말</b><small>사용법, 문의</small></div></div>
+        <div class="tile"><span class="chip" style="background:#f3d6cf"></span><div><b class="danger">로그아웃</b><small>계정</small></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<p class="note">세 가지 모두 지금 앱의 색(살구·베이지)과 글꼴을 그대로 쓰는 안이에요. 시안의 글자와 순서는 예시이고, 고른 뒤에 실제 항목에 맞게 다듬어요.</p>
+</body>
+</html>

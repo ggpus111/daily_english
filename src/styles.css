@@ -2378,6 +2378,27 @@ textarea {
   gap: 10px;
 }
 
+/* 첫 실행: 목적(셋)과 수준(둘)을 한 화면에서 고른다. 좁은 화면에서는 목적을 한 줄에 하나씩 */
+.onboard-question {
+  margin: 8px 0 0;
+  font-size: 1rem;
+}
+
+.onboard-choices.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (width < 520px) {
+  .onboard-choices.three {
+    grid-template-columns: 1fr;
+  }
+}
+
+.onboard-pick-kind {
+  color: var(--sub);
+  font-size: 0.75rem;
+}
+
 .onboard-choice,
 .onboard-pick {
   display: grid;
@@ -2527,15 +2548,24 @@ textarea {
 
 .auth-intro h2 {
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.35;
+  font-size: 1.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
-.auth-intro ul {
-  display: grid;
-  gap: 6px;
+.auth-intro-line {
+  display: block;
+}
+
+.auth-intro-sub {
+  margin: -4px 0 4px;
+  color: var(--card-ink-soft);
+  font-weight: 600;
+}
+
+.auth-intro-body {
   margin: 0;
-  padding-left: 18px;
+  line-height: 1.8;
 }
 
 .auth-intro .soft-button {

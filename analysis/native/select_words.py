@@ -1,6 +1,8 @@
 """단어 꾸러미 600개를 고르고, 단어마다 실제 한영 예문 후보를 붙인다.
 
-- 기준: 2022 개정 영어과 교육과정 기본 어휘. 초등 권장(*)에서 300개를 초급, 공통 권장(**)에서 300개를 중급으로.
+- 기준: 2022 개정 영어과 교육과정 기본 어휘. 초등 권장(*)에서 300개를 초급, 공통 권장(**)에서 300개를 중급,
+  표시가 없는 고등학교 선택과목 권장 어휘에서 300개를 고급으로. 고급은 words_draft.json의 따로 쓴 단계(대화·비즈니스·학업 단어)와
+  겹치는 낱말을 뺀다(같은 단어가 두 단계에 나오지 않게).
 - 목록의 괄호 속 파생어(hunger** (hungry), comfort** (comfortable))도 같은 단계의 후보로 넣는다.
 - 순서: Tatoeba 전체 문장에 나온 횟수와 "나를 말하는 문장"(I, my, we 같은 1인칭이 든 문장)에 나온 횟수의
   기하평균이 높은 순. Daily English는 내 하루와 기분을 기록하는 앱이라 내 이야기에 자주 쓰는 단어를 앞에 두되,
@@ -47,6 +49,13 @@ SKIP = set(
 DARK = set(
     "kill murder dead death die gun shoot war prison jail crime criminal drug attack enemy arrest steal blood bomb "
     "suicide weapon violent violence punish army military soldier battle victim terror terrorist murderer".split()
+)
+# 고급(고등학교 선택과목 어휘)에서만 더 빼는 낱말: 어둡거나 성적인 낱말, 속어로 오해받기 쉬운 낱말(suck, screw, weed, sack),
+# 종교·정치 낱말, 영국식 철자가 겹치는 낱말(behaviour는 behavior와 같음).
+ADVANCED_SKIP = set(
+    "naked torture drown abuse addict cancer funeral curse devil sin revenge nuclear explode haunt suck screw sack weed "
+    "grave starve bully seize religion worship priest holy democracy behaviour victim surgery horror monster rage "
+    "republic surrender capture declare liberty impose occupy obey flesh defeat victory".split()
 )
 # 뉴스·행정 낱말. 내 하루를 기록하는 데는 거의 쓰지 않는다.
 NEWS = set("government economy economic nation national political politics policy president tax industry election".split())
@@ -204,9 +213,12 @@ def main():
     def family(word):
         return DERIVED.get(word, word)
 
+    draft = json.loads((Path(__file__).parent / "words_draft.json").read_text(encoding="utf-8"))
+    extra_words = {row[0].lower() for key in ("talk_words", "business_words", "study_words") for row in draft.get(key, [])}
     result = []
-    for mark, level in ((1, "beginner"), (2, "intermediate")):
-        words = [word for word, value in levels.items() if value == mark and word not in SKIP | DARK | NEWS and len(word) > 1]
+    for mark, level in ((1, "beginner"), (2, "intermediate"), (0, "advanced")):
+        skip = SKIP | DARK | NEWS | (extra_words | ADVANCED_SKIP if level == "advanced" else set())
+        words = [word for word, value in levels.items() if value == mark and word not in skip and len(word) > 1]
         words.sort(key=score, reverse=True)
         picked, families = [], set()
         for word in words:

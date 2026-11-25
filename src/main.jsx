@@ -5,6 +5,8 @@ import { backupDraftOnPause, restoreDraft } from './lib/draftBackup'
 import { initErrorTracking } from './lib/errorLog'
 import { applyTheme, getTheme, watchSystemTheme } from './lib/theme'
 import './styles.css'
+// 다니 테마(로고에 맞춘 노랑·검정)는 기본 스타일 위에 덮어쓴다.
+import './theme-dani.css'
 
 // 처리하지 못한 오류를 모은다(오류 추적).
 initErrorTracking()

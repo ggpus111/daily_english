@@ -53,6 +53,9 @@
      "exampleKo": "넌 나한테 정말 소중해. 알아줬으면 좋겠어.",
      "tip": "친구에게 고마움을 진지하게 전할 때도 좋아요.",
      "easyWords": false,
+     "moods": [
+      "love"
+     ],
      "sentences": 49,
      "perMillion": 24.0
     },
@@ -86,6 +89,9 @@
      "exampleKo": "넌 항상 날 행복하게 해.",
      "tip": "",
      "easyWords": false,
+     "moods": [
+      "good"
+     ],
      "sentences": 130,
      "perMillion": 63.7
     },
@@ -97,6 +103,10 @@
      "exampleKo": "너 같은 사람이 있어서 정말 다행이야.",
      "tip": "연인, 친구, 가족 누구에게나 쓸 수 있어요.",
      "easyWords": true,
+     "moods": [
+      "good",
+      "love"
+     ],
      "sentences": 8,
      "perMillion": 3.9
     },
@@ -139,6 +149,9 @@
      "exampleKo": "오늘 계속 네 생각만 나.",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "love"
+     ],
      "sentences": 6,
      "perMillion": 2.9
     },
@@ -212,6 +225,10 @@
      "exampleKo": "너무 보고 싶어.",
      "tip": "miss는 '놓치다'도 되지만 사람에게 쓰면 '보고 싶다'예요.",
      "easyWords": true,
+     "moods": [
+      "love",
+      "down"
+     ],
      "sentences": 372,
      "perMillion": 182.3
     },
@@ -232,6 +249,9 @@
      "exampleKo": "3일만 더! 빨리 보고 싶어.",
      "tip": "can't wait는 '너무 기대돼'라는 뜻이에요.",
      "easyWords": true,
+     "moods": [
+      "love"
+     ],
      "sentences": 13,
      "perMillion": 6.4
     },
@@ -243,6 +263,9 @@
      "exampleKo": "너 오는 날만 손꼽아 기다려.",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "love"
+     ],
      "sentences": 5,
      "perMillion": 2.5
     },
@@ -254,6 +277,9 @@
      "exampleKo": "경치 너무 예뻐. 네가 여기 있으면 좋을 텐데.",
      "tip": "wish 뒤에는 were를 써서 '그렇지 않아서 아쉽다'는 느낌을 내요.",
      "easyWords": true,
+     "moods": [
+      "love"
+     ],
      "sentences": 9,
      "perMillion": 4.4
     },
@@ -265,6 +291,10 @@
      "exampleKo": "그냥 네 생각 나서. 오늘 잘 보내고 있지?",
      "tip": "힘든 일을 겪는 친구에게 위로로도 써요.",
      "easyWords": true,
+     "moods": [
+      "love",
+      "calm"
+     ],
      "sentences": 19,
      "perMillion": 9.3
     },
@@ -286,7 +316,10 @@
      "example": "This cafe is not the same without you.",
      "exampleKo": "너 없으니까 이 카페도 허전하다.",
      "tip": "",
-     "easyWords": true
+     "easyWords": true,
+     "moods": [
+      "down"
+     ]
     },
     {
      "id": "miss-09",
@@ -304,7 +337,10 @@
      "example": "Rough day? Sending you a big hug.",
      "exampleKo": "힘든 하루였어? 멀리서 꼭 안아 줄게.",
      "tip": "직접 안아 줄 수 없을 때 메시지로 쓰는 말이에요.",
-     "easyWords": true
+     "easyWords": true,
+     "moods": [
+      "down"
+     ]
     },
     {
      "id": "miss-11",
@@ -314,6 +350,9 @@
      "exampleKo": "일할 때도 늘 네 생각뿐이야.",
      "tip": "",
      "easyWords": false,
+     "moods": [
+      "love"
+     ],
      "sentences": 68,
      "perMillion": 33.3
     },
@@ -347,6 +386,9 @@
      "exampleKo": "이번 주말에 너 보고 싶어.",
      "tip": "I miss you는 그리움, I want to see you는 '만나고 싶다'에 가까워요.",
      "easyWords": true,
+     "moods": [
+      "love"
+     ],
      "sentences": 249,
      "perMillion": 122.0
     }
@@ -1249,6 +1291,64 @@
      "exampleKo": "자, 얘기해 봐. 무슨 일이었어?",
      "tip": "tea는 가십이에요. 친구끼리 재밌는 소식을 들을 때 써요.",
      "easyWords": true
+    },
+    {
+     "id": "slang-67",
+     "text": "Shoot your shot.",
+     "meaning": "용기 내서 들이대 봐",
+     "example": "You like her? Just shoot your shot.",
+     "exampleKo": "걔 좋아해? 그냥 용기 내서 말해 봐.",
+     "tip": "고백, DM, 데이트 신청처럼 기회를 잡아 보라는 말이에요. 친구끼리만 써요.",
+     "easyWords": true
+    },
+    {
+     "id": "slang-68",
+     "text": "He slid into my DMs.",
+     "meaning": "걔가 DM으로 먼저 말 걸었어",
+     "example": "Guess what? He slid into my DMs last night.",
+     "exampleKo": "있잖아, 걔가 어젯밤에 DM으로 먼저 말 걸었어.",
+     "tip": "slide into someone's DMs는 호감이 있어서 인스타 같은 데로 먼저 메시지를 보내는 거예요.",
+     "easyWords": false
+    },
+    {
+     "id": "slang-69",
+     "text": "You're tripping.",
+     "meaning": "너 괜히 오바한다",
+     "example": "You're tripping. I wasn't even mad.",
+     "exampleKo": "너 괜히 오바한다. 나 화도 안 났어.",
+     "tip": "trip은 원래 '걸려 넘어지다'인데, 말할 때는 '괜히 예민하게 군다'는 뜻으로 써요. trippin'으로 줄여요.",
+     "easyWords": true
+    },
+    {
+     "id": "slang-70",
+     "text": "He kind of fell off.",
+     "meaning": "걔 좀 한물갔어",
+     "example": "That rapper used to be huge, but he kind of fell off.",
+     "exampleKo": "그 래퍼 예전엔 엄청 잘나갔는데 좀 한물갔어.",
+     "tip": "인기나 실력이 떨어졌을 때 써요. 본인 앞에서 쓰면 무례해요.",
+     "easyWords": true,
+     "sentences": 264,
+     "perMillion": 129.4
+    },
+    {
+     "id": "slang-71",
+     "text": "I've been hustling.",
+     "meaning": "요즘 빡세게 일하고 있어",
+     "example": "I've been hustling all week to save for the trip.",
+     "exampleKo": "여행 경비 모으려고 이번 주 내내 빡세게 일했어.",
+     "tip": "side hustle은 '부업'이에요.",
+     "easyWords": false
+    },
+    {
+     "id": "slang-72",
+     "text": "I'm tired of my nine-to-five.",
+     "meaning": "회사 생활 지겨워",
+     "example": "I'm tired of my nine-to-five. I want to travel.",
+     "exampleKo": "회사 생활 지겨워. 여행 가고 싶어.",
+     "tip": "nine-to-five는 9시 출근, 5시 퇴근하는 평범한 회사 일을 말해요.",
+     "easyWords": true,
+     "sentences": 16,
+     "perMillion": 7.8
     }
    ]
   },
@@ -1267,6 +1367,9 @@
      "exampleKo": "이번 주말에 뭐 해?",
      "tip": "지금 뭐 하는지, 또는 계획이 뭔지 물을 때 둘 다 써요.",
      "easyWords": true,
+     "moods": [
+      "calm"
+     ],
      "sentences": 24,
      "perMillion": 11.8
     },
@@ -1289,6 +1392,9 @@
      "exampleKo": "별거 없어, 집에서 쉬는 중.",
      "tip": "What's up?에 대한 가장 흔한 대답이에요.",
      "easyWords": true,
+     "moods": [
+      "calm"
+     ],
      "sentences": 259,
      "perMillion": 126.9
     },
@@ -1311,6 +1417,9 @@
      "exampleKo": "고양이랑 그냥 쉬는 중이야.",
      "tip": "chill은 '느긋하게 쉬다'예요.",
      "easyWords": true,
+     "moods": [
+      "calm"
+     ],
      "sentences": 7,
      "perMillion": 3.4
     },
@@ -1386,6 +1495,9 @@
      "exampleKo": "오늘 길었지? 목소리가 피곤해 보여.",
      "tip": "long day는 일이 많아 길게 느껴진 하루예요.",
      "easyWords": true,
+     "moods": [
+      "tired"
+     ],
      "sentences": 74,
      "perMillion": 36.3
     },
@@ -1439,6 +1551,9 @@
      "exampleKo": "일은 늘 똑같지 뭐.",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "calm"
+     ],
      "sentences": 35,
      "perMillion": 17.2
     },
@@ -1452,6 +1567,173 @@
      "easyWords": true,
      "sentences": 33,
      "perMillion": 16.2
+    },
+    {
+     "id": "chat-19",
+     "text": "Aside from that, everything was fine.",
+     "meaning": "그거 말고는 다 괜찮았어",
+     "example": "The hotel was a bit noisy. Aside from that, everything was fine.",
+     "exampleKo": "호텔이 좀 시끄러웠어. 그거 말고는 다 괜찮았어.",
+     "tip": "apart from that도 같은 뜻이에요.",
+     "easyWords": true,
+     "sentences": 7,
+     "perMillion": 3.4
+    },
+    {
+     "id": "chat-20",
+     "text": "Overall, I had a good time.",
+     "meaning": "전체적으로는 재밌었어",
+     "example": "There were a few problems, but overall, I had a good time.",
+     "exampleKo": "문제가 좀 있긴 했는데 전체적으로는 재밌었어.",
+     "tip": "overall은 문장 끝에도 와요. I liked it overall.",
+     "easyWords": true,
+     "moods": [
+      "good"
+     ],
+     "sentences": 127,
+     "perMillion": 62.2
+    }
+   ]
+  },
+  {
+   "id": "know",
+   "title": {
+    "ko": "서로 알아 가기",
+    "en": "Getting to know you"
+   },
+   "items": [
+    {
+     "id": "know-01",
+     "text": "I think we have a lot in common.",
+     "meaning": "우리 통하는 게 많은 것 같아",
+     "example": "You like hiking too? I think we have a lot in common.",
+     "exampleKo": "너도 등산 좋아해? 우리 통하는 게 많은 것 같아.",
+     "tip": "in common은 '공통으로'. 반대로 We have nothing in common.은 '공통점이 하나도 없어'예요.",
+     "easyWords": true,
+     "sentences": 51,
+     "perMillion": 25.0
+    },
+    {
+     "id": "know-02",
+     "text": "I think we have similar tastes.",
+     "meaning": "우리 취향 비슷한 것 같아",
+     "example": "We both love horror movies. I think we have similar tastes.",
+     "exampleKo": "우리 둘 다 공포 영화 좋아하네. 취향 비슷한 것 같아.",
+     "tip": "취향은 tastes처럼 복수로 써요. 영화 취향이면 similar tastes in movies.",
+     "easyWords": true
+    },
+    {
+     "id": "know-03",
+     "text": "Do you see yourself doing this again?",
+     "meaning": "너 이거 또 할 것 같아?",
+     "example": "That was so scary. Do you see yourself riding it again?",
+     "exampleKo": "진짜 무서웠다. 너 저거 또 탈 것 같아?",
+     "tip": "see yourself + -ing는 '~하는 모습이 그려져?'라는 뜻이라 '~할 것 같아?'로 이해하면 자연스러워요.",
+     "easyWords": false,
+     "sentences": 29,
+     "perMillion": 14.2
+    },
+    {
+     "id": "know-04",
+     "text": "Where do you see yourself in five years?",
+     "meaning": "5년 뒤에 넌 뭐 하고 있을 것 같아?",
+     "example": "So where do you see yourself in five years?",
+     "exampleKo": "그럼 너는 5년 뒤에 뭐 하고 있을 것 같아?",
+     "tip": "면접 질문으로도 유명하지만, 친해지면 꿈 얘기를 꺼낼 때도 써요.",
+     "easyWords": false,
+     "sentences": 6,
+     "perMillion": 2.9
+    },
+    {
+     "id": "know-05",
+     "text": "We only talked about surface-level stuff.",
+     "meaning": "그냥 겉도는 얘기만 했어",
+     "example": "It was fun, but we only talked about surface-level stuff.",
+     "exampleKo": "재밌긴 했는데 그냥 겉도는 얘기만 했어.",
+     "tip": "surface-level은 '겉핥기, 깊이 없는'. I only have surface-level knowledge of it.(그건 겉핥기로만 알아)처럼도 써요.",
+     "easyWords": true
+    },
+    {
+     "id": "know-06",
+     "text": "I want to have a deeper conversation with you.",
+     "meaning": "너랑 좀 더 깊은 얘기 하고 싶어",
+     "example": "I like talking with you. I want to have a deeper conversation with you.",
+     "exampleKo": "너랑 얘기하는 거 좋아. 좀 더 깊은 얘기 하고 싶어.",
+     "tip": "깊은 대화는 셀 수 있는 말이라 I'm not good at deep conversations.(나 깊은 대화는 잘 못 해)처럼 복수로 써요.",
+     "easyWords": true
+    },
+    {
+     "id": "know-07",
+     "text": "I think that's what's happening to me.",
+     "meaning": "나도 지금 딱 그런 것 같아",
+     "example": "Maybe you're just burned out. — Yeah, I think that's what's happening to me.",
+     "exampleKo": "너 그냥 지친 것 같아. — 응, 나도 딱 그런 것 같아.",
+     "tip": "상대가 짚어 준 내 상태에 맞장구칠 때 써요. what's going on with me도 비슷해요.",
+     "easyWords": false,
+     "sentences": 8,
+     "perMillion": 3.9
+    },
+    {
+     "id": "know-08",
+     "text": "You're fascinating.",
+     "meaning": "너 정말 흥미로운 사람이야",
+     "example": "I could listen to your stories all night. You're fascinating.",
+     "exampleKo": "네 얘기는 밤새 들을 수 있겠어. 너 정말 흥미로운 사람이야.",
+     "tip": "단순히 재밌다보다 '계속 알고 싶은 사람'이라는 칭찬이에요. I'm fascinated by you.는 '나 너한테 빠졌어'.",
+     "easyWords": true
+    },
+    {
+     "id": "know-09",
+     "text": "You're so outgoing.",
+     "meaning": "너 진짜 외향적이다",
+     "example": "You talked to everyone at the party. You're so outgoing.",
+     "exampleKo": "파티에서 모두랑 얘기하더라. 너 진짜 외향적이다.",
+     "tip": "나를 소개할 때는 I'm more of an introvert.(나는 내향적인 편이야)처럼 말해요.",
+     "easyWords": false
+    },
+    {
+     "id": "know-10",
+     "text": "You like to crack jokes, huh?",
+     "meaning": "너 농담하는 거 좋아하는구나",
+     "example": "You like to crack jokes, huh? I like that.",
+     "exampleKo": "너 농담하는 거 좋아하는구나? 그거 좋다.",
+     "tip": "crack a joke는 '농담을 던지다'. 재치 있는 사람은 witty라고 해요.",
+     "easyWords": true,
+     "sentences": 8,
+     "perMillion": 3.9
+    },
+    {
+     "id": "know-11",
+     "text": "I initially thought you were shy.",
+     "meaning": "처음엔 네가 수줍은 줄 알았어",
+     "example": "I initially thought you were shy, but you're actually so funny.",
+     "exampleKo": "처음엔 네가 수줍은 줄 알았는데 알고 보니 엄청 웃기더라.",
+     "tip": "initially는 at first와 비슷한데 '처음엔 그랬는데 지금은 달라'라는 느낌이 있어요.",
+     "easyWords": true,
+     "sentences": 10,
+     "perMillion": 4.9
+    },
+    {
+     "id": "know-12",
+     "text": "We made eye contact.",
+     "meaning": "우리 눈 마주쳤어",
+     "example": "We made eye contact across the room and both laughed.",
+     "exampleKo": "방 건너편에서 눈 마주쳐서 둘 다 웃었어.",
+     "tip": "Our eyes met.이라고 하면 좀 더 영화 같은 느낌이에요.",
+     "easyWords": true,
+     "sentences": 32,
+     "perMillion": 15.7
+    },
+    {
+     "id": "know-13",
+     "text": "If you let me.",
+     "meaning": "네가 허락해 준다면",
+     "example": "I'd love to take you out sometime, if you let me.",
+     "exampleKo": "네가 괜찮다면 언제 데이트 신청하고 싶어.",
+     "tip": "부탁이나 마음을 부드럽게 전할 때 문장 끝에 붙여요.",
+     "easyWords": false,
+     "sentences": 7,
+     "perMillion": 3.4
     }
    ]
   },
@@ -1640,6 +1922,26 @@
      "exampleKo": "너 진짜 엉뚱해, 그게 좋아.",
      "tip": "goofball은 엉뚱하고 웃긴 사람이에요.",
      "easyWords": false
+    },
+    {
+     "id": "tease-18",
+     "text": "Watch your mouth.",
+     "meaning": "말조심해",
+     "example": "Watch your mouth! My mom can hear you.",
+     "exampleKo": "말조심해! 우리 엄마 다 들려.",
+     "tip": "장난으로도 진지하게도 써요. 더 부드럽게는 Mind your language.",
+     "easyWords": true,
+     "sentences": 13,
+     "perMillion": 6.4
+    },
+    {
+     "id": "tease-19",
+     "text": "Don't be so dramatic.",
+     "meaning": "오바 좀 하지 마",
+     "example": "It's just a small scratch. Don't be so dramatic.",
+     "exampleKo": "그냥 살짝 긁힌 거잖아. 오바 좀 하지 마.",
+     "tip": "dramatic은 '감정이 과한, 오바하는'. 친한 사이에서만 써요.",
+     "easyWords": true
     }
    ]
   },
@@ -1771,6 +2073,9 @@
      "exampleKo": "우리 집에서 영화 볼래?",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "calm"
+     ],
      "sentences": 7,
      "perMillion": 3.4
     },
@@ -1802,6 +2107,9 @@
      "exampleKo": "오늘 밤 정말 즐거웠어. 고마워.",
      "tip": "만남이 끝나고 보내는 메시지로 좋아요.",
      "easyWords": true,
+     "moods": [
+      "good"
+     ],
      "sentences": 73,
      "perMillion": 35.8
     },
@@ -1813,6 +2121,9 @@
      "exampleKo": "재밌었다. 곧 또 만나자!",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "good"
+     ],
      "sentences": 167,
      "perMillion": 81.8
     },
@@ -2037,6 +2348,9 @@
      "exampleKo": "오늘 밤 얘기 좀 할 수 있어? 중요한 거야.",
      "tip": "진지한 이야기를 꺼낼 때 써요.",
      "easyWords": true,
+     "moods": [
+      "worried"
+     ],
      "sentences": 79,
      "perMillion": 38.7
     },
@@ -2048,6 +2362,10 @@
      "exampleKo": "화난 건 아니고 잠깐 혼자 있고 싶어.",
      "tip": "헤어지자는 뜻이 아니라 시간이 필요하다는 말이에요.",
      "easyWords": true,
+     "moods": [
+      "tired",
+      "down"
+     ],
      "sentences": 17,
      "perMillion": 8.3
     },
@@ -2059,6 +2377,9 @@
      "exampleKo": "솔직히 그 말에 상처받았어.",
      "tip": "",
      "easyWords": false,
+     "moods": [
+      "down"
+     ],
      "sentences": 10,
      "perMillion": 4.9
     },
@@ -2091,7 +2412,10 @@
      "example": "Are we okay now?",
      "exampleKo": "우리 이제 괜찮은 거지?",
      "tip": "",
-     "easyWords": true
+     "easyWords": true,
+     "moods": [
+      "worried"
+     ]
     },
     {
      "id": "fight-08",
@@ -2218,6 +2542,9 @@
      "exampleKo": "무슨 일이 있어도 내가 있잖아.",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "down"
+     ],
      "sentences": 63,
      "perMillion": 30.9
     },
@@ -2228,7 +2555,10 @@
      "example": "Big day tomorrow? You've got this!",
      "exampleKo": "내일 중요한 날이지? 넌 할 수 있어!",
      "tip": "",
-     "easyWords": true
+     "easyWords": true,
+     "moods": [
+      "worried"
+     ]
     },
     {
      "id": "care-03",
@@ -2238,6 +2568,9 @@
      "exampleKo": "버스 놓쳤어? 짜증 났겠다.",
      "tip": "친구 사이 공감 표현이에요. 공식적인 자리에선 피해요.",
      "easyWords": true,
+     "moods": [
+      "down"
+     ],
      "sentences": 8,
      "perMillion": 3.9
     },
@@ -2249,6 +2582,9 @@
      "exampleKo": "몸 잘 챙겨, 알았지?",
      "tip": "",
      "easyWords": false,
+     "moods": [
+      "tired"
+     ],
      "sentences": 86,
      "perMillion": 42.1
     },
@@ -2260,6 +2596,9 @@
      "exampleKo": "고생 많았어. 좀 쉬어.",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "tired"
+     ],
      "sentences": 83,
      "perMillion": 40.7
     },
@@ -2271,6 +2610,9 @@
      "exampleKo": "빨리 나아! 물 많이 마셔.",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "tired"
+     ],
      "sentences": 470,
      "perMillion": 230.3
     },
@@ -2282,6 +2624,9 @@
      "exampleKo": "울지 마. 다 괜찮아질 거야.",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "worried"
+     ],
      "sentences": 13,
      "perMillion": 6.4
     },
@@ -2304,6 +2649,9 @@
      "exampleKo": "기운 없어 보여. 얘기하고 싶어?",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "down"
+     ],
      "sentences": 512,
      "perMillion": 250.9
     },
@@ -2337,6 +2685,10 @@
      "exampleKo": "잘 자, 내일 얘기해.",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "calm",
+      "tired"
+     ],
      "sentences": 217,
      "perMillion": 106.3
     },
@@ -2359,6 +2711,9 @@
      "exampleKo": "난 너 믿어. 잘할 거야.",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "worried"
+     ],
      "sentences": 35,
      "perMillion": 17.2
     },
@@ -2370,6 +2725,9 @@
      "exampleKo": "너무 자책하지 마.",
      "tip": "",
      "easyWords": false,
+     "moods": [
+      "worried"
+     ],
      "sentences": 11,
      "perMillion": 5.4
     },
@@ -2383,6 +2741,29 @@
      "easyWords": false,
      "sentences": 45,
      "perMillion": 22.1
+    },
+    {
+     "id": "care-17",
+     "text": "It'll work out.",
+     "meaning": "다 잘될 거야",
+     "example": "Don't stress too much. It'll work out.",
+     "exampleKo": "너무 스트레스 받지 마. 다 잘될 거야.",
+     "tip": "이미 잘된 일은 It worked out in the end.(결국 잘됐어).",
+     "easyWords": true,
+     "moods": [
+      "worried"
+     ],
+     "sentences": 8,
+     "perMillion": 3.9
+    },
+    {
+     "id": "care-18",
+     "text": "Feel free to reach out.",
+     "meaning": "언제든 연락해",
+     "example": "Feel free to reach out if you need anything.",
+     "exampleKo": "필요한 거 있으면 언제든 연락해.",
+     "tip": "reach out은 '먼저 연락하다'. I'll reach out to him tomorrow.(내일 걔한테 연락해 볼게).",
+     "easyWords": true
     }
    ]
   },
@@ -2467,6 +2848,9 @@
      "exampleKo": "합격했어? 잘됐다!",
      "tip": "말투에 따라 비꼬는 말이 될 수도 있어요.",
      "easyWords": true,
+     "moods": [
+      "good"
+     ],
      "sentences": 133,
      "perMillion": 65.2
     },
@@ -2489,6 +2873,9 @@
      "exampleKo": "약혼했어? 내 일처럼 기뻐!",
      "tip": "",
      "easyWords": true,
+     "moods": [
+      "good"
+     ],
      "sentences": 35,
      "perMillion": 17.2
     },
@@ -2511,6 +2898,9 @@
      "exampleKo": "10킬로 뛰었어? 대박이다.",
      "tip": "",
      "easyWords": false,
+     "moods": [
+      "good"
+     ],
      "sentences": 7,
      "perMillion": 3.4
     },
@@ -2533,6 +2923,9 @@
      "exampleKo": "네 메시지 덕분에 하루가 행복해졌어.",
      "tip": "",
      "easyWords": false,
+     "moods": [
+      "good"
+     ],
      "sentences": 7,
      "perMillion": 3.4
     },
@@ -2544,6 +2937,9 @@
      "exampleKo": "이 노래? 완전 빠졌어.",
      "tip": "요즘은 '너무 좋아'를 과장해서 이렇게 말해요.",
      "easyWords": true,
+     "moods": [
+      "good"
+     ],
      "sentences": 325,
      "perMillion": 159.3
     },
@@ -2577,6 +2973,42 @@
      "easyWords": true,
      "sentences": 327,
      "perMillion": 160.2
+    },
+    {
+     "id": "react-18",
+     "text": "That's outrageous.",
+     "meaning": "말도 안 돼, 너무하네",
+     "example": "They charged you fifty dollars for parking? That's outrageous.",
+     "exampleKo": "주차비로 50달러를 받았다고? 말도 안 돼.",
+     "tip": "가격이 터무니없을 때(That price is outrageous)나 누가 선을 넘을 때(You're being outrageous) 써요.",
+     "easyWords": true
+    },
+    {
+     "id": "react-19",
+     "text": "That's fascinating.",
+     "meaning": "와, 진짜 신기하다",
+     "example": "You speak four languages? That's fascinating.",
+     "exampleKo": "4개 국어를 한다고? 와, 진짜 신기하다.",
+     "tip": "That's interesting.보다 훨씬 강한 반응이에요.",
+     "easyWords": true
+    },
+    {
+     "id": "react-20",
+     "text": "That sounds like a nightmare.",
+     "meaning": "진짜 최악이었겠다",
+     "example": "Your flight got canceled twice? That sounds like a nightmare.",
+     "exampleKo": "비행기가 두 번이나 취소됐다고? 진짜 최악이었겠다.",
+     "tip": "상대가 겪은 힘든 일에 공감할 때 써요.",
+     "easyWords": true
+    },
+    {
+     "id": "react-21",
+     "text": "Thanks for pointing it out.",
+     "meaning": "짚어 줘서 고마워",
+     "example": "Oh, I didn't notice the typo. Thanks for pointing it out.",
+     "exampleKo": "오타 몰랐네. 짚어 줘서 고마워.",
+     "tip": "point out은 '지적하다, 짚어 주다'. point at은 손가락으로 가리키는 거예요.",
+     "easyWords": true
     }
    ]
   },
@@ -2759,6 +3191,597 @@
      "exampleKo": "그 단어 무슨 뜻이야? 처음 들어 봐.",
      "tip": "",
      "easyWords": true
+    },
+    {
+     "id": "culture-18",
+     "text": "What's the biggest difference between Korea and the US?",
+     "meaning": "한국이랑 미국은 뭐가 제일 달라?",
+     "example": "You've lived in both. What's the biggest difference between Korea and the US?",
+     "exampleKo": "둘 다 살아 봤잖아. 한국이랑 미국은 뭐가 제일 달라?",
+     "tip": "나라 이름만 바꿔서 the US and the UK처럼 써요.",
+     "easyWords": false
+    }
+   ]
+  },
+  {
+   "id": "work",
+   "title": {
+    "ko": "일·회사",
+    "en": "Work talk"
+   },
+   "items": [
+    {
+     "id": "work-01",
+     "text": "Great job on the presentation!",
+     "meaning": "발표 정말 잘했어요!",
+     "example": "Great job on the presentation! Everyone loved it.",
+     "exampleKo": "발표 정말 잘했어요! 다들 좋아했어요.",
+     "tip": "동료를 칭찬할 때 가장 많이 써요. Nice work!도 같은 뜻이에요.",
+     "easyWords": true,
+     "moods": [
+      "good"
+     ],
+     "sentences": 102,
+     "perMillion": 50.0
+    },
+    {
+     "id": "work-02",
+     "text": "I nailed the interview.",
+     "meaning": "면접 완전 잘 봤어",
+     "example": "I think I nailed the interview today.",
+     "exampleKo": "오늘 면접 완전 잘 본 것 같아.",
+     "tip": "nail은 '못을 박다'인데, 말할 때는 '완벽하게 해내다'예요.",
+     "easyWords": true,
+     "moods": [
+      "good"
+     ],
+     "sentences": 33,
+     "perMillion": 16.2
+    },
+    {
+     "id": "work-03",
+     "text": "I got promoted!",
+     "meaning": "나 승진했어!",
+     "example": "Guess what? I got promoted!",
+     "exampleKo": "있잖아, 나 승진했어!",
+     "tip": "축하할 때는 Congrats on the promotion!",
+     "easyWords": true,
+     "moods": [
+      "good"
+     ],
+     "sentences": 17,
+     "perMillion": 8.3
+    },
+    {
+     "id": "work-04",
+     "text": "We hit our target this month.",
+     "meaning": "이번 달 목표 달성했어",
+     "example": "We hit our target this month, so the team is celebrating.",
+     "exampleKo": "이번 달 목표 달성해서 팀이 축하하는 중이야.",
+     "tip": "hit은 '목표에 맞히다', 곧 '달성하다'예요.",
+     "easyWords": false,
+     "moods": [
+      "good"
+     ]
+    },
+    {
+     "id": "work-05",
+     "text": "Thanks for covering for me.",
+     "meaning": "내 일 대신 해 줘서 고마워",
+     "example": "Thanks for covering for me yesterday. I owe you one.",
+     "exampleKo": "어제 내 일 대신 해 줘서 고마워. 신세 졌어.",
+     "tip": "cover for someone은 '빈자리를 대신 맡아 주다'예요.",
+     "easyWords": false,
+     "moods": [
+      "good"
+     ]
+    },
+    {
+     "id": "work-06",
+     "text": "It's a slow day at work.",
+     "meaning": "오늘 회사 한가해",
+     "example": "It's a slow day at work, so I'm reading emails.",
+     "exampleKo": "오늘 회사가 한가해서 메일 보는 중이야.",
+     "tip": "slow는 '느린'이 아니라 '일이 적은, 한가한'이에요.",
+     "easyWords": true,
+     "moods": [
+      "calm"
+     ],
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "work-07",
+     "text": "I'm working from home today.",
+     "meaning": "오늘 재택이야",
+     "example": "I'm working from home today, so I can call you at lunch.",
+     "exampleKo": "오늘 재택이라 점심때 전화할 수 있어.",
+     "tip": "줄여서 WFH라고도 써요.",
+     "easyWords": true,
+     "moods": [
+      "calm"
+     ],
+     "sentences": 29,
+     "perMillion": 14.2
+    },
+    {
+     "id": "work-08",
+     "text": "No rush.",
+     "meaning": "천천히 하셔도 돼요",
+     "example": "No rush. Just send it when you're ready.",
+     "exampleKo": "천천히 하세요. 준비되면 보내 주세요.",
+     "tip": "상대를 재촉하지 않을 때 메일이나 메시지 끝에 붙여요.",
+     "easyWords": true,
+     "moods": [
+      "calm"
+     ],
+     "sentences": 33,
+     "perMillion": 16.2
+    },
+    {
+     "id": "work-09",
+     "text": "Let's touch base next week.",
+     "meaning": "다음 주에 한번 얘기해요",
+     "example": "Let's touch base next week about the schedule.",
+     "exampleKo": "일정은 다음 주에 한번 얘기해요.",
+     "tip": "짧게 연락해서 진행 상황을 맞춰 보자는 말이에요.",
+     "easyWords": true,
+     "moods": [
+      "calm"
+     ]
+    },
+    {
+     "id": "work-10",
+     "text": "Let's circle back on this.",
+     "meaning": "이건 나중에 다시 얘기해요",
+     "example": "We're out of time. Let's circle back on this tomorrow.",
+     "exampleKo": "시간이 다 됐네요. 이건 내일 다시 얘기해요.",
+     "tip": "회의에서 아주 많이 써요. 지금 결론 내지 말고 나중에 다시 보자는 뜻이에요.",
+     "easyWords": true,
+     "moods": [
+      "calm"
+     ]
+    },
+    {
+     "id": "work-11",
+     "text": "I'm swamped today.",
+     "meaning": "오늘 일이 산더미야",
+     "example": "Sorry, I'm swamped today. Can I call you tonight?",
+     "exampleKo": "미안, 오늘 일이 산더미야. 밤에 전화해도 돼?",
+     "tip": "swamp는 '늪'이에요. 일에 푹 잠긴 느낌이에요.",
+     "easyWords": false,
+     "moods": [
+      "tired"
+     ],
+     "sentences": 14,
+     "perMillion": 6.9
+    },
+    {
+     "id": "work-12",
+     "text": "I've been working overtime all week.",
+     "meaning": "이번 주 내내 야근했어",
+     "example": "I've been working overtime all week. I need a break.",
+     "exampleKo": "이번 주 내내 야근했어. 좀 쉬고 싶다.",
+     "tip": "야근 수당은 overtime pay예요.",
+     "easyWords": false,
+     "moods": [
+      "tired"
+     ],
+     "sentences": 22,
+     "perMillion": 10.8
+    },
+    {
+     "id": "work-13",
+     "text": "I'm running on fumes.",
+     "meaning": "완전 방전 직전이야",
+     "example": "Three meetings back to back. I'm running on fumes.",
+     "exampleKo": "회의 세 개 연달아 했어. 완전 방전 직전이야.",
+     "tip": "기름이 다 떨어져 연기로 달린다는 말이에요.",
+     "easyWords": false,
+     "moods": [
+      "tired"
+     ]
+    },
+    {
+     "id": "work-14",
+     "text": "Can we push the meeting to tomorrow?",
+     "meaning": "회의 내일로 미룰 수 있을까요?",
+     "example": "Something came up. Can we push the meeting to tomorrow?",
+     "exampleKo": "일이 좀 생겨서요. 회의 내일로 미룰 수 있을까요?",
+     "tip": "push back도 같은 뜻이에요. 앞당길 때는 move up.",
+     "easyWords": true,
+     "moods": [
+      "tired"
+     ]
+    },
+    {
+     "id": "work-15",
+     "text": "I'll keep you posted.",
+     "meaning": "진행 상황 알려 드릴게요",
+     "example": "I'm still waiting to hear from them. I'll keep you posted.",
+     "exampleKo": "아직 답을 기다리는 중이에요. 진행 상황 알려 드릴게요.",
+     "tip": "메일 끝인사로도 자주 써요.",
+     "easyWords": true,
+     "moods": [
+      "worried",
+      "calm"
+     ],
+     "sentences": 6,
+     "perMillion": 2.9
+    },
+    {
+     "id": "work-16",
+     "text": "I have a big presentation tomorrow.",
+     "meaning": "내일 큰 발표가 있어",
+     "example": "I have a big presentation tomorrow, so wish me luck.",
+     "exampleKo": "내일 큰 발표 있어. 행운을 빌어 줘.",
+     "tip": "Wish me luck.(행운을 빌어 줘)을 같이 쓰면 자연스러워요.",
+     "easyWords": false,
+     "moods": [
+      "worried"
+     ],
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "work-17",
+     "text": "I'm not sure I can make the deadline.",
+     "meaning": "마감 못 맞출 것 같아",
+     "example": "There's so much left. I'm not sure I can make the deadline.",
+     "exampleKo": "남은 게 너무 많아. 마감 못 맞출 것 같아.",
+     "tip": "마감을 지키다는 make(또는 meet) the deadline이에요.",
+     "easyWords": false,
+     "moods": [
+      "worried"
+     ],
+     "sentences": 6,
+     "perMillion": 2.9
+    },
+    {
+     "id": "work-18",
+     "text": "Let me double-check and get back to you.",
+     "meaning": "다시 확인하고 연락드릴게요",
+     "example": "Good question. Let me double-check and get back to you.",
+     "exampleKo": "좋은 질문이에요. 다시 확인하고 연락드릴게요.",
+     "tip": "바로 답하기 어려울 때 쓰는 안전한 말이에요.",
+     "easyWords": true,
+     "moods": [
+      "worried"
+     ],
+     "sentences": 52,
+     "perMillion": 25.5
+    },
+    {
+     "id": "work-19",
+     "text": "My boss chewed me out today.",
+     "meaning": "오늘 상사한테 엄청 깨졌어",
+     "example": "My boss chewed me out today for being late.",
+     "exampleKo": "오늘 늦었다고 상사한테 엄청 깨졌어.",
+     "tip": "chew out은 '호되게 꾸짖다'예요. 친구에게 털어놓을 때 써요.",
+     "easyWords": false,
+     "moods": [
+      "down"
+     ]
+    },
+    {
+     "id": "work-20",
+     "text": "I didn't get the job.",
+     "meaning": "그 일 떨어졌어",
+     "example": "I didn't get the job, but I learned a lot.",
+     "exampleKo": "그 일은 떨어졌지만 많이 배웠어.",
+     "tip": "위로할 때는 Their loss.(그쪽 손해야)라고 해 줘요.",
+     "easyWords": false,
+     "moods": [
+      "down"
+     ],
+     "sentences": 13,
+     "perMillion": 6.4
+    },
+    {
+     "id": "work-21",
+     "text": "I feel burned out.",
+     "meaning": "번아웃 온 것 같아",
+     "example": "I've been working nonstop. I feel burned out.",
+     "exampleKo": "쉬지 않고 일했더니 번아웃 온 것 같아.",
+     "tip": "burnt out이라고도 써요.",
+     "easyWords": true,
+     "moods": [
+      "down",
+      "tired"
+     ],
+     "sentences": 39,
+     "perMillion": 19.1
+    },
+    {
+     "id": "work-22",
+     "text": "My coworker took credit for my work.",
+     "meaning": "동료가 내 공을 가로챘어",
+     "example": "I'm so upset. My coworker took credit for my work.",
+     "exampleKo": "너무 속상해. 동료가 내 공을 가로챘어.",
+     "tip": "take credit for는 '~의 공을 차지하다'예요.",
+     "easyWords": true,
+     "moods": [
+      "down"
+     ],
+     "sentences": 10,
+     "perMillion": 4.9
+    }
+   ]
+  },
+  {
+   "id": "study",
+   "title": {
+    "ko": "공부·학교",
+    "en": "School & study"
+   },
+   "items": [
+    {
+     "id": "study-01",
+     "text": "I aced the exam!",
+     "meaning": "시험 완전 잘 봤어!",
+     "example": "I studied all week and I aced the exam!",
+     "exampleKo": "일주일 내내 공부했더니 시험 완전 잘 봤어!",
+     "tip": "ace는 '만점 가까이 잘 보다'예요.",
+     "easyWords": true,
+     "moods": [
+      "good"
+     ],
+     "sentences": 25,
+     "perMillion": 12.3
+    },
+    {
+     "id": "study-02",
+     "text": "I finally get it!",
+     "meaning": "드디어 이해했어!",
+     "example": "I read it five times, and I finally get it!",
+     "exampleKo": "다섯 번 읽고 나니 드디어 이해했어!",
+     "tip": "get은 '이해하다'로 아주 많이 써요. I don't get it.(이해 안 돼)",
+     "easyWords": true,
+     "moods": [
+      "good"
+     ]
+    },
+    {
+     "id": "study-03",
+     "text": "I got into the program!",
+     "meaning": "그 과정에 붙었어!",
+     "example": "I just checked my email. I got into the program!",
+     "exampleKo": "방금 메일 확인했는데 그 과정에 붙었어!",
+     "tip": "학교나 과정에 합격하다는 get into예요.",
+     "easyWords": true,
+     "moods": [
+      "good"
+     ],
+     "sentences": 541,
+     "perMillion": 265.1
+    },
+    {
+     "id": "study-04",
+     "text": "We finished our group project.",
+     "meaning": "조별 과제 끝냈어",
+     "example": "We finally finished our group project last night.",
+     "exampleKo": "어젯밤에 드디어 조별 과제 끝냈어.",
+     "tip": "조별 과제는 group project예요.",
+     "easyWords": true,
+     "moods": [
+      "good",
+      "calm"
+     ]
+    },
+    {
+     "id": "study-05",
+     "text": "I'm studying at a café today.",
+     "meaning": "오늘은 카페에서 공부해",
+     "example": "I'm studying at a café today. Want to join?",
+     "exampleKo": "오늘은 카페에서 공부해. 같이 할래?",
+     "tip": "Want to join?(같이 할래?)을 붙이면 자연스럽게 초대가 돼요.",
+     "easyWords": true,
+     "moods": [
+      "calm"
+     ],
+     "sentences": 60,
+     "perMillion": 29.4
+    },
+    {
+     "id": "study-06",
+     "text": "Let's study together this weekend.",
+     "meaning": "이번 주말에 같이 공부하자",
+     "example": "Let's study together this weekend. I'll bring snacks.",
+     "exampleKo": "이번 주말에 같이 공부하자. 간식은 내가 가져갈게.",
+     "tip": "같이 공부하는 친구는 study buddy라고 해요.",
+     "easyWords": true,
+     "moods": [
+      "calm"
+     ],
+     "sentences": 45,
+     "perMillion": 22.1
+    },
+    {
+     "id": "study-07",
+     "text": "I'm taking a study break.",
+     "meaning": "잠깐 공부 쉬는 중이야",
+     "example": "I'm taking a study break. Call me?",
+     "exampleKo": "잠깐 공부 쉬는 중이야. 전화할래?",
+     "tip": "잠깐 쉬다는 take a break예요.",
+     "easyWords": true,
+     "moods": [
+      "calm",
+      "tired"
+     ]
+    },
+    {
+     "id": "study-08",
+     "text": "I pulled an all-nighter.",
+     "meaning": "밤새 공부했어",
+     "example": "I pulled an all-nighter for the exam. I'm so sleepy.",
+     "exampleKo": "시험 때문에 밤새웠어. 너무 졸려.",
+     "tip": "공부든 일이든 밤을 새웠을 때 써요.",
+     "easyWords": true,
+     "moods": [
+      "tired"
+     ],
+     "sentences": 11,
+     "perMillion": 5.4
+    },
+    {
+     "id": "study-09",
+     "text": "I'm cramming for finals.",
+     "meaning": "기말 벼락치기 중이야",
+     "example": "I can't go out tonight. I'm cramming for finals.",
+     "exampleKo": "오늘 밤엔 못 나가. 기말 벼락치기 중이야.",
+     "tip": "cram은 '꽉꽉 채워 넣다'예요. 중간고사는 midterms.",
+     "easyWords": false,
+     "moods": [
+      "tired",
+      "worried"
+     ],
+     "sentences": 13,
+     "perMillion": 6.4
+    },
+    {
+     "id": "study-10",
+     "text": "I have so much homework.",
+     "meaning": "숙제가 너무 많아",
+     "example": "I have so much homework this week.",
+     "exampleKo": "이번 주에 숙제가 너무 많아.",
+     "tip": "homework는 셀 수 없는 말이라 homeworks라고 하지 않아요.",
+     "easyWords": true,
+     "moods": [
+      "tired"
+     ]
+    },
+    {
+     "id": "study-11",
+     "text": "My brain is fried.",
+     "meaning": "머리가 안 돌아가",
+     "example": "I studied for six hours. My brain is fried.",
+     "exampleKo": "여섯 시간 공부했더니 머리가 안 돌아가.",
+     "tip": "fried는 '튀겨진'. 머리를 너무 써서 지쳤다는 말이에요.",
+     "easyWords": true,
+     "moods": [
+      "tired"
+     ]
+    },
+    {
+     "id": "study-12",
+     "text": "I have a test tomorrow.",
+     "meaning": "내일 시험 있어",
+     "example": "I have a test tomorrow, so I'll text you after.",
+     "exampleKo": "내일 시험 있어서 끝나고 문자할게.",
+     "tip": "응원할 때는 Good luck on your test!",
+     "easyWords": true,
+     "moods": [
+      "worried"
+     ],
+     "sentences": 56,
+     "perMillion": 27.4
+    },
+    {
+     "id": "study-13",
+     "text": "I'm behind on my assignments.",
+     "meaning": "과제가 밀렸어",
+     "example": "I'm behind on my assignments, so I'm staying in tonight.",
+     "exampleKo": "과제가 밀려서 오늘 밤엔 집에 있을래.",
+     "tip": "be behind on은 '~이 밀리다, 뒤처지다'예요.",
+     "easyWords": true,
+     "moods": [
+      "worried"
+     ],
+     "sentences": 26,
+     "perMillion": 12.7
+    },
+    {
+     "id": "study-14",
+     "text": "The essay is due on Friday.",
+     "meaning": "에세이 마감이 금요일이야",
+     "example": "The essay is due on Friday and I haven't started.",
+     "exampleKo": "에세이 마감이 금요일인데 아직 시작도 안 했어.",
+     "tip": "due는 '마감인, 제출해야 하는'이에요.",
+     "easyWords": true,
+     "moods": [
+      "worried"
+     ],
+     "sentences": 5,
+     "perMillion": 2.5
+    },
+    {
+     "id": "study-15",
+     "text": "I don't get this part.",
+     "meaning": "이 부분 이해가 안 돼",
+     "example": "Can you help me? I don't get this part.",
+     "exampleKo": "좀 도와줄래? 이 부분 이해가 안 돼.",
+     "tip": "get은 '이해하다'. 더 정중하게는 I don't understand this part.",
+     "easyWords": true,
+     "moods": [
+      "worried"
+     ]
+    },
+    {
+     "id": "study-16",
+     "text": "Can you go over that again?",
+     "meaning": "그거 한 번 더 설명해 줄래?",
+     "example": "Sorry, can you go over that again?",
+     "exampleKo": "미안, 그거 한 번 더 설명해 줄래?",
+     "tip": "go over는 '훑어보다, 다시 설명하다'예요. 수업 시간에 많이 써요.",
+     "easyWords": true,
+     "moods": [
+      "worried"
+     ],
+     "sentences": 6,
+     "perMillion": 2.9
+    },
+    {
+     "id": "study-17",
+     "text": "I totally blew the test.",
+     "meaning": "시험 완전 망쳤어",
+     "example": "I totally blew the test. I didn't sleep at all.",
+     "exampleKo": "시험 완전 망쳤어. 잠을 하나도 못 잤거든.",
+     "tip": "blow는 '불다'인데, blow a test는 '시험을 망치다'예요. 반대는 ace.",
+     "easyWords": true,
+     "moods": [
+      "down"
+     ]
+    },
+    {
+     "id": "study-18",
+     "text": "I failed the quiz.",
+     "meaning": "쪽지 시험 떨어졌어",
+     "example": "I failed the quiz, but it's only a small part of my grade.",
+     "exampleKo": "쪽지 시험 떨어졌는데 성적에서 작은 부분이라 괜찮아.",
+     "tip": "quiz는 짧은 쪽지 시험이에요.",
+     "easyWords": true,
+     "moods": [
+      "down"
+     ]
+    },
+    {
+     "id": "study-19",
+     "text": "My presentation didn't go well.",
+     "meaning": "발표 잘 안 됐어",
+     "example": "My presentation didn't go well. I forgot what to say.",
+     "exampleKo": "발표 잘 안 됐어. 할 말을 까먹었어.",
+     "tip": "잘됐을 때는 It went well.",
+     "easyWords": false,
+     "moods": [
+      "down"
+     ],
+     "sentences": 10,
+     "perMillion": 4.9
+    },
+    {
+     "id": "study-20",
+     "text": "I'm thinking of dropping this class.",
+     "meaning": "이 수업 드랍할까 생각 중이야",
+     "example": "It's too hard. I'm thinking of dropping this class.",
+     "exampleKo": "너무 어려워. 이 수업 드랍할까 생각 중이야.",
+     "tip": "수강을 취소하다는 drop a class예요.",
+     "easyWords": true,
+     "moods": [
+      "down",
+      "worried"
+     ],
+     "sentences": 129,
+     "perMillion": 63.2
     }
    ]
   },

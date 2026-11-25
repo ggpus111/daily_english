@@ -3,13 +3,15 @@ import ExpressionCard from '../components/ExpressionCard'
 import Onboarding, { needsOnboarding } from '../components/Onboarding'
 import BackupNudge from '../components/BackupNudge'
 import RecapCard from '../components/Recap'
+import GrowthCard from '../components/dani/GrowthCard'
 import Mascot from '../components/Mascot'
 import { useApp } from '../context'
 import { activityDays, dayKey, lastSevenDays, streak } from '../lib/activity'
 import { findPhrase } from '../lib/blank'
 import { languageName } from '../lib/i18n'
 import { usePackData } from '../hooks/usePackData'
-import { hasPackData, todayItem } from '../lib/packs'
+import { hasPackData } from '../lib/packs'
+import { pickTodayExpression, readPurpose } from '../lib/purpose'
 import { moodMeaning, moodOf, moodTone, moodWord } from '../lib/moods'
 import { pickNote } from '../lib/notes'
 import { readSettings, todayProgress } from '../lib/reminders'
@@ -197,6 +199,8 @@ export default function Home() {
         </div>
       </section>
 
+      <GrowthCard />
+
       <section className="home-section" aria-labelledby="space-title">
         <div className="section-heading">
           <div>
@@ -285,7 +289,9 @@ function TodayExpression({ today }) {
   const { data, error } = usePackData('expressions')
   if (error) return <p className="tiny-note">{t('packsLoadError')}</p>
   if (!data) return <div className="expression-card expression-placeholder" aria-hidden="true" />
-  const item = todayItem(data.items, today)
+  // 공부 목적에 맞는 표현 중에서 고르고, 오늘 쓴 일기에 기분이 있으면 그 기분에 어울리는 표현을 보여 준다(일기 화면과 같은 표현).
+  const todayMood = records.journal.find((journal) => isSameDay(journal.createdAt, today) && journal.mood)?.mood ?? ''
+  const item = pickTodayExpression(data.items, { purpose: readPurpose(), mood: todayMood, now: today })
   // 오늘 쓴 일기 번역에 오늘의 표현이 들어 있으면 미션 완료
   const done = records.journal.some(
     (journal) => isSameDay(journal.createdAt, today) && findPhrase(item.text, journal.translation),

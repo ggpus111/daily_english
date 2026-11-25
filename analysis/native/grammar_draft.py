@@ -40,6 +40,7 @@ GROUPS = [
         ("make + 사람 + 형용사", "(누구를) ~하게 만들어", "Your message made me so happy.", "네 메시지 덕분에 너무 행복했어.", ""),
         ("I'm into + 명사 / -ing", "~에 빠져 있어, ~를 좋아해", "I'm really into K-dramas these days.", "요즘 K-드라마에 완전 빠졌어.", ""),
         ("It seems like + 문장", "~인 것 같아", "It seems like you had a long day.", "오늘 힘든 하루였던 것 같네.", ""),
+        ("-ing 형용사 / -ed 형용사", "-ing: (무엇이) ~하게 만드는 / -ed: (내가) ~하게 된", "You're fascinating. I'm fascinated by you.", "넌 정말 흥미로운 사람이야. 나 너한테 빠졌어.", "I'm boring(나는 지루한 사람이야)과 I'm bored(나 심심해)처럼 뜻이 완전히 달라져요."),
     ]),
     ("compare", "비교·정도", "Comparing & degree", [
         ("비교급 + than", "~보다 더 ...", "Your English is better than my Korean.", "네 영어가 내 한국어보다 낫다.", "짧은 형용사는 -er, 긴 형용사는 more ~."),
@@ -60,6 +61,9 @@ GROUPS = [
         ("in case + 문장", "~할 경우에 대비해서", "Take an umbrella in case it rains.", "비 올지도 모르니까 우산 챙겨.", ""),
         ("If + 현재형, will + 동사원형", "~하면 ...할게", "If you come to Korea, I'll show you around.", "한국에 오면 내가 구경시켜 줄게.", "If 안은 미래라도 현재형."),
         ("If + 과거형, would + 동사원형", "(실제로는 아니지만) ~라면 ...할 텐데", "If I lived closer, I would see you every day.", "내가 더 가까이 살면 매일 볼 텐데.", ""),
+        ("If + 주어 + were to + 동사원형", "가령 ~한다고 치면", "If I were to pick one movie, I'd choose Titanic.", "영화 하나만 고른다고 치면, 난 타이타닉 고를래.", "If I picked보다 '가령 ~라고 치면' 느낌이 더 강해요. 주어가 I나 he여도 were를 써요."),
+        ("a place to + 동사원형", "~하기 좋은 곳", "It's a nice place to live.", "살기 좋은 곳이야.", "for living보다 to live가 자연스러워요. a nice place to be at은 '머물기 좋은 곳'이라 분위기에 더 초점이 있어요."),
+        ("what + 동사 (~하는 것)", "~하는 것, ~인 일", "I think that's what's happening to me.", "나도 지금 딱 그런 것 같아.", "what's happening to me는 '나한테 일어나는 일', what's going on with me는 '요즘 내 상태'에 가까워요."),
     ]),
     ("question", "질문·되묻기", "Questions & checking", [
         ("..., right? / 부가 의문문", "~지?, ~잖아? (확인)", "You're coming tomorrow, right?", "너 내일 오는 거 맞지?", "isn't it?, don't you? 같은 꼬리 질문도 같은 역할이에요."),
@@ -70,6 +74,17 @@ GROUPS = [
         ("What if + 문장?", "~하면 어떡해? / ~하면 어때?", "What if we get lost?", "우리 길 잃으면 어떡해?", ""),
         ("How long have you + 과거분사?", "~한 지 얼마나 됐어?", "How long have you lived there?", "거기 산 지 얼마나 됐어?", ""),
         ("Have you + 과거분사 + yet?", "벌써 ~했어? / 아직 안 했어?", "Have you eaten yet?", "밥 먹었어?", "부정문은 I haven't eaten yet.(아직 안 먹었어)."),
+        ("Do you see yourself + -ing?", "너 ~할 것 같아? (앞으로 그런 모습이 그려져?)", "Do you see yourself living abroad someday?", "너 언젠가 외국에서 살 것 같아?", "see를 '보다'로 옮기지 말고 '~할 것 같다고 생각하다'로 이해해요. 대답은 Yeah, I can see that.(그럴 것 같아)."),
+    ]),
+    ("pairs", "헷갈리는 짝", "Easily mixed up", [
+        ("switch / change", "switch: A를 B로 맞바꾸다 / change: 변하다, 마음·모습이 바뀌다", "Can we switch seats? I changed my mind.", "우리 자리 바꿀래? 나 생각 바뀌었어.", "자리나 물건을 맞바꿀 때는 switch, 마음이나 사람이 달라질 때는 change."),
+        ("point at / point out", "point at: 손가락으로 가리키다 / point out: 지적하다, 짚어 주다", "Thanks for pointing it out.", "그거 짚어 줘서 고마워.", "it은 point와 out 사이에 와요. point out it(X)."),
+        ("reach / reach out", "reach: 닿다, 도착하다 / reach out: (먼저) 연락하다, 손을 내밀다", "Feel free to reach out if you need anything.", "필요한 거 있으면 언제든 연락해.", "reach out to + 사람. 그냥 contact보다 '먼저 다가가는' 느낌이에요."),
+        ("from afar / far from", "from afar: 멀리서 / far from: ~와 거리가 멀다, 전혀 ~아니다", "It's far from perfect, but I love it.", "완벽하진 않지만 난 좋아.", "I've liked you from afar.(멀리서 좋아해 왔어)처럼 from afar는 고백할 때도 써요."),
+        ("turn around / turn back / turn over", "뒤돌아보다 / 왔던 길로 돌아가다 / 뒤집다", "We should turn back. It's getting dark.", "돌아가자. 어두워지고 있어.", "turn around는 몸을 돌리는 것, turn back은 가던 길을 되돌아가는 것이에요."),
+        ("taste / tastes", "맛 / 취향(취향은 보통 복수)", "I think we have similar tastes in movies.", "우리 영화 취향 비슷한 것 같아.", "a similar taste보다 similar tastes가 자연스러워요."),
+        ("interesting / fascinating", "흥미로운 / 너무 흥미로워서 빠져드는", "That's fascinating. Tell me more.", "와, 진짜 신기하다. 더 얘기해 줘.", "fascinating이 훨씬 강해요. 사람에게 쓰면 '계속 알고 싶은 사람'이라는 칭찬이에요."),
+        ("It works out / It worked out", "잘 될 거야 / 결국 잘 됐어", "I was worried, but it worked out.", "걱정했는데 결국 잘 됐어.", "여기서 work out은 '운동하다'가 아니라 '일이 잘 풀리다'예요."),
     ]),
 ]
 

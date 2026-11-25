@@ -67,7 +67,8 @@ export function exchangeStreak(groups, now = new Date()) {
 }
 
 // 반응 종류. 화면에는 글자로만 보인다(이모지 없음). 서버 표의 kind 값과 같아야 한다.
-export const REACTIONS = ['heart', 'thanks', 'funny', 'learned']
+// 다니 이모티콘 종류(src/components/dani/Sticker.jsx). 앞의 넷은 처음부터 있던 반응이라 서버를 바꾸기 전에도 보낼 수 있다.
+export const REACTIONS = ['heart', 'thanks', 'funny', 'learned', 'bet', 'wdym', 'night', 'talk']
 
 /** 문장 번호별로 { mine, theirs }(각각 반응 종류 또는 null)를 만든다. */
 export function reactionsBySentence(reactions, myId) {
