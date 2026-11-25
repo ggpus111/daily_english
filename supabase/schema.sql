@@ -366,9 +366,12 @@ create table if not exists public.couple_sentences (
   day date not null,
   body text not null check (char_length(body) between 1 and 300),
   lang text not null check (char_length(lang) between 2 and 5),
-  created_at timestamptz not null default now(),
-  unique (couple_id, user_id, day)
+  created_at timestamptz not null default now()
 );
+
+-- 처음에는 하루에 한 문장만 보냈다. 이제 하루에 몇 번이든 보내므로 날짜당 하나 제약을 푼다.
+alter table public.couple_sentences drop constraint if exists couple_sentences_couple_id_user_id_day_key;
+create index if not exists couple_sentences_couple_day_idx on public.couple_sentences (couple_id, day);
 
 create or replace function public.is_couple_member(target uuid)
 returns boolean
@@ -570,6 +573,7 @@ $$;
 
 -- 새 문장이 올라오면, 알림을 켠 상대의 웹 알림 대기열에 넣는다. 보낸 사람 이름만 넣고 문장 내용은 담지 않는다.
 -- 보내는 일은 서버 함수 send-reminders가 10분마다 한다. 고쳐 쓴 문장(update)에는 다시 알리지 않는다.
+-- 하루에 여러 번 보낼 수 있어서, 같은 사람에게 아직 안 나간 새 문장 알림이 있으면 하나만 남긴다.
 create or replace function public.notify_partner_of_sentence()
 returns trigger
 language plpgsql
@@ -585,14 +589,22 @@ begin
     select user_id, notify_lang from couple_members
     where couple_id = new.couple_id and user_id <> new.user_id and notify
   loop
+    if exists (
+      select 1 from push_queue
+      where user_id = member.user_id and kind = 'couple'
+        and title in ('새 문장이 도착했어요', 'A new sentence for you')
+        and send_at > now() - interval '10 minutes'
+    ) then
+      continue;
+    end if;
     insert into push_queue (user_id, send_at, kind, title, body, url)
     values (
       member.user_id,
       now(),
       'couple',
       case when member.notify_lang = 'ko' then '새 문장이 도착했어요' else 'A new sentence for you' end,
-      case when member.notify_lang = 'ko' then coalesce(sender, '상대') || '님이 오늘의 한 문장을 보냈어요.'
-           else coalesce(sender, 'Someone') || ' sent you today''s sentence.' end,
+      case when member.notify_lang = 'ko' then coalesce(sender, '상대') || '님이 새 문장을 보냈어요.'
+           else coalesce(sender, 'Someone') || ' sent you a new sentence.' end,
       '/#couple'
     );
   end loop;

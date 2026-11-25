@@ -32,12 +32,15 @@ export function ReactionBar({ sentence, mine, onReact, t }) {
   )
 }
 
-/** 상대 한 사람과 주고받는 화면: 오늘의 한 문장과 지난 문장. onSend(문장)은 보냈으면 true를 돌려준다. */
-export default function CoupleToday({ userId, partner, sentences, reactions = [], onSend, onReact, onRefresh }) {
+/**
+ * 상대 한 사람과 주고받는 화면: 오늘 주고받은 문장(보낸 순서)과 지난 문장. 하루에 몇 번이든 보낼 수 있다.
+ * onSend(문장)과 onEdit(문장 번호, 문장)은 성공하면 true를 돌려준다.
+ */
+export default function CoupleToday({ userId, partner, sentences, reactions = [], onSend, onEdit, onReact, onRefresh }) {
   const { t, learningLang, add, notify } = useApp()
   const talk = usePackData('expressions')
   const [draft, setDraft] = useState('')
-  const [editing, setEditing] = useState(false)
+  const [editingId, setEditingId] = useState(null)
   const [busy, setBusy] = useState(false)
 
   const days = useMemo(() => groupByDay(sentences, userId), [sentences, userId])
@@ -46,15 +49,25 @@ export default function CoupleToday({ userId, partner, sentences, reactions = []
   const streak = useMemo(() => exchangeStreak(days), [days])
   const suggestion = useMemo(() => suggestionFor(talk.data), [talk.data])
   const today = days[0]
-  const showForm = !today.mine || editing
+  const editing = editingId !== null
 
   async function send() {
     setBusy(true)
-    const ok = await onSend(draft)
+    const ok = editing ? await onEdit(editingId, draft) : await onSend(draft)
     setBusy(false)
     if (!ok) return
     setDraft('')
-    setEditing(false)
+    setEditingId(null)
+  }
+
+  function startEdit(row) {
+    setDraft(row.body)
+    setEditingId(row.id)
+  }
+
+  function cancelEdit() {
+    setDraft('')
+    setEditingId(null)
   }
 
   async function save(row) {
@@ -66,6 +79,39 @@ export default function CoupleToday({ userId, partner, sentences, reactions = []
     notify(result.error ? t('coupleError', { message: errorMessage(result.error, t) }) : t('coupleSaved'))
   }
 
+  function bubble(row) {
+    if (row.user_id !== userId) {
+      return (
+        <blockquote key={row.id} className="couple-bubble partner">
+          <small>{partner.nickname}</small>
+          <p lang={row.lang}>{row.body}</p>
+          <ReactionBar sentence={row} mine={reactionOf(row).mine} onReact={onReact} t={t} />
+          <button className="soft-button" onClick={() => save(row)}>
+            {t('coupleSave')}
+          </button>
+        </blockquote>
+      )
+    }
+    const got = reactionOf(row).theirs
+    return (
+      <blockquote key={row.id} className="couple-bubble mine">
+        <small>{t('coupleMine')}</small>
+        <p lang={row.lang}>{row.body}</p>
+        {got && (
+          <p className="reaction-got sticker-got" role="status">
+            <Sticker kind={got} size={64} />
+            {t('reactGot', { name: partner.nickname, reaction: t(`reaction.${got}`) })}
+          </p>
+        )}
+        {editingId !== row.id && (
+          <button className="soft-button" onClick={() => startEdit(row)}>
+            {t('coupleEdit')}
+          </button>
+        )}
+      </blockquote>
+    )
+  }
+
   return (
     <>
       <section className="paper-card couple-card" aria-labelledby="couple-today">
@@ -74,75 +120,39 @@ export default function CoupleToday({ userId, partner, sentences, reactions = []
           <span className="count">{t('coupleStreak', { count: streak })}</span>
         </div>
 
-        {today.partner ? (
-          <blockquote className="couple-bubble partner">
-            <small>{partner.nickname}</small>
-            <p lang={today.partner.lang}>{today.partner.body}</p>
-            <ReactionBar sentence={today.partner} mine={reactionOf(today.partner).mine} onReact={onReact} t={t} />
-            <button className="soft-button" onClick={() => save(today.partner)}>
-              {t('coupleSave')}
-            </button>
-          </blockquote>
-        ) : (
-          <p className="muted">{t('couplePartnerWaiting', { name: partner.nickname })}</p>
-        )}
+        {today.rows.length === 0 && <p className="muted">{t('couplePartnerWaiting', { name: partner.nickname })}</p>}
+        {today.rows.length > 0 && <div className="couple-thread">{today.rows.map(bubble)}</div>}
 
-        {today.mine && !editing && (
-          <blockquote className="couple-bubble mine">
-            <small>{t('coupleMine')}</small>
-            <p lang={today.mine.lang}>{today.mine.body}</p>
-            {reactionOf(today.mine).theirs && (
-              <p className="reaction-got sticker-got" role="status">
-                <Sticker kind={reactionOf(today.mine).theirs} size={64} />
-                {t('reactGot', { name: partner.nickname, reaction: t(`reaction.${reactionOf(today.mine).theirs}`) })}
-              </p>
-            )}
-            <button
-              className="soft-button"
-              onClick={() => {
-                setDraft(today.mine.body)
-                setEditing(true)
-              }}
-            >
-              {t('coupleEdit')}
+        {suggestion && today.mine.length === 0 && !editing && (
+          <div className="couple-suggest">
+            <p className="eyebrow">{t('coupleSuggest')}</p>
+            <p lang={learningLang}>
+              <strong>{suggestion.text}</strong>
+            </p>
+            <p className="muted">{suggestion.meaning}</p>
+            <button className="soft-button" onClick={() => setDraft(suggestion.text)}>
+              {t('coupleUseSuggestion')}
             </button>
-          </blockquote>
+          </div>
         )}
-
-        {showForm && (
-          <>
-            {suggestion && (
-              <div className="couple-suggest">
-                <p className="eyebrow">{t('coupleSuggest')}</p>
-                <p lang={learningLang}>
-                  <strong>{suggestion.text}</strong>
-                </p>
-                <p className="muted">{suggestion.meaning}</p>
-                <button className="soft-button" onClick={() => setDraft(suggestion.text)}>
-                  {t('coupleUseSuggestion')}
-                </button>
-              </div>
-            )}
-            <Field
-              as="textarea"
-              label={t('coupleWrite')}
-              rows={3}
-              maxLength={SENTENCE_MAX}
-              value={draft}
-              onChange={(event) => setDraft(event.target.value)}
-            />
-            <div className="button-row">
-              <button className="primary-button" disabled={busy || !draft.trim()} onClick={send}>
-                {editing ? t('coupleSaveEdit') : t('coupleSend')}
-              </button>
-              {editing && (
-                <button className="soft-button" onClick={() => setEditing(false)}>
-                  {t('cancel')}
-                </button>
-              )}
-            </div>
-          </>
-        )}
+        <Field
+          as="textarea"
+          label={editing ? t('coupleEditLabel') : t('coupleWrite')}
+          rows={3}
+          maxLength={SENTENCE_MAX}
+          value={draft}
+          onChange={(event) => setDraft(event.target.value)}
+        />
+        <div className="button-row">
+          <button className="primary-button" disabled={busy || !draft.trim()} onClick={send}>
+            {editing ? t('coupleSaveEdit') : t('coupleSend')}
+          </button>
+          {editing && (
+            <button className="soft-button" onClick={cancelEdit}>
+              {t('cancel')}
+            </button>
+          )}
+        </div>
         <button className="soft-button" onClick={onRefresh}>
           {t('coupleRefresh')}
         </button>
@@ -155,24 +165,25 @@ export default function CoupleToday({ userId, partner, sentences, reactions = []
             {days.slice(1).map((group) => (
               <li key={group.day}>
                 <time dateTime={group.day}>{group.day}</time>
-                {group.partner && (
-                  <p lang={group.partner.lang}>
-                    <b>{partner.nickname}</b> {group.partner.body}{' '}
-                    <button className="inline-link" onClick={() => save(group.partner)}>
-                      {t('coupleSave')}
-                    </button>
-                  </p>
-                )}
-                {group.partner && (
-                  <ReactionBar sentence={group.partner} mine={reactionOf(group.partner).mine} onReact={onReact} t={t} />
-                )}
-                {group.mine && (
-                  <p lang={group.mine.lang}>
-                    <b>{t('coupleMine')}</b> {group.mine.body}
-                    {reactionOf(group.mine).theirs && (
-                      <span className="reaction-got"> · {t(`reaction.${reactionOf(group.mine).theirs}`)}</span>
-                    )}
-                  </p>
+                {group.rows.map((row) =>
+                  row.user_id === userId ? (
+                    <p key={row.id} lang={row.lang}>
+                      <b>{t('coupleMine')}</b> {row.body}
+                      {reactionOf(row).theirs && (
+                        <span className="reaction-got"> · {t(`reaction.${reactionOf(row).theirs}`)}</span>
+                      )}
+                    </p>
+                  ) : (
+                    <div key={row.id}>
+                      <p lang={row.lang}>
+                        <b>{partner.nickname}</b> {row.body}{' '}
+                        <button className="inline-link" onClick={() => save(row)}>
+                          {t('coupleSave')}
+                        </button>
+                      </p>
+                      <ReactionBar sentence={row} mine={reactionOf(row).mine} onReact={onReact} t={t} />
+                    </div>
+                  ),
                 )}
               </li>
             ))}

@@ -1,4 +1,4 @@
-// 상대(연인·친구)와 오늘의 한 문장 주고받기(supabase/schema.sql의 couples, couple_members, couple_sentences).
+// 상대(연인·친구)와 문장 주고받기. 하루에 보내는 개수는 정해 두지 않는다(supabase/schema.sql의 couples, couple_members, couple_sentences).
 // 짝 하나는 두 사람이고 종류가 연인(partner)이나 친구(friend)다. 연인은 한 명, 친구는 MAX_FRIENDS명까지.
 import { dayKey } from './activity'
 import { TALK_PACKS, todayItem } from './packs'
@@ -42,12 +42,19 @@ export function suggestionFor(data, now = new Date()) {
   return items.length ? todayItem(items, now) : null
 }
 
-/** 보낸 문장을 날짜별로 묶는다(최근 날짜부터). 오늘은 아무도 안 보냈어도 항상 맨 위에 둔다. */
+const byTime = (a, b) => String(a.created_at ?? '').localeCompare(String(b.created_at ?? '')) || (a.id ?? 0) - (b.id ?? 0)
+
+/**
+ * 보낸 문장을 날짜별로 묶는다(최근 날짜부터). 오늘은 아무도 안 보냈어도 항상 맨 위에 둔다.
+ * rows는 그날 두 사람이 보낸 문장 전부(보낸 순서), mine·partner는 그중 내 것과 상대 것.
+ */
 export function groupByDay(sentences, myId, now = new Date()) {
-  const days = new Map([[dayKey(now), { day: dayKey(now), mine: null, partner: null }]])
-  for (const row of sentences) {
-    const entry = days.get(row.day) ?? { day: row.day, mine: null, partner: null }
-    entry[row.user_id === myId ? 'mine' : 'partner'] = row
+  const empty = (day) => ({ day, rows: [], mine: [], partner: [] })
+  const days = new Map([[dayKey(now), empty(dayKey(now))]])
+  for (const row of [...sentences].sort(byTime)) {
+    const entry = days.get(row.day) ?? empty(row.day)
+    entry.rows.push(row)
+    entry[row.user_id === myId ? 'mine' : 'partner'].push(row)
     days.set(row.day, entry)
   }
   return [...days.values()].sort((a, b) => (a.day < b.day ? 1 : -1))
@@ -55,7 +62,7 @@ export function groupByDay(sentences, myId, now = new Date()) {
 
 /** 서로 보낸 날이 이어진 횟수(오늘 아직이면 어제부터 센다). */
 export function exchangeStreak(groups, now = new Date()) {
-  const done = new Set(groups.filter((group) => group.mine && group.partner).map((group) => group.day))
+  const done = new Set(groups.filter((group) => group.mine.length && group.partner.length).map((group) => group.day))
   const cursor = new Date(now)
   if (!done.has(dayKey(cursor))) cursor.setDate(cursor.getDate() - 1)
   let count = 0
@@ -145,7 +152,8 @@ export async function loadPairs(userId) {
         .select('id, couple_id, user_id, day, body, lang, created_at')
         .in('couple_id', ids)
         .gte('day', dayKey(since))
-        .order('day', { ascending: false }),
+        .order('day', { ascending: false })
+        .order('created_at', { ascending: true }),
     ])
     if (coupleResult.error) return failure(coupleResult.error)
     if (sentenceResult.error) return failure(sentenceResult.error)
@@ -209,15 +217,26 @@ export async function setReaction({ sentenceId, userId, kind }) {
   }
 }
 
-/** 오늘 문장을 보낸다. 오늘 이미 보냈다면 고쳐 쓴다. */
+/** 새 문장을 보낸다. 하루에 몇 번이든 보낼 수 있다. */
 export async function sendSentence({ coupleId, body, lang, day = dayKey(new Date()) }) {
   const text = body.trim()
   if (!supabase) return failure(new Error('no server'))
   if (!text || text.length > SENTENCE_MAX) return failure(new Error('invalid sentence'))
   try {
-    const { error } = await supabase
-      .from('couple_sentences')
-      .upsert({ couple_id: coupleId, day, body: text, lang }, { onConflict: 'couple_id,user_id,day' })
+    const { error } = await supabase.from('couple_sentences').insert({ couple_id: coupleId, day, body: text, lang })
+    return error ? failure(error) : {}
+  } catch (error) {
+    return failure(error)
+  }
+}
+
+/** 내가 보낸 문장 하나를 고쳐 쓴다(행 단위 보안이 내 문장만 고치게 막는다). */
+export async function editSentence({ id, body }) {
+  const text = body.trim()
+  if (!supabase) return failure(new Error('no server'))
+  if (!text || text.length > SENTENCE_MAX) return failure(new Error('invalid sentence'))
+  try {
+    const { error } = await supabase.from('couple_sentences').update({ body: text }).eq('id', id)
     return error ? failure(error) : {}
   } catch (error) {
     return failure(error)

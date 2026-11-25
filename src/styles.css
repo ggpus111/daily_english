@@ -3274,6 +3274,20 @@ h2:focus {
   justify-self: start;
 }
 
+/* 오늘 주고받은 문장: 보낸 순서대로, 내 말은 오른쪽으로 조금 밀어 대화처럼 보이게 한다. */
+.couple-thread {
+  display: grid;
+  gap: 10px;
+}
+
+.couple-thread .couple-bubble.mine {
+  margin-left: 12%;
+}
+
+.couple-thread .couple-bubble.partner {
+  margin-right: 12%;
+}
+
 .couple-suggest {
   display: grid;
   gap: 4px;
