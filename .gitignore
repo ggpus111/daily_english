@@ -19,3 +19,7 @@ __pycache__
 
 # 웹 푸시 VAPID 키(비밀 키 포함, 올리지 않음)
 supabase/vapid-keys.local.txt
+analysis/usage/data
+
+# 학술제 시연용 데이터(scripts/make-demo-data.mjs가 만듦)
+demo-data

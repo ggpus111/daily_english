@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ExpressionCard from '../components/ExpressionCard'
+import PackSearch from '../components/PackSearch'
 import SaveEntryButton from '../components/SaveEntryButton'
 import PageHead from '../components/PageHead'
 import { useApp } from '../context'
@@ -67,6 +68,7 @@ export default function Packs({ mode = 'expressions' }) {
   return (
     <>
       {head}
+      <PackSearch />
       <div className="pack-kinds" role="group" aria-label={t('packKind')}>
         {Object.entries(MODES).map(([id, item]) => (
           <button
