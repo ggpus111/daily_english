@@ -3,7 +3,9 @@ import ExpressionCard from '../components/ExpressionCard'
 import Onboarding, { needsOnboarding } from '../components/Onboarding'
 import BackupNudge from '../components/BackupNudge'
 import RecapCard from '../components/Recap'
+import Dani from '../components/Dani'
 import GrowthCard from '../components/dani/GrowthCard'
+import { useDaniState } from '../components/dani/DaniProvider'
 import Mascot from '../components/Mascot'
 import { useApp } from '../context'
 import { activityDays, dayKey, lastSevenDays, streak } from '../lib/activity'
@@ -11,7 +13,7 @@ import { findPhrase } from '../lib/blank'
 import { languageName } from '../lib/i18n'
 import { usePackData } from '../hooks/usePackData'
 import { hasPackData } from '../lib/packs'
-import { pickTodayExpression, readPurpose } from '../lib/purpose'
+import { pickTodayExpression, readMissionTurn, readPurpose } from '../lib/purpose'
 import { moodMeaning, moodOf, moodTone, moodWord } from '../lib/moods'
 import { pickNote } from '../lib/notes'
 import { readSettings, todayProgress } from '../lib/reminders'
@@ -25,7 +27,7 @@ const CARDS = [
     type: 'word',
     eyebrow: '01 / VOCABULARY',
     count: 'cardWords',
-    tone: 'peach',
+    pose: 'book',
     preview: 'text',
     learning: true,
   },
@@ -34,17 +36,17 @@ const CARDS = [
     type: 'expression',
     eyebrow: '02 / EXPRESSIONS',
     count: 'cardExpressions',
-    tone: 'lilac',
+    pose: 'cheer',
     preview: 'text',
     learning: true,
   },
-  { page: 'chats', type: 'chat', eyebrow: '03 / CHAT NOTES', count: 'cardChats', tone: 'sage', preview: 'situation' },
+  { page: 'chats', type: 'chat', eyebrow: '03 / CHAT NOTES', count: 'cardChats', pose: 'chat', preview: 'situation' },
   {
     page: 'journal',
     type: 'journal',
     eyebrow: '04 / DAILY JOURNAL',
     count: 'cardJournals',
-    tone: 'butter',
+    pose: 'peek',
     preview: 'native',
   },
 ]
@@ -53,6 +55,7 @@ const isSameDay = (value, day) => new Date(value).toDateString() === day.toDateS
 
 export default function Home() {
   const { t, go, records, nickname, nativeLang, learningLang, coupleUnread } = useApp()
+  const { colors: daniColors } = useDaniState()
   const locale = nativeLang === 'ko' ? 'ko-KR' : 'en-US'
   const today = new Date()
   // 날짜 블록은 친구 원본처럼 영어로 쓰고, 보조 기술에는 사용자 언어로 읽어 준다.
@@ -222,7 +225,11 @@ export default function Home() {
                   ? t('journalNotYet')
                   : null
             return (
-              <button key={card.page} className={`dash-card ${card.tone}`} onClick={() => go(card.page)}>
+              <button key={card.page} className="dash-card" onClick={() => go(card.page)}>
+                {/* 성장 카드처럼 노란 칸 안의 다니: 단어장은 책 읽는, 표현은 응원하는, 대화는 말하는, 일기는 빼꼼 다니 */}
+                <span className="dash-dani" aria-hidden="true">
+                  <Dani pose={card.pose} colors={daniColors} size={50} />
+                </span>
                 <span className="dash-eyebrow" aria-hidden="true">
                   {card.eyebrow}
                 </span>
@@ -291,7 +298,12 @@ function TodayExpression({ today }) {
   if (!data) return <div className="expression-card expression-placeholder" aria-hidden="true" />
   // 공부 목적에 맞는 표현 중에서 고르고, 오늘 쓴 일기에 기분이 있으면 그 기분에 어울리는 표현을 보여 준다(일기 화면과 같은 표현).
   const todayMood = records.journal.find((journal) => isSameDay(journal.createdAt, today) && journal.mood)?.mood ?? ''
-  const item = pickTodayExpression(data.items, { purpose: readPurpose(), mood: todayMood, now: today })
+  const item = pickTodayExpression(data.items, {
+    purpose: readPurpose(),
+    mood: todayMood,
+    now: today,
+    turn: readMissionTurn(todayMood, today),
+  })
   // 오늘 쓴 일기 번역에 오늘의 표현이 들어 있으면 미션 완료
   const done = records.journal.some(
     (journal) => isSameDay(journal.createdAt, today) && findPhrase(item.text, journal.translation),

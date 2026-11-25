@@ -3,13 +3,22 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { backupDraftOnPause, restoreDraft } from './lib/draftBackup'
 import { initErrorTracking } from './lib/errorLog'
+import { captureInviteFromUrl } from './lib/invite'
 import { applyTheme, getTheme, watchSystemTheme } from './lib/theme'
 import './styles.css'
 // 다니 테마(로고에 맞춘 노랑·검정)는 기본 스타일 위에 덮어쓴다.
 import './theme-dani.css'
 
+// 친구 초대 링크(?invite=번호)로 들어왔으면 번호를 남기고 주소에서 지운다(친구 화면에서 채운다).
+captureInviteFromUrl()
+
 // 처리하지 못한 오류를 모은다(오류 추적).
 initErrorTracking()
+
+// 그림·링크·글자를 끌어 옮기지 못하게 한다(입력칸 안 글자는 그대로). 글자 고르기 막기는 styles.css의 user-select.
+document.addEventListener('dragstart', (event) => {
+  if (!event.target.closest?.('input, textarea, [contenteditable="true"]')) event.preventDefault()
+})
 
 // 첫 화면을 그리기 전에 테마를 정해 깜빡임을 줄인다.
 applyTheme(getTheme())

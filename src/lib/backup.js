@@ -4,7 +4,7 @@
 // - 이 앱이 내려받은 파일: { word: [...], expression: [...], chat: [...], journal: [...] }
 // - 원본 앱 브라우저 저장 형식: { savedWords: [...], ... } (src/lib/legacy.js로 바꿔 읽음)
 
-import { CATEGORIES } from './i18n'
+import { normalizeCategory } from './categories'
 import { fromLegacy } from './legacy'
 import { MOOD_IDS } from './moods'
 
@@ -67,7 +67,8 @@ function sanitize(type, raw) {
     clean[field] = (value ?? '').trim()
   }
   if (REQUIRED[type].some((field) => !clean[field])) return null
-  if (type === 'chat' && !CATEGORIES.includes(clean.category)) clean.category = 'other'
+  // 대화 기록 카테고리는 기본 카테고리 id이거나 직접 만든 이름이다. 비어 있으면 '기타'로 둔다.
+  if (type === 'chat') clean.category = normalizeCategory(clean.category) || 'other'
   if (type === 'journal' && !MOOD_IDS.includes(clean.mood)) clean.mood = ''
 
   // 복습 일정은 단어와 표현에만 있고, 형식이 맞을 때만 이어 간다.

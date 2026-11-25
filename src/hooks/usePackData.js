@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useApp } from '../context'
+import { PACK_FIXES_EVENT } from '../lib/packReports'
 import { hasPackData, loadPackData, peekPackData } from '../lib/packs'
 
 /**
@@ -30,6 +31,12 @@ export function usePackData(kind) {
     setState({ key, data: null, error: null })
     setAttempt((count) => count + 1)
   }, [key])
+
+  // 꾸러미 항목을 신고해 숨기면 다시 불러와 바로 빠지게 한다.
+  useEffect(() => {
+    window.addEventListener(PACK_FIXES_EVENT, retry)
+    return () => window.removeEventListener(PACK_FIXES_EVENT, retry)
+  }, [retry])
 
   const own = state.key === key ? state : { data: null, error: null }
   return { data: missing ? null : (peekPackData(kind, lang) ?? own.data), error: own.error, retry, missing, lang }

@@ -22,6 +22,12 @@ function writeCache(kind, rows) {
   local.set(CACHE_KEY, JSON.stringify({ ...cache, [kind]: rows }))
 }
 
+/** 신고한 항목을 서버 응답을 기다리지 않고 이 기기에서 바로 숨긴다(다음에 꾸러미를 받으면 서버 값으로 바뀐다). */
+export function hideInCache(kind, itemId) {
+  const rows = readCache(kind).filter((row) => row.item_id !== itemId)
+  writeCache(kind, [...rows, { item_id: itemId, kind, hidden: true }])
+}
+
 const withTimeout = (promise, ms) =>
   Promise.race([promise, new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), ms))])
 

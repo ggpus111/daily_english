@@ -12,6 +12,7 @@ import {
 } from '../../lib/couple'
 import ChoiceChips from '../ChoiceChips'
 import Field from '../Field'
+import { clearPendingInvite, readPendingInvite } from '../../lib/invite'
 
 /**
  * 상대 추가: 연인이나 친구로 초대 번호를 새로 만들거나, 받은 번호로 들어간다.
@@ -23,7 +24,9 @@ export default function AddPair({ pairs, busy, run, onDone }) {
   const open = PAIR_KINDS.filter((kind) => canAddKind(pairs, kind))
   const [kind, setKind] = useState(open[0] ?? 'friend')
   const [name, setName] = useState(nickname.slice(0, NICKNAME_MAX))
-  const [code, setCode] = useState('')
+  // 초대 링크로 받은 번호가 있으면 채워 둔다.
+  const [invited] = useState(readPendingInvite)
+  const [code, setCode] = useState(invited)
   const full = PAIR_KINDS.filter((value) => !open.includes(value))
   const fullNote = full.map((value) =>
     t(value === 'partner' ? 'pairPartnerFull' : 'pairFriendFull', { max: MAX_FRIENDS }),
@@ -65,6 +68,7 @@ export default function AddPair({ pairs, busy, run, onDone }) {
       <section className="paper-card couple-card" aria-labelledby="pair-join">
         <h2 id="pair-join">{t('coupleJoinTitle')}</h2>
         <p className="muted">{t('coupleJoinHelp')}</p>
+        {invited && code === invited && <p className="tiny-note">{t('invitePrefilled')}</p>}
         <Field
           label={t('coupleCode')}
           value={code}
@@ -85,7 +89,15 @@ export default function AddPair({ pairs, busy, run, onDone }) {
         <button
           className="primary-button"
           disabled={busy || !isValidCode(code) || !name.trim()}
-          onClick={() => run(() => joinCouple(code, name), onDone)}
+          onClick={() =>
+            run(
+              () => joinCouple(code, name),
+              () => {
+                clearPendingInvite()
+                onDone()
+              },
+            )
+          }
         >
           {t('coupleJoin')}
         </button>

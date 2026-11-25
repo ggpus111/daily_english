@@ -150,6 +150,25 @@ html {
   box-sizing: border-box;
 }
 
+/* 화면 글자를 끌어서 고르거나(드래그), 그림·링크를 끌어 옮기지 못하게 한다. 입력칸은 그대로 고르고 고칠 수 있다. */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea,
+[contenteditable='true'] {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+img,
+svg,
+a {
+  -webkit-user-drag: none;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -1302,6 +1321,41 @@ textarea {
   background: var(--warm);
 }
 
+/* 꾸러미 카드 오른쪽 위의 신고 버튼(자주 쓰는 정도 표시 옆) */
+.pack-report {
+  margin-left: auto;
+  padding: 2px 6px;
+  color: var(--sub);
+  font-size: 0.75rem;
+}
+
+.frequency + .pack-report {
+  margin-left: 0;
+}
+
+.expression-head .frequency {
+  margin-left: auto;
+}
+
+.grammar-pack-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.pack-report-note-label {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.choice-sheet textarea {
+  width: 100%;
+  margin-top: 6px;
+}
+
 .expression-head {
   display: flex;
   flex-wrap: wrap;
@@ -2148,6 +2202,11 @@ textarea {
   gap: 6px;
   margin: 0;
   font-size: 0.875rem;
+}
+
+.today-mission .mission-next {
+  margin-left: auto;
+  font-size: 0.8125rem;
 }
 
 .mission-stamp {

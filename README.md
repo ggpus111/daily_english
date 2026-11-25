@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ggpus111/daily_english/main/public/mascot.svg" width="96" alt="Daily English 캐릭터 말새">
+  <img src="https://raw.githubusercontent.com/ggpus111/daily_english/main/public/mascot.svg" width="96" alt="Daily English 캐릭터 다니">
 </p>
 
 <h1 align="center">Daily English</h1>

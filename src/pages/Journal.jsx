@@ -8,7 +8,7 @@ import PageHead from '../components/PageHead'
 import { useApp } from '../context'
 import { useRecordForm } from '../hooks/useRecordForm'
 import { dayKey } from '../lib/activity'
-import { aiConfigured, giveAiConsent, hasAiConsent, requestCorrection } from '../lib/aiCorrection'
+import { AI_DAILY_LIMIT, AI_PRO_DAILY_LIMIT, aiConfigured, giveAiConsent, hasAiConsent, requestCorrection } from '../lib/aiCorrection'
 import { buildCorrectionPrompt, parseFeedback, recentPracticeNotes, recentWordTexts } from '../lib/correction'
 import { languageName } from '../lib/i18n'
 import { moodMeaning, moodOf, moodWord } from '../lib/moods'
@@ -26,7 +26,7 @@ const REQUIRED = ['native']
 const MAX_TEXT_LENGTH = 4000
 
 export default function Journal() {
-  const { t, notify, records, nativeLang, learningLang, user, onLogin } = useApp()
+  const { t, notify, records, nativeLang, learningLang, user, onLogin, isPro } = useApp()
   const items = records.journal
   const recordForm = useRecordForm({
     type: 'journal',
@@ -190,7 +190,7 @@ export default function Journal() {
                   {t(aiBusy ? 'aiWorking' : 'aiAsk')}
                 </button>
                 <p className="tiny-note">
-                  {aiRemaining === null ? t('aiAskHelp') : t('aiRemaining', { count: aiRemaining })}
+                  {aiRemaining === null ? t('aiAskHelp', { limit: isPro ? AI_PRO_DAILY_LIMIT : AI_DAILY_LIMIT }) : t('aiRemaining', { count: aiRemaining })}
                 </p>
               </>
             ) : aiConfigured() ? (
